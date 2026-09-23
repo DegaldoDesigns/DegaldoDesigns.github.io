@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xavi Pinchos | Parrilla, raciones y fútbol en Pinto</title>
+<meta name="description" content="Bar restaurante en Pinto: pinchos, parrilla, raciones grandes y fútbol en HD. Abierto todos los días de 8:00 a 1:00. C/ Asturias 9. Reservas: 614 65 42 90.">
+<link rel="canonical" href="https://xavipinchos.netlify.app/">
+<meta name="theme-color" content="#100b09">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Xavi Pinchos | Bar restaurante en Pinto">
+<meta property="og:description" content="Pinchos, parrilla, raciones grandes y fútbol en HD. Abierto todos los días de 8:00 a 1:00, en la calle Asturias 9.">
+<meta property="og:image" content="https://xavipinchos.netlify.app/og-image.jpg">
+<meta property="og:url" content="https://xavipinchos.netlify.app/">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Xavi Pinchos | Bar restaurante en Pinto">
+<meta name="twitter:description" content="Pinchos, parrilla, raciones grandes y fútbol en HD. Abierto todos los días de 8:00 a 1:00.">
+<meta name="twitter:image" content="https://xavipinchos.netlify.app/og-image.jpg">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Xavi Pinchos",
+  "servesCuisine": ["Tapas", "Pinchos", "Parrilla", "Española"],
+  "priceRange": "10-20 EUR",
+  "telephone": "+34614654290",
+  "url": "https://xavipinchos.netlify.app/",
+  "image": "https://xavipinchos.netlify.app/og-image.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle Asturias 9",
+    "postalCode": "28320",
+    "addressLocality": "Pinto",
+    "addressRegion": "Madrid",
+    "addressCountry": "ES"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "08:00", "closes": "01:00" }
+  ],
+  "sameAs": ["https://www.instagram.com/xavipinchos/"]
+}
+</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+<style>
+  :root{
+    --carbon:#100b09; --pie:#0b0706; --panel:#191210; --panel-2:#231915;
+    --linea:rgba(255,232,206,.15); --linea-fuerte:rgba(255,232,206,.34);
+    --texto:#f7eee3; --muted:#bcaa9b;
+    --brasa:#ff6a1c; --brasa-osc:#a83d08; --oro:#f4b63c;
+    --verde:#3ed67c; --rojo-est:#ff6f5e;
+    --ease-out:cubic-bezier(0.23,1,0.32,1);
+    --ease-in-out:cubic-bezier(0.77,0,0.175,1);
+    --ease-drawer:cubic-bezier(0.32,0.72,0,1);
+    --z-nav:50; --z-barra:900; --z-cookie:950; --z-modal:1000;
+    --f-display:'Big Shoulders Display','Oswald','Bebas Neue','Arial Narrow',Impact,sans-serif;
+    --f-body:'Figtree','Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif;
+    --nav-h:72px; --r:8px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 8px)}
+  body{margin:0;background:var(--carbon);color:var(--texto);font-family:var(--f-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;height:auto;display:block}
+  a{color:inherit}
+  h1,h2,h3{margin:0;font-family:var(--f-display);font-weight:800;text-transform:uppercase;line-height:1.14;letter-spacing:.01em;text-wrap:balance}
+  h4{margin:0}
+  p{margin:0;text-wrap:pretty}
+  ul{margin:0;padding:0;list-style:none}
+  address{font-style:normal}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .saltar{position:absolute;left:16px;top:-60px;z-index:var(--z-modal);background:var(--brasa);color:var(--carbon);padding:10px 16px;font-weight:800;text-decoration:none;border-radius:var(--r)}
+  .saltar:focus{top:12px}
+  .ico{width:20px;height:20px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .ico-lleno{fill:currentColor;stroke:none}
+  :focus-visible{outline:3px solid var(--texto);outline-offset:3px}
+  .cta :focus-visible{outline-color:var(--carbon)}
+
+  /* Botones: fondo sólido, sombra dura de "chapa" y borde real y opaco solo en .btn-borde */
+  .btn{
+    border:none;font:800 16px/1 var(--f-body);letter-spacing:.01em;padding:16px 26px;min-height:50px;color:var(--carbon);
+    text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;border-radius:var(--r);
+    transition:filter .15s var(--ease-out),transform .1s var(--ease-out),box-shadow .1s var(--ease-out),background-color .15s var(--ease-out);
+  }
+  .btn-primario{background:var(--brasa);box-shadow:0 4px 0 var(--brasa-osc)}
+  .btn-primario:active{transform:translateY(3px) scale(0.97);box-shadow:0 1px 0 var(--brasa-osc)}
+  .btn-oscuro{background:var(--carbon);color:var(--texto);box-shadow:0 4px 0 rgba(0,0,0,.55)}
+  .btn-oscuro:active{transform:translateY(3px) scale(0.97);box-shadow:0 1px 0 rgba(0,0,0,.55)}
+  .btn-borde{background:transparent;border:2px solid var(--linea-fuerte);color:var(--texto);padding:14px 24px}
+  .btn-borde:active{transform:scale(0.97)}
+  .btn-borde-osc{border-color:var(--carbon);color:var(--carbon)}
+  @media (hover:hover) and (pointer:fine){
+    .btn-primario:hover{filter:brightness(1.1)}
+    .btn-oscuro:hover{filter:brightness(1.35)}
+    .btn-borde:hover{background:rgba(255,232,206,.09);border-color:var(--texto)}
+    .btn-borde-osc:hover{background:rgba(16,11,9,.1);border-color:var(--carbon)}
+  }
+
+  /* Navegación */
+  .nav{position:sticky;top:0;z-index:var(--z-nav);height:var(--nav-h);background:var(--carbon);border-bottom:1px solid transparent;transition:border-color .2s var(--ease-out)}
+  .nav.encogida{border-bottom-color:var(--linea)}
+  .nav-in{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+  .logo{display:block;flex-shrink:0;height:56px;transform-origin:left center;transition:transform .25s var(--ease-out)}
+  .logo img{height:100%;width:auto}
+  .nav.encogida .logo{transform:scale(.9)}
+  .links{display:flex;gap:30px}
+  .links a{position:relative;color:var(--muted);text-decoration:none;font-weight:600;font-size:16px;padding:6px 0;transition:color .15s ease}
+  .links a::after{content:'';position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--brasa);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease-out)}
+  .links a.activo{color:var(--texto)}
+  .links a.activo::after{transform:scaleX(1)}
+  @media (hover:hover) and (pointer:fine){
+    .links a:hover{color:var(--texto)}
+    .links a:hover::after{transform:scaleX(1)}
+  }
+  .nav-acciones{display:flex;align-items:center;gap:12px}
+  .nav-acciones .btn{padding:12px 20px;min-height:44px;font-size:15px}
+  .btn-social{width:44px;height:44px;border-radius:50%;border:1px solid var(--linea);display:flex;align-items:center;justify-content:center;color:var(--muted);text-decoration:none;transition:background-color .2s ease,color .2s ease,border-color .2s ease}
+  @media (hover:hover) and (pointer:fine){
+    .btn-social:hover{background:var(--brasa);color:var(--carbon);border-color:var(--brasa)}
+  }
+  .hamburguesa{display:none;width:44px;height:44px;border-radius:10px;border:1px solid var(--linea);background:var(--panel);flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;position:relative;z-index:calc(var(--z-modal) + 1)}
+  .hamburguesa span{width:20px;height:2px;background:var(--texto);border-radius:2px;transition:transform .22s var(--ease-drawer),opacity .22s var(--ease-drawer)}
+  .hamburguesa.activo span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .hamburguesa.activo span:nth-child(2){opacity:0}
+  .hamburguesa.activo span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .overlay{position:fixed;inset:0;background:var(--carbon);z-index:var(--z-modal);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;opacity:0;visibility:hidden;transform:translateY(-12px);transition:opacity .25s var(--ease-drawer),transform .25s var(--ease-drawer),visibility 0s linear .25s}
+  .overlay.activo{opacity:1;visibility:visible;transform:translateY(0);transition-delay:0s}
+  .overlay a.enlace{color:var(--texto);text-decoration:none;font-family:var(--f-display);font-weight:800;text-transform:uppercase;font-size:clamp(32px,9vw,46px);line-height:1.14}
+  .overlay .redes{display:flex;gap:14px;margin-top:8px;align-items:center}
+  body.menu-abierto{overflow:hidden}
+  body.menu-abierto .nav{z-index:calc(var(--z-modal) + 1)}
+  @media (hover:hover) and (pointer:fine){ .overlay a.enlace:hover{color:var(--brasa)} }
+  @media (max-width:1080px){
+    .links,.nav-acciones .btn-social,.nav-acciones .btn{display:none}
+    .hamburguesa{display:flex}
+  }
+
+  /* Estado del día */
+  .estado{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:15px;color:var(--texto);padding:9px 16px;border:1px solid var(--linea);border-radius:99px;background:rgba(16,11,9,.55)}
+  .estado .punto{position:relative;width:9px;height:9px;border-radius:50%;background:var(--verde);flex-shrink:0}
+  .estado .punto::after{content:'';position:absolute;inset:0;border-radius:50%;background:var(--verde);opacity:0;animation:late 2s var(--ease-out) infinite}
+  .estado.cerrado .punto,.estado.cerrado .punto::after{background:var(--rojo-est)}
+  .estado.cerrado .punto::after{animation:none}
+
+  /* Portada: focos de estadio arriba, brasas que suben y foto con marco desplazado */
+  .hero{position:relative;isolation:isolate;overflow:hidden;padding:clamp(28px,5vw,72px) 0 clamp(56px,8vw,104px)}
+  .hero::before{content:'';position:absolute;inset:0;z-index:-2;pointer-events:none;
+    background:
+      radial-gradient(52% 46% at 6% -8%,rgba(255,226,186,.17),transparent 72%),
+      radial-gradient(46% 42% at 97% -6%,rgba(255,160,84,.2),transparent 72%),
+      radial-gradient(64% 56% at 72% 108%,rgba(255,106,28,.17),transparent 72%)}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);align-items:center;gap:clamp(28px,5vw,72px)}
+  .hero-marca{font-weight:700;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--brasa);margin-bottom:16px}
+  .hero h1{font-size:clamp(3.4rem,8.4vw,7.6rem);line-height:1.14}
+  .hero h1 em{font-style:normal;color:var(--brasa)}
+  .hero-sub{margin-top:24px;max-width:31em;font-size:clamp(17px,1.9vw,20px);color:var(--muted)}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:16px;margin-top:32px}
+  .hero .estado{margin-top:28px}
+  .marco{position:relative;isolation:isolate}
+  .marco::after{content:'';position:absolute;inset:0;border:2px solid var(--brasa);border-radius:var(--r);translate:12px 12px;z-index:-1;pointer-events:none}
+  .marco img,.marco .foto{border-radius:var(--r)}
+  .hero-foto{justify-self:end;width:min(100%,470px)}
+  .hero-foto img{width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--panel-2)}
+
+  /* Marcador: la franja de datos, con tablero de estadio */
+  .marcador{background:var(--panel);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+  .marcador-in{display:grid;grid-template-columns:repeat(4,1fr)}
+  .celda{padding:26px 22px;border-left:1px solid var(--linea)}
+  .celda:first-child{border-left:none;padding-left:0}
+  .celda>small{display:block;font-weight:700;font-size:13px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+  .celda b{display:flex;align-items:center;gap:8px;font-family:var(--f-display);font-weight:800;font-size:clamp(2.1rem,3.8vw,3rem);line-height:1.14;color:var(--texto);text-transform:uppercase;white-space:nowrap}
+  .celda b .ico{width:.78em;height:.78em;color:var(--oro)}
+  .celda>span{display:block;color:var(--muted);font-size:15px;line-height:1.4;margin-top:2px}
+
+  /* Cinta que gira (velocidad pausada, no se detiene con el cursor) */
+  .banda{background:var(--brasa);color:var(--carbon);overflow:hidden;white-space:nowrap}
+  .banda .pista{display:inline-flex;width:max-content;animation:banda 46s linear infinite}
+  .banda .grupo{display:inline-flex;align-items:center;flex:none}
+  .banda span{font-family:var(--f-display);font-weight:800;text-transform:uppercase;font-size:clamp(1.35rem,2.4vw,1.8rem);line-height:1.2;padding:15px 26px;letter-spacing:.02em}
+  .banda svg{width:20px;height:24px;flex:none;fill:var(--carbon)}
+  @keyframes banda{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* Secciones */
+  .sec{padding:clamp(64px,9vw,120px) 0;position:relative}
+  .sec-panel{background:var(--panel)}
+  .sec-cab{max-width:760px;margin-bottom:clamp(28px,4vw,48px)}
+  .sec h2{font-size:clamp(2.5rem,5.6vw,4.6rem)}
+  .sec-cab p{margin-top:12px;color:var(--muted);font-size:clamp(17px,1.8vw,19px);max-width:34em}
+  .sec>.wrap{position:relative;z-index:1}
+
+  /* Fotos ampliables */
+  .foto{display:block;position:relative;padding:0;border:none;background:var(--panel-2);cursor:pointer;overflow:hidden;border-radius:var(--r);color:inherit;font:inherit;transition:transform .18s var(--ease-out)}
+  .foto img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease-out)}
+  .foto:active{transform:scale(0.97)}
+  @media (hover:hover) and (pointer:fine){ .foto:hover img{transform:scale(1.05)} }
+  .ampliar{position:absolute;right:10px;bottom:10px;width:36px;height:36px;border-radius:50%;background:rgba(16,11,9,.8);color:var(--texto);display:flex;align-items:center;justify-content:center;pointer-events:none;transition:background-color .2s var(--ease-out),color .2s var(--ease-out)}
+  .ampliar .ico{width:16px;height:16px;stroke-width:2.6}
+  @media (hover:hover) and (pointer:fine){ .foto:hover .ampliar{background:var(--brasa);color:var(--carbon)} }
+  .js .foto img{opacity:0;transition:opacity .35s var(--ease-out),transform .5s var(--ease-out)}
+  .js .foto.cargada img{opacity:1}
+  .hueso{position:absolute;inset:0;background:var(--panel-2);overflow:hidden}
+  .hueso::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,232,206,.07),transparent);transform:translateX(-100%);animation:barrido 1.5s var(--ease-in-out) infinite}
+  .foto.cargada .hueso{display:none}
+  @keyframes barrido{to{transform:translateX(100%)}}
+
+  /* La casa */
+  .casa-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(36px,6vw,88px);align-items:center}
+  .casa-texto>p{margin-top:16px;color:var(--muted);max-width:30em;font-size:clamp(17px,1.8vw,19px)}
+  .firmas{margin-top:26px;border-top:1px solid var(--linea)}
+  .firma{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--linea)}
+  .firma h3{font-size:clamp(1.5rem,2.6vw,2rem);line-height:1.2}
+  .firma p{color:var(--muted);font-size:15px;line-height:1.4;margin-top:2px;max-width:22em}
+  .firma .pr{font-family:var(--f-display);font-weight:800;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--brasa);white-space:nowrap;line-height:1.2}
+  .casa-enlace{display:inline-flex;margin-top:22px;color:var(--brasa);font-weight:800;text-underline-offset:4px}
+  .collage{position:relative;padding-bottom:clamp(30px,6vw,64px)}
+  .collage .grande{width:82%;margin-left:auto}
+  .collage .grande .foto{aspect-ratio:4/5;width:100%}
+  .collage .chica{position:absolute;left:0;bottom:0;width:46%;z-index:2}
+  .collage .chica .foto{aspect-ratio:1;width:100%;border:6px solid var(--carbon);border-radius:var(--r)}
+  .casa{overflow:hidden}
+  .casa .brasas{z-index:0}
+
+  /* Carta */
+  .carta{overflow:hidden}
+  .tablist{display:flex;gap:2px;position:relative;overflow-x:auto;scrollbar-width:none;margin-bottom:clamp(28px,4vw,44px);border-bottom:1px solid var(--linea)}
+  .tablist::-webkit-scrollbar{display:none}
+  .tab{flex:0 0 auto;white-space:nowrap;background:transparent;border:none;color:var(--muted);font:700 16px/1.2 var(--f-body);padding:16px 22px 18px;min-height:52px;cursor:pointer;position:relative;z-index:1;transition:color .18s var(--ease-out),transform .1s var(--ease-out)}
+  .tab:active{transform:scale(0.97)}
+  .tab[aria-selected="true"]{color:var(--texto)}
+  .tab:focus-visible{outline-offset:-3px}
+  @media (hover:hover) and (pointer:fine){ .tab[aria-selected="false"]:hover{color:var(--texto)} }
+  .indicador{position:absolute;bottom:-1px;left:0;height:4px;width:100px;background:var(--brasa);transform-origin:left center;transform:translateX(0) scaleX(0);transition:transform .28s var(--ease-out)}
+  .js .panel:not([data-activo]){display:none}
+  .panel:focus-visible{outline-offset:8px}
+  .grupo+.grupo{margin-top:clamp(36px,5vw,56px)}
+  .grupo-tit{font-size:clamp(1.9rem,3.4vw,2.6rem);color:var(--texto);margin-bottom:6px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+  .grupo-tit small{font-family:var(--f-body);font-weight:600;font-size:15px;color:var(--muted);text-transform:none;letter-spacing:0}
+  .lista{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(28px,5vw,64px)}
+  .plato{padding:14px 0;border-bottom:1px solid var(--linea)}
+  .pl-fila{display:flex;align-items:baseline;gap:10px}
+  .pl-fila h4{font-family:var(--f-body);font-weight:700;font-size:18px;line-height:1.35;flex:0 1 auto}
+  .pl-punt{flex:1 1 16px;min-width:16px;border-bottom:2px dotted rgba(255,232,206,.26);transform:translateY(-4px)}
+  .pr{font-family:var(--f-display);font-weight:800;font-size:1.55rem;line-height:1.2;color:var(--brasa);white-space:nowrap}
+  .plato p{margin-top:3px;color:var(--muted);font-size:15.5px;line-height:1.5;max-width:34em}
+  .lista.una{grid-template-columns:1fr}
+
+  /* Tostas: un solo precio para las cuatro */
+  .precio-cab{display:flex;flex-wrap:wrap;align-items:center;gap:8px 26px;margin:6px 0 4px;padding-bottom:20px;border-bottom:1px solid var(--linea)}
+  .precio-grande{font-family:var(--f-display);font-weight:800;font-size:clamp(3.2rem,7vw,5rem);line-height:1.1;color:var(--brasa)}
+  .precio-nota{flex:1 1 240px;color:var(--muted);font-size:17px}
+  .tostas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(28px,5vw,64px)}
+  .tostas li{padding:13px 0;border-bottom:1px solid var(--linea);font-weight:700;font-size:18px;line-height:1.35}
+
+  /* Platos de la casa: distinto tratamiento al resto de la carta */
+  .dest-fila{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) minmax(0,1fr);gap:16px;margin-bottom:clamp(36px,5vw,56px)}
+  .dest{background:var(--panel-2);border:1px solid var(--linea);border-radius:var(--r);padding:22px 22px 24px;display:flex;flex-direction:column;gap:6px}
+  .dest .etiqueta{align-self:flex-start;font-weight:800;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:5px;background:var(--carbon);color:var(--texto);border:1px solid var(--linea)}
+  .dest h3{font-family:var(--f-display);font-weight:800;text-transform:uppercase;font-size:clamp(1.7rem,2.6vw,2.2rem);line-height:1.15;margin-top:8px}
+  .dest p{color:var(--muted);font-size:15.5px;line-height:1.45}
+  .dest .pr{margin-top:auto;padding-top:10px;font-size:2rem}
+  .dest.fuerte{background:var(--brasa);border-color:var(--brasa);color:var(--carbon)}
+  .dest.fuerte .etiqueta{background:var(--carbon);color:var(--texto)}
+  .dest.fuerte p{color:rgba(16,11,9,.86)}
+  .dest.fuerte .pr{color:var(--carbon)}
+
+  /* Hamburguesas numeradas */
+  .burgers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:14px}
+  .burger{background:var(--panel-2);border:1px solid var(--linea);border-radius:var(--r);padding:20px 22px 24px;display:flex;flex-direction:column;gap:4px}
+  .burger .num{font-family:var(--f-display);font-weight:900;font-size:5.4rem;line-height:1;color:transparent;-webkit-text-stroke:2px var(--brasa)}
+  .burger h4{font-family:var(--f-display);font-weight:800;text-transform:uppercase;font-size:1.7rem;line-height:1.2}
+  .burger p{color:var(--muted);font-size:15.5px;line-height:1.5}
+  .burger .pr{margin-top:auto;padding-top:12px;font-size:2rem}
+
+  /* Fotos laterales de la carta */
+  .panel-cols{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(32px,5vw,72px);align-items:start}
+  .panel-cols .aparte{position:sticky;top:calc(var(--nav-h) + 24px)}
+  .panel-cols .aparte .foto{width:100%;aspect-ratio:4/5}
+  .panel-cols .lista{grid-template-columns:1fr}
+  .nota-carta{margin-top:clamp(32px,5vw,48px);padding-top:20px;border-top:1px solid var(--linea);color:var(--muted);font-size:15.5px;max-width:44em}
+  .nota-carta a{color:var(--brasa);font-weight:800}
+
+  /* Fútbol y eventos */
+  .eventos-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(36px,6vw,88px);align-items:center}
+  .ev-fotos{position:relative;padding-bottom:clamp(30px,6vw,64px)}
+  .ev-fotos .grande .foto{aspect-ratio:4/5;width:100%}
+  .ev-fotos .chica{position:absolute;right:-4%;bottom:0;width:44%;z-index:2}
+  .ev-fotos .chica .foto{aspect-ratio:1;width:100%;border:6px solid var(--carbon);border-radius:var(--r)}
+  .ev-bloque+.ev-bloque{margin-top:clamp(30px,4vw,44px);padding-top:clamp(30px,4vw,44px);border-top:1px solid var(--linea)}
+  .ev-bloque h3{font-size:clamp(2rem,3.6vw,2.8rem);color:var(--brasa)}
+  .ev-bloque p{margin-top:8px;color:var(--muted);max-width:32em}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .chips li{padding:8px 14px;border:1px solid var(--linea-fuerte);border-radius:99px;font-weight:600;font-size:15px;line-height:1.3}
+  .ev-bloque .btn{margin-top:20px}
+  .eventos .sec-cab{margin-bottom:clamp(24px,3vw,36px)}
+
+  /* Galería */
+  .mosaico{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:clamp(140px,19vw,240px);gap:10px}
+  .m-a{grid-column:1/3;grid-row:1/3}
+  .m-b{grid-column:3;grid-row:1}
+  .m-c{grid-column:4;grid-row:1}
+  .m-d{grid-column:3;grid-row:2}
+  .m-e{grid-column:4;grid-row:2}
+  .m-f{grid-column:1;grid-row:3}
+  .m-g{grid-column:2;grid-row:3}
+  .m-h{grid-column:3;grid-row:3}
+  .m-ig{grid-column:4;grid-row:3;background:var(--brasa);color:var(--carbon);text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(14px,2vw,22px);border-radius:var(--r);transition:filter .15s var(--ease-out),transform .1s var(--ease-out)}
+  .m-ig:active{transform:scale(0.97)}
+  .m-ig .ico{width:34px;height:34px}
+  .m-ig strong{font-family:var(--f-display);font-weight:800;font-size:clamp(1.4rem,2.5vw,2rem);line-height:1.14;text-transform:uppercase}
+  .m-ig span{font-size:15px;font-weight:700}
+  @media (hover:hover) and (pointer:fine){ .m-ig:hover{filter:brightness(1.1)} }
+  .mosaico .foto{border-radius:var(--r)}
+
+  /* Horario: tablero de estadio */
+  .tablero{border:1px solid var(--linea-fuerte);border-radius:var(--r);background:var(--panel);overflow:hidden}
+  .tablero-barra{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px clamp(18px,3vw,32px);border-bottom:1px solid var(--linea);font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .luces{display:flex;gap:7px}
+  .luces i{width:10px;height:10px;border-radius:50%;background:var(--oro);opacity:.85}
+  .tablero-cuerpo{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(20px,4vw,56px);padding:clamp(22px,3.4vw,40px) clamp(18px,3vw,32px);align-items:center}
+  .tab-est{font-family:var(--f-display);font-weight:900;text-transform:uppercase;font-size:clamp(4rem,10vw,8rem);line-height:1.08;color:var(--verde);letter-spacing:.005em}
+  .horario[data-estado="cerrado"] .tab-est{color:var(--rojo-est)}
+  .tab-det{font-size:clamp(19px,2.2vw,24px);font-weight:600;line-height:1.35;margin-top:2px}
+  .tab-cuenta{margin-top:12px;font-weight:800;font-size:18px;color:var(--verde);font-variant-numeric:tabular-nums}
+  .horario[data-estado="cerrado"] .tab-cuenta{color:var(--rojo-est)}
+  .tab-nota{margin-top:6px;font-size:15px;color:var(--muted)}
+  .tab-horas{display:grid;gap:14px}
+  .hora{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding-bottom:14px;border-bottom:1px dashed var(--linea-fuerte)}
+  .hora:last-child{border-bottom:none;padding-bottom:0}
+  .hora span{font-weight:700;font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .hora b{font-family:var(--f-display);font-weight:800;font-size:clamp(2.6rem,5vw,3.6rem);line-height:1.1;color:var(--texto)}
+  .dias{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;margin-top:16px}
+  .dia{border:1px solid var(--linea);border-radius:var(--r);padding:14px 10px;text-align:center;color:var(--muted);position:relative}
+  .dia .d-nombre{display:block;font-weight:800;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:var(--texto)}
+  .dia .d-hora{display:block;margin-top:2px;font-variant-numeric:tabular-nums;font-size:15px;white-space:nowrap}
+  .dia .hoy-tag{display:none;position:absolute;left:50%;top:-11px;translate:-50% 0;font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:var(--texto);color:var(--carbon);padding:2px 9px;border-radius:5px}
+  .dia.hoy{border-color:var(--texto);background:var(--panel)}
+  .dia.hoy .hoy-tag{display:block}
+  .horario[data-estado="abierto"] .dia.hoy{border-color:var(--verde)}
+  .horario[data-estado="abierto"] .dia.hoy .hoy-tag{background:var(--verde)}
+  .horario[data-estado="cerrado"] .dia.hoy{border-color:var(--rojo-est)}
+  .horario[data-estado="cerrado"] .dia.hoy .hoy-tag{background:var(--rojo-est)}
+
+  /* Ubicación */
+  .ubicacion{background:var(--panel)}
+  .ub-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,5vw,64px);align-items:stretch}
+  .ub-info{order:2}
+  .ub-mapa{order:1}
+  .ub-info address{font-size:clamp(20px,2.4vw,26px);font-weight:700;line-height:1.35;margin:22px 0 14px}
+  .ub-info p{color:var(--muted);max-width:26em}
+  .ub-tel{margin-top:18px;font-family:var(--f-display);font-weight:800;font-size:2.4rem;line-height:1.2}
+  .ub-tel a{color:var(--texto);text-decoration:none}
+  .lugar-botones{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+  .ub-mapa{position:relative;min-height:380px;background:var(--panel-2);border:1px solid var(--linea);border-radius:var(--r);overflow:hidden}
+  .ub-mapa iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:invert(.92) hue-rotate(180deg) saturate(.8) brightness(.95) contrast(.92)}
+  .ub-facade{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:24px;
+    background-color:var(--panel-2);
+    background-image:linear-gradient(rgba(255,106,28,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(255,106,28,.13) 1px,transparent 1px);background-size:32px 32px}
+  .ub-facade p{max-width:26em;color:var(--muted);font-size:15px;line-height:1.45}
+  .pin{width:46px;height:46px;border-radius:50% 50% 50% 0;background:var(--brasa);transform:rotate(-45deg);position:relative;margin-bottom:4px}
+  .pin::after{content:'';position:absolute;width:16px;height:16px;background:var(--carbon);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%)}
+
+  /* Preguntas */
+  .faq-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,340px);gap:clamp(28px,5vw,72px);align-items:start}
+  .faq-lista{max-width:820px;min-width:0}
+  .faq-lista details{border-bottom:1px solid var(--linea);overflow:hidden}
+  .faq-lista details:first-child{border-top:1px solid var(--linea)}
+  .faq-lista summary{list-style:none;cursor:pointer;padding:22px 4px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:clamp(18px,2vw,21px);min-height:60px;line-height:1.3}
+  .faq-lista summary::-webkit-details-marker{display:none}
+  .signo{position:relative;width:22px;height:22px;flex-shrink:0;color:var(--brasa)}
+  .signo::before,.signo::after{content:'';position:absolute;left:50%;top:50%;width:22px;height:3px;background:currentColor;transform:translate(-50%,-50%);transition:transform .22s var(--ease-out),opacity .22s var(--ease-out)}
+  .signo::after{transform:translate(-50%,-50%) rotate(90deg)}
+  details[open] .signo::after{transform:translate(-50%,-50%) rotate(0);opacity:0}
+  .faq-lista .contenido{padding:0 4px 24px;color:var(--muted);font-size:17px;line-height:1.65;max-width:44em}
+  .faq-lista .contenido a{color:var(--brasa);font-weight:700}
+  @media (hover:hover) and (pointer:fine){ .faq-lista summary:hover{color:var(--brasa)} }
+  .aparte-llamar{background:var(--panel);border:1px solid var(--linea-fuerte);border-radius:var(--r);padding:clamp(24px,3vw,34px)}
+  .aparte-llamar h3{font-size:clamp(1.9rem,3vw,2.4rem);max-width:8em}
+  .aparte-llamar p{margin:10px 0 22px;color:var(--muted);max-width:20em}
+  .aparte-llamar .btn{width:100%;white-space:nowrap;padding-left:14px;padding-right:14px}
+
+  /* Llamada final */
+  .cta{position:relative;isolation:isolate;overflow:hidden;background:var(--brasa);color:var(--carbon);padding:clamp(64px,9vw,112px) 0}
+  .cta::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.09;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .7 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  .cta-llama{position:absolute;right:-3%;bottom:-14%;width:min(46vw,520px);height:auto;fill:var(--carbon);opacity:.13;pointer-events:none;z-index:-1}
+  .cta-in{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,5vw,64px);align-items:center}
+  .cta h2{font-size:clamp(2.8rem,7vw,5.8rem)}
+  .cta p{margin-top:16px;font-size:clamp(18px,2vw,21px);max-width:26em;font-weight:600}
+  .cta .acciones{display:flex;flex-direction:column;gap:16px;align-items:stretch}
+  .cta .acciones .btn{justify-content:center}
+
+  /* Pie */
+  footer{position:relative;background:var(--pie);padding:clamp(48px,7vw,80px) 0 28px}
+  .pie-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:36px;padding-bottom:40px}
+  .pie-logo{height:104px;width:auto;margin-bottom:16px}
+  .pie-desc{color:var(--muted);font-size:16px;max-width:24em}
+  .pie-tit{font-weight:700;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  .pie-col ul{display:grid;gap:10px}
+  .pie-col a{color:var(--texto);text-decoration:none;font-size:17px}
+  .pie-col li{font-size:17px}
+  .pie-col .redes{display:flex;gap:10px;margin-top:16px}
+  @media (hover:hover) and (pointer:fine){ .pie-col a:hover{color:var(--brasa)} }
+  .pie-abajo{border-top:1px solid var(--linea);padding-top:22px;display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center;font-size:15px;color:var(--muted)}
+  .pie-legales{display:flex;gap:20px;flex-wrap:wrap}
+  .pie-legales a{color:var(--muted);text-decoration:none}
+  @media (hover:hover) and (pointer:fine){ .pie-legales a:hover{color:var(--texto)} }
+
+  /* Lightbox */
+  dialog.lightbox{border:none;padding:0;background:transparent;max-width:min(92vw,900px);width:100%;margin:auto;overflow:visible;color:var(--texto)}
+  dialog.lightbox::backdrop{background:rgba(5,4,3,0);transition:background-color .25s var(--ease-out)}
+  dialog.lightbox.is-open::backdrop{background:rgba(5,4,3,.92)}
+  .lb-inner{background:var(--panel);overflow:hidden;border-radius:var(--r);transform:scale(0.96);opacity:0;transition:transform .22s var(--ease-out),opacity .22s var(--ease-out)}
+  dialog.lightbox.is-open .lb-inner{transform:scale(1);opacity:1}
+  .lb-img{background:#000;display:flex;justify-content:center}
+  .lb-img img{max-height:74svh;width:auto;max-width:100%;object-fit:contain}
+  .lb-barra{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px}
+  .lb-pie{font-size:16px;color:var(--muted);min-width:0}
+  .lb-controles{display:flex;gap:8px;flex-shrink:0}
+  .lb-btn{width:44px;height:44px;border-radius:50%;border:1px solid var(--linea);background:var(--carbon);color:var(--texto);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background-color .15s var(--ease-out),transform .1s var(--ease-out)}
+  .lb-btn:active{transform:scale(0.92)}
+  @media (hover:hover) and (pointer:fine){ .lb-btn:hover{background:var(--brasa);border-color:var(--brasa);color:var(--carbon)} }
+
+  /* Barra fija móvil */
+  .barra{position:fixed;left:0;right:0;bottom:0;z-index:var(--z-barra);background:var(--panel);border-top:1px solid var(--linea);padding:12px 16px max(12px,env(safe-area-inset-bottom));display:none;align-items:center;gap:14px;transform:translateY(100%);transition:transform .3s var(--ease-out)}
+  .barra.visible{transform:translateY(0)}
+  .barra .info{flex:1;min-width:0}
+  .barra .info strong{display:block;font-size:16px;line-height:1.3}
+  .barra .info span{display:block;font-size:14px;color:var(--muted);line-height:1.3}
+  .barra .btn{flex-shrink:0;padding:12px 20px;min-height:46px;font-size:15px}
+  @media (max-width:859px){ .barra{display:flex} body{padding-bottom:78px} }
+
+  /* Cookies */
+  .cookie{position:fixed;left:16px;right:16px;bottom:16px;max-width:520px;margin:0 auto;background:var(--panel);border:1px solid var(--linea-fuerte);border-radius:14px;padding:20px 22px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;transform:translateY(140%);opacity:0;transition:transform .3s var(--ease-out),opacity .3s var(--ease-out);z-index:var(--z-cookie)}
+  .cookie.visible{transform:translateY(0);opacity:1}
+  @media (min-width:900px){ .cookie{left:auto;right:20px;bottom:20px;margin:0;max-width:440px} }
+  .cookie p{flex:1;min-width:220px;font-size:15px;color:var(--muted);line-height:1.5}
+  .cookie a{color:var(--texto)}
+  .cookie-botones{display:flex;gap:10px}
+  .cookie-botones button{border:none;border-radius:9px;padding:11px 18px;min-height:44px;font:800 15px/1 var(--f-body);cursor:pointer;transition:filter .15s var(--ease-out),transform .1s var(--ease-out)}
+  .cookie-botones button:active{transform:scale(0.97)}
+  .cookie .aceptar{background:var(--brasa);color:var(--carbon)}
+  .cookie .rechazar{background:transparent;color:var(--muted);border:1px solid var(--linea-fuerte)}
+  @media (hover:hover) and (pointer:fine){ .cookie .aceptar:hover{filter:brightness(1.1)} .cookie .rechazar:hover{color:var(--texto)} }
+
+  /* Entradas al hacer scroll (con la propiedad translate, para no pisar el :active de los botones) */
+  .js .reveal{opacity:0;translate:0 14px}
+  .js .reveal.in{opacity:1;translate:none;transition:opacity .35s var(--ease-out) var(--retraso,0ms),translate .35s var(--ease-out) var(--retraso,0ms),transform .18s var(--ease-out),filter .15s var(--ease-out)}
+
+  /* Movimiento de la marca: solo transform y opacity; se detiene fuera de pantalla */
+  @keyframes late{0%{scale:1;opacity:.65}100%{scale:3.4;opacity:0}}
+  @keyframes brasa{
+    0%{translate:0 0;opacity:0}
+    12%{opacity:.95}
+    70%{opacity:.5}
+    100%{translate:var(--dx,20px) calc(var(--h,600px)*-1);opacity:0}
+  }
+  .brasas{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:-1}
+  .brasas i{position:absolute;bottom:-12px;left:var(--x);width:var(--s);height:var(--s);border-radius:50%;background:var(--b,var(--brasa));opacity:0;animation:brasa var(--t) linear var(--d) infinite}
+  .brasas i:nth-child(3n){--b:var(--oro)}
+  .js .mov:not(.en-pantalla),.js .mov:not(.en-pantalla)::before,.js .mov:not(.en-pantalla)::after,
+  .js .mov:not(.en-pantalla) *,.js .mov:not(.en-pantalla) *::before,.js .mov:not(.en-pantalla) *::after{animation-play-state:paused !important}
+  .cuenta{display:inline-block;font-variant-numeric:tabular-nums}
+  .js .rev-t{clip-path:polygon(0 -15%,0 -15%,-20% 115%,0 115%)}
+  .js .rev-t.rev-on{clip-path:polygon(0 -15%,120% -15%,120% 115%,0 115%);transition:clip-path .45s var(--ease-out)}
+
+  /* Tablet y móvil */
+  @media (max-width:980px){
+    .hero-grid{grid-template-columns:1fr}
+    .hero-foto{justify-self:start;width:min(100%,440px);margin-top:8px}
+    .marcador-in{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .celda:nth-child(3){border-left:none;padding-left:0}
+    .celda:nth-child(n+3){border-top:1px solid var(--linea)}
+    .casa-grid,.eventos-grid,.ub-grid,.cta-in,.faq-grid,.tablero-cuerpo{grid-template-columns:1fr}
+    .collage{max-width:520px}
+    .ev-fotos{max-width:520px}
+    .ub-info{order:1}
+    .ub-mapa{order:2}
+    .dest-fila{grid-template-columns:1fr 1fr}
+    .dest.fuerte{grid-column:1/-1}
+    .burgers{grid-template-columns:1fr}
+    .burger{display:grid;grid-template-columns:auto minmax(0,1fr) auto;column-gap:18px;align-items:center}
+    .burger .num{grid-row:1/3;font-size:4.4rem}
+    .burger .pr{grid-row:1/3;grid-column:3;margin:0;padding:0}
+    .panel-cols{grid-template-columns:1fr}
+    .panel-cols .aparte{position:static;max-width:420px}
+    .panel-cols .aparte .foto{aspect-ratio:4/3}
+    .aparte-llamar{max-width:400px}
+    .cta .acciones{align-items:flex-start}
+    .pie-grid{grid-template-columns:1fr 1fr}
+    .pie-marca{grid-column:1/-1}
+    .dias{grid-template-columns:repeat(4,minmax(0,1fr));row-gap:20px}
+  }
+  @media (max-width:640px){
+    body{font-size:16.5px}
+    .lista,.tostas{grid-template-columns:1fr}
+    .celda{padding:22px 16px}
+    .celda b{font-size:clamp(1.7rem,7.2vw,2.4rem);white-space:normal}
+    .dest-fila{grid-template-columns:1fr}
+    .burger .num{font-size:3.6rem}
+    .burger h4{font-size:1.4rem}
+    .mosaico{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:clamp(150px,44vw,240px)}
+    .m-a{grid-column:1/3;grid-row:auto/span 2}
+    .m-b,.m-c,.m-d,.m-e,.m-f,.m-g,.m-h,.m-ig{grid-column:auto;grid-row:auto}
+    .cta .acciones{align-items:stretch}
+    .pie-grid{grid-template-columns:1fr}
+    .dias{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .collage .grande{width:88%}
+    .ev-fotos .chica{right:0}
+    .marco::after{translate:8px 8px}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .banda .pista{animation:none}
+    .js .reveal{opacity:1;translate:none}
+    .js .reveal.in{transition:none}
+    .hueso::after{animation:none}
+    *,*::before,*::after{animation:none !important}
+    .brasas{display:none}
+    .js .rev-t,.js .rev-t.rev-on{clip-path:none;transition:none}
+    .foto img,.indicador,.tab,.logo,.links a::after,.signo::before,.signo::after{transition:none !important}
+    .hamburguesa span,.overlay,.lb-inner,.lb-btn,.barra,.cookie{transition:opacity .15s ease !important;transform:none !important}
+    .foto:active,.btn:active{transform:none}
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="llama" viewBox="0 0 24 28"><path d="M12 1C12.6 5.4 6 9.6 6 16.6 6 21.2 8.7 25 12 27 15.3 25 18 21.2 18 16.6c0-2.4-.9-4.2-2-5.8-.3 1.6-1 2.6-2 3.2C14.6 9.6 13.4 4.6 12 1zM12 27c-1.8-.9-3-2.6-3-4.6 0-2.2 1.6-3.6 3-5.6 1.4 2 3 3.4 3 5.6 0 2-1.2 3.7-3 4.6z" fill-rule="evenodd"/></symbol>
+    <symbol id="i-tel" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-mas" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M12 4v16M5 13l7 7 7-7"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+  </defs>
+</svg>
+
+<a class="saltar" href="#contenido">Ir al contenido</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#inicio" aria-label="Xavi Pinchos, ir al inicio"><img src="assets/img/logo.webp" alt="Xavipincho's, bar, cafetería y restaurante" width="422" height="364"></a>
+    <ul class="links" id="enlaces">
+      <li><a href="#carta">La carta</a></li>
+      <li><a href="#eventos">Fútbol y eventos</a></li>
+      <li><a href="#fotos">Fotos</a></li>
+      <li><a href="#horario">Horario</a></li>
+      <li><a href="#ubicacion">Dónde estamos</a></li>
+    </ul>
+    <div class="nav-acciones">
+      <a class="btn-social" href="https://www.instagram.com/xavipinchos/" target="_blank" rel="noopener" aria-label="Instagram de Xavi Pinchos (@xavipinchos)"><svg class="ico"><use href="#i-ig"/></svg></a>
+      <a class="btn btn-primario" href="tel:+34614654290"><svg class="ico"><use href="#i-tel"/></svg>Llamar</a>
+      <button class="hamburguesa" id="hamburguesa" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="overlay"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+  <a class="enlace" href="#carta" data-cerrar>La carta</a>
+  <a class="enlace" href="#eventos" data-cerrar>Fútbol y eventos</a>
+  <a class="enlace" href="#fotos" data-cerrar>Fotos</a>
+  <a class="enlace" href="#horario" data-cerrar>Horario</a>
+  <a class="enlace" href="#ubicacion" data-cerrar>Dónde estamos</a>
+  <div class="redes">
+    <a class="btn btn-primario" href="tel:+34614654290"><svg class="ico"><use href="#i-tel"/></svg>614 65 42 90</a>
+    <a class="btn-social" href="https://www.instagram.com/xavipinchos/" target="_blank" rel="noopener" aria-label="Instagram de Xavi Pinchos (@xavipinchos)"><svg class="ico"><use href="#i-ig"/></svg></a>
+  </div>
+</div>
+
+<main id="contenido">
+
+  <section class="hero" id="inicio">
+    <span class="brasas" data-n="18" aria-hidden="true"></span>
+    <div class="wrap hero-grid">
+      <div class="hero-texto">
+        <p class="hero-marca reveal">Bar · Cafetería · Restaurante · Pinto</p>
+        <h1 class="reveal" style="--retraso:50ms">Pinchos, <em>parrilla</em> y fútbol en Pinto</h1>
+        <p class="hero-sub reveal" style="--retraso:100ms">Auténtica comida casera, raciones grandes y buen ambiente. Aquí con un plato para dos pueden comer cuatro.</p>
+        <div class="hero-cta reveal" style="--retraso:150ms">
+          <a class="btn btn-primario" href="#carta"><svg class="ico"><use href="#i-flecha"/></svg>Ver la carta</a>
+          <a class="btn btn-borde" href="tel:+34614654290"><svg class="ico"><use href="#i-tel"/></svg>Llamar al 614 65 42 90</a>
+        </div>
+        <p class="estado reveal" id="estadoHero" role="status" style="--retraso:200ms"><span class="punto"></span><span id="estadoTexto">Consultando el horario</span></p>
+      </div>
+      <div class="hero-foto marco reveal" style="--retraso:80ms">
+        <img src="assets/img/parrillada.webp" alt="Fuente de parrillada con chuletón, chorizos, morcillas y patatas fritas sobre una pizarra" width="818" height="871" fetchpriority="high">
+      </div>
+    </div>
+  </section>
+
+  <div class="marcador">
+    <div class="wrap marcador-in">
+      <div class="celda reveal"><small>En Google</small><b><span class="cuenta" data-fin="4.9" data-dec="1">4,9</span> <svg class="ico ico-lleno" aria-hidden="true"><use href="#i-star"/></svg></b><span><span class="cuenta" data-fin="45">45</span> opiniones</span></div>
+      <div class="celda reveal" style="--retraso:40ms"><small>Horario</small><b>8:00 a 1:00</b><span>Todos los días</span></div>
+      <div class="celda reveal" style="--retraso:80ms"><small>Por persona</small><b>10 a 20&nbsp;€</b><span>Según los clientes en Google</span></div>
+      <div class="celda reveal" style="--retraso:120ms"><small>La carta</small><b><span><span class="cuenta" data-fin="75">75</span>+ platos</span></b><span>Sin contar las bebidas</span></div>
+    </div>
+  </div>
+
+  <div class="banda" aria-hidden="true">
+    <div class="pista">
+      <div class="grupo"><span>Pinchos y tapas</span><svg viewBox="0 0 24 28"><use href="#llama"/></svg><span>Parrilla</span><svg viewBox="0 0 24 28"><use href="#llama"/></svg><span>Fritura de pescado</span><svg viewBox="0 0 24 28"><use href="#llama"/></svg><span>Raciones grandes</span><svg viewBox="0 0 24 28"><use href="#llama"/></svg><span>Fútbol en HD</span><svg viewBox="0 0 24 28"><use href="#llama"/></svg><span>Desayunos desde las 8:00</span><svg viewBox="0 0 24 28"><use href="#llama"/></svg><span>Salón para eventos</span><svg viewBox="0 0 24 28"><use href="#llama"/></svg></div>
+      <div class="grupo"><span>Pinchos y tapas</span><svg viewBox="0 0 24 28"><use href="#llama"/></svg><span>Parrilla</span><svg viewBox="0 0 24 28"><use href="#llama"/></svg><span>Fritura de pescado</span><svg viewBox="0 0 24 28"><use href="#llama"/></svg><span>Raciones grandes</span><svg viewBox="0 0 24 28"><use href="#llama"/></svg><span>Fútbol en HD</span><svg viewBox="0 0 24 28"><use href="#llama"/></svg><span>Desayunos desde las 8:00</span><svg viewBox="0 0 24 28"><use href="#llama"/></svg><span>Salón para eventos</span><svg viewBox="0 0 24 28"><use href="#llama"/></svg></div>
+    </div>
+  </div>
+
+  <section class="sec casa" id="casa">
+    <span class="brasas" data-n="10" aria-hidden="true"></span>
+    <div class="wrap casa-grid">
+      <div class="casa-texto">
+        <h2>Parrilla, fritura y raciones para compartir</h2>
+        <p class="reveal">La parrilla es el fuerte de la casa, con el chuletón de 500&nbsp;g como estandarte. Y las raciones son de las que se piden a medias.</p>
+        <!-- PRECIOS: salen de la carta de Google (mayo de 2026). Confirmar con el cliente antes de publicar. -->
+        <ul class="firmas reveal">
+          <li class="firma"><div><h3>Chuletón de vaca</h3><p>500&nbsp;g</p></div><span class="pr">33,90&nbsp;€</span></li>
+          <li class="firma"><div><h3>Parrillada de carnes</h3><p>Carnes a la parrilla</p></div><span class="pr">33,90&nbsp;€</span></li>
+          <li class="firma"><div><h3>Fritura de pescado</h3><p>Para compartir</p></div><span class="pr">18,00&nbsp;€</span></li>
+        </ul>
+        <a class="casa-enlace reveal" href="#carta">Ver toda la carta</a>
+      </div>
+      <div class="collage">
+        <div class="grande marco reveal"><button class="foto " type="button" data-galeria="casa" data-grande="assets/img/plato-carne.webp" data-pie="Carne a la plancha con patatas y pimientos" aria-label="Ampliar la foto: Carne a la plancha con patatas y pimientos"><span class="hueso" aria-hidden="true"></span><img src="assets/img/plato-carne.webp" alt="Carne a la plancha con patatas y pimientos verdes sobre una pizarra" width="817" height="871" loading="lazy" decoding="async"><span class="ampliar" aria-hidden="true"><svg class="ico"><use href="#i-mas"/></svg></span></button></div>
+        <div class="chica reveal" style="--retraso:80ms"><button class="foto " type="button" data-galeria="casa" data-grande="assets/img/plato-morcilla-2.webp" data-pie="Morcilla con huevo y patatas" aria-label="Ampliar la foto: Morcilla con huevo y patatas"><span class="hueso" aria-hidden="true"></span><img src="assets/img/plato-morcilla-2-sm.webp" alt="Dos platos de morcilla con huevo y patatas" width="455" height="480" loading="lazy" decoding="async"><span class="ampliar" aria-hidden="true"><svg class="ico"><use href="#i-mas"/></svg></span></button></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-panel carta" id="carta">
+    <div class="wrap">
+      <div class="sec-cab reveal">
+        <h2>La carta</h2>
+        <p>Elige por categorías. Raciones grandes, desayunos desde las 8:00 y cocido los miércoles.</p>
+      </div>
+
+      <div class="tablist reveal" role="tablist" aria-label="Categorías de la carta" id="tablist">
+        <div class="indicador" id="indicador" aria-hidden="true"></div>
+        <button class="tab" role="tab" type="button" id="tab-picar" aria-selected="true" aria-controls="panel-picar" tabindex="0">Para picar</button>
+        <button class="tab" role="tab" type="button" id="tab-carnes" aria-selected="false" aria-controls="panel-carnes" tabindex="-1">Carnes y platos</button>
+        <button class="tab" role="tab" type="button" id="tab-bocatas" aria-selected="false" aria-controls="panel-bocatas" tabindex="-1">Hamburguesas y bocadillos</button>
+        <button class="tab" role="tab" type="button" id="tab-desayunos" aria-selected="false" aria-controls="panel-desayunos" tabindex="-1">Desayunos y postres</button>
+        <button class="tab" role="tab" type="button" id="tab-bebidas" aria-selected="false" aria-controls="panel-bebidas" tabindex="-1">Bebidas</button>
+      </div>
+
+<div class="panel" id="panel-picar" role="tabpanel" aria-labelledby="tab-picar" data-activo tabindex="0">
+<div class="dest-fila reveal">
+  <article class="dest fuerte"><span class="etiqueta">Solo los miércoles</span><h3>Cocido completo</h3><p>Tradición, sabor y calidad en cada cucharada.</p><span class="pr">13,00&nbsp;€</span></article>
+  <article class="dest"><span class="etiqueta">Destacado</span><h3>Huevos rotos con jamón ibérico</h3><span class="pr">14,90&nbsp;€</span></article>
+  <article class="dest"><span class="etiqueta">Destacado</span><h3>Huevos rotos con morcilla</h3><span class="pr">13,90&nbsp;€</span></article>
+</div>
+<section class="grupo reveal"><h3 class="grupo-tit">Ibéricos</h3><ul class="lista"><li class="plato"><div class="pl-fila"><h4>Jamón serrano</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">16,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Jamón ibérico</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">22,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Queso semicurado</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">16,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Tabla de ibéricos</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">25,00&nbsp;€</span></div></li></ul></section>
+<section class="grupo reveal"><h3 class="grupo-tit">Tostas</h3><div class="precio-cab"><span class="precio-grande">6,90&nbsp;€</span><p class="precio-nota"><b>Todas las tostas al mismo precio.</b> Elige la que más te apetezca.</p></div><ul class="tostas"><li>Queso de cabra con cebolla caramelizada</li><li>Matrimonio, tomate untado (boquerones en vinagre y anchoas)</li><li>Tosta de oreja con salsa brava</li><li>Tosta de gulas y gambas</li></ul></section>
+<section class="grupo reveal"><h3 class="grupo-tit">Nuestras raciones<small>Para compartir</small></h3><ul class="lista"><li class="plato"><div class="pl-fila"><h4>Bravas</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">8,50&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Braviolis</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">8,50&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Croquetas de jamón (8 uds)</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">10,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Tequeños (8 uds)</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">10,90&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Alitas de pollo</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">11,50&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Salchipapa</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">11,90&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Cazuela de choricitos</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">11,90&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Oreja a la plancha</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">12,50&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Oreja en salsa</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">12,50&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Diosas de pollo y gambas</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">12,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Patatas bacon chips</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">12,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Boquerones en vinagre o fritos</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">12,90&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Tiritas de pollo</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">13,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Lacón a la gallega</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">13,50&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Callos a la madrileña</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">14,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Nachos</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">14,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Calamares</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">14,50&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Chopitos</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">14,90&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Tortilla de patatas</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">15,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Sepia</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">16,50&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Fritura de pescado</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">18,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Pulpo a la gallega</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">23,90&nbsp;€</span></div></li></ul></section>
+</div>
+<div class="panel" id="panel-carnes" role="tabpanel" aria-labelledby="tab-carnes" tabindex="0">
+<section class="grupo reveal"><h3 class="grupo-tit">Carnes</h3><ul class="lista"><li class="plato"><div class="pl-fila"><h4>Entrecot</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">21,90&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Chuletas de cordero</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">21,90&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Cachopo con patatas fritas y pimientos</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">29,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Chuletón de vaca (500 g)</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">33,90&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Parrillada de carnes</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">33,90&nbsp;€</span></div></li></ul></section>
+<section class="grupo reveal"><h3 class="grupo-tit">Platos combinados</h3><ul class="lista"><li class="plato"><div class="pl-fila"><h4>Filete ruso, huevo y patatas</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">10,50&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Chuleta de cerdo, huevo y patatas</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">10,50&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Lomo, huevo y patatas</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">10,50&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Filete de ternera, huevo y patatas</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">11,50&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Escalope de pollo, huevo y patatas</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">11,50&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Entrecot, pimiento y patatas</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">21,90&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Chuletas de cordero, pimiento y patatas</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">21,90&nbsp;€</span></div></li></ul></section>
+<section class="grupo reveal"><h3 class="grupo-tit">Ensaladas de la casa</h3><ul class="lista"><li class="plato"><div class="pl-fila"><h4>Ensalada mixta, por persona</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">8,90&nbsp;€</span></div><p>Lechuga, tomate, cebolla, atún, huevo, aceitunas, zanahoria y espárragos.</p></li><li class="plato"><div class="pl-fila"><h4>Ensalada de pollo</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">14,90&nbsp;€</span></div><p>Lechuga, tomate, pollo, salsa de miel y frutos secos.</p></li><li class="plato"><div class="pl-fila"><h4>Ensalada de ventresca</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">15,90&nbsp;€</span></div><p>Tomate, cebolla roja, aceite de oliva y ventresca.</p></li></ul></section>
+</div>
+<div class="panel" id="panel-bocatas" role="tabpanel" aria-labelledby="tab-bocatas" tabindex="0">
+<section class="grupo reveal"><h3 class="grupo-tit">Hamburguesas</h3><div class="burgers"><article class="burger"><span class="num" aria-hidden="true">1</span><h4>Hamburguesa nº 1</h4><p>Carne, lechuga, tomate, patatas, queso y cebolla caramelizada.</p><span class="pr">10,00&nbsp;€</span></article><article class="burger"><span class="num" aria-hidden="true">2</span><h4>Hamburguesa nº 2</h4><p>Carne, lechuga, tomate, bacon, huevo y queso.</p><span class="pr">12,00&nbsp;€</span></article><article class="burger"><span class="num" aria-hidden="true">3</span><h4>Hamburguesa nº 3</h4><p>Pollo, lechuga, tomate, queso y bacon.</p><span class="pr">11,00&nbsp;€</span></article></div></section>
+<section class="grupo reveal"><h3 class="grupo-tit">Bocadillos y montados</h3><ul class="lista"><li class="plato"><div class="pl-fila"><h4>Pincho de tortilla</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">3,90&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Tortilla de patata</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">5,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Lomo a la plancha</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">5,50&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Panceta</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">5,50&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Bacon</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">5,50&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Chorizo frito</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">5,50&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Queso manchego</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">6,80&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Calamares</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">6,80&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Pechuga de pollo</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">6,80&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Jamón ibérico</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">7,80&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Pepito de ternera</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">7,90&nbsp;€</span></div></li></ul></section>
+<section class="grupo reveal"><h3 class="grupo-tit">Sándwiches</h3><ul class="lista"><li class="plato"><div class="pl-fila"><h4>Mixto</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">5,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Mixto con huevo</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">6,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Vegetal</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">8,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>De pollo</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">9,00&nbsp;€</span></div></li></ul></section>
+</div>
+<div class="panel" id="panel-desayunos" role="tabpanel" aria-labelledby="tab-desayunos" tabindex="0">
+<section class="grupo reveal"><h3 class="grupo-tit">Nuestros desayunos<small>Desde las 8:00</small></h3><ul class="lista"><li class="plato"><div class="pl-fila"><h4>Bollería sola</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">2,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Café con 2 porras o 3 churros</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">3,10&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Café con bollería</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">3,10&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Café y barrita con tomate o salmorejo</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">3,10&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Café y ½ barrita con jamón</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">3,70&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Café y barrita con jamón</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">4,50&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Desayuno con zumo de naranja</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">5,70&nbsp;€</span></div></li></ul></section>
+<section class="grupo reveal"><h3 class="grupo-tit">Postres y helados</h3><ul class="lista"><li class="plato"><div class="pl-fila"><h4>Natillas</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">5,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Flan casero</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">5,10&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Pudin</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">5,10&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Tarta de queso</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">6,50&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Tarta de manzana</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">6,50&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Helado, 2 bolas</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">6,50&nbsp;€</span></div></li></ul></section>
+</div>
+<div class="panel" id="panel-bebidas" role="tabpanel" aria-labelledby="tab-bebidas" tabindex="0">
+<div class="panel-cols"><div class="aparte reveal"><button class="foto " type="button" data-galeria="bebidas" data-grande="assets/img/vinos.webp" data-pie="Vinos en la estantería del bar" aria-label="Ampliar la foto: Vinos en la estantería del bar"><span class="hueso" aria-hidden="true"></span><img src="assets/img/vinos-sm.webp" alt="Botellas de vino tinto, rosado y blanco en una estantería de madera del bar" width="450" height="480" loading="lazy" decoding="async"><span class="ampliar" aria-hidden="true"><svg class="ico"><use href="#i-mas"/></svg></span></button></div><div><section class="grupo reveal"><h3 class="grupo-tit">Cervezas, vinos y refrescos</h3><ul class="lista"><li class="plato"><div class="pl-fila"><h4>Café o infusiones</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">1,70&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Botella de agua</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">2,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Doble de cerveza</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">3,20&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Tercio de Mahou</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">3,20&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Jarra de ½ litro</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">4,20&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Vinos</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">3,20&nbsp;€</span></div><p>Rueda y rosado; Rioja o Ribera del Duero.</p></li><li class="plato"><div class="pl-fila"><h4>Zumos y refrescos</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">3,20&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Vermut de grifo</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">3,20&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Vermut Martini</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">3,50&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Licores</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">3,50&nbsp;€</span></div><p>Hierbas, pacharán y crema.</p></li></ul></section>
+<section class="grupo reveal"><h3 class="grupo-tit">Copas</h3><ul class="lista"><li class="plato"><div class="pl-fila"><h4>Veterano y similares</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">3,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>DYC o Larios</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">3,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Magno o Carlos III</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">4,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>JB o similares</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">4,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Baylis</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">5,50&nbsp;€</span></div></li></ul></section>
+<section class="grupo reveal"><h3 class="grupo-tit">Cubatas</h3><ul class="lista"><li class="plato"><div class="pl-fila"><h4>DYC o similares</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">6,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>JB o similares</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">7,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Bacardi, Gordon's, Beefeater</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">7,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Havana Club 7 años</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">9,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Suplemento Red Bull</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">1,00&nbsp;€</span></div></li></ul></section>
+<section class="grupo reveal"><h3 class="grupo-tit">Ginebras y whisky</h3><ul class="lista"><li class="plato"><div class="pl-fila"><h4>Bombay o Seagram's</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">8,50&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Puerto de Indias</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">8,00&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Johnnie Walker Negro</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">11,00&nbsp;€</span></div></li></ul></section>
+<section class="grupo reveal"><h3 class="grupo-tit">Chupitos</h3><ul class="lista"><li class="plato"><div class="pl-fila"><h4>Chupito normal</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">1,80&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Chupito superior</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">2,80&nbsp;€</span></div></li><li class="plato"><div class="pl-fila"><h4>Chupito extra</h4><span class="pl-punt" aria-hidden="true"></span><span class="pr">4,00&nbsp;€</span></div></li></ul></section></div></div>
+</div>
+
+      <p class="nota-carta reveal">¿Alergias o intolerancias? Díselo al personal antes de pedir. Para reservar mesa, llama al <a href="tel:+34614654290">614 65 42 90</a>.</p>
+    </div>
+  </section>
+
+  <section class="sec eventos" id="eventos">
+    <div class="wrap eventos-grid">
+      <div class="ev-fotos">
+        <div class="grande marco reveal"><button class="foto " type="button" data-galeria="eventos" data-grande="assets/img/salon.webp" data-pie="El salón, con una mesa larga" aria-label="Ampliar la foto: El salón, con una mesa larga"><span class="hueso" aria-hidden="true"></span><img src="assets/img/salon.webp" alt="Grupo de personas comiendo en una mesa larga del salón" width="821" height="873" loading="lazy" decoding="async"><span class="ampliar" aria-hidden="true"><svg class="ico"><use href="#i-mas"/></svg></span></button></div>
+        <div class="chica reveal" style="--retraso:80ms"><button class="foto " type="button" data-galeria="eventos" data-grande="assets/img/barra.webp" data-pie="La barra" aria-label="Ampliar la foto: La barra"><span class="hueso" aria-hidden="true"></span><img src="assets/img/barra-sm.webp" alt="Barra del bar con botellas, bufandas de equipos de fútbol y una vitrina de tapas" width="455" height="480" loading="lazy" decoding="async"><span class="ampliar" aria-hidden="true"><svg class="ico"><use href="#i-mas"/></svg></span></button></div>
+      </div>
+      <div>
+        <div class="sec-cab reveal">
+          <h2>Para ver el fútbol y para celebrar</h2>
+        </div>
+        <div class="ev-bloque reveal">
+          <h3>Fútbol en HD</h3>
+          <p>Todo el fútbol en pantalla HD, con una cerveza bien fría y una ración para compartir.</p>
+        </div>
+        <div class="ev-bloque reveal">
+          <h3>Salón para eventos</h3>
+          <p>Un gran salón para bodas, reuniones familiares, cumpleaños, bautizos y cenas de grupo. Dinos la fecha y cuántos sois y lo hablamos.</p>
+          <ul class="chips" aria-label="Celebraciones en el salón"><li>Bodas</li><li>Reuniones familiares</li><li>Cumpleaños</li><li>Bautizos</li><li>Cenas y eventos</li></ul>
+          <a class="btn btn-primario" href="tel:+34614654290"><svg class="ico"><use href="#i-tel"/></svg>Consultar fecha</a>
+        </div>
+        <div class="ev-bloque reveal">
+          <h3>Terraza</h3>
+          <p>Mesas al aire libre en la puerta, en la calle Asturias.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-panel galeria" id="fotos">
+    <div class="wrap">
+      <div class="sec-cab reveal">
+        <h2>Fotos del local</h2>
+        <p>Toca una foto para verla grande.</p>
+      </div>
+      <div class="mosaico">
+        <button class="foto m-a reveal" type="button" data-galeria="fotos" data-grande="assets/img/equipo-paella.webp" data-pie="El equipo con una paella" aria-label="Ampliar la foto: El equipo con una paella"><span class="hueso" aria-hidden="true"></span><img src="assets/img/equipo-paella-sm.webp" alt="El equipo del bar, con polos rojos, junto a una paella grande sobre la mesa" width="451" height="480" loading="lazy" decoding="async"></button>
+        <button class="foto m-b reveal" type="button" data-galeria="fotos" data-grande="assets/img/fachada-noche.webp" data-pie="La fachada de noche" style="--retraso:40ms" aria-label="Ampliar la foto: La fachada de noche"><span class="hueso" aria-hidden="true"></span><img src="assets/img/fachada-noche-sm.webp" alt="Fachada del bar de noche, con el rótulo de Xavi Pinchos y el cartel de Mahou" width="450" height="480" loading="lazy" decoding="async"></button>
+        <button class="foto m-c reveal" type="button" data-galeria="fotos" data-grande="assets/img/plato-morcilla.webp" data-pie="Morcilla con huevo y patatas" style="--retraso:80ms" aria-label="Ampliar la foto: Morcilla con huevo y patatas"><span class="hueso" aria-hidden="true"></span><img src="assets/img/plato-morcilla-sm.webp" alt="Plato de morcilla con huevo y patatas" width="450" height="480" loading="lazy" decoding="async"></button>
+        <button class="foto m-d reveal" type="button" data-galeria="fotos" data-grande="assets/img/equipo-cocina.webp" data-pie="El equipo de cocina" style="--retraso:40ms" aria-label="Ampliar la foto: El equipo de cocina"><span class="hueso" aria-hidden="true"></span><img src="assets/img/equipo-cocina-sm.webp" alt="Cuatro trabajadoras del bar sonriendo con una paella con gambas" width="452" height="480" loading="lazy" decoding="async"></button>
+        <button class="foto m-e reveal" type="button" data-galeria="fotos" data-grande="assets/img/parrillada.webp" data-pie="Parrillada" style="--retraso:80ms" aria-label="Ampliar la foto: Parrillada"><span class="hueso" aria-hidden="true"></span><img src="assets/img/parrillada-sm.webp" alt="Fuente de parrillada con chuletón, chorizos, morcillas y patatas fritas sobre una pizarra" width="451" height="480" loading="lazy" decoding="async"></button>
+        <button class="foto m-f reveal" type="button" data-galeria="fotos" data-grande="assets/img/fachada-terraza.webp" data-pie="La terraza" aria-label="Ampliar la foto: La terraza"><span class="hueso" aria-hidden="true"></span><img src="assets/img/fachada-terraza-sm.webp" alt="Terraza con mesas y sillas en la puerta del bar, en la calle" width="450" height="480" loading="lazy" decoding="async"></button>
+        <button class="foto m-g reveal" type="button" data-galeria="fotos" data-grande="assets/img/interior.webp" data-pie="El interior" style="--retraso:40ms" aria-label="Ampliar la foto: El interior"><span class="hueso" aria-hidden="true"></span><img src="assets/img/interior-sm.webp" alt="Interior del bar con mesas altas, taburetes y la barra al fondo" width="480" height="360" loading="lazy" decoding="async"></button>
+        <button class="foto m-h reveal" type="button" data-galeria="fotos" data-grande="assets/img/barra.webp" data-pie="La barra" style="--retraso:80ms" aria-label="Ampliar la foto: La barra"><span class="hueso" aria-hidden="true"></span><img src="assets/img/barra-sm.webp" alt="Barra del bar con botellas, bufandas de equipos de fútbol y una vitrina de tapas" width="455" height="480" loading="lazy" decoding="async"></button>
+        <a class="m-ig reveal" href="https://www.instagram.com/xavipinchos/" target="_blank" rel="noopener" style="--retraso:120ms"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg><strong>Más en Instagram</strong><span>@xavipinchos</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec horario" id="horario" data-estado="cerrado">
+    <div class="wrap">
+      <div class="sec-cab reveal">
+        <h2>Horario</h2>
+        <p>Abrimos todos los días, desde el desayuno hasta la una de la madrugada.</p>
+      </div>
+      <!-- HORARIO: según la ficha de Google (8:00 a 1:00, lunes a domingo). Confirmar con el cliente. -->
+      <div class="tablero reveal">
+        <div class="tablero-barra"><span>Ahora mismo</span><span class="luces" aria-hidden="true"><i></i><i></i><i></i><i></i></span></div>
+        <div class="tablero-cuerpo">
+          <div role="status">
+            <p class="tab-est" id="tabEst">Cerrado</p>
+            <p class="tab-det" id="tabDet">Consultando el horario</p>
+            <p class="tab-cuenta" id="tabCuenta">&nbsp;</p>
+          </div>
+          <div class="tab-horas">
+            <p class="hora"><span>Abrimos</span><b>8:00</b></p>
+            <p class="hora"><span>Cerramos</span><b>1:00</b></p>
+          </div>
+        </div>
+      </div>
+      <ul class="dias reveal" id="dias" style="--retraso:60ms" aria-label="Horario por día">
+        <li class="dia" data-dow="1"><span class="hoy-tag">Hoy</span><span class="d-nombre">Lunes</span><span class="d-hora">8:00 a 1:00</span></li>
+        <li class="dia" data-dow="2"><span class="hoy-tag">Hoy</span><span class="d-nombre">Martes</span><span class="d-hora">8:00 a 1:00</span></li>
+        <li class="dia" data-dow="3"><span class="hoy-tag">Hoy</span><span class="d-nombre">Miércoles</span><span class="d-hora">8:00 a 1:00</span></li>
+        <li class="dia" data-dow="4"><span class="hoy-tag">Hoy</span><span class="d-nombre">Jueves</span><span class="d-hora">8:00 a 1:00</span></li>
+        <li class="dia" data-dow="5"><span class="hoy-tag">Hoy</span><span class="d-nombre">Viernes</span><span class="d-hora">8:00 a 1:00</span></li>
+        <li class="dia" data-dow="6"><span class="hoy-tag">Hoy</span><span class="d-nombre">Sábado</span><span class="d-hora">8:00 a 1:00</span></li>
+        <li class="dia" data-dow="0"><span class="hoy-tag">Hoy</span><span class="d-nombre">Domingo</span><span class="d-hora">8:00 a 1:00</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec ubicacion" id="ubicacion">
+    <div class="wrap ub-grid">
+      <div class="ub-info reveal">
+        <h2>Dónde estamos</h2>
+        <address>C/ Asturias, 9<br>28320 Pinto, Madrid</address>
+        <p>Ven a vernos, o llama para reservar mesa o preguntar por el salón.</p>
+        <p class="ub-tel"><a href="tel:+34614654290">614 65 42 90</a></p>
+        <div class="lugar-botones">
+          <a class="btn btn-borde" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Xavi+Pinchos+Calle+Asturias+9+28320+Pinto+Madrid"><svg class="ico"><use href="#i-pin"/></svg>Abrir en Google Maps</a>
+          <a class="btn btn-borde" target="_blank" rel="noopener" href="https://maps.apple.com/?q=Xavi+Pinchos&amp;address=Calle+Asturias+9,+28320+Pinto,+Madrid"><svg class="ico"><use href="#i-pin"/></svg>Abrir en Apple Maps</a>
+        </div>
+      </div>
+      <div class="ub-mapa reveal" id="mapa" style="--retraso:60ms">
+        <div class="ub-facade" id="mapaFacade">
+          <div class="pin" aria-hidden="true"></div>
+          <p>El mapa es de Google Maps. Al cargarlo, Google puede guardar sus propias cookies.</p>
+          <button class="btn btn-primario" type="button" id="btnMapa"><svg class="ico"><use href="#i-pin"/></svg>Ver el mapa</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec faq" id="preguntas">
+    <div class="wrap">
+      <div class="sec-cab reveal">
+        <h2>Preguntas frecuentes</h2>
+      </div>
+      <div class="faq-grid">
+      <div class="faq-lista reveal">
+        <details open>
+          <summary>¿Cuál es el horario?<span class="signo" aria-hidden="true"></span></summary>
+          <div class="contenido">Abrimos todos los días, de 8:00 a 1:00.</div>
+        </details>
+        <details>
+          <summary>¿Puedo reservar mesa?<span class="signo" aria-hidden="true"></span></summary>
+          <div class="contenido">Sí. Llama al <a href="tel:+34614654290">614 65 42 90</a> o escríbenos por <a href="https://ig.me/m/xavipinchos" target="_blank" rel="noopener">Instagram</a>.</div>
+        </details>
+        <details>
+          <summary>¿Tenéis salón para eventos?<span class="signo" aria-hidden="true"></span></summary>
+          <div class="contenido">Sí, un gran salón para bodas, reuniones familiares, cumpleaños, bautizos y cenas de grupo. Llámanos con la fecha y el número de personas y lo hablamos.</div>
+        </details>
+        <details>
+          <summary>¿Ponéis el fútbol?<span class="signo" aria-hidden="true"></span></summary>
+          <div class="contenido">Sí, con pantalla HD. Ven a ver el partido con una ración y una cerveza fría.</div>
+        </details>
+        <details>
+          <summary>¿Cuánto se gasta por persona?<span class="signo" aria-hidden="true"></span></summary>
+          <div class="contenido">Según los clientes en Google, entre 10 y 20&nbsp;€ por persona. Las raciones son grandes: con un plato para dos pueden comer cuatro.</div>
+        </details>
+        <details>
+          <summary>¿Qué día hay cocido?<span class="signo" aria-hidden="true"></span></summary>
+          <div class="contenido">Los miércoles. Es cocido completo y cuesta 13,00&nbsp;€.</div>
+        </details>
+        <details>
+          <summary>¿Hay terraza?<span class="signo" aria-hidden="true"></span></summary>
+          <div class="contenido">Sí, tenemos mesas al aire libre en la puerta del bar.</div>
+        </details>
+      </div>
+      <aside class="aparte-llamar reveal" style="--retraso:80ms">
+        <h3>¿Reservas o eventos?</h3>
+        <p>Llámanos y lo hablamos.</p>
+        <a class="btn btn-primario" href="tel:+34614654290"><svg class="ico"><use href="#i-tel"/></svg>Llamar al 614 65 42 90</a>
+      </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="reservar">
+    <svg class="cta-llama" viewBox="0 0 24 28" aria-hidden="true"><use href="#llama"/></svg>
+    <div class="wrap cta-in">
+      <div class="reveal">
+        <h2>¿Cuántos sois hoy?</h2>
+        <p>Llama y reserva tu mesa, o escríbenos por Instagram. Abrimos todos los días de 8:00 a 1:00.</p>
+      </div>
+      <div class="acciones reveal" style="--retraso:60ms">
+        <a class="btn btn-oscuro" href="tel:+34614654290"><svg class="ico"><use href="#i-tel"/></svg>Llamar al 614 65 42 90</a>
+        <a class="btn btn-borde btn-borde-osc" href="https://ig.me/m/xavipinchos" target="_blank" rel="noopener"><svg class="ico"><use href="#i-ig"/></svg>Escribir por Instagram</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="pie-grid">
+      <div class="pie-marca">
+        <img class="pie-logo" src="assets/img/logo.webp" alt="Xavipincho's, bar, cafetería y restaurante" width="422" height="364" loading="lazy">
+        <p class="pie-desc">Bar, cafetería y restaurante en Pinto, Madrid. Pinchos, parrilla, raciones y fútbol.</p>
+      </div>
+      <div class="pie-col">
+        <p class="pie-tit">La casa</p>
+        <ul>
+          <li><a href="#carta">La carta</a></li>
+          <li><a href="#eventos">Fútbol y eventos</a></li>
+          <li><a href="#fotos">Fotos</a></li>
+          <li><a href="#horario">Horario</a></li>
+          <li><a href="#ubicacion">Dónde estamos</a></li>
+        </ul>
+      </div>
+      <div class="pie-col">
+        <p class="pie-tit">Contacto</p>
+        <ul>
+          <li><a href="tel:+34614654290">614 65 42 90</a></li>
+          <li>C/ Asturias, 9, Pinto</li>
+        </ul>
+        <div class="redes">
+          <a class="btn-social" href="https://www.instagram.com/xavipinchos/" target="_blank" rel="noopener" aria-label="Instagram de Xavi Pinchos (@xavipinchos)"><svg class="ico"><use href="#i-ig"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="pie-abajo">
+      <span>© 2026 Xavi Pinchos. Todos los derechos reservados.</span>
+      <div class="pie-legales">
+        <a href="privacy.html">Política de privacidad</a>
+        <a href="terms.html">Términos y condiciones</a>
+      </div>
+      <span>Web diseñada por Diego De Galdo</span>
+    </div>
+  </div>
+</footer>
+
+<div class="barra" id="barra" role="region" aria-label="Llamar al bar">
+  <div class="info"><strong>Xavi Pinchos</strong><span id="estadoBarra">8:00 a 1:00</span></div>
+  <a class="btn btn-primario" href="tel:+34614654290"><svg class="ico"><use href="#i-tel"/></svg>Llamar</a>
+</div>
+
+<dialog class="lightbox" id="lightbox" aria-label="Foto ampliada">
+  <div class="lb-inner">
+    <div class="lb-img"><img id="lbImg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Foto ampliada" width="900" height="900" loading="lazy"></div>
+    <div class="lb-barra">
+      <span class="lb-pie" id="lbPie"></span>
+      <div class="lb-controles">
+        <button class="lb-btn" id="lbPrev" type="button" aria-label="Foto anterior">‹</button>
+        <button class="lb-btn" id="lbNext" type="button" aria-label="Foto siguiente">›</button>
+        <button class="lb-btn" id="lbClose" type="button" aria-label="Cerrar">✕</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<div class="cookie" id="cookie" role="region" aria-label="Aviso de cookies">
+  <p>Guardamos una cookie propia para recordar tu elección. Si aceptas, también cargamos el mapa de Google. Más en la <a href="privacy.html">política de privacidad</a>.</p>
+  <div class="cookie-botones">
+    <button class="rechazar" id="btnRechazar" type="button">Rechazar</button>
+    <button class="aceptar" id="btnAceptar" type="button">Aceptar</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var $ = function(s,c){ return (c||document).querySelector(s); };
+  var $$ = function(s,c){ return Array.prototype.slice.call((c||document).querySelectorAll(s)); };
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Navegación: línea al bajar, enlace activo y menú móvil */
+  var nav = $('#nav');
+  function alScroll(){ nav.classList.toggle('encogida', window.scrollY > 40); }
+  window.addEventListener('scroll', alScroll, {passive:true}); alScroll();
+
+  var enlaces = $$('#enlaces a');
+  var secciones = ['carta','eventos','fotos','horario','ubicacion'].map(function(id){ return document.getElementById(id); });
+  if ('IntersectionObserver' in window){
+    var obsNav = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){
+          enlaces.forEach(function(a){ a.classList.toggle('activo', a.getAttribute('href') === '#' + e.target.id); });
+        }
+      });
+    }, {rootMargin:'-40% 0px -55% 0px'});
+    secciones.forEach(function(s){ if (s) obsNav.observe(s); });
+  }
+
+  var ham = $('#hamburguesa'), ov = $('#overlay');
+  function alternar(abrir){
+    ham.classList.toggle('activo', abrir); ov.classList.toggle('activo', abrir);
+    ham.setAttribute('aria-expanded', abrir); ham.setAttribute('aria-label', abrir ? 'Cerrar menú' : 'Abrir menú');
+    document.body.classList.toggle('menu-abierto', abrir);
+  }
+  ham.addEventListener('click', function(){ alternar(!ov.classList.contains('activo')); });
+  $$('[data-cerrar]', ov).forEach(function(a){ a.addEventListener('click', function(){ alternar(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && ov.classList.contains('activo')) alternar(false); });
+
+  /* Estado del día. Abre todos los días de 8:00 a 1:00 (cierra ya de madrugada, a la una).
+     Los festivos no se pueden calcular aquí: el horario se da tal cual lo publica Google. */
+  var APERTURA = 8*60, CIERRE = 60;
+  var NOMBRE_DIA = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+  function ahoraMadrid(){
+    try{
+      var o = {};
+      new Intl.DateTimeFormat('en-US',{timeZone:'Europe/Madrid',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(p){ o[p.type] = p.value; });
+      return {d:{Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday], min:(+o.hour)*60 + (+o.minute)};
+    }catch(e){ var n = new Date(); return {d:n.getDay(), min:n.getHours()*60 + n.getMinutes()}; }
+  }
+  function duracion(m){
+    var d = Math.floor(m/1440), h = Math.floor((m%1440)/60), mi = m%60;
+    if (d > 0) return d + ' d' + (h ? ' ' + h + ' h' : '');
+    if (h > 0) return h + ' h' + (mi ? ' ' + mi + ' min' : '');
+    return mi + ' min';
+  }
+  function pintarEstado(){
+    var t = ahoraMadrid(), abierto = t.min >= APERTURA || t.min < CIERRE;
+    /* Pasada la medianoche todavía cuenta como la jornada del día anterior */
+    var diaJornada = t.min < CIERRE ? (t.d + 6) % 7 : t.d;
+    var palabra, detalle, cuenta, barra, hero;
+    if (abierto){
+      var falta = t.min >= APERTURA ? (1440 - t.min) + CIERRE : CIERRE - t.min;
+      palabra = 'Abierto'; detalle = 'Cerramos a la 1:00'; cuenta = 'Quedan ' + duracion(falta);
+      barra = 'Abierto hasta la 1:00'; hero = 'Abierto ahora, hasta la 1:00';
+    } else {
+      palabra = 'Cerrado'; detalle = 'Hoy abrimos a las 8:00'; cuenta = 'Faltan ' + duracion(APERTURA - t.min);
+      barra = 'Abrimos a las 8:00'; hero = 'Cerrado ahora. Abrimos a las 8:00';
+    }
+    var h = document.getElementById('estadoHero'); if (h) h.classList.toggle('cerrado', !abierto);
+    var ht = document.getElementById('estadoTexto'); if (ht) ht.textContent = hero;
+    var hor = document.getElementById('horario'); if (hor) hor.setAttribute('data-estado', abierto ? 'abierto' : 'cerrado');
+    var set = function(id, v){ var el = document.getElementById(id); if (el && el.textContent !== v) el.textContent = v; };
+    set('tabEst', palabra); set('tabDet', detalle); set('tabCuenta', cuenta);
+    var b = $('#estadoBarra'); if (b) b.textContent = barra;
+    $$('#dias .dia[data-dow]').forEach(function(li){ li.classList.toggle('hoy', +li.getAttribute('data-dow') === diaJornada); });
+  }
+  pintarEstado(); setInterval(pintarEstado, 30000);
+
+  /* Pestañas de la carta (el indicador se mueve solo con transform) */
+  var tablist = $('#tablist'), tabs = $$('.tab', tablist), indicador = $('#indicador');
+  function moverIndicador(tab){
+    indicador.style.transform = 'translateX(' + tab.offsetLeft + 'px) scaleX(' + (tab.offsetWidth / 100) + ')';
+  }
+  function activar(tab, enfocar){
+    tabs.forEach(function(t){
+      var on = t === tab;
+      t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).toggleAttribute('data-activo', on);
+    });
+    moverIndicador(tab);
+    if (enfocar) tab.focus();
+    if (tablist.scrollWidth > tablist.clientWidth) tablist.scrollTo({left: tab.offsetLeft - 12, behavior: reduce ? 'auto' : 'smooth'});
+  }
+  tabs.forEach(function(tab, i){
+    tab.addEventListener('click', function(){ activar(tab, false); });
+    tab.addEventListener('keydown', function(e){
+      var dest = null;
+      if (e.key === 'ArrowRight') dest = tabs[(i+1) % tabs.length];
+      if (e.key === 'ArrowLeft') dest = tabs[(i-1+tabs.length) % tabs.length];
+      if (e.key === 'Home') dest = tabs[0];
+      if (e.key === 'End') dest = tabs[tabs.length-1];
+      if (dest){ e.preventDefault(); activar(dest, true); }
+    });
+  });
+  function inicioIndicador(){ moverIndicador($('.tab[aria-selected="true"]', tablist)); }
+  inicioIndicador();
+  window.addEventListener('load', inicioIndicador);
+  window.addEventListener('resize', inicioIndicador);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(inicioIndicador);
+  /* Enlaces que abren una pestaña concreta */
+  $$('[data-tab]').forEach(function(a){ a.addEventListener('click', function(){ var t = document.getElementById(a.getAttribute('data-tab')); if (t) activar(t, false); }); });
+
+  /* Fotos: quitar el esqueleto cuando carga la imagen (o falla) */
+  $$('.foto').forEach(function(f){
+    var im = $('img', f), ok = function(){ f.classList.add('cargada'); };
+    if (im.complete && im.naturalWidth) ok(); else { im.addEventListener('load', ok); im.addEventListener('error', ok); }
+  });
+
+  /* Fotos ampliables: lightbox nativo con grupos (data-galeria) */
+  var dlg = $('#lightbox'), lbImg = $('#lbImg'), lbPie = $('#lbPie'), grupo = [], idx = 0, origen = null;
+  function mostrar(i){
+    idx = (i + grupo.length) % grupo.length;
+    var el = grupo[idx], im = $('img', el);
+    lbImg.src = el.getAttribute('data-grande') || im.getAttribute('src');
+    lbImg.alt = im.getAttribute('alt');
+    lbPie.textContent = el.getAttribute('data-pie') + (grupo.length > 1 ? ' (' + (idx+1) + ' de ' + grupo.length + ')' : '');
+    $('#lbPrev').hidden = $('#lbNext').hidden = grupo.length < 2;
+  }
+  function abrir(el){
+    origen = el;
+    grupo = $$('[data-galeria="' + el.getAttribute('data-galeria') + '"]');
+    mostrar(grupo.indexOf(el));
+    dlg.showModal();
+    requestAnimationFrame(function(){ dlg.classList.add('is-open'); });
+  }
+  function cerrar(){
+    dlg.classList.remove('is-open');
+    var fin = function(){ dlg.close(); dlg.removeEventListener('transitionend', fin); if (origen) origen.focus(); };
+    if (reduce) fin(); else dlg.addEventListener('transitionend', fin);
+  }
+  $$('[data-galeria]').forEach(function(el){ el.addEventListener('click', function(){ abrir(el); }); });
+  $('#lbPrev').addEventListener('click', function(){ mostrar(idx-1); });
+  $('#lbNext').addEventListener('click', function(){ mostrar(idx+1); });
+  $('#lbClose').addEventListener('click', cerrar);
+  dlg.addEventListener('click', function(e){ if (e.target === dlg) cerrar(); });
+  dlg.addEventListener('keydown', function(e){ if (e.key === 'ArrowRight') mostrar(idx+1); if (e.key === 'ArrowLeft') mostrar(idx-1); });
+  dlg.addEventListener('cancel', function(){ dlg.classList.remove('is-open'); });
+
+  /* Preguntas frecuentes: <details> nativo con altura animada (interrumpible) */
+  function Acordeon(el){
+    var self = this; this.el = el; this.resumen = $('summary', el); this.contenido = $('.contenido', el);
+    this.anim = null; this.cerrando = false; this.abriendo = false;
+    this.resumen.addEventListener('click', function(e){ e.preventDefault(); self.el.style.overflow = 'hidden'; if (self.cerrando || !self.el.open) self.abrir(); else self.encoger(); });
+  }
+  Acordeon.prototype.animar = function(desde, hasta, abierto){
+    var self = this;
+    if (this.anim) this.anim.cancel();
+    if (reduce || !this.el.animate){ this.terminar(abierto); return; }
+    this.anim = this.el.animate({height:[desde, hasta]}, {duration:250, easing:'cubic-bezier(0.23,1,0.32,1)'});
+    this.anim.onfinish = function(){ self.terminar(abierto); };
+    this.anim.oncancel = function(){ self.cerrando = false; self.abriendo = false; };
+  };
+  Acordeon.prototype.encoger = function(){ this.cerrando = true; this.animar(this.el.offsetHeight + 'px', this.resumen.offsetHeight + 'px', false); };
+  Acordeon.prototype.abrir = function(){
+    var self = this;
+    this.el.style.height = this.el.offsetHeight + 'px'; this.el.open = true;
+    requestAnimationFrame(function(){ self.abriendo = true; self.animar(self.el.offsetHeight + 'px', (self.resumen.offsetHeight + self.contenido.offsetHeight) + 'px', true); });
+  };
+  Acordeon.prototype.terminar = function(abierto){ this.el.open = abierto; this.anim = null; this.cerrando = false; this.abriendo = false; this.el.style.height = this.el.style.overflow = ''; };
+  $$('.faq-lista details').forEach(function(d){ new Acordeon(d); });
+
+  /* Entradas al hacer scroll */
+  var rev = $$('.reveal');
+  if ('IntersectionObserver' in window && !reduce){
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
+    }, {threshold:0.12});
+    rev.forEach(function(r){ obs.observe(r); });
+  } else { rev.forEach(function(r){ r.classList.add('in'); }); }
+
+  /* Movimiento de la marca: brasas, pausa fuera de pantalla, cifras y titulares */
+  var conIO = 'IntersectionObserver' in window;
+  if (!reduce){
+    $$('.brasas').forEach(function(c){
+      var n = +c.getAttribute('data-n') || 12, semilla = n * 37 + 11;
+      var r = function(){ semilla = (semilla * 9301 + 49297) % 233280; return semilla / 233280; };
+      for (var i = 0; i < n; i++){
+        var e = document.createElement('i');
+        e.style.setProperty('--x', (r() * 98).toFixed(1) + '%');
+        e.style.setProperty('--s', (3 + Math.floor(r() * 5)) + 'px');
+        e.style.setProperty('--t', (8 + r() * 8).toFixed(1) + 's');
+        e.style.setProperty('--d', (-r() * 14).toFixed(1) + 's');
+        e.style.setProperty('--dx', Math.round((r() - .5) * 90) + 'px');
+        c.appendChild(e);
+      }
+    });
+    var alturaBrasas = function(){ $$('.brasas').forEach(function(c){ c.style.setProperty('--h', c.parentNode.offsetHeight + 'px'); }); };
+    alturaBrasas(); window.addEventListener('resize', alturaBrasas);
+
+    if (conIO){
+      var obsMov = new IntersectionObserver(function(en){ en.forEach(function(e){ e.target.classList.toggle('en-pantalla', e.isIntersecting); }); });
+      $$('section, .banda, footer').forEach(function(el){ el.classList.add('mov'); obsMov.observe(el); });
+
+      $$('main h2').forEach(function(h){ h.classList.add('rev-t'); });
+      /* Se observa el contenedor: el propio titular está recortado y algunos navegadores lo cuentan como no visible */
+      var obsTit = new IntersectionObserver(function(en){ en.forEach(function(e){ if (e.isIntersecting){ $$('.rev-t', e.target).forEach(function(h){ h.classList.add('rev-on'); }); obsTit.unobserve(e.target); } }); }, {rootMargin:'0px 0px -14% 0px'});
+      $$('.rev-t').forEach(function(h){ obsTit.observe(h.parentNode); });
+
+      var contar = function(el){
+        var fin = parseFloat(el.getAttribute('data-fin')), dec = +el.getAttribute('data-dec') || 0;
+        var fmt = function(v){ return v.toFixed(dec).replace('.', ','); };
+        el.style.minWidth = el.offsetWidth + 'px'; el.textContent = fmt(0);
+        var obsN = new IntersectionObserver(function(en){
+          if (!en[0].isIntersecting) return; obsN.disconnect();
+          var t0 = null, dur = 1100;
+          (function paso(t){
+            if (t0 === null) t0 = t;
+            var k = Math.min(1, (t - t0) / dur), v = fin * (1 - Math.pow(1 - k, 3));
+            el.textContent = fmt(k < 1 ? v : fin);
+            if (k < 1) requestAnimationFrame(paso);
+          })(performance.now());
+        }, {threshold:.6});
+        obsN.observe(el);
+      };
+      $$('.cuenta').forEach(contar);
+    }
+  }
+
+  /* Barra fija móvil: aparece pasado el hero */
+  var barra = $('#barra'), hero = $('#inicio');
+  function alBarra(){ barra.classList.toggle('visible', window.scrollY > hero.offsetHeight * 0.7); }
+  document.addEventListener('scroll', function(){ requestAnimationFrame(alBarra); }, {passive:true}); alBarra();
+
+  /* Cookies (document.cookie, sin cargar nada de terceros) */
+  function getCookie(n){ var m = document.cookie.match(new RegExp('(^| )' + n + '=([^;]+)')); return m ? m[2] : null; }
+  function setCookie(n, v, dias){ var f = new Date(); f.setTime(f.getTime() + dias*864e5); document.cookie = n + '=' + v + '; expires=' + f.toUTCString() + '; path=/; SameSite=Lax'; }
+  var cookie = $('#cookie');
+
+  /* Mapa de Google: solo se carga con consentimiento (cookie aceptada) o al pulsar "Ver el mapa" */
+  var MAPA_URL = 'https://maps.google.com/maps?q=Xavi+Pinchos+Calle+Asturias+9+28320+Pinto+Madrid&hl=es&z=17&output=embed';
+  function cargarMapa(){
+    var caja = $('#mapa'), fachada = $('#mapaFacade');
+    if (!caja || !fachada) return;
+    var f = document.createElement('iframe');
+    f.src = MAPA_URL; f.title = 'Mapa con la ubicación de Xavi Pinchos en Pinto';
+    f.loading = 'lazy'; f.referrerPolicy = 'no-referrer-when-downgrade'; f.setAttribute('allowfullscreen','');
+    caja.appendChild(f); fachada.remove();
+  }
+  $('#btnMapa').addEventListener('click', cargarMapa);
+  if (getCookie('consentimiento_cookies') === 'aceptado'){
+    if ('IntersectionObserver' in window){
+      var obsMapa = new IntersectionObserver(function(en){ if (en[0].isIntersecting){ obsMapa.disconnect(); cargarMapa(); } }, {rootMargin:'300px 0px'});
+      obsMapa.observe($('#mapa'));
+    } else cargarMapa();
+  }
+
+  if (!getCookie('consentimiento_cookies')) setTimeout(function(){ cookie.classList.add('visible'); }, 600);
+  $('#btnAceptar').addEventListener('click', function(){ setCookie('consentimiento_cookies','aceptado',365); cookie.classList.remove('visible'); cargarMapa(); });
+  $('#btnRechazar').addEventListener('click', function(){ setCookie('consentimiento_cookies','rechazado',365); cookie.classList.remove('visible'); });
+})();
+</script>
+</body>
+</html>

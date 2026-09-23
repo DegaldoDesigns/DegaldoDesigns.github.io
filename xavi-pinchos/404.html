@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Página no encontrada | Xavi Pinchos</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#100b09">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{ --carbon:#100b09; --brasa:#ff6a1c; --brasa-osc:#a83d08; --oro:#f4b63c; --texto:#f7eee3; --muted:#bcaa9b; --linea:rgba(255,232,206,.15);
+    --ease-out:cubic-bezier(0.23,1,0.32,1);
+    --f-display:'Big Shoulders Display','Oswald','Bebas Neue','Arial Narrow',Impact,sans-serif;
+    --f-body:'Figtree','Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif; }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--carbon);color:var(--texto);font-family:var(--f-body);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
+  :focus-visible{outline:3px solid var(--texto);outline-offset:3px}
+  a{color:var(--brasa)}
+  body{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px}
+  .marca{height:96px;margin-bottom:18px}
+  .marca img{height:100%;width:auto;display:block}
+  .codigo{font-family:var(--f-display);font-weight:900;font-size:clamp(5.5rem,20vw,9rem);color:var(--brasa);line-height:1.1;margin:0}
+  h1{font-family:var(--f-display);font-weight:800;text-transform:uppercase;line-height:1.14;margin:4px 0 12px;font-size:clamp(1.8rem,5vw,2.4rem)}
+  p{color:var(--muted);margin:0 0 30px;max-width:22em}
+  .btn{
+    background:var(--brasa);color:var(--carbon);text-decoration:none;font-weight:800;padding:16px 28px;min-height:50px;display:inline-flex;align-items:center;border-radius:8px;
+    font-size:16px;box-shadow:0 4px 0 var(--brasa-osc);transition:filter .15s var(--ease-out),transform .1s var(--ease-out),box-shadow .1s var(--ease-out);
+  }
+  @media (hover:hover) and (pointer:fine){ .btn:hover{filter:brightness(1.1)} }
+  .btn:active{transform:translateY(3px) scale(0.97);box-shadow:0 1px 0 var(--brasa-osc)}
+</style>
+</head>
+<body>
+  <div class="marca"><img src="assets/img/logo.webp" alt="Xavi Pinchos" width="111" height="96"></div>
+  <p class="codigo">404</p>
+  <h1>Esta página no existe</h1>
+  <p>Puede que el enlace esté roto o que la página se haya movido.</p>
+  <a class="btn" href="/">Volver al inicio</a>
+</body>
+</html>
