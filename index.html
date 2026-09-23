@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diego De Galdo | Webs para negocios locales</title>
+  <meta name="description" content="Portfolio de Diego De Galdo: webs diseñadas y programadas a mano en HTML, CSS y JavaScript para negocios locales. Responsive, accesibles y con SEO local.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --paper:#f3efe7;
+      --paper-2:#e9e3d7;
+      --ink:#17130f;
+      --ink-soft:#4a4238;
+      --line:#d6cdbd;
+      --accent:#b53a12;
+      --accent-ink:#ffffff;
+      --ease-out:cubic-bezier(.22,1,.36,1);
+      --radius:14px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{-webkit-text-size-adjust:100%}
+    body{background:var(--paper);color:var(--ink);font-family:"Figtree",system-ui,sans-serif;font-size:17px;line-height:1.6}
+    a{color:inherit}
+    :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+    .skip{position:fixed;left:12px;top:12px;z-index:10;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:8px;text-decoration:none;transform:translateY(-80px);transition:transform 160ms var(--ease-out)}
+    .skip:focus{transform:translateY(0)}
+    .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+    header.top{padding:28px 0;border-bottom:1px solid var(--line)}
+    header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+    .name{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:20px;letter-spacing:-.01em;text-decoration:none}
+    .mail{font-weight:600;text-decoration-thickness:2px;text-underline-offset:4px}
+
+    .intro{padding:88px 0 64px}
+    .kicker{font-weight:600;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+    h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(40px,6.4vw,78px);line-height:1.02;letter-spacing:-.025em;max-width:15ch}
+    .lead{margin-top:26px;max-width:58ch;font-size:19px;color:var(--ink-soft)}
+
+    .how{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px;list-style:none}
+    .how li{border:1px solid var(--line);background:var(--paper-2);border-radius:999px;padding:7px 15px;font-size:15px;font-weight:500}
+
+    .work{padding:24px 0 96px}
+    .work h2{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:28px;letter-spacing:-.01em;margin-bottom:8px}
+    .work .note{color:var(--ink-soft);margin-bottom:36px;max-width:62ch}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 32px}
+    .card{display:flex;flex-direction:column}
+    .card a.thumb{display:block;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);aspect-ratio:1200/630;background:var(--ink)}
+    .card img{display:block;width:100%;height:100%;object-fit:cover;transition:transform 420ms var(--ease-out)}
+    .card h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:22px;letter-spacing:-.01em;margin-top:18px}
+    .card .meta{font-size:15px;color:var(--ink-soft);margin-top:2px}
+    .card p.desc{margin-top:10px}
+    .card .go{margin-top:12px;font-weight:600;color:var(--accent);text-decoration-thickness:2px;text-underline-offset:4px;align-self:flex-start}
+    @media (hover:hover) and (pointer:fine){
+      .card a.thumb:hover img{transform:scale(1.03)}
+    }
+
+    footer{border-top:1px solid var(--line);padding:36px 0 48px;color:var(--ink-soft);font-size:15px}
+    footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+    @media (max-width:760px){
+      .intro{padding:56px 0 44px}
+      .grid{grid-template-columns:1fr;gap:40px}
+      .lead{font-size:18px}
+    }
+    @media (prefers-reduced-motion:reduce){
+      *{transition:none!important}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#trabajos">Saltar a los proyectos</a>
+
+  <header class="top">
+    <div class="wrap">
+      <a class="name" href="./">Diego De Galdo</a>
+      <a class="mail" href="mailto:Diegospk291@gmail.com">Diegospk291@gmail.com</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div class="wrap">
+        <p class="kicker">Maquetación web · Pinto, Madrid</p>
+        <h1>Webs a medida para negocios de barrio.</h1>
+        <p class="lead">Busco negocios locales, estudio su marca y construyo la web completa en HTML, CSS y JavaScript, desde el diseño hasta la publicación. Cada proyecto pasa una auditoría automática de accesibilidad, contraste y diseño responsive antes de enseñarlo.</p>
+        <ul class="how" aria-label="Forma de trabajar">
+          <li>HTML, CSS y JavaScript a mano</li>
+          <li>Responsive a 375, 768 y 1440 px</li>
+          <li>Accesibilidad WCAG 2.1</li>
+          <li>SEO local y datos estructurados</li>
+          <li>IA en el proceso (Claude)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="work" id="trabajos" aria-labelledby="trabajos-titulo">
+      <div class="wrap">
+        <h2 id="trabajos-titulo">Proyectos</h2>
+        <p class="note">Propuestas que he diseñado y programado para negocios reales, con sus fotos, su carta y su horario.</p>
+
+        <div class="grid">
+          <article class="card">
+            <a class="thumb" href="loles-jimenez/" aria-label="Ver la web de Loles Jiménez GYM &amp; PILATES">
+              <img src="img/loles-jimenez.webp" width="960" height="504" alt="Portada de la web de Loles Jiménez GYM &amp; PILATES: titular en blanco y verde neón sobre una foto del gimnasio">
+            </a>
+            <h3>Loles Jiménez GYM &amp; PILATES</h3>
+            <p class="meta">Gimnasio · Torreperogil (Jaén)</p>
+            <p class="desc">Rediseñada a partir del propio cartel del gimnasio. Tarifas, actividades y un aviso de abierto o cerrado que se calcula con la hora real.</p>
+            <a class="go" href="loles-jimenez/">Ver la web</a>
+          </article>
+
+          <article class="card">
+            <a class="thumb" href="della-grotta/" aria-label="Ver la web de Della Grotta Streetfood">
+              <img src="img/della-grotta.webp" width="960" height="504" alt="Portada de la web de Della Grotta: logo rojo y una hamburguesa sobre fondo negro" loading="lazy">
+            </a>
+            <h3>Della Grotta Streetfood</h3>
+            <p class="meta">Hamburguesas y pizzas · Villaconejos (Madrid)</p>
+            <p class="desc">Carta por pestañas con fotos de los platos y un cartel de puerta con cuenta atrás hasta la apertura, según la hora de Madrid.</p>
+            <a class="go" href="della-grotta/">Ver la web</a>
+          </article>
+
+          <article class="card">
+            <a class="thumb" href="xavi-pinchos/" aria-label="Ver la web de Xavi Pinchos">
+              <img src="img/xavi-pinchos.webp" width="960" height="504" alt="Portada de la web de Xavi Pinchos: logo del bar junto a una parrillada de carne" loading="lazy">
+            </a>
+            <h3>Xavi Pinchos</h3>
+            <p class="meta">Bar y restaurante · Pinto (Madrid)</p>
+            <p class="desc">Carta de 76 platos organizada en cinco pestañas, sección de fútbol y eventos, y un tablero de horario en directo.</p>
+            <a class="go" href="xavi-pinchos/">Ver la web</a>
+          </article>
+
+          <article class="card">
+            <a class="thumb" href="capricho/" aria-label="Ver la web de Capricho">
+              <img src="img/capricho.webp" width="960" height="504" alt="Portada de la web de Capricho: rótulo de neón rosa y el logo del local sobre fondo morado" loading="lazy">
+            </a>
+            <h3>Capricho</h3>
+            <p class="meta">Copas, cachimbas y billar · Pinto (Madrid)</p>
+            <p class="desc">Identidad de neón fiel a la marca del local. El mapa de Google solo se carga si el visitante lo acepta.</p>
+            <a class="go" href="capricho/">Ver la web</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>Diego De Galdo · Pinto, Madrid</span>
+      <a href="mailto:Diegospk291@gmail.com">Diegospk291@gmail.com</a>
+    </div>
+  </footer>
+</body>
+</html>

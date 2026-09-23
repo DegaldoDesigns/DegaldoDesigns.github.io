@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Della Grotta Streetfood | Hamburguesas y pizzas en Villaconejos</title>
+<meta name="description" content="Della Grotta Streetfood en Villaconejos: hamburguesas de carne madurada, pizzas de 33 cm y cosas para picar. Abrimos de 20:00 a 23:30. Llama al 919 47 33 99.">
+<link rel="canonical" href="https://dellagrotta.netlify.app/">
+<meta name="theme-color" content="#0d0b0a">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Della Grotta Streetfood | Hamburguesas y pizzas en Villaconejos">
+<meta property="og:description" content="Hamburguesas de carne madurada, pizzas de 33 cm y cosas para picar. De 20:00 a 23:30, viernes, sábado, domingo y festivos.">
+<meta property="og:image" content="https://dellagrotta.netlify.app/og-image.jpg">
+<meta property="og:url" content="https://dellagrotta.netlify.app/">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Della Grotta Streetfood | Hamburguesas y pizzas en Villaconejos">
+<meta name="twitter:description" content="Hamburguesas de carne madurada, pizzas de 33 cm y cosas para picar. De 20:00 a 23:30, viernes, sábado, domingo y festivos.">
+<meta name="twitter:image" content="https://dellagrotta.netlify.app/og-image.jpg">
+
+<link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Della Grotta Streetfood",
+  "servesCuisine": ["Hamburguesas", "Pizza", "Streetfood"],
+  "telephone": "+34919473399",
+  "url": "https://dellagrotta.netlify.app/",
+  "image": "https://dellagrotta.netlify.app/og-image.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle Alamillo 3",
+    "postalCode": "28360",
+    "addressLocality": "Villaconejos",
+    "addressRegion": "Madrid",
+    "addressCountry": "ES"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday", "Sunday"], "opens": "20:00", "closes": "23:30" }
+  ],
+  "areaServed": [
+    { "@type": "City", "name": "Villaconejos" },
+    { "@type": "City", "name": "Nuevo Chinchón" }
+  ],
+  "sameAs": ["https://www.instagram.com/dellagrotta/"]
+}
+</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+<style>
+  :root{
+    --rojo:#df2412; --rojo-osc:#b91c0c; --rojo-claro:#ff5a45;
+    --negro:#0d0b0a; --panel:#161211; --panel-2:#1f1917;
+    --linea:rgba(245,239,230,.16);
+    --crema:#f4ecdc; --tinta:#1a1412; --tinta-suave:#5a4d45;
+    --texto:#f5efe6; --muted:#b9afa5;
+    --ease-out:cubic-bezier(0.23,1,0.32,1);
+    --ease-in-out:cubic-bezier(0.77,0,0.175,1);
+    --ease-drawer:cubic-bezier(0.32,0.72,0,1);
+    --cut:14px; --cut-sm:8px; --verde:#36d06a;
+    --z-nav:50; --z-barra:900; --z-cookie:950; --z-modal:1000;
+    --f-display:'Anton','Oswald','Bebas Neue','Arial Narrow',Impact,sans-serif;
+    --f-body:'Barlow','Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif;
+    --nav-h:72px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 8px)}
+  body{margin:0;background:var(--negro);color:var(--texto);font-family:var(--f-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;height:auto;display:block}
+  a{color:inherit}
+  h1,h2,h3,h4{margin:0;font-family:var(--f-display);font-weight:400;text-transform:uppercase;line-height:1.14;letter-spacing:.005em;text-wrap:balance}
+  p{margin:0;text-wrap:pretty}
+  ul{margin:0;padding:0;list-style:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .saltar{position:absolute;left:16px;top:-60px;z-index:var(--z-modal);background:var(--rojo-osc);color:#fff;padding:10px 16px;font-weight:700;text-decoration:none}
+  .saltar:focus{top:12px}
+  .ico{width:20px;height:20px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .ico-lleno{fill:currentColor;stroke:none}
+  :focus-visible{outline:3px solid var(--crema);outline-offset:3px}
+  .sec-crema :focus-visible{outline-color:var(--tinta)}
+
+  /* Botones: base sin borde; el borde real y opaco solo en .btn-outline */
+  .btn{
+    border:none;font:700 16px/1 var(--f-body);letter-spacing:.02em;padding:16px 26px;min-height:48px;color:#fff;
+    text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;
+    transition:filter .15s var(--ease-out),transform .1s var(--ease-out),background-color .15s var(--ease-out);
+  }
+  .btn:active{transform:scale(0.97)}
+  .btn-cortado{
+    background:var(--rojo);
+    clip-path:polygon(var(--cut) 0,100% 0,100% calc(100% - var(--cut)),calc(100% - var(--cut)) 100%,0 100%,0 var(--cut));
+  }
+  .btn-cortado:focus-visible{clip-path:none}
+  .btn-negro{background:var(--negro);color:var(--texto)}
+  .btn-outline{background:transparent;border:2px solid var(--rojo);color:var(--texto);border-radius:10px;padding:14px 24px}
+  .btn-outline-claro{border-color:var(--crema);color:var(--crema)}
+  @media (hover:hover) and (pointer:fine){
+    .btn-cortado:hover{filter:brightness(1.14)}
+    .btn-outline:hover{background:rgba(223,36,18,.16)}
+    .btn-outline-claro:hover{background:rgba(244,236,220,.14)}
+  }
+
+  /* Navegación */
+  .nav{position:sticky;top:0;z-index:var(--z-nav);height:var(--nav-h);background:var(--negro);border-bottom:1px solid transparent;transition:border-color .2s var(--ease-out)}
+  .nav.encogida{border-bottom-color:var(--linea)}
+  .nav-in{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+  .logo{display:block;flex-shrink:0;width:52px;height:52px;transform-origin:left center;transition:transform .25s var(--ease-out)}
+  .logo svg{width:100%;height:100%;display:block}
+  .nav.encogida .logo{transform:scale(.88)}
+  .links{display:flex;gap:30px}
+  .links a{position:relative;color:var(--muted);text-decoration:none;font-weight:600;font-size:16px;padding:6px 0;transition:color .15s ease}
+  .links a::after{content:'';position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--rojo);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease-out)}
+  .links a.activo{color:var(--texto)}
+  .links a.activo::after{transform:scaleX(1)}
+  @media (hover:hover) and (pointer:fine){
+    .links a:hover{color:var(--texto)}
+    .links a:hover::after{transform:scaleX(1)}
+  }
+  .nav-acciones{display:flex;align-items:center;gap:12px}
+  .nav-acciones .btn{padding:12px 20px;min-height:44px;font-size:15px}
+  .btn-social{width:44px;height:44px;border-radius:50%;border:1px solid var(--linea);display:flex;align-items:center;justify-content:center;color:var(--muted);text-decoration:none;transition:background-color .2s ease,color .2s ease,border-color .2s ease}
+  @media (hover:hover) and (pointer:fine){
+    .btn-social:hover{background:var(--rojo);color:#fff;border-color:var(--rojo)}
+  }
+  .hamburguesa{display:none;width:44px;height:44px;border-radius:10px;border:1px solid var(--linea);background:var(--panel);flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;position:relative;z-index:calc(var(--z-modal) + 1)}
+  .hamburguesa span{width:20px;height:2px;background:var(--texto);border-radius:2px;transition:transform .22s var(--ease-drawer),opacity .22s var(--ease-drawer)}
+  .hamburguesa.activo span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .hamburguesa.activo span:nth-child(2){opacity:0}
+  .hamburguesa.activo span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .overlay{position:fixed;inset:0;background:var(--negro);z-index:var(--z-modal);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;opacity:0;visibility:hidden;transform:translateY(-12px);transition:opacity .25s var(--ease-drawer),transform .25s var(--ease-drawer),visibility 0s linear .25s}
+  .overlay.activo{opacity:1;visibility:visible;transform:translateY(0);transition-delay:0s}
+  .overlay a.enlace{color:var(--texto);text-decoration:none;font-family:var(--f-display);text-transform:uppercase;font-size:clamp(30px,9vw,44px);line-height:1.14}
+  .overlay .redes{display:flex;gap:14px;margin-top:8px;align-items:center}
+  body.menu-abierto{overflow:hidden}
+  body.menu-abierto .nav{z-index:calc(var(--z-modal) + 1)}
+  @media (hover:hover) and (pointer:fine){ .overlay a.enlace:hover{color:var(--rojo-claro)} }
+  @media (max-width:1080px){
+    .links,.nav-acciones .btn-social,.nav-acciones .btn{display:none}
+    .hamburguesa{display:flex}
+  }
+
+  /* Estado del día */
+  .estado{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:15px;color:var(--texto);padding:9px 16px;border:1px solid var(--linea);border-radius:99px}
+  .estado .punto{position:relative;width:9px;height:9px;border-radius:50%;background:var(--verde);flex-shrink:0}
+  .estado .punto::after{content:'';position:absolute;inset:0;border-radius:50%;background:var(--verde);opacity:0;animation:late 2s var(--ease-out) infinite}
+  .estado.cerrado .punto,.estado.cerrado .punto::after{background:var(--rojo-claro)}
+  .estado.cerrado .punto::after{animation:none}
+
+  /* Hero */
+  .hero{position:relative;padding:clamp(24px,4vw,56px) 0 clamp(28px,4vw,56px);overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);align-items:center;gap:clamp(12px,3vw,48px)}
+  .hero-marca{font-weight:700;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--rojo-claro);margin-bottom:14px}
+  .hero h1{font-size:clamp(3rem,7.6vw,6.9rem)}
+  .hero h1 em{font-style:normal;color:var(--rojo);display:block}
+  .hero-sub{margin-top:22px;max-width:34em;font-size:clamp(17px,1.9vw,20px);color:var(--muted)}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+  .hero .estado{margin-top:26px}
+  .hero-foto{position:relative;justify-self:end;width:min(100%,640px)}
+  .hero-foto img{
+    width:100%;aspect-ratio:1;object-fit:cover;
+    -webkit-mask-image:linear-gradient(to right,transparent,#000 15%,#000 88%,transparent),linear-gradient(to bottom,transparent,#000 7%,#000 90%,transparent);
+    -webkit-mask-composite:source-in;
+    mask-image:linear-gradient(to right,transparent,#000 15%,#000 88%,transparent),linear-gradient(to bottom,transparent,#000 7%,#000 90%,transparent);
+    mask-composite:intersect;
+  }
+  .sticker{position:absolute;left:1%;bottom:5%;width:clamp(96px,14vw,150px);height:auto;aspect-ratio:1;--r:-8deg;rotate:var(--r);filter:drop-shadow(0 10px 18px rgba(0,0,0,.55))}
+  .sticker svg{width:100%;height:100%;display:block}
+
+  /* Cinta de datos */
+  .cinta{border-top:1px solid var(--linea);border-bottom:1px solid var(--linea);background:var(--panel)}
+  .cinta-in{display:grid;grid-template-columns:repeat(4,1fr)}
+  .dato{padding:26px 22px;border-left:1px solid var(--linea)}
+  .dato:first-child{border-left:none;padding-left:0}
+  .dato b{display:flex;align-items:center;gap:8px;font-family:var(--f-display);font-weight:400;font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:1.14;text-transform:uppercase}
+  .dato b .ico{width:.8em;height:.8em;color:var(--rojo-claro)}
+  .dato>span{display:block;margin-top:2px;color:var(--muted);font-size:15px;line-height:1.4}
+
+  /* Damero y cinta que gira */
+  .damero{height:18px;background:repeating-conic-gradient(var(--negro) 0 25%,var(--crema) 0 50%) 0 0/36px 36px}
+  .banda{background:var(--rojo);color:#fff;overflow:hidden;white-space:nowrap}
+  .banda .pista{display:inline-flex;width:max-content;animation:banda 46s linear infinite}
+  .banda .grupo{display:inline-flex;align-items:center;flex:none}
+  .banda span{font-family:var(--f-display);text-transform:uppercase;font-size:clamp(1.3rem,2.4vw,1.75rem);line-height:1.2;padding:16px 26px;letter-spacing:.02em}
+  .banda i{display:block;width:14px;height:20px;border-radius:50%;background:var(--negro);flex:none}
+  @keyframes banda{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* Secciones */
+  .sec{padding:clamp(56px,9vw,112px) 0;position:relative}
+  .sec-cab{max-width:760px;margin-bottom:clamp(28px,4vw,48px)}
+  .sec-cab h2,.sec h2{font-size:clamp(2.3rem,5.4vw,4.4rem)}
+  .sec-cab p{margin-top:12px;color:var(--muted);font-size:clamp(17px,1.8vw,19px);max-width:34em}
+  .sec-crema{background:var(--crema);color:var(--tinta)}
+  .sec-crema .sec-cab p{color:var(--tinta-suave)}
+
+  /* Fotos ampliables */
+  .foto{display:block;position:relative;padding:0;border:none;background:var(--panel-2);cursor:pointer;overflow:hidden;color:inherit;font:inherit;transition:transform .18s var(--ease-out)}
+  .foto img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease-out)}
+  .foto:active{transform:scale(0.97)}
+  @media (hover:hover) and (pointer:fine){ .foto:hover img{transform:scale(1.05)} }
+
+  /* Productos destacados */
+  .oferta{position:relative;display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);align-items:center;background:var(--negro);color:var(--texto);margin-bottom:clamp(28px,4vw,48px);isolation:isolate;overflow:hidden;
+    clip-path:polygon(var(--cut) 0,100% 0,100% calc(100% - var(--cut)),calc(100% - var(--cut)) 100%,0 100%,0 var(--cut))}
+  .oferta .anillos{--a:var(--rojo);--o:.5;right:-16%;bottom:-46%;width:72%;--r:-10deg;--t:14s;z-index:-1}
+  .oferta .dado{--c:10px;right:clamp(16px,2vw,26px);top:clamp(16px,2vw,26px);z-index:1;--gd:2.6s;--gt:8s}
+  .oferta-cartel{aspect-ratio:1;width:100%;align-self:center}
+  .oferta-cartel:focus-visible{outline-offset:-5px}
+  .oferta-cartel img{width:100%;height:100%;object-fit:cover}
+  .oferta-in{position:relative;padding:clamp(24px,3.6vw,48px);display:flex;flex-direction:column;justify-content:center;gap:14px}
+  .oferta-marca{font-weight:800;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--rojo-claro)}
+  .oferta h3{font-size:clamp(2rem,3.9vw,3.1rem);line-height:1.14}
+  .oferta-precios{display:grid;margin:6px 0 2px}
+  .oferta-precios li{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:2px dashed var(--linea)}
+  .oferta-precios span{font-family:var(--f-display);text-transform:uppercase;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.15}
+  .oferta-precios b{font-family:var(--f-display);font-weight:400;font-size:clamp(2.8rem,6vw,4.6rem);line-height:1.05;color:var(--rojo-claro);white-space:nowrap}
+  .oferta-nota{color:var(--muted);max-width:30em;font-size:17px}
+  .oferta-in .btn{align-self:flex-start;margin-top:6px}
+  .destacados-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(20px,3vw,40px);align-items:start}
+  .n-grande .foto{aspect-ratio:1;width:100%;clip-path:polygon(var(--cut) 0,100% 0,100% calc(100% - var(--cut)),calc(100% - var(--cut)) 100%,0 100%,0 var(--cut))}
+  .n-grande .foto:focus-visible{clip-path:none}
+  .n-texto{padding-top:20px}
+  .n-texto h3{font-size:clamp(2rem,4vw,3.1rem);margin:12px 0 8px}
+  .n-texto p{color:var(--tinta-suave);max-width:32em}
+  .n-precio{margin-top:14px;font-family:var(--f-display);font-size:1.7rem;color:var(--rojo-osc);line-height:1.2}
+  .n-precio small{font-family:var(--f-body);font-size:15px;color:var(--tinta-suave);margin-left:8px;font-weight:600}
+  .n-col{display:grid;gap:clamp(20px,3vw,40px)}
+  .n-granja{position:relative;overflow:hidden;background:var(--rojo);color:#fff;padding:0;clip-path:polygon(var(--cut) 0,100% 0,100% calc(100% - var(--cut)),calc(100% - var(--cut)) 100%,0 100%,0 var(--cut))}
+  .n-granja .foto{aspect-ratio:1;width:100%}
+  .n-granja .g-texto{position:relative;padding:clamp(20px,2.6vw,30px) clamp(24px,3.4vw,40px) clamp(26px,3.4vw,40px)}
+  .n-granja h3{font-size:clamp(2.2rem,4.6vw,3.4rem);margin:0 0 10px;position:relative}
+  .n-granja p{position:relative;max-width:26em}
+  .n-granja .n-precio{color:#fff;position:relative}
+  .n-granja .n-precio small{color:#fff}
+  .ovalos{position:absolute;right:-70px;bottom:-90px;width:300px;height:300px;fill:none;stroke:rgba(13,11,10,.34);stroke-width:5;pointer-events:none}
+  .n-pizza{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,5fr);gap:20px;align-items:center}
+  .n-pizza .foto{aspect-ratio:1;width:100%;border-radius:50%}
+  .n-pizza h3{font-size:clamp(1.8rem,3vw,2.4rem);margin:10px 0 6px}
+  .n-pizza p{color:var(--tinta-suave);font-size:16px}
+  .n-pizza .n-precio{font-size:1.4rem;margin-top:10px}
+  .n-pizza .n-precio small{display:block;margin:2px 0 0}
+  .n-resto{margin-top:clamp(28px,4vw,44px);padding-top:22px;border-top:2px solid var(--tinta);display:flex;flex-wrap:wrap;gap:8px 32px;align-items:baseline;color:var(--tinta-suave)}
+  .n-resto strong{font-family:var(--f-display);font-weight:400;text-transform:uppercase;color:var(--tinta);font-size:1.3rem}
+  .n-resto a{color:var(--rojo-osc);font-weight:700}
+
+  /* Carta */
+  .carta{background:var(--negro)}
+  .tablist{display:flex;gap:4px;background:var(--panel);border:1px solid var(--linea);padding:5px;position:relative;overflow-x:auto;scrollbar-width:none;margin-bottom:clamp(28px,4vw,44px)}
+  .tablist::-webkit-scrollbar{display:none}
+  .tab{flex:1 0 auto;white-space:nowrap;background:transparent;border:none;color:var(--muted);font:700 16px/1.2 var(--f-body);padding:14px 22px;min-height:48px;cursor:pointer;position:relative;z-index:1;transition:color .18s var(--ease-out),transform .1s var(--ease-out)}
+  .tab:active{transform:scale(0.97)}
+  .tab[aria-selected="true"]{color:#fff}
+  .tab:focus-visible{outline-offset:-3px}
+  @media (hover:hover) and (pointer:fine){ .tab[aria-selected="false"]:hover{color:var(--texto)} }
+  .indicador{position:absolute;top:5px;left:0;height:calc(100% - 10px);width:100px;background:var(--rojo);transform-origin:left center;transform:translateX(5px) scaleX(0);transition:transform .28s var(--ease-out)}
+  .js .panel:not([data-activo]){display:none}
+  .precio-cab{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;margin-bottom:clamp(20px,3vw,32px);padding-bottom:22px;border-bottom:1px solid var(--linea)}
+  .precio-grande{font-family:var(--f-display);font-size:clamp(3.4rem,8vw,5.6rem);line-height:1.1;color:var(--rojo)}
+  .precio-nota{max-width:26em;color:var(--muted);font-size:17px}
+  .precio-nota b{color:var(--texto)}
+  .lista{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 clamp(28px,5vw,64px)}
+  .plato{padding:16px 0;border-bottom:1px solid var(--linea)}
+  .plato h3{font-size:1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px}
+  .plato p{margin-top:4px;color:var(--muted);font-size:16px;line-height:1.5}
+  .plato h3 small{font-family:var(--f-body);font-size:15px;font-weight:500;color:var(--muted);text-transform:none;letter-spacing:0}
+  .plato-precio{display:flex;align-items:baseline;justify-content:space-between;gap:16px}
+  .plato-precio .pr{font-family:var(--f-display);font-size:1.5rem;color:var(--rojo-claro);white-space:nowrap;line-height:1.2}
+  .bloque-tit{grid-column:1/-1;margin-top:clamp(24px,3vw,36px);font-size:1.6rem;color:var(--rojo-claro)}
+  .bloque-tit:first-child{margin-top:0}
+
+  /* Tarjetas de la carta (componente tarjeta-menu-foto, con el corte de la marca) */
+  .tarjetas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(14px,1.8vw,22px)}
+  .tarjetas.tres{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .tarjeta{position:relative;display:flex;flex-direction:column;background:var(--panel);
+    clip-path:polygon(var(--cut) 0,100% 0,100% calc(100% - var(--cut)),calc(100% - var(--cut)) 100%,0 100%,0 var(--cut))}
+  .tarjeta:has(.foto:focus-visible){clip-path:none}
+  .tarjeta.ancha{grid-column:span 2}
+  .tarjeta .foto{width:100%;aspect-ratio:1;background:var(--panel-2)}
+  .tarjeta.ancha .foto{aspect-ratio:auto;flex:1 1 auto;min-height:220px}
+  .tarjeta .foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .js .tarjeta .foto img{opacity:0;transition:opacity .35s var(--ease-out),transform .5s var(--ease-out)}
+  .js .tarjeta .foto.cargada img{opacity:1}
+  .hueso{position:absolute;inset:0;background:var(--panel-2);overflow:hidden}
+  .hueso::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(245,239,230,.08),transparent);transform:translateX(-100%);animation:barrido 1.5s var(--ease-in-out) infinite}
+  .foto.cargada .hueso{display:none}
+  @keyframes barrido{to{transform:translateX(100%)}}
+  .ampliar{position:absolute;right:10px;bottom:10px;width:36px;height:36px;border-radius:50%;background:rgba(13,11,10,.78);color:#fff;display:flex;align-items:center;justify-content:center;pointer-events:none;transition:background-color .2s var(--ease-out)}
+  .ampliar .ico{width:16px;height:16px;stroke-width:2.6}
+  @media (hover:hover) and (pointer:fine){ .tarjeta .foto:hover .ampliar{background:var(--rojo)} }
+  .tarjeta .cuerpo{padding:16px 18px 24px;display:flex;flex-direction:column;gap:6px;flex:0 0 auto}
+  .tarjeta .linea{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:2px 12px}
+  .tarjeta h3{font-size:1.4rem}
+  .tarjeta .precio{font-family:var(--f-display);font-size:1.4rem;line-height:1.2;color:var(--rojo-claro);white-space:nowrap}
+  .tarjeta p{color:var(--muted);font-size:15px;line-height:1.5}
+  .tarjetas .tarjeta:nth-child(4n+2){--retraso:50ms}
+  .tarjetas .tarjeta:nth-child(4n+3){--retraso:100ms}
+  .tarjetas .tarjeta:nth-child(4n+4){--retraso:150ms}
+  .tarjetas.tres .tarjeta:nth-child(3n+2){--retraso:60ms}
+  .tarjetas.tres .tarjeta:nth-child(3n+3){--retraso:120ms}
+  .tarjetas.tres .tarjeta:nth-child(4n+4){--retraso:0ms}
+  /* Tarjeta de marca: mismo tamaño y peso que las de foto (los platos sin foto no son "extras") */
+  .tarjeta.sinfoto .marca-bloque{position:relative;overflow:hidden;isolation:isolate;width:100%;aspect-ratio:1;display:flex;align-items:flex-end;padding:clamp(14px,1.6vw,22px);background:var(--rojo);color:#fff}
+  .tarjeta.ancha.sinfoto .marca-bloque{aspect-ratio:auto;flex:1 1 auto;min-height:220px}
+  .tarjeta.tono-negro .marca-bloque{background:var(--panel-2)}
+  .marca-bloque .anillos{--a:var(--negro);--o:.32;left:50%;top:42%;width:120%;translate:-50% -50%;--r:-12deg;z-index:-1}
+  .tono-negro .marca-bloque .anillos{--a:var(--rojo);--o:.6}
+  .marca-bloque .dado{--c:8px;right:clamp(12px,1.4vw,18px);top:clamp(12px,1.4vw,18px)}
+  .marca-bloque .nombre{position:relative;font-family:var(--f-display);text-transform:uppercase;font-size:clamp(1.7rem,2.7vw,2.5rem);line-height:1.02;text-wrap:balance;overflow-wrap:anywhere}
+  .tarjeta.ancha .marca-bloque .nombre{font-size:clamp(2rem,3.6vw,3.2rem)}
+
+  /* Decoración de la marca: óvalos, damero, sellos, palabras en trazo y grano */
+  .anillos{position:absolute;pointer-events:none;fill:none;stroke:var(--a,var(--rojo));stroke-width:3px;opacity:var(--o,.5);rotate:var(--r,0deg)}
+  .dado{--c:14px;position:absolute;width:calc(var(--c)*6);height:calc(var(--c)*4);background:repeating-conic-gradient(var(--negro) 0 25%,var(--crema) 0 50%) 0 0/calc(var(--c)*2) calc(var(--c)*2);pointer-events:none}
+  .gigante{position:absolute;font-family:var(--f-display);font-weight:400;text-transform:uppercase;line-height:.8;white-space:nowrap;color:transparent;-webkit-text-stroke:2px var(--g,rgba(245,239,230,.12));pointer-events:none;user-select:none;z-index:0}
+  .grano::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:var(--grano,.07);
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  .hero,.cta{isolation:isolate}
+  .sec>.wrap,.cta>.wrap{position:relative;z-index:1}
+  :root{--corte:clamp(24px,3.4vw,56px)}
+
+  /* Hero */
+  .hero-foto{isolation:isolate}
+  .hero-foto img{position:relative}
+  .hero-foto .anillos{--o:.65;left:50%;top:50%;width:128%;translate:-50% -50%;--r:-14deg;--t:11s;z-index:-1}
+  .hero-foto .dado{--c:16px;right:2%;bottom:3%;z-index:1}
+  .sello{position:absolute;right:2%;top:3%;z-index:2;width:clamp(112px,14vw,150px);aspect-ratio:1;border-radius:50%;background:var(--crema);color:var(--tinta);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;--r:9deg;rotate:var(--r);filter:drop-shadow(0 10px 18px rgba(0,0,0,.55))}
+  .sello b{font-family:var(--f-display);font-weight:400;font-size:clamp(2rem,3.6vw,2.8rem);line-height:1.05;color:var(--rojo-osc)}
+  .sello span{margin-top:3px;font-weight:800;font-size:13px;line-height:1.15;text-transform:uppercase;letter-spacing:.03em}
+
+  /* Cortes en diagonal entre secciones */
+  .sec-crema{clip-path:polygon(0 0,100% 0,100% calc(100% - var(--corte)),0 100%);padding-bottom:calc(clamp(40px,6vw,72px) + var(--corte))}
+  .cta{position:relative;overflow:hidden;clip-path:polygon(0 var(--corte),100% 0,100% 100%,0 100%);padding-top:calc(clamp(56px,9vw,104px) + var(--corte))}
+  .cta .anillos{--a:var(--negro);--o:.28;right:-9%;top:50%;width:min(64vw,780px);translate:0 -50%;--r:10deg;--t:13s;z-index:0}
+  .cta{--grano:.09}
+
+  /* Destacados */
+  .destacados{overflow:hidden}
+  .destacados .gigante{--g:rgba(26,20,18,.13);top:clamp(16px,3vw,40px);right:1%;font-size:clamp(5.5rem,15vw,14rem)}
+  .n-grande{position:relative}
+  .n-grande .foto{z-index:1}
+  .n-grande .dado{--c:20px;top:-16px;right:-16px;z-index:0}
+
+  /* Carta */
+  .carta{overflow:hidden}
+  .carta .anillos{--a:var(--rojo);--o:.12;left:-16%;bottom:-6%;width:min(78vw,900px);--r:8deg;--t:15s;z-index:0}
+
+  /* Horario */
+  .horario{overflow:hidden}
+  .h-bloque{position:relative}
+  .h-bloque .anillos{--a:var(--crema);--o:.15;left:-12%;top:58%;width:128%;translate:0 -50%;--r:-8deg;--t:12s;z-index:-1}
+  .h-bloque>*:not(.anillos){position:relative}
+
+  /* Ubicación */
+  .ubicacion{overflow:hidden}
+  .ubicacion .gigante{--g:rgba(245,239,230,.09);left:-1%;bottom:-.06em;font-size:clamp(3.2rem,13.4vw,12.4rem)}
+  .ubicacion{padding-bottom:calc(clamp(56px,9vw,112px) + clamp(30px,6vw,90px))}
+
+  .galeria .dado{--c:20px;right:20px;top:0}
+  /* Preguntas: columna con ticket */
+  .faq-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,340px);gap:clamp(28px,5vw,72px);align-items:start}
+  .ticket{position:relative;background:var(--crema);color:var(--tinta);padding:clamp(26px,3vw,36px) clamp(24px,3vw,32px) clamp(28px,3vw,36px);
+    clip-path:polygon(var(--cut) 0,100% 0,100% calc(100% - var(--cut)),calc(100% - var(--cut)) 100%,0 100%,0 var(--cut))}
+  .ticket .dado{--c:12px;top:0;right:0}
+  .ticket h3{font-size:clamp(1.9rem,3vw,2.4rem);max-width:7em}
+  .ticket p{margin:10px 0 22px;color:var(--tinta-suave);max-width:20em}
+  .ticket .btn{width:100%;white-space:nowrap;padding-left:14px;padding-right:14px}
+  .pie-tira{height:auto}
+
+  /* Pie */
+  footer{position:relative;overflow:hidden}
+  .pie-gigante{display:block;margin-top:clamp(20px,4vw,44px);font-family:var(--f-display);font-weight:400;text-transform:uppercase;line-height:.86;height:.62em;overflow:hidden;white-space:nowrap;color:transparent;-webkit-text-stroke:2px rgba(245,239,230,.16);font-size:clamp(3rem,12vw,14rem);pointer-events:none;user-select:none}
+
+  /* Galería */
+  .galeria{background:var(--panel)}
+  .mosaico{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:clamp(140px,19vw,240px);gap:10px}
+  .m-a{grid-column:1/3;grid-row:1/3}
+  .m-b{grid-column:3;grid-row:1}
+  .m-c{grid-column:4;grid-row:1}
+  .m-d{grid-column:3;grid-row:2}
+  .m-e{grid-column:4;grid-row:2}
+  .m-f{grid-column:1;grid-row:3}
+  .m-g{grid-column:2;grid-row:3}
+  .m-h{grid-column:3;grid-row:3}
+  .m-ig{grid-column:4;grid-row:3;background:var(--rojo);color:#fff;text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(14px,2vw,22px);transition:filter .15s var(--ease-out),transform .1s var(--ease-out)}
+  .m-ig:active{transform:scale(0.97)}
+  .m-ig .ico{width:34px;height:34px}
+  .m-ig strong{font-family:var(--f-display);font-weight:400;font-size:clamp(1.3rem,2.4vw,1.9rem);line-height:1.14;text-transform:uppercase}
+  .m-ig span{font-size:15px;font-weight:600}
+  @media (hover:hover) and (pointer:fine){ .m-ig:hover{filter:brightness(1.12)} }
+
+  /* Horario */
+  .horario-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,6vw,80px);align-items:center}
+  .h-desde{display:block;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:15px;color:var(--rojo-claro);margin-top:24px}
+  .h-hora{font-family:var(--f-display);font-size:clamp(4.6rem,12vw,9rem);line-height:1.05;color:var(--rojo);letter-spacing:-.005em;white-space:nowrap}
+  .h-cierre{display:block;font-family:var(--f-display);font-size:clamp(1.6rem,4vw,2.6rem);line-height:1.15;text-transform:uppercase;color:var(--texto);margin-top:2px}
+  .h-texto{font-size:clamp(18px,2vw,22px);max-width:20em;margin-bottom:24px}
+  .dias{display:grid;gap:8px}
+  .dia{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 22px;border:1px solid var(--linea);color:var(--muted);position:relative}
+  .dia .d-nombre{font-weight:700;font-size:18px;display:flex;align-items:center;flex-wrap:wrap;gap:6px 10px}
+  .dia .d-hora{font-variant-numeric:tabular-nums;font-size:17px;white-space:nowrap}
+  .dia.abre{background:var(--rojo);border-color:var(--rojo);color:#fff}
+  .dia.abre .d-hora{font-family:var(--f-display);font-size:1.6rem;line-height:1.2}
+  .dia .hoy-tag{display:none;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--negro);color:var(--texto);padding:3px 10px}
+  .dia.hoy .hoy-tag{display:inline-block}
+  .dia.hoy{outline:2px solid var(--crema);outline-offset:3px}
+  .dia.festivos{border-style:dashed;border-color:var(--rojo-claro);color:var(--texto)}
+  .dia.festivos .d-hora{color:var(--rojo-claro);font-weight:700}
+
+  /* Ubicación */
+  .ubicacion{background:var(--panel)}
+  .ub-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,64px);align-items:stretch}
+  .ub-info address{font-style:normal;font-size:clamp(20px,2.4vw,26px);font-weight:600;line-height:1.35;margin:22px 0 14px}
+  .ub-info p{color:var(--muted);max-width:26em}
+  .ub-tel{margin-top:18px;font-family:var(--f-display);font-size:2rem;line-height:1.2}
+  .ub-tel a{color:var(--texto);text-decoration:none}
+  .lugar-botones{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+  .ub-mapa{position:relative;min-height:340px;background:var(--panel-2);border:1px solid var(--linea)}
+  .ub-mapa iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:invert(.92) hue-rotate(180deg) saturate(.8) brightness(.95) contrast(.92)}
+  .ub-facade{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:24px;
+    background-color:var(--panel-2);
+    background-image:linear-gradient(rgba(223,36,18,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(223,36,18,.13) 1px,transparent 1px);background-size:32px 32px}
+  .ub-facade p{max-width:26em;color:var(--muted);font-size:15px;line-height:1.45}
+  .pin{width:46px;height:46px;border-radius:50% 50% 50% 0;background:var(--rojo);transform:rotate(-45deg);position:relative;margin-bottom:4px}
+  .pin::after{content:'';position:absolute;width:16px;height:16px;background:#fff;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%)}
+
+  /* Preguntas */
+  .faq-lista{max-width:820px;min-width:0}
+  .faq-lista details{border-bottom:1px solid var(--linea);overflow:hidden}
+  .faq-lista details:first-child{border-top:1px solid var(--linea)}
+  .faq-lista summary{list-style:none;cursor:pointer;padding:22px 4px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:700;font-size:clamp(18px,2vw,21px);min-height:60px;line-height:1.3}
+  .faq-lista summary::-webkit-details-marker{display:none}
+  .signo{position:relative;width:22px;height:22px;flex-shrink:0;color:var(--rojo-claro)}
+  .signo::before,.signo::after{content:'';position:absolute;left:50%;top:50%;width:22px;height:3px;background:currentColor;transform:translate(-50%,-50%);transition:transform .22s var(--ease-out),opacity .22s var(--ease-out)}
+  .signo::after{transform:translate(-50%,-50%) rotate(90deg)}
+  details[open] .signo::after{transform:translate(-50%,-50%) rotate(0);opacity:0}
+  .faq-lista .contenido{padding:0 4px 24px;color:var(--muted);font-size:17px;line-height:1.65;max-width:44em}
+  .faq-lista .contenido a{color:var(--rojo-claro);font-weight:700}
+  @media (hover:hover) and (pointer:fine){ .faq-lista summary:hover{color:#fff} }
+
+  /* Llamada final */
+  .cta{background:var(--rojo);color:#fff;padding:clamp(56px,9vw,104px) 0}
+  .cta-in{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,5vw,64px);align-items:center}
+  .cta h2{font-size:clamp(2.6rem,7vw,5.6rem)}
+  .cta p{margin-top:16px;font-size:clamp(18px,2vw,21px);max-width:26em}
+  .cta .acciones{display:flex;flex-direction:column;gap:14px;align-items:stretch}
+  .cta .acciones .btn{justify-content:center}
+
+  /* Pie */
+  footer{background:var(--negro);padding:clamp(48px,7vw,80px) 0 28px}
+  .pie-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:36px;padding-bottom:40px}
+  .pie-logo{width:84px;height:84px;margin-bottom:16px}
+  .pie-logo svg{width:100%;height:100%;display:block}
+  .pie-desc{color:var(--muted);font-size:16px;max-width:24em}
+  .pie-tit{font-weight:700;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  .pie-col ul{display:grid;gap:10px}
+  .pie-col a{color:var(--texto);text-decoration:none;font-size:17px}
+  .pie-col li{font-size:17px}
+  .pie-col .redes{display:flex;gap:10px;margin-top:16px}
+  @media (hover:hover) and (pointer:fine){ .pie-col a:hover{color:var(--rojo-claro)} }
+  .pie-abajo{border-top:1px solid var(--linea);padding-top:22px;display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center;font-size:15px;color:var(--muted)}
+  .pie-legales{display:flex;gap:20px;flex-wrap:wrap}
+  .pie-legales a{color:var(--muted);text-decoration:none}
+  @media (hover:hover) and (pointer:fine){ .pie-legales a:hover{color:var(--texto)} }
+
+  /* Lightbox */
+  dialog.lightbox{border:none;padding:0;background:transparent;max-width:min(92vw,900px);width:100%;margin:auto;overflow:visible;color:var(--texto)}
+  dialog.lightbox::backdrop{background:rgba(5,4,3,0);transition:background-color .25s var(--ease-out)}
+  dialog.lightbox.is-open::backdrop{background:rgba(5,4,3,.92)}
+  .lb-inner{background:var(--panel);overflow:hidden;transform:scale(0.96);opacity:0;transition:transform .22s var(--ease-out),opacity .22s var(--ease-out)}
+  dialog.lightbox.is-open .lb-inner{transform:scale(1);opacity:1}
+  .lb-img{background:#000;display:flex;justify-content:center}
+  .lb-img img{max-height:74svh;width:auto;max-width:100%;object-fit:contain}
+  .lb-barra{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px}
+  .lb-pie{font-size:16px;color:var(--muted);min-width:0}
+  .lb-controles{display:flex;gap:8px;flex-shrink:0}
+  .lb-btn{width:44px;height:44px;border-radius:50%;border:1px solid var(--linea);background:var(--negro);color:var(--texto);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background-color .15s var(--ease-out),transform .1s var(--ease-out)}
+  .lb-btn:active{transform:scale(0.92)}
+  @media (hover:hover) and (pointer:fine){ .lb-btn:hover{background:var(--rojo);border-color:var(--rojo)} }
+
+  /* Barra fija móvil */
+  .barra{position:fixed;left:0;right:0;bottom:0;z-index:var(--z-barra);background:var(--panel);border-top:1px solid var(--linea);padding:12px 16px max(12px,env(safe-area-inset-bottom));display:none;align-items:center;gap:14px;transform:translateY(100%);transition:transform .3s var(--ease-out)}
+  .barra.visible{transform:translateY(0)}
+  .barra .info{flex:1;min-width:0}
+  .barra .info strong{display:block;font-size:16px;line-height:1.3}
+  .barra .info span{display:block;font-size:14px;color:var(--muted);line-height:1.3}
+  .barra .btn{flex-shrink:0;padding:12px 20px;min-height:46px;font-size:15px}
+  @media (max-width:859px){ .barra{display:flex} body{padding-bottom:78px} }
+
+  /* Cookies */
+  .cookie{position:fixed;left:16px;right:16px;bottom:16px;max-width:520px;margin:0 auto;background:var(--panel);border:1px solid var(--linea);border-radius:14px;padding:20px 22px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;transform:translateY(140%);opacity:0;transition:transform .3s var(--ease-out),opacity .3s var(--ease-out);z-index:var(--z-cookie)}
+  .cookie.visible{transform:translateY(0);opacity:1}
+  @media (min-width:900px){ .cookie{left:auto;right:20px;bottom:20px;margin:0;max-width:440px} }
+  .cookie p{flex:1;min-width:220px;font-size:15px;color:var(--muted);line-height:1.5}
+  .cookie a{color:var(--texto)}
+  .cookie-botones{display:flex;gap:10px}
+  .cookie-botones button{border:none;border-radius:9px;padding:11px 18px;min-height:44px;font:700 15px/1 var(--f-body);cursor:pointer;transition:filter .15s var(--ease-out),transform .1s var(--ease-out)}
+  .cookie-botones button:active{transform:scale(0.97)}
+  .cookie .aceptar{background:var(--rojo);color:#fff}
+  .cookie .rechazar{background:transparent;color:var(--muted);border:1px solid var(--linea)}
+  @media (hover:hover) and (pointer:fine){ .cookie .aceptar:hover{filter:brightness(1.12)} .cookie .rechazar:hover{color:var(--texto)} }
+
+  /* Entradas al hacer scroll */
+  .js .reveal{opacity:0;translate:0 14px}
+  .js .reveal.in{opacity:1;translate:none;transition:opacity .35s var(--ease-out) var(--retraso,0ms),translate .35s var(--ease-out) var(--retraso,0ms),transform .18s var(--ease-out),filter .15s var(--ease-out)}
+
+  /* Cartel de puerta ABIERTO / CERRADO: el estado sale de la fecha y la hora de Madrid */
+  .puerta-wrap{--e:var(--rojo-claro);--halo:rgba(223,36,18,.2);position:relative;max-width:440px;padding-top:44px;margin-top:6px;transform-origin:50% 0;--r:0deg;--vv:1.4deg}
+  .puerta-wrap[data-estado="abierto"]{--e:var(--verde);--halo:rgba(54,208,106,.26)}
+  .puerta-wrap::before{content:'';position:absolute;left:50%;top:0;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:var(--muted)}
+  .puerta-cuerdas{position:absolute;left:0;top:0;width:100%;height:46px;overflow:visible;pointer-events:none}
+  .puerta-cuerdas path{fill:none;stroke:var(--muted);stroke-width:2;vector-effect:non-scaling-stroke}
+  .puerta-halo{position:absolute;left:-14%;right:-14%;bottom:-18%;height:80%;background:radial-gradient(closest-side,var(--halo),transparent);pointer-events:none}
+  .puerta{position:relative;background:var(--e);padding:4px;clip-path:polygon(var(--cut) 0,100% 0,100% calc(100% - var(--cut)),calc(100% - var(--cut)) 100%,0 100%,0 var(--cut))}
+  .puerta-cara{background:var(--negro);padding:0 clamp(20px,3vw,28px) 24px;clip-path:polygon(calc(var(--cut) - 3px) 0,100% 0,100% calc(100% - var(--cut) + 3px),calc(100% - var(--cut) + 3px) 100%,0 100%,0 calc(var(--cut) - 3px))}
+  .puerta-cara::before{content:'';display:block;height:10px;margin:0 calc(-1*clamp(20px,3vw,28px));background:repeating-conic-gradient(var(--negro) 0 25%,var(--crema) 0 50%) 0 0/20px 20px}
+  .puerta-ahora{display:flex;align-items:center;gap:12px;margin-top:20px;font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .luz{position:relative;width:16px;height:16px;border-radius:50%;background:var(--e);flex-shrink:0}
+  .luz::after{content:'';position:absolute;inset:0;border-radius:50%;background:var(--e);opacity:0}
+  .puerta-wrap[data-estado="abierto"] .luz::after{animation:late 2s var(--ease-out) infinite}
+  .puerta-est{font-family:var(--f-display);text-transform:uppercase;font-size:clamp(3.4rem,7vw,5.2rem);line-height:1.04;color:var(--e);margin-top:6px}
+  .puerta-det{font-size:19px;font-weight:600;color:var(--texto);margin-top:2px;line-height:1.35}
+  .puerta-cuenta{margin-top:16px;padding-top:14px;border-top:2px dashed var(--linea);font-weight:800;font-size:18px;color:var(--e);font-variant-numeric:tabular-nums}
+  .puerta-nota{margin-top:6px;font-size:15px;color:var(--muted)}
+  .horario[data-estado="abierto"] .dia.hoy{outline-color:var(--verde)}
+  .horario[data-estado="cerrado"] .dia.hoy{outline-color:var(--rojo-claro)}
+  .horario[data-estado="abierto"] .dia.hoy .hoy-tag{background:var(--verde);color:var(--negro)}
+
+  /* Movimiento de la marca. Todo es transform u opacity y se detiene fuera de pantalla */
+  @keyframes respira{from{rotate:calc(var(--r,0deg) - 3deg);scale:.97}to{rotate:calc(var(--r,0deg) + 3deg);scale:1.06}}
+  @keyframes vaiven{from{rotate:calc(var(--r,0deg) - 5deg)}to{rotate:calc(var(--r,0deg) + 5deg)}}
+  @keyframes flota{from{translate:0 0}to{translate:0 -6px}}
+  @keyframes cuelga{from{rotate:calc(var(--vv) * -1)}to{rotate:var(--vv)}}
+  @keyframes late{0%{scale:1;opacity:.65}100%{scale:3.4;opacity:0}}
+  @keyframes fallo{
+    0%,86%,100%{opacity:0;translate:0 0}
+    87%{opacity:1;translate:-18px 0}
+    89%{opacity:0}
+    90%{opacity:1;translate:14px 0}
+    91.5%{opacity:0}
+    93%{opacity:1;translate:-7px 0}
+    94.5%{opacity:0}
+  }
+  @keyframes brasa{
+    0%{translate:0 0;opacity:0;rotate:0deg}
+    12%{opacity:.95}
+    70%{opacity:.55}
+    100%{translate:var(--dx,20px) calc(var(--h,600px)*-1);opacity:0;rotate:220deg}
+  }
+  .anillos{animation:respira var(--t,10s) var(--ease-in-out) infinite alternate}
+  .marca-bloque .anillos{animation:none}
+  .sello{animation:vaiven 4.4s var(--ease-in-out) infinite alternate}
+  .sticker{animation:vaiven 5.2s var(--ease-in-out) infinite alternate-reverse,flota 3.4s var(--ease-in-out) infinite alternate}
+  .puerta-wrap{animation:cuelga 5.6s var(--ease-in-out) infinite alternate}
+  .puerta-wrap[data-estado="cerrado"]{--vv:.8deg;animation-duration:7s}
+
+  /* Fallo de sintonía en el damero: una franja se desplaza media casilla y otra se apaga en rojo */
+  .damero{position:relative;overflow:hidden}
+  .damero::before,.damero::after{content:'';position:absolute;top:0;height:100%;opacity:0;pointer-events:none;animation:fallo var(--gt,7s) steps(1,end) var(--gd,0s) infinite}
+  .damero::before{left:var(--gx,14%);width:var(--gw,24%);background:repeating-conic-gradient(var(--negro) 0 25%,var(--crema) 0 50%) 18px 0/36px 36px}
+  .damero::after{left:var(--gx2,62%);width:var(--gw2,9%);background:var(--rojo);animation-delay:calc(var(--gd,0s) + .16s)}
+  .dado{overflow:hidden}
+  .dado::before{content:'';position:absolute;left:0;right:0;top:var(--c);height:var(--c);background:repeating-conic-gradient(var(--negro) 0 25%,var(--crema) 0 50%) var(--c) calc(var(--c)*-1)/calc(var(--c)*2) calc(var(--c)*2);opacity:0;animation:fallo var(--gt,6s) steps(1,end) var(--gd,0s) infinite}
+  .hero-foto .dado{--gd:1.4s}
+  .galeria .dado{--gd:3.6s;--gt:8s}
+  .n-grande .dado{--gd:5.2s;--gt:9s}
+  .marca-bloque .dado::before{animation:none}
+
+  /* Brasas que suben (las crea el script) */
+  .brasas{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:-1}
+  .brasas i{position:absolute;bottom:-12px;left:var(--x);width:var(--s);height:var(--s);background:var(--b,var(--rojo-claro));opacity:0;animation:brasa var(--t) linear var(--d) infinite}
+  .cta .brasas{--b:var(--crema)}
+  .js .mov:not(.en-pantalla),.js .mov:not(.en-pantalla)::before,.js .mov:not(.en-pantalla)::after,
+  .js .mov:not(.en-pantalla) *,.js .mov:not(.en-pantalla) *::before,.js .mov:not(.en-pantalla) *::after{animation-play-state:paused !important}
+
+  /* Interacción */
+  .tarjeta.inclina{transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .16s var(--ease-out)}
+  .tarjeta.inclina .marca-bloque .anillos{animation:respira 6s var(--ease-in-out) infinite alternate}
+  .gigante[data-parallax],.pie-in{will-change:translate}
+  .pie-in{display:inline-block}
+  .cuenta{display:inline-block;font-variant-numeric:tabular-nums}
+  .js .rev-t{clip-path:polygon(0 -15%,0 -15%,-20% 115%,0 115%)}
+  .js .rev-t.rev-on{clip-path:polygon(0 -15%,120% -15%,120% 115%,0 115%);transition:clip-path .45s var(--ease-out)}
+
+  /* Móvil y tablet */
+  @media (max-width:980px){
+    .hero-grid{grid-template-columns:1fr}
+    .hero-foto{justify-self:center;width:min(100%,520px);margin-top:4px}
+    .cinta-in{grid-template-columns:repeat(2,1fr)}
+    .dato:nth-child(3){border-left:none;padding-left:0}
+    .dato:nth-child(n+3){border-top:1px solid var(--linea)}
+    .destacados-grid,.horario-grid,.ub-grid,.cta-in,.faq-grid,.oferta{grid-template-columns:1fr}
+    .oferta-cartel{max-width:520px;margin-inline:auto}
+    .tarjetas{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .ticket{max-width:400px}
+    .cta .acciones{align-items:flex-start}
+    .pie-grid{grid-template-columns:1fr 1fr}
+    .pie-marca{grid-column:1/-1}
+  }
+  @media (max-width:640px){
+    body{font-size:16.5px}
+    .lista{grid-template-columns:1fr}
+    .tarjetas,.tarjetas.tres{grid-template-columns:1fr;gap:12px}
+    .tarjeta,.tarjeta.ancha{grid-column:auto;display:grid;grid-template-columns:116px minmax(0,1fr)}
+    .tarjeta .foto,.tarjeta.ancha .foto{width:100%;aspect-ratio:auto;min-height:116px;height:100%}
+    .tarjeta .cuerpo{padding:14px 16px 16px;justify-content:center}
+    .tarjeta h3,.tarjeta .precio{font-size:1.25rem}
+    .ampliar{right:6px;bottom:6px;width:30px;height:30px}
+    .ampliar .ico{width:14px;height:14px}
+    .tarjeta.sinfoto .marca-bloque,.tarjeta.ancha.sinfoto .marca-bloque{aspect-ratio:auto;min-height:0;height:100%;padding:0}
+    .marca-bloque .nombre{display:none}
+    .marca-bloque .dado{--c:7px;right:10px;top:10px}
+    .marca-bloque .anillos{width:150%}
+    .hero-foto .dado{--c:12px}
+    .galeria .dado{--c:10px;right:20px;top:-40px}
+    .n-grande .dado{--c:14px;top:-12px;right:-10px}
+    .mosaico{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:clamp(150px,44vw,240px)}
+    .m-a{grid-column:1/3;grid-row:auto/span 2}
+    .m-b,.m-c,.m-d,.m-e,.m-f,.m-g,.m-h,.m-ig{grid-column:auto;grid-row:auto}
+    .n-pizza{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr)}
+    .cta .acciones{align-items:stretch}
+    .pie-grid{grid-template-columns:1fr}
+    .dia{padding:14px 16px}
+    .puerta-wrap{max-width:none}
+    .puerta-wrap,.puerta-wrap[data-estado]{--vv:.7deg}
+    .puerta-est{font-size:clamp(3.2rem,17vw,4.6rem)}
+    .dia.abre .d-hora{font-size:1.3rem}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .banda .pista{animation:none}
+    .js .reveal{opacity:1;translate:none}
+    .js .reveal.in{transition:none}
+    .hueso::after{animation:none}
+    *,*::before,*::after{animation:none !important}
+    .brasas{display:none}
+    .js .rev-t,.js .rev-t.rev-on{clip-path:none;transition:none}
+    .foto img,.indicador,.tab,.logo,.links a::after,.signo::before,.signo::after{transition:none !important}
+    .hamburguesa span,.overlay,.lb-inner,.lb-btn,.barra,.cookie{transition:opacity .15s ease !important;transform:none !important}
+    .foto:active,.btn:active{transform:none}
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="dg" viewBox="0 0 150 150"><circle cx="75" cy="75" r="75" fill="#df2412"/><path fill="#ffffff" fill-rule="evenodd" d="M130.38 80.50 L130.25 80.25 L129.38 79.88 L115.62 79.88 L115.00 80.12 L114.62 80.62 L114.62 85.00 L114.88 85.50 L115.62 85.88 L121.62 85.88 L122.00 86.00 L122.62 86.75 L122.62 88.12 L122.38 88.50 L121.62 88.62 L120.50 88.00 L119.38 87.62 L117.00 87.62 L115.00 88.00 L113.25 89.38 L112.38 90.62 L111.75 92.25 L111.38 92.50 L110.38 91.75 L107.50 91.62 L106.88 91.12 L106.62 90.50 L106.75 89.75 L106.62 88.12 L107.12 87.38 L107.75 87.12 L110.50 87.12 L111.00 86.62 L111.12 86.25 L111.00 85.50 L111.12 80.75 L111.00 80.38 L110.25 79.88 L107.62 79.88 L106.88 79.38 L106.62 78.38 L106.75 77.50 L106.62 74.25 L106.75 73.88 L106.50 73.12 L106.12 72.75 L105.62 72.62 L105.00 72.75 L98.75 72.62 L98.25 73.38 L98.12 79.12 L97.62 79.75 L97.25 79.88 L96.25 79.75 L94.50 79.88 L93.75 79.38 L93.50 78.62 L93.62 77.62 L93.50 73.38 L93.12 72.75 L92.38 72.50 L91.38 72.75 L90.75 72.62 L85.75 72.62 L85.50 72.75 L85.12 73.50 L85.12 78.88 L85.00 79.25 L84.50 79.75 L82.88 79.88 L82.12 80.38 L82.00 80.75 L82.12 83.62 L82.00 84.75 L81.62 85.38 L81.12 85.12 L80.88 84.50 L79.62 82.75 L78.38 81.50 L75.75 80.00 L72.00 79.12 L70.25 79.12 L66.25 80.00 L64.50 80.88 L62.38 82.62 L61.38 84.00 L60.88 85.25 L60.50 85.62 L60.25 85.62 L59.88 85.25 L59.75 84.75 L59.75 80.62 L59.50 80.12 L58.75 79.88 L47.00 79.88 L46.25 79.50 L42.50 75.75 L41.75 75.25 L41.12 75.25 L37.75 78.62 L36.88 79.25 L36.38 79.38 L34.88 79.12 L32.12 79.25 L29.62 79.88 L28.50 80.38 L26.50 82.00 L25.12 84.00 L24.50 86.00 L24.50 88.88 L25.00 90.62 L26.25 92.50 L26.38 93.75 L25.12 95.38 L24.12 96.25 L24.00 97.38 L24.25 97.88 L28.62 103.50 L29.50 103.88 L30.25 103.75 L35.00 103.88 L35.38 104.00 L36.00 104.62 L36.12 105.00 L35.88 105.88 L35.50 106.25 L34.62 106.50 L32.62 106.50 L29.25 106.12 L27.75 106.12 L27.25 106.38 L27.00 106.88 L26.75 109.00 L26.12 111.12 L26.12 112.50 L26.88 113.00 L31.75 113.50 L35.25 113.38 L37.25 113.12 L39.50 112.62 L40.25 112.00 L41.50 111.62 L42.62 110.62 L43.62 109.25 L44.38 107.12 L44.50 104.38 L44.12 102.38 L43.00 100.38 L41.38 99.00 L39.00 98.00 L37.75 97.75 L33.50 97.75 L33.00 97.62 L32.62 97.25 L32.88 96.50 L33.62 95.88 L35.25 95.50 L36.38 95.50 L39.00 94.62 L40.38 93.75 L41.50 92.62 L42.50 90.88 L43.12 88.62 L43.12 86.88 L42.62 84.75 L42.62 84.00 L43.25 82.88 L45.25 80.88 L45.62 80.88 L46.00 81.25 L46.25 82.12 L46.12 83.12 L46.12 85.25 L46.25 85.38 L46.12 97.12 L46.38 98.62 L47.12 99.00 L53.62 99.00 L54.12 98.88 L54.62 98.25 L54.62 88.12 L54.75 87.75 L55.25 87.25 L55.62 87.12 L59.50 87.00 L60.00 87.62 L60.12 91.75 L60.62 93.12 L62.00 95.75 L64.38 97.88 L66.50 98.88 L69.50 99.62 L73.25 99.50 L75.75 98.75 L78.00 97.50 L80.00 95.62 L81.12 93.75 L81.88 91.12 L81.88 88.00 L82.12 87.38 L82.38 87.12 L84.25 87.12 L85.00 87.75 L85.12 88.12 L85.12 98.12 L85.62 98.88 L86.00 99.00 L97.50 99.00 L97.62 98.88 L98.62 99.00 L110.38 99.00 L111.12 98.50 L111.12 95.25 L111.25 94.12 L111.50 93.88 L111.75 94.25 L111.88 95.38 L113.25 97.62 L114.12 98.50 L116.12 99.50 L118.12 99.75 L120.25 99.25 L121.62 98.38 L122.50 98.38 L123.75 99.00 L129.50 99.00 L130.38 98.38 L130.38 96.88 L130.50 96.75 L130.38 95.62Z M120.00 91.62 L121.38 91.75 L122.38 92.75 L122.38 94.00 L122.12 94.50 L121.25 95.38 L120.25 95.50 L119.50 95.12 L118.62 94.25 L118.50 93.25 L118.75 92.62 L119.50 91.88Z M94.12 87.38 L94.88 87.12 L96.88 87.12 L98.00 87.62 L98.25 88.12 L98.25 90.75 L97.75 91.50 L97.25 91.75 L94.38 91.62 L93.88 91.25 L93.50 90.38 L93.62 89.62 L93.50 88.62 L93.62 88.00Z M70.38 86.75 L71.62 86.75 L72.50 87.12 L73.75 88.62 L73.75 90.00 L73.25 91.00 L72.62 91.62 L71.25 92.12 L70.50 92.12 L69.62 91.88 L68.88 91.25 L68.12 89.88 L68.12 88.88 L68.50 88.00 L69.12 87.38Z M33.12 85.62 L34.75 85.75 L35.62 86.50 L35.88 87.00 L35.88 88.12 L35.62 88.62 L34.38 89.75 L33.25 89.75 L32.12 89.00 L31.62 88.00 L31.88 86.62 L32.25 86.12Z M32.38 59.62 L32.50 64.25 L33.00 66.12 L34.12 68.38 L35.00 69.38 L36.75 70.75 L38.12 71.25 L39.50 71.50 L42.00 71.38 L43.75 70.62 L45.12 69.62 L45.50 69.62 L46.00 70.38 L46.62 70.88 L52.62 70.88 L52.75 71.00 L53.50 70.88 L54.12 70.25 L54.12 65.75 L54.50 65.00 L55.50 65.88 L56.12 67.25 L57.88 69.00 L58.75 69.62 L61.50 70.88 L64.88 71.50 L68.88 71.50 L69.00 71.38 L70.25 71.38 L71.38 71.00 L71.75 70.62 L71.88 70.12 L71.75 70.00 L71.62 67.12 L71.25 65.62 L70.88 65.38 L67.25 65.50 L64.62 65.12 L64.12 64.88 L63.38 64.00 L63.62 63.50 L65.50 63.50 L65.62 63.38 L72.88 63.38 L73.38 63.62 L73.75 64.50 L73.62 65.25 L73.75 70.25 L74.00 70.62 L74.50 70.88 L98.12 70.88 L99.12 70.50 L100.12 70.38 L102.62 71.50 L103.75 71.75 L105.00 71.75 L107.75 70.25 L108.62 70.25 L109.50 70.88 L115.50 70.88 L116.12 70.38 L116.38 69.12 L116.38 53.12 L116.12 52.38 L115.50 52.00 L101.50 52.00 L101.25 52.12 L100.88 52.62 L100.75 53.38 L100.75 57.25 L100.88 57.50 L101.38 57.88 L103.00 57.88 L103.12 58.00 L107.50 57.88 L107.88 58.00 L108.62 58.75 L108.50 60.25 L108.00 60.62 L107.62 60.62 L106.75 60.12 L104.62 59.62 L103.00 59.62 L101.50 59.88 L100.62 60.25 L99.12 61.75 L98.50 63.00 L98.00 63.50 L95.62 63.75 L95.00 63.25 L94.75 62.25 L94.75 39.12 L94.50 38.50 L93.88 38.25 L87.25 38.25 L86.75 38.50 L86.38 39.12 L86.38 62.75 L86.12 63.38 L85.62 63.75 L84.50 63.62 L82.88 63.75 L82.12 63.25 L81.88 62.62 L81.88 39.00 L81.75 38.62 L81.25 38.25 L74.75 38.25 L74.12 38.50 L73.75 38.88 L73.62 39.25 L73.62 48.00 L73.75 48.12 L73.62 52.12 L73.75 53.00 L73.62 53.12 L73.62 55.25 L73.38 56.38 L72.88 56.38 L72.12 55.75 L71.62 54.38 L70.38 53.25 L68.75 52.12 L66.38 51.50 L62.75 51.38 L59.88 52.00 L58.00 53.00 L57.00 54.00 L56.38 54.38 L55.88 55.62 L54.62 57.12 L54.12 56.62 L54.12 39.12 L54.00 38.75 L53.38 38.25 L46.75 38.25 L46.38 38.38 L46.00 38.88 L45.88 39.50 L45.88 46.75 L46.00 46.88 L46.00 49.75 L45.88 49.88 L46.00 52.25 L45.88 52.62 L45.12 53.00 L43.25 51.88 L42.38 51.75 L41.50 51.38 L38.62 51.50 L36.75 52.12 L34.50 54.00 L33.38 55.75 L33.00 56.75 L33.00 57.38Z M105.88 63.62 L106.62 63.50 L107.50 63.75 L108.25 64.50 L108.50 65.88 L108.25 66.50 L107.38 67.25 L107.00 67.38 L105.88 67.25 L105.38 67.00 L104.75 66.25 L104.62 64.88 L105.00 64.25Z M42.38 58.88 L44.38 59.00 L45.12 59.50 L45.75 60.50 L45.88 62.25 L45.50 62.88 L44.75 63.62 L43.25 64.12 L42.00 63.88 L41.00 63.00 L40.50 62.00 L40.62 60.50 L41.50 59.38Z M62.00 58.38 L62.50 57.75 L63.62 57.12 L64.75 57.12 L65.38 57.38 L66.25 58.12 L66.38 59.00 L65.62 59.62 L62.75 59.62 L62.12 59.25Z"/></symbol>
+    <symbol id="i-tel" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="ovalos" viewBox="0 0 300 300"><ellipse cx="150" cy="150" rx="145" ry="100" vector-effect="non-scaling-stroke"/><ellipse cx="150" cy="150" rx="105" ry="70" vector-effect="non-scaling-stroke"/><ellipse cx="150" cy="150" rx="65" ry="42" vector-effect="non-scaling-stroke"/></symbol>
+    <symbol id="i-mas" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M12 4v16M5 13l7 7 7-7"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+  </defs>
+</svg>
+
+<a class="saltar" href="#contenido">Ir al contenido</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#inicio" aria-label="Della Grotta Streetfood, ir al inicio"><svg role="img" aria-hidden="true" viewBox="0 0 150 150"><use href="#dg"/></svg></a>
+    <ul class="links" id="enlaces">
+      <li><a href="#destacados">Destacados</a></li>
+      <li><a href="#carta">La carta</a></li>
+      <li><a href="#fotos">Fotos</a></li>
+      <li><a href="#horario">Horario</a></li>
+      <li><a href="#ubicacion">Dónde estamos</a></li>
+    </ul>
+    <div class="nav-acciones">
+      <a class="btn-social" href="https://www.instagram.com/dellagrotta/" target="_blank" rel="noopener" aria-label="Instagram de Della Grotta (@dellagrotta)"><svg class="ico"><use href="#i-ig"/></svg></a>
+      <a class="btn btn-cortado" href="tel:+34919473399"><svg class="ico"><use href="#i-tel"/></svg>Llamar</a>
+      <button class="hamburguesa" id="hamburguesa" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="overlay"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+  <a class="enlace" href="#destacados" data-cerrar>Destacados</a>
+  <a class="enlace" href="#carta" data-cerrar>La carta</a>
+  <a class="enlace" href="#fotos" data-cerrar>Fotos</a>
+  <a class="enlace" href="#horario" data-cerrar>Horario</a>
+  <a class="enlace" href="#ubicacion" data-cerrar>Dónde estamos</a>
+  <div class="redes">
+    <a class="btn btn-cortado" href="tel:+34919473399"><svg class="ico"><use href="#i-tel"/></svg>919 47 33 99</a>
+    <a class="btn-social" href="https://www.instagram.com/dellagrotta/" target="_blank" rel="noopener" aria-label="Instagram de Della Grotta (@dellagrotta)"><svg class="ico"><use href="#i-ig"/></svg></a>
+  </div>
+</div>
+
+<main id="contenido">
+
+  <section class="hero grano" id="inicio">
+    <span class="brasas" data-n="16" aria-hidden="true"></span>
+    <div class="wrap hero-grid">
+      <div class="hero-texto">
+        <p class="hero-marca reveal">Original Streetfood · Villaconejos</p>
+        <h1 class="reveal" style="--retraso:50ms">Si es burger, que sea <em>Della Grotta</em></h1>
+        <p class="hero-sub reveal" style="--retraso:100ms">Hamburguesas de carne madurada con patatas y bebida incluidas. También pizzas de 33&nbsp;cm y cosas para picar.</p>
+        <div class="hero-cta reveal" style="--retraso:150ms">
+          <a class="btn btn-cortado" href="#pedir"><svg class="ico"><use href="#i-flecha"/></svg>Hacer pedido</a>
+          <a class="btn btn-outline" href="#carta">Ver la carta</a>
+        </div>
+        <p class="estado reveal" id="estadoHero" role="status" style="--retraso:200ms"><span class="punto"></span><span id="estadoTexto">Consultando el horario</span></p>
+      </div>
+      <div class="hero-foto reveal" style="--retraso:80ms">
+        <svg class="anillos" viewBox="0 0 300 300" aria-hidden="true"><use href="#ovalos"/></svg>
+        <span class="dado" aria-hidden="true"></span>
+        <img src="assets/img/hero.webp" alt="Hamburguesa Hot Sweet con cheddar fundido, bacon, pepinillo a la plancha y ketchup hot sweet" width="1000" height="1000" fetchpriority="high">
+        <p class="sello"><b>13&nbsp;€</b><span>con patatas y bebida</span></p>
+        <div class="sticker"><svg role="img" aria-label="Logotipo de Della Grotta" viewBox="0 0 150 150"><use href="#dg"/></svg></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cinta">
+    <div class="wrap cinta-in">
+      <div class="dato reveal"><b><span class="cuenta" data-fin="4.6" data-dec="1">4,6</span> <svg class="ico ico-lleno" aria-hidden="true"><use href="#i-star"/></svg></b><span><span class="cuenta" data-fin="116">116</span> opiniones en Google</span></div>
+      <div class="dato reveal" style="--retraso:40ms"><b>20:00</b><span>Hasta las 23:30, viernes, sábado, domingo y festivos</span></div>
+      <div class="dato reveal" style="--retraso:80ms"><b><span><span class="cuenta" data-fin="13">13</span>&nbsp;€</span></b><span>Hamburguesa con patatas y bebida</span></div>
+      <div class="dato reveal" style="--retraso:120ms"><b><span><span class="cuenta" data-fin="33">33</span>&nbsp;cm</span></b><span>Pizzas desde 11&nbsp;€</span></div>
+    </div>
+  </div>
+
+  <div class="damero" aria-hidden="true" style="--gd:.8s;--gt:7s;--gx:10%;--gx2:57%"></div>
+  <div class="banda grano" aria-hidden="true" style="--grano:.1">
+    <div class="pista">
+      <div class="grupo"><span>Sabor 100% original</span><i></i><span>Ritual de los viernes</span><i></i><span>Mismo sabor, más Grotta</span><i></i><span>Ingredientes de calidad, sabor de calle</span><i></i></div>
+      <div class="grupo"><span>Sabor 100% original</span><i></i><span>Ritual de los viernes</span><i></i><span>Mismo sabor, más Grotta</span><i></i><span>Ingredientes de calidad, sabor de calle</span><i></i></div>
+    </div>
+  </div>
+  <div class="damero" aria-hidden="true" style="--gd:3.1s;--gt:9s;--gx:58%;--gx2:22%;--gw:20%"></div>
+
+  <section class="sec sec-crema destacados" id="destacados">
+    <span class="gigante" data-parallax="1" aria-hidden="true">Grotta</span>
+    <div class="wrap">
+      <div class="sec-cab reveal">
+        <h2>Productos destacados</h2>
+        <p>La oferta del momento y las últimas incorporaciones a la carta.</p>
+      </div>
+      <!-- Oferta publicada en Instagram (2 pizzas 18 €, 2 menú burger 22 €). Si el negocio la retira, borrar este bloque y las fotos oferta*.webp -->
+      <article class="oferta reveal" id="oferta">
+        <svg class="anillos" viewBox="0 0 300 300" aria-hidden="true"><use href="#ovalos"/></svg>
+        <span class="dado" aria-hidden="true"></span>
+        <button class="foto oferta-cartel" type="button" data-galeria="oferta" data-grande="assets/img/oferta-grande.webp" data-pie="Ofertón Della Grotta" aria-label="Ampliar el cartel del ofertón">
+          <img src="assets/img/oferta.webp" alt="Cartel del ofertón Della Grotta: 2 pizzas por solo 18 euros y 2 menú burger por solo 22 euros" width="640" height="640" loading="lazy" decoding="async">
+          <span class="ampliar" aria-hidden="true"><svg class="ico"><use href="#i-mas"/></svg></span>
+        </button>
+        <div class="oferta-in">
+          <p class="oferta-marca">Ofertón Della Grotta</p>
+          <h3>Para compartir o para no tener que elegir</h3>
+          <ul class="oferta-precios">
+            <li><span>2 pizzas</span><b>18&nbsp;€</b></li>
+            <li><span>2 menú burger</span><b>22&nbsp;€</b></li>
+          </ul>
+          <p class="oferta-nota">Pizza o burger, elijas lo que elijas. Recogida en el local o reparto en Villaconejos y urbanizaciones.</p>
+          <a class="btn btn-cortado" href="#pedir"><svg class="ico"><use href="#i-flecha"/></svg>Pedir el ofertón</a>
+        </div>
+      </article>
+      <div class="destacados-grid">
+        <article class="n-grande reveal">
+          <span class="dado" aria-hidden="true"></span>
+          <button class="foto" type="button" data-galeria="destacados" data-grande="assets/img/brie-caramel-grande.webp" data-pie="Brie Caramel" aria-label="Ampliar la foto de la Brie Caramel">
+            <img src="assets/img/brie-caramel.webp" alt="Hamburguesa Brie Caramel con doble carne smash, brie fundido y mermelada de bacon y pimiento" width="800" height="800" loading="lazy" decoding="async">
+          </button>
+          <div class="n-texto">
+            <h3>Brie Caramel</h3>
+            <p>Queso brie fusionado con mermelada de bacon y pimiento caramelizado.</p>
+            <p class="n-precio">13&nbsp;€ <small>con patatas y bebida</small></p>
+          </div>
+        </article>
+        <div class="n-col">
+          <article class="n-granja reveal" style="--retraso:60ms">
+            <button class="foto" type="button" data-galeria="destacados" data-grande="assets/img/della-granja-grande.webp" data-pie="Della Granja" aria-label="Ampliar la foto de la Della Granja">
+              <img src="assets/img/della-granja.webp" alt="Hamburguesa Della Granja con huevo frito, cheddar fundido, bacon crispy y salsa rosada" width="800" height="830" loading="lazy" decoding="async">
+            </button>
+            <svg class="ovalos" viewBox="0 0 300 300" aria-hidden="true"><ellipse cx="150" cy="150" rx="145" ry="100"/><ellipse cx="150" cy="150" rx="105" ry="70"/><ellipse cx="150" cy="150" rx="65" ry="42"/></svg>
+            <div class="g-texto">
+              <h3>Della Granja</h3>
+              <p>Queso cheddar fundido, huevo frito junto a cebolla caramelizada con toque final de bacon crispy y salsa Della Granja.</p>
+              <p class="n-precio">13&nbsp;€ <small>con patatas y bebida</small></p>
+            </div>
+          </article>
+          <article class="n-pizza reveal" style="--retraso:120ms">
+            <button class="foto" type="button" data-galeria="destacados" data-grande="assets/img/della-mia-mamma-grande.webp" data-pie="Pizza Della Mía Mamma" aria-label="Ampliar la foto de la pizza Della Mía Mamma">
+              <img src="assets/img/della-mia-mamma.webp" alt="Pizza Della Mía Mamma con bacon, ternera y tomate cherry" width="800" height="861" loading="lazy" decoding="async">
+            </button>
+            <div>
+                <h3>Della Mía Mamma</h3>
+              <p>Salsa de tomate Della Grotta, fior di latte, bacon, ternera, tomate cherry, orégano y parmigiano.</p>
+              <p class="n-precio">11&nbsp;€ <small>masa clásica · 13&nbsp;€ napoletana</small></p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <p class="n-resto reveal"><strong>También destacadas</strong> <span>Bombastic y Big Grotta.</span> <a href="#carta" data-tab="tab-hamb">Ver todas las hamburguesas</a></p>
+    </div>
+  </section>
+
+  <section class="sec carta" id="carta">
+    <svg class="anillos" viewBox="0 0 300 300" aria-hidden="true"><use href="#ovalos"/></svg>
+    <div class="wrap">
+      <div class="sec-cab reveal">
+        <h2>La carta</h2>
+        <p>Elige tu carne estilo clásico o smash. Pedidos por teléfono o por Instagram.</p>
+      </div>
+
+      <div class="tablist reveal" role="tablist" aria-label="Categorías de la carta" id="tablist">
+        <div class="indicador" id="indicador" aria-hidden="true"></div>
+        <button class="tab" role="tab" type="button" id="tab-hamb" aria-selected="true" aria-controls="panel-hamb" tabindex="0">Hamburguesas</button>
+        <button class="tab" role="tab" type="button" id="tab-pizzas" aria-selected="false" aria-controls="panel-pizzas" tabindex="-1">Pizzas</button>
+        <button class="tab" role="tab" type="button" id="tab-picar" aria-selected="false" aria-controls="panel-picar" tabindex="-1">Para picar</button>
+        <button class="tab" role="tab" type="button" id="tab-basic" aria-selected="false" aria-controls="panel-basic" tabindex="-1">Basic by Grotta</button>
+        <button class="tab" role="tab" type="button" id="tab-beber" aria-selected="false" aria-controls="panel-beber" tabindex="-1">Bebidas y salsas</button>
+      </div>
+
+      <!-- Hamburguesas -->
+      <div class="panel" id="panel-hamb" role="tabpanel" aria-labelledby="tab-hamb" data-activo tabindex="0">
+        <div class="precio-cab">
+          <span class="precio-grande">13&nbsp;€</span>
+          <p class="precio-nota"><b>Todas incluyen patatas y bebida.</b> Carne madurada de 200&nbsp;g en pan de patata, estilo clásico o smash.</p>
+        </div>
+        <div class="tarjetas">
+        <article class="tarjeta reveal">
+          <button class="foto" type="button" data-galeria="carta-hamb" data-grande="assets/img/hot-sweet-grande.webp" data-pie="Hot Sweet" aria-label="Ampliar la foto de la Hot Sweet">
+            <span class="hueso" aria-hidden="true"></span>
+            <img src="assets/img/hot-sweet.webp" alt="Hamburguesa Hot Sweet con cheddar fundido, bacon, pepinillo a la plancha y ketchup hot sweet" width="800" height="800" loading="lazy" decoding="async">
+            <span class="ampliar" aria-hidden="true"><svg class="ico"><use href="#i-mas"/></svg></span>
+          </button>
+          <div class="cuerpo">
+            <div class="linea"><h3>Hot Sweet</h3><span class="precio">13&nbsp;€</span></div>
+            <p>Queso cheddar, pepinillo a la plancha, bacon y ketchup hot sweet.</p>
+          </div>
+        </article>
+        <article class="tarjeta sinfoto tono-rojo reveal">
+          <div class="marca-bloque" aria-hidden="true">
+            <svg class="anillos" viewBox="0 0 300 300"><use href="#ovalos"/></svg>
+            <span class="dado"></span>
+            <span class="nombre">Della Grotta</span>
+          </div>
+          <div class="cuerpo">
+            <div class="linea"><h3>Della Grotta</h3><span class="precio">13&nbsp;€</span></div>
+            <p>Queso cheddar, bacon, pepinillos, cebolla dulce y salsa Della Grotta.</p>
+          </div>
+        </article>
+        <article class="tarjeta ancha reveal">
+          <button class="foto" type="button" data-galeria="carta-hamb" data-grande="assets/img/della-funghi.webp" data-pie="Della Funghi" aria-label="Ampliar la foto de la Della Funghi">
+            <span class="hueso" aria-hidden="true"></span>
+            <img src="assets/img/della-funghi.webp" alt="Hamburguesa Della Funghi con queso edam, cebolla y salsa funghi, sostenida con la mano" width="1030" height="604" loading="lazy" decoding="async">
+            <span class="ampliar" aria-hidden="true"><svg class="ico"><use href="#i-mas"/></svg></span>
+          </button>
+          <div class="cuerpo">
+            <div class="linea"><h3>Della Funghi</h3><span class="precio">13&nbsp;€</span></div>
+            <p>Queso edam, cebolla y salsa funghi.</p>
+          </div>
+        </article>
+        <article class="tarjeta reveal">
+          <button class="foto" type="button" data-galeria="carta-hamb" data-grande="assets/img/della-cabra-grande.webp" data-pie="Della Cabra" aria-label="Ampliar la foto de la Della Cabra">
+            <span class="hueso" aria-hidden="true"></span>
+            <img src="assets/img/della-cabra.webp" alt="Hamburguesa Della Cabra con medallón de queso de cabra sobre la carne" width="800" height="800" loading="lazy" decoding="async">
+            <span class="ampliar" aria-hidden="true"><svg class="ico"><use href="#i-mas"/></svg></span>
+          </button>
+          <div class="cuerpo">
+            <div class="linea"><h3>Della Cabra</h3><span class="precio">13&nbsp;€</span></div>
+            <p>Medallón de rulo de cabra, cebolla caramelizada y salsa de mostaza y miel.</p>
+          </div>
+        </article>
+        <article class="tarjeta sinfoto tono-negro reveal">
+          <div class="marca-bloque" aria-hidden="true">
+            <svg class="anillos" viewBox="0 0 300 300"><use href="#ovalos"/></svg>
+            <span class="dado"></span>
+            <span class="nombre">Della Cheesebacon</span>
+          </div>
+          <div class="cuerpo">
+            <div class="linea"><h3>Della Cheesebacon</h3><span class="precio">13&nbsp;€</span></div>
+            <p>Doble de queso cheddar, doble de bacon y ketchup Della Grotta.</p>
+          </div>
+        </article>
+        <article class="tarjeta reveal">
+          <button class="foto" type="button" data-galeria="carta-hamb" data-grande="assets/img/bombastic-grande.webp" data-pie="Bombastic" aria-label="Ampliar la foto de la Bombastic">
+            <span class="hueso" aria-hidden="true"></span>
+            <img src="assets/img/bombastic.webp" alt="Hamburguesa Bombastic con cheddar fundido, bacon y salsa anaranjada" width="800" height="819" loading="lazy" decoding="async">
+            <span class="ampliar" aria-hidden="true"><svg class="ico"><use href="#i-mas"/></svg></span>
+          </button>
+          <div class="cuerpo">
+            <div class="linea"><h3>Bombastic</h3><span class="precio">13&nbsp;€</span></div>
+            <p>Fusión de queso cheddar y edam, bacon y salsa sriracha.</p>
+          </div>
+        </article>
+        <article class="tarjeta sinfoto tono-rojo reveal">
+          <div class="marca-bloque" aria-hidden="true">
+            <svg class="anillos" viewBox="0 0 300 300"><use href="#ovalos"/></svg>
+            <span class="dado"></span>
+            <span class="nombre">Chicken Della Grotta</span>
+          </div>
+          <div class="cuerpo">
+            <div class="linea"><h3>Chicken Della Grotta</h3><span class="precio">13&nbsp;€</span></div>
+            <p>Tomate, medallón de crispy chicken, queso edam, bacon y salsa ranchera.</p>
+          </div>
+        </article>
+        <article class="tarjeta reveal">
+          <button class="foto" type="button" data-galeria="carta-hamb" data-grande="assets/img/big-grotta-grande.webp" data-pie="Big Grotta" aria-label="Ampliar la foto de la Big Grotta">
+            <span class="hueso" aria-hidden="true"></span>
+            <img src="assets/img/big-grotta.webp" alt="Hamburguesa Big Grotta con lechuga, cebolla y salsa de queso cheddar cayendo por el pan" width="800" height="800" loading="lazy" decoding="async">
+            <span class="ampliar" aria-hidden="true"><svg class="ico"><use href="#i-mas"/></svg></span>
+          </button>
+          <div class="cuerpo">
+            <div class="linea"><h3>Big Grotta</h3><span class="precio">13&nbsp;€</span></div>
+            <p>Queso cheddar fundido, relish de cebolla, pepinillo, lechuga y salsa Big Grotta.</p>
+          </div>
+        </article>
+        <article class="tarjeta reveal">
+          <button class="foto" type="button" data-galeria="carta-hamb" data-grande="assets/img/della-granja-grande.webp" data-pie="Della Granja" aria-label="Ampliar la foto de la Della Granja">
+            <span class="hueso" aria-hidden="true"></span>
+            <img src="assets/img/della-granja.webp" alt="Hamburguesa Della Granja con huevo frito, cheddar fundido y bacon crispy" width="800" height="830" loading="lazy" decoding="async">
+            <span class="ampliar" aria-hidden="true"><svg class="ico"><use href="#i-mas"/></svg></span>
+          </button>
+          <div class="cuerpo">
+            <div class="linea"><h3>Della Granja</h3><span class="precio">13&nbsp;€</span></div>
+            <p>Queso cheddar fundido, huevo frito junto a cebolla caramelizada con toque final de bacon crispy y salsa Della Granja.</p>
+          </div>
+        </article>
+        <article class="tarjeta reveal">
+          <button class="foto" type="button" data-galeria="carta-hamb" data-grande="assets/img/brie-caramel-grande.webp" data-pie="Brie Caramel" aria-label="Ampliar la foto de la Brie Caramel">
+            <span class="hueso" aria-hidden="true"></span>
+            <img src="assets/img/brie-caramel.webp" alt="Hamburguesa Brie Caramel con doble carne smash, brie fundido y mermelada de bacon y pimiento" width="800" height="800" loading="lazy" decoding="async">
+            <span class="ampliar" aria-hidden="true"><svg class="ico"><use href="#i-mas"/></svg></span>
+          </button>
+          <div class="cuerpo">
+            <div class="linea"><h3>Brie Caramel</h3><span class="precio">13&nbsp;€</span></div>
+            <p>Queso brie fusionado con mermelada de bacon y pimiento caramelizado.</p>
+          </div>
+        </article>
+        <article class="tarjeta sinfoto tono-negro reveal">
+          <div class="marca-bloque" aria-hidden="true">
+            <svg class="anillos" viewBox="0 0 300 300"><use href="#ovalos"/></svg>
+            <span class="dado"></span>
+            <span class="nombre">Della Grotta Jr</span>
+          </div>
+          <div class="cuerpo">
+            <div class="linea"><h3>Della Grotta Jr</h3><span class="precio">11&nbsp;€</span></div>
+            <p>100 gramos de carne madurada con queso cheddar, bacon, pepinillos, cebolla dulce y salsa Della Grotta.</p>
+          </div>
+        </article>
+        </div>
+      </div>
+
+      <!-- Pizzas -->
+      <div class="panel" id="panel-pizzas" role="tabpanel" aria-labelledby="tab-pizzas" tabindex="0">
+        <div class="precio-cab">
+          <span class="precio-grande">11&nbsp;€ · 13&nbsp;€</span>
+          <p class="precio-nota"><b>Pizzas de 33&nbsp;cm.</b> Masa clásica 11&nbsp;€ o masa napoletana 13&nbsp;€.</p>
+        </div>
+        <div class="tarjetas tres">
+        <article class="tarjeta reveal">
+          <button class="foto" type="button" data-galeria="carta-pizza" data-grande="assets/img/pizza-hawaiana.webp" data-pie="Hawaiana" aria-label="Ampliar la foto de la pizza Hawaiana">
+            <span class="hueso" aria-hidden="true"></span>
+            <img src="assets/img/pizza-hawaiana.webp" alt="Pizza Hawaiana con jamón york y piña" width="800" height="800" loading="lazy" decoding="async">
+            <span class="ampliar" aria-hidden="true"><svg class="ico"><use href="#i-mas"/></svg></span>
+          </button>
+          <div class="cuerpo">
+            <div class="linea"><h3>Hawaiana</h3><span class="precio">11 · 13&nbsp;€</span></div>
+            <p>Salsa de tomate, fior di latte, doble de jamón york y piña.</p>
+          </div>
+        </article>
+        <article class="tarjeta sinfoto tono-rojo reveal">
+          <div class="marca-bloque" aria-hidden="true">
+            <svg class="anillos" viewBox="0 0 300 300"><use href="#ovalos"/></svg>
+            <span class="dado"></span>
+            <span class="nombre">De la Huerta</span>
+          </div>
+          <div class="cuerpo">
+            <div class="linea"><h3>De la Huerta</h3><span class="precio">11 · 13&nbsp;€</span></div>
+            <p>Salsa de tomate, fior di latte, pimiento rojo, pimiento verde, champiñones y aceituna negra.</p>
+          </div>
+        </article>
+        <article class="tarjeta reveal">
+          <button class="foto" type="button" data-galeria="carta-pizza" data-grande="assets/img/pizza-carbonara.webp" data-pie="Carbonara" aria-label="Ampliar la foto de la pizza Carbonara">
+            <span class="hueso" aria-hidden="true"></span>
+            <img src="assets/img/pizza-carbonara.webp" alt="Pizza Carbonara con salsa carbonara, bacon y champiñones" width="800" height="800" loading="lazy" decoding="async">
+            <span class="ampliar" aria-hidden="true"><svg class="ico"><use href="#i-mas"/></svg></span>
+          </button>
+          <div class="cuerpo">
+            <div class="linea"><h3>Carbonara</h3><span class="precio">11 · 13&nbsp;€</span></div>
+            <p>Salsa carbonara, fior di latte, doble de bacon y champiñones.</p>
+          </div>
+        </article>
+        <article class="tarjeta sinfoto tono-negro reveal">
+          <div class="marca-bloque" aria-hidden="true">
+            <svg class="anillos" viewBox="0 0 300 300"><use href="#ovalos"/></svg>
+            <span class="dado"></span>
+            <span class="nombre">Carnívora</span>
+          </div>
+          <div class="cuerpo">
+            <div class="linea"><h3>Carnívora</h3><span class="precio">11 · 13&nbsp;€</span></div>
+            <p>Salsa de tomate, fior di latte, carne, pepperoni, jamón york y bacon.</p>
+          </div>
+        </article>
+        <article class="tarjeta sinfoto tono-rojo reveal">
+          <div class="marca-bloque" aria-hidden="true">
+            <svg class="anillos" viewBox="0 0 300 300"><use href="#ovalos"/></svg>
+            <span class="dado"></span>
+            <span class="nombre">Barbacoa</span>
+          </div>
+          <div class="cuerpo">
+            <div class="linea"><h3>Barbacoa</h3><span class="precio">11 · 13&nbsp;€</span></div>
+            <p>Salsa barbacoa, fior di latte, bacon, pollo y ternera.</p>
+          </div>
+        </article>
+        <article class="tarjeta reveal">
+          <button class="foto" type="button" data-galeria="carta-pizza" data-grande="assets/img/pizza-pepperoni.webp" data-pie="Pepperoni" aria-label="Ampliar la foto de la pizza Pepperoni">
+            <span class="hueso" aria-hidden="true"></span>
+            <img src="assets/img/pizza-pepperoni.webp" alt="Pizza Pepperoni con doble de pepperoni" width="800" height="800" loading="lazy" decoding="async">
+            <span class="ampliar" aria-hidden="true"><svg class="ico"><use href="#i-mas"/></svg></span>
+          </button>
+          <div class="cuerpo">
+            <div class="linea"><h3>Pepperoni</h3><span class="precio">11 · 13&nbsp;€</span></div>
+            <p>Salsa de tomate, fior di latte y doble de pepperoni.</p>
+          </div>
+        </article>
+        <article class="tarjeta sinfoto tono-negro reveal">
+          <div class="marca-bloque" aria-hidden="true">
+            <svg class="anillos" viewBox="0 0 300 300"><use href="#ovalos"/></svg>
+            <span class="dado"></span>
+            <span class="nombre">Mar y Montaña</span>
+          </div>
+          <div class="cuerpo">
+            <div class="linea"><h3>Mar y Montaña</h3><span class="precio">11 · 13&nbsp;€</span></div>
+            <p>Salsa de tomate, fior di latte, atún, pico de gallo, cebolla y ternera.</p>
+          </div>
+        </article>
+        <article class="tarjeta reveal">
+          <button class="foto" type="button" data-galeria="carta-pizza" data-grande="assets/img/pizza-bacon-crispy.webp" data-pie="Bacon Crispy" aria-label="Ampliar la foto de la pizza Bacon Crispy">
+            <span class="hueso" aria-hidden="true"></span>
+            <img src="assets/img/pizza-bacon-crispy.webp" alt="Pizza Bacon Crispy con salsa barbacoa, bacon y crispy crujiente" width="800" height="800" loading="lazy" decoding="async">
+            <span class="ampliar" aria-hidden="true"><svg class="ico"><use href="#i-mas"/></svg></span>
+          </button>
+          <div class="cuerpo">
+            <div class="linea"><h3>Bacon Crispy</h3><span class="precio">11 · 13&nbsp;€</span></div>
+            <p>Salsa barbacoa, fior di latte, doble de bacon y crispy crujiente.</p>
+          </div>
+        </article>
+        <article class="tarjeta sinfoto tono-rojo reveal">
+          <div class="marca-bloque" aria-hidden="true">
+            <svg class="anillos" viewBox="0 0 300 300"><use href="#ovalos"/></svg>
+            <span class="dado"></span>
+            <span class="nombre">Rulo de Cabra</span>
+          </div>
+          <div class="cuerpo">
+            <div class="linea"><h3>Rulo de Cabra</h3><span class="precio">11 · 13&nbsp;€</span></div>
+            <p>Salsa de tomate, fior di latte, cebolla, bacon y queso de cabra.</p>
+          </div>
+        </article>
+        <article class="tarjeta reveal">
+          <button class="foto" type="button" data-galeria="carta-pizza" data-grande="assets/img/pizza-4-quesos.webp" data-pie="4 Quesos" aria-label="Ampliar la foto de la pizza 4 Quesos">
+            <span class="hueso" aria-hidden="true"></span>
+            <img src="assets/img/pizza-4-quesos.webp" alt="Pizza 4 Quesos" width="800" height="800" loading="lazy" decoding="async">
+            <span class="ampliar" aria-hidden="true"><svg class="ico"><use href="#i-mas"/></svg></span>
+          </button>
+          <div class="cuerpo">
+            <div class="linea"><h3>4 Quesos</h3><span class="precio">11 · 13&nbsp;€</span></div>
+            <p>Salsa de tomate y mezcla especial de 4 quesos.</p>
+          </div>
+        </article>
+        <article class="tarjeta reveal">
+          <button class="foto" type="button" data-galeria="carta-pizza" data-grande="assets/img/della-mia-mamma-grande.webp" data-pie="Della Mía Mamma" aria-label="Ampliar la foto de la pizza Della Mía Mamma">
+            <span class="hueso" aria-hidden="true"></span>
+            <img src="assets/img/della-mia-mamma.webp" alt="Pizza Della Mía Mamma con bacon, ternera y tomate cherry" width="800" height="861" loading="lazy" decoding="async">
+            <span class="ampliar" aria-hidden="true"><svg class="ico"><use href="#i-mas"/></svg></span>
+          </button>
+          <div class="cuerpo">
+            <div class="linea"><h3>Della Mía Mamma</h3><span class="precio">11 · 13&nbsp;€</span></div>
+            <p>Salsa de tomate Della Grotta, fior di latte, bacon, ternera, tomate cherry, orégano y parmigiano.</p>
+          </div>
+        </article>
+        <article class="tarjeta sinfoto tono-negro reveal">
+          <div class="marca-bloque" aria-hidden="true">
+            <svg class="anillos" viewBox="0 0 300 300"><use href="#ovalos"/></svg>
+            <span class="dado"></span>
+            <span class="nombre">Chili</span>
+          </div>
+          <div class="cuerpo">
+            <div class="linea"><h3>Chili</h3><span class="precio">11 · 13&nbsp;€</span></div>
+            <p>Salsa de tomate, fior di latte, chili con carne, bacon crispy y cebolla.</p>
+          </div>
+        </article>
+        <article class="tarjeta sinfoto tono-rojo reveal">
+          <div class="marca-bloque" aria-hidden="true">
+            <svg class="anillos" viewBox="0 0 300 300"><use href="#ovalos"/></svg>
+            <span class="dado"></span>
+            <span class="nombre">Kebab</span>
+          </div>
+          <div class="cuerpo">
+            <div class="linea"><h3>Kebab</h3><span class="precio">11 · 13&nbsp;€</span></div>
+            <p>Salsa de tomate, fior di latte, ternera o pollo, cebolla y salsa de kebab.</p>
+          </div>
+        </article>
+        <article class="tarjeta sinfoto tono-negro ancha reveal">
+          <div class="marca-bloque" aria-hidden="true">
+            <svg class="anillos" viewBox="0 0 300 300"><use href="#ovalos"/></svg>
+            <span class="dado"></span>
+            <span class="nombre">Elabora la tuya</span>
+          </div>
+          <div class="cuerpo">
+            <div class="linea"><h3>Elabora la tuya</h3><span class="precio">11 · 13&nbsp;€</span></div>
+            <p>Añade hasta 3 ingredientes por el mismo precio que las especialidades. Ingrediente extra, 1,50&nbsp;€.</p>
+          </div>
+        </article>
+        </div>
+      </div>
+
+      <!-- Para picar -->
+      <div class="panel" id="panel-picar" role="tabpanel" aria-labelledby="tab-picar" tabindex="0">
+        <div class="tarjetas">
+        <article class="tarjeta ancha reveal">
+          <button class="foto" type="button" data-galeria="carta-picar" data-grande="assets/img/nachos-grande.webp" data-pie="Nachos Della Grotta" aria-label="Ampliar la foto de los nachos">
+            <span class="hueso" aria-hidden="true"></span>
+            <img src="assets/img/nachos.webp" alt="Nachos Della Grotta con salsa cheddar, crema agria, guacamole, chili con carne y pico de gallo" width="800" height="608" loading="lazy" decoding="async">
+            <span class="ampliar" aria-hidden="true"><svg class="ico"><use href="#i-mas"/></svg></span>
+          </button>
+          <div class="cuerpo">
+            <div class="linea"><h3>Nachos Della Grotta</h3><span class="precio">6,50&nbsp;€</span></div>
+            <p>Totopos, salsa cheddar, crema agria, guacamole, chili con carne y pico de gallo.</p>
+          </div>
+        </article>
+        <article class="tarjeta sinfoto tono-rojo reveal">
+          <div class="marca-bloque" aria-hidden="true">
+            <svg class="anillos" viewBox="0 0 300 300"><use href="#ovalos"/></svg>
+            <span class="dado"></span>
+            <span class="nombre">Jalapeños</span>
+          </div>
+          <div class="cuerpo">
+            <div class="linea"><h3>Jalapeños</h3><span class="precio">6,00&nbsp;€</span></div>
+          </div>
+        </article>
+        <article class="tarjeta sinfoto tono-negro reveal">
+          <div class="marca-bloque" aria-hidden="true">
+            <svg class="anillos" viewBox="0 0 300 300"><use href="#ovalos"/></svg>
+            <span class="dado"></span>
+            <span class="nombre">Fingers de queso</span>
+          </div>
+          <div class="cuerpo">
+            <div class="linea"><h3>Fingers de queso</h3><span class="precio">6,00&nbsp;€</span></div>
+          </div>
+        </article>
+        <article class="tarjeta sinfoto tono-rojo reveal">
+          <div class="marca-bloque" aria-hidden="true">
+            <svg class="anillos" viewBox="0 0 300 300"><use href="#ovalos"/></svg>
+            <span class="dado"></span>
+            <span class="nombre">Patatas gajo</span>
+          </div>
+          <div class="cuerpo">
+            <div class="linea"><h3>Patatas gajo</h3><span class="precio">4,00&nbsp;€</span></div>
+          </div>
+        </article>
+        <article class="tarjeta sinfoto tono-negro reveal">
+          <div class="marca-bloque" aria-hidden="true">
+            <svg class="anillos" viewBox="0 0 300 300"><use href="#ovalos"/></svg>
+            <span class="dado"></span>
+            <span class="nombre">Nuggets</span>
+          </div>
+          <div class="cuerpo">
+            <div class="linea"><h3>Nuggets</h3><span class="precio">5,50&nbsp;€</span></div>
+          </div>
+        </article>
+        <article class="tarjeta sinfoto tono-rojo reveal">
+          <div class="marca-bloque" aria-hidden="true">
+            <svg class="anillos" viewBox="0 0 300 300"><use href="#ovalos"/></svg>
+            <span class="dado"></span>
+            <span class="nombre">Pollo Kentucky</span>
+          </div>
+          <div class="cuerpo">
+            <div class="linea"><h3>Pollo Kentucky</h3><span class="precio">6,50&nbsp;€</span></div>
+          </div>
+        </article>
+        <article class="tarjeta sinfoto tono-negro reveal">
+          <div class="marca-bloque" aria-hidden="true">
+            <svg class="anillos" viewBox="0 0 300 300"><use href="#ovalos"/></svg>
+            <span class="dado"></span>
+            <span class="nombre">Alitas de pollo</span>
+          </div>
+          <div class="cuerpo">
+            <div class="linea"><h3>Alitas de pollo</h3><span class="precio">6,00&nbsp;€</span></div>
+          </div>
+        </article>
+        <article class="tarjeta sinfoto tono-rojo ancha reveal">
+          <div class="marca-bloque" aria-hidden="true">
+            <svg class="anillos" viewBox="0 0 300 300"><use href="#ovalos"/></svg>
+            <span class="dado"></span>
+            <span class="nombre">Patatas cheese bacon</span>
+          </div>
+          <div class="cuerpo">
+            <div class="linea"><h3>Patatas cheese bacon</h3><span class="precio">6,00&nbsp;€</span></div>
+            <p>Patatas, salsa cheddar y bacon crispy.</p>
+          </div>
+        </article>
+        <article class="tarjeta sinfoto tono-negro ancha reveal">
+          <div class="marca-bloque" aria-hidden="true">
+            <svg class="anillos" viewBox="0 0 300 300"><use href="#ovalos"/></svg>
+            <span class="dado"></span>
+            <span class="nombre">Patatas con chili</span>
+          </div>
+          <div class="cuerpo">
+            <div class="linea"><h3>Patatas con chili</h3><span class="precio">6,00&nbsp;€</span></div>
+            <p>Patatas, queso cheddar y chili con carne.</p>
+          </div>
+        </article>
+        </div>
+      </div>
+
+      <!-- Basic by Grotta -->
+      <div class="panel" id="panel-basic" role="tabpanel" aria-labelledby="tab-basic" tabindex="0">
+        <div class="panel-in">
+          <div>
+            <div class="precio-cab">
+              <span class="precio-grande">5&nbsp;€</span>
+              <p class="precio-nota"><b>Basic by Grotta.</b> Añade un refresco por solo 1&nbsp;€ más.</p>
+            </div>
+            <div class="lista">
+              <h3 class="bloque-tit">Hamburguesas</h3>
+              <div class="plato"><h3>Carne</h3><p>Pan, discos de burger, queso, lechuga, salsa Grotta y pepinillo.</p></div>
+              <div class="plato"><h3>Pollo</h3><p>Pan, burger de pollo, queso, lechuga, salsa Grotta y pepinillo.</p></div>
+              <h3 class="bloque-tit">Bowls Grotta</h3>
+              <div class="plato"><h3>Kebab</h3><p>Cubos de patatas, lechuga, kebab mixto y salsa kebab Grotta.</p></div>
+              <div class="plato"><h3>Ternera</h3><p>Cubos de patatas, ternera, bacon y queso cheddar.</p></div>
+              <div class="plato"><h3>Pollo crunchy</h3><p>Cubos de patatas, pollo crunchy, miel y mostaza y barbacoa.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bebidas y salsas -->
+      <div class="panel" id="panel-beber" role="tabpanel" aria-labelledby="tab-beber" tabindex="0">
+        <div class="panel-in">
+          <div class="lista">
+            <h3 class="bloque-tit">Bebidas</h3>
+            <div class="plato"><div class="plato-precio"><h3>Refrescos</h3><span class="pr">1,50&nbsp;€</span></div></div>
+            <div class="plato"><div class="plato-precio"><h3>Agua <small>0,5&nbsp;l</small></h3><span class="pr">1,00&nbsp;€</span></div></div>
+            <div class="plato"><div class="plato-precio"><h3>Mahou clásica</h3><span class="pr">1,50&nbsp;€</span></div></div>
+            <h3 class="bloque-tit">Salsas extra</h3>
+            <div class="plato" style="grid-column:1/-1"><div class="plato-precio"><h3>Della Grotta, mostaza, ketchup, mayonesa y barbacoa</h3><span class="pr">0,80&nbsp;€</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec galeria" id="fotos">
+    <div class="wrap">
+      <span class="dado" aria-hidden="true"></span>
+      <div class="sec-cab reveal">
+        <h2>Así salen de la cocina</h2>
+        <p>Toca una foto para verla grande.</p>
+      </div>
+      <div class="mosaico">
+        <button class="foto m-a reveal" type="button" data-galeria="fotos" data-grande="assets/img/hot-sweet-grande.webp" data-pie="Hot Sweet" aria-label="Ampliar la foto de la Hot Sweet"><img src="assets/img/hot-sweet.webp" alt="Hamburguesa Hot Sweet con cheddar fundido, pepinillo, bacon y ketchup hot sweet" width="800" height="800" loading="lazy" decoding="async"></button>
+        <button class="foto m-b reveal" type="button" data-galeria="fotos" data-grande="assets/img/brie-caramel-grande.webp" data-pie="Brie Caramel" style="--retraso:40ms" aria-label="Ampliar la foto de la Brie Caramel"><img src="assets/img/brie-caramel.webp" alt="Hamburguesa Brie Caramel con brie fundido y mermelada de bacon y pimiento" width="800" height="800" loading="lazy" decoding="async"></button>
+        <button class="foto m-c reveal" type="button" data-galeria="fotos" data-grande="assets/img/della-mia-mamma-grande.webp" data-pie="Pizza Della Mía Mamma" style="--retraso:80ms" aria-label="Ampliar la foto de la pizza Della Mía Mamma"><img src="assets/img/della-mia-mamma.webp" alt="Pizza Della Mía Mamma con bacon, ternera y tomate cherry" width="800" height="861" loading="lazy" decoding="async"></button>
+        <button class="foto m-d reveal" type="button" data-galeria="fotos" data-grande="assets/img/della-cabra-grande.webp" data-pie="Della Cabra" style="--retraso:40ms" aria-label="Ampliar la foto de la Della Cabra"><img src="assets/img/della-cabra.webp" alt="Hamburguesa Della Cabra con medallón de queso de cabra sobre la carne" width="800" height="800" loading="lazy" decoding="async"></button>
+        <button class="foto m-e reveal" type="button" data-galeria="fotos" data-grande="assets/img/bombastic-grande.webp" data-pie="Bombastic" style="--retraso:80ms" aria-label="Ampliar la foto de la Bombastic"><img src="assets/img/bombastic.webp" alt="Hamburguesa Bombastic con cheddar fundido, bacon y salsa anaranjada" width="800" height="819" loading="lazy" decoding="async"></button>
+        <button class="foto m-f reveal" type="button" data-galeria="fotos" data-grande="assets/img/nachos-grande.webp" data-pie="Nachos Della Grotta" aria-label="Ampliar la foto de los nachos"><img src="assets/img/nachos.webp" alt="Nachos Della Grotta con cheddar, crema agria, guacamole, chili con carne y pico de gallo" width="800" height="608" loading="lazy" decoding="async"></button>
+        <button class="foto m-g reveal" type="button" data-galeria="fotos" data-grande="assets/img/big-grotta-grande.webp" data-pie="Big Grotta" style="--retraso:40ms" aria-label="Ampliar la foto de la Big Grotta"><img src="assets/img/big-grotta.webp" alt="Hamburguesa Big Grotta con lechuga, cebolla y salsa de queso cheddar" width="800" height="800" loading="lazy" decoding="async"></button>
+        <button class="foto m-h reveal" type="button" data-galeria="fotos" data-grande="assets/img/della-granja-grande.webp" data-pie="Della Granja" style="--retraso:80ms" aria-label="Ampliar la foto de la Della Granja"><img src="assets/img/della-granja.webp" alt="Hamburguesa Della Granja con huevo frito, cheddar fundido y bacon crispy" width="800" height="830" loading="lazy" decoding="async"></button>
+        <a class="m-ig reveal" href="https://www.instagram.com/dellagrotta/" target="_blank" rel="noopener" style="--retraso:80ms"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg><strong>Más en Instagram</strong><span>@dellagrotta</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec horario" id="horario">
+    <div class="wrap horario-grid">
+      <div class="reveal h-bloque">
+        <svg class="anillos" viewBox="0 0 300 300" aria-hidden="true"><use href="#ovalos"/></svg>
+        <h2>Horario</h2>
+        <span class="h-desde">Abrimos a las</span>
+        <p class="h-hora" aria-label="20:00 horas">20:00</p>
+        <span class="h-cierre">Cerramos a las 23:30</span>
+        <p class="h-texto">Viernes, sábados, domingos y festivos.</p>
+        <div class="puerta-wrap" id="puertaWrap" data-estado="cerrado">
+          <svg class="puerta-cuerdas" viewBox="0 0 100 46" preserveAspectRatio="none" aria-hidden="true"><path d="M50 2 L20 46 M50 2 L80 46"/></svg>
+          <span class="puerta-halo" aria-hidden="true"></span>
+          <div class="puerta">
+            <div class="puerta-cara">
+              <p class="puerta-ahora"><span class="luz" aria-hidden="true"></span>Ahora mismo</p>
+              <div id="estadoHorario" role="status">
+                <p class="puerta-est" id="puertaEst">Cerrado</p>
+                <p class="puerta-det" id="puertaDet">Consultando el horario</p>
+              </div>
+              <p class="puerta-cuenta" id="puertaCuenta">&nbsp;</p>
+              <p class="puerta-nota" id="puertaNota" hidden>También abrimos en festivos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="dias reveal" id="dias" style="--retraso:60ms" aria-label="Horario de pedidos por día">
+        <li class="dia" data-dow="1"><span class="d-nombre">Lunes<span class="hoy-tag">Hoy</span></span><span class="d-hora">Cerrado</span></li>
+        <li class="dia" data-dow="2"><span class="d-nombre">Martes<span class="hoy-tag">Hoy</span></span><span class="d-hora">Cerrado</span></li>
+        <li class="dia" data-dow="3"><span class="d-nombre">Miércoles<span class="hoy-tag">Hoy</span></span><span class="d-hora">Cerrado</span></li>
+        <li class="dia" data-dow="4"><span class="d-nombre">Jueves<span class="hoy-tag">Hoy</span></span><span class="d-hora">Cerrado</span></li>
+        <li class="dia abre" data-dow="5"><span class="d-nombre">Viernes<span class="hoy-tag">Hoy</span></span><span class="d-hora">20:00 a 23:30</span></li>
+        <li class="dia abre" data-dow="6"><span class="d-nombre">Sábado<span class="hoy-tag">Hoy</span></span><span class="d-hora">20:00 a 23:30</span></li>
+        <li class="dia abre" data-dow="0"><span class="d-nombre">Domingo<span class="hoy-tag">Hoy</span></span><span class="d-hora">20:00 a 23:30</span></li>
+        <li class="dia festivos"><span class="d-nombre">Festivos</span><span class="d-hora">20:00 a 23:30</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec ubicacion" id="ubicacion">
+    <span class="gigante" data-parallax="-1" aria-hidden="true">Villaconejos</span>
+    <div class="wrap ub-grid">
+      <div class="ub-info reveal">
+        <h2>Dónde estamos</h2>
+        <address>C. Alamillo, 3<br>28360 Villaconejos, Madrid</address>
+        <p>Recogida en el local. Reparto a domicilio en Villaconejos, en las urbanizaciones de alrededor y en Nuevo Chinchón.</p>
+        <p class="ub-tel"><a href="tel:+34919473399">919 47 33 99</a></p>
+        <div class="lugar-botones">
+          <a class="btn btn-outline" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Della+Grotta+Streetfood+Calle+Alamillo+3+28360+Villaconejos+Madrid"><svg class="ico"><use href="#i-pin"/></svg>Abrir en Google Maps</a>
+          <a class="btn btn-outline" target="_blank" rel="noopener" href="https://maps.apple.com/?q=Della+Grotta+Streetfood&address=Calle+Alamillo+3,+28360+Villaconejos,+Madrid"><svg class="ico"><use href="#i-pin"/></svg>Abrir en Apple Maps</a>
+        </div>
+      </div>
+      <div class="ub-mapa reveal" id="mapa" style="--retraso:60ms">
+        <div class="ub-facade" id="mapaFacade">
+          <div class="pin" aria-hidden="true"></div>
+          <p>El mapa es de Google Maps. Al cargarlo, Google puede guardar sus propias cookies.</p>
+          <button class="btn btn-cortado" type="button" id="btnMapa"><svg class="ico"><use href="#i-pin"/></svg>Ver el mapa</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec faq" id="preguntas">
+    <div class="wrap">
+      <div class="sec-cab reveal">
+        <h2>Preguntas frecuentes</h2>
+      </div>
+      <div class="faq-grid">
+      <div class="faq-lista reveal">
+        <details open>
+          <summary>¿Cómo hago un pedido?<span class="signo" aria-hidden="true"></span></summary>
+          <div class="contenido">Llama al <a href="tel:+34919473399">919 47 33 99</a> en horario de pedidos o escríbenos por <a href="https://ig.me/m/dellagrotta" target="_blank" rel="noopener">Instagram</a>. Puedes recogerlo en el local o pedir reparto.</div>
+        </details>
+        <details>
+          <summary>¿Hacéis reparto a domicilio?<span class="signo" aria-hidden="true"></span></summary>
+          <div class="contenido">Sí, en Villaconejos, en las urbanizaciones de alrededor y en Nuevo Chinchón. Cuando hagas el pedido, pregunta por el tiempo de espera.</div>
+        </details>
+        <details>
+          <summary>¿A qué hora se puede pedir?<span class="signo" aria-hidden="true"></span></summary>
+          <div class="contenido">Se puede pedir de 20:00 a 23:30, los viernes, sábados, domingos y festivos.</div>
+        </details>
+        <details>
+          <summary>¿Qué incluye la hamburguesa?<span class="signo" aria-hidden="true"></span></summary>
+          <div class="contenido">Todas las hamburguesas llevan patatas y bebida. La carne es madurada, de 200&nbsp;g, en pan de patata, y puedes elegirla estilo clásico o smash. La Della Grotta Jr lleva 100&nbsp;g y cuesta 11&nbsp;€.</div>
+        </details>
+        <details>
+          <summary>¿Cómo son las pizzas?<span class="signo" aria-hidden="true"></span></summary>
+          <div class="contenido">Miden 33&nbsp;cm y puedes elegir masa clásica (11&nbsp;€) o napoletana (13&nbsp;€). Pide una especialidad o monta la tuya con hasta 3 ingredientes por el mismo precio. Un ingrediente extra cuesta 1,50&nbsp;€.</div>
+        </details>
+        <details>
+          <summary>¿Qué es Basic by Grotta?<span class="signo" aria-hidden="true"></span></summary>
+          <div class="contenido">La línea de 5&nbsp;€: hamburguesa de carne o de pollo, y bowls de kebab, ternera o pollo crunchy. Por 1&nbsp;€ más puedes añadir un refresco.</div>
+        </details>
+      </div>
+      <aside class="ticket reveal" style="--retraso:80ms">
+        <span class="dado" aria-hidden="true"></span>
+        <h3>¿Alguna duda?</h3>
+        <p>Llámanos en horario de pedidos.</p>
+        <a class="btn btn-negro btn-cortado" href="tel:+34919473399"><svg class="ico"><use href="#i-tel"/></svg>Llamar al 919 47 33 99</a>
+      </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta grano" id="pedir">
+    <span class="brasas" data-n="12" aria-hidden="true"></span>
+    <svg class="anillos" viewBox="0 0 300 300" aria-hidden="true"><use href="#ovalos"/></svg>
+    <div class="wrap cta-in">
+      <div class="reveal">
+        <h2>¿Qué pedimos hoy?</h2>
+        <p>Llama y haz tu pedido, o escríbenos por Instagram. De 20:00 a 23:30, viernes, sábado, domingo y festivos.</p>
+      </div>
+      <div class="acciones reveal" style="--retraso:60ms">
+        <a class="btn btn-negro btn-cortado" href="tel:+34919473399"><svg class="ico"><use href="#i-tel"/></svg>Llamar al 919 47 33 99</a>
+        <a class="btn btn-outline btn-outline-claro" href="https://ig.me/m/dellagrotta" target="_blank" rel="noopener"><svg class="ico"><use href="#i-ig"/></svg>Escribir por Instagram</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="damero" aria-hidden="true" style="--gd:5.5s;--gt:8s;--gx:34%;--gx2:81%;--gw:30%"></div>
+<footer>
+  <div class="wrap">
+    <div class="pie-grid">
+      <div class="pie-marca">
+        <div class="pie-logo"><svg role="img" aria-label="Della Grotta" viewBox="0 0 150 150"><use href="#dg"/></svg></div>
+        <p class="pie-desc">Original Streetfood en Villaconejos, Madrid. Hamburguesas, pizzas y cosas para picar.</p>
+      </div>
+      <div class="pie-col">
+        <p class="pie-tit">La casa</p>
+        <ul>
+          <li><a href="#destacados">Destacados</a></li>
+          <li><a href="#carta">La carta</a></li>
+          <li><a href="#fotos">Fotos</a></li>
+          <li><a href="#horario">Horario</a></li>
+          <li><a href="#ubicacion">Dónde estamos</a></li>
+        </ul>
+      </div>
+      <div class="pie-col">
+        <p class="pie-tit">Contacto</p>
+        <ul>
+          <li><a href="tel:+34919473399">919 47 33 99</a></li>
+          <li>C. Alamillo, 3, Villaconejos</li>
+        </ul>
+        <div class="redes">
+          <a class="btn-social" href="https://www.instagram.com/dellagrotta/" target="_blank" rel="noopener" aria-label="Instagram de Della Grotta (@dellagrotta)"><svg class="ico"><use href="#i-ig"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="pie-abajo">
+      <span>© 2026 Della Grotta Streetfood. Todos los derechos reservados.</span>
+      <div class="pie-legales">
+        <a href="privacy.html">Política de privacidad</a>
+        <a href="terms.html">Términos y condiciones</a>
+      </div>
+      <span>Web diseñada por Diego De Galdo</span>
+    </div>
+    <span class="pie-gigante" aria-hidden="true"><span class="pie-in" data-parallax="1">Della Grotta</span></span>
+  </div>
+</footer>
+
+<div class="barra" id="barra" role="region" aria-label="Pedir por teléfono">
+  <div class="info"><strong>Della Grotta</strong><span id="estadoBarra">20:00 a 23:30</span></div>
+  <a class="btn btn-cortado" href="tel:+34919473399"><svg class="ico"><use href="#i-tel"/></svg>Llamar</a>
+</div>
+
+<dialog class="lightbox" id="lightbox" aria-label="Foto ampliada">
+  <div class="lb-inner">
+    <div class="lb-img"><img id="lbImg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Foto ampliada" width="900" height="900" loading="lazy"></div>
+    <div class="lb-barra">
+      <span class="lb-pie" id="lbPie"></span>
+      <div class="lb-controles">
+        <button class="lb-btn" id="lbPrev" type="button" aria-label="Foto anterior">‹</button>
+        <button class="lb-btn" id="lbNext" type="button" aria-label="Foto siguiente">›</button>
+        <button class="lb-btn" id="lbClose" type="button" aria-label="Cerrar">✕</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<div class="cookie" id="cookie" role="region" aria-label="Aviso de cookies">
+  <p>Guardamos una cookie propia para recordar tu elección. Si aceptas, también cargamos el mapa de Google. Más en la <a href="privacy.html">política de privacidad</a>.</p>
+  <div class="cookie-botones">
+    <button class="rechazar" id="btnRechazar" type="button">Rechazar</button>
+    <button class="aceptar" id="btnAceptar" type="button">Aceptar</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var $ = function(s,c){ return (c||document).querySelector(s); };
+  var $$ = function(s,c){ return Array.prototype.slice.call((c||document).querySelectorAll(s)); };
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Navegación: línea al bajar, enlace activo y menú móvil */
+  var nav = $('#nav');
+  function alScroll(){ nav.classList.toggle('encogida', window.scrollY > 40); }
+  window.addEventListener('scroll', alScroll, {passive:true}); alScroll();
+
+  var enlaces = $$('#enlaces a');
+  var secciones = ['destacados','carta','fotos','horario','ubicacion'].map(function(id){ return document.getElementById(id); });
+  if ('IntersectionObserver' in window){
+    var obsNav = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){
+          enlaces.forEach(function(a){ a.classList.toggle('activo', a.getAttribute('href') === '#' + e.target.id); });
+        }
+      });
+    }, {rootMargin:'-40% 0px -55% 0px'});
+    secciones.forEach(function(s){ if (s) obsNav.observe(s); });
+  }
+
+  var ham = $('#hamburguesa'), ov = $('#overlay');
+  function alternar(abrir){
+    ham.classList.toggle('activo', abrir); ov.classList.toggle('activo', abrir);
+    ham.setAttribute('aria-expanded', abrir); ham.setAttribute('aria-label', abrir ? 'Cerrar menú' : 'Abrir menú');
+    document.body.classList.toggle('menu-abierto', abrir);
+  }
+  ham.addEventListener('click', function(){ alternar(!ov.classList.contains('activo')); });
+  $$('[data-cerrar]', ov).forEach(function(a){ a.addEventListener('click', function(){ alternar(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && ov.classList.contains('activo')) alternar(false); });
+
+  /* Estado del día. Se abre viernes, sábado y domingo, de 20:00 a 23:30, y festivos (no se pueden calcular aquí:
+     en un festivo entre semana el cartel sigue diciendo cuándo se abre de forma habitual). */
+  var APERTURA = 20*60, CIERRE = 23*60 + 30, DIAS_ABRE = [5,6,0];
+  var NOMBRE_DIA = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+  function ahoraMadrid(){
+    try{
+      var o = {};
+      new Intl.DateTimeFormat('en-US',{timeZone:'Europe/Madrid',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(p){ o[p.type] = p.value; });
+      return {d:{Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday], min:(+o.hour)*60 + (+o.minute)};
+    }catch(e){ var n = new Date(); return {d:n.getDay(), min:n.getHours()*60 + n.getMinutes()}; }
+  }
+  function duracion(m){
+    var d = Math.floor(m/1440), h = Math.floor((m%1440)/60), mi = m%60;
+    if (d > 0) return d + ' d' + (h ? ' ' + h + ' h' : '');
+    if (h > 0) return h + ' h' + (mi ? ' ' + mi + ' min' : '');
+    return mi + ' min';
+  }
+  /* Próxima apertura: días por delante y minutos que faltan */
+  function proxApertura(d, min){
+    for (var k = 0; k < 8; k++){
+      var dia = (d + k) % 7;
+      if (DIAS_ABRE.indexOf(dia) < 0) continue;
+      var falta = k*1440 + APERTURA - min;
+      if (falta > 0) return {k:k, dia:dia, falta:falta};
+    }
+    return null;
+  }
+  function pintarEstado(){
+    var t = ahoraMadrid(), d = t.d, abre = DIAS_ABRE.indexOf(d) >= 0, abierto = abre && t.min >= APERTURA && t.min < CIERRE;
+    var palabra, detalle, cuenta, barra, nota = false;
+    if (abierto){
+      palabra = 'Abierto'; detalle = 'Cerramos a las 23:30'; cuenta = 'Quedan ' + duracion(CIERRE - t.min); barra = 'Abierto hasta las 23:30';
+    } else {
+      var pr = proxApertura(d, t.min);
+      palabra = 'Cerrado';
+      detalle = pr.k === 0 ? 'Hoy abrimos a las 20:00' : pr.k === 1 ? 'Mañana abrimos a las 20:00' : 'Abrimos el ' + NOMBRE_DIA[pr.dia] + ' a las 20:00';
+      cuenta = 'Faltan ' + duracion(pr.falta);
+      barra = pr.k === 0 ? 'Hoy abrimos a las 20:00' : pr.k === 1 ? 'Mañana, 20:00 a 23:30' : 'Volvemos el ' + NOMBRE_DIA[pr.dia] + ', 20:00';
+      nota = !abre;
+    }
+    var hero = document.getElementById('estadoHero'); if (hero) hero.classList.toggle('cerrado', !abierto);
+    var ht = document.getElementById('estadoTexto'); if (ht) ht.textContent = abierto ? 'Abierto ahora, hasta las 23:30' : detalle;
+    var wrap = document.getElementById('puertaWrap'); if (wrap) wrap.setAttribute('data-estado', abierto ? 'abierto' : 'cerrado');
+    var hor = document.getElementById('horario'); if (hor) hor.setAttribute('data-estado', abierto ? 'abierto' : 'cerrado');
+    var set = function(id, v){ var el = document.getElementById(id); if (el && el.textContent !== v) el.textContent = v; };
+    set('puertaEst', palabra); set('puertaDet', detalle); set('puertaCuenta', cuenta);
+    var n = document.getElementById('puertaNota'); if (n) n.hidden = !nota;
+    var b = $('#estadoBarra'); if (b) b.textContent = barra;
+    $$('#dias .dia[data-dow]').forEach(function(li){ li.classList.toggle('hoy', +li.getAttribute('data-dow') === d); });
+  }
+  pintarEstado(); setInterval(pintarEstado, 30000);
+
+  /* Pestañas de la carta (el indicador se mueve solo con transform) */
+  var tablist = $('#tablist'), tabs = $$('.tab', tablist), indicador = $('#indicador');
+  function moverIndicador(tab){
+    indicador.style.transform = 'translateX(' + tab.offsetLeft + 'px) scaleX(' + (tab.offsetWidth / 100) + ')';
+  }
+  function activar(tab, enfocar){
+    tabs.forEach(function(t){
+      var on = t === tab;
+      t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).toggleAttribute('data-activo', on);
+    });
+    moverIndicador(tab);
+    if (enfocar) tab.focus();
+    if (tab.scrollIntoView && tablist.scrollWidth > tablist.clientWidth) tablist.scrollTo({left: tab.offsetLeft - 12, behavior: reduce ? 'auto' : 'smooth'});
+  }
+  tabs.forEach(function(tab, i){
+    tab.addEventListener('click', function(){ activar(tab, false); });
+    tab.addEventListener('keydown', function(e){
+      var dest = null;
+      if (e.key === 'ArrowRight') dest = tabs[(i+1) % tabs.length];
+      if (e.key === 'ArrowLeft') dest = tabs[(i-1+tabs.length) % tabs.length];
+      if (e.key === 'Home') dest = tabs[0];
+      if (e.key === 'End') dest = tabs[tabs.length-1];
+      if (dest){ e.preventDefault(); activar(dest, true); }
+    });
+  });
+  function inicioIndicador(){ moverIndicador($('.tab[aria-selected="true"]', tablist)); }
+  inicioIndicador();
+  window.addEventListener('load', inicioIndicador);
+  window.addEventListener('resize', inicioIndicador);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(inicioIndicador);
+  /* Enlaces que abren una pestaña concreta */
+  $$('[data-tab]').forEach(function(a){ a.addEventListener('click', function(){ var t = document.getElementById(a.getAttribute('data-tab')); if (t) activar(t, false); }); });
+
+  /* Tarjetas de la carta: quitar el esqueleto cuando carga la foto (o falla) */
+  $$('.tarjeta .foto').forEach(function(f){
+    var im = $('img', f), ok = function(){ f.classList.add('cargada'); };
+    if (im.complete && im.naturalWidth) ok(); else { im.addEventListener('load', ok); im.addEventListener('error', ok); }
+  });
+
+  /* Fotos ampliables: lightbox nativo con grupos (data-galeria) */
+  var dlg = $('#lightbox'), lbImg = $('#lbImg'), lbPie = $('#lbPie'), grupo = [], idx = 0, origen = null;
+  function mostrar(i){
+    idx = (i + grupo.length) % grupo.length;
+    var el = grupo[idx], im = $('img', el);
+    lbImg.src = el.getAttribute('data-grande') || im.getAttribute('src');
+    lbImg.alt = im.getAttribute('alt');
+    lbPie.textContent = el.getAttribute('data-pie') + (grupo.length > 1 ? ' (' + (idx+1) + ' de ' + grupo.length + ')' : '');
+  }
+  function abrir(el){
+    origen = el;
+    grupo = $$('[data-galeria="' + el.getAttribute('data-galeria') + '"]');
+    mostrar(grupo.indexOf(el));
+    dlg.showModal();
+    requestAnimationFrame(function(){ dlg.classList.add('is-open'); });
+  }
+  function cerrar(){
+    dlg.classList.remove('is-open');
+    var fin = function(){ dlg.close(); dlg.removeEventListener('transitionend', fin); if (origen) origen.focus(); };
+    if (reduce) fin(); else dlg.addEventListener('transitionend', fin);
+  }
+  $$('[data-galeria]').forEach(function(el){ el.addEventListener('click', function(){ abrir(el); }); });
+  $('#lbPrev').addEventListener('click', function(){ mostrar(idx-1); });
+  $('#lbNext').addEventListener('click', function(){ mostrar(idx+1); });
+  $('#lbClose').addEventListener('click', cerrar);
+  dlg.addEventListener('click', function(e){ if (e.target === dlg) cerrar(); });
+  dlg.addEventListener('keydown', function(e){ if (e.key === 'ArrowRight') mostrar(idx+1); if (e.key === 'ArrowLeft') mostrar(idx-1); });
+  dlg.addEventListener('cancel', function(){ dlg.classList.remove('is-open'); });
+
+  /* Preguntas frecuentes: <details> nativo con altura animada (interrumpible) */
+  function Acordeon(el){
+    var self = this; this.el = el; this.resumen = $('summary', el); this.contenido = $('.contenido', el);
+    this.anim = null; this.cerrando = false; this.abriendo = false;
+    this.resumen.addEventListener('click', function(e){ e.preventDefault(); self.el.style.overflow = 'hidden'; if (self.cerrando || !self.el.open) self.abrir(); else self.encoger(); });
+  }
+  Acordeon.prototype.animar = function(desde, hasta, abierto){
+    var self = this;
+    if (this.anim) this.anim.cancel();
+    if (reduce || !this.el.animate){ this.terminar(abierto); return; }
+    this.anim = this.el.animate({height:[desde, hasta]}, {duration:250, easing:'cubic-bezier(0.23,1,0.32,1)'});
+    this.anim.onfinish = function(){ self.terminar(abierto); };
+    this.anim.oncancel = function(){ self.cerrando = false; self.abriendo = false; };
+  };
+  Acordeon.prototype.encoger = function(){ this.cerrando = true; this.animar(this.el.offsetHeight + 'px', this.resumen.offsetHeight + 'px', false); };
+  Acordeon.prototype.abrir = function(){
+    var self = this;
+    this.el.style.height = this.el.offsetHeight + 'px'; this.el.open = true;
+    requestAnimationFrame(function(){ self.abriendo = true; self.animar(self.el.offsetHeight + 'px', (self.resumen.offsetHeight + self.contenido.offsetHeight) + 'px', true); });
+  };
+  Acordeon.prototype.terminar = function(abierto){ this.el.open = abierto; this.anim = null; this.cerrando = false; this.abriendo = false; this.el.style.height = this.el.style.overflow = ''; };
+  $$('.faq-lista details').forEach(function(d){ new Acordeon(d); });
+
+  /* Entradas al hacer scroll */
+  var rev = $$('.reveal');
+  if ('IntersectionObserver' in window && !reduce){
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
+    }, {threshold:0.12});
+    rev.forEach(function(r){ obs.observe(r); });
+  } else { rev.forEach(function(r){ r.classList.add('in'); }); }
+
+  /* Movimiento de la marca: brasas, pausa fuera de pantalla, inclinación, parallax, cifras y titulares */
+  var conIO = 'IntersectionObserver' in window;
+  if (!reduce){
+    $$('.brasas').forEach(function(c){
+      var n = +c.getAttribute('data-n') || 12, semilla = n * 37 + 11;
+      var r = function(){ semilla = (semilla * 9301 + 49297) % 233280; return semilla / 233280; };
+      for (var i = 0; i < n; i++){
+        var e = document.createElement('i');
+        e.style.setProperty('--x', (r() * 98).toFixed(1) + '%');
+        e.style.setProperty('--s', (4 + Math.floor(r() * 5)) + 'px');
+        e.style.setProperty('--t', (7 + r() * 7).toFixed(1) + 's');
+        e.style.setProperty('--d', (-r() * 12).toFixed(1) + 's');
+        e.style.setProperty('--dx', Math.round((r() - .5) * 90) + 'px');
+        c.appendChild(e);
+      }
+    });
+    var alturaBrasas = function(){ $$('.brasas').forEach(function(c){ c.style.setProperty('--h', c.parentNode.offsetHeight + 'px'); }); };
+    alturaBrasas(); window.addEventListener('resize', alturaBrasas);
+
+    if (conIO){
+      var obsMov = new IntersectionObserver(function(en){ en.forEach(function(e){ e.target.classList.toggle('en-pantalla', e.isIntersecting); }); });
+      $$('section, .damero, footer').forEach(function(el){ el.classList.add('mov'); obsMov.observe(el); });
+
+      $$('main h2').forEach(function(h){ h.classList.add('rev-t'); });
+      /* Se observa el contenedor: el propio titular está recortado y algunos navegadores lo cuentan como no visible */
+      var obsTit = new IntersectionObserver(function(en){ en.forEach(function(e){ if (e.isIntersecting){ $$('.rev-t', e.target).forEach(function(h){ h.classList.add('rev-on'); }); obsTit.unobserve(e.target); } }); }, {rootMargin:'0px 0px -14% 0px'});
+      $$('.rev-t').forEach(function(h){ obsTit.observe(h.parentNode); });
+
+      var contar = function(el){
+        var fin = parseFloat(el.getAttribute('data-fin')), dec = +el.getAttribute('data-dec') || 0;
+        var fmt = function(v){ return v.toFixed(dec).replace('.', ','); };
+        el.style.minWidth = el.offsetWidth + 'px'; el.textContent = fmt(0);
+        var obsN = new IntersectionObserver(function(en){
+          if (!en[0].isIntersecting) return; obsN.disconnect();
+          var t0 = null, dur = 1100;
+          (function paso(t){
+            if (t0 === null) t0 = t;
+            var k = Math.min(1, (t - t0) / dur), v = fin * (1 - Math.pow(1 - k, 3));
+            el.textContent = fmt(k < 1 ? v : fin);
+            if (k < 1) requestAnimationFrame(paso);
+          })(performance.now());
+        }, {threshold:.6});
+        obsN.observe(el);
+      };
+      $$('.cuenta').forEach(contar);
+    }
+
+    /* Inclinación 3D de las tarjetas, solo con ratón */
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches){
+      $$('.tarjeta').forEach(function(c){
+        var raf = 0;
+        c.addEventListener('pointermove', function(e){
+          if (e.pointerType !== 'mouse') return;
+          var b = c.getBoundingClientRect(), x = (e.clientX - b.left) / b.width - .5, y = (e.clientY - b.top) / b.height - .5;
+          if (raf) cancelAnimationFrame(raf);
+          raf = requestAnimationFrame(function(){ raf = 0; c.classList.add('inclina'); c.style.setProperty('--rx', (-y * 7).toFixed(2) + 'deg'); c.style.setProperty('--ry', (x * 9).toFixed(2) + 'deg'); });
+        });
+        c.addEventListener('pointerleave', function(){ if (raf){ cancelAnimationFrame(raf); raf = 0; } c.style.setProperty('--rx', '0deg'); c.style.setProperty('--ry', '0deg'); });
+      });
+    }
+
+    /* Parallax horizontal de las palabras gigantes */
+    var pars = $$('[data-parallax]'), parPend = false;
+    var parallax = function(){
+      parPend = false;
+      var vh = window.innerHeight;
+      pars.forEach(function(el){
+        var b = el.parentNode.getBoundingClientRect();
+        if (b.bottom < -200 || b.top > vh + 200) return;
+        var q = Math.max(-1.5, Math.min(1.5, (b.top + b.height / 2 - vh / 2) / vh));
+        el.style.translate = (q * (+el.getAttribute('data-parallax')) * -90).toFixed(1) + 'px 0';
+      });
+    };
+    window.addEventListener('scroll', function(){ if (!parPend){ parPend = true; requestAnimationFrame(parallax); } }, {passive:true});
+    window.addEventListener('resize', parallax); parallax();
+  }
+
+  /* Barra fija móvil: aparece pasado el hero */
+  var barra = $('#barra'), hero = $('#inicio');
+  function alBarra(){ barra.classList.toggle('visible', window.scrollY > hero.offsetHeight * 0.7); }
+  document.addEventListener('scroll', function(){ requestAnimationFrame(alBarra); }, {passive:true}); alBarra();
+
+  /* Cookies (document.cookie, sin cargar nada de terceros) */
+  function getCookie(n){ var m = document.cookie.match(new RegExp('(^| )' + n + '=([^;]+)')); return m ? m[2] : null; }
+  function setCookie(n, v, dias){ var f = new Date(); f.setTime(f.getTime() + dias*864e5); document.cookie = n + '=' + v + '; expires=' + f.toUTCString() + '; path=/; SameSite=Lax'; }
+  var cookie = $('#cookie');
+
+  /* Mapa de Google: solo se carga con consentimiento (cookie aceptada) o al pulsar "Ver el mapa" */
+  var MAPA_URL = 'https://maps.google.com/maps?q=Della+Grotta+Streetfood+Calle+Alamillo+3+28360+Villaconejos+Madrid&hl=es&z=17&output=embed';
+  function cargarMapa(){
+    var caja = $('#mapa'), fachada = $('#mapaFacade');
+    if (!caja || !fachada) return;
+    var f = document.createElement('iframe');
+    f.src = MAPA_URL; f.title = 'Mapa con la ubicación de Della Grotta Streetfood en Villaconejos';
+    f.loading = 'lazy'; f.referrerPolicy = 'no-referrer-when-downgrade'; f.setAttribute('allowfullscreen','');
+    caja.appendChild(f); fachada.remove();
+  }
+  $('#btnMapa').addEventListener('click', cargarMapa);
+  if (getCookie('consentimiento_cookies') === 'aceptado'){
+    if ('IntersectionObserver' in window){
+      var obsMapa = new IntersectionObserver(function(en){ if (en[0].isIntersecting){ obsMapa.disconnect(); cargarMapa(); } }, {rootMargin:'300px 0px'});
+      obsMapa.observe($('#mapa'));
+    } else cargarMapa();
+  }
+
+  if (!getCookie('consentimiento_cookies')) setTimeout(function(){ cookie.classList.add('visible'); }, 600);
+  $('#btnAceptar').addEventListener('click', function(){ setCookie('consentimiento_cookies','aceptado',365); cookie.classList.remove('visible'); cargarMapa(); });
+  $('#btnRechazar').addEventListener('click', function(){ setCookie('consentimiento_cookies','rechazado',365); cookie.classList.remove('visible'); });
+})();
+</script>
+</body>
+</html>

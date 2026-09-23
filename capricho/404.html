@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Página no encontrada | Capricho</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0a060b">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sacramento&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  :root{ --negro:#0a060b; --panel:#140c16; --linea:rgba(255,190,232,.16); --rosa:#ff3fa5; --rosa-claro:#ff6ab8; --tinta:#12060e; --texto:#f7eef4; --muted:#c9b8c4; --tenue:#b3a1ae;
+    --ease-out:cubic-bezier(0.23,1,0.32,1); --cut:14px;
+    --f-display:'Syne','Arial Black','Helvetica Neue',Arial,sans-serif; --f-script:'Sacramento','Brush Script MT','Segoe Script',cursive; --f-body:'DM Sans','Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif; }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--negro);color:var(--texto);font-family:var(--f-body);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
+  :focus-visible{outline:3px solid var(--rosa-claro);outline-offset:3px}
+  img{display:block}
+  body{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;overflow:hidden;position:relative;isolation:isolate;background:radial-gradient(ellipse 60% 50% at 50% 45%,rgba(176,0,208,.22),transparent 70%),var(--negro)}
+  .logo{width:96px;height:96px;border-radius:50%;margin-bottom:8px}
+  .codigo{font-family:var(--f-script);font-weight:400;font-size:clamp(7rem,26vw,13rem);line-height:.95;margin:0;color:#ffe4f4;text-shadow:0 0 5px rgba(255,63,165,.95),0 0 18px rgba(255,63,165,.7),0 0 44px rgba(214,36,138,.55)}
+  h1{font-family:var(--f-display);font-weight:800;text-transform:uppercase;margin:8px 0 10px;font-size:clamp(1.3rem,4vw,1.8rem);line-height:1.2;text-wrap:balance}
+  p{color:var(--muted);margin:0 0 30px;max-width:380px}
+  .btn{background:var(--rosa);color:var(--tinta);text-decoration:none;font-weight:700;font-size:16px;line-height:1.25;padding:15px 28px;min-height:48px;display:inline-flex;align-items:center;
+    clip-path:polygon(var(--cut) 0,100% 0,100% calc(100% - var(--cut)),calc(100% - var(--cut)) 100%,0 100%,0 var(--cut));transition:filter .15s var(--ease-out),transform .1s var(--ease-out)}
+  .btn:focus-visible{clip-path:none}
+  .btn:active{transform:scale(0.97)}
+  @media (hover:hover) and (pointer:fine){ .btn:hover{filter:brightness(1.14)} }
+</style>
+</head>
+<body>
+<img class="logo" src="assets/img/logo.webp" width="348" height="348" alt="Logo de Capricho">
+<p class="codigo">404</p>
+<h1>Esta página no existe</h1>
+<p>Puede que el enlace esté roto o que la página se haya movido.</p>
+<a class="btn" href="/">Volver al inicio</a>
+</body>
+</html>

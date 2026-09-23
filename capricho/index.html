@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capricho | Copas, cachimbas y billar en Pinto</title>
+<meta name="description" content="Capricho, pub con cachimbas, billar y fútbol en pantalla en la calle Real 19 de Pinto. Carta con precios, cumpleaños y eventos privados. Abierto de 21:00 a 3:00.">
+<link rel="canonical" href="https://capricho-pinto.netlify.app/">
+<meta name="theme-color" content="#0a060b">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Capricho | Copas, cachimbas y billar en Pinto">
+<meta property="og:description" content="Copas, cachimbas, billar y fútbol en pantalla en la calle Real 19 de Pinto. Cumpleaños y eventos privados. De 21:00 a 3:00.">
+<meta property="og:image" content="https://capricho-pinto.netlify.app/og-image.jpg">
+<meta property="og:url" content="https://capricho-pinto.netlify.app/">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Capricho | Copas, cachimbas y billar en Pinto">
+<meta name="twitter:description" content="Copas, cachimbas, billar y fútbol en pantalla en la calle Real 19 de Pinto. Cumpleaños y eventos privados. De 21:00 a 3:00.">
+<meta name="twitter:image" content="https://capricho-pinto.netlify.app/og-image.jpg">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sacramento&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BarOrPub",
+  "name": "Capricho",
+  "alternateName": "Capricho Club",
+  "url": "https://capricho-pinto.netlify.app/",
+  "image": "https://capricho-pinto.netlify.app/og-image.jpg",
+  "telephone": "+34611461335",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle Real 19",
+    "postalCode": "28320",
+    "addressLocality": "Pinto",
+    "addressRegion": "Madrid",
+    "addressCountry": "ES"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Sunday"], "opens": "21:00", "closes": "03:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "21:00", "closes": "03:30" }
+  ],
+  "sameAs": ["https://www.instagram.com/caprichopinto_/"]
+}
+</script>
+
+<script>document.documentElement.classList.add('js');</script>
+
+<style>
+  :root{
+    --negro:#0a060b; --panel:#140c16; --panel-2:#1d1220; --linea:rgba(255,190,232,.16); --linea-fuerte:rgba(255,190,232,.32);
+    --rosa:#ff3fa5; --rosa-osc:#d6248a; --rosa-claro:#ff6ab8; --violeta:#b000d0; --tinta:#12060e;
+    --texto:#f7eef4; --muted:#c9b8c4; --tenue:#b3a1ae;
+    --ease-out:cubic-bezier(0.23,1,0.32,1);
+    --ease-in-out:cubic-bezier(0.77,0,0.175,1);
+    --ease-drawer:cubic-bezier(0.32,0.72,0,1);
+    --cut:14px; --cut-sm:8px;
+    --z-fondo:-1; --z-nav:50; --z-barra:900; --z-cookie:950; --z-modal:1000;
+    --f-display:'Syne','Arial Black','Helvetica Neue',Arial,sans-serif;
+    --f-script:'Sacramento','Brush Script MT','Segoe Script',cursive;
+    --f-body:'DM Sans','Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif;
+    --nav-h:72px;
+    --neon:0 0 5px rgba(255,63,165,.95),0 0 18px rgba(255,63,165,.7),0 0 44px rgba(214,36,138,.55);
+    --pad-sec:clamp(64px,8vw,104px);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 8px);-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--negro);color:var(--texto);font-family:var(--f-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body.bloqueado{overflow:hidden}
+  img{max-width:100%;height:auto;display:block}
+  a{color:inherit}
+  h1,h2,h3,h4{margin:0;font-family:var(--f-display);font-weight:800;line-height:1.16;text-wrap:balance}
+  h2{font-size:clamp(1.85rem,4.4vw,3.2rem);text-transform:uppercase}
+  p{margin:0;text-wrap:pretty}
+  ul,ol{margin:0;padding:0;list-style:none}
+  button{font:inherit;color:inherit}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .saltar{position:absolute;left:16px;top:-64px;z-index:var(--z-modal);background:var(--rosa);color:var(--tinta);padding:10px 16px;font-weight:700;text-decoration:none}
+  .saltar:focus{top:12px}
+  .ico{width:20px;height:20px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  :focus-visible{outline:3px solid var(--rosa-claro);outline-offset:3px}
+  section{position:relative}
+  .sec{padding-top:var(--pad-sec);padding-bottom:var(--pad-sec);overflow:hidden;isolation:isolate}
+  .neon{color:#ffe4f4;text-shadow:var(--neon)}
+  .script{font-family:var(--f-script);font-weight:400;line-height:1}
+  .subrayado{color:var(--rosa)}
+
+  /* Botones: base sin borde; borde real y opaco solo en .btn-outline */
+  .btn{
+    border:none;font:700 16px/1.25 var(--f-body);letter-spacing:.01em;text-align:center;padding:15px 26px;min-height:48px;color:var(--tinta);
+    text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;position:relative;
+    transition:filter .15s var(--ease-out),transform .1s var(--ease-out),background-color .15s var(--ease-out);
+  }
+  .btn:active{transform:scale(0.97)}
+  .btn-cortado{
+    background:var(--rosa);
+    clip-path:polygon(var(--cut) 0,100% 0,100% calc(100% - var(--cut)),calc(100% - var(--cut)) 100%,0 100%,0 var(--cut));
+  }
+  .btn-cortado:focus-visible{clip-path:none}
+  .btn-outline{background:transparent;border:2px solid var(--rosa);color:var(--texto);border-radius:10px;padding:14px 24px}
+  .btn-sm{padding:12px 20px;min-height:44px;font-size:15px}
+  @media (hover:hover) and (pointer:fine){
+    .btn-cortado:hover{filter:brightness(1.14)}
+    .btn-outline:hover{background:rgba(255,63,165,.16)}
+  }
+  .btn .ico{width:18px;height:18px}
+  .fila-btn{display:flex;flex-wrap:wrap;gap:12px}
+
+  /* Resplandor que sigue al ratón: una capa, un listener */
+  .con-glow{position:relative}
+  .glow-capa{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .2s ease;background:radial-gradient(150px circle at var(--mx,50%) var(--my,50%),rgba(255,63,165,.32),transparent 65%);mix-blend-mode:screen}
+  .con-glow.glow-activo>.glow-capa{opacity:1}
+
+  /* ===== Navegación ===== */
+  .nav{position:sticky;top:0;z-index:var(--z-nav);height:var(--nav-h);background:var(--negro);border-bottom:1px solid transparent;transition:border-color .2s var(--ease-out)}
+  .nav.encogida{border-bottom-color:var(--linea)}
+  .nav-in{height:100%;display:flex;align-items:center;gap:20px}
+  .nav-logo{display:block;flex-shrink:0;border-radius:50%}
+  .nav-logo img{width:52px;height:52px;border-radius:50%}
+  .nav-links{display:none;margin-left:auto;gap:28px}
+  .nav-links a{position:relative;color:var(--muted);text-decoration:none;font-weight:500;font-size:15px;padding:6px 0;transition:color .15s ease}
+  .nav-links a::before{content:'◆';position:absolute;left:-14px;top:9px;font-size:8px;color:var(--rosa);opacity:0;transition:opacity .15s ease}
+  .nav-links a::after{content:'';position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--rosa);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease-out)}
+  .nav-links a.activo{color:var(--texto)}
+  .nav-links a.activo::before{opacity:1}
+  .nav-links a.activo::after{transform:scaleX(1)}
+  @media (hover:hover) and (pointer:fine){
+    .nav-links a:hover{color:var(--texto)}
+    .nav-links a:hover::after{transform:scaleX(1)}
+  }
+  .nav-der{margin-left:auto;display:flex;align-items:center;gap:12px}
+  .nav-links + .nav-der{margin-left:0}
+  .btn-social{width:44px;height:44px;border-radius:50%;border:1px solid var(--linea-fuerte);display:flex;align-items:center;justify-content:center;color:var(--texto);text-decoration:none;transition:background-color .2s ease,color .2s ease,border-color .2s ease}
+  @media (hover:hover) and (pointer:fine){
+    .btn-social:hover{background:var(--rosa);border-color:var(--rosa);color:var(--tinta)}
+  }
+  .nav-llamar{display:none}
+  .hamb{width:44px;height:44px;border-radius:10px;border:1px solid var(--linea-fuerte);background:var(--panel);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;position:relative;z-index:calc(var(--z-modal) + 1)}
+  .hamb span{width:20px;height:2px;background:var(--texto);border-radius:2px;transition:transform .22s var(--ease-drawer),opacity .22s var(--ease-drawer)}
+  .hamb.activo span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .hamb.activo span:nth-child(2){opacity:0}
+  .hamb.activo span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .overlay{position:fixed;inset:0;background:var(--negro);z-index:var(--z-modal);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;opacity:0;visibility:hidden;transform:translateY(-12px);transition:opacity .28s var(--ease-drawer),transform .28s var(--ease-drawer),visibility 0s linear .28s}
+  .overlay.activo{opacity:1;visibility:visible;transform:translateY(0);transition-delay:0s}
+  body.bloqueado .nav{z-index:calc(var(--z-modal) + 1)}   /* con el menú abierto, la barra (y el botón de cerrar) queda por encima del overlay */
+  .overlay a.ov-link{color:var(--texto);text-decoration:none;font-family:var(--f-display);font-weight:800;text-transform:uppercase;font-size:clamp(1.5rem,7vw,2.1rem);line-height:1.2}
+  .overlay .ov-flor{position:absolute;right:-70px;bottom:-60px;width:300px;color:var(--rosa);opacity:.4;pointer-events:none}
+  @media (hover:hover) and (pointer:fine){ .overlay a.ov-link:hover{color:var(--rosa)} }
+  @media (min-width:920px){
+    .nav-links{display:flex}
+    .hamb,.overlay{display:none}
+    .nav-llamar{display:inline-flex}
+  }
+
+  /* ===== Estado abierto/cerrado (píldora) ===== */
+  .estado{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:15px;line-height:1.3;padding:9px 16px;border:1px solid var(--linea-fuerte);border-radius:99px;background:var(--panel)}
+  .estado .punto{position:relative;width:9px;height:9px;border-radius:50%;background:var(--rosa);flex-shrink:0}
+  .estado .punto::after{content:'';position:absolute;inset:0;border-radius:50%;background:var(--rosa);opacity:0;animation:late 2s var(--ease-out) infinite}
+  .estado.cerrado .punto,.estado.cerrado .punto::after{background:var(--tenue)}
+  .estado.cerrado .punto::after{animation:none}
+  @keyframes late{0%{scale:1;opacity:.65}100%{scale:3.4;opacity:0}}
+
+  /* ===== Portada ===== */
+  .hero{padding-top:clamp(36px,6vw,72px);padding-bottom:clamp(64px,9vw,112px);overflow:hidden;isolation:isolate;background:radial-gradient(ellipse 70% 60% at 78% 42%,rgba(176,0,208,.2),transparent 70%),var(--negro)}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,5vw,72px);align-items:center;position:relative}
+  .hero-txt{display:flex;flex-direction:column;align-items:flex-start;gap:20px;position:relative;z-index:2}
+  .hero h1{display:flex;flex-direction:column;gap:2px}
+  .h1-script{font-family:var(--f-script);font-weight:400;font-size:clamp(5.2rem,17vw,11rem);line-height:.92;padding:0 .1em .16em 0;animation:parpadeo 9s steps(1,end) 1.5s infinite}
+  .h1-resto{font-size:clamp(1.15rem,2.9vw,1.9rem);text-transform:uppercase;line-height:1.2;max-width:22ch}
+  .hero-lead{max-width:34em;color:var(--muted);font-size:clamp(1.02rem,1.6vw,1.15rem)}
+  @keyframes parpadeo{0%,88%,100%{opacity:1}89%{opacity:.4}90%{opacity:1}92%{opacity:.55}93%{opacity:1}}
+  .hero-visual{position:relative;justify-self:center;width:min(100%,470px);aspect-ratio:1;z-index:1}
+  .hero-foto{position:absolute;inset:7%;border-radius:50%;overflow:hidden;background:var(--panel)}
+  .hero-foto img{width:100%;height:100%;object-fit:cover;object-position:42% 50%}
+  .anillos{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;fill:none;stroke:var(--rosa);stroke-width:2.5px;rotate:var(--r,0deg);animation:respira var(--t,11s) var(--ease-in-out) infinite alternate;filter:drop-shadow(0 0 5px rgba(255,63,165,.7))}
+  @keyframes respira{from{rotate:calc(var(--r,0deg) - 3deg);scale:.98}to{rotate:calc(var(--r,0deg) + 3deg);scale:1.04}}
+  .hero-logo{position:absolute;left:-4%;bottom:-3%;width:31%;aspect-ratio:1;border-radius:50%;z-index:2;animation:flota 6s var(--ease-in-out) infinite alternate}
+  @keyframes flota{from{translate:0 0}to{translate:0 -7px}}
+
+  .deco{position:absolute;inset:0;pointer-events:none;z-index:-1;overflow:hidden}
+  .halo{position:absolute;border-radius:50%;pointer-events:none;animation:latido-luz 6s ease-in-out infinite}
+  .halo.a{width:460px;height:460px;right:-6%;top:6%;background:radial-gradient(circle,rgba(255,63,165,.3),transparent 68%)}
+  .halo.b{width:380px;height:380px;left:-8%;bottom:-6%;background:radial-gradient(circle,rgba(176,0,208,.3),transparent 68%);animation-delay:-3.2s}
+  @keyframes latido-luz{0%,100%{opacity:.55;transform:scale(1)}50%{opacity:1;transform:scale(1.1)}}
+  .chispa{position:absolute;width:12px;height:12px;color:var(--rosa-claro);animation:titila 2.6s ease-in-out infinite;fill:currentColor}
+  @keyframes titila{0%,100%{opacity:.2;transform:scale(.7)}50%{opacity:1;transform:scale(1.15)}}
+  .flor{position:absolute;color:var(--rosa);pointer-events:none;opacity:.55;filter:drop-shadow(0 0 7px rgba(255,63,165,.7));animation:gira-lento 160s linear infinite}
+  .flor svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round}
+  @keyframes gira-lento{to{transform:rotate(360deg)}}
+  .hero .flor.f1{width:340px;height:340px;right:-110px;bottom:-120px}
+  .hero .flor.f2{width:170px;height:170px;left:-60px;top:30px;opacity:.4;animation-direction:reverse}
+
+  /* Pausa de todo lo que no se ve */
+  .js .mov:not(.en-pantalla),.js .mov:not(.en-pantalla) *,.js .mov:not(.en-pantalla) *::before,.js .mov:not(.en-pantalla) *::after{animation-play-state:paused !important}
+
+  /* ===== Franja de datos ===== */
+  .datos{background:var(--panel);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+  .datos-lista{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+  .dato{padding:26px 22px;display:flex;flex-direction:column;gap:4px;border-left:1px solid var(--linea);text-decoration:none;color:inherit}
+  .dato:first-child{border-left:0;padding-left:0}
+  .dato b{font-family:var(--f-display);font-weight:800;font-size:clamp(1.15rem,2vw,1.45rem);line-height:1.2}
+  .dato span.cap{color:var(--muted);font-size:15px;line-height:1.4}
+  .valoracion{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .estrellas{position:relative;display:inline-block;width:86px;height:16px;flex-shrink:0}
+  .estrellas svg{position:absolute;left:0;top:0;height:16px;width:86px;fill:currentColor;stroke:none}
+  .estrellas .vacias{color:rgba(255,190,232,.26)}
+  .estrellas .llenas{color:var(--rosa);width:86px;clip-path:inset(0 4% 0 0)}
+  @media (hover:hover) and (pointer:fine){ a.dato:hover b{color:var(--rosa)} }
+  a.dato b{transition:color .15s ease}
+
+  /* ===== Cumpleaños y eventos ===== */
+  .cumple{background:linear-gradient(180deg,var(--negro),var(--panel) 60%,var(--negro))}
+  .cumple-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,6vw,88px);align-items:center}
+  .cartel-wrap{position:relative;max-width:440px;justify-self:center;width:100%}
+  .cartel-wrap::before{content:'';position:absolute;inset:0;border:2px solid var(--rosa);transform:translate(16px,16px) rotate(1.5deg);z-index:-1;filter:drop-shadow(0 0 6px rgba(255,63,165,.6))}
+  .foto{position:relative;display:block;padding:0;border:none;cursor:pointer;overflow:hidden;background:var(--panel);width:100%}
+  .foto img{width:100%;height:100%;object-fit:cover}
+  .foto:focus-visible{outline:3px solid var(--rosa-claro);outline-offset:-6px}
+  .ampliar{position:absolute;right:10px;bottom:10px;width:38px;height:38px;border-radius:50%;background:rgba(10,6,11,.82);color:#fff;display:flex;align-items:center;justify-content:center;pointer-events:none;transition:background-color .15s ease,color .15s ease}
+  .ampliar svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round}
+  @media (hover:hover) and (pointer:fine){ .foto:hover .ampliar{background:var(--rosa);color:var(--tinta)} }
+  .cartel-wrap .foto{aspect-ratio:3/4;transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .16s var(--ease-out)}
+  .cumple-txt{display:flex;flex-direction:column;gap:22px}
+  .cumple-txt .script{font-size:clamp(2.6rem,6vw,4rem);margin-bottom:-8px}
+  .cumple-txt p.lead{color:var(--muted);font-size:1.12rem;max-width:32em}
+  .incluye{display:grid;gap:0;max-width:30em}
+  .incluye li{display:flex;align-items:baseline;gap:14px;padding:13px 0;border-bottom:1px dashed var(--linea-fuerte);font-weight:500}
+  .incluye li::before{content:'◆';font-size:9px;color:var(--rosa);flex-shrink:0;transform:translateY(-2px)}
+  .cumple-txt .nota{color:var(--tenue);font-size:15px}
+  .cumple .flor.f3{width:420px;height:420px;right:-190px;top:-70px;opacity:.32}
+
+  /* ===== Carta ===== */
+  .carta{background:var(--negro)}
+  .cab-sec{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:12px 40px;margin-bottom:clamp(28px,4vw,44px)}
+  .cab-sec p{color:var(--muted);max-width:30em}
+  .tablist{display:flex;gap:4px;background:var(--panel);border:1px solid var(--linea);border-radius:12px;padding:5px;position:relative;overflow-x:auto;scrollbar-width:none;margin-bottom:clamp(24px,4vw,40px)}
+  .tablist::-webkit-scrollbar{display:none}
+  .tab{flex:1 0 auto;white-space:nowrap;background:transparent;border:none;color:var(--muted);font-weight:700;font-size:15px;padding:12px 20px;min-height:46px;border-radius:8px;cursor:pointer;position:relative;z-index:1;transition:color .18s var(--ease-out),background-color .2s var(--ease-out)}
+  .tab[aria-selected="true"]{color:var(--tinta);background:var(--rosa)}
+  .tab:focus-visible{outline:2px solid var(--rosa-claro);outline-offset:-2px}
+  @media (hover:hover) and (pointer:fine){ .tab[aria-selected="false"]:hover{color:var(--texto)} }
+  .carta-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(28px,5vw,72px);align-items:start}
+  .panel{display:none;flex-direction:column;gap:34px}
+  .panel[data-activo]{display:flex}
+  .grupo-cab{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:2px solid var(--linea-fuerte);margin-bottom:14px}
+  .grupo-cab h3{font-size:clamp(1.15rem,2.2vw,1.4rem);text-transform:uppercase}
+  .precio{font-family:var(--f-display);font-weight:800;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.1;color:var(--rosa);white-space:nowrap;text-shadow:0 0 14px rgba(255,63,165,.5)}
+  .nombres{columns:2;column-gap:36px}
+  .nombres.c3{columns:3}
+  .nombres li{break-inside:avoid;padding:5px 0 5px 20px;position:relative}
+  .nombres.grande li{font-family:var(--f-display);font-weight:700;font-size:clamp(1.15rem,2.2vw,1.45rem);text-transform:uppercase;padding-top:9px;padding-bottom:9px}
+  .nombres.grande li::before{top:19px}
+  .nombres li::before{content:'◆';position:absolute;left:0;top:11px;font-size:8px;color:var(--rosa)}
+  .nota-linea{margin-top:10px;color:var(--muted);font-size:15px}
+  .nota-linea b{color:var(--texto)}
+  .linea{display:flex;align-items:baseline;gap:12px;padding:8px 0}
+  .linea .p{flex:1;border-bottom:2px dotted var(--linea-fuerte);transform:translateY(-4px);min-width:16px}
+  .linea b{font-family:var(--f-display);font-weight:700;color:var(--texto);white-space:nowrap}
+  .lema{font-family:var(--f-script);font-size:clamp(2rem,4vw,2.8rem);line-height:1.1;color:var(--rosa-claro)}
+  .familias{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+  .familias h4{font-size:1.05rem;text-transform:uppercase;margin-bottom:10px;color:var(--rosa)}
+  .familias li{padding:5px 0}
+  .reco{display:inline-block;margin-left:8px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--tinta);background:var(--rosa);padding:2px 8px;clip-path:polygon(var(--cut-sm) 0,100% 0,100% calc(100% - var(--cut-sm)),calc(100% - var(--cut-sm)) 100%,0 100%,0 var(--cut-sm));vertical-align:middle}
+  .carta-foto{position:sticky;top:calc(var(--nav-h) + 24px);aspect-ratio:3/4;max-width:400px;width:100%;justify-self:end}
+  .carta-foto::before{content:'';position:absolute;inset:0;border:2px solid var(--rosa);transform:translate(12px,12px);z-index:-1}
+  .carta-foto .marco{position:absolute;inset:0;overflow:hidden;background:var(--panel)}
+  .carta-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .28s var(--ease-out)}
+  .carta-foto img.on{opacity:1}
+  .carta-pie{margin-top:34px;color:var(--tenue);font-size:14.5px}
+
+  /* ===== Promos y juegos ===== */
+  .promos{background:var(--panel)}
+  .promos-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(24px,4vw,56px);align-items:stretch}
+  .destacada{position:relative;background:var(--rosa);padding:2px;clip-path:polygon(var(--cut) 0,100% 0,100% calc(100% - var(--cut)),calc(100% - var(--cut)) 100%,0 100%,0 var(--cut))}
+  .destacada-in{position:relative;height:100%;background:var(--negro);padding:clamp(26px,4vw,48px);display:flex;flex-direction:column;justify-content:center;gap:14px;overflow:hidden;isolation:isolate;
+    clip-path:polygon(calc(var(--cut) - 2px) 0,100% 0,100% calc(100% - var(--cut) + 2px),calc(100% - var(--cut) + 2px) 100%,0 100%,0 calc(var(--cut) - 2px))}
+  .destacada .num{font-family:var(--f-display);font-weight:800;font-size:clamp(4.6rem,13vw,9rem);line-height:1.02;letter-spacing:-.02em;color:#ffe4f4;text-shadow:var(--neon)}
+  .destacada h3{font-size:clamp(1.3rem,2.6vw,1.8rem);text-transform:uppercase}
+  .destacada p{color:var(--muted);max-width:28em}
+  .destacada .flor.f4{width:260px;height:260px;right:-90px;bottom:-90px;opacity:.4;z-index:-1}
+  .tickets{display:grid;gap:14px;grid-auto-rows:1fr}
+  .ticket{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;background:var(--panel-2);border:1px solid var(--linea);
+    -webkit-mask:radial-gradient(circle 10px at 0 50%,transparent 97%,#000) left/51% 100% no-repeat,radial-gradient(circle 10px at 100% 50%,transparent 97%,#000) right/51% 100% no-repeat;
+    mask:radial-gradient(circle 10px at 0 50%,transparent 97%,#000) left/51% 100% no-repeat,radial-gradient(circle 10px at 100% 50%,transparent 97%,#000) right/51% 100% no-repeat}
+  .ticket .txt{padding:20px 22px 20px 28px}
+  .ticket h3{font-size:1.08rem;text-transform:uppercase;margin-bottom:4px}
+  .ticket p{color:var(--muted);font-size:15.5px;line-height:1.5}
+  .ticket .sello{align-self:stretch;display:flex;align-items:center;justify-content:center;min-width:92px;padding:0 24px 0 20px;border-left:2px dashed var(--linea-fuerte);font-family:var(--f-display);font-weight:800;font-size:1.5rem;color:var(--rosa);text-align:center;line-height:1.1}
+  .ticket .sello.txt-sello{font-size:1rem;text-transform:uppercase}
+  .promos-nota{margin-top:30px;color:var(--tenue);font-size:15px;max-width:44em}
+
+  /* ===== Ambiente ===== */
+  .ambiente{background:var(--negro)}
+  .amb-cab{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(24px,5vw,72px);align-items:end;margin-bottom:clamp(30px,5vw,56px)}
+  .amb-cab p{color:var(--muted);font-size:1.08rem;max-width:32em}
+  .galeria{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,4fr) minmax(0,3fr);grid-template-rows:230px 230px;gap:14px}
+  .galeria .foto{height:100%}
+  .g-silla{grid-column:1;grid-row:1 / span 2}
+  .g-neon{grid-column:2;grid-row:1}
+  .g-coct{grid-column:2;grid-row:2}
+  .g-cachi{grid-column:3;grid-row:1 / span 2}
+  .g-neon img{object-position:50% 22%}
+  .foto img{transition:transform .5s var(--ease-out)}
+  @media (hover:hover) and (pointer:fine){ .galeria .foto:hover img{transform:scale(1.04)} }
+  .amb-flor{position:absolute}
+
+  /* ===== Horario y ubicación ===== */
+  .horario{background:var(--panel)}
+  .hor-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,80px);align-items:start;margin-top:clamp(28px,4vw,48px)}
+  .letrero-wrap{--e:var(--tenue);--vv:.8deg;position:relative;max-width:440px;padding-top:44px;transform-origin:50% 0;animation:cuelga 7s var(--ease-in-out) infinite alternate}
+  .letrero-wrap[data-estado="abierto"]{--e:var(--rosa);--vv:1.4deg;animation-duration:5.6s}
+  .letrero-wrap::before{content:'';position:absolute;left:50%;top:0;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:var(--tenue)}
+  .letrero-cuerdas{position:absolute;left:0;top:0;width:100%;height:46px;overflow:visible;pointer-events:none}
+  .letrero-cuerdas path{fill:none;stroke:var(--tenue);stroke-width:2;vector-effect:non-scaling-stroke}
+  @keyframes cuelga{from{rotate:calc(var(--vv) * -1)}to{rotate:var(--vv)}}
+  .letrero{position:relative;background:var(--negro);border:3px solid var(--e);border-radius:26px;padding:22px clamp(20px,3vw,30px) 26px}
+  .letrero::after{content:'';position:absolute;inset:-3px;border-radius:26px;border:3px solid var(--e);opacity:0;filter:blur(7px);pointer-events:none}
+  .letrero-wrap[data-estado="abierto"] .letrero::after{opacity:.85;animation:parpadeo 9s steps(1,end) infinite}
+  .letrero-ahora{display:flex;align-items:center;gap:12px;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .luz{position:relative;width:14px;height:14px;border-radius:50%;background:var(--e);flex-shrink:0}
+  .luz::after{content:'';position:absolute;inset:0;border-radius:50%;background:var(--e);opacity:0}
+  .letrero-wrap[data-estado="abierto"] .luz::after{animation:late 2s var(--ease-out) infinite}
+  .letrero-est{font-family:var(--f-script);font-size:clamp(4.6rem,11vw,6.6rem);line-height:1.02;color:var(--e);margin-top:2px;padding-right:.1em}
+  .letrero-wrap[data-estado="abierto"] .letrero-est{color:#ffe4f4;text-shadow:var(--neon);animation:parpadeo 9s steps(1,end) infinite}
+  .letrero-det{font-size:1.15rem;font-weight:700;line-height:1.35}
+  .letrero-cuenta{margin-top:14px;padding-top:14px;border-top:2px dashed var(--linea-fuerte);font-weight:700;font-size:1.05rem;color:var(--e);font-variant-numeric:tabular-nums}
+  .dias{display:grid;gap:8px;margin-top:34px;max-width:440px}
+  .dia{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:13px 18px;border:1px solid var(--linea);color:var(--muted);font-variant-numeric:tabular-nums}
+  .dia b{font-weight:700}
+  .hoy-tag{display:none;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--rosa);color:var(--tinta);padding:3px 10px;margin-left:10px}
+  .dia.hoy{color:var(--texto);border-color:var(--rosa);outline:1px solid var(--rosa);outline-offset:3px}
+  .dia.hoy .hoy-tag{display:inline-block}
+  .ubi{border:1px solid var(--linea-fuerte);background:var(--negro);overflow:hidden}
+  .mapa{position:relative;height:290px;background:#150d17}
+  .mapa iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:invert(.92) hue-rotate(180deg) saturate(.85) brightness(.95) contrast(.92)}
+  .fachada{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:20px;background-color:#150d17;
+    background-image:linear-gradient(rgba(255,63,165,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(255,63,165,.09) 1px,transparent 1px);background-size:28px 28px}
+  .pin{width:44px;height:44px;border-radius:50% 50% 50% 0;background:var(--rosa);transform:rotate(-45deg);position:relative;margin-bottom:6px;box-shadow:0 0 0 8px rgba(255,63,165,.16)}
+  .pin::after{content:'';position:absolute;width:16px;height:16px;background:var(--negro);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%)}
+  .fachada p{max-width:26em;color:var(--muted);font-size:14px;line-height:1.45}
+  .ubi-info{padding:24px 24px 26px}
+  .ubi-info h3{font-size:1.25rem;text-transform:uppercase;margin-bottom:4px}
+  .ubi-info .dir{color:var(--muted);margin-bottom:18px}
+  .ubi-info .fila-btn .btn{flex:1;min-width:150px}
+  .ubi-tel{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:20px;padding-top:18px;border-top:1px solid var(--linea)}
+  .ubi-tel a{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;padding:6px 0;min-height:44px}
+  @media (hover:hover) and (pointer:fine){ .ubi-tel a:hover{color:var(--rosa)} }
+
+  /* ===== Preguntas ===== */
+  .faq{background:var(--negro)}
+  .faq-fondo{position:absolute;inset:0;z-index:-2}
+  .faq-fondo img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+  .faq-fondo::after{content:'';position:absolute;inset:0;background:linear-gradient(rgba(10,6,11,.72),rgba(10,6,11,.86))}
+  .faq-wrap{max-width:720px;margin:0 auto}
+  .faq h2{margin-bottom:clamp(28px,4vw,44px)}
+  .faq-item{position:relative;margin-bottom:16px}
+  .faq-item::before{content:'';position:absolute;inset:-4px -10px;z-index:0;background:rgba(20,12,22,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    -webkit-mask-image:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent);border-radius:14px}
+  .faq-item::after{content:'';position:absolute;top:-4px;left:-4px;width:26px;height:26px;z-index:1;border-top:2px solid var(--rosa);border-left:2px solid var(--rosa);border-radius:6px 0 0 0;pointer-events:none}
+  .faq-q{position:relative;z-index:2;display:block;width:100%;text-align:left;background:none;border:none;color:var(--texto);font-family:inherit;font-size:1.05rem;font-weight:700;line-height:1.4;cursor:pointer;padding:20px 52px 20px 22px;min-height:56px}
+  .faq-q::after{content:'+';position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:1.6rem;line-height:1;color:var(--rosa);transition:transform .2s var(--ease-out)}
+  .faq-item.open .faq-q::after{transform:translateY(-50%) rotate(45deg)}
+  .faq-q:focus-visible{outline-offset:-2px}
+  .faq-a{position:relative;z-index:2;padding:0 22px 22px;color:var(--muted);display:none}
+  .faq-item.open .faq-a{display:block;animation:entra .25s var(--ease-out)}
+  @keyframes entra{from{opacity:0}to{opacity:1}}
+  .faq-a a{color:var(--rosa-claro)}
+
+  /* ===== Pie ===== */
+  footer{background:#060307;border-top:1px solid var(--linea);position:relative;overflow:hidden;isolation:isolate;padding:64px 0 28px}
+  .pie-grid{display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1.2fr;gap:36px;margin-bottom:44px;position:relative;z-index:1}
+  .pie-logo{width:88px;height:88px;border-radius:50%;margin-bottom:16px}
+  .pie-desc{color:var(--muted);font-size:15px;max-width:22em}
+  .pie-tit{font-size:12.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--tenue);margin-bottom:14px;font-weight:700}
+  .pie-col ul{display:flex;flex-direction:column;gap:2px}
+  .pie-col a,.pie-col li{color:var(--texto);text-decoration:none;font-size:15px}
+  .pie-col li a{display:inline-block;padding:7px 0;min-height:36px}
+  @media (hover:hover) and (pointer:fine){ .pie-col a:hover{color:var(--rosa)} }
+  .pie-col .redes{display:flex;gap:10px;margin-top:16px}
+  .mas18{display:flex;gap:14px;align-items:flex-start}
+  .mas18 b{flex-shrink:0;width:52px;height:52px;border-radius:50%;border:2px solid var(--rosa);display:flex;align-items:center;justify-content:center;font-family:var(--f-display);font-weight:800;font-size:1rem;color:var(--rosa)}
+  .mas18 p{color:var(--muted);font-size:14.5px;line-height:1.5}
+  .pie-abajo{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center;padding-top:22px;border-top:1px solid var(--linea);font-size:14px;color:var(--tenue);position:relative;z-index:1}
+  .pie-legales{display:flex;gap:18px;flex-wrap:wrap}
+  .pie-legales a{color:var(--tenue);text-decoration:none;padding:8px 0;display:inline-block}
+  @media (hover:hover) and (pointer:fine){ .pie-legales a:hover{color:var(--texto)} }
+  .pie-gigante{position:absolute;left:50%;bottom:-.18em;translate:-50% 0;font-family:var(--f-script);font-size:clamp(9rem,28vw,24rem);line-height:1;color:rgba(255,63,165,.09);white-space:nowrap;pointer-events:none;z-index:0;user-select:none}
+  .pie-gigante::after{content:"Capricho"}
+
+  /* ===== Barra móvil, cookies, lightbox ===== */
+  .barra-fija{position:fixed;left:0;right:0;bottom:0;z-index:var(--z-barra);background:var(--panel);border-top:1px solid var(--linea-fuerte);padding:12px 16px max(12px,env(safe-area-inset-bottom));display:flex;align-items:center;gap:14px;transform:translateY(100%);transition:transform .3s var(--ease-out)}
+  .barra-fija.visible{transform:translateY(0)}
+  .barra-fija .info{flex:1;min-width:0}
+  .barra-fija .info strong{display:block;font-size:15px;line-height:1.3}
+  .barra-fija .info span{display:block;font-size:13px;color:var(--muted);line-height:1.3}
+  .barra-fija .btn{flex-shrink:0}
+  @media (min-width:860px){ .barra-fija{display:none} }
+
+  .cookie-banner{position:fixed;left:16px;right:16px;bottom:16px;max-width:520px;margin:0 auto;background:var(--panel-2);border:1px solid var(--linea-fuerte);border-radius:14px;padding:20px 22px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;transform:translateY(140%);opacity:0;visibility:hidden;transition:transform .3s var(--ease-out),opacity .3s var(--ease-out),visibility 0s linear .3s;z-index:var(--z-cookie)}
+  .cookie-banner.visible{transform:translateY(0);opacity:1;visibility:visible;transition-delay:0s}
+  .cookie-texto{flex:1;min-width:220px;font-size:14px;color:var(--muted);line-height:1.5}
+  .cookie-texto a{color:var(--texto)}
+  .cookie-botones{display:flex;gap:10px}
+  .cookie-botones button{border:none;border-radius:9px;padding:11px 18px;min-height:44px;font-weight:700;font-size:14px;font-family:inherit;cursor:pointer;transition:filter .15s var(--ease-out),transform .1s var(--ease-out)}
+  .cookie-botones button:active{transform:scale(0.97)}
+  .btn-aceptar{background:var(--rosa);color:var(--tinta)}
+  .btn-rechazar{background:transparent;color:var(--muted);border:1px solid var(--linea-fuerte) !important}
+  @media (hover:hover) and (pointer:fine){ .btn-aceptar:hover{filter:brightness(1.12)} .btn-rechazar:hover{color:var(--texto)} }
+
+  dialog.lightbox{border:none;padding:0;background:transparent;max-width:min(92vw,980px);width:100%;max-height:96vh;margin:auto;overflow:visible;color:var(--texto)}
+  dialog.lightbox::backdrop{background:rgba(6,3,8,0);transition:background .25s var(--ease-out)}
+  dialog.lightbox.is-open::backdrop{background:rgba(6,3,8,.9)}
+  .lb-inner{background:var(--panel);border:1px solid var(--linea-fuerte);border-radius:16px;overflow:hidden;transform:scale(0.96);opacity:0;transition:transform .22s var(--ease-out),opacity .22s var(--ease-out)}
+  dialog.lightbox.is-open .lb-inner{transform:scale(1);opacity:1}
+  .lb-imagen{background:#000;display:flex;align-items:center;justify-content:center}
+  .lb-imagen img{max-height:calc(96vh - 76px);width:auto;max-width:100%;object-fit:contain}
+  .lb-barra{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;gap:12px}
+  .lb-pie{font-size:14px;color:var(--muted)}
+  .lb-controles{display:flex;gap:8px}
+  .lb-btn{width:44px;height:44px;border-radius:50%;border:1px solid var(--linea-fuerte);background:var(--negro);color:var(--texto);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background-color .15s var(--ease-out),transform .1s var(--ease-out)}
+  .lb-btn:active{transform:scale(0.92)}
+  @media (hover:hover) and (pointer:fine){ .lb-btn:hover{background:var(--rosa);border-color:var(--rosa);color:var(--tinta)} }
+
+  /* Titulares con revelado en recorte (se observa el contenedor) */
+  .js .rev-t{clip-path:polygon(0 -15%,0 -15%,-20% 115%,0 115%)}
+  .js .rev-t.rev-on{clip-path:polygon(0 -15%,120% -15%,120% 115%,0 115%);transition:clip-path .45s var(--ease-out)}
+
+  /* ===== Adaptación ===== */
+  @media (max-width:1020px){
+    .pie-grid{grid-template-columns:1fr 1fr}
+    .datos-lista{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .dato:nth-child(3){border-left:0;padding-left:0}
+    .dato:nth-child(n+3){border-top:1px solid var(--linea)}
+    .carta-grid{grid-template-columns:1fr}
+    .carta-foto{position:relative;top:0;aspect-ratio:16/9;max-width:none;order:-1;justify-self:stretch}
+    .carta-foto::before{transform:translate(8px,8px)}
+  }
+  @media (max-width:860px){
+    .hero-grid,.cumple-grid,.promos-grid,.amb-cab,.hor-grid{grid-template-columns:1fr}
+    .hero-visual{width:min(86%,400px);margin-top:8px}
+    .cartel-wrap{max-width:360px}
+    .cartel-wrap::before{transform:translate(10px,10px) rotate(1.5deg)}
+    .letrero-wrap,.dias{max-width:none}
+    .letrero-wrap{--vv:.7deg}
+    .letrero-wrap[data-estado="abierto"]{--vv:.7deg}
+    body{padding-bottom:74px}
+  }
+  @media (max-width:640px){
+    .wrap{padding:0 16px}
+    .nombres,.nombres.c3{columns:1}
+    .familias{grid-template-columns:1fr;gap:22px}
+    .galeria{grid-template-columns:1fr 1fr;grid-template-rows:200px 200px 170px;gap:10px}
+    .g-silla{grid-column:1;grid-row:1 / span 2}
+    .g-neon{grid-column:2;grid-row:1}
+    .g-coct{grid-column:2;grid-row:2}
+    .g-cachi{grid-column:1 / span 2;grid-row:3}
+    .datos-lista{grid-template-columns:1fr}
+    .dato,.dato:nth-child(3){border-left:0;padding-left:0;padding-right:0}
+    .dato:nth-child(n+2){border-top:1px solid var(--linea)}
+    .pie-grid{grid-template-columns:1fr}
+    .fila-btn .btn{flex:1 1 auto}
+    .g-cachi img{object-position:50% 38%}
+    .ticket .sello{min-width:78px;padding:0 18px 0 14px;font-size:1.3rem}
+    .ticket .txt{padding:18px 16px 18px 24px}
+    .pie-abajo{flex-direction:column;align-items:flex-start}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation:none !important}
+    .js .rev-t,.js .rev-t.rev-on{clip-path:none;transition:none}
+    .cartel-wrap .foto{transform:none;transition:none}
+    .tab,.hamb span,.faq-q::after,.foto img,.btn,.lb-btn{transition:none}
+    .carta-foto img{transition:opacity .15s ease}
+    .barra-fija{transition:none;transform:none;opacity:0;visibility:hidden}
+    .barra-fija.visible{opacity:1;visibility:visible}
+    .overlay{transform:none;transition:opacity .15s ease,visibility 0s linear .15s}
+    .overlay.activo{transition-delay:0s}
+    .lb-inner{transform:none;transition:opacity .15s ease}
+  }
+</style>
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <path id="petalo" vector-effect="non-scaling-stroke" d="M100 100 C78 80 74 40 100 8 C126 40 122 80 100 100 Z"/>
+  </defs>
+  <!-- Flor de línea (motivo de las paredes y de la marca) -->
+  <symbol id="flor" viewBox="0 0 200 200">
+    <use href="#petalo"/><use href="#petalo" transform="rotate(45 100 100)"/><use href="#petalo" transform="rotate(90 100 100)"/><use href="#petalo" transform="rotate(135 100 100)"/>
+    <use href="#petalo" transform="rotate(180 100 100)"/><use href="#petalo" transform="rotate(225 100 100)"/><use href="#petalo" transform="rotate(270 100 100)"/><use href="#petalo" transform="rotate(315 100 100)"/>
+    <g transform="rotate(22.5 100 100) translate(100 100) scale(.6) translate(-100 -100)">
+      <use href="#petalo"/><use href="#petalo" transform="rotate(45 100 100)"/><use href="#petalo" transform="rotate(90 100 100)"/><use href="#petalo" transform="rotate(135 100 100)"/>
+      <use href="#petalo" transform="rotate(180 100 100)"/><use href="#petalo" transform="rotate(225 100 100)"/><use href="#petalo" transform="rotate(270 100 100)"/><use href="#petalo" transform="rotate(315 100 100)"/>
+    </g>
+    <circle cx="100" cy="100" r="7" vector-effect="non-scaling-stroke"/>
+  </symbol>
+  <symbol id="chispa" viewBox="0 0 10 10"><path d="M5 0 L6.2 3.8 L10 5 L6.2 6.2 L5 10 L3.8 6.2 L0 5 L3.8 3.8 Z"/></symbol>
+  <symbol id="cinco-estrellas" viewBox="0 0 100 20">
+    <polygon points="10,1 12.6,7.2 19.3,7.7 14.2,12 15.8,18.6 10,15.1 4.2,18.6 5.8,12 0.7,7.7 7.4,7.2"/>
+    <polygon transform="translate(20 0)" points="10,1 12.6,7.2 19.3,7.7 14.2,12 15.8,18.6 10,15.1 4.2,18.6 5.8,12 0.7,7.7 7.4,7.2"/>
+    <polygon transform="translate(40 0)" points="10,1 12.6,7.2 19.3,7.7 14.2,12 15.8,18.6 10,15.1 4.2,18.6 5.8,12 0.7,7.7 7.4,7.2"/>
+    <polygon transform="translate(60 0)" points="10,1 12.6,7.2 19.3,7.7 14.2,12 15.8,18.6 10,15.1 4.2,18.6 5.8,12 0.7,7.7 7.4,7.2"/>
+    <polygon transform="translate(80 0)" points="10,1 12.6,7.2 19.3,7.7 14.2,12 15.8,18.6 10,15.1 4.2,18.6 5.8,12 0.7,7.7 7.4,7.2"/>
+  </symbol>
+  <symbol id="i-tel" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-mas" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+</svg>
+
+<header class="nav" id="navbar">
+  <div class="wrap nav-in">
+    <a class="nav-logo" href="#inicio" aria-label="Capricho, ir al inicio"><img src="assets/img/logo.webp" width="348" height="348" alt="Logo de Capricho"></a>
+    <nav aria-label="Principal">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#cumpleanos">Cumpleaños</a></li>
+        <li><a href="#carta">Carta</a></li>
+        <li><a href="#promos">Promos</a></li>
+        <li><a href="#ambiente">Ambiente</a></li>
+        <li><a href="#horario">Horario</a></li>
+      </ul>
+    </nav>
+    <div class="nav-der">
+      <a class="btn-social" href="https://www.instagram.com/caprichopinto_/" target="_blank" rel="noopener" aria-label="Instagram de Capricho (@caprichopinto_)"><svg class="ico"><use href="#i-ig"/></svg></a>
+      <a class="btn btn-cortado btn-sm nav-llamar" href="tel:+34611461335"><svg class="ico"><use href="#i-tel"/></svg>Llamar</a>
+      <button class="hamb" id="hamb" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="overlayMenu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="overlay" id="overlayMenu" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+  <span class="flor ov-flor" aria-hidden="true" style="animation:none"><svg viewBox="0 0 200 200" width="300" height="300" style="fill:none;stroke:currentColor;stroke-width:2"><use href="#flor"/></svg></span>
+  <a class="ov-link" href="#cumpleanos" data-cerrar>Cumpleaños</a>
+  <a class="ov-link" href="#carta" data-cerrar>Carta</a>
+  <a class="ov-link" href="#promos" data-cerrar>Promos</a>
+  <a class="ov-link" href="#ambiente" data-cerrar>Ambiente</a>
+  <a class="ov-link" href="#horario" data-cerrar>Horario</a>
+  <div class="fila-btn" style="margin-top:8px"><a class="btn btn-cortado" href="tel:+34611461335"><svg class="ico"><use href="#i-tel"/></svg>Llamar al 611 46 13 35</a></div>
+</div>
+
+<main id="contenido">
+
+<!-- ===== PORTADA ===== -->
+<section class="hero mov" id="inicio">
+  <div class="deco" aria-hidden="true">
+    <span class="halo a"></span><span class="halo b"></span>
+    <span class="flor f1"><svg viewBox="0 0 200 200"><use href="#flor"/></svg></span>
+    <span class="flor f2"><svg viewBox="0 0 200 200"><use href="#flor"/></svg></span>
+    <svg class="chispa" style="top:14%;left:48%"><use href="#chispa"/></svg>
+    <svg class="chispa" style="top:62%;left:4%;animation-duration:3.1s;animation-delay:-.8s;width:9px;height:9px"><use href="#chispa"/></svg>
+    <svg class="chispa" style="top:30%;right:5%;animation-duration:2.2s;animation-delay:-1.4s"><use href="#chispa"/></svg>
+    <svg class="chispa" style="bottom:12%;left:52%;animation-duration:3.4s;animation-delay:-.3s;width:10px;height:10px"><use href="#chispa"/></svg>
+  </div>
+  <div class="wrap hero-grid">
+    <div class="hero-txt">
+      <p class="estado cerrado" id="estadoPildora" role="status"><span class="punto" aria-hidden="true"></span><span id="estadoTexto">Abrimos de 21:00 a 3:00</span></p>
+      <h1><span class="h1-script neon">Capricho</span><span class="h1-resto">Copas, cachimbas y billar en Pinto</span></h1>
+      <p class="hero-lead">Música, fútbol en pantalla, cumpleaños y eventos privados en la calle Real 19.</p>
+      <div class="fila-btn">
+        <a class="btn btn-cortado" href="tel:+34611461335"><svg class="ico"><use href="#i-tel"/></svg>Llamar para reservar</a>
+        <a class="btn btn-outline" href="#carta">Ver la carta</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg class="anillos" viewBox="0 0 300 300" aria-hidden="true" style="--r:-6deg;--t:11s"><ellipse cx="150" cy="150" rx="146" ry="139" vector-effect="non-scaling-stroke"/></svg>
+      <svg class="anillos" viewBox="0 0 300 300" aria-hidden="true" style="--r:8deg;--t:14s;opacity:.55"><ellipse cx="150" cy="150" rx="139" ry="147" vector-effect="non-scaling-stroke"/></svg>
+      <div class="hero-foto"><img src="assets/img/interior-grande.webp" width="1080" height="810" fetchpriority="high" alt="Interior de Capricho con luz rosa, sillones y la barra con botellas al fondo"></div>
+      <img class="hero-logo" src="assets/img/logo.webp" width="348" height="348" alt="Logo de Capricho, un aro de neón con el nombre en cursiva">
+    </div>
+  </div>
+</section>
+
+<!-- ===== DATOS ===== -->
+<div class="datos">
+  <div class="wrap">
+    <div class="datos-lista">
+      <a class="dato" href="https://www.google.com/maps/search/?api=1&amp;query=Capricho+Lounge+Calle+Real+19+Pinto" target="_blank" rel="noopener" aria-label="4,8 de 5 con 19 reseñas en Google. Abre Google Maps en otra pestaña">
+        <span class="valoracion"><b>4,8</b><span class="estrellas" aria-hidden="true"><svg class="vacias" viewBox="0 0 100 20" preserveAspectRatio="none"><use href="#cinco-estrellas"/></svg><svg class="llenas" viewBox="0 0 100 20" preserveAspectRatio="none"><use href="#cinco-estrellas"/></svg></span></span>
+        <span class="cap">19 reseñas en Google</span>
+      </a>
+      <div class="dato"><b>21:00 a 3:00</b><span class="cap">Viernes y sábado hasta las 3:30</span></div>
+      <div class="dato"><b>Billar y fútbol</b><span class="cap">En pantalla, con música</span></div>
+      <div class="dato"><b>Calle Real 19</b><span class="cap">Pinto, Madrid</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CUMPLEAÑOS Y EVENTOS ===== -->
+<section class="sec cumple mov" id="cumpleanos">
+  <span class="flor f3" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#flor"/></svg></span>
+  <div class="wrap cumple-grid">
+    <div class="cartel-wrap" id="cartelWrap">
+      <button class="foto" type="button" data-galeria="cartel" data-grande="assets/img/cartel-cumpleanos-grande.webp" data-pie="Cartel de cumpleaños y eventos" aria-label="Ampliar el cartel de cumpleaños y eventos">
+        <img src="assets/img/cartel-cumpleanos.webp" width="720" height="960" loading="lazy" alt="Cartel de Capricho: hacemos cumpleaños y eventos personalizados, ajustándonos a tu presupuesto y con variedad de opciones en ofertas">
+        <span class="ampliar" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-mas"/></svg></span>
+      </button>
+    </div>
+    <div class="cumple-txt">
+      <div>
+        <span class="script neon" aria-hidden="true">celebra con nosotros</span>
+        <h2>Cumpleaños y eventos privados</h2>
+      </div>
+      <p class="lead">Montamos cumpleaños y eventos personalizados, adaptados a tu presupuesto. Cuéntanos cuántos sois y qué queréis celebrar.</p>
+      <!-- CONFIRMAR con el cliente antes de publicar: esta lista sale del reel de eventos de su Instagram (sus palabras) -->
+      <ul class="incluye" aria-label="Lo que ofrecen para eventos">
+        <li>Sin alquiler del local</li>
+        <li>Reserva consumible</li>
+        <li>Barra libre</li>
+        <li>Música en vivo</li>
+        <li>Opciones flexibles según tu presupuesto</li>
+      </ul>
+      <div class="fila-btn">
+        <a class="btn btn-cortado" href="https://ig.me/m/caprichopinto_" target="_blank" rel="noopener"><svg class="ico"><use href="#i-ig"/></svg>Pedir presupuesto por Instagram</a>
+        <a class="btn btn-outline" href="tel:+34611461335">Llamar al 611 46 13 35</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CARTA ===== -->
+<section class="sec carta" id="carta">
+  <div class="wrap">
+    <div class="cab-sec">
+      <h2>La carta</h2>
+      <p>Precios de la carta del local. Pueden cambiar, si tienes dudas pregunta en barra.</p>
+    </div>
+
+    <div class="tablist" role="tablist" aria-label="Categorías de la carta" id="tablist">
+      <button class="tab" role="tab" id="tab-copas" data-foto="a" aria-selected="true" aria-controls="panel-copas" tabindex="0">Copas</button>
+      <button class="tab" role="tab" id="tab-mojitos" data-foto="a" aria-selected="false" aria-controls="panel-mojitos" tabindex="-1">Mojitos</button>
+      <button class="tab" role="tab" id="tab-chupitos" data-foto="a" aria-selected="false" aria-controls="panel-chupitos" tabindex="-1">Chupitos</button>
+      <button class="tab" role="tab" id="tab-cachimbas" data-foto="b" aria-selected="false" aria-controls="panel-cachimbas" tabindex="-1">Cachimbas</button>
+      <button class="tab" role="tab" id="tab-sinalcohol" data-foto="a" aria-selected="false" aria-controls="panel-sinalcohol" tabindex="-1">Sin alcohol</button>
+    </div>
+
+    <div class="carta-grid">
+      <div>
+        <div class="panel" id="panel-copas" role="tabpanel" aria-labelledby="tab-copas" data-activo>
+          <div>
+            <div class="grupo-cab"><h3>Rones</h3><span class="precio">7 €</span></div>
+            <ul class="nombres"><li>Barceló</li><li>Havana Club</li><li>Brugal</li><li>Legendario</li><li>Pampero</li><li>Santa Teresa</li></ul>
+          </div>
+          <div>
+            <div class="grupo-cab"><h3>Whiskys</h3><span class="precio">7 €</span></div>
+            <ul class="nombres"><li>White Label</li><li>DYC</li><li>Red Label</li><li>Ballantine's</li><li>Jack Daniel's</li><li>DYC 8</li><li>Jack Daniel's Tennessee Honey</li><li>Chivas 12</li><li>J&amp;B</li></ul>
+            <p class="nota-linea">Suntory Toki y Black Label: <b>8,5 €</b></p>
+          </div>
+          <div>
+            <div class="grupo-cab"><h3>Whiskys premium</h3></div>
+            <div class="linea"><span>Glenfiddich</span><span class="p"></span><b>12 €</b></div>
+            <div class="linea"><span>Maker's Mark</span><span class="p"></span><b>12 €</b></div>
+            <div class="linea"><span>Macallan 12</span><span class="p"></span><b>15 €</b></div>
+            <div class="linea"><span>Green Label 15</span><span class="p"></span><b>15 €</b></div>
+            <div class="linea"><span>Hibiki Japonés</span><span class="p"></span><b>15 €</b></div>
+          </div>
+        </div>
+
+        <div class="panel" id="panel-mojitos" role="tabpanel" aria-labelledby="tab-mojitos">
+          <div>
+            <div class="grupo-cab"><h3>Mojitos</h3><span class="precio">6 €</span></div>
+            <ul class="nombres grande"><li>Clásico</li><li>Fresa</li><li>Melocotón</li><li>Arándanos</li><li>Mora</li></ul>
+          </div>
+        </div>
+
+        <div class="panel" id="panel-chupitos" role="tabpanel" aria-labelledby="tab-chupitos">
+          <div>
+            <div class="grupo-cab"><h3>Chupitos</h3><span class="precio">2 € cada uno</span></div>
+            <ul class="nombres c3"><li>Cervechita</li><li>Mobú</li><li>El Pegón</li><li>Tequi fresa</li><li>Tequi maracuyá</li><li>Baileys</li><li>Muerte dulce</li><li>Tequi mango</li><li>Stroh 80</li><li>Tequi melón</li><li>Aguardiente</li><li>Jagger café</li></ul>
+          </div>
+        </div>
+
+        <div class="panel" id="panel-cachimbas" role="tabpanel" aria-labelledby="tab-cachimbas">
+          <div>
+            <!-- PRECIO PROVISIONAL (12 €, decidido por Diego): el local no publica el precio. Confirmar con el cliente antes de presentar -->
+            <div class="grupo-cab"><h3>Cachimba</h3><span class="precio">12 €</span></div>
+            <p class="lema">Experiencia. Sabor. Actitud.</p>
+          </div>
+          <div class="familias">
+            <div>
+              <h4>Dulce</h4>
+              <ul><li>Cheesecake Classic</li><li>Blue Velvet</li><li>Magnum White Berry<span class="reco">Recomendada</span></li><li>Lemon Pie</li></ul>
+            </div>
+            <div>
+              <h4>Afrutado</h4>
+              <ul><li>Green &amp; Red</li><li>Love 66</li><li>Polar Berry<span class="reco">Recomendada</span></li><li>Arctic Watermelon</li><li>Lemon Grass</li><li>Frozen Blu</li></ul>
+            </div>
+            <div>
+              <h4>Mentolado</h4>
+              <ul><li>Lady Killer</li><li>Hawaii</li><li>Mint Splash</li><li>Mint Lemonade<span class="reco">Recomendada</span></li><li>After Mint</li><li>Pure Mint</li></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel" id="panel-sinalcohol" role="tabpanel" aria-labelledby="tab-sinalcohol">
+          <div>
+            <div class="grupo-cab"><h3>Sin alcohol</h3></div>
+            <div class="linea"><span>Agua</span><span class="p"></span><b>2 €</b></div>
+            <div class="linea"><span>Agua con gas</span><span class="p"></span><b>2,5 €</b></div>
+            <div class="linea"><span>Gaseosas</span><span class="p"></span><b>3 €</b></div>
+            <div class="linea"><span>Tónicas</span><span class="p"></span><b>3 €</b></div>
+            <div class="linea"><span>Zumo natural</span><span class="p"></span><b>3 €</b></div>
+            <div class="linea"><span>Red Bull</span><span class="p"></span><b>3,5 €</b></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carta-foto">
+        <div class="marco">
+          <img class="on" data-f="a" src="assets/img/coctel-chupitos.webp" width="640" height="852" loading="lazy" alt="Cóctel con menta y moras junto a dos chupitos con nata">
+          <img data-f="b" src="assets/img/cachimba-flores.webp" width="640" height="852" loading="lazy" alt="Cachimba con base de cristal y un jarrón de flores rosas sobre la mesa">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROMOS Y JUEGOS ===== -->
+<!-- PROMOS CON CADUCIDAD: salen de las publicaciones y historias de Instagram. Confirmar con el cliente cuáles siguen activas y borrar las que no -->
+<section class="sec promos mov" id="promos">
+  <div class="wrap">
+    <div class="cab-sec">
+      <h2>Promos y juegos</h2>
+      <p>Lo que publicamos en Instagram. Pregunta en barra cuáles están activas esta semana.</p>
+    </div>
+    <div class="promos-grid">
+      <article class="destacada">
+        <div class="destacada-in">
+          <span class="flor f4" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#flor"/></svg></span>
+          <p class="num">3x15 €</p>
+          <h3>Promo para grupos</h3>
+          <p>Ven con tu grupo y pregunta cómo funciona. Normalmente el descuento es para grupos, pero también puedes venir por tu cuenta.</p>
+        </div>
+      </article>
+      <div class="tickets">
+        <article class="ticket">
+          <div class="txt"><h3>Ruleta rusa</h3><p>Diez chupitos de vodka y diez de agua. A ver a quién le toca.</p></div>
+          <div class="sello">10 €</div>
+        </article>
+        <article class="ticket">
+          <div class="txt"><h3>Juego de cartas de Capricho</h3><p>Gratis si pides 2 bebidas. Pídelo en barra.</p></div>
+          <div class="sello txt-sello">Gratis</div>
+        </article>
+        <article class="ticket">
+          <div class="txt"><h3>Copa por seguirnos</h3><p>Enseña en barra que nos sigues en Instagram.</p></div>
+          <div class="sello txt-sello">Gratis</div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AMBIENTE ===== -->
+<section class="sec ambiente" id="ambiente">
+  <div class="wrap">
+    <div class="amb-cab">
+      <h2>Billar, fútbol y música</h2>
+      <p>Luz rosa, sillones y flores en las paredes. Ven a jugar una partida de billar, a ver el partido en pantalla o a pedir una cachimba con tu grupo.</p>
+    </div>
+    <div class="galeria">
+      <button class="foto g-silla" type="button" data-galeria="ambiente" data-grande="assets/img/silla-grande.webp" data-pie="Rincón del local con sillones y la barra al fondo" aria-label="Ampliar la foto del rincón con sillones">
+        <img src="assets/img/silla.webp" width="560" height="980" loading="lazy" alt="Rincón de Capricho con una silla rosa, una mesa baja y la barra con botellas al fondo" style="object-position:50% 70%">
+        <span class="ampliar" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-mas"/></svg></span>
+      </button>
+      <button class="foto g-neon" type="button" data-galeria="ambiente" data-grande="assets/img/neon-grande.webp" data-pie="Rótulo de neón de Capricho" aria-label="Ampliar la foto del rótulo de neón">
+        <img src="assets/img/neon.webp" width="720" height="540" loading="lazy" alt="Rótulo de neón rosa con el nombre Capricho en cursiva sobre una pared de flores">
+        <span class="ampliar" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-mas"/></svg></span>
+      </button>
+      <button class="foto g-coct" type="button" data-galeria="ambiente" data-grande="assets/img/cocteles-grande.webp" data-pie="Cócteles con el posavasos de Capricho" aria-label="Ampliar la foto de los cócteles">
+        <img src="assets/img/cocteles.webp" width="720" height="540" loading="lazy" alt="Dos cócteles con sombrillas y fruta sobre un posavasos de Capricho">
+        <span class="ampliar" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-mas"/></svg></span>
+      </button>
+      <button class="foto g-cachi" type="button" data-galeria="ambiente" data-grande="assets/img/cachimba-negra-grande.webp" data-pie="Cachimbas de la casa" aria-label="Ampliar la foto de las cachimbas">
+        <img src="assets/img/cachimba-negra.webp" width="640" height="853" loading="lazy" alt="Cachimbas de cristal sobre una mesa oscura">
+        <span class="ampliar" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-mas"/></svg></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HORARIO Y UBICACIÓN ===== -->
+<section class="sec horario mov" id="horario">
+  <div class="wrap">
+    <h2>Horario y cómo llegar</h2>
+    <div class="hor-grid">
+      <div>
+        <div class="letrero-wrap" id="letreroWrap" data-estado="cerrado">
+          <svg class="letrero-cuerdas" viewBox="0 0 100 46" preserveAspectRatio="none" aria-hidden="true"><path d="M50 2 L20 46 M50 2 L80 46"/></svg>
+          <div class="letrero">
+            <p class="letrero-ahora"><span class="luz" aria-hidden="true"></span>Ahora mismo</p>
+            <div role="status">
+              <p class="letrero-est" id="letreroEst">Cerrado</p>
+              <p class="letrero-det" id="letreroDet">Abrimos de 21:00 a 3:00</p>
+            </div>
+            <p class="letrero-cuenta" id="letreroCuenta">&nbsp;</p>
+          </div>
+        </div>
+        <ul class="dias" id="dias" aria-label="Horario por día">
+          <li class="dia" data-dow="1"><span><b>Lunes</b><span class="hoy-tag">Hoy</span></span><span>21:00 a 3:00</span></li>
+          <li class="dia" data-dow="2"><span><b>Martes</b><span class="hoy-tag">Hoy</span></span><span>21:00 a 3:00</span></li>
+          <li class="dia" data-dow="3"><span><b>Miércoles</b><span class="hoy-tag">Hoy</span></span><span>21:00 a 3:00</span></li>
+          <li class="dia" data-dow="4"><span><b>Jueves</b><span class="hoy-tag">Hoy</span></span><span>21:00 a 3:00</span></li>
+          <li class="dia" data-dow="5"><span><b>Viernes</b><span class="hoy-tag">Hoy</span></span><span>21:00 a 3:30</span></li>
+          <li class="dia" data-dow="6"><span><b>Sábado</b><span class="hoy-tag">Hoy</span></span><span>21:00 a 3:30</span></li>
+          <li class="dia" data-dow="0"><span><b>Domingo</b><span class="hoy-tag">Hoy</span></span><span>21:00 a 3:00</span></li>
+        </ul>
+      </div>
+
+      <div class="ubi">
+        <div class="mapa" id="mapa">
+          <div class="fachada" id="fachada">
+            <div class="pin" aria-hidden="true"></div>
+            <p>El mapa es de Google Maps. Al cargarlo, Google puede guardar sus propias cookies.</p>
+            <button class="btn btn-cortado btn-sm" type="button" id="btnMapa">Ver el mapa</button>
+          </div>
+        </div>
+        <div class="ubi-info">
+          <h3>Calle Real 19</h3>
+          <p class="dir">28320 Pinto, Madrid</p>
+          <div class="fila-btn">
+            <a class="btn btn-outline btn-sm" id="enlaceGoogle" target="_blank" rel="noopener">Ver en Google Maps</a>
+            <a class="btn btn-outline btn-sm" id="enlaceApple" target="_blank" rel="noopener">Ver en Apple Maps</a>
+          </div>
+          <div class="ubi-tel">
+            <a href="tel:+34611461335"><svg class="ico"><use href="#i-tel"/></svg>611 46 13 35</a>
+            <a href="https://www.instagram.com/caprichopinto_/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-ig"/></svg>@caprichopinto_</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PREGUNTAS ===== -->
+<section class="sec faq" id="preguntas">
+  <div class="faq-fondo" aria-hidden="true"><img src="assets/img/flores-grande.webp" width="616" height="1440" loading="lazy" alt=""></div>
+  <div class="wrap">
+    <div class="faq-wrap">
+      <h2>Preguntas frecuentes</h2>
+
+      <div class="faq-item open">
+        <button class="faq-q" type="button" id="q1" aria-expanded="true" aria-controls="a1">¿A qué hora abrís?</button>
+        <div class="faq-a" id="a1" role="region" aria-labelledby="q1"><p>Todos los días de 21:00 a 3:00. Los viernes y los sábados cerramos a las 3:30.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" id="q2" aria-expanded="false" aria-controls="a2">¿Cómo reservo una mesa?</button>
+        <div class="faq-a" id="a2" role="region" aria-labelledby="q2"><p>Llámanos al <a href="tel:+34611461335">611 46 13 35</a> o escríbenos por mensaje privado en <a href="https://ig.me/m/caprichopinto_" target="_blank" rel="noopener">Instagram</a>.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" id="q3" aria-expanded="false" aria-controls="a3">¿Hacéis cumpleaños y eventos privados?</button>
+        <div class="faq-a" id="a3" role="region" aria-labelledby="q3"><p>Sí. Son personalizados y nos adaptamos a tu presupuesto. Escríbenos por mensaje privado con la fecha y cuántos sois, y te contamos las opciones.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" id="q4" aria-expanded="false" aria-controls="a4">¿Puede entrar cualquier persona?</button>
+        <div class="faq-a" id="a4" role="region" aria-labelledby="q4"><p>Capricho es un local solo para mayores de 18 años, porque servimos alcohol y cachimbas.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" id="q5" aria-expanded="false" aria-controls="a5">¿Qué promociones hay?</button>
+        <div class="faq-a" id="a5" role="region" aria-labelledby="q5"><p>Las publicamos en <a href="https://www.instagram.com/caprichopinto_/" target="_blank" rel="noopener">nuestro Instagram</a> y cambian con el tiempo. Pregunta en barra cuáles están activas esta semana.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" id="q6" aria-expanded="false" aria-controls="a6">¿Dónde estáis?</button>
+        <div class="faq-a" id="a6" role="region" aria-labelledby="q6"><p>En la calle Real 19, en Pinto (Madrid). Tienes el mapa y los botones para llegar justo encima, en la sección de horario.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="pie-grid">
+      <div>
+        <img class="pie-logo" src="assets/img/logo.webp" width="348" height="348" loading="lazy" alt="Logo de Capricho">
+        <p class="pie-desc">Pub con cachimbas, billar y fútbol en pantalla en la calle Real 19, Pinto (Madrid).</p>
+      </div>
+      <div class="pie-col">
+        <p class="pie-tit">La casa</p>
+        <ul>
+          <li><a href="#cumpleanos">Cumpleaños y eventos</a></li>
+          <li><a href="#carta">La carta</a></li>
+          <li><a href="#promos">Promos y juegos</a></li>
+          <li><a href="#ambiente">Ambiente</a></li>
+          <li><a href="#horario">Horario y cómo llegar</a></li>
+        </ul>
+      </div>
+      <div class="pie-col">
+        <p class="pie-tit">Contacto</p>
+        <ul>
+          <li><a href="tel:+34611461335">611 46 13 35</a></li>
+          <li>Calle Real 19, Pinto</li>
+          <li>21:00 a 3:00 (V y S hasta 3:30)</li>
+        </ul>
+        <div class="redes"><a class="btn-social" href="https://www.instagram.com/caprichopinto_/" target="_blank" rel="noopener" aria-label="Instagram de Capricho (@caprichopinto_)"><svg class="ico"><use href="#i-ig"/></svg></a></div>
+      </div>
+      <div class="pie-col">
+        <p class="pie-tit">Aviso</p>
+        <div class="mas18"><b aria-hidden="true">+18</b><p>Local solo para mayores de 18 años. El alcohol y las cachimbas son solo para adultos.</p></div>
+      </div>
+    </div>
+    <div class="pie-abajo">
+      <span>© 2026 Capricho. Todos los derechos reservados.</span>
+      <div class="pie-legales">
+        <a href="privacy.html">Política de privacidad</a>
+        <a href="terms.html">Términos y condiciones</a>
+      </div>
+      <span>Web diseñada por Diego De Galdo</span>
+    </div>
+  </div>
+  <span class="pie-gigante" aria-hidden="true"></span>
+</footer>
+
+<div class="barra-fija" id="barraFija" role="region" aria-label="Reservar mesa">
+  <div class="info"><strong>Capricho</strong><span id="barraEstado">Abrimos de 21:00 a 3:00</span></div>
+  <a class="btn btn-cortado btn-sm" href="tel:+34611461335"><svg class="ico"><use href="#i-tel"/></svg>Llamar</a>
+</div>
+
+<div class="cookie-banner" id="cookieBanner" role="region" aria-label="Aviso de cookies">
+  <p class="cookie-texto">Usamos solo cookies esenciales. El mapa de Google Maps no se carga hasta que lo pides o aceptas. Más detalle en la <a href="privacy.html">política de privacidad</a>.</p>
+  <div class="cookie-botones">
+    <button class="btn-rechazar" id="btnRechazar" type="button">Rechazar</button>
+    <button class="btn-aceptar" id="btnAceptar" type="button">Aceptar</button>
+  </div>
+</div>
+
+<dialog class="lightbox" id="lightbox" aria-label="Foto ampliada">
+  <div class="lb-inner">
+    <div class="lb-imagen"><img id="lbImg" alt=""></div>
+    <div class="lb-barra">
+      <span class="lb-pie" id="lbPie"></span>
+      <div class="lb-controles">
+        <button class="lb-btn" id="lbPrev" type="button" aria-label="Foto anterior">‹</button>
+        <button class="lb-btn" id="lbNext" type="button" aria-label="Foto siguiente">›</button>
+        <button class="lb-btn" id="lbClose" type="button" aria-label="Cerrar">✕</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  'use strict';
+  var $ = function(s, c){ return (c || document).querySelector(s); };
+  var $$ = function(s, c){ return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hoverFino = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  var conIO = 'IntersectionObserver' in window;
+
+  /* ---------- Horario y "abierto ahora" (hora de Madrid; la noche cruza la medianoche) ---------- */
+  var ZONA = 'Europe/Madrid';
+  var NOCHE = [21*60, 27*60];              // 21:00 a 3:00 del día siguiente
+  var NOCHE_LARGA = [21*60, 27*60 + 30];   // viernes y sábado: hasta las 3:30
+  var HORARIO = {0:[NOCHE], 1:[NOCHE], 2:[NOCHE], 3:[NOCHE], 4:[NOCHE], 5:[NOCHE_LARGA], 6:[NOCHE_LARGA]};   // 0 = domingo
+  var NOMBRE_DIA = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+
+  function ahora(){
+    try {
+      var o = {};
+      new Intl.DateTimeFormat('en-US', {timeZone: ZONA, weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23'}).formatToParts(new Date()).forEach(function(p){ o[p.type] = p.value; });
+      return {d: {Sun:0, Mon:1, Tue:2, Wed:3, Thu:4, Fri:5, Sat:6}[o.weekday], min: (+o.hour) * 60 + (+o.minute)};
+    } catch(e){ var n = new Date(); return {d: n.getDay(), min: n.getHours() * 60 + n.getMinutes()}; }
+  }
+  function hh(m){ m = m % 1440; return Math.floor(m / 60) + ':' + ('0' + (m % 60)).slice(-2); }
+  function duracion(m){
+    var d = Math.floor(m / 1440), h = Math.floor((m % 1440) / 60), mi = m % 60;
+    if (d > 0) return d + ' d' + (h ? ' ' + h + ' h' : '');
+    if (h > 0) return h + ' h' + (mi ? ' ' + mi + ' min' : '');
+    return mi + ' min';
+  }
+  function estado(t){
+    var i, tr;
+    /* La madrugada de hoy pertenece a la noche de ayer */
+    tr = HORARIO[(t.d + 6) % 7] || [];
+    for (i = 0; i < tr.length; i++) if (tr[i][1] > 1440 && t.min < tr[i][1] - 1440) return {abierto: true, madrugada: true, cierra: tr[i][1], falta: tr[i][1] - 1440 - t.min};
+    tr = HORARIO[t.d] || [];
+    for (i = 0; i < tr.length; i++) if (t.min >= tr[i][0] && t.min < tr[i][1]) return {abierto: true, cierra: tr[i][1], falta: tr[i][1] - t.min};
+    for (var k = 0; k < 8; k++){
+      var dia = (t.d + k) % 7, tt = HORARIO[dia] || [];
+      for (i = 0; i < tt.length; i++){ var f = k * 1440 + tt[i][0] - t.min; if (f > 0) return {abierto: false, k: k, dia: dia, abre: tt[i][0], falta: f}; }
+    }
+    return {abierto: false, k: -1};
+  }
+  function set(el, v){ if (el && el.textContent !== v) el.textContent = v; }
+
+  var elPildora = $('#estadoPildora'), elPildoraTxt = $('#estadoTexto'), elBarra = $('#barraEstado');
+  var elLetrero = $('#letreroWrap'), elEst = $('#letreroEst'), elDet = $('#letreroDet'), elCuenta = $('#letreroCuenta');
+  function pintar(){
+    var t = ahora(), e = estado(t), det, cuenta = '', pildora, cuando = '';
+    if (e.abierto){
+      det = 'Cerramos a las ' + hh(e.cierra); cuenta = 'Quedan ' + duracion(e.falta);
+      pildora = 'Abierto ahora · hasta las ' + hh(e.cierra);
+    } else if (e.k >= 0){
+      cuando = (e.k === 0 ? 'hoy' : e.k === 1 ? 'mañana' : 'el ' + NOMBRE_DIA[e.dia]) + ' a las ' + hh(e.abre);
+      det = 'Abrimos ' + cuando; cuenta = 'Faltan ' + duracion(e.falta);
+      pildora = 'Cerrado ahora · abrimos ' + cuando;
+    } else { det = 'Consulta el horario'; pildora = 'Consulta el horario'; }
+    var s = e.abierto ? 'abierto' : 'cerrado';
+    elLetrero.setAttribute('data-estado', s);
+    elPildora.classList.toggle('cerrado', !e.abierto);
+    set(elEst, e.abierto ? 'Abierto' : 'Cerrado'); set(elDet, det); set(elCuenta, cuenta || ' ');
+    set(elPildoraTxt, pildora);
+    set(elBarra, e.abierto ? 'Abierto hasta las ' + hh(e.cierra) : (e.k >= 0 ? 'Abrimos ' + cuando : 'Consulta el horario'));
+    var activa = e.abierto && e.madrugada ? (t.d + 6) % 7 : t.d;
+    $$('#dias .dia').forEach(function(li){
+      var es = +li.getAttribute('data-dow') === activa;
+      li.classList.toggle('hoy', es);
+      if (es) set($('.hoy-tag', li), e.abierto && e.madrugada ? 'Ahora' : 'Hoy');
+    });
+  }
+  pintar(); setInterval(pintar, 30000);
+
+  /* ---------- Navegación: borde al hacer scroll, sección activa, menú móvil ---------- */
+  var nav = $('#navbar');
+  var barra = $('#barraFija');
+  function alScroll(){
+    nav.classList.toggle('encogida', window.scrollY > 40);
+    barra.classList.toggle('visible', window.scrollY > window.innerHeight * 0.7);
+  }
+  var pendScroll = false;
+  window.addEventListener('scroll', function(){ if (!pendScroll){ pendScroll = true; requestAnimationFrame(function(){ pendScroll = false; alScroll(); }); } }, {passive: true});
+  alScroll();
+
+  if (conIO){
+    var enlaces = $$('#navLinks a');
+    var obsNav = new IntersectionObserver(function(en){
+      en.forEach(function(x){ if (x.isIntersecting) enlaces.forEach(function(a){ a.classList.toggle('activo', a.getAttribute('href') === '#' + x.target.id); }); });
+    }, {rootMargin: '-45% 0px -50% 0px'});
+    $$('main section[id]').forEach(function(s){ obsNav.observe(s); });
+  }
+
+  var hamb = $('#hamb'), overlay = $('#overlayMenu');
+  function menu(abrir){
+    hamb.classList.toggle('activo', abrir); overlay.classList.toggle('activo', abrir);
+    hamb.setAttribute('aria-expanded', abrir); hamb.setAttribute('aria-label', abrir ? 'Cerrar menú' : 'Abrir menú');
+    document.body.classList.toggle('bloqueado', abrir);
+  }
+  hamb.addEventListener('click', function(){ menu(!overlay.classList.contains('activo')); });
+  $$('[data-cerrar]', overlay).forEach(function(a){ a.addEventListener('click', function(){ menu(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && overlay.classList.contains('activo')){ menu(false); hamb.focus(); } });
+
+  /* ---------- Carta: pestañas (patrón ARIA, flechas, Inicio/Fin) + foto según pestaña ---------- */
+  var tablist = $('#tablist'), tabs = $$('.tab', tablist);
+  var fotos = $$('.carta-foto img');
+  function activar(tab, enfocar, inicial){
+    tabs.forEach(function(t){
+      var on = t === tab;
+      t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).toggleAttribute('data-activo', on);
+    });
+    var f = tab.getAttribute('data-foto');
+    fotos.forEach(function(im){ im.classList.toggle('on', im.getAttribute('data-f') === f); });
+    if (enfocar) tab.focus();
+    if (!inicial && tablist.scrollWidth > tablist.clientWidth) tablist.scrollTo({left: tab.offsetLeft - (tablist.clientWidth - tab.offsetWidth) / 2, behavior: reduce ? 'auto' : 'smooth'});
+  }
+  tabs.forEach(function(tab, i){
+    tab.addEventListener('click', function(){ activar(tab, false); });
+    tab.addEventListener('keydown', function(e){
+      var d = null;
+      if (e.key === 'ArrowRight') d = tabs[(i + 1) % tabs.length];
+      if (e.key === 'ArrowLeft') d = tabs[(i - 1 + tabs.length) % tabs.length];
+      if (e.key === 'Home') d = tabs[0];
+      if (e.key === 'End') d = tabs[tabs.length - 1];
+      if (d){ e.preventDefault(); activar(d, true); }
+    });
+  });
+
+  /* ---------- Preguntas frecuentes (una abierta cada vez) ---------- */
+  $$('.faq-item').forEach(function(item){
+    var q = $('.faq-q', item);
+    q.addEventListener('click', function(){
+      var abierto = item.classList.contains('open');
+      $$('.faq-item.open').forEach(function(i){ i.classList.remove('open'); $('.faq-q', i).setAttribute('aria-expanded', 'false'); });
+      if (!abierto){ item.classList.add('open'); q.setAttribute('aria-expanded', 'true'); }
+    });
+  });
+
+  /* ---------- Fotos ampliables (dialog nativo, grupos independientes) ---------- */
+  var dlg = $('#lightbox'), lbImg = $('#lbImg'), lbPie = $('#lbPie'), lbPrev = $('#lbPrev'), lbNext = $('#lbNext');
+  var todas = $$('[data-galeria]'), grupo = [], idx = 0, disparador = null, cierre = 0;
+  function mostrar(i){
+    idx = (i + grupo.length) % grupo.length;
+    var f = grupo[idx], mini = $('img', f);
+    lbImg.src = f.getAttribute('data-grande') || mini.src;
+    lbImg.alt = mini.alt;
+    var pie = f.getAttribute('data-pie') || '';
+    lbPie.textContent = pie + (grupo.length > 1 ? ' (' + (idx + 1) + ' de ' + grupo.length + ')' : '');
+    lbPrev.hidden = lbNext.hidden = grupo.length < 2;
+  }
+  function abrir(f){
+    clearTimeout(cierre);
+    disparador = f;
+    var nombre = f.getAttribute('data-galeria');
+    grupo = todas.filter(function(x){ return x.getAttribute('data-galeria') === nombre; });
+    mostrar(grupo.indexOf(f));
+    if (!dlg.open) dlg.showModal();
+    requestAnimationFrame(function(){ dlg.classList.add('is-open'); });
+  }
+  function cerrar(){
+    dlg.classList.remove('is-open');
+    var fin = function(){ if (dlg.open) dlg.close(); if (disparador) disparador.focus(); };
+    if (reduce) fin(); else cierre = setTimeout(fin, 230);
+  }
+  todas.forEach(function(f){ f.addEventListener('click', function(){ abrir(f); }); });
+  lbPrev.addEventListener('click', function(){ mostrar(idx - 1); });
+  lbNext.addEventListener('click', function(){ mostrar(idx + 1); });
+  $('#lbClose').addEventListener('click', cerrar);
+  dlg.addEventListener('click', function(e){ if (e.target === dlg) cerrar(); });
+  dlg.addEventListener('keydown', function(e){
+    if (grupo.length > 1 && e.key === 'ArrowRight') mostrar(idx + 1);
+    if (grupo.length > 1 && e.key === 'ArrowLeft') mostrar(idx - 1);
+  });
+  dlg.addEventListener('cancel', function(e){ e.preventDefault(); cerrar(); });
+
+  /* ---------- Mapa (solo se carga si lo pides o ya aceptaste) y enlaces ---------- */
+  var NOMBRE_NEGOCIO = 'Capricho';
+  var DIRECCION = 'Calle Real 19, 28320 Pinto, Madrid';
+  var q = encodeURIComponent(NOMBRE_NEGOCIO + ' ' + DIRECCION);
+  var MAPA_URL = 'https://maps.google.com/maps?q=' + q + '&hl=es&z=17&output=embed';
+  $('#enlaceGoogle').href = 'https://www.google.com/maps/search/?api=1&query=' + q;
+  $('#enlaceApple').href = 'https://maps.apple.com/?q=' + q;
+  function cargarMapa(){
+    var caja = $('#mapa'), fachada = $('#fachada');
+    if (!fachada) return;
+    var f = document.createElement('iframe');
+    f.src = MAPA_URL; f.title = 'Mapa con la ubicación de ' + NOMBRE_NEGOCIO; f.loading = 'lazy';
+    f.referrerPolicy = 'no-referrer-when-downgrade'; f.setAttribute('allowfullscreen', '');
+    caja.appendChild(f); fachada.remove();
+  }
+  $('#btnMapa').addEventListener('click', cargarMapa);
+
+  /* ---------- Cookies ---------- */
+  function getCookie(n){ var m = document.cookie.match(new RegExp('(^| )' + n + '=([^;]+)')); return m ? m[2] : null; }
+  function setCookie(n, v, dias){ var d = new Date(); d.setTime(d.getTime() + dias * 864e5); document.cookie = n + '=' + v + '; expires=' + d.toUTCString() + '; path=/; SameSite=Lax'; }
+  var banner = $('#cookieBanner'), decidido = getCookie('consentimiento_cookies');
+  if (!decidido) setTimeout(function(){ banner.classList.add('visible'); }, 600);
+  if (decidido === 'aceptado' && conIO){
+    new IntersectionObserver(function(en, o){ if (en[0].isIntersecting){ o.disconnect(); cargarMapa(); } }, {rootMargin: '300px 0px'}).observe($('#mapa'));
+  }
+  $('#btnAceptar').addEventListener('click', function(){ setCookie('consentimiento_cookies', 'aceptado', 365); banner.classList.remove('visible'); cargarMapa(); });
+  $('#btnRechazar').addEventListener('click', function(){ setCookie('consentimiento_cookies', 'rechazado', 365); banner.classList.remove('visible'); });
+
+  /* ---------- Movimiento: se pausa fuera de pantalla y no existe con movimiento reducido ---------- */
+  if (!conIO){ $$('.mov').forEach(function(el){ el.classList.add('en-pantalla'); }); }
+  if (reduce) return;
+  if (conIO){
+    var obsMov = new IntersectionObserver(function(en){ en.forEach(function(e){ e.target.classList.toggle('en-pantalla', e.isIntersecting); }); });
+    $$('.mov').forEach(function(el){ obsMov.observe(el); });
+
+    /* Titulares con revelado en recorte (se observa el contenedor) */
+    $$('main h2').forEach(function(h){ h.classList.add('rev-t'); });
+    var obsTit = new IntersectionObserver(function(en){ en.forEach(function(e){ if (e.isIntersecting){ $$('.rev-t', e.target).forEach(function(h){ h.classList.add('rev-on'); }); obsTit.unobserve(e.target); } }); }, {rootMargin: '0px 0px -12% 0px'});
+    $$('.rev-t').forEach(function(h){ obsTit.observe(h.parentNode); });
+  }
+
+  if (hoverFino){
+    /* Resplandor que sigue al ratón: una capa por elemento y un solo listener */
+    var SEL = '.con-glow', pend = false, ult = null;
+    $$('.btn, .tab, .ticket, .destacada').forEach(function(el){
+      el.classList.add('con-glow');
+      var c = document.createElement('span'); c.className = 'glow-capa'; c.setAttribute('aria-hidden', 'true'); el.appendChild(c);
+    });
+    function glow(){
+      pend = false; var e = ult, el = e.target;
+      while (el && el !== document.body && !(el.matches && el.matches(SEL))) el = el.parentElement;
+      $$(SEL + '.glow-activo').forEach(function(n){ if (n !== el) n.classList.remove('glow-activo'); });
+      if (el && el.matches && el.matches(SEL)){
+        var r = el.getBoundingClientRect();
+        el.style.setProperty('--mx', (e.clientX - r.left) + 'px'); el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+        el.classList.add('glow-activo');
+      }
+    }
+    document.addEventListener('mousemove', function(e){ ult = e; if (!pend){ pend = true; requestAnimationFrame(glow); } });
+
+    /* Cartel con inclinación 3D solo con ratón */
+    var cartel = $('#cartelWrap .foto'), raf = 0;
+    if (cartel){
+      cartel.addEventListener('pointermove', function(e){
+        if (e.pointerType !== 'mouse') return;
+        var b = cartel.getBoundingClientRect(), x = (e.clientX - b.left) / b.width - .5, y = (e.clientY - b.top) / b.height - .5;
+        if (raf) cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(function(){ raf = 0; cartel.style.setProperty('--rx', (-y * 6).toFixed(2) + 'deg'); cartel.style.setProperty('--ry', (x * 8).toFixed(2) + 'deg'); });
+      });
+      cartel.addEventListener('pointerleave', function(){ if (raf){ cancelAnimationFrame(raf); raf = 0; } cartel.style.setProperty('--rx', '0deg'); cartel.style.setProperty('--ry', '0deg'); });
+    }
+  }
+})();
+</script>
+</body>
+</html>
