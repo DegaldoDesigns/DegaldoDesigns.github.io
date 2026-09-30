@@ -3,11 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Diego De Galdo | Webs para negocios locales</title>
-  <meta name="description" content="Portfolio de Diego De Galdo: webs diseñadas y programadas a mano en HTML, CSS y JavaScript para negocios locales. Responsive, accesibles y con SEO local.">
+  <title>Diego De Galdo | Webs para bares y negocios de Pinto</title>
+  <meta name="description" content="Webs a medida para bares, restaurantes y negocios de Pinto y alrededores: carta con fotos, reservas, horario en vivo y un panel para editarla. Desde 150 €.">
+  <link rel="canonical" href="https://degaldodesigns.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Diego De Galdo | Webs para negocios de Pinto">
+  <meta property="og:description" content="Te enseño tu web ya hecha antes de pagar nada. Carta con fotos, reservas y horario en vivo, con tu dominio y un panel para editarla.">
+  <meta property="og:url" content="https://degaldodesigns.github.io/">
+  <meta property="og:image" content="https://degaldodesigns.github.io/img/xavi-pinchos.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Diego De Galdo | Webs para negocios de Pinto">
+  <meta name="twitter:description" content="Te enseño tu web ya hecha antes de pagar nada.">
+  <meta name="twitter:image" content="https://degaldodesigns.github.io/img/xavi-pinchos.webp">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2317130f'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Arial' font-weight='800' font-size='30' fill='%23f3efe7'%3EDG%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Diego De Galdo, diseño web",
+    "url": "https://degaldodesigns.github.io/",
+    "email": "mailto:Diegospk291@gmail.com",
+    "areaServed": "Pinto, Madrid",
+    "address": {"@type": "PostalAddress", "addressLocality": "Pinto", "addressRegion": "Madrid", "addressCountry": "ES"}
+  }
+  </script>
   <style>
     :root{
       --paper:#f3efe7;
@@ -17,7 +40,8 @@
       --line:#d6cdbd;
       --accent:#b53a12;
       --accent-ink:#ffffff;
-      --ease-out:cubic-bezier(.22,1,.36,1);
+      --ok:#1f6b3a;
+      --ease-out:cubic-bezier(.23,1,.32,1);
       --radius:14px;
     }
     *{box-sizing:border-box;margin:0;padding:0}
@@ -28,42 +52,91 @@
     .skip{position:fixed;left:12px;top:12px;z-index:10;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:8px;text-decoration:none;transform:translateY(-80px);transition:transform 160ms var(--ease-out)}
     .skip:focus{transform:translateY(0)}
     .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+    h1,h2,h3{text-wrap:balance}
+    p{text-wrap:pretty}
 
-    header.top{padding:28px 0;border-bottom:1px solid var(--line)}
+    header.top{padding:24px 0;border-bottom:1px solid var(--line)}
     header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
     .name{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:20px;letter-spacing:-.01em;text-decoration:none}
-    .mail{font-weight:600;text-decoration-thickness:2px;text-underline-offset:4px}
+    nav ul{display:flex;gap:22px;list-style:none;flex-wrap:wrap}
+    nav a{font-weight:600;font-size:15px;text-decoration:none}
 
-    .intro{padding:88px 0 64px}
+    .btn{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--paper);font-weight:600;text-decoration:none;padding:13px 22px;border-radius:10px;transition:background-color 160ms var(--ease-out),transform 120ms var(--ease-out)}
+    .btn.alt{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+    .btn:active{transform:scale(.97)}
+
+    .intro{padding:80px 0 60px}
     .kicker{font-weight:600;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
-    h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(40px,6.4vw,78px);line-height:1.02;letter-spacing:-.025em;max-width:15ch}
-    .lead{margin-top:26px;max-width:58ch;font-size:19px;color:var(--ink-soft)}
+    h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(40px,6.4vw,76px);line-height:1.12;letter-spacing:-.025em;max-width:16ch}
+    .lead{margin-top:24px;max-width:58ch;font-size:19px;color:var(--ink-soft)}
+    .acciones{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
 
-    .how{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px;list-style:none}
-    .how li{border:1px solid var(--line);background:var(--paper-2);border-radius:999px;padding:7px 15px;font-size:15px;font-weight:500}
+    .cifras{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:56px}
+    .cifras div{padding:20px 20px 20px 0}
+    .cifras div+div{padding-left:20px;border-left:1px solid var(--line)}
+    .cifras b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:26px;letter-spacing:-.01em}
+    .cifras span{color:var(--ink-soft);font-size:15px}
 
-    .work{padding:24px 0 96px}
-    .work h2{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:28px;letter-spacing:-.01em;margin-bottom:8px}
-    .work .note{color:var(--ink-soft);margin-bottom:36px;max-width:62ch}
-    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 32px}
+    section.bloque{padding:72px 0}
+    section.bloque h2{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(28px,3.4vw,38px);line-height:1.15;letter-spacing:-.015em;margin-bottom:10px}
+    .note{color:var(--ink-soft);margin-bottom:34px;max-width:62ch}
+
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 32px}
+    .grid.tres{grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 26px}
     .card{display:flex;flex-direction:column}
     .card a.thumb{display:block;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);aspect-ratio:1200/630;background:var(--ink)}
-    .card img{display:block;width:100%;height:100%;object-fit:cover;transition:transform 420ms var(--ease-out)}
-    .card h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:22px;letter-spacing:-.01em;margin-top:18px}
+    .card img{display:block;width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover;transition:transform 420ms var(--ease-out)}
+    .estado{align-self:flex-start;margin-top:16px;font-size:13px;font-weight:600;letter-spacing:.04em;padding:3px 10px;border-radius:999px;background:var(--paper-2);border:1px solid var(--line)}
+    .estado.vivo{background:#dcebdf;border-color:#b8d3bf;color:var(--ok)}
+    .card h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:22px;letter-spacing:-.01em;margin-top:10px}
     .card .meta{font-size:15px;color:var(--ink-soft);margin-top:2px}
     .card p.desc{margin-top:10px}
     .card .go{margin-top:12px;font-weight:600;color:var(--accent);text-decoration-thickness:2px;text-underline-offset:4px;align-self:flex-start}
-    @media (hover:hover) and (pointer:fine){
-      .card a.thumb:hover img{transform:scale(1.03)}
-    }
 
-    footer{border-top:1px solid var(--line);padding:36px 0 48px;color:var(--ink-soft);font-size:15px}
+    .oscuro{background:var(--ink);color:var(--paper)}
+    .oscuro .note{color:#cfc6b8}
+    .planes{display:grid;grid-template-columns:1.1fr 1fr;gap:24px}
+    .plan{border:1px solid #3a322a;border-radius:var(--radius);padding:28px}
+    .plan.dest{background:#221c16;border-color:#6b5a48}
+    .plan h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:22px}
+    .precio{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:44px;line-height:1.1;margin:10px 0 4px}
+    .precio small{font-family:"Figtree",sans-serif;font-weight:500;font-size:16px;color:#cfc6b8}
+    .plan ul{list-style:none;margin-top:16px}
+    .plan li{padding:7px 0 7px 26px;position:relative;border-top:1px solid #2e2720}
+    .plan li::before{content:"";position:absolute;left:4px;top:15px;width:10px;height:10px;border-radius:50%;background:#e0764c}
+    .aparte{margin-top:18px;font-size:15px;color:#cfc6b8}
+
+    .pasos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;list-style:none;counter-reset:p}
+    .pasos li{counter-increment:p;border-top:2px solid var(--ink);padding-top:16px}
+    .pasos li::before{content:counter(p);display:block;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:30px;color:var(--accent);line-height:1.1;margin-bottom:6px}
+    .pasos b{display:block;font-size:18px;margin-bottom:4px}
+    .pasos span{color:var(--ink-soft);font-size:16px}
+
+    .contacto{text-align:left}
+    .contacto .btn{margin-top:8px}
+
+    footer{border-top:1px solid var(--line);padding:32px 0 44px;color:var(--ink-soft);font-size:15px}
     footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
+    @media (hover:hover) and (pointer:fine){
+      .card a.thumb:hover img{transform:scale(1.03)}
+      .btn:hover{background:#3a2f25}
+      .btn.alt:hover{background:var(--paper-2)}
+      nav a:hover{color:var(--accent)}
+    }
+    @media (max-width:980px){
+      .grid.tres{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .pasos{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
     @media (max-width:760px){
-      .intro{padding:56px 0 44px}
-      .grid{grid-template-columns:1fr;gap:40px}
+      nav{display:none}
+      .intro{padding:52px 0 40px}
+      .grid,.grid.tres,.planes{grid-template-columns:1fr;gap:36px}
       .lead{font-size:18px}
+      .cifras{grid-template-columns:1fr}
+      .cifras div+div{padding-left:0;border-left:0;border-top:1px solid var(--line)}
+      section.bloque{padding:56px 0}
+      .pasos{grid-template-columns:1fr}
     }
     @media (prefers-reduced-motion:reduce){
       *{transition:none!important}
@@ -71,45 +144,94 @@
   </style>
 </head>
 <body>
-  <a class="skip" href="#trabajos">Saltar a los proyectos</a>
+  <a class="skip" href="#main">Saltar al contenido</a>
 
   <header class="top">
     <div class="wrap">
       <a class="name" href="./">Diego De Galdo</a>
-      <a class="mail" href="mailto:Diegospk291@gmail.com">Diegospk291@gmail.com</a>
+      <nav aria-label="Secciones">
+        <ul>
+          <li><a href="#clientes">Trabajos</a></li>
+          <li><a href="#precios">Precios</a></li>
+          <li><a href="#como">Cómo trabajo</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="intro">
       <div class="wrap">
-        <p class="kicker">Maquetación web · Pinto, Madrid</p>
-        <h1>Webs a medida para negocios de barrio.</h1>
-        <p class="lead">Busco negocios locales, estudio su marca y construyo la web completa en HTML, CSS y JavaScript, desde el diseño hasta la publicación. Cada proyecto pasa una auditoría automática de accesibilidad, contraste y diseño responsive antes de enseñarlo.</p>
-        <ul class="how" aria-label="Forma de trabajar">
-          <li>HTML, CSS y JavaScript a mano</li>
-          <li>Responsive a 375, 768 y 1440 px</li>
-          <li>Accesibilidad WCAG 2.1</li>
-          <li>SEO local y datos estructurados</li>
-          <li>IA en el proceso (Claude)</li>
-        </ul>
+        <p class="kicker">Diseño web · Pinto, Madrid</p>
+        <h1>Webs para los bares y negocios de Pinto.</h1>
+        <p class="lead">Hago la web de tu negocio con tus fotos, tu carta y tu horario, y te la enseño terminada antes de que pagues nada. La publico con tu dominio, la conecto a Google y te dejo un panel para que cambies precios y platos tú mismo.</p>
+        <div class="acciones">
+          <a class="btn" href="#clientes">Ver trabajos</a>
+          <a class="btn alt" href="mailto:Diegospk291@gmail.com?subject=Web%20para%20mi%20negocio">Pedir mi web</a>
+        </div>
+        <div class="cifras">
+          <div><b>Carta en el móvil</b><span>Con fotos y precios, fácil de leer y visible para Google</span></div>
+          <div><b>Panel para editarla</b><span>Cambias platos y precios sin depender de nadie</span></div>
+          <div><b>Desde 150 €</b><span>Pago único. Sin cuotas obligatorias</span></div>
+        </div>
       </div>
     </section>
 
-    <section class="work" id="trabajos" aria-labelledby="trabajos-titulo">
+    <section class="bloque" id="clientes" aria-labelledby="clientes-titulo">
       <div class="wrap">
-        <h2 id="trabajos-titulo">Proyectos</h2>
-        <p class="note">Propuestas que he diseñado y programado para negocios reales, con sus fotos, su carta y su horario.</p>
+        <h2 id="clientes-titulo">Clientes</h2>
+        <p class="note">Negocios que ya trabajan conmigo.</p>
+        <div class="grid tres">
+          <article class="card">
+            <a class="thumb" href="https://xavipinchos.es/" target="_blank" rel="noopener" aria-label="Ver la web de Xavi Pinchos, se abre en otra pestaña">
+              <img src="img/xavi-pinchos.webp" width="960" height="504" alt="Portada de la web de Xavi Pinchos: logo del bar junto a una parrillada de carne">
+            </a>
+            <span class="estado vivo">Online</span>
+            <h3>Xavi Pinchos</h3>
+            <p class="meta">Bar y restaurante · Pinto (Madrid)</p>
+            <p class="desc">Dos cartas que cambian solas según la hora (mañanas y completa), menú del día, QR en las mesas y un panel con el que el dueño edita la carta.</p>
+            <a class="go" href="https://xavipinchos.es/" target="_blank" rel="noopener">xavipinchos.es</a>
+          </article>
 
-        <div class="grid">
+          <article class="card">
+            <a class="thumb" href="capricho/" aria-label="Ver la web de Capricho">
+              <img src="img/capricho.webp" width="960" height="504" alt="Portada de la web de Capricho: rótulo de neón rosa y el logo del local sobre fondo morado" loading="lazy">
+            </a>
+            <span class="estado">Se publica en octubre</span>
+            <h3>Capricho</h3>
+            <p class="meta">Copas, cachimbas y billar · Pinto (Madrid)</p>
+            <p class="desc">Identidad de neón fiel al local, carta de copas y cachimbas con filtros y un cartel que dice si está abierto ahora.</p>
+            <a class="go" href="capricho/">Ver la web</a>
+          </article>
+
           <article class="card">
             <a class="thumb" href="loles-jimenez/" aria-label="Ver la web de Loles Jiménez GYM &amp; PILATES">
-              <img src="img/loles-jimenez.webp" width="960" height="504" alt="Portada de la web de Loles Jiménez GYM &amp; PILATES: titular en blanco y verde neón sobre una foto del gimnasio">
+              <img src="img/loles-jimenez.webp" width="960" height="504" alt="Portada de la web de Loles Jiménez GYM &amp; PILATES: titular en blanco y verde neón sobre una foto del gimnasio" loading="lazy">
             </a>
+            <span class="estado">En marcha</span>
             <h3>Loles Jiménez GYM &amp; PILATES</h3>
             <p class="meta">Gimnasio · Torreperogil (Jaén)</p>
-            <p class="desc">Rediseñada a partir del propio cartel del gimnasio. Tarifas, actividades y un aviso de abierto o cerrado que se calcula con la hora real.</p>
+            <p class="desc">Hecha a partir del propio cartel del gimnasio: tarifas con el coste por día de entreno, actividades y reserva por WhatsApp.</p>
             <a class="go" href="loles-jimenez/">Ver la web</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bloque" aria-labelledby="propuestas-titulo" style="padding-top:0">
+      <div class="wrap">
+        <h2 id="propuestas-titulo">Propuestas</h2>
+        <p class="note">Webs que he preparado para negocios reales, con sus fotos y su carta, para enseñárselas.</p>
+        <div class="grid">
+          <article class="card">
+            <a class="thumb" href="morrina/" aria-label="Ver la web de Morriña">
+              <img src="img/morrina.webp" width="960" height="504" alt="Portada de la web de Morriña: logo con la vieira y una hamburguesa sobre fondo verde oscuro" loading="lazy">
+            </a>
+            <h3>Morriña</h3>
+            <p class="meta">Bar y street food · Pinto (Madrid)</p>
+            <p class="desc">Carta por pestañas con fotos de los platos, burger del mes, reserva de mesa y un horario en vivo que cruza la medianoche.</p>
+            <a class="go" href="morrina/">Ver la web</a>
           </article>
 
           <article class="card">
@@ -118,37 +240,70 @@
             </a>
             <h3>Della Grotta Streetfood</h3>
             <p class="meta">Hamburguesas y pizzas · Villaconejos (Madrid)</p>
-            <p class="desc">Carta por pestañas con fotos de los platos y un cartel de puerta con cuenta atrás hasta la apertura, según la hora de Madrid.</p>
+            <p class="desc">Carta con fotos de cada plato y un cartel de puerta con cuenta atrás hasta la apertura.</p>
             <a class="go" href="della-grotta/">Ver la web</a>
           </article>
-
-          <article class="card">
-            <a class="thumb" href="xavi-pinchos/" aria-label="Ver la web de Xavi Pinchos">
-              <img src="img/xavi-pinchos.webp" width="960" height="504" alt="Portada de la web de Xavi Pinchos: logo del bar junto a una parrillada de carne" loading="lazy">
-            </a>
-            <h3>Xavi Pinchos</h3>
-            <p class="meta">Bar y restaurante · Pinto (Madrid)</p>
-            <p class="desc">Carta de 76 platos organizada en cinco pestañas, sección de fútbol y eventos, y un tablero de horario en directo.</p>
-            <a class="go" href="xavi-pinchos/">Ver la web</a>
-          </article>
-
-          <article class="card">
-            <a class="thumb" href="capricho/" aria-label="Ver la web de Capricho">
-              <img src="img/capricho.webp" width="960" height="504" alt="Portada de la web de Capricho: rótulo de neón rosa y el logo del local sobre fondo morado" loading="lazy">
-            </a>
-            <h3>Capricho</h3>
-            <p class="meta">Copas, cachimbas y billar · Pinto (Madrid)</p>
-            <p class="desc">Identidad de neón fiel a la marca del local. El mapa de Google solo se carga si el visitante lo acepta.</p>
-            <a class="go" href="capricho/">Ver la web</a>
-          </article>
         </div>
+      </div>
+    </section>
+
+    <section class="bloque oscuro" id="precios" aria-labelledby="precios-titulo">
+      <div class="wrap">
+        <h2 id="precios-titulo">Precios claros</h2>
+        <p class="note">La web se paga una vez. Lo demás es opcional y sin permanencia.</p>
+        <div class="planes">
+          <div class="plan dest">
+            <h3>Tu web</h3>
+            <p class="precio">150 € <small>pago único</small></p>
+            <ul>
+              <li>Diseño a medida con tus fotos, tu carta y tus colores</li>
+              <li>Carta con precios, horario en vivo y botón de llamar, reservar o WhatsApp</li>
+              <li>Panel para que edites platos y precios</li>
+              <li>Publicada con tu dominio y conectada a Google Maps</li>
+              <li>Hecha para el móvil y accesible</li>
+            </ul>
+            <p class="aparte">Aparte: dominio (unos 12 € al año) y QR para las mesas (20 €).</p>
+          </div>
+          <div class="plan">
+            <h3>Plan mensual</h3>
+            <p class="precio">150 € <small>al mes</small></p>
+            <ul>
+              <li>Redes: grabación mensual y publicaciones</li>
+              <li>Ficha de Google al día y respuesta a reseñas</li>
+              <li>Cambios en la web incluidos</li>
+              <li>Informe de resultados cada mes</li>
+            </ul>
+            <p class="aparte">Con anuncios en tu zona: 180 € al mes (40 € de anuncios incluidos). Sin permanencia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bloque" id="como" aria-labelledby="como-titulo">
+      <div class="wrap">
+        <h2 id="como-titulo">Cómo trabajo</h2>
+        <p class="note">Sin riesgo para ti: primero ves la web, luego decides.</p>
+        <ol class="pasos">
+          <li><b>Te la enseño hecha</b><span>Estudio tu negocio y preparo la web con tus fotos y tu carta.</span></li>
+          <li><b>La ajustamos juntos</b><span>Confirmas precios, horario y lo que quieras cambiar.</span></li>
+          <li><b>La publico</b><span>Con tu dominio, conectada a Google y con QR si lo quieres.</span></li>
+          <li><b>La llevas tú</b><span>Editas la carta desde el panel, o me lo pides a mí.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="bloque contacto" id="contacto" aria-labelledby="contacto-titulo" style="padding-top:0">
+      <div class="wrap">
+        <h2 id="contacto-titulo">¿Quieres ver cómo quedaría la tuya?</h2>
+        <p class="note">Dime el nombre de tu negocio y te preparo una propuesta sin compromiso.</p>
+        <a class="btn" href="mailto:Diegospk291@gmail.com?subject=Web%20para%20mi%20negocio">Escribir a Diegospk291@gmail.com</a>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="wrap">
-      <span>Diego De Galdo · Pinto, Madrid</span>
+      <span>Diego De Galdo · Diseño web en Pinto, Madrid</span>
       <a href="mailto:Diegospk291@gmail.com">Diegospk291@gmail.com</a>
     </div>
   </footer>
