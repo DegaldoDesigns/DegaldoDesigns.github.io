@@ -24,11 +24,19 @@
 <meta name="twitter:description" content="Pilates, entrenamiento funcional, spinning, musculación y clases al aire libre. Desde 25 € al mes.">
 <meta name="twitter:image" content="https://gymypilateslolesjimenez.es/assets/img/og-image.jpg">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a0b09'/%3E%3Cpath d='M36 6 18 36h11l-5 22 22-32H34z' fill='%23a8f02e'/%3E%3C/svg%3E">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-48.png" sizes="48x48" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/anton-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Anton';src:url(assets/fonts/anton-400.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Barlow';src:url(assets/fonts/barlow-400.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Barlow';src:url(assets/fonts/barlow-500.woff2) format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Barlow';src:url(assets/fonts/barlow-600.woff2) format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Barlow';src:url(assets/fonts/barlow-700.woff2) format('woff2');font-weight:700;font-style:normal;font-display:swap}
+</style>
 
 <script type="application/ld+json">
 {
@@ -37,6 +45,8 @@
   "name": "Loles Jiménez GYM & PILATES",
   "url": "https://gymypilateslolesjimenez.es/",
   "image": "https://gymypilateslolesjimenez.es/assets/img/og-image.jpg",
+  "logo": "https://gymypilateslolesjimenez.es/assets/img/logo.webp",
+  "description": "Gimnasio en Torreperogil (Jaén) con pilates, entrenamiento funcional, spinning, musculación y clases al aire libre.",
   "telephone": "+34615899265",
   "priceRange": "25 € - 330 €",
   "address": {
@@ -428,12 +438,14 @@
   /* ---------- Pie ---------- */
   .pie{border-top:1px solid var(--linea); padding:64px 0 34px; position:relative; isolation:isolate; overflow:hidden}
   .pie-grid{display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr; gap:36px; padding-bottom:44px}
-  .pie h4{font:700 13px/1 var(--f-body); letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:6px 0 16px}
+  .pie h2{font:700 13px/1 var(--f-body); letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:6px 0 16px}
   .pie ul{list-style:none; margin:0; padding:0; display:grid; gap:10px}
   .pie ul a{text-decoration:none; color:var(--texto); font-size:16px}
   @media (hover:hover) and (pointer:fine){ .pie ul a:hover{color:var(--verde)} }
   .pie-logo img{height:auto; width:min(300px,100%)}
   .pie-marca p{color:var(--muted); margin-top:14px; max-width:34ch; font-size:16px}
+  .pie-bajo a{color:var(--texto); text-underline-offset:3px}
+  @media (hover:hover) and (pointer:fine){ .pie-bajo a:hover{color:var(--verde)} }
   .pie-bajo{display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; padding-top:26px; border-top:1px solid var(--linea); color:var(--muted); font-size:14px}
   .pie-palabra{font:400 13vw/.8 var(--f-display); text-transform:uppercase; color:transparent; -webkit-text-stroke:2px rgba(168,240,46,.12); white-space:nowrap; height:.62em; overflow:hidden; margin-top:40px; user-select:none}
   @media (max-width:860px){ .pie-grid{grid-template-columns:1fr 1fr} .pie-marca{grid-column:1/-1} }
@@ -568,7 +580,7 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero grano mov" aria-labelledby="titular">
-    <div class="hero-foto"><img src="assets/img/gym-interior-grande.webp" alt="" aria-hidden="true" width="1600" height="716" fetchpriority="high"></div>
+    <div class="hero-foto"><img src="assets/img/gym-interior-grande.webp" srcset="assets/img/gym-interior-grande-sm.webp 800w, assets/img/gym-interior-grande.webp 1600w" sizes="100vw" alt="" aria-hidden="true" width="1600" height="716" fetchpriority="high"></div>
     <div class="wrap hero-grid">
       <div class="hero-logo"><img src="assets/img/logo.webp" alt="Logotipo de Loles Jiménez GYM &amp; PILATES: una barra con discos, rayos y el nombre del gimnasio" width="720" height="291" loading="lazy"></div>
       <div class="hero-in">
@@ -677,10 +689,10 @@
       </div>
       <div class="pil-fotos reveal">
         <figure class="pil-f1">
-          <img src="assets/img/pilates-sala.webp" alt="Clase de pilates en Loles Jiménez GYM &amp; PILATES: un grupo numeroso sobre esterillas con los brazos en alto, con luz azul y fitballs colgados en la pared" width="900" height="1200" loading="lazy">
+          <img src="assets/img/pilates-sala.webp" srcset="assets/img/pilates-sala-sm.webp 560w, assets/img/pilates-sala.webp 900w" sizes="(max-width:900px) 80vw, 460px" alt="Clase de pilates en Loles Jiménez GYM &amp; PILATES: un grupo numeroso sobre esterillas con los brazos en alto, con luz azul y fitballs colgados en la pared" width="900" height="1200" loading="lazy">
         </figure>
         <figure class="pil-f2">
-          <img src="assets/img/pilates-ninos.webp" alt="Pilates en familia: una madre y su hijo pequeño hacen un estiramiento lateral sobre la esterilla, con luz verde" width="800" height="900" loading="lazy">
+          <img src="assets/img/pilates-ninos.webp" srcset="assets/img/pilates-ninos-sm.webp 400w, assets/img/pilates-ninos.webp 800w" sizes="(max-width:900px) 46vw, 260px" alt="Pilates en familia: una madre y su hijo pequeño hacen un estiramiento lateral sobre la esterilla, con luz verde" width="800" height="900" loading="lazy">
         </figure>
         <p class="pil-sello" aria-hidden="true"><b>14</b>años de experiencia</p>
       </div>
@@ -702,10 +714,10 @@
         <p>Cuando el tiempo acompaña, sacamos la clase fuera: step, tonificación con discos y estiramientos en grupo, con el campo de fondo.</p>
       </div>
       <div class="mosaico">
-        <figure class="m1 reveal"><img src="assets/img/aire-libre-grupo.webp" alt="Selfie de la monitora con un grupo de alumnas haciendo sentadillas con discos al aire libre, al atardecer y con las montañas de fondo" width="1400" height="1050" loading="lazy"><figcaption>Tonificación con discos</figcaption></figure>
-        <figure class="m2 reveal" style="--retraso:60ms"><img src="assets/img/aire-libre-step.webp" alt="Clase de step al aire libre: alumnas sobre sus steps en una explanada, con olivos y montañas al fondo" width="1000" height="749" loading="lazy"><figcaption>Step</figcaption></figure>
-        <figure class="m3 reveal" style="--retraso:120ms"><img src="assets/img/aire-libre-estiramientos.webp" alt="Grupo de alumnas en círculo a la sombra de un árbol, estirando al aire libre con vistas al campo" width="1000" height="656" loading="lazy"><figcaption>Estiramientos</figcaption></figure>
-        <figure class="m4 reveal" style="--retraso:60ms"><img src="assets/img/aire-libre-discos.webp" alt="Alumnas trabajando brazos con discos de pesas en un paseo al aire libre, en un día soleado" width="1200" height="428" loading="lazy"><figcaption>Fuerza al sol</figcaption></figure>
+        <figure class="m1 reveal"><img src="assets/img/aire-libre-grupo.webp" srcset="assets/img/aire-libre-grupo-sm.webp 700w, assets/img/aire-libre-grupo.webp 1400w" sizes="(max-width:760px) calc(100vw - 32px), 680px" alt="Selfie de la monitora con un grupo de alumnas haciendo sentadillas con discos al aire libre, al atardecer y con las montañas de fondo" width="1400" height="1050" loading="lazy"><figcaption>Tonificación con discos</figcaption></figure>
+        <figure class="m2 reveal" style="--retraso:60ms"><img src="assets/img/aire-libre-step.webp" srcset="assets/img/aire-libre-step-sm.webp 560w, assets/img/aire-libre-step.webp 1000w" sizes="(max-width:760px) 50vw, 490px" alt="Clase de step al aire libre: alumnas sobre sus steps en una explanada, con olivos y montañas al fondo" width="1000" height="749" loading="lazy"><figcaption>Step</figcaption></figure>
+        <figure class="m3 reveal" style="--retraso:120ms"><img src="assets/img/aire-libre-estiramientos.webp" srcset="assets/img/aire-libre-estiramientos-sm.webp 560w, assets/img/aire-libre-estiramientos.webp 1000w" sizes="(max-width:760px) 50vw, 490px" alt="Grupo de alumnas en círculo a la sombra de un árbol, estirando al aire libre con vistas al campo" width="1000" height="656" loading="lazy"><figcaption>Estiramientos</figcaption></figure>
+        <figure class="m4 reveal" style="--retraso:60ms"><img src="assets/img/aire-libre-discos.webp" srcset="assets/img/aire-libre-discos-sm.webp 700w, assets/img/aire-libre-discos.webp 1200w" sizes="(max-width:760px) calc(100vw - 32px), 1180px" alt="Alumnas trabajando brazos con discos de pesas en un paseo al aire libre, en un día soleado" width="1200" height="428" loading="lazy"><figcaption>Fuerza al sol</figcaption></figure>
       </div>
     </div>
   </section>
@@ -713,7 +725,7 @@
   <!-- ============ LA SALA ============ -->
   <section class="sala" aria-labelledby="t-sala">
     <div class="sala-foto">
-      <img src="assets/img/gym-interior-grande.webp" alt="Sala del gimnasio: bicicletas de spinning, cajones de madera, bancos, discos y máquinas de musculación, con grandes ventanales al fondo" width="1600" height="716" loading="lazy">
+      <img src="assets/img/gym-interior-grande.webp" srcset="assets/img/gym-interior-grande-sm.webp 800w, assets/img/gym-interior-grande.webp 1600w" sizes="100vw" alt="Sala del gimnasio: bicicletas de spinning, cajones de madera, bancos, discos y máquinas de musculación, con grandes ventanales al fondo" width="1600" height="716" loading="lazy">
       <div class="sala-txt">
         <div class="wrap reveal">
           <h2 id="t-sala">Un solo lugar para superarte</h2>
@@ -956,11 +968,11 @@
         <p>Pilates, entrenamiento funcional, spinning, musculación y clases al aire libre en Torreperogil (Jaén).</p>
       </div>
       <div>
-        <h4>El gimnasio</h4>
+        <h2>El gimnasio</h2>
         <ul><li><a href="#actividades">Actividades</a></li><li><a href="#pilates">Pilates</a></li><li><a href="#aire-libre">Aire libre</a></li><li><a href="#tarifas">Tarifas</a></li><li><a href="#horario">Horario</a></li><li><a href="#ubicacion">Ubicación</a></li><li><a href="#preguntas">Preguntas</a></li></ul>
       </div>
       <div>
-        <h4>Contacto</h4>
+        <h2>Contacto</h2>
         <ul>
           <li><a href="https://wa.me/34641592150" target="_blank" rel="noopener">WhatsApp 641 592 150</a></li>
           <li><a href="tel:+34615899265">Teléfono 615 89 92 65</a></li>
@@ -968,13 +980,13 @@
         </ul>
       </div>
       <div>
-        <h4>Legal</h4>
+        <h2>Legal</h2>
         <ul><li><a href="privacy.html">Política de privacidad</a></li><li><a href="terms.html">Términos y condiciones</a></li></ul>
       </div>
     </div>
     <div class="pie-bajo">
       <span>© <span id="anio">2026</span> Loles Jiménez GYM &amp; PILATES</span>
-      <span>Web diseñada por Diego De Galdo</span>
+      <span>Web diseñada por <a href="https://degaldodesigns.github.io/" target="_blank" rel="noopener">Diego De Galdo</a></span>
     </div>
   </div>
   <div class="pie-palabra" aria-hidden="true">Loles Jiménez</div>
@@ -1130,7 +1142,7 @@
 
   /* --- Horario: ABIERTO / CERRADO según la hora de Torreperogil --- */
   var ZONA = 'Europe/Madrid';
-  // Horario confirmado por la clienta el 13 oct 2026 (L-V 7:00-23:00, sábado 8:00-14:00).
+  // Horario: lo genera build.mjs a partir de contenido/horario.json.
   var HORARIO = {1:[[420,1380]], 2:[[420,1380]], 3:[[420,1380]], 4:[[420,1380]], 5:[[420,1380]], 6:[[480,840]]};
   var DIAS = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
   function ahora(){
