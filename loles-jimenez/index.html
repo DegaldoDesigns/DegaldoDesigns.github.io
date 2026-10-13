@@ -447,6 +447,7 @@
   .pie-bajo a{color:var(--texto); text-underline-offset:3px}
   @media (hover:hover) and (pointer:fine){ .pie-bajo a:hover{color:var(--verde)} }
   .pie-bajo{display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; padding-top:26px; border-top:1px solid var(--linea); color:var(--muted); font-size:14px}
+  .pie-palabra::before{content:attr(data-t)}
   .pie-palabra{font:400 13vw/.8 var(--f-display); text-transform:uppercase; color:transparent; -webkit-text-stroke:2px rgba(168,240,46,.12); white-space:nowrap; height:.62em; overflow:hidden; margin-top:40px; user-select:none}
   @media (max-width:860px){ .pie-grid{grid-template-columns:1fr 1fr} .pie-marca{grid-column:1/-1} }
   @media (max-width:480px){ .pie-grid{grid-template-columns:1fr} }
@@ -791,7 +792,7 @@
       <div class="reveal">
         <h2 id="t-op" class="sr">Opiniones en Google</h2>
         <p class="nota-g"><span class="cuenta" data-fin="5" data-dec="1">5,0</span></p>
-        <div class="estrellas" aria-label="5 de 5 estrellas"><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg></div>
+        <div class="estrellas" role="img" aria-label="5 de 5 estrellas"><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg><svg aria-hidden="true"><use href="#estrella"/></svg></div>
         <p style="color:var(--muted); font-size:18px; margin-bottom:18px">Lo que cuentan quienes ya entrenan aquí.</p>
         <a class="enlace" href="https://www.google.com/maps/search/?api=1&amp;query=Loles+Jim%C3%A9nez+GYM+%26+PILATES+Torreperogil" target="_blank" rel="noopener">Ver las opiniones en Google</a>
       </div>
@@ -989,7 +990,7 @@
       <span>Web diseñada por <a href="https://degaldodesigns.github.io/" target="_blank" rel="noopener">Diego De Galdo</a></span>
     </div>
   </div>
-  <div class="pie-palabra" aria-hidden="true">Loles Jiménez</div>
+  <div class="pie-palabra" aria-hidden="true" data-t="Loles Jiménez"></div>
 </footer>
 
 <div class="barra-movil">
@@ -998,7 +999,7 @@
 </div>
 
 <div class="cookies" id="cookies" role="dialog" aria-label="Aviso de cookies">
-  <p>Esta web solo usa cookies técnicas necesarias para funcionar. <a href="privacy.html">Más información</a>.</p>
+  <p>Esta web solo usa cookies técnicas necesarias para funcionar. <a href="privacy.html">Más información sobre las cookies</a>.</p>
   <div><button class="btn btn-peq" id="ckOk">Aceptar</button><button class="btn btn-peq btn-oscuro" id="ckNo">Rechazar</button></div>
 </div>
 
