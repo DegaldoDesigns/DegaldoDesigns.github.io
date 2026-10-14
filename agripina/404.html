@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Página no encontrada | La Cocina de Agripina</title>
+<meta name="description" content="Esta página no existe. Vuelve a la web de La Cocina de Agripina.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#c1121f">
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+<link rel="preload" href="assets/fonts/oswald-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/work-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Oswald';font-style:normal;font-weight:500 700;font-display:swap;src:url(assets/fonts/oswald-latin.woff2) format('woff2')}
+@font-face{font-family:'Work Sans';font-style:normal;font-weight:400 700;font-display:swap;src:url(assets/fonts/work-sans-latin.woff2) format('woff2')}
+:root{--papel:#faf7f2;--tinta:#1b1514;--tinta-2:#5a4f4b;--rojo:#c1121f;--rojo-osc:#9b0e18;
+  --f-display:'Oswald','Arial Narrow',Arial,sans-serif;--f-body:'Work Sans',system-ui,-apple-system,'Segoe UI',sans-serif;--ease-out:cubic-bezier(0.23,1,0.32,1)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--papel);color:var(--tinta);font:17px/1.7 var(--f-body)}
+.greca{height:22px;background:var(--rojo) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22'%3E%3Cpath d='M0 19H22M3 19V3H19V15H7V7H15V11H11' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='square'/%3E%3C/svg%3E") repeat-x 0 0/22px 22px}
+.wrap{max-width:720px;margin:0 auto;padding:40px 24px 100px}
+.marca{display:inline-flex;align-items:center;gap:12px;text-decoration:none;font:700 20px/1.05 var(--f-display);text-transform:uppercase}
+.marca img{width:56px;height:auto}
+h1{font-family:var(--f-display);font-weight:600;font-size:clamp(36px,6vw,54px);line-height:1.14;text-transform:uppercase;margin:36px 0 8px}
+h1 em{font-style:normal;color:var(--rojo)}
+h2{font-family:var(--f-display);font-weight:600;font-size:22px;line-height:1.25;text-transform:uppercase;margin:34px 0 8px}
+.fecha{color:var(--tinta-2);font-size:14px;margin:0 0 26px}
+p{color:var(--tinta-2);margin:0 0 12px}
+a{color:var(--tinta);text-decoration-color:var(--rojo);text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--rojo);outline-offset:3px;border-radius:6px}
+.btn{display:inline-flex;align-items:center;min-height:52px;padding:0 26px;border-radius:6px;background:var(--rojo);color:#fff;font:600 16px/20px var(--f-display);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:background-color .16s var(--ease-out),transform .12s var(--ease-out)}
+.btn:active{transform:scale(.97)}
+@media (hover:hover) and (pointer:fine){a:hover{color:var(--rojo)}.btn:hover{background:var(--rojo-osc);color:#fff}}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}}
+body{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px}
+.c404 img{width:130px;height:auto;margin:0 auto}
+.c404 .codigo{font:600 16px/1 var(--f-display);letter-spacing:.14em;text-transform:uppercase;color:var(--rojo);margin:18px 0 0}
+.c404 h1{margin-top:8px}
+</style>
+</head>
+<body>
+<main class="c404">
+  <img src="assets/img/logo.webp" alt="" width="360" height="495" aria-hidden="true">
+  <p class="codigo">Error 404</p>
+  <h1>Este plato <em>no está en la carta</em></h1>
+  <p>Puede que el enlace esté roto o que la página se haya movido.</p>
+  <p style="margin-top:26px"><a class="btn" href="/">Volver al inicio</a></p>
+</main>
+</body>
+</html>

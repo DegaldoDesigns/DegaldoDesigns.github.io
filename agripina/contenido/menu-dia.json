@@ -1,0 +1,23 @@
+{
+  "aviso": "",
+  "mostrar_como": "ejemplo",
+  "dia": "",
+  "precio": "14,00",
+  "horario": "De 13:00 a 17:00",
+  "primeros": [
+    "Caldo de gallina",
+    "Ceviche de pescado",
+    "Leche de tigre",
+    "Causa limeña",
+    "Salpicón de pollo"
+  ],
+  "segundos": [
+    "Frejolada de pato",
+    "Tallarín a la huancaína con lomo",
+    "Chaufa de mariscos",
+    "Chicharrón de pescado",
+    "1/4 de pollo al carbón"
+  ],
+  "postre": "Postre a elegir",
+  "nota": ""
+}

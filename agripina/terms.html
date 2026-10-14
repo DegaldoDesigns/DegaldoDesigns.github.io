@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aviso legal | La Cocina de Agripina</title>
+<meta name="description" content="Aviso legal y condiciones de uso de la web de La Cocina de Agripina, en Valdemoro.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#c1121f">
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+<link rel="preload" href="assets/fonts/oswald-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/work-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Oswald';font-style:normal;font-weight:500 700;font-display:swap;src:url(assets/fonts/oswald-latin.woff2) format('woff2')}
+@font-face{font-family:'Work Sans';font-style:normal;font-weight:400 700;font-display:swap;src:url(assets/fonts/work-sans-latin.woff2) format('woff2')}
+:root{--papel:#faf7f2;--tinta:#1b1514;--tinta-2:#5a4f4b;--rojo:#c1121f;--rojo-osc:#9b0e18;
+  --f-display:'Oswald','Arial Narrow',Arial,sans-serif;--f-body:'Work Sans',system-ui,-apple-system,'Segoe UI',sans-serif;--ease-out:cubic-bezier(0.23,1,0.32,1)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--papel);color:var(--tinta);font:17px/1.7 var(--f-body)}
+.greca{height:22px;background:var(--rojo) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22'%3E%3Cpath d='M0 19H22M3 19V3H19V15H7V7H15V11H11' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='square'/%3E%3C/svg%3E") repeat-x 0 0/22px 22px}
+.wrap{max-width:720px;margin:0 auto;padding:40px 24px 100px}
+.marca{display:inline-flex;align-items:center;gap:12px;text-decoration:none;font:700 20px/1.05 var(--f-display);text-transform:uppercase}
+.marca img{width:56px;height:auto}
+h1{font-family:var(--f-display);font-weight:600;font-size:clamp(36px,6vw,54px);line-height:1.14;text-transform:uppercase;margin:36px 0 8px}
+h1 em{font-style:normal;color:var(--rojo)}
+h2{font-family:var(--f-display);font-weight:600;font-size:22px;line-height:1.25;text-transform:uppercase;margin:34px 0 8px}
+.fecha{color:var(--tinta-2);font-size:14px;margin:0 0 26px}
+p{color:var(--tinta-2);margin:0 0 12px}
+a{color:var(--tinta);text-decoration-color:var(--rojo);text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--rojo);outline-offset:3px;border-radius:6px}
+.btn{display:inline-flex;align-items:center;min-height:52px;padding:0 26px;border-radius:6px;background:var(--rojo);color:#fff;font:600 16px/20px var(--f-display);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:background-color .16s var(--ease-out),transform .12s var(--ease-out)}
+.btn:active{transform:scale(.97)}
+@media (hover:hover) and (pointer:fine){a:hover{color:var(--rojo)}.btn:hover{background:var(--rojo-osc);color:#fff}}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}}
+</style>
+</head>
+<body>
+<div class="greca" aria-hidden="true"></div>
+<main class="wrap">
+  <a class="marca" href="index.html" aria-label="La Cocina de Agripina, volver al inicio"><img src="assets/img/logo-peq.webp" alt="" width="120" height="165" aria-hidden="true">La Cocina<br>de Agripina</a>
+  <h1>Aviso <em>legal</em></h1>
+  <p class="fecha">Última actualización: 14 de octubre de 2026</p>
+  <h2>1. Titular de la web</h2>
+  <!-- CONFIRMAR: nombre o razón social y NIF del titular -->
+  <p>La Cocina de Agripina. Calle Doctor Severo Ochoa, 2, 28341 Valdemoro (Madrid). Teléfono: 671 30 40 12.</p>
+  <h2>2. Uso de la web</h2>
+  <p>El contenido de esta web es informativo. La carta, los precios, el menú del día y el horario pueden cambiar; confírmalos llamándonos o al hacer tu pedido. Los precios en las aplicaciones de reparto los fija cada aplicación.</p>
+  <h2>3. Propiedad intelectual</h2>
+  <p>Los textos, las fotografías y el logotipo pertenecen a La Cocina de Agripina y no pueden reproducirse sin permiso. Las opiniones citadas son de sus autores y están publicadas en Google.</p>
+  <h2>4. Enlaces externos</h2>
+  <p>Esta web enlaza a servicios de terceros (WhatsApp, Glovo, Uber Eats, Instagram, Facebook, Google Maps y Apple Maps). No respondemos del contenido de esos sitios.</p>
+  <p><em>Texto orientativo: revisarlo con una gestoría o un abogado antes de publicar la web.</em></p>
+  <p style="margin-top:36px"><a class="btn" href="index.html">Volver al inicio</a></p>
+</main>
+</body>
+</html>
