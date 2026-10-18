@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Página no encontrada | Cafetería by Vanessa</title>
+<meta name="description" content="Esta página no existe.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f5eee4">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/work-sans-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:400 700;font-display:swap;src:url(assets/fonts/fraunces-normal-latin.woff2) format('woff2')}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:500;font-display:swap;src:url(assets/fonts/fraunces-italic-latin.woff2) format('woff2')}
+@font-face{font-family:'Kaushan Script';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/kaushan-script-normal-latin.woff2) format('woff2')}
+@font-face{font-family:'Work Sans';font-style:normal;font-weight:400 700;font-display:swap;src:url(assets/fonts/work-sans-normal-latin.woff2) format('woff2')}
+:root{--crema:#f5eee4;--crema-2:#ede2d2;--papel:#fbf7f1;--linea:#e0d0bb;--cafe:#2e1d15;--cafe-2:#47301f;--tinta-2:#6a5444;--canela:#8b5330;--canela-osc:#6f3f22;--canela-claro:#d29a6a;
+  --f-display:'Fraunces',Georgia,'Times New Roman',serif;--f-script:'Kaushan Script','Brush Script MT',cursive;--f-body:'Work Sans',system-ui,-apple-system,'Segoe UI',sans-serif;--ease-out:cubic-bezier(0.23,1,0.32,1)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--crema);color:var(--cafe);font:17px/1.7 var(--f-body)}
+.cab{border-bottom:1px solid var(--linea);background:var(--papel)}
+.cab-in{max-width:760px;margin:0 auto;padding:16px 24px}
+.cab img{width:190px;height:auto;display:block}
+.wrap{max-width:760px;margin:0 auto;padding:34px 24px 100px}
+h1{font-family:var(--f-display);font-weight:600;font-size:clamp(40px,6.5vw,58px);line-height:1.14;margin:20px 0 8px}
+h1 em{font-style:italic;font-weight:500;color:var(--canela)}
+h2{font-family:var(--f-display);font-weight:600;font-size:26px;line-height:1.25;margin:34px 0 8px}
+.fecha{color:var(--tinta-2);font-size:14.5px;margin:0 0 26px}
+p{color:var(--tinta-2);margin:0 0 12px}
+a{color:var(--cafe);text-decoration-color:var(--canela);text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--canela);outline-offset:3px;border-radius:4px}
+.btn{display:inline-flex;align-items:center;min-height:52px;padding:0 24px;border-radius:99px;background:var(--canela);color:#fff;font:600 15.5px/20px var(--f-body);text-decoration:none;transition:background-color .16s var(--ease-out),transform .12s var(--ease-out)}
+.btn:active{transform:scale(.97)}
+.guion{font:400 28px/1.2 var(--f-script);color:var(--canela);margin:0}
+@media (hover:hover) and (pointer:fine){a:hover{color:var(--canela)}.btn:hover{background:var(--canela-osc);color:#fff}}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}}
+.centro{text-align:center} .centro svg{width:120px;height:120px;color:var(--canela);margin:30px auto 0;display:block}
+</style>
+</head>
+<body>
+<header class="cab"><div class="cab-in"><a href="index.html" aria-label="Cafetería by Vanessa, volver al inicio"><img src="assets/img/logo-texto.webp" alt="Cafetería by Vanessa" width="520" height="140"></a></div></header>
+<main class="wrap centro">
+  <svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 28h36v8c0 10-8 18-18 18s-18-8-18-18v-8Z"/><path d="M46 31h4a7 7 0 0 1 0 14h-6"/><path d="M8 58h40"/></g></svg>
+  <p class="guion">Vaya, esta taza está vacía</p>
+  <h1>Esta página <em>no existe</em></h1>
+  <p>Puede que el enlace esté mal escrito o que la página ya no esté. Vuelve al inicio y te ponemos un café.</p>
+  <p style="margin-top:30px"><a class="btn" href="index.html">Volver al inicio</a></p>
+</main>
+</body>
+</html>

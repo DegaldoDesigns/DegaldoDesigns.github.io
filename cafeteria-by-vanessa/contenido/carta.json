@@ -1,0 +1,57 @@
+{
+  "aviso": "",
+  "nota_precios": "Los precios, en barra. Pregúntanos sin compromiso.",
+  "tostadas": [
+    { "nombre": "Mediterránea", "descripcion": "Tomate natural y aceite de oliva virgen extra.", "precio": "" },
+    { "nombre": "Catalana", "descripcion": "La de toda la vida. También con queso.", "precio": "" },
+    { "nombre": "Jamón serrano y manchego", "descripcion": "Jamón cortado a mano y queso manchego.", "precio": "" },
+    { "nombre": "York y manchego", "descripcion": "Queso manchego fundido, orégano y un hilo de aceite.", "precio": "" },
+    { "nombre": "York, queso fresco y aguacate", "descripcion": "Con semillas de chía por encima.", "precio": "" },
+    { "nombre": "Aguacate y queso fresco", "descripcion": "Aceite de oliva y mix de semillas.", "precio": "" },
+    { "nombre": "Salmón y aguacate", "descripcion": "Salmón ahumado, aguacate y semillas.", "precio": "" },
+    { "nombre": "Tomate, salmón y queso fresco", "descripcion": "Con un toque de orégano.", "precio": "" },
+    { "nombre": "Atún con tomate", "descripcion": "Con queso fresco y aguacate si te apetece.", "precio": "" },
+    { "nombre": "Huevo revuelto y aguacate", "descripcion": "Sobre pan de semillas crujiente.", "precio": "" },
+    { "nombre": "Huevo revuelto y anchoas", "descripcion": "Tomate natural, revuelto cremoso y anchoas.", "precio": "" },
+    { "nombre": "Burrata", "descripcion": "Aguacate, tomates confitados, rúcula y semillas.", "precio": "" },
+    { "nombre": "Sobrasada y queso fundido", "descripcion": "Sobrasada con queso fundido, recién gratinada.", "precio": "" },
+    { "nombre": "Queso a la plancha", "descripcion": "Recién hecha, con tu café.", "precio": "" }
+  ],
+  "bocadillos_frios": [
+    { "nombre": "Catalana", "precio": "" },
+    { "nombre": "Jamón y queso", "precio": "" },
+    { "nombre": "York y queso", "precio": "" },
+    { "nombre": "Atún con tomate", "precio": "" },
+    { "nombre": "Bicicleta", "precio": "" }
+  ],
+  "bocadillos_calientes": [
+    { "nombre": "By Vanessa", "precio": "" },
+    { "nombre": "Calamares con mayonesa", "precio": "" },
+    { "nombre": "Tortilla de patata", "precio": "" },
+    { "nombre": "Bacon y queso", "precio": "" },
+    { "nombre": "Lomo y queso", "precio": "" },
+    { "nombre": "Chivito", "precio": "" },
+    { "nombre": "Longaniza blanca", "precio": "" },
+    { "nombre": "Longaniza roja", "precio": "" },
+    { "nombre": "Lomo adobado", "precio": "" },
+    { "nombre": "Tortilla francesa con tomate", "precio": "" }
+  ],
+  "combos": {
+    "mostrar": true,
+    "titulo": "Combos de almuerzo",
+    "horario": "De lunes a viernes, de 9:00 a 12:00",
+    "lista": [
+      { "nombre": "Currante", "incluye": "Bocadillo + café", "precio": "5,50" },
+      { "nombre": "Serrano", "incluye": "Bocadillo de jamón + bebida", "precio": "5,50" },
+      { "nombre": "Express", "incluye": "Bocadillo + bebida", "precio": "6,00" },
+      { "nombre": "Completo", "incluye": "Bocadillo + bebida + café", "precio": "6,50" }
+    ]
+  },
+  "promos_finde": {
+    "mostrar": true,
+    "lista": [
+      { "texto": "2 tercios de Alhambra Especial + tapa de bravas", "precio": "6" },
+      { "texto": "5 quintos de Alhambra Especial + 2 bolas de ensaladilla", "precio": "10" }
+    ]
+  }
+}

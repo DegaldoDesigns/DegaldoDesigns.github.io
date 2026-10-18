@@ -1,0 +1,3 @@
+# Borrador sin publicar: no se indexa. Al publicar con el dominio propio, permitir todo y enlazar el sitemap.
+User-agent: *
+Disallow: /
