@@ -557,6 +557,11 @@
       .detalles{grid-template-columns:1fr}
     }
     .nav a[aria-current="true"]:not(.btn){color:var(--texto)}
+    .nav .ir-mapa{display:inline-flex;align-items:center;gap:7px}
+    .nav .ir-mapa svg{width:17px;height:17px;flex:none;color:var(--cian);transition:rotate .5s var(--ease-out)}
+    .nav .ir-mapa[aria-current="true"] svg{filter:drop-shadow(0 0 6px var(--cian))}
+    @media (hover:hover) and (pointer:fine){ .nav .ir-mapa:hover svg{rotate:45deg} }
+    @media (max-width:520px){ .nav .ir-mapa svg{width:15px;height:15px} .nav .ir-mapa{gap:5px} }
     .nav a[aria-current="true"]:not(.btn)::after{scale:1 1}
     @media (max-width:860px){ .nav{gap:18px} .nav a:not(.btn){font-size:14px} }
     @media (max-width:520px){ .cab .wrap{height:62px;gap:12px} .marca span{display:none} .marca img{width:32px} .nav{gap:15px} .nav a:not(.btn){font-size:13.5px} .wa{width:42px;padding:0} .wa span{display:none} }
@@ -604,6 +609,7 @@
       <nav class="nav" aria-label="Secciones">
         <a href="#inicio" data-sec="inicio">Inicio</a>
         <a href="#exposicion" data-sec="exposicion">Exposición</a>
+        <a href="#exposicion" class="ir-mapa" data-sec="mapa" id="ir-mapa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="2.4"/><circle cx="4.5" cy="6" r="1.8"/><circle cx="19.5" cy="6" r="1.8"/><circle cx="4.5" cy="18" r="1.8"/><circle cx="19.5" cy="18" r="1.8"/><path d="M10 10.8 6 7M14 10.8 18 7M10 13.2 6 17M14 13.2 18 17"/></svg>Mapa</a>
         <a href="#taquilla" data-sec="taquilla">Taquilla</a>
         <a class="btn btn-luz btn-pq iman wa" aria-label="WhatsApp" href="https://wa.me/34722358950?text=Hola%20Diego%2C%20quiero%20ver%20c%C3%B3mo%20quedar%C3%ADa%20la%20web%20de%20mi%20negocio." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/></svg><span>WhatsApp</span></a>
       </nav>
@@ -1267,6 +1273,7 @@
       var r=alto.getBoundingClientRect(), fijo=r.top<=1&&r.bottom>=innerHeight-1;
       cab.classList.toggle('solida',scrollY>innerHeight*.7);
       var tq=document.getElementById('taquilla').getBoundingClientRect().top, sec=tq<innerHeight*.5?'taquilla':(r.top<innerHeight*.5?'exposicion':'inicio');
+      if(sec==='exposicion'&&(conRed?-r.top/innerHeight>=INTRO+N*PASO-.2:false))sec='mapa';
       if(sec!==seccion){seccion=sec;document.querySelectorAll('.nav [data-sec]').forEach(function(a){a.setAttribute('aria-current',a.dataset.sec===sec?'true':'false')})}
       salidaPortada();
       if(scrollY>8)pararCiclo(); else if(enPortada)arrancarCiclo();
@@ -1291,6 +1298,13 @@
         scrollTo({top:destino,behavior:(reduce||ya)?'auto':'smooth'});
       } else obrasEl[i].scrollIntoView({behavior:(reduce||ya)?'auto':'smooth',block:'center'});
     }
+    /* Botón "Mapa" de la cabecera: lleva directo al mapa final de la exposición (y cierra la sala si está abierta) */
+    function irMapa(){
+      if(salaI>=0)cerrarRed();
+      if(conRed){var destino=alto.getBoundingClientRect().top+scrollY+(INTRO+N*PASO+.45)*innerHeight;scrollTo({top:destino,behavior:reduce?'auto':'smooth'})}
+      else obrasCont.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});
+    }
+    document.getElementById('ir-mapa').addEventListener('click',function(e){e.preventDefault();irMapa()});
     indice.addEventListener('click',function(e){var b=e.target.closest('[data-ir]');if(b)irA(+b.dataset.ir)});
     document.getElementById('expo-ant').addEventListener('click',function(){irA(Math.max(0,(activo<0?0:activo)-1))});
     document.getElementById('expo-sig').addEventListener('click',function(){irA(activo<0?0:Math.min(N-1,activo+1))});
