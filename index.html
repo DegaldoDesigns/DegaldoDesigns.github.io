@@ -196,15 +196,15 @@
     .con-red .intro p{text-shadow:0 2px 18px rgba(9,11,19,.9)}
     .con-red .escenario:not([data-fase="intro"]) .intro{opacity:0;translate:0 -24px;pointer-events:none}
     .con-red .obras{position:absolute;inset:0;display:block;max-width:none;margin:0;padding:0;pointer-events:none}
-    .con-red .obra{position:absolute;left:max(40px,6vw);top:50%;translate:0 -46%;width:min(500px,36vw);opacity:0;visibility:hidden;transition:opacity .3s var(--ease-out),visibility 0s linear .3s}
-    .con-red .obra.activa{opacity:1;visibility:visible;pointer-events:auto;transition:opacity .15s var(--ease-out),visibility 0s}
-    .con-red .obra .marco{clip-path:inset(0 0 0 100% round 14px);transition:clip-path .3s var(--ease-out)}
+    .con-red .obra{position:absolute;left:max(40px,6vw);top:50%;translate:0 -46%;width:min(500px,36vw);opacity:0;visibility:hidden;filter:blur(10px);scale:.96;transition:opacity .7s var(--ease-out),filter .7s var(--ease-out),scale .8s var(--ease-out),visibility 0s linear .8s}
+    .con-red .obra.activa{opacity:1;visibility:visible;pointer-events:auto;filter:blur(0);scale:1;transition:opacity .5s var(--ease-out),filter .6s var(--ease-out),scale .9s var(--ease-out),visibility 0s}
+    .con-red .obra .marco{clip-path:inset(0 0 0 100% round 14px);transition:clip-path 0s .8s}
     .con-red .obra.activa .marco{clip-path:inset(0 0 0 0 round 14px);transition:clip-path 1.1s var(--ease-in-out)}
-    .con-red .obra .marco img{scale:1.18;filter:blur(10px) brightness(1.7) saturate(.6)}
+    .con-red .obra .marco img{scale:1.18;filter:blur(10px) brightness(1.7) saturate(.6);transition:scale 0s .8s,filter 0s .8s}
     .con-red .obra.activa .marco img{scale:1;filter:none;transition:scale 1.6s var(--ease-out),filter 1.2s var(--ease-out) .15s}
-    .con-red .obra .tel{opacity:0;translate:24px 36px}
+    .con-red .obra .tel{opacity:0;translate:24px 36px;transition:opacity 0s .8s,translate 0s .8s}
     .con-red .obra.activa .tel{opacity:1;translate:0 0;transition:opacity .6s var(--ease-out) .55s,translate 1s var(--ease-out) .55s}
-    .con-red .obra .cartela>*{opacity:0;translate:0 14px;filter:blur(6px)}
+    .con-red .obra .cartela>*{opacity:0;translate:0 14px;filter:blur(6px);transition:opacity 0s .8s,translate 0s .8s,filter 0s .8s}
     .con-red .obra.activa .cartela>*{opacity:1;translate:0 0;filter:blur(0);transition:opacity .7s var(--ease-out),translate .8s var(--ease-out),filter .7s var(--ease-out);transition-delay:calc(.35s + var(--k,0) * 70ms)}
     .cartela>:nth-child(2){--k:1}.cartela>:nth-child(3){--k:2}.cartela>:nth-child(4){--k:3}.cartela>:nth-child(5){--k:4}.cartela>:nth-child(6){--k:5}
     .con-red .conector{display:block;position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
@@ -217,8 +217,27 @@
     .nodo span{white-space:nowrap;padding:5px 11px;border-radius:999px;background:rgba(9,11,19,.6);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--luz) 40%,transparent);opacity:0;translate:-6px 0;transition:opacity .4s var(--ease-out),translate .4s var(--ease-out),background-color .2s var(--ease-out)}
     .nodo.izq{flex-direction:row-reverse;translate:calc(44px - 100%) 0}
     .nodo.izq span{translate:6px 0}
-    .escenario[data-fase="paso"] .nodo.activo,.escenario[data-fase="final"] .nodo{opacity:1;visibility:visible;pointer-events:auto;transition:opacity .6s var(--ease-out),visibility 0s}
-    .escenario[data-fase="final"] .nodo span{opacity:1;translate:0 0;transition-delay:calc(.25s + var(--k,0) * 60ms)}
+    .escenario[data-fase="paso"] .nodo.activo{opacity:1;visibility:visible;pointer-events:auto;transition:opacity .6s var(--ease-out),visibility 0s}
+    .escenario[data-fase="paso"] .nodo.activo.llego span{opacity:1;translate:0 0;transition-delay:.1s}
+    .nodo span{color:var(--luz)}
+    /* Tipo de negocio en grande, rodando al cambiar de sala */
+    .tipo-gigante,.mapa,.mapa-lineas{display:none}
+    .con-red .tipo-gigante{display:grid;position:absolute;left:52%;right:0;bottom:clamp(64px,10svh,110px);justify-items:center;pointer-events:none}
+    .tipo-gigante span{grid-area:1/1;font-family:var(--f-display);font-weight:800;font-size:calc(clamp(56px,7.4vw,124px) * var(--f,1));letter-spacing:-.05em;line-height:1.05;white-space:nowrap;color:transparent;-webkit-text-stroke:1.3px var(--luz);opacity:0;translate:0 45%;filter:blur(12px);transition:opacity 1s var(--ease-out),translate 1.1s var(--ease-out),filter 1s var(--ease-out)}
+    .tipo-gigante span.ahora{opacity:.5;translate:0 0;filter:blur(0)}
+    .tipo-gigante span.sale{opacity:0;translate:0 -45%;filter:blur(12px)}
+    /* Mapa mental final */
+    .con-red .mapa-lineas{display:block;position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+    .mapa-lineas path{fill:none;stroke-width:1.3;stroke-dasharray:1;stroke-dashoffset:1;opacity:.7;transition:stroke-dashoffset .3s var(--ease-out)}
+    .escenario[data-fase="final"] .mapa-lineas path{stroke-dashoffset:0;transition:stroke-dashoffset 1.2s var(--ease-in-out) calc(.3s + var(--k,0) * 90ms)}
+    .con-red .mapa{display:block;position:absolute;inset:0;pointer-events:none}
+    .rama{--luz:#45d2f2;position:absolute;left:0;top:0;display:flex;flex-direction:column;align-items:flex-start;gap:3px;padding:10px 6px 10px 18px;translate:0 -50%;text-align:left;opacity:0;visibility:hidden;transition:opacity .35s var(--ease-out),visibility 0s linear .35s;will-change:transform}
+    .rama.izq{align-items:flex-end;text-align:right;translate:-100% -50%;padding:10px 18px 10px 6px}
+    .rama::before{content:"";position:absolute;top:50%;left:-4px;width:8px;height:8px;border-radius:50%;background:var(--luz);translate:0 -50%;box-shadow:0 0 14px var(--luz)}
+    .rama.izq::before{left:auto;right:-4px}
+    .rama b{font-family:var(--f-display);font-weight:800;font-size:clamp(22px,2.3vw,36px);letter-spacing:-.035em;line-height:1;color:var(--luz);text-shadow:0 0 30px color-mix(in srgb,var(--luz) 40%,transparent);transition:translate .3s var(--ease-out)}
+    .rama span{font-size:14.5px;font-weight:500;color:var(--texto-2);transition:color .2s var(--ease-out)}
+    .escenario[data-fase="final"] .rama{opacity:1;visibility:visible;pointer-events:auto;transition:opacity .8s var(--ease-out) calc(.8s + var(--k,0) * 90ms),visibility 0s}
     .con-red .final{display:block;position:absolute;left:0;right:0;bottom:clamp(90px,13svh,130px);text-align:center;padding:0 24px;opacity:0;translate:0 18px;pointer-events:none;transition:opacity .6s var(--ease-out),translate .6s var(--ease-out)}
     .escenario[data-fase="final"] .final{opacity:1;translate:0 0;transition-delay:.3s}
     .final h3{font-weight:800;font-size:clamp(30px,3.6vw,52px);letter-spacing:-.04em;line-height:1.05}
@@ -227,7 +246,9 @@
     .escenario:not([data-fase="intro"]) .expo-ui{opacity:1}
     .escenario:not([data-fase="intro"]) .expo-ui>*{pointer-events:auto}
     .indice{display:flex;flex-wrap:wrap;gap:4px 20px;list-style:none}
-    .indice button{font-size:14px;font-weight:500;color:var(--texto-2);padding:4px 0;transition:color .3s var(--ease-out)}
+    .indice button{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:500;color:var(--texto-2);padding:4px 0;transition:color .3s var(--ease-out)}
+    .pt{width:7px;height:7px;border-radius:50%;background:var(--luz);opacity:.4;flex:none;transition:opacity .3s var(--ease-out),scale .3s var(--ease-out)}
+    .indice button[aria-current="true"] .pt{opacity:1;scale:1.3}
     .indice button[aria-current="true"]{color:var(--ui-ac,var(--cian))}
     .progreso{flex:1;height:2px;background:rgba(255,255,255,.16);border-radius:2px;overflow:hidden;min-width:60px}
     .progreso i{display:block;height:100%;background:var(--ui-ac,var(--cian));transform-origin:left;scale:0 1}
@@ -253,8 +274,21 @@
       .con-red .final{bottom:calc(96px + env(safe-area-inset-bottom,0px))}
       .nodo{font-size:13px}
       .nodo span{padding:4px 9px}
-      .indice{display:none}
-      .flechas{display:flex}
+      .indice{gap:0;flex-wrap:nowrap}
+      .indice button{width:30px;height:44px;justify-content:center;padding:0}
+      .indice span{display:none}
+      .pt{width:9px;height:9px}
+      .progreso,.flechas{display:none}
+      .con-red .expo-ui{justify-content:space-between}
+      .con-red .tipo-gigante{left:0;top:76px;bottom:auto}
+      .tipo-gigante span{font-size:clamp(40px,12vw,64px)}
+      .rama{padding:8px 4px 8px 12px}
+      .rama.izq{padding:8px 12px 8px 4px}
+      .rama b{font-size:17px}
+      .rama::before{display:none}
+      .con-red .final{display:none}
+      .con-red .tipo-gigante{display:none}
+      .rama span{font-size:12px}
     }
     @media (max-width:999px) and (max-height:700px){ .con-red .lienzo{display:none} }
 
@@ -400,7 +434,10 @@
       .btn-sala:hover,.sala .btn-ac:hover{box-shadow:0 0 0 5px color-mix(in srgb,var(--ac) 28%,transparent)}
       .nav a:not(.btn):hover{color:var(--texto)}
       .nav a:not(.btn):hover::after{scale:1 1;transform-origin:left}
-      .indice button:hover{color:var(--ui-ac);opacity:1}
+      .indice button:hover{color:var(--texto)}
+      .rama:hover span{color:var(--texto)}
+      .rama:hover b{translate:4px 0}
+      .rama.izq:hover b{translate:-4px 0}
       .siguiente:hover b{translate:14px 0}
       .nav-salas button:hover{box-shadow:inset 0 0 0 1.5px var(--tx)}
       .talon a:hover svg{translate:4px 0}
@@ -421,7 +458,10 @@
       .tel-grande{height:auto;width:100%}
       .detalles{grid-template-columns:1fr}
     }
-    @media (max-width:860px){ .nav a:not(.btn){display:none} }
+    .nav a[aria-current="true"]:not(.btn){color:var(--texto)}
+    .nav a[aria-current="true"]:not(.btn)::after{scale:1 1}
+    @media (max-width:860px){ .nav{gap:18px} .nav a:not(.btn){font-size:14px} }
+    @media (max-width:520px){ .cab .wrap{height:62px;gap:12px} .marca span{display:none} .marca img{width:32px} .nav{gap:15px} .nav a:not(.btn){font-size:13.5px} .wa{width:42px;padding:0} .wa span{display:none} }
     @media (max-width:700px){
       body{font-size:16.5px}
       .wrap,.cab .wrap{padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
@@ -464,9 +504,10 @@
         <span>Degaldo<small>Designs</small></span>
       </a>
       <nav class="nav" aria-label="Secciones">
-        <a href="#exposicion">Exposición</a>
-        <a href="#taquilla">Taquilla</a>
-        <a class="btn btn-luz btn-pq iman" href="https://wa.me/34722358950?text=Hola%20Diego%2C%20quiero%20ver%20c%C3%B3mo%20quedar%C3%ADa%20la%20web%20de%20mi%20negocio." target="_blank" rel="noopener">WhatsApp</a>
+        <a href="#inicio" data-sec="inicio">Inicio</a>
+        <a href="#exposicion" data-sec="exposicion">Exposición</a>
+        <a href="#taquilla" data-sec="taquilla">Taquilla</a>
+        <a class="btn btn-luz btn-pq iman wa" aria-label="WhatsApp" href="https://wa.me/34722358950?text=Hola%20Diego%2C%20quiero%20ver%20c%C3%B3mo%20quedar%C3%ADa%20la%20web%20de%20mi%20negocio." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/></svg><span>WhatsApp</span></a>
       </nav>
     </div>
   </header>
@@ -517,10 +558,13 @@
             <p>Siete negocios, siete webs. <span class="solo-red">Baja y se irán encendiendo una a una.</span><span class="solo-fijo">Entra en la sala que quieras para verla de cerca.</span></p>
             <img class="cerebro-fijo solo-fijo" src="img/cerebro.webp" width="1240" height="760" alt="" loading="lazy">
           </div>
+          <div class="tipo-gigante" id="tipo-gigante" aria-hidden="true"></div>
+          <svg class="mapa-lineas" id="mapa-lineas" aria-hidden="true"></svg>
+          <div class="mapa" id="mapa"></div>
           <svg class="conector" id="conector" aria-hidden="true"><path pathLength="1" d="M0 0"/></svg>
           <div class="obras" id="obras"></div>
           <div class="nodos" id="nodos"></div>
-          <div class="final" id="final"><h3>Siete salas, una red</h3><p>Elige un punto para entrar en su sala.</p></div>
+          <div class="final" id="final"><h3>El mapa de la exposición</h3><p>Cada zona encendida es un negocio. Pulsa uno para entrar en su sala.</p></div>
           <div class="expo-ui" id="expo-ui">
             <ol class="indice" id="indice" aria-label="Salas"></ol>
             <div class="progreso" aria-hidden="true"><i id="barra-progreso"></i></div>
@@ -857,6 +901,9 @@
     var obrasCont=document.getElementById('obras'), nodosCont=document.getElementById('nodos'), indice=document.getElementById('indice');
     var ui=document.getElementById('expo-ui'), barra=document.getElementById('barra-progreso'), contador=document.getElementById('contador');
     var conector=document.querySelector('#conector path'), lienzoRed=document.getElementById('red');
+    var tipoG=document.getElementById('tipo-gigante'), mapa=document.getElementById('mapa'), mapaSvg=document.getElementById('mapa-lineas');
+    var REGIONES=[0,1,2,3,4,5,6];
+    function may(t){return t.charAt(0).toUpperCase()+t.slice(1)}
     var cab=document.getElementById('cabecera'), barraMovil=document.getElementById('barra-movil');
     var movil=matchMedia('(max-width:999px)');
     var FLECHA='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>';
@@ -886,13 +933,16 @@
       var nd=document.createElement('button'); nd.type='button'; nd.className='nodo'; nd.dataset.abrir=i; nd.tabIndex=-1;
       nd.style.cssText='--luz:'+luz(o)+';--k:'+i;
       nd.setAttribute('aria-label','Entrar en la sala de '+nom);
-      nd.innerHTML='<i aria-hidden="true"></i><span>'+esc(o.nombre)+'</span>';
+      nd.innerHTML='<i aria-hidden="true"></i><span>'+esc(may(o.tipo))+'</span>';
       nodosCont.appendChild(nd);
-      var li=document.createElement('li'); li.innerHTML='<button type="button" data-ir="'+i+'">'+esc(o.nombre)+'</button>'; indice.appendChild(li);
+      var li=document.createElement('li'); li.innerHTML='<button type="button" data-ir="'+i+'" style="--luz:'+luz(o)+'" aria-label="'+esc(o.nombre)+'"><i class="pt" aria-hidden="true"></i><span>'+esc(o.nombre)+'</span></button>'; indice.appendChild(li);
+      var rama=document.createElement('button'); rama.type='button'; rama.className='rama'; rama.dataset.abrir=i; rama.style.cssText='--luz:'+luz(o)+';--k:'+i; rama.tabIndex=-1;
+      rama.innerHTML='<b>'+esc(may(o.tipo))+'</b><span>'+esc(o.nombre)+'</span>'; mapa.appendChild(rama);
+      var ln=document.createElementNS('http://www.w3.org/2000/svg','path'); ln.setAttribute('pathLength','1'); ln.style.stroke=luz(o); ln.style.setProperty('--k',i); mapaSvg.appendChild(ln);
     });
-    var obrasEl=[].slice.call(obrasCont.children), nodosEl=[].slice.call(nodosCont.children);
-    var INTRO=1, FINAL=1.6;
-    alto.style.setProperty('--u',INTRO+N+FINAL+1);
+    var obrasEl=[].slice.call(obrasCont.children), nodosEl=[].slice.call(nodosCont.children), ramasEl=[].slice.call(mapa.children), lineasEl=[].slice.call(mapaSvg.children);
+    var INTRO=1, PASO=1.15, FINAL=1.8;
+    alto.style.setProperty('--u',INTRO+N*PASO+FINAL+1);
     var actual=-1;
     function marcarActual(i){
       if(i===actual)return; actual=i;
@@ -900,17 +950,33 @@
       indice.querySelectorAll('button').forEach(function(b,k){b.setAttribute('aria-current',k===i?'true':'false')});
       ui.style.setProperty('--ui-ac',luz(OBRAS[i])); escena.style.setProperty('--luz',luz(OBRAS[i]));
     }
+    /* Palabra gigante con el tipo de negocio, que rueda como la de la portada */
+    function ponerTipo(t,c){
+      var ultima=tipoG.lastElementChild; if(ultima&&!ultima.classList.contains('sale')&&ultima.textContent===t)return;
+      [].forEach.call(tipoG.children,function(v){ if(v.classList.contains('sale'))return; v.classList.remove('ahora');v.classList.add('sale');setTimeout(function(){v.remove()},1200) });
+      var nueva=document.createElement('span'); nueva.textContent=t; nueva.style.setProperty('--luz',c); nueva.style.setProperty('--f',Math.min(1,10/t.length).toFixed(3)); tipoG.appendChild(nueva);
+      requestAnimationFrame(function(){requestAnimationFrame(function(){ if(!nueva.classList.contains('sale'))nueva.classList.add('ahora') })});
+    }
     marcarActual(0);
 
     /* Estado de la escena: lo que pide el scroll y lo que se ve (suavizado) */
     var red=null, rafRed=0, ultimoT=0, fase='intro', activo=-1, mostrada=-1, directo=-1, giro=0, ancla=null;
     var BASE=-Math.PI/2;
-    var est={morph:0,aparece:0,shift:0,yaw:BASE,pitch:.1,escala:1,offX:0,offY:.05,brillo:1,foco:-1,focoAmt:0,impulso:0,activo:-1,final:0,visto:[],tiempo:0};
-    var vistoObj=[]; for(var v=0;v<N;v++){est.visto.push(0);vistoObj.push(0)}
+    var est={morph:0,aparece:0,shift:0,yaw:BASE,pitch:.1,escala:1,offX:0,offY:.05,brillo:1,focoAmt:0,impulso:0,activo:-1,final:0,visto:[],luces:[],tiempo:0};
+    var vel={yaw:0,pitch:0,escala:0,offX:0,offY:0};
+    var vistoObj=[]; for(var v=0;v<N;v++){est.visto.push(0);est.luces.push(0);vistoObj.push(0)}
+    /* Muelle amortiguado: arranca y frena suave, sin tirones */
+    function muelle(clave,objetivo,dt,ang){
+      var d=ang?Math.atan2(Math.sin(objetivo-est[clave]),Math.cos(objetivo-est[clave])):objetivo-est[clave], K=reduce?400:7.5, C=2*Math.sqrt(K);
+      vel[clave]+=(d*K-vel[clave]*C)*dt; est[clave]+=vel[clave]*dt;
+    }
+    var lados=null;
     function hacia(a,b,k){return a+(b-a)*k}
     function angHacia(a,b,k){return a+Math.atan2(Math.sin(b-a),Math.cos(b-a))*k}
-    function ponerFase(f){ if(f===fase)return; fase=f; escena.dataset.fase=f;
-      nodosEl.forEach(function(n){n.tabIndex=f==='final'?0:-1}); }
+    function ponerFase(f){ if(f===fase)return; fase=f; escena.dataset.fase=f; lados=null;
+      ramasEl.forEach(function(n){n.tabIndex=f==='final'?0:-1}); nodosEl.forEach(function(n){n.tabIndex=-1});
+      if(f==='paso'&&actual>=0)ponerTipo(OBRAS[actual].tipo,luz(OBRAS[actual]));
+      if(f!=='paso')[].forEach.call(tipoG.children,function(v){if(v.classList.contains('sale'))return;v.classList.remove('ahora');v.classList.add('sale');setTimeout(function(){v.remove()},1200)}); }
     function mostrarTarjeta(i){
       if(mostrada===i)return;
       if(mostrada>=0){obrasEl[mostrada].classList.remove('activa');obrasEl[mostrada].inert=true}
@@ -933,28 +999,31 @@
       fondoIn.style.opacity=String(1-est.aparece);
 
       var f='intro', nuevo=-1;
-      if(u>=INTRO+N)f='final'; else if(u>=INTRO){f='paso';nuevo=Math.min(N-1,Math.floor(u-INTRO))}
+      if(u>=INTRO+N*PASO)f='final'; else if(u>=INTRO){f='paso';nuevo=Math.min(N-1,Math.floor((u-INTRO)/PASO))}
       ponerFase(f);
       if(nuevo!==activo){
         activo=nuevo; est.activo=nuevo; est.focoAmt=0; mostrarTarjeta(-1);
-        est.impulso=(nuevo>=0&&nuevo===directo)?1:0; directo=-1;
-        nodosEl.forEach(function(n,k){n.classList.toggle('activo',k===nuevo)});
-        if(nuevo>=0)marcarActual(nuevo);
+        est.impulso=(nuevo>=0&&nuevo===directo)?1:-.3; directo=-1;
+        nodosEl.forEach(function(n,k){n.classList.toggle('activo',k===nuevo);n.classList.remove('llego')});
+        if(nuevo>=0){marcarActual(nuevo);ponerTipo(OBRAS[nuevo].tipo,luz(OBRAS[nuevo]))}
       }
       if(activo>=0){
-        est.impulso+=dt/.95;
-        if(est.impulso>=1){mostrarTarjeta(activo);vistoObj[activo]=1;est.focoAmt=hacia(est.focoAmt,1,1-Math.exp(-dt*4))}
+        est.impulso+=dt/1.1;
+        if(est.impulso>=1){mostrarTarjeta(activo);vistoObj[activo]=1;nodosEl[activo].classList.add('llego');est.focoAmt=hacia(est.focoAmt,1,1-Math.exp(-dt*3))}
       }
-      for(var k=0;k<N;k++)est.visto[k]=hacia(est.visto[k],vistoObj[k],1-Math.exp(-dt*3));
-      barra.style.scale=Math.max(0,Math.min(1,(u-INTRO)/(N-1+.5)))+' 1';
+      for(var k=0;k<N;k++){
+        est.visto[k]=hacia(est.visto[k],vistoObj[k],1-Math.exp(-dt*3));
+        var lz=f==='final'?.9:(k===activo&&est.impulso>=.9?1:(vistoObj[k]?.42:0));
+        est.luces[k]=hacia(est.luces[k],lz,1-Math.exp(-dt*(lz>est.luces[k]?2.6:1.6)));
+      }
+      barra.style.scale=Math.max(0,Math.min(1,(u-INTRO)/(N*PASO)))+' 1';
 
       /* Cámara */
       var T={yaw:BASE+Math.sin(est.tiempo*.22)*.4,pitch:.1,escala:mv?.78:1,offX:0,offY:mv?.14:.07,brillo:1,final:0};
-      if(f==='paso'){var o=red.orientar(activo,mv?.15:-.5);T.yaw=o.yaw+Math.sin(est.tiempo*.3)*.05;T.pitch=o.pitch;T.escala=mv?.74:1.08;T.offX=mv?0:.3;T.offY=mv?.33:0}
-      if(f==='final'){giro+=dt*.09;T.yaw=BASE+.5+giro;T.pitch=.2;T.escala=mv?.56:.74;T.offY=mv?.16:.1;T.brillo=.62;T.final=1}
-      var kc=1-Math.exp(-dt*(reduce?60:2.6));
-      est.yaw=angHacia(est.yaw,T.yaw,kc); est.pitch=hacia(est.pitch,T.pitch,kc); est.escala=hacia(est.escala,T.escala,kc);
-      est.offX=hacia(est.offX,T.offX,kc); est.offY=hacia(est.offY,T.offY,kc); est.brillo=hacia(est.brillo,T.brillo,kc);
+      if(f==='paso'){var o=red.orientar(activo,mv?.15:-.5);T.yaw=o.yaw+Math.sin(est.tiempo*.3)*.05;T.pitch=o.pitch;T.escala=mv?.72:1.05;T.offX=mv?0:.3;T.offY=mv?.29:0}
+      if(f==='final'){T.yaw=BASE+.55+Math.sin(est.tiempo*.18)*.12;T.pitch=.42;T.escala=mv?.46:.8;T.offY=mv?.36:.07;T.brillo=.75;T.final=1}
+      muelle('yaw',T.yaw,dt,true); muelle('pitch',T.pitch,dt); muelle('escala',T.escala,dt); muelle('offX',T.offX,dt); muelle('offY',T.offY,dt);
+      est.brillo=hacia(est.brillo,T.brillo,1-Math.exp(-dt*2));
       est.final=hacia(est.final,T.final,1-Math.exp(-dt*2)); if(Math.abs(est.final-T.final)<.002)est.final=T.final;
       est.foco=activo;
 
@@ -965,6 +1034,7 @@
         if(f!=='intro'){
           var pts=red.pantalla();
           nodosEl.forEach(function(n,k){var p=pts[k];n.style.transform='translate3d('+p.x.toFixed(1)+'px,'+p.y.toFixed(1)+'px,0)';n.classList.toggle('izq',p.x>innerWidth*(mv?.5:.62))});
+          if(f==='final')colocarMapa(pts,mv);
           if(mostrada>=0&&f==='paso'&&ancla){var p0=pts[mostrada],a=ancla;
             conector.setAttribute('d',a.mv?'M'+p0.x+' '+(p0.y+14)+'C'+p0.x+' '+(p0.y+90)+' '+a.x+' '+(a.y-90)+' '+a.x+' '+a.y:'M'+(p0.x-14)+' '+p0.y+'C'+(p0.x-140)+' '+p0.y+' '+(a.x+140)+' '+a.y+' '+a.x+' '+a.y)}
         }
@@ -972,22 +1042,57 @@
       var quieto=est.morph===mObj&&(mObj===0||r.bottom<=0);
       if(!quieto&&!document.hidden)rafRed=requestAnimationFrame(cuadro); else ultimoT=0;
     }
+    /* Mapa mental: cada lóbulo encendido saca una rama con su tipo de negocio */
+    function colocarMapa(pts,mv){
+      var c=pts.centro, W=innerWidth, H=innerHeight;
+      if(!lados){
+        var orden=pts.map(function(p,k){return k}).sort(function(a,b){return pts[a].x-pts[b].x});
+        var porY=function(a,b){return pts[a].y-pts[b].y};
+        lados={izq:orden.slice(0,Math.floor(N/2)).sort(porY),der:orden.slice(Math.floor(N/2)).sort(porY)};
+      }
+      if(mv){
+        /* En móvil: cerebro arriba y las ramas en dos columnas debajo */
+        ['izq','der'].forEach(function(lado){
+          lados[lado].forEach(function(k,j){
+            var r=ramasEl[k], p=pts[k], x=lado==='izq'?20:W-20, y=H*.6+j*Math.min(58,H*.07);
+            r.style.transform='translate3d('+x+'px,'+y.toFixed(1)+'px,0)'; r.classList.toggle('izq',lado==='der');
+            var ex=lado==='izq'?x-9:x+9, ey=y-8;
+            lineasEl[k].setAttribute('d','M'+p.x.toFixed(1)+' '+p.y.toFixed(1)+'C'+ex.toFixed(1)+' '+p.y.toFixed(1)+' '+ex.toFixed(1)+' '+p.y.toFixed(1)+' '+ex.toFixed(1)+' '+ey.toFixed(1));
+          });
+        });
+        return;
+      }
+      var colX=mv?{izq:12,der:W-12}:{izq:Math.max(280,c.x-Math.min(W*.22,330)),der:Math.min(W-280,c.x+Math.min(W*.22,330))};
+      var y0=c.y-H*(mv?.25:.3), y1=c.y+H*(mv?.22:.24);
+      ['izq','der'].forEach(function(lado){
+        var lista=lados[lado];
+        lista.forEach(function(k,j){
+          var y=y0+(lista.length>1?j/(lista.length-1):.5)*(y1-y0), x=colX[lado], r=ramasEl[k], p=pts[k];
+          r.style.transform='translate3d('+x.toFixed(1)+'px,'+y.toFixed(1)+'px,0)';
+          r.classList.toggle('izq',mv?lado==='der':lado==='izq');
+          var ex=mv?(lado==='izq'?x+r.offsetWidth+4:x-r.offsetWidth-4):x, mx=(ex+p.x)/2;
+          lineasEl[k].setAttribute('d','M'+p.x.toFixed(1)+' '+p.y.toFixed(1)+'C'+mx.toFixed(1)+' '+p.y.toFixed(1)+' '+mx.toFixed(1)+' '+y.toFixed(1)+' '+ex.toFixed(1)+' '+y.toFixed(1));
+        });
+      });
+    }
     function despertar(){ if(red&&!rafRed)rafRed=requestAnimationFrame(cuadro) }
     function quitarRed(){ conRed=false; red=null; expo.classList.remove('con-red'); lienzoRed.classList.remove('visible'); fondoIn.style.opacity='';
       obrasEl.forEach(function(e){e.inert=false;e.classList.remove('activa');e.classList.add('aparece','visto')}); }
     if(conRed){
       fetch('data/cerebro.bin').then(function(r){if(!r.ok)throw 0;return r.arrayBuffer()}).then(function(buf){
-        red=Red.crear(lienzoRed,buf,{orbX:movil.matches?.92:1.75,orbY:movil.matches?1.62:1.08,n:movil.matches?11000:24000,nodos:1500,dprMax:movil.matches?1.6:2,tam:movil.matches?7.5:9,colores:OBRAS.map(luz)});
+        red=Red.crear(lienzoRed,buf,{regiones:REGIONES,n:movil.matches?11000:24000,nodos:1500,dprMax:movil.matches?1.6:2,tam:movil.matches?7.5:9,colores:OBRAS.map(luz)});
         if(!red)throw 0;
         var im=capas.children[fondoActual]; if(im.complete)red.foto(im); else im.addEventListener('load',function(){red&&red.foto(im)},{once:true});
         despertar();
       }).catch(function(){quitarRed()});
     }
 
+    var seccion='';
     function alScroll(){
       var r=alto.getBoundingClientRect(), fijo=r.top<=1&&r.bottom>=innerHeight-1;
       cab.classList.toggle('solida',scrollY>innerHeight*.7);
-      cab.classList.toggle('oculta',conRed&&fijo);
+      var tq=document.getElementById('taquilla').getBoundingClientRect().top, sec=tq<innerHeight*.5?'taquilla':(r.top<innerHeight*.5?'exposicion':'inicio');
+      if(sec!==seccion){seccion=sec;document.querySelectorAll('.nav [data-sec]').forEach(function(a){a.setAttribute('aria-current',a.dataset.sec===sec?'true':'false')})}
       salidaPortada();
       if(scrollY>8)pararCiclo(); else if(enPortada)arrancarCiclo();
       if(movil.matches)barraMovil.classList.toggle('oculta',scrollY<innerHeight*.6||(conRed&&r.top<innerHeight*.5&&r.bottom>innerHeight*.5));
@@ -1006,7 +1111,7 @@
     document.addEventListener('visibilitychange',despertar);
     function irA(i,ya){
       if(conRed){
-        var destino=alto.getBoundingClientRect().top+scrollY+(INTRO+i+.3)*innerHeight;
+        var destino=alto.getBoundingClientRect().top+scrollY+(INTRO+(i+.3)*PASO)*innerHeight;
         if(ya)directo=i;
         scrollTo({top:destino,behavior:(reduce||ya)?'auto':'smooth'});
       } else obrasEl[i].scrollIntoView({behavior:(reduce||ya)?'auto':'smooth',block:'center'});
@@ -1014,6 +1119,7 @@
     indice.addEventListener('click',function(e){var b=e.target.closest('[data-ir]');if(b)irA(+b.dataset.ir)});
     document.getElementById('expo-ant').addEventListener('click',function(){irA(Math.max(0,(activo<0?0:activo)-1))});
     document.getElementById('expo-sig').addEventListener('click',function(){irA(activo<0?0:Math.min(N-1,activo+1))});
+    mapa.addEventListener('click',function(e){var b=e.target.closest('[data-abrir]');if(b)abrirSala(+b.dataset.abrir)});
     nodosCont.addEventListener('click',function(e){var b=e.target.closest('[data-abrir]');if(b)abrirSala(+b.dataset.abrir)});
 
     /* Sala de cada cliente */

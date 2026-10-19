@@ -6,8 +6,8 @@
   'use strict';
 
   var VS_PUNTOS='#version 300 es\n'+
-  'layout(location=0) in vec3 aPos;layout(location=1) in vec2 aRej;layout(location=2) in vec3 aCol;layout(location=3) in vec2 aAz;\n'+
-  'uniform mat4 uMVP;uniform vec2 uOff;uniform float uMorph,uShift,uTiempo,uDpr,uCelda,uTam,uAparece,uBrillo,uFocoAmt;uniform vec3 uFoco,uFocoCol;\n'+
+  'layout(location=0) in vec3 aPos;layout(location=1) in vec2 aRej;layout(location=2) in vec3 aCol;layout(location=3) in vec2 aAz;layout(location=4) in float aReg;\n'+
+  'uniform mat4 uMVP;uniform vec2 uOff;uniform float uMorph,uShift,uTiempo,uDpr,uCelda,uTam,uAparece,uBrillo;uniform vec3 uRegCol[10];uniform float uRegAmt[10];\n'+
   'out vec4 vCol;out float vE;\n'+
   'const vec3 IND=vec3(.431,.42,.965);const vec3 CIA=vec3(.271,.824,.949);\n'+
   'void main(){\n'+
@@ -23,10 +23,10 @@
   ' float prof=clamp((c.w-3.3)/1.9,0.,1.);\n'+
   ' float tw=.72+.28*sin(uTiempo*(.8+aAz.x*2.2)+aAz.y*60.);\n'+
   ' vec3 fin=base*(1.25-prof*.85)*tw*uBrillo;\n'+
-  ' float f=uFocoAmt*smoothstep(.5,.0,distance(aPos,uFoco));\n'+
-  ' fin=mix(fin,uFocoCol*(1.15+.3*tw),f);\n'+
+  ' int ri=int(aReg+.5);float f=uRegAmt[ri];\n'+
+  ' fin=mix(fin,uRegCol[ri]*(.8+.45*tw)*(.75+.55*f),clamp(f,0.,1.)*.92);\n'+
   ' vCol=vec4(mix(aCol,fin,e),uAparece);vE=e;\n'+
-  ' float sFin=uTam*(.5+aAz.x*1.)/c.w*uDpr*(1.+f*.9);\n'+
+  ' float sFin=uTam*(.5+aAz.x*1.)/c.w*uDpr*(1.+f*.5);\n'+
   ' gl_PointSize=mix(uCelda,sFin,smoothstep(0.,.3,e));\n'+
   '}';
   var FS_PUNTOS='#version 300 es\nprecision mediump float;in vec4 vCol;in float vE;out vec4 o;\n'+
@@ -73,6 +73,7 @@
     var total=new DataView(buf).getUint32(0,true), n=Math.min(total,op.n||total);
     var q=new Int16Array(buf,4,total*3);
     var P=new Float32Array(n*3);for(var i=0;i<n*3;i++)P[i]=q[i]/32767;
+    var REG=new Uint8Array(buf,4+total*6,total), RF=new Float32Array(n);for(i=0;i<n;i++)RF[i]=REG[i];
     var rnd=azar(91), AZ=new Float32Array(n*2);for(i=0;i<n*2;i++)AZ[i]=rnd();
 
     var pP=programa(gl,VS_PUNTOS,FS_PUNTOS), pX=programa(gl,VS_PLEXO,FS_PLEXO), pL=programa(gl,VS_COLOR,FS_LINEA), pB=programa(gl,VS_COLOR,FS_BRILLO);
@@ -83,7 +84,7 @@
     /* Puntos */
     var vaoP=gl.createVertexArray();gl.bindVertexArray(vaoP);
     var bPos=bufer(P), bRej=bufer(new Float32Array(n*2),gl.DYNAMIC_DRAW), bCol=bufer(new Uint8Array(n*3),gl.DYNAMIC_DRAW), bAz=bufer(AZ);
-    attr(0,bPos,3,gl.FLOAT);attr(1,bRej,2,gl.FLOAT);attr(2,bCol,3,gl.UNSIGNED_BYTE,true);attr(3,bAz,2,gl.FLOAT);
+    attr(0,bPos,3,gl.FLOAT);attr(1,bRej,2,gl.FLOAT);attr(2,bCol,3,gl.UNSIGNED_BYTE,true);attr(3,bAz,2,gl.FLOAT);attr(4,bufer(RF),1,gl.FLOAT);
 
     /* Red de neuronas: vecinos más cercanos entre los primeros puntos */
     var M=Math.min(n,op.nodos||1500), R2=.17*.17, ady=[], aristas=[];
@@ -104,10 +105,12 @@
     var raiz=masCercano(0,-.45,-.05), anclas=[], usados={};
     var previo=new Int32Array(M).fill(-1);previo[raiz]=raiz;var cola=[raiz];
     while(cola.length){var c0=cola.shift();ady[c0].forEach(function(v){if(previo[v]<0){previo[v]=c0;cola.push(v)}})}
+    var cen=[];for(var g=0;g<10;g++)cen.push([0,0,0,0]);
+    for(i=0;i<n;i++){var cg=cen[REG[i]];cg[0]+=P[i*3];cg[1]+=P[i*3+1];cg[2]+=P[i*3+2];cg[3]++}
     for(i=0;i<op.colores.length;i++){
-      var D=DIRS[i%DIRS.length],l=Math.hypot(D[0],D[1],D[2]),mj=-1,mv=-9;
-      for(j=0;j<M;j++){if(usados[j]||previo[j]<0)continue;var x=P[j*3],y=P[j*3+1],z=P[j*3+2],r=Math.hypot(x,y,z)||1,v=(x*D[0]+y*D[1]+z*D[2])/(r*l)+r*.25;if(v>mv){mv=v;mj=j}}
-      usados[mj]=1;anclas.push(mj);
+      var rg=op.regiones[i],C=cen[rg],l=Math.hypot(C[0],C[1],C[2])||1,D=[C[0]/l,C[1]/l,C[2]/l],mj=-1,mv=-9;
+      for(j=0;j<M;j++){if(usados[j]||previo[j]<0||REG[j]!==rg)continue;var v=P[j*3]*D[0]+P[j*3+1]*D[1]+P[j*3+2]*D[2];if(v>mv){mv=v;mj=j}}
+      if(mj<0)mj=raiz;usados[mj]=1;anclas.push(mj);
     }
     var caminos=anclas.map(function(a){
       var c=[],v=a;if(previo[a]<0)return [[0,-.45,-.05],[P[a*3],P[a*3+1],P[a*3+2]]];
@@ -163,7 +166,7 @@
       cx+=off[0]*cw;cy+=off[1]*cw;return {x:(cx/cw*.5+.5)*W,y:(.5-cy/cw*.5)*H,w:cw}}
 
     function hexRGB(h){h=h.replace('#','');return [parseInt(h.slice(0,2),16)/255,parseInt(h.slice(2,4),16)/255,parseInt(h.slice(4,6),16)/255]}
-    var COL=op.colores.map(hexRGB);
+    var COL=op.colores.map(hexRGB),regAmt=new Float32Array(10),regCol=new Float32Array(30);
 
     function pintar(s){
       gl.viewport(0,0,lienzo.width,lienzo.height);gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);
@@ -178,8 +181,9 @@
         gl.uniformMatrix4fv(u.uMVP,false,MVP);gl.uniform2f(u.uOff,off[0],off[1]);
         gl.uniform1f(u.uMorph,s.morph);gl.uniform1f(u.uShift,s.shift);gl.uniform1f(u.uTiempo,t);gl.uniform1f(u.uDpr,dpr);
         gl.uniform1f(u.uCelda,celdaPx);gl.uniform1f(u.uTam,op.tam||9);gl.uniform1f(u.uAparece,s.aparece);gl.uniform1f(u.uBrillo,s.brillo);
-        var fa=s.foco>=0?s.focoAmt:0,fp=s.foco>=0?anclaPos[s.foco]:[9,9,9],fc=s.foco>=0?COL[s.foco]:[0,0,0];
-        gl.uniform1f(u.uFocoAmt,fa);gl.uniform3f(u.uFoco,fp[0],fp[1],fp[2]);gl.uniform3f(u.uFocoCol,fc[0],fc[1],fc[2]);
+        for(var g=0;g<10;g++){regAmt[g]=0;regCol[g*3]=regCol[g*3+1]=regCol[g*3+2]=0}
+        for(g=0;g<COL.length;g++){var rr=op.regiones[g];regAmt[rr]=s.luces[g]||0;regCol[rr*3]=COL[g][0];regCol[rr*3+1]=COL[g][1];regCol[rr*3+2]=COL[g][2]}
+        gl.uniform3fv(u['uRegCol[0]'],regCol);gl.uniform1fv(u['uRegAmt[0]'],regAmt);
         gl.bindVertexArray(vaoP);gl.drawArrays(gl.POINTS,0,n);
       }
       var red=Math.max(0,Math.min(1,(s.morph-.86)/.14));
@@ -195,20 +199,15 @@
       for(var i=0;i<anclaPos.length;i++){
         var A=anclaPos[i],L=Math.hypot(A[0],A[1],A[2])||1,fuera=1+.09,
             base=[A[0]*fuera,A[1]*fuera,A[2]*fuera];
-        /* órbita en una elipse de cara a la cámara: se deshace el giro del cerebro */
-        var ang=i/anclaPos.length*Math.PI*2+t*.07+.35,q=[Math.cos(ang)*(op.orbX||1.75),Math.sin(ang)*(op.orbY||1.08),Math.sin(ang)*.45];
-        var cp=Math.cos(-s.pitch),sp=Math.sin(-s.pitch),qy=q[1]*cp-q[2]*sp,qz=q[1]*sp+q[2]*cp;
-        var cy=Math.cos(-s.yaw),sy=Math.sin(-s.yaw),orb=[q[0]*cy+qz*sy,qy,-q[0]*sy+qz*cy];
-        var e=ef*ef*(3-2*ef),p=[base[0]+(orb[0]-base[0])*e,base[1]+(orb[1]-base[1])*e,base[2]+(orb[2]-base[2])*e];
+        var p=base;
         var vis=Math.max(s.visto[i]||0,ef),act=(s.activo===i?s.focoAmt:0);
         if(vis>0||act>0){
           var tl=.85+.15*Math.sin(t*2.4+i);
-          brillo(p,COL[i],Math.min(1,(vis*.55+act*.6+ef*.3))*tl,(5+act*5+ef*3)*(s.escala));
-          if(ef>0)linea(A,p,COL[i],.0,.55*ef);
-          else if(vis>0)linea(A,base,COL[i],.5*vis,.5*vis);
+          brillo(p,COL[i],Math.min(1,(vis*.5+act*.6))*tl,(4+act*5+ef*1.5)*(s.escala));
         }
         pant.push(proyectar(p));
       }
+      pant.centro=proyectar([0,0,0]);
       /* Impulso: recorre el camino desde el tronco hasta el ancla */
       if(s.activo>=0&&s.impulso>0&&s.impulso<1.5){
         var cam=caminos[s.activo],seg=cam.length-1,cab=Math.min(1,s.impulso)*seg,ap=s.impulso>1?Math.max(0,1-(s.impulso-1)/.5):1,cc=COL[s.activo];
