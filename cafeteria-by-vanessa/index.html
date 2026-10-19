@@ -89,6 +89,8 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--papel);color:var(--cafe);font-family:var(--f-body);font-size:17px;line-height:1.65;overflow-x:clip}
 body::before{content:"";position:fixed;inset:0;background:var(--grano);opacity:.18;pointer-events:none;z-index:var(--z-grano);mix-blend-mode:multiply}
 img{max-width:100%;display:block}
+/* Sin el icono de búsqueda visual de Edge sobre las fotos: el clic lo recibe el botón o el contenedor */
+main img{pointer-events:none;-webkit-user-drag:none}
 a{color:inherit}
 h1,h2,h3,h4{font-family:var(--f-display);font-weight:600;line-height:1.12;text-wrap:balance;margin:0}
 p{text-wrap:pretty}
@@ -300,7 +302,7 @@ main{overflow-x:clip}
 .panes li svg{width:26px;height:20px;color:var(--canela)}
 /* Foto anotada a mano */
 .anotada{position:relative;margin:0}
-.anotada .foto{position:relative;display:block;width:100%;padding:0;border:0;border-radius:6px;overflow:hidden;cursor:zoom-in;background:var(--papel-2);rotate:1.5deg;box-shadow:0 40px 60px -36px rgba(33,20,13,.7)}
+.anotada .foto{position:relative;display:block;width:100%;padding:0;border:0;border-radius:6px;overflow:hidden;cursor:pointer;background:var(--papel-2);rotate:1.5deg;box-shadow:0 40px 60px -36px rgba(33,20,13,.7)}
 .anotada .foto img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;transition:scale .6s var(--ease-out)}
 @media (hover:hover) and (pointer:fine){.anotada .foto:hover img{scale:1.04}}
 /* Foto de desayunos envuelta: papel de estraza, servilleta y etiqueta atada */
@@ -378,7 +380,7 @@ main{overflow-x:clip}
 .sugeridas{margin-top:72px;padding-top:40px;border-top:1.5px dashed var(--canela-claro)}
 .sug-cab{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:10px 40px}
 .sug-cab p{margin:0;max-width:30em;color:var(--tinta-2)}
-.sug-grupos{display:grid;gap:34px;margin-top:30px}
+.sug-grupos{display:grid;grid-template-columns:minmax(0,1fr);gap:34px;margin-top:30px}
 .sug-grupo h4{display:flex;align-items:center;gap:10px;margin:0;font:600 23px/1.2 var(--f-display)}
 .sug-grupo h4 .bola{width:22px;height:22px;border-radius:50%;background:var(--c,#ccc);box-shadow:inset 0 0 0 1.5px rgba(0,0,0,.18);flex:none}
 .sug-grupo h4 .todo{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--yema);color:var(--espresso)}
@@ -387,7 +389,7 @@ main{overflow-x:clip}
 .sug-fila{display:flex;gap:18px;margin:16px -24px 0;padding:6px 24px 18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--canela-claro) transparent}
 .sug-card{flex:0 0 220px;scroll-snap-align:start;margin:0;padding:10px 10px 14px;background:var(--papel-3);border-radius:6px;box-shadow:0 18px 26px -20px rgba(33,20,13,.55),inset 0 0 0 1px var(--linea)}
 .sug-foto{position:relative;display:block;width:100%;aspect-ratio:4/3;padding:0;border:0;border-radius:4px;overflow:hidden;background:var(--papel-2)}
-button.sug-foto{cursor:zoom-in}
+button.sug-foto{cursor:pointer}
 .sug-foto img{width:100%;height:100%;object-fit:cover;transition:scale .5s var(--ease-out)}
 @media (hover:hover) and (pointer:fine){button.sug-foto:hover img{scale:1.06}}
 .sug-foto svg{position:absolute;inset:0;width:100%;height:100%}
@@ -480,7 +482,7 @@ button.sug-foto{cursor:zoom-in}
 .bocata{flex:0 0 clamp(220px,24vw,290px);margin:0;scroll-snap-align:start}
 .bocata:nth-child(odd){rotate:-1.2deg}
 .bocata:nth-child(even){rotate:1.4deg;margin-top:26px}
-.bocata .foto-btn{position:relative;display:block;width:100%;padding:0;border:0;border-radius:14px;overflow:hidden;cursor:zoom-in;background:var(--cafe);aspect-ratio:4/5}
+.bocata .foto-btn{position:relative;display:block;width:100%;padding:0;border:0;border-radius:14px;overflow:hidden;cursor:pointer;background:var(--cafe);aspect-ratio:4/5}
 .bocata img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;-webkit-user-drag:none;transition:scale .5s var(--ease-out)}
 @media (hover:hover) and (pointer:fine){.bocata .foto-btn:hover img{scale:1.05}}
 .bocata figcaption{margin:12px 4px 0;font:500 19px/1.3 var(--f-display)}
@@ -514,7 +516,7 @@ button.sug-foto{cursor:zoom-in}
 /* Tortillas */
 .tortillas{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:110px}
 .tortillas-fotos{position:relative;height:440px}
-.tortillas-fotos .foto-btn{position:absolute;width:62%;padding:10px 10px 0;border:0;background:#fffdf8;border-radius:3px;cursor:zoom-in;box-shadow:0 30px 40px -24px rgba(0,0,0,.7)}
+.tortillas-fotos .foto-btn{position:absolute;width:62%;padding:10px 10px 0;border:0;background:#fffdf8;border-radius:3px;cursor:pointer;box-shadow:0 30px 40px -24px rgba(0,0,0,.7)}
 .tortillas-fotos .foto-btn img{width:100%;height:auto;aspect-ratio:1;object-fit:cover}
 .tortillas-fotos .foto-btn span{display:block;padding:8px 0 12px;font:400 19px/1 var(--f-mano);color:var(--cafe)}
 .tortillas-fotos .t1{left:0;top:0;rotate:-5deg}
@@ -530,7 +532,7 @@ button.sug-foto{cursor:zoom-in}
 @media (prefers-reduced-motion:no-preference){.guirnalda .bulbo{animation:titila var(--t,3s) ease-in-out var(--dl,0s) infinite alternate}}
 @keyframes titila{from{opacity:.55}to{opacity:1}}
 .finde-in{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
-.finde .foto-btn{position:relative;display:block;width:100%;padding:0;border:0;border-radius:16px;overflow:hidden;cursor:zoom-in;aspect-ratio:4/5;rotate:-2deg;box-shadow:0 0 0 1px rgba(255,216,138,.15),0 40px 70px -30px rgba(255,170,80,.35)}
+.finde .foto-btn{position:relative;display:block;width:100%;padding:0;border:0;border-radius:16px;overflow:hidden;cursor:pointer;aspect-ratio:4/5;rotate:-2deg;box-shadow:0 0 0 1px rgba(255,216,138,.15),0 40px 70px -30px rgba(255,170,80,.35)}
 .finde .foto-btn img{width:100%;height:100%;object-fit:cover}
 .posavasos{display:flex;flex-wrap:wrap;gap:22px;margin-top:32px}
 .posavasos[hidden]{display:none}
@@ -557,7 +559,7 @@ button.sug-foto{cursor:zoom-in}
 @media (prefers-reduced-motion:no-preference){.js .encargos.dibujado .etiqueta-enc{animation:balancea 1.4s var(--ease-out) both}.js .encargos.dibujado .etiqueta-enc:nth-child(2){animation-delay:.12s}.js .encargos.dibujado .etiqueta-enc:nth-child(3){animation-delay:.24s}}
 @keyframes balancea{0%{rotate:9deg}30%{rotate:-6deg}55%{rotate:3deg}80%{rotate:-1.5deg}}
 .etiqueta-enc .dibujo{width:110px;height:84px;margin:0 auto 18px;color:var(--canela)}
-.etiqueta-enc .foto-enc{display:block;width:100%;padding:0;border:0;margin:0 0 18px;border-radius:8px;overflow:hidden;cursor:zoom-in;aspect-ratio:4/3}
+.etiqueta-enc .foto-enc{display:block;width:100%;padding:0;border:0;margin:0 0 18px;border-radius:8px;overflow:hidden;cursor:pointer;aspect-ratio:4/3}
 .etiqueta-enc .foto-enc img{width:100%;height:100%;object-fit:cover}
 .etiqueta-enc h3{font-size:27px;text-align:center}
 .etiqueta-enc p{margin:8px 0 0;color:var(--tinta-2);font-size:16px;text-align:center}
