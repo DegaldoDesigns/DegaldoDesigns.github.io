@@ -1,0 +1,7 @@
+# DOMINIO PROVISIONAL: cambiar elalfar.netlify.app por el dominio definitivo
+User-agent: *
+Allow: /
+Disallow: /privacy.html
+Disallow: /terms.html
+
+Sitemap: https://degaldodesigns.github.io/el-alfar/sitemap.xml

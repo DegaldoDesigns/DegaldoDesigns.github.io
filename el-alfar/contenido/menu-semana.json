@@ -1,0 +1,25 @@
+{
+  "mostrar_como": "ejemplo",
+  "semana": "",
+  "precio_entre_semana": "",
+  "precio_fin_de_semana": "",
+  "entrantes": [
+    "Verduritas rellenas de carne con queso gratinado",
+    "Pimientos del piquillo rellenos de bacalao en salsa de choricero",
+    "Ensalada El Alfar con feta, jamón y guindilla vasca",
+    "Brandada de bacalao con ajo frito y pimentón de la Vera"
+  ],
+  "segundos": [
+    "Magret de pato a la naranja",
+    "Caldereta de carne guisada con patatas",
+    "Pincho moruno de pollo sobre cuscús de frutos secos",
+    "Bacalhau à Brás con aceitunas verdes"
+  ],
+  "postres": [
+    "Tiramisú",
+    "Tarta de zanahoria",
+    "Torrija de la abuela con helado de mandarina"
+  ],
+  "incluye": "Vino, agua y postre o café",
+  "nota": ""
+}

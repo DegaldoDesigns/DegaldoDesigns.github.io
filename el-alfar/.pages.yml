@@ -1,0 +1,56 @@
+# Panel de edición (Pages CMS) de la web de El Alfar.
+# El dueño solo cambia el menú de la semana. El diseño, las fotos, la carta y el resto
+# de textos los gestiona Diego.
+
+content:
+  - name: menu-semana
+    label: Menú de la semana
+    description: Lo que pongas aquí sale en la tarjeta del menú de la web en 1 o 2 minutos.
+    type: file
+    path: contenido/menu-semana.json
+    format: json
+    fields:
+      - name: mostrar_como
+        label: ¿Qué enseña la web?
+        type: select
+        required: true
+        options:
+          values:
+            - value: semana
+              label: El menú de esta semana
+            - value: ejemplo
+              label: Un menú de ejemplo (platos de semanas anteriores)
+            - value: oculto
+              label: Solo cómo es el menú, sin platos
+      - name: semana
+        label: Semana
+        type: string
+        description: 'Por ejemplo: del 6 al 10 de octubre'
+      - name: precio_entre_semana
+        label: Precio entre semana (€)
+        type: string
+        description: 'Solo el número, por ejemplo 18,50. Si lo dejas vacío, la web dice "pregúntanos el precio".'
+      - name: precio_fin_de_semana
+        label: Precio del fin de semana (€)
+        type: string
+        description: Déjalo vacío si el fin de semana no hay menú o tiene el mismo precio.
+      - name: entrantes
+        label: Entrantes
+        type: string
+        list: true
+      - name: segundos
+        label: Segundos
+        type: string
+        list: true
+      - name: postres
+        label: Postres
+        type: string
+        list: true
+      - name: incluye
+        label: Qué incluye
+        type: string
+        description: 'Por ejemplo: pan, vino, agua y postre o café'
+      - name: nota
+        label: Nota (opcional)
+        type: string
+        description: 'Por ejemplo: el sábado, arroz con bogavante. Déjalo vacío para quitarla.'
