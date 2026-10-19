@@ -163,8 +163,8 @@ main{overflow-x:clip}
 .marca{display:flex;align-items:center;margin-right:auto;text-decoration:none}
 .marca img{width:196px;height:auto}
 .nav{display:flex;gap:2px}
-.nav a{position:relative;font:500 15px/1 var(--f-body);text-decoration:none;padding:12px 11px;color:var(--cafe)}
-.nav a::after{content:"";position:absolute;left:11px;right:11px;bottom:5px;height:2px;border-radius:2px;background:var(--canela);scale:0 1;transform-origin:100% 50%;transition:scale .2s var(--ease-out)}
+.nav a{position:relative;font:500 15px/1 var(--f-body);text-decoration:none;padding:12px 9px;color:var(--cafe)}
+.nav a::after{content:"";position:absolute;left:9px;right:9px;bottom:5px;height:2px;border-radius:2px;background:var(--canela);scale:0 1;transform-origin:100% 50%;transition:scale .2s var(--ease-out)}
 .nav a.activo::after{scale:1 1;transform-origin:0 50%}
 @media (hover:hover) and (pointer:fine){.nav a:hover::after{scale:1 1;transform-origin:0 50%}}
 .cab .btn{min-height:46px;padding:0 18px;font-size:15px}
@@ -178,7 +178,7 @@ main{overflow-x:clip}
 .cerrar-menu{width:48px;height:48px;border:0;border-radius:50%;background:var(--papel);color:var(--espresso);cursor:pointer;display:flex;align-items:center;justify-content:center}
 .cerrar-menu svg{width:22px;height:22px}
 .menu-movil nav{display:flex;flex-direction:column;margin-top:24px}
-.menu-movil nav a{font:500 34px/1.25 var(--f-display);text-decoration:none;padding:7px 0;border-bottom:1px solid rgba(244,233,218,.14)}
+.menu-movil nav a{font:500 30px/1.25 var(--f-display);text-decoration:none;padding:7px 0;border-bottom:1px solid rgba(244,233,218,.14)}
 .menu-movil .botones{margin-top:auto;padding-top:24px}
 @media (prefers-reduced-motion:no-preference){
   .menu-movil{clip-path:circle(0 at var(--mx,90%) var(--my,38px));transition:clip-path .45s var(--ease-drawer),display .45s allow-discrete,overlay .45s allow-discrete}
@@ -192,8 +192,10 @@ main{overflow-x:clip}
   .menu-movil:popover-open nav a:nth-child(5){transition-delay:160ms}
   .menu-movil:popover-open nav a:nth-child(6){transition-delay:200ms}
   .menu-movil:popover-open nav a:nth-child(7){transition-delay:240ms}
+  .menu-movil:popover-open nav a:nth-child(8){transition-delay:280ms}
+  .menu-movil:popover-open nav a:nth-child(9){transition-delay:320ms}
 }
-@media (max-width:1120px){.nav,.cab .btn-llamar{display:none}.btn-menu{display:inline-flex}}
+@media (max-width:1260px){.nav,.cab .btn-llamar{display:none}.btn-menu{display:inline-flex}}
 
 /* ---------- Secciones y divisores de vapor ---------- */
 .sec{position:relative;isolation:isolate;padding:120px 0}
@@ -260,9 +262,23 @@ main{overflow-x:clip}
 .polaroid figcaption{padding:8px 2px 12px;font:400 19px/1.1 var(--f-mano);color:var(--cafe);text-align:center}
 .polaroid .cinta-adh{position:absolute;top:-10px;left:50%;width:70px;height:22px;translate:-50% 0;rotate:-4deg;background:rgba(241,185,56,.55)}
 .pol-in{display:block}
-.pista{position:absolute;left:26%;bottom:-2%;z-index:3;margin:0;font:400 22px/1.1 var(--f-mano);color:#fbe9cf;display:flex;align-items:flex-end;gap:8px;rotate:-4deg;transition:opacity .4s var(--ease-out)}
+.polaroid.agarrada .lupa{scale:.8}
+.pista{position:absolute;left:21%;bottom:-4%;font-size:19px!important;z-index:3;margin:0;font:400 22px/1.1 var(--f-mano);color:#fbe9cf;display:flex;align-items:flex-end;gap:8px;rotate:-4deg;transition:opacity .4s var(--ease-out)}
 .pista svg{width:56px;height:46px;color:#fbe9cf}
 .pista.fuera{opacity:0}
+.pista span{display:block}
+/* Lupa en cada foto: indica que se puede ampliar */
+.lupa{position:absolute;right:-12px;top:-12px;z-index:2;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--espresso);color:var(--papel);box-shadow:0 6px 14px -4px rgba(20,8,2,.6);transition:scale .2s var(--ease-out),background-color .2s var(--ease-out)}
+.lupa svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round}
+.lupa::after{content:"";position:absolute;inset:-2px;border-radius:50%;border:2px solid var(--yema);opacity:0}
+@media (prefers-reduced-motion:no-preference){.lupa::after{animation:aviso-lupa 1.6s var(--ease-out) 2.2s 2}}
+@keyframes aviso-lupa{0%{opacity:.9;scale:1}100%{opacity:0;scale:1.8}}
+.pol-in{position:relative;transition:translate .25s var(--ease-out)}
+@media (hover:hover) and (pointer:fine){
+  .polaroid:hover .pol-in{translate:0 -4px}
+  .polaroid:hover .lupa{scale:1.14;background:var(--canela)}
+}
+.polaroid:focus-visible .lupa{background:var(--canela)}
 /* Estela de destellos al mover el ratón por la mesa */
 .estela{position:absolute;z-index:4;width:18px;height:18px;margin:-9px 0 0 -9px;color:var(--yema);pointer-events:none}
 .estela svg{width:100%;height:100%}
@@ -287,6 +303,29 @@ main{overflow-x:clip}
 .anotada .foto{position:relative;display:block;width:100%;padding:0;border:0;border-radius:6px;overflow:hidden;cursor:zoom-in;background:var(--papel-2);rotate:1.5deg;box-shadow:0 40px 60px -36px rgba(33,20,13,.7)}
 .anotada .foto img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;transition:scale .6s var(--ease-out)}
 @media (hover:hover) and (pointer:fine){.anotada .foto:hover img{scale:1.04}}
+/* Foto de desayunos envuelta: papel de estraza, servilleta y etiqueta atada */
+.envuelta{isolation:isolate}
+.envuelta .kraft{position:absolute;inset:-7% -8% -9% -6%;z-index:-2;rotate:-3.5deg;border-radius:2px;background:
+  linear-gradient(118deg,transparent 46%,rgba(255,236,205,.18) 48%,transparent 52%),
+  linear-gradient(32deg,transparent 60%,rgba(60,30,10,.12) 61%,transparent 64%),
+  var(--grano),#c69c6d;background-size:100% 100%,100% 100%,180px 180px,auto;
+  box-shadow:0 46px 60px -40px rgba(33,20,13,.75),inset 0 0 40px rgba(90,50,20,.25);
+  clip-path:polygon(0 1%,9% 0,22% 1.4%,37% .2%,52% 1.2%,66% 0,81% 1%,100% .4%,99.4% 18%,100% 39%,99.2% 61%,100% 82%,99.5% 100%,78% 99%,61% 100%,44% 98.8%,27% 100%,11% 99%,0 100%,.8% 79%,0 58%,.6% 37%,0 19%)}
+.envuelta .servi{position:absolute;left:-9%;bottom:-11%;width:58%;aspect-ratio:1;z-index:-1;rotate:-11deg;background:
+  linear-gradient(135deg,transparent 49.5%,rgba(0,0,0,.06) 50%,transparent 51%),
+  radial-gradient(circle at 1px 1px,rgba(156,82,41,.16) 1px,transparent 1.5px) 0 0/9px 9px,#fffdf8;
+  box-shadow:0 18px 26px -18px rgba(33,20,13,.6)}
+.envuelta .servi::before{content:"";position:absolute;inset:9px;border:1.5px dashed rgba(156,82,41,.35)}
+.envuelta .servi::after{content:"";position:absolute;right:0;top:0;width:34%;height:34%;background:linear-gradient(225deg,var(--papel) 50%,#efe6d6 50%);box-shadow:-3px 3px 6px -3px rgba(0,0,0,.2)}
+.envuelta .foto{border-radius:3px;box-shadow:0 2px 0 #fff,0 0 0 8px #fffdf8,0 30px 40px -24px rgba(33,20,13,.7)}
+.tag-env{position:absolute;right:-10%;bottom:-6%;z-index:3;pointer-events:none}
+.tag-cuerda{position:absolute;right:62px;bottom:52px;width:120px;height:90px;overflow:visible}
+.tag-cuerda path{fill:none;stroke:#a8835a;stroke-width:2.4;stroke-linecap:round;stroke-dasharray:5 2}
+.tag-carton{position:relative;display:flex;flex-direction:column;align-items:center;padding:16px 14px 12px 26px;background:#d9b98f;color:var(--espresso);rotate:-10deg;border-radius:4px;clip-path:polygon(18% 0,100% 0,100% 100%,18% 100%,0 50%);box-shadow:inset 0 0 0 1px rgba(90,50,20,.2)}
+.tag-carton::before{content:"";position:absolute;left:12%;top:50%;width:9px;height:9px;margin-top:-4.5px;border-radius:50%;background:var(--papel);box-shadow:inset 0 0 0 1.5px rgba(90,50,20,.35)}
+.tag-carton b{font:400 24px/1 var(--f-mano);color:var(--canela-osc);white-space:nowrap}
+.tag-carton span{font:500 12.5px/1.2 var(--f-body);margin-top:4px}
+@media (prefers-reduced-motion:no-preference){.js .dibujado .tag-carton{animation:balancea 1.6s var(--ease-out) .6s both}}
 .marca-nota{position:absolute;z-index:2;display:flex;align-items:center;gap:6px;font:400 clamp(19px,1.8vw,24px)/1.05 var(--f-mano);color:var(--cafe);white-space:nowrap;pointer-events:none}
 .marca-nota svg{width:64px;height:40px;flex:none;color:var(--canela);overflow:visible}
 .marca-nota svg path{fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
@@ -334,6 +373,31 @@ main{overflow-x:clip}
 .toast{position:fixed;left:50%;bottom:26px;z-index:var(--z-aviso);translate:-50% 20px;opacity:0;padding:12px 20px;border-radius:99px;background:var(--espresso);color:var(--papel);font-weight:600;font-size:15px;pointer-events:none;transition:opacity .2s var(--ease-out),translate .25s var(--ease-out)}
 .toast.ve{opacity:1;translate:-50% 0}
 
+
+/* Tostadas de la carta según los ingredientes elegidos */
+.sugeridas{margin-top:72px;padding-top:40px;border-top:1.5px dashed var(--canela-claro)}
+.sug-cab{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:10px 40px}
+.sug-cab p{margin:0;max-width:30em;color:var(--tinta-2)}
+.sug-grupos{display:grid;gap:34px;margin-top:30px}
+.sug-grupo h4{display:flex;align-items:center;gap:10px;margin:0;font:600 23px/1.2 var(--f-display)}
+.sug-grupo h4 .bola{width:22px;height:22px;border-radius:50%;background:var(--c,#ccc);box-shadow:inset 0 0 0 1.5px rgba(0,0,0,.18);flex:none}
+.sug-grupo h4 .todo{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--yema);color:var(--espresso)}
+.sug-grupo h4 .todo svg{width:16px;height:16px}
+.sug-grupo h4 small{font:500 14px/1 var(--f-body);color:var(--tinta-2)}
+.sug-fila{display:flex;gap:18px;margin:16px -24px 0;padding:6px 24px 18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--canela-claro) transparent}
+.sug-card{flex:0 0 220px;scroll-snap-align:start;margin:0;padding:10px 10px 14px;background:var(--papel-3);border-radius:6px;box-shadow:0 18px 26px -20px rgba(33,20,13,.55),inset 0 0 0 1px var(--linea)}
+.sug-foto{position:relative;display:block;width:100%;aspect-ratio:4/3;padding:0;border:0;border-radius:4px;overflow:hidden;background:var(--papel-2)}
+button.sug-foto{cursor:zoom-in}
+.sug-foto img{width:100%;height:100%;object-fit:cover;transition:scale .5s var(--ease-out)}
+@media (hover:hover) and (pointer:fine){button.sug-foto:hover img{scale:1.06}}
+.sug-foto svg{position:absolute;inset:0;width:100%;height:100%}
+.sug-foto .dib-nota{position:absolute;left:8px;bottom:6px;font:400 15px/1 var(--f-mano);color:var(--tinta-2)}
+.sug-card h5{margin:12px 2px 0;font:600 18px/1.25 var(--f-display)}
+.sug-card p{margin:4px 2px 0;font-size:14px;line-height:1.45;color:var(--tinta-2)}
+.sug-ings{display:flex;flex-wrap:wrap;gap:4px;margin:10px 0 0;padding:0;list-style:none}
+.sug-ings li{padding:3px 8px;border-radius:99px;font-size:12px;font-weight:500;background:var(--papel-2);color:var(--tinta-2)}
+.sug-ings li.si{background:var(--espresso);color:var(--papel)}
+.sug-vacio{margin:12px 0 0;color:var(--tinta-2);font-size:15.5px}
 /* ---------- La comanda que se imprime ---------- */
 .carta-sec{padding-top:110px}
 .carta-in{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:start}
@@ -365,7 +429,8 @@ main{overflow-x:clip}
 .ticket .barras{height:46px;margin:14px auto 6px;width:78%;background:repeating-linear-gradient(90deg,#2a2622 0 2px,transparent 2px 4px,#2a2622 4px 7px,transparent 7px 9px,#2a2622 9px 10px,transparent 10px 14px)}
 
 /* Cafés con foto que sigue al cursor */
-.cafes{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;margin-top:120px;align-items:start}
+.cafes-sec{padding-top:40px}
+.cafes{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:start}
 .cafes-txt{position:sticky;top:110px}
 .cafes-txt .dibujo{width:150px;margin-bottom:12px;color:var(--canela)}
 .lista-foto{list-style:none;margin:0;padding:0}
@@ -702,10 +767,15 @@ main{overflow-x:clip}
   .hero h1{font-size:clamp(36px,10vw,50px)}
   .hoja{padding:32px 22px 24px;rotate:-1deg}
   .polaroid{--w:118px!important;padding:6px 6px 0}
-  .zona{height:132vw;margin-bottom:34px}
+  .zona{height:132vw;margin-bottom:104px}
   .taza-top{width:76vw}
-  .pista{left:22%;bottom:-6%}
+  .pista{left:6%;bottom:-78px}
   .polaroid figcaption{font-size:14px;padding:5px 0 8px}
+  .lupa{width:30px;height:30px;right:-9px;top:-9px}
+  .tag-env{right:-2%;bottom:-8%}
+  .tag-carton{padding:12px 10px 10px 22px}
+  .tag-carton b{font-size:19px}
+  .lupa svg{width:16px;height:16px}
   .pista{font-size:18px}
   .cinta-grupo{font-size:22px}
   .marca-nota{font-size:17px}
@@ -768,7 +838,9 @@ main{overflow-x:clip}
     <a class="marca" href="#inicio" aria-label="Cafetería by Vanessa, inicio"><img src="assets/img/logo-texto.webp" alt="Cafetería by Vanessa" width="520" height="140"></a>
     <nav class="nav" aria-label="Secciones">
       <a href="#desayunos">Desayunos</a>
-      <a href="#monta">Monta tu tostada</a>
+      <a href="#monta">Tu tostada</a>
+      <a href="#carta">Carta</a>
+      <a href="#cafes">Cafés</a>
       <a href="#almuerzos">Almuerzos</a>
       <a href="#finde">Finde</a>
       <a href="#encargos">Encargos</a>
@@ -789,6 +861,8 @@ main{overflow-x:clip}
     <nav aria-label="Secciones">
       <a href="#desayunos">Desayunos</a>
       <a href="#monta">Monta tu tostada</a>
+      <a href="#carta">Carta de tostadas</a>
+      <a href="#cafes">Cafés y bollería</a>
       <a href="#almuerzos">Almuerzos</a>
       <a href="#finde">Tardes de finde</a>
       <a href="#encargos">Encargos</a>
@@ -867,11 +941,11 @@ main{overflow-x:clip}
           </g>
         </svg>
       </div>
-      <figure class="polaroid" style="--w:180px" data-x="0" data-y="0" data-r="-7" data-grande="assets/img/tostada-burrata-grande.webp" data-pie="Tostada de burrata, aguacate y tomates confitados" data-galeria="mesa"><span class="pol-in"><span class="cinta-adh"></span><img src="assets/img/hero-tostadas.webp" alt="Tostadas de tomate natural y aguacate sobre la barra" width="525" height="700" draggable="false"><figcaption>tostadas de cada mañana</figcaption></span></figure>
-      <figure class="polaroid" style="--w:156px" data-x="1" data-y=".08" data-r="6" data-grande="assets/img/hero-cafe.webp" data-pie="Café con leche con dibujo en la espuma" data-galeria="mesa"><span class="pol-in"><img src="assets/img/hero-cafe.webp" alt="Café con leche con hoja dibujada en la espuma" width="560" height="560" draggable="false"><figcaption>con cremita</figcaption></span></figure>
-      <figure class="polaroid" style="--w:170px" data-x=".96" data-y="1" data-r="-4" data-grande="assets/img/bocadillo-by-vanessa-grande.webp" data-pie="El bocadillo By Vanessa" data-galeria="mesa"><span class="pol-in"><span class="cinta-adh"></span><img src="assets/img/bocadillo-by-vanessa.webp" alt="Bocadillo By Vanessa de ternera, jamón serrano y cebolla caramelizada" width="560" height="700" draggable="false"><figcaption>el By Vanessa</figcaption></span></figure>
-      <figure class="polaroid" style="--w:150px" data-x=".04" data-y=".97" data-r="9" data-grande="assets/img/croissant-nutella.webp" data-pie="Croissants recién horneados" data-galeria="mesa"><span class="pol-in"><img src="assets/img/croissant-nutella.webp" alt="Croissant relleno espolvoreado con azúcar glas" width="560" height="700" draggable="false" loading="lazy"><figcaption>recién horneados</figcaption></span></figure>
-      <p class="pista" id="pista"><svg viewBox="0 0 64 46" aria-hidden="true"><path d="M58 6C40 6 18 14 10 38M10 38l-2-12M10 38l11-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Arrastra las fotos</p>
+      <figure class="polaroid" style="--w:180px" data-x="0" data-y="0" data-r="-7" data-grande="assets/img/tostada-burrata-grande.webp" data-pie="Tostada de burrata, aguacate y tomates confitados" data-galeria="mesa"><span class="pol-in"><span class="lupa" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5M10.5 8v5M8 10.5h5"/></svg></span><span class="cinta-adh"></span><img src="assets/img/hero-tostadas.webp" alt="Tostadas de tomate natural y aguacate sobre la barra" width="525" height="700" draggable="false"><figcaption>tostadas de cada mañana</figcaption></span></figure>
+      <figure class="polaroid" style="--w:156px" data-x="1" data-y=".08" data-r="6" data-grande="assets/img/hero-cafe.webp" data-pie="Café con leche con dibujo en la espuma" data-galeria="mesa"><span class="pol-in"><span class="lupa" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5M10.5 8v5M8 10.5h5"/></svg></span><img src="assets/img/hero-cafe.webp" alt="Café con leche con hoja dibujada en la espuma" width="560" height="560" draggable="false"><figcaption>con cremita</figcaption></span></figure>
+      <figure class="polaroid" style="--w:170px" data-x=".96" data-y="1" data-r="-4" data-grande="assets/img/bocadillo-by-vanessa-grande.webp" data-pie="El bocadillo By Vanessa" data-galeria="mesa"><span class="pol-in"><span class="lupa" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5M10.5 8v5M8 10.5h5"/></svg></span><span class="cinta-adh"></span><img src="assets/img/bocadillo-by-vanessa.webp" alt="Bocadillo By Vanessa de ternera, jamón serrano y cebolla caramelizada" width="560" height="700" draggable="false"><figcaption>el By Vanessa</figcaption></span></figure>
+      <figure class="polaroid" style="--w:150px" data-x=".04" data-y=".97" data-r="9" data-grande="assets/img/croissant-nutella.webp" data-pie="Croissants recién horneados" data-galeria="mesa"><span class="pol-in"><span class="lupa" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5M10.5 8v5M8 10.5h5"/></svg></span><img src="assets/img/croissant-nutella.webp" alt="Croissant relleno espolvoreado con azúcar glas" width="560" height="700" draggable="false" loading="lazy"><figcaption>recién horneados</figcaption></span></figure>
+      <p class="pista" id="pista"><svg viewBox="0 0 64 46" aria-hidden="true"><path d="M58 6C40 6 18 14 10 38M10 38l-2-12M10 38l11-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Arrástralas por la mesa<br>o tócalas para verlas en grande</span></p>
     </div>
   </div>
 </section>
@@ -903,12 +977,15 @@ main{overflow-x:clip}
         </ul>
         <div class="botones" style="margin-top:30px"><a class="btn btn-cafe iman" href="#monta">Monta la tuya</a><a class="btn btn-linea" href="#carta">Ver todas</a></div>
       </div>
-      <figure class="anotada">
+      <figure class="anotada envuelta">
+        <span class="kraft" aria-hidden="true"></span>
+        <span class="servi" aria-hidden="true"></span>
         <button class="foto" type="button" data-galeria="tostadas" data-grande="assets/img/tostada-york-queso-fresco-aguacate-grande.webp" data-pie="York, queso fresco, aguacate y chía" aria-label="Ampliar foto: tostada de york, queso fresco, aguacate y chía"><img src="assets/img/tostada-york-queso-fresco-aguacate-grande.webp" alt="Tostada de pan crujiente con jamón york, queso fresco, láminas de aguacate, aceite y chía" width="999" height="1250" loading="lazy"></button>
         <span class="marca-nota" style="left:-14%;top:16%" aria-hidden="true"><span>queso fresco</span><svg viewBox="0 0 64 40"><path pathLength="1" d="M2 18C20 12 40 14 60 26M60 26l-10-1M60 26l-5-8"/></svg></span>
         <span class="marca-nota" style="right:-10%;top:4%;flex-direction:row-reverse" aria-hidden="true"><span>chía por encima</span><svg viewBox="0 0 64 40" style="scale:-1 1"><path pathLength="1" d="M2 10C22 8 44 16 60 32M60 32l-10-2M60 32l-3-10"/></svg></span>
         <span class="marca-nota" style="right:-14%;top:44%;flex-direction:row-reverse" aria-hidden="true"><span>aguacate en su punto</span><svg viewBox="0 0 64 40" style="scale:-1 1"><path pathLength="1" d="M2 20C20 18 40 18 60 20M60 20l-9-5M60 20l-9 5"/></svg></span>
         <span class="marca-nota" style="left:-12%;bottom:22%" aria-hidden="true"><span>pan crujiente</span><svg viewBox="0 0 64 40"><path pathLength="1" d="M2 10C22 12 42 20 60 32M60 32l-10-1M60 32l-4-9"/></svg></span>
+        <span class="tag-env" aria-hidden="true"><svg class="tag-cuerda" viewBox="0 0 120 90"><path d="M4 4C40 10 70 30 96 70"/></svg><span class="tag-carton"><b>recién hecha</b><span>para ti</span></span></span>
       </figure>
     </div>
   </div>
@@ -947,7 +1024,6 @@ main{overflow-x:clip}
           </svg>
         </div>
         <div class="ticket-mini" role="status" aria-live="polite"><div><small>Tu tostada</small><b id="tostadaTxt">Pan de semillas, sin nada encima todavía</b></div></div>
-        <div class="parecida" id="parecida" hidden><img id="parecidaImg" src="assets/img/tostada-york-queso-fresco-aguacate.webp" alt="Tostada parecida de la carta" width="64" height="64" loading="lazy"><div><p>La más parecida de nuestra carta</p><b id="parecidaTxt"></b></div></div>
       </div>
       <div class="pasos">
         <div class="paso">
@@ -989,6 +1065,14 @@ main{overflow-x:clip}
           <button class="btn btn-linea" type="button" id="btnLimpiar">Empezar de nuevo</button>
         </div>
       </div>
+    </div>
+    <!-- Tostadas de la carta que llevan los ingredientes elegidos en el paso 3 (se rellena desde assets/js/tostada.js) -->
+    <div class="sugeridas" id="sugeridas">
+      <div class="sug-cab">
+        <h3 class="titulo-m">Las de nuestra carta con lo que has elegido</h3>
+        <p id="sugNota" role="status">Elige ingredientes en el paso 3 y aquí te enseñamos las tostadas de la carta que los llevan.</p>
+      </div>
+      <div class="sug-grupos" id="sugGrupos"></div>
     </div>
   </div>
 </section>
@@ -1040,11 +1124,19 @@ main{overflow-x:clip}
         </div>
       </div>
     </div>
+  </div>
+</section>
 
+<section class="sec cafes-sec mov" id="cafes">
+  <div class="deco" aria-hidden="true">
+    <span class="palabra-fondo" style="right:-3%;top:10px" data-px="-1">Café</span>
+  </div>
+  <div class="wrap">
     <div class="cafes">
       <div class="cafes-txt">
         <svg class="dibujo" viewBox="0 0 150 120" aria-hidden="true"><path pathLength="1" d="M28 54h80v18c0 24-18 40-40 40S28 96 28 72Z"/><path pathLength="1" d="M108 60h8a14 14 0 0 1 0 28h-10"/><path pathLength="1" d="M56 44c-8-10 8-14 0-26M76 44c-8-10 8-14 0-26"/><path pathLength="1" d="M18 116h104"/></svg>
-        <h3 class="titulo-m">Café recién hecho, zumo natural y bollería que sale del horno</h3>
+        <p class="nota">para acompañar</p>
+        <h2 class="titulo-m">Café recién hecho, zumo natural y bollería que sale del horno</h2>
         <p class="entradilla" style="font-size:17.5px">Solo, con leche, cortado, bombón, capuchino… Y para el calor, nuestros granizados de siempre.</p>
       </div>
       <ul class="lista-foto" data-lista-foto>

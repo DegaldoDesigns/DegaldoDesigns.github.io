@@ -15,18 +15,20 @@
     tomate: 'tomate natural', aceite: 'aceite de oliva', aguacate: 'aguacate', salmon: 'salmón', york: 'jamón york', serrano: 'jamón serrano', atun: 'atún',
     huevo: 'huevo revuelto', anchoas: 'anchoas', queso: 'queso fresco', manchego: 'manchego', burrata: 'burrata', rucula: 'rúcula', cherry: 'tomates confitados', semillasIng: 'semillas' };
   // Tostadas de su carta con sus ingredientes, para decir cuál se parece más.
+  // Tostadas de su carta: ingredientes (para buscar y para dibujarlas) y foto si la hay.
+  // Sin foto propia se enseña un dibujo, nunca la foto de otra tostada.
   var CARTA = [
-    { n: 'Mediterránea', i: ['tomate', 'aceite'], f: 'hero-tostadas' },
-    { n: 'Jamón serrano y manchego', i: ['serrano', 'manchego'], f: 'tostada-serrano-manchego' },
-    { n: 'York y manchego', i: ['york', 'manchego', 'aceite'], f: 'tostada-york-manchego' },
-    { n: 'York, queso fresco y aguacate', i: ['york', 'queso', 'aguacate', 'semillas'], f: 'tostada-york-queso-fresco-aguacate' },
-    { n: 'Aguacate y queso fresco', i: ['aguacate', 'queso', 'semillas', 'aceite'], f: 'tostada-york-queso-fresco-aguacate' },
-    { n: 'Salmón y aguacate', i: ['salmon', 'aguacate', 'semillas'], f: 'tostada-salmon-aguacate' },
-    { n: 'Tomate, salmón y queso fresco', i: ['tomate', 'salmon', 'queso'], f: 'tostada-salmon-aguacate' },
-    { n: 'Atún con tomate', i: ['tomate', 'atun', 'queso', 'aguacate'], f: 'hero-tostadas' },
-    { n: 'Huevo revuelto y aguacate', i: ['huevo', 'aguacate', 'semillas'], f: 'tostada-revuelto-aguacate' },
-    { n: 'Huevo revuelto y anchoas', i: ['tomate', 'huevo', 'anchoas'], f: 'tostada-revuelto-anchoas' },
-    { n: 'Burrata', i: ['aguacate', 'burrata', 'cherry', 'rucula', 'semillas'], f: 'tostada-burrata' }
+    { n: 'Mediterránea', d: 'Tomate natural y aceite de oliva virgen extra.', i: ['tomate', 'aceite'], f: 'tostada-tomate-matcha' },
+    { n: 'Jamón serrano y manchego', d: 'Jamón cortado a mano y queso manchego.', i: ['serrano', 'manchego'], f: 'tostada-serrano-manchego' },
+    { n: 'York y manchego', d: 'Queso manchego fundido, orégano y un hilo de aceite.', i: ['aceite', 'york', 'manchego'], f: 'tostada-york-manchego' },
+    { n: 'York, queso fresco y aguacate', d: 'Con semillas de chía por encima.', i: ['york', 'aguacate', 'queso', 'semillas'], f: 'tostada-york-queso-fresco-aguacate' },
+    { n: 'Aguacate y queso fresco', d: 'Aceite de oliva y mix de semillas.', i: ['aceite', 'aguacate', 'queso', 'semillas'], f: null },
+    { n: 'Salmón y aguacate', d: 'Salmón ahumado, aguacate y semillas.', i: ['salmon', 'aguacate', 'semillas'], f: 'tostada-salmon-aguacate' },
+    { n: 'Tomate, salmón y queso fresco', d: 'Con un toque de orégano.', i: ['tomate', 'salmon', 'queso'], f: null },
+    { n: 'Atún con tomate', d: 'Con queso fresco y aguacate si te apetece.', i: ['tomate', 'atun', 'aguacate', 'queso'], f: null },
+    { n: 'Huevo revuelto y aguacate', d: 'Sobre pan de semillas crujiente.', i: ['huevo', 'aguacate', 'semillas'], f: 'tostada-revuelto-aguacate' },
+    { n: 'Huevo revuelto y anchoas', d: 'Tomate natural, revuelto cremoso y anchoas.', i: ['tomate', 'huevo', 'anchoas'], f: 'tostada-revuelto-anchoas' },
+    { n: 'Burrata', d: 'Aguacate, tomates confitados, rúcula y semillas.', i: ['aguacate', 'burrata', 'cherry', 'rucula', 'semillas'], f: 'tostada-burrata' }
   ];
 
   var estado = { pan: 'semillas', sel: [] };
@@ -191,19 +193,88 @@
     $('#contador').textContent = resto.length + ' de ' + MAX;
     // Bloquea ingredientes cuando ya hay 5
     $$('#chipsIngr .chip').forEach(function(b){ b.disabled = resto.length >= MAX && b.getAttribute('aria-pressed') !== 'true'; });
-    // La más parecida de la carta (índice de Jaccard)
-    var mejor = null, nota = 0;
-    CARTA.forEach(function(c){
-      var comun = c.i.filter(function(x){ return s.indexOf(x) !== -1; }).length;
-      var union = c.i.length + s.length - comun, j = union ? comun / union : 0;
-      if (j > nota){ nota = j; mejor = c; }
+    sugeridas();
+  }
+
+  /* ---------- Tostadas de la carta con los ingredientes elegidos ---------- */
+  var BASES = ['tomate', 'aceite'];
+  var COLOR = {};
+  $$('#chipsIngr .chip, #chipsBase .chip').forEach(function(b){ var id = b.dataset.ing || b.dataset.base, bo = b.querySelector('.bola'); COLOR[id] = bo ? bo.style.getPropertyValue('--c') : '#ccc'; });
+  var nMini = 0;
+  function mini(t){
+    // Dibujo de la tostada con sus ingredientes, para las que no tienen foto
+    var id = 'clipMini' + (++nMini);
+    var s2 = el('svg', { viewBox: '76 68 448 164', 'aria-hidden': 'true', preserveAspectRatio: 'xMidYMid meet' });
+    var defs = el('defs', {}), cp = el('clipPath', { id: id }); cp.appendChild(el('path', { d: PAN })); defs.appendChild(cp); s2.appendChild(defs);
+    s2.appendChild(dibujaPan('semillas'));
+    var g = el('g', { 'clip-path': 'url(#' + id + ')' });
+    t.i.slice().sort(function(a, b){ return ORDEN.indexOf(a) - ORDEN.indexOf(b); }).forEach(function(x){ var gg = el('g', {}); DIBUJO[x](azar(hash(x + t.n)), gg); g.appendChild(gg); });
+    s2.appendChild(g);
+    return s2;
+  }
+  function tarjeta(t, galeria, elegidos){
+    var a = document.createElement('article'); a.className = 'sug-card';
+    var foto;
+    if (t.f){
+      foto = document.createElement('button'); foto.type = 'button'; foto.className = 'sug-foto';
+      foto.dataset.grande = 'assets/img/' + t.f + '-grande.webp'; foto.dataset.galeria = galeria; foto.dataset.pie = 'Tostada ' + t.n;
+      foto.setAttribute('aria-label', 'Ampliar foto: tostada ' + t.n);
+      var im = document.createElement('img'); im.src = 'assets/img/' + t.f + '.webp'; im.alt = 'Tostada ' + t.n; im.width = 220; im.height = 220; im.loading = 'lazy';
+      foto.appendChild(im);
+    } else {
+      foto = document.createElement('div'); foto.className = 'sug-foto';
+      foto.appendChild(mini(t));
+      var nt = document.createElement('span'); nt.className = 'dib-nota'; nt.textContent = 'dibujada a mano'; foto.appendChild(nt);
+    }
+    a.appendChild(foto);
+    var h = document.createElement('h5'); h.textContent = t.n; a.appendChild(h);
+    var p = document.createElement('p'); p.textContent = t.d; a.appendChild(p);
+    var ul = document.createElement('ul'); ul.className = 'sug-ings'; ul.setAttribute('aria-label', 'Lleva');
+    t.i.forEach(function(x){ var li = document.createElement('li'); li.textContent = nombre(x); if (elegidos.indexOf(x) !== -1) li.className = 'si'; ul.appendChild(li); });
+    a.appendChild(ul);
+    return a;
+  }
+  var grupoPrevio = {};
+  function sugeridas(){
+    var cont = $('#sugGrupos'), nota = $('#sugNota'); if (!cont) return;
+    var elegidos = estado.sel.filter(function(x){ return BASES.indexOf(x) === -1; });
+    var nuevos = {}, frag = document.createDocumentFragment();
+    function grupo(clave, titulo, lista, color, todo){
+      var sec = document.createElement('section'); sec.className = 'sug-grupo'; sec.dataset.clave = clave;
+      var h = document.createElement('h4');
+      if (todo){ var tt = document.createElement('span'); tt.className = 'todo'; tt.innerHTML = '<svg viewBox="0 0 32 32" aria-hidden="true"><use href="#chispa"/></svg>'; h.appendChild(tt); }
+      else { var bo = document.createElement('span'); bo.className = 'bola'; bo.style.setProperty('--c', color); h.appendChild(bo); }
+      h.appendChild(document.createTextNode(titulo + ' '));
+      var sm = document.createElement('small'); sm.textContent = lista.length === 1 ? '1 tostada' : lista.length + ' tostadas'; h.appendChild(sm);
+      sec.appendChild(h);
+      if (lista.length){
+        var fila = document.createElement('div'); fila.className = 'sug-fila';
+        lista.forEach(function(t){ fila.appendChild(tarjeta(t, 'sug-' + clave, elegidos)); });
+        sec.appendChild(fila);
+      } else {
+        var v = document.createElement('p'); v.className = 'sug-vacio'; v.textContent = 'Ninguna de la carta lleva ' + nombre(clave) + ', pero pídela así en barra y te la preparamos.';
+        sec.appendChild(v); sm.textContent = '';
+      }
+      frag.appendChild(sec); nuevos[clave] = true;
+    }
+    function cuenta(t){ return elegidos.filter(function(x){ return t.i.indexOf(x) !== -1; }).length; }
+    if (elegidos.length > 1){
+      var todas = CARTA.filter(function(t){ return elegidos.every(function(x){ return t.i.indexOf(x) !== -1; }); });
+      if (todas.length) grupo('todo', 'Con todo lo que has elegido', todas, null, true);
+    }
+    elegidos.forEach(function(x){
+      var lista = CARTA.filter(function(t){ return t.i.indexOf(x) !== -1; });
+      // Primero las que llevan más de lo que has elegido
+      lista.sort(function(a, b){ return cuenta(b) - cuenta(a); });
+      grupo(x, 'Con ' + nombre(x), lista, COLOR[x]);
     });
-    var caja = $('#parecida');
-    if (mejor && nota >= .25){
-      caja.hidden = false;
-      $('#parecidaTxt').textContent = mejor.n + (nota === 1 ? ': ¡es esta tal cual!' : '');
-      var img = $('#parecidaImg'); img.src = 'assets/img/' + mejor.f + '.webp'; img.alt = 'Tostada ' + mejor.n;
-    } else caja.hidden = true;
+    cont.innerHTML = ''; cont.appendChild(frag);
+    nota.textContent = elegidos.length ? 'Toca una foto para verla en grande. Desliza cada fila para ver más.' : 'Elige ingredientes en el paso 3 y aquí te enseñamos las tostadas de la carta que los llevan.';
+    // Solo se anima el grupo que acaba de aparecer
+    if (!reducido) $$('.sug-grupo', cont).forEach(function(g){
+      if (!grupoPrevio[g.dataset.clave] && g.animate) g.animate([{ opacity: 0, transform: 'translateY(16px)' }, { opacity: 1, transform: 'none' }], { duration: 380, easing: 'cubic-bezier(0.23,1,0.32,1)' });
+    });
+    grupoPrevio = nuevos;
   }
 
   function aplicaBotones(){

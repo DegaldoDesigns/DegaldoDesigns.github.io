@@ -393,14 +393,15 @@
     var s = document.createElement('small'); s.textContent = grupo.length > 1 ? (idx + 1) + ' de ' + grupo.length : ''; vPie.appendChild(s);
     var multi = grupo.length > 1; $('#visorAnt').hidden = !multi; $('#visorSig').hidden = !multi;
   }
-  $$('[data-grande]').forEach(function(b){
-    b.addEventListener('click', function(e){
-      e.preventDefault(); origen = b;
-      grupo = $$('[data-galeria="' + b.dataset.galeria + '"]').filter(function(x){ return x.offsetParent !== null; });
-      if (!grupo.length) grupo = [b];
-      mostrar(Math.max(0, grupo.indexOf(b)));
-      if (visor.showModal) visor.showModal();
-    });
+  // Delegado en el documento: también sirve para las fotos que se crean después (Monta tu tostada)
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('[data-grande]') : null;
+    if (!b || visor.contains(b)) return;
+    e.preventDefault(); origen = b;
+    grupo = $$('[data-galeria="' + b.dataset.galeria + '"]').filter(function(x){ return x.offsetParent !== null; });
+    if (!grupo.length) grupo = [b];
+    mostrar(Math.max(0, grupo.indexOf(b)));
+    if (visor.showModal) visor.showModal();
   });
   $('#visorCerrar').addEventListener('click', function(){ visor.close(); });
   $('#visorAnt').addEventListener('click', function(){ mostrar(idx - 1); });
