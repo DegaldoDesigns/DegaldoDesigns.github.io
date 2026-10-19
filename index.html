@@ -237,7 +237,13 @@
     .rama.izq::before{left:auto;right:-4px}
     .rama b{font-family:var(--f-display);font-weight:800;font-size:clamp(22px,2.3vw,36px);letter-spacing:-.035em;line-height:1;color:var(--luz);text-shadow:0 0 30px color-mix(in srgb,var(--luz) 40%,transparent);transition:translate .3s var(--ease-out)}
     .rama span{font-size:14.5px;font-weight:500;color:var(--texto-2);transition:color .2s var(--ease-out)}
-    .escenario[data-fase="final"] .rama{opacity:1;visibility:visible;pointer-events:auto;transition:opacity .8s var(--ease-out) calc(.8s + var(--k,0) * 90ms),visibility 0s}
+.rama.foco b{text-shadow:0 0 34px var(--luz),0 0 2px var(--luz)}
+    .rama.foco span{color:var(--texto)}
+    .rama.foco::before{scale:1.6}
+    .escenario.con-foco{cursor:pointer}
+    .mapa-lineas path{transition:stroke-dashoffset .3s var(--ease-out),opacity .3s var(--ease-out),stroke-width .3s var(--ease-out)}
+    html.en-sala{overflow:hidden}
+        .escenario[data-fase="final"] .rama{opacity:1;visibility:visible;pointer-events:auto;transition:opacity .8s var(--ease-out) calc(.8s + var(--k,0) * 90ms),visibility 0s}
     .con-red .final{display:block;position:absolute;left:0;right:0;bottom:clamp(90px,13svh,130px);text-align:center;padding:0 24px;opacity:0;translate:0 18px;pointer-events:none;transition:opacity .6s var(--ease-out),translate .6s var(--ease-out)}
     .escenario[data-fase="final"] .final{opacity:1;translate:0 0;transition-delay:.3s}
     .final h3{font-weight:800;font-size:clamp(30px,3.6vw,52px);letter-spacing:-.04em;line-height:1.05}
@@ -291,6 +297,98 @@
       .rama span{font-size:12px}
     }
     @media (max-width:999px) and (max-height:700px){ .con-red .lienzo{display:none} }
+
+    /* ===== Sala en la red: el lóbulo se separa y se recorre ===== */
+    .sr-velo{position:fixed;inset:0;z-index:40;background:radial-gradient(ellipse 70% 60% at 62% 50%,color-mix(in srgb,var(--luz,#45d2f2) 9%,var(--noche)) 0%,var(--noche) 70%);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .9s var(--ease-in-out),visibility 0s linear .9s}
+    .en-sala .sr-velo{opacity:1;visibility:visible;transition:opacity 1s var(--ease-in-out),visibility 0s}
+    .en-sala .red{z-index:41;visibility:visible}
+    .en-sala body{overflow:hidden}
+    .sr{--luz:#45d2f2;position:fixed;inset:0;z-index:42;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:none;opacity:0;visibility:hidden;transition:opacity .45s var(--ease-out),visibility 0s linear .45s}
+    .sr::-webkit-scrollbar{display:none}
+    .sr.abierta{opacity:1;visibility:visible;transition:opacity .8s var(--ease-out) .7s,visibility 0s}
+    .sr-barra{position:sticky;top:0;z-index:4;display:flex;align-items:center;justify-content:space-between;gap:12px;height:72px;padding:env(safe-area-inset-top,0px) max(20px,env(safe-area-inset-right,0px)) 0 max(20px,env(safe-area-inset-left,0px))}
+    .sr-barra button{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:999px;font-weight:600;font-size:14.5px;background:rgba(9,11,19,.55);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:box-shadow .2s var(--ease-out)}
+    .sr-barra svg{width:18px;height:18px}
+    .sr-donde{font-family:var(--f-display);font-weight:600;font-size:14px;color:var(--texto-2);text-align:center}
+    .sr-donde b{color:var(--luz);font-weight:600}
+    .sr-nav{display:flex;gap:6px}
+    .sr-alto{position:relative;height:calc(var(--u,8) * 100svh);margin-top:-72px}
+    .sr-escena{position:sticky;top:0;height:100svh;overflow:hidden}
+    .sr-lineas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+    .sr-lineas path{fill:none;stroke:var(--luz);stroke-width:1.2;opacity:.7;stroke-dasharray:1;stroke-dashoffset:1}
+    .sr-bloque{position:absolute;opacity:0;visibility:hidden;filter:blur(10px);scale:.97;transition:opacity .6s var(--ease-out),filter .6s var(--ease-out),scale .7s var(--ease-out),visibility 0s linear .7s}
+    .sr-bloque.activo{opacity:1;visibility:visible;filter:blur(0);scale:1;transition:opacity .5s var(--ease-out) .15s,filter .6s var(--ease-out) .15s,scale .9s var(--ease-out) .1s,visibility 0s}
+    .sr-intro{left:max(40px,6vw);top:50%;translate:0 -50%;width:min(560px,40vw)}
+    .sr-intro .sr-num{font-family:var(--f-display);font-weight:600;font-size:14px;color:var(--texto-2)}
+    .sr-intro .sr-num b{color:var(--luz);font-weight:600}
+    .sr-intro h2{font-weight:800;font-size:clamp(52px,6.6vw,112px);line-height:.92;letter-spacing:-.055em;color:var(--luz);margin-top:12px}
+    .sr-intro .lugar{margin-top:16px;font-size:18px}
+    .sr-intro .historia{margin-top:14px;color:var(--texto-2);font-size:16.5px;max-width:46ch}
+    .sr-intro .estado{margin-top:16px}
+    .sr-baja{display:flex;align-items:center;gap:10px;margin-top:30px;font-size:14px;color:var(--texto-2)}
+    .sr-baja i{position:relative;width:1px;height:38px;background:rgba(237,240,247,.18);overflow:hidden}
+    .sr-baja i::after{content:"";position:absolute;left:0;right:0;top:0;height:40%;background:var(--luz);animation:gota 2.2s var(--ease-in-out) infinite}
+    .sr-paso{left:max(40px,6vw);top:50%;translate:0 -46%;width:min(560px,39vw)}
+    .sr-paso .sr-num{font-family:var(--f-display);font-weight:600;font-size:13.5px;letter-spacing:.04em;color:var(--luz);font-variant-numeric:tabular-nums}
+    .sr-paso h3{font-weight:800;font-size:clamp(32px,3.2vw,52px);letter-spacing:-.04em;line-height:1;margin-top:8px}
+    .sr-paso p.sr-txt{margin-top:10px;color:var(--texto-2);font-size:16px;max-width:46ch}
+    .sr-paso .marco{margin-top:24px;box-shadow:0 0 0 1px rgba(255,255,255,.1),0 40px 90px -40px rgba(0,0,0,.85),0 0 90px -30px color-mix(in srgb,var(--luz) 55%,transparent);clip-path:inset(0 0 0 100% round 14px);transition:clip-path 0s .7s}
+    .sr-paso.activo .marco{clip-path:inset(0 0 0 0 round 14px);transition:clip-path 1.1s var(--ease-in-out) .2s}
+    .sr-paso .marco img{scale:1.15;filter:blur(8px) brightness(1.6);transition:scale 0s .7s,filter 0s .7s}
+    .sr-paso.activo .marco img{scale:1;filter:none;transition:scale 1.6s var(--ease-out) .2s,filter 1.1s var(--ease-out) .35s}
+    .sr-tel{margin-top:22px;width:min(250px,60%);aspect-ratio:9/19;border-radius:34px;padding:7px;background:#05070c;box-shadow:0 0 0 1px rgba(255,255,255,.14),0 40px 80px -30px rgba(0,0,0,.8),0 0 80px -30px color-mix(in srgb,var(--luz) 55%,transparent)}
+    .sr-tel .pantalla{height:100%;border-radius:27px;overflow-y:auto;overflow-x:hidden;scrollbar-width:none;overscroll-behavior:contain;background:#000}
+    .sr-tel .pantalla::-webkit-scrollbar{display:none}
+    .sr-tel .pantalla img{width:100%;height:auto;display:block}
+    .sr-paso .comparador{margin-top:24px}
+    .sr-fin{left:0;right:0;bottom:clamp(70px,10svh,110px);text-align:center;padding:0 24px}
+    .sr-fin h3{font-weight:800;font-size:clamp(28px,3vw,44px);letter-spacing:-.035em}
+    .sr-fin p{color:var(--texto-2);margin-top:6px}
+    .sr-fin .acc{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:22px}
+    .sr .btn-ac{background:var(--luz);color:#0a0c12}
+    .sr-rama{position:absolute;left:0;top:0;display:flex;flex-direction:column;gap:2px;padding:8px 6px 8px 16px;translate:0 -50%;text-align:left;opacity:0;visibility:hidden;transition:opacity .35s var(--ease-out),visibility 0s linear .35s;will-change:transform}
+    .sr-rama.izq{text-align:right;align-items:flex-end;translate:-100% -50%;padding:8px 16px 8px 6px}
+    .sr-rama b{font-family:var(--f-display);font-weight:700;font-size:clamp(17px,1.6vw,24px);letter-spacing:-.025em;color:var(--luz)}
+    .sr-rama span{font-size:13px;color:var(--texto-2)}
+    .sr-escena[data-paso="fin"] .sr-rama{opacity:1;visibility:visible;transition:opacity .7s var(--ease-out) calc(.5s + var(--k,0) * 90ms),visibility 0s}
+    .sr-escena[data-paso="fin"] .sr-mapa path{stroke-dashoffset:0;transition:stroke-dashoffset 1.1s var(--ease-in-out) calc(.2s + var(--k,0) * 90ms)}
+    .sr-prog{position:absolute;right:max(22px,env(safe-area-inset-right,0px));top:50%;translate:0 -50%;display:flex;flex-direction:column;align-items:center;gap:6px}
+    .sr-prog ol{list-style:none;display:flex;flex-direction:column;gap:2px}
+    .sr-prog button{width:30px;height:30px;display:grid;place-items:center}
+    .sr-prog button i{width:7px;height:7px;border-radius:50%;background:rgba(237,240,247,.3);transition:background-color .3s var(--ease-out),scale .3s var(--ease-out)}
+    .sr-prog button.visto i{background:color-mix(in srgb,var(--luz) 55%,transparent)}
+    .sr-prog button[aria-current="true"] i{background:var(--luz);scale:1.5;box-shadow:0 0 12px var(--luz)}
+    .sr-cont{font-family:var(--f-display);font-weight:600;font-size:12.5px;color:var(--texto-2);font-variant-numeric:tabular-nums;margin-top:6px}
+    @media (hover:hover) and (pointer:fine){
+      .sr-barra button:hover{box-shadow:inset 0 0 0 1.5px var(--texto)}
+      .sr-rama:hover b{text-decoration:underline;text-underline-offset:4px}
+      .sr-prog button:hover i{background:var(--texto)}
+    }
+    @media (max-width:999px){
+      .sr-barra{height:62px;gap:8px}
+      .sr-barra button{padding:0 12px;font-size:13.5px}
+      .sr-volver-txt,.sr-donde{display:none}
+      .sr-alto{margin-top:-62px}
+      .sr-intro,.sr-paso{left:max(20px,env(safe-area-inset-left,0px));right:max(20px,env(safe-area-inset-right,0px));top:auto;bottom:calc(64px + env(safe-area-inset-bottom,0px));width:auto;translate:none}
+      .sr-intro h2{font-size:clamp(40px,12vw,64px)}
+      .sr-intro .historia{font-size:15px}
+      .sr-paso h3{font-size:clamp(26px,7.5vw,36px)}
+      .sr-paso p.sr-txt{font-size:14.5px}
+      .sr-paso .marco{margin-top:14px}
+      .sr-paso .marco img{aspect-ratio:16/9}
+      .sr-paso .marco .barra{height:18px}
+      .sr-tel{width:min(170px,46%);margin-top:14px;border-radius:24px;padding:5px}
+      .sr-tel .pantalla{border-radius:19px}
+      .sr-prog{top:auto;bottom:calc(14px + env(safe-area-inset-bottom,0px));left:0;right:0;translate:none;flex-direction:row;justify-content:center}
+      .sr-prog ol{flex-direction:row}
+      .sr-cont{margin:0 0 0 8px}
+      .sr-fin{bottom:calc(64px + env(safe-area-inset-bottom,0px))}
+      .sr-rama b{font-size:15px}
+      .sr-rama span{font-size:11.5px}
+    }
+    .solo-movil{display:none}
+    @media (max-width:999px){ .solo-movil{display:inline} }
+    @media (max-width:999px) and (max-height:700px){ .sr-paso .marco,.sr-tel{display:none} }
 
     /* Sala de cada cliente */
     dialog.sala{--bg:#111;--ac:#fff;--tx:#fff;--tx2:rgba(255,255,255,.7);--linea:rgba(255,255,255,.14);position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;border:0;padding:0;background:var(--bg);color:var(--tx);overflow-y:auto;overscroll-behavior:contain}
@@ -768,6 +866,22 @@
     </div>
     <div class="sala-cuerpo" id="sala-cuerpo"></div>
   </dialog>
+  <div class="sr-velo" id="sr-velo" aria-hidden="true"></div>
+  <div class="sr" id="sr" role="dialog" aria-modal="true" aria-labelledby="sr-nombre" hidden>
+    <div class="sr-barra">
+      <button type="button" id="sr-volver"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg><span class="sr-volver-txt">Volver al mapa</span><span class="solo-movil">Mapa</span></button>
+      <p class="sr-donde" id="sr-donde"></p>
+      <div class="sr-nav"><button type="button" id="sr-ant">Anterior</button><button type="button" id="sr-sig">Siguiente</button></div>
+    </div>
+    <div class="sr-alto" id="sr-alto">
+      <div class="sr-escena" id="sr-escena" data-paso="0">
+        <svg class="sr-lineas" aria-hidden="true"><path id="sr-con" pathLength="1" d="M0 0"/><g class="sr-mapa" id="sr-mapa-lineas"></g></svg>
+        <div id="sr-contenido"></div>
+        <div class="sr-prog"><ol id="sr-puntos" aria-label="Partes de la web"></ol><span class="sr-cont" id="sr-cont"></span></div>
+      </div>
+    </div>
+  </div>
+
 
   <script src="js/red.js"></script>
   <script>
@@ -777,43 +891,50 @@
        bg:'#120c0a',ac:'#ff6a1c',tx:'#f6efe8',tx2:'rgba(246,239,232,.72)',
        tecnica:'Dos cartas que cambian solas según la hora, menú del día y QR en las mesas',
        historia:'Un bar de parrilla y fútbol sin web: en Google solo aparecía "Añadir sitio web". Ahora sus clientes ven la carta que toca a cada hora, y Xavi la cambia desde el móvil.',
-       segunda:'la carta',
+       segunda:'los menús y promos',
+       partes:[['Menús y promos','El menú de Navidad y las promos para compartir, arriba del todo. Xavi los cambia desde el móvil.'],['Dos cartas, según la hora','Desayunos y meriendas por la mañana; después, la carta completa. Cambia sola.'],['Abierto o cerrado, en vivo','El horario dice si el bar está abierto ahora y cuánto falta para abrir.']],
        detalles:[['La carta que toca','Por la mañana, desayunos y raciones; después, la carta completa. Cambia sola.'],['Menú del día y QR','El menú del día arriba del todo y un QR en cada mesa con la carta.'],['Un panel para el dueño','Platos, precios y fotos se editan sin depender de nadie.']]},
       {id:'loles-jimenez',nombre:'Loles Jiménez',nombreLargo:'Loles Jiménez GYM & PILATES',tipo:'gimnasios',lugar:'Gimnasio en Torreperogil (Jaén)',pueblo:'Torreperogil',estado:'Online',vivo:true,url:'https://gymypilateslolesjimenez.es/',dominio:'gymypilateslolesjimenez.es',
        bg:'#0b0e09',ac:'#a8f02e',tx:'#eef3e6',tx2:'rgba(238,243,230,.72)',
        tecnica:'Tarifas con el coste por día de entreno, horario en vivo y reserva por WhatsApp',
        historia:'La hice a partir de su propio cartel, en negro y verde. La clienta mandó sus cambios por audio y la publicamos con su dominio en octubre.',
-       segunda:'las tarifas',
+       segunda:'las clases de pilates',
+       partes:[['Pilates con Loles','Sus 14 años de experiencia y las clases para niños, mayores, hombres, mujeres y embarazadas.'],['Paga por los días que entrenas','Cada cuota dice lo que cuesta cada día de entreno, y los bonos de temporada al lado.'],['También al aire libre','Las clases de step, tonificación y estiramientos en grupo, con sus propias fotos.']],
        detalles:[['Tarifas que se entienden','Cada cuota dice lo que cuesta cada día de entreno.'],['Abierto ahora','El horario avisa de si el gimnasio está abierto y hasta qué hora.'],['Reserva en un toque','La plaza se reserva por WhatsApp con el mensaje ya escrito.']]},
       {id:'capricho',nombre:'Capricho',tipo:'locales de copas',lugar:'Copas, cachimbas y billar en Pinto (Madrid)',pueblo:'Pinto',estado:'Cliente',vivo:false,url:'capricho/',
        bg:'#14070f',ac:'#ff3fa5',tx:'#f8ecf3',tx2:'rgba(248,236,243,.72)',
        tecnica:'Carta de copas y cachimbas con filtros, cartel de abierto ahora y llamada para reservar',
        historia:'Tenía una web de Webnode abandonada, con los precios a "00.00 €" y el horario antiguo. La nueva recoge su neón rosa y responde a lo que más se pregunta: si está abierto y qué hay en la carta.',
-       segunda:'la carta',antes:true,
+       segunda:'cumpleaños y eventos',antes:true,
+       partes:[['Cumpleaños y eventos','Su propio cartel de cumpleaños y lo que incluye, con presupuesto por Instagram o por teléfono.'],['La carta por pestañas','Copas, mojitos, chupitos, cachimbas y sin alcohol, con sus precios reales.'],['¿Está abierto?','Un cartel de neón dice si está abierto y hasta qué hora, con el mapa al lado.']],
        detalles:[['Carta por pestañas','Copas, mojitos, chupitos, cachimbas y sin alcohol, con sus precios.'],['¿Está abierto?','Un cartel lo dice en cuanto entras, y cuándo abre si está cerrado.'],['Su identidad','El rótulo de neón y las flores del local, llevados a la web.']]},
       {id:'morrina',nombre:'Morriña',tipo:'street food',lugar:'Bar y street food en Pinto (Madrid)',pueblo:'Pinto',estado:'Propuesta',vivo:false,url:'morrina/',
        bg:'#032b24',ac:'#e3b341',tx:'#efe5d4',tx2:'rgba(239,229,212,.74)',
        tecnica:'Carta por pestañas con foto de cada plato, burger del mes y reserva de mesa',
        historia:'Antes era New Ponzano. Cambió de dueños y de nombre, pero en Google la web seguía llevando al Instagram antiguo y la carta era un PDF en Drive.',
        segunda:'la carta',
+       partes:[['Para compartir, o no','La carta por pestañas con la foto de cada plato; los que no tienen foto llevan su vieira.'],['Antes New Ponzano, ahora Morriña','La historia del cambio de nombre, contada con la foto de Borja.'],['¿Abrimos hoy?','El horario en vivo, que sabe que el fin de semana cierra pasada la medianoche.']],
        detalles:[['Pulpo, smash y cócteles','La carta por pestañas, con la foto de cada plato.'],['Reserva de mesa','Desde la portada y desde una barra fija en el móvil.'],['Horario en vivo','Sabe que el sábado cierra pasada la medianoche.']]},
       {id:'lemko',nombre:'Lem-ko',tipo:'restaurantes',lugar:'Cocina ucraniana y mediterránea en Pinto (Madrid)',pueblo:'Pinto',estado:'Propuesta',vivo:false,url:'lemko/',
        bg:'#2a1215',ac:'#d1ae68',tx:'#f4ecdd',tx2:'rgba(244,236,221,.74)',
        tecnica:'Web en español y en ucraniano, menú del día y salones para celebraciones',
        historia:'Un restaurante familiar sin web propia. La propuesta está en dos idiomas, con los platos ucranianos con su nombre original y el bordado de su logo como adorno.',
-       segunda:'la carta',
+       segunda:'el menú del día',
+       partes:[['Comer bien, cada día','El menú del día y los desayunos ucranianos, como fichas de papel sobre el mantel.'],['El plato de la casa','Las palushky con bryndza, con la frase del propio equipo, antes de la carta.'],['Tu fiesta, en buenas manos','Sus dos salones para cumpleaños, bautizos y comidas de empresa.']],
        detalles:[['Dos idiomas','Español y ucraniano, con un botón para cambiar.'],['El plato de la casa','Las palushky del domingo, con la frase del propio equipo.'],['Celebraciones','Sus dos salones, para cumpleaños y comidas de grupo.']]},
       {id:'della-grotta',nombre:'Della Grotta',tipo:'hamburgueserías',lugar:'Hamburguesas y pizzas en Villaconejos (Madrid)',pueblo:'Villaconejos',estado:'Propuesta',vivo:false,url:'della-grotta/',
        bg:'#121111',ac:'#f0412a',tx:'#f4efe6',tx2:'rgba(244,239,230,.72)',
        tecnica:'Carta con la foto de cada plato, la oferta de Instagram y un cartel con cuenta atrás',
        historia:'Una hamburguesería de reparto que solo tenía Instagram. La web junta su carta, sus fotos y sus ofertas, y deja pedir con un toque.',
-       segunda:'la carta',
+       segunda:'la oferta destacada',
+       partes:[['La oferta del finde','El cartel de su Instagram con los precios en texto: 2 pizzas por 18 € y 2 menús burger por 22 €.'],['La carta','Hamburguesas, pizzas y para picar; los platos sin foto llevan una tarjeta de la marca.'],['Cuenta atrás para abrir','El cartel de la puerta dice cuánto falta para abrir, con el horario de la semana.']],
        detalles:[['Todos los platos igual de importantes','Los que no tienen foto llevan una tarjeta de la marca, del mismo tamaño.'],['Cuenta atrás','Un cartel de puerta dice cuánto falta para abrir.'],['La oferta del finde','El cartel de su Instagram, con los precios en texto.']]},
       {id:'cafeteria-by-vanessa',nombre:'by Vanessa',nombreLargo:'Cafetería by Vanessa',tipo:'cafeterías',lugar:'Cafetería de barrio en Carrús (Elche)',pueblo:'Elche',estado:'Propuesta',vivo:false,url:'cafeteria-by-vanessa/',clara:true,
        bg:'#f3ebdf',ac:'#8b4f2a',tx:'#2e1d15',tx2:'rgba(46,29,21,.74)',
        tecnica:'Desayunos desde las 6, una tostada que montas tú y la carta impresa como un ticket',
        historia:'Vanessa cogió la cafetería en 2025 y le cambió el nombre. La web habla como ella: tostadas, bocadillos y café de los buenos, con su foto dentro.',
-       segunda:'la carta impresa',
+       segunda:'el juego de monta tu tostada',
+       partes:[['Monta tu tostada','Eliges pan, base e ingredientes y la tostada se dibuja capa a capa.'],['La carta impresa','La carta de tostadas sale de una impresora de comandas, como en la barra.'],['Vanessa en la web','La dueña, con su foto y el nombre antiguo tachado: «Cambiamos el nombre, no la esencia».']],
        detalles:[['Monta tu tostada','Eliges pan y ingredientes y ves el precio al momento.'],['La carta en un ticket','Sale de una impresora, como en la barra.'],['Vanessa en la web','Un apartado para la dueña, que es quien atiende.']]}
     ];
     var N=OBRAS.length;
@@ -991,12 +1112,17 @@
     function cuadro(ahora){
       rafRed=0;
       var dt=Math.min(.05,Math.max(0,(ahora-(ultimoT||ahora))/1000)); ultimoT=ahora; est.tiempo+=dt;
-      var H=innerHeight, r=alto.getBoundingClientRect(), u=-r.top/H, mv=movil.matches;
-      var mObj=Math.max(0,Math.min(1,scrollY/Math.max(1,portada.offsetHeight*.92)));
+      var H=innerHeight, r=alto.getBoundingClientRect(), u=-r.top/H, mv=movil.matches, enSala=salaI>=0||est.sala>.002;
+      var mObj=enSala?1:Math.max(0,Math.min(1,scrollY/Math.max(1,portada.offsetHeight*.92)));
       est.morph=hacia(est.morph,mObj,1-Math.exp(-dt*(reduce?60:4.5))); if(Math.abs(mObj-est.morph)<.0004)est.morph=mObj;
-      est.aparece=Math.max(0,Math.min(1,scrollY/(H*.08)));
-      est.shift=2*scrollY/H;
-      fondoIn.style.opacity=String(1-est.aparece);
+      est.aparece=enSala?1:Math.max(0,Math.min(1,scrollY/(H*.08)));
+      est.shift=enSala?0:2*scrollY/H;
+      if(!enSala)fondoIn.style.opacity=String(1-est.aparece);
+      /* lóbulo que se suelta (sala) y foco al pasar por el mapa */
+      var S=0;
+      for(var q=0;q<N;q++){var tg=selObj[q],dq=tg-salaProg[q];salaProg[q]+=Math.sign(dq)*Math.min(Math.abs(dq),dt*(reduce?99:.75));var xq=salaProg[q];est.sel[q]=xq*xq*(3-2*xq);S=Math.max(S,est.sel[q]);
+        est.hover[q]=hacia(est.hover[q],enSala?0:hoverObj[q],1-Math.exp(-dt*7))}
+      est.sala=S;
 
       var f='intro', nuevo=-1;
       if(u>=INTRO+N*PASO)f='final'; else if(u>=INTRO){f='paso';nuevo=Math.min(N-1,Math.floor((u-INTRO)/PASO))}
@@ -1021,27 +1147,73 @@
       /* Cámara */
       var T={yaw:BASE+Math.sin(est.tiempo*.22)*.4,pitch:.1,escala:mv?.78:1,offX:0,offY:mv?.14:.07,brillo:1,final:0};
       if(f==='paso'){var o=red.orientar(activo,mv?.15:-.5);T.yaw=o.yaw+Math.sin(est.tiempo*.3)*.05;T.pitch=o.pitch;T.escala=mv?.72:1.05;T.offX=mv?0:.3;T.offY=mv?.29:0}
-      if(f==='final'){T.yaw=BASE+.55+Math.sin(est.tiempo*.18)*.12;T.pitch=.42;T.escala=mv?.46:.8;T.offY=mv?.36:.07;T.brillo=.75;T.final=1}
+      if(f==='final'){T.yaw=BASE+.55+Math.sin(est.tiempo*.18)*.12;T.pitch=.42;T.escala=mv?.46:.8;T.offY=mv?.36:.07;T.brillo=.85;T.final=1}
+      var SS=null; if(salaI>=0){SS=cuadroSala(dt,mv);T.yaw=SS.yaw;T.pitch=SS.pitch;T.escala=SS.escala;T.offX=SS.offX;T.offY=SS.offY;T.brillo=1}
+      est.explota=hacia(est.explota,(f==='final'&&salaI<0)?1:0,1-Math.exp(-dt*2.2));
+      est.densidad=1-.3*est.explota; est.redAlfa=1-.6*est.explota;
       muelle('yaw',T.yaw,dt,true); muelle('pitch',T.pitch,dt); muelle('escala',T.escala,dt); muelle('offX',T.offX,dt); muelle('offY',T.offY,dt);
       est.brillo=hacia(est.brillo,T.brillo,1-Math.exp(-dt*2));
       est.final=hacia(est.final,T.final,1-Math.exp(-dt*2)); if(Math.abs(est.final-T.final)<.002)est.final=T.final;
       est.foco=activo;
 
-      var visible=est.aparece>0&&r.bottom>0;
+      var visible=enSala||(est.aparece>0&&r.bottom>0);
       lienzoRed.classList.toggle('visible',visible);
       if(visible){
         red.pintar(est);
-        if(f!=='intro'){
-          var pts=red.pantalla();
+        if(salaI>=0)colocarSala(red.pantalla(),mv);
+        else if(f!=='intro'){
+          var pts=red.pantalla(); ultPts=pts;
           nodosEl.forEach(function(n,k){var p=pts[k];n.style.transform='translate3d('+p.x.toFixed(1)+'px,'+p.y.toFixed(1)+'px,0)';n.classList.toggle('izq',p.x>innerWidth*(mv?.5:.62))});
           if(f==='final')colocarMapa(pts,mv);
           if(mostrada>=0&&f==='paso'&&ancla){var p0=pts[mostrada],a=ancla;
             conector.setAttribute('d',a.mv?'M'+p0.x+' '+(p0.y+14)+'C'+p0.x+' '+(p0.y+90)+' '+a.x+' '+(a.y-90)+' '+a.x+' '+a.y:'M'+(p0.x-14)+' '+p0.y+'C'+(p0.x-140)+' '+p0.y+' '+(a.x+140)+' '+a.y+' '+a.x+' '+a.y)}
         }
       }
-      var quieto=est.morph===mObj&&(mObj===0||r.bottom<=0);
+      var quieto=!enSala&&est.morph===mObj&&(mObj===0||r.bottom<=0);
       if(!quieto&&!document.hidden)rafRed=requestAnimationFrame(cuadro); else ultimoT=0;
     }
+    /* Sala: línea de la sub-zona activa a su captura y, al final, el mini mapa de la web */
+    function colocarSala(pts,mv){
+      var ps=pts.sub||[]; if(!ps.length)return;
+      if(salaPaso>=1&&salaPaso<=salaK&&srAncla){var p0=ps[salaPaso-1],a=srAncla;
+        srCon.setAttribute('d',a.mv?'M'+p0.x+' '+(p0.y+10)+'C'+p0.x+' '+(p0.y+80)+' '+a.x+' '+(a.y-80)+' '+a.x+' '+a.y:'M'+(p0.x-10)+' '+p0.y+'C'+(p0.x-130)+' '+p0.y+' '+(a.x+130)+' '+a.y+' '+a.x+' '+a.y)}
+      if(salaPaso<=salaK)return;
+      var c=pts.centro,W=innerWidth,H=innerHeight;
+      if(!srLados){var orden=ps.map(function(p,k){return k}).sort(function(a,b){return ps[a].x-ps[b].x}),porY=function(a,b){return ps[a].y-ps[b].y},m=Math.floor(ps.length/2);srLados={izq:orden.slice(0,m).sort(porY),der:orden.slice(m).sort(porY)}}
+      var R0=0;ps.forEach(function(p){R0=Math.max(R0,Math.abs(p.x-c.x))});
+      if(mv){
+        ['izq','der'].forEach(function(lado){srLados[lado].forEach(function(k,j){
+          var r=srRamas[k],p=ps[k],x=lado==='izq'?22:W-22,y=H*.44+j*Math.min(50,H*.06);
+          r.style.transform='translate3d('+x+'px,'+y.toFixed(1)+'px,0)';r.classList.toggle('izq',lado==='der');
+          var ex=lado==='izq'?x-8:x+8,pa=srMapaL.children[k];
+          if(pa)pa.setAttribute('d','M'+p.x.toFixed(1)+' '+p.y.toFixed(1)+'C'+ex.toFixed(1)+' '+p.y.toFixed(1)+' '+ex.toFixed(1)+' '+p.y.toFixed(1)+' '+ex.toFixed(1)+' '+(y-6).toFixed(1));
+        })});
+        return;
+      }
+      var am=0;srRamas.forEach(function(r){am=Math.max(am,r.offsetWidth)});
+      var gx=mv?{izq:16,der:W-16}:{izq:Math.max(am+70,c.x-R0-80),der:Math.min(W-am-70,c.x+R0+80)}, y0=c.y-H*(mv?.2:.24), y1=c.y+H*(mv?.12:.16);
+      ['izq','der'].forEach(function(lado){var l=srLados[lado];l.forEach(function(k,j){
+        var y=y0+(l.length>1?j/(l.length-1):.5)*(y1-y0),x=gx[lado],r=srRamas[k],p=ps[k];
+        r.style.transform='translate3d('+x.toFixed(1)+'px,'+y.toFixed(1)+'px,0)';r.classList.toggle('izq',mv?lado==='der':lado==='izq');
+        var ex=mv?(lado==='izq'?x-6:x+6):x,mx=(ex+p.x)/2,pa=srMapaL.children[k];
+        if(pa)pa.setAttribute('d','M'+p.x.toFixed(1)+' '+p.y.toFixed(1)+'C'+mx.toFixed(1)+' '+p.y.toFixed(1)+' '+mx.toFixed(1)+' '+y.toFixed(1)+' '+ex.toFixed(1)+' '+y.toFixed(1));
+      })});
+    }
+    /* Mapa: al pasar por un lóbulo o por su rama, ese lóbulo se separa un poco más y brilla (sin apagar los demás) */
+    var ultPts=null, hoverIdx=-1;
+    function ponerHover(k){ if(k===hoverIdx)return; hoverIdx=k; for(var j=0;j<N;j++)hoverObj[j]=j===k?1:0;
+      ramasEl.forEach(function(r,j){r.classList.toggle('foco',j===k)}); escena.classList.toggle('con-foco',k>=0); despertar() }
+    escena.addEventListener('pointermove',function(e){
+      if(fase!=='final'||salaI>=0||!ultPts)return;
+      var rm=e.target.closest('.rama'); if(rm){ponerHover(+rm.dataset.abrir);return}
+      var best=-1,bd=Math.min(innerWidth,innerHeight)*.16;
+      ultPts.forEach(function(p,k){var d=Math.hypot(p.c.x-e.clientX,p.c.y-e.clientY);if(d<bd){bd=d;best=k}});
+      ponerHover(best);
+    });
+    escena.addEventListener('pointerleave',function(){ponerHover(-1)});
+    escena.addEventListener('click',function(e){ if(fase==='final'&&salaI<0&&hoverIdx>=0&&!e.target.closest('button,a'))abrirSala(hoverIdx) });
+    ramasEl.forEach(function(r){r.addEventListener('focus',function(){ponerHover(+r.dataset.abrir)});r.addEventListener('blur',function(){ponerHover(-1)})});
+
     /* Mapa mental: cada lóbulo encendido saca una rama con su tipo de negocio */
     function colocarMapa(pts,mv){
       var c=pts.centro, W=innerWidth, H=innerHeight;
@@ -1062,7 +1234,9 @@
         });
         return;
       }
-      var colX=mv?{izq:12,der:W-12}:{izq:Math.max(280,c.x-Math.min(W*.22,330)),der:Math.min(W-280,c.x+Math.min(W*.22,330))};
+      var R0=0;pts.forEach(function(p){R0=Math.max(R0,Math.abs(p.x-c.x))});
+      var anchoMax=0;ramasEl.forEach(function(r){anchoMax=Math.max(anchoMax,r.offsetWidth)});
+      var colX=mv?{izq:12,der:W-12}:{izq:Math.max(anchoMax+24,c.x-R0-70),der:Math.min(W-anchoMax-24,c.x+R0+70)};
       var y0=c.y-H*(mv?.25:.3), y1=c.y+H*(mv?.22:.24);
       ['izq','der'].forEach(function(lado){
         var lista=lados[lado];
@@ -1084,6 +1258,7 @@
         if(!red)throw 0;
         var im=capas.children[fondoActual]; if(im.complete)red.foto(im); else im.addEventListener('load',function(){red&&red.foto(im)},{once:true});
         despertar();
+        var mh=location.hash.match(/^#sala-([a-z0-9-]+)$/); if(mh){var kh=OBRAS.findIndex(function(o){return o.id===mh[1]});if(kh>=0)abrirRed(kh)}
       }).catch(function(){quitarRed()});
     }
 
@@ -1122,6 +1297,126 @@
     mapa.addEventListener('click',function(e){var b=e.target.closest('[data-abrir]');if(b)abrirSala(+b.dataset.abrir)});
     nodosCont.addEventListener('click',function(e){var b=e.target.closest('[data-abrir]');if(b)abrirSala(+b.dataset.abrir)});
 
+    /* ===== Sala en la red: el lóbulo se separa del cerebro y se recorre con el scroll ===== */
+    var LARGO={'xavi-pinchos':[8429,8429,8429],'loles-jimenez':[9152,9152],'capricho':[6198,6198],'morrina':[11769,11768],'lemko':[10437,10436],'della-grotta':[7328,7328],'cafeteria-by-vanessa':[10381,10381,10380]};
+    var sr=document.getElementById('sr'), srAlto=document.getElementById('sr-alto'), srEsc=document.getElementById('sr-escena'), srCont=document.getElementById('sr-contenido');
+    var srCon=document.getElementById('sr-con'), srMapaL=document.getElementById('sr-mapa-lineas'), srPuntos=document.getElementById('sr-puntos'), srCnt=document.getElementById('sr-cont'), srDonde=document.getElementById('sr-donde');
+    var SR_INTRO=.85, salaI=-1, salaPasos=[], salaK=0, salaPaso=-1, srBloques=[], srRamas=[], srLados=null, srAncla=null, yawPasos=[], vueltaFoco=null, salaProg=[];
+    est.sel=[];est.sub=[0,0,0,0,0,0,0,0];est.sala=0;est.salaIdx=-1;est.hover=[];est.explota=0;
+    var selObj=[],hoverObj=[]; for(v=0;v<N;v++){est.sel.push(0);selObj.push(0);salaProg.push(0);est.hover.push(0);hoverObj.push(0)}
+    function largoHTML(o){return (LARGO[o.id]||[8000]).map(function(h,k){return '<img src="img/sala/'+o.id+(k?'-largo-'+(k+1):'-largo')+'.webp" width="480" height="'+h+'" alt=""'+(k?' loading="lazy"':'')+'>'}).join('')}
+    function pasosDe(o){
+      var p=[{t:'La portada',d:o.tecnica,tipo:'marco',img:o.id+'.webp',alt:'Portada de la web de '+(o.nombreLargo||o.nombre)},
+             {t:'En el móvil',d:'La web entera, de arriba abajo. Se mueve sola; desliza para recorrerla tú.',tipo:'movil'}];
+      o.partes.forEach(function(x,k){p.push({t:x[0],d:x[1],tipo:'marco',img:o.id+'-p'+(k+1)+'.webp',alt:x[0]+', en la web de '+(o.nombreLargo||o.nombre)})});
+      if(o.antes)p.push({t:'Antes y ahora',d:'Su web anterior en Webnode tenía los precios a 00.00 € y el horario antiguo. Arrastra para comparar con la carta nueva.',tipo:'antes'});
+      return p;
+    }
+    function htmlSalaRed(i){
+      var o=OBRAS[i], nom=esc(o.nombreLargo||o.nombre), sig=OBRAS[(i+1)%N];
+      var h='<div class="sr-bloque sr-intro" data-k="0"><p class="sr-num">Sala '+pad(i+1)+' <b>· '+esc(o.tipo)+'</b></p><h2 id="sr-nombre">'+nom+'</h2><p class="lugar">'+esc(o.lugar)+'</p><p class="historia">'+esc(o.historia)+'</p>'+
+        '<p class="estado">'+(o.vivo?'<span class="punto" aria-hidden="true"></span>':'')+esc(o.estado)+(o.vivo?', en '+esc(o.dominio):'')+'</p><p class="sr-baja"><i aria-hidden="true"></i>Baja para recorrerla</p></div>';
+      salaPasos.forEach(function(p,k){
+        h+='<article class="sr-bloque sr-paso" data-k="'+(k+1)+'" aria-label="'+esc(p.t)+'"><p class="sr-num">'+pad(k+1)+' / '+pad(salaPasos.length)+'</p><h3>'+esc(p.t)+'</h3><p class="sr-txt">'+esc(p.d)+'</p>';
+        if(p.tipo==='marco')h+='<div class="marco"><div class="barra" aria-hidden="true"><i></i><i></i><i></i></div><img src="img/sala/'+p.img+'" width="1440" height="900" alt="'+esc(p.alt)+'" loading="lazy"></div>';
+        if(p.tipo==='movil')h+='<div class="sr-tel"><div class="pantalla" tabindex="0" role="img" aria-label="La web de '+nom+' entera, vista en el móvil">'+largoHTML(o)+'</div></div>';
+        if(p.tipo==='antes')h+='<div class="comparador" id="sr-comparador"><img src="img/sala/capricho-antes.webp" width="784" height="295" alt="La web anterior de Capricho en Webnode, con todos los precios a 00.00 euros"><img class="despues" src="img/sala/capricho-p2.webp" width="1440" height="900" alt="La carta nueva de Capricho con copas y precios reales"><span class="linea-c" aria-hidden="true"></span><span class="et a" aria-hidden="true">Antes</span><span class="et b" aria-hidden="true">Ahora</span><input type="range" min="0" max="100" value="50" aria-label="Comparar la web anterior con la nueva"><span class="foco" aria-hidden="true"></span></div>';
+        h+='</article>';
+      });
+      h+='<div class="sr-bloque sr-fin" data-k="fin"><h3>El mapa de '+esc(o.nombre)+'</h3><p>Cada zona encendida es una parte de su web.</p><div class="acc">'+
+        '<a class="btn btn-ac" href="'+o.url+'" target="_blank" rel="noopener">'+(o.vivo?'Visitar '+esc(o.dominio):'Ver la web')+'</a>'+
+        '<button type="button" class="btn btn-linea" data-sr-sig>Siguiente sala: '+esc(sig.nombre)+'</button>'+
+        '<button type="button" class="btn btn-linea" data-sr-volver>Volver al mapa</button></div></div>';
+      salaPasos.forEach(function(p,k){h+='<button type="button" class="sr-rama" data-sr-ir="'+(k+1)+'" style="--k:'+k+'" tabindex="-1"><b>'+esc(p.t)+'</b><span>'+pad(k+1)+'</span></button>'});
+      return h;
+    }
+    function pintarSalaRed(i){
+      var o=OBRAS[i]; salaI=i; salaPasos=pasosDe(o); salaK=salaPasos.length; salaPaso=-1; srLados=null; srAncla=null;
+      sr.style.setProperty('--luz',luz(o)); document.getElementById('sr-velo').style.setProperty('--luz',luz(o));
+      srDonde.innerHTML='Sala '+pad(i+1)+' de '+pad(N)+' <b>· '+esc(o.nombre)+'</b>';
+      srCont.innerHTML=htmlSalaRed(i);
+      srBloques=[].slice.call(srCont.querySelectorAll('.sr-bloque')); srRamas=[].slice.call(srCont.querySelectorAll('.sr-rama'));
+      srMapaL.innerHTML=salaPasos.map(function(p,k){return '<path pathLength="1" style="--k:'+k+'" d="M0 0"/>'}).join('');
+      srPuntos.innerHTML=['Inicio'].concat(salaPasos.map(function(p){return p.t}),['Mapa']).map(function(t,k){return '<li><button type="button" data-sr-ir="'+k+'" aria-label="'+esc(t)+'"><i></i></button></li>'}).join('');
+      srAlto.style.setProperty('--u',(SR_INTRO+salaK+1.3+1).toFixed(2));
+      sr.scrollTop=0;
+      var c=document.getElementById('sr-comparador'); if(c){var rg=c.querySelector('input');rg.addEventListener('input',function(){c.style.setProperty('--pos',rg.value+'%')})}
+      red.prepararSala(i,salaK);
+      /* giro: cada sub-zona queda de frente en su paso; entre medias el lóbulo gira con el scroll */
+      var ang=red.salaAngulos(), desvio=movil.matches?.1:-.55; yawPasos=ang.map(function(a){return desvio-a});
+      for(var k=1;k<yawPasos.length;k++){while(yawPasos[k]>yawPasos[k-1]-.35)yawPasos[k]-=Math.PI*2;while(yawPasos[k]<yawPasos[k-1]-Math.PI*1.6)yawPasos[k]+=Math.PI*2}
+      for(k=0;k<8;k++)est.sub[k]=0;
+      try{history.replaceState(null,'','#sala-'+o.id)}catch(e){}
+    }
+    function abrirRed(i,desdeFoco){
+      vueltaFoco=desdeFoco||document.activeElement;
+      if(salaI<0){document.documentElement.classList.add('en-sala');document.querySelector('main').inert=true;sr.hidden=false;requestAnimationFrame(function(){sr.classList.add('abierta')})}
+      for(var k=0;k<N;k++)selObj[k]=k===i?1:0;
+      pintarSalaRed(i); est.salaIdx=i; despertar();
+      setTimeout(function(){document.getElementById('sr-volver').focus({preventScroll:true})},60);
+    }
+    function cerrarRed(){
+      if(salaI<0)return; var v=salaI; salaI=-1;
+      for(var k=0;k<N;k++)selObj[k]=0;
+      sr.classList.remove('abierta'); document.documentElement.classList.remove('en-sala'); document.querySelector('main').inert=false;
+      setTimeout(function(){if(salaI<0){sr.hidden=true;srCont.innerHTML=''}},700);
+      try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}
+      if(vueltaFoco&&vueltaFoco.focus)vueltaFoco.focus({preventScroll:true});
+      despertar();
+    }
+    function cambiarRed(i){ for(var k=0;k<N;k++)selObj[k]=k===i?1:0; pintarSalaRed(i); est.salaIdx=i; despertar() }
+    document.getElementById('sr-volver').addEventListener('click',cerrarRed);
+    document.getElementById('sr-ant').addEventListener('click',function(){cambiarRed((salaI-1+N)%N)});
+    document.getElementById('sr-sig').addEventListener('click',function(){cambiarRed((salaI+1)%N)});
+    sr.addEventListener('click',function(e){
+      if(e.target.closest('[data-sr-volver]'))return cerrarRed();
+      if(e.target.closest('[data-sr-sig]'))return cambiarRed((salaI+1)%N);
+      var b=e.target.closest('[data-sr-ir]'); if(b){var k=+b.dataset.srIr,u=k===0?0:(k>salaK?SR_INTRO+salaK+.4:SR_INTRO+k-.6);sr.scrollTo({top:u*innerHeight,behavior:reduce?'auto':'smooth'})}
+    });
+    sr.addEventListener('scroll',despertar,{passive:true});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&salaI>=0){e.preventDefault();cerrarRed()}});
+    function moverMovilEn(p){
+      if(!p||reduce||p.dataset.mov)return; p.dataset.mov=1;
+      var parado=false, ultimo=0, espera=1200;
+      ['wheel','pointerdown','touchstart','keydown'].forEach(function(ev){p.addEventListener(ev,function(){parado=true},{passive:true,once:true})});
+      function paso(t){ if(parado||!p.isConnected)return; if(!ultimo)ultimo=t; var dt=Math.min(64,t-ultimo); ultimo=t;
+        if(espera>0)espera-=dt; else { p.scrollTop+=dt*.08; if(p.scrollTop+p.clientHeight>=p.scrollHeight-1){p.scrollTop=0;espera=1600} }
+        requestAnimationFrame(paso) }
+      requestAnimationFrame(paso);
+    }
+    /* Estado de la sala en cada cuadro: paso activo, sub-zonas encendidas y giro ligado al scroll */
+    function cuadroSala(dt,mv){
+      var H=innerHeight, u=sr.scrollTop/H, paso=u<SR_INTRO?0:Math.min(salaK+1,Math.floor(u-SR_INTRO)+1);
+      if(paso!==salaPaso){
+        salaPaso=paso; srAncla=null;
+        srEsc.dataset.paso=paso>salaK?'fin':String(paso);
+        srBloques.forEach(function(b){var k=b.dataset.k,on=(k==='fin'&&paso>salaK)||(+k===paso&&k!=='fin');b.classList.toggle('activo',on);b.inert=!on});
+        srRamas.forEach(function(r){r.tabIndex=paso>salaK?0:-1});
+        srPuntos.querySelectorAll('button').forEach(function(b,k){b.setAttribute('aria-current',k===paso?'true':'false');b.classList.toggle('visto',k<paso)});
+        srCnt.textContent=paso===0?'':(paso>salaK?'Mapa':pad(paso)+' / '+pad(salaK));
+        srCon.style.transition='none';srCon.style.strokeDashoffset='1';
+        if(paso>=1&&paso<=salaK){
+          var b=srBloques[paso],m=b.querySelector('.marco,.sr-tel,.comparador');
+          if(salaPasos[paso-1].tipo==='movil')moverMovilEn(b.querySelector('.pantalla'));
+          setTimeout(function(){ if(salaPaso!==paso||!m)return; var r=m.getBoundingClientRect();
+            srAncla=mv?{x:r.left+r.width*.5,y:r.top-10,mv:true}:{x:r.right+14,y:r.top+r.height*.42,mv:false};
+            srCon.getBoundingClientRect();srCon.style.transition='stroke-dashoffset .9s cubic-bezier(.77,0,.175,1)';srCon.style.strokeDashoffset='0'},650);
+        }
+      }
+      for(var k=0;k<8;k++){
+        var obj=k>=salaK?0:(paso>salaK?.85:(k===paso-1?1:(k<paso-1?.45:(paso===0?.12:.08))));
+        est.sub[k]=hacia(est.sub[k],obj,1-Math.exp(-dt*(obj>est.sub[k]?3:1.8)));
+      }
+      /* giro: interpolado entre los ángulos de cada paso según el scroll */
+      var yp=yawPasos, y;
+      if(!yp.length)y=BASE; else{
+        var pos=u-SR_INTRO+.5;
+        if(pos<=0)y=yp[0]+(-pos)*.9; else if(pos>=salaK-1)y=yp[salaK-1]-(pos-(salaK-1))*.9-est.tiempo*0; else{var a=Math.floor(pos),f=pos-a;f=f*f*(3-2*f);y=yp[a]+(yp[a+1]-yp[a])*f}
+      }
+      var fin=paso>salaK;
+      return {yaw:y,pitch:.16+Math.sin(u*.9)*.06,escala:fin?(mv?.5:.78):(mv?.62:1),offX:fin||mv?0:.27,offY:fin?(mv?.5:.14):(mv?.34:.02),u:u,paso:paso};
+    }
+
     /* Sala de cada cliente */
     var dlg=document.getElementById('sala'), cuerpo=document.getElementById('sala-cuerpo'), abierta=-1, autoMovil=null;
     function htmlSala(i){
@@ -1131,7 +1426,7 @@
       var h='<header class="sala-cab"><div><p class="sala-num">Sala '+pad(i+1)+' de '+pad(N)+'</p><h2 id="sala-nombre">'+titulo+'</h2><p class="lugar">'+esc(o.lugar)+'</p></div>'+
         '<div><p class="historia">'+esc(o.historia)+'</p><div class="acc"><a class="btn btn-ac" href="'+o.url+'" target="_blank" rel="noopener">'+(o.vivo?'Visitar '+esc(o.dominio):'Ver la web')+'</a><span class="estado-txt">'+(o.vivo?'Publicada':o.estado==='Cliente'?'Se publica pronto':'Propuesta para el negocio')+'</span></div></div></header>'+
         '<section class="vitrina" aria-label="La web en el móvil y en el ordenador">'+
-          '<div class="movil-vivo"><div class="tel-grande"><div class="pantalla" id="pantalla-movil" tabindex="0" role="img" aria-label="La web de '+nom+' entera, vista en el móvil"><img src="img/sala/'+o.id+'-largo.webp" width="480" height="8615" alt=""></div></div><p>Se mueve sola. Desliza para recorrerla tú.</p></div>'+
+          '<div class="movil-vivo"><div class="tel-grande"><div class="pantalla" id="pantalla-movil" tabindex="0" role="img" aria-label="La web de '+nom+' entera, vista en el móvil">'+largoHTML(o)+'</div></div><p>Se mueve sola. Desliza para recorrerla tú.</p></div>'+
           '<div class="collage">'+
             '<figure><div class="marco" id="marco-sala"><div class="barra" aria-hidden="true"><i></i><i></i><i></i></div><img src="img/sala/'+o.id+'.webp" width="1800" height="1125" alt="Portada de la web de '+nom+' en ordenador"></div><figcaption>La portada, en el ordenador.</figcaption></figure>'+
             '<figure><div class="marco"><div class="barra" aria-hidden="true"><i></i><i></i><i></i></div><img src="img/sala/'+o.id+'-detalle.webp" width="1440" height="900" alt="Otra sección de la web de '+nom+'" loading="lazy"></div><figcaption>Más abajo, '+o.segunda+'.</figcaption></figure>'+
@@ -1140,7 +1435,7 @@
       if(o.antes){
         h+='<section class="antes"><h3>Antes y ahora</h3><div class="comparador" id="comparador">'+
           '<img src="img/sala/capricho-antes.webp" width="784" height="295" alt="La web anterior de Capricho en Webnode, con todos los precios a 00.00 euros">'+
-          '<img class="despues" src="img/sala/capricho-detalle.webp" width="1440" height="900" alt="La carta nueva de Capricho con copas y precios reales">'+
+          '<img class="despues" src="img/sala/capricho-p2.webp" width="1440" height="900" alt="La carta nueva de Capricho con copas y precios reales">'+
           '<span class="linea-c" aria-hidden="true"></span><span class="et a" aria-hidden="true">Antes</span><span class="et b" aria-hidden="true">Ahora</span>'+
           '<input type="range" min="0" max="100" value="50" aria-label="Comparar la web anterior con la nueva"><span class="foco" aria-hidden="true"></span></div>'+
           '<p class="nota">A la izquierda, su web en Webnode: precios a 00.00 €, nombre y horario antiguos, y el aviso de Webnode encima. A la derecha, la carta nueva con sus precios reales. Arrastra para comparar.</p></section>';
@@ -1171,6 +1466,7 @@
       moverMovil();
     }
     function abrirSala(i){
+      if(conRed&&red){abrirRed(i);return}
       var hecho=function(){ if(!dlg.open)dlg.showModal(); pintarSala(i); document.documentElement.style.overflow='hidden'; };
       var marco=document.querySelector('#obra-'+OBRAS[i].id+' .marco');
       if(conRed&&mostrada!==i)marco=null;
@@ -1192,7 +1488,7 @@
     cuerpo.addEventListener('click',function(e){var s=e.target.closest('[data-sig]');if(s)pintarSala(+s.dataset.sig)});
     obrasCont.addEventListener('click',function(e){var b=e.target.closest('[data-abrir]');if(b)abrirSala(+b.dataset.abrir)});
     document.addEventListener('keydown',function(e){
-      if(!conRed||dlg.open)return;
+      if(!conRed||dlg.open||salaI>=0)return;
       var r=alto.getBoundingClientRect(); if(!(r.top<=1&&r.bottom>=innerHeight-1))return;
       if(e.key==='ArrowRight'&&activo<N-1){e.preventDefault();irA(activo+1)}
       if(e.key==='ArrowLeft'&&activo>0){e.preventDefault();irA(activo-1)}
@@ -1212,7 +1508,7 @@
 
     alScroll();
     var m=location.hash.match(/^#sala-([a-z0-9-]+)$/);
-    if(m){var k=OBRAS.findIndex(function(o){return o.id===m[1]});if(k>=0){var r0=reduce;reduce=true;abrirSala(k);reduce=r0}}
+    if(m&&!conRed){var k=OBRAS.findIndex(function(o){return o.id===m[1]});if(k>=0){var r0=reduce;reduce=true;abrirSala(k);reduce=r0}}
   })();
   </script>
 </body>
