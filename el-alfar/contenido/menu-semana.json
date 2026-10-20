@@ -1,8 +1,9 @@
 {
   "mostrar_como": "ejemplo",
   "semana": "",
-  "precio_entre_semana": "",
-  "precio_fin_de_semana": "",
+  "valido_hasta": "",
+  "precio_entre_semana": "21",
+  "precio_fin_de_semana": "26",
   "entrantes": [
     "Verduritas rellenas de carne con queso gratinado",
     "Pimientos del piquillo rellenos de bacalao en salsa de choricero",

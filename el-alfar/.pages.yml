@@ -26,6 +26,10 @@ content:
         label: Semana
         type: string
         description: 'Por ejemplo: del 6 al 10 de octubre'
+      - name: valido_hasta
+        label: Último día de este menú
+        type: date
+        description: 'Pasado este día la web deja de enseñar estos platos ella sola, para que nunca salga un menú viejo. Puedes dejarlo vacío.'
       - name: precio_entre_semana
         label: Precio entre semana (€)
         type: string
