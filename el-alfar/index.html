@@ -1136,9 +1136,9 @@ main{overflow-x:clip}
 body:has(.mesa) .cab{margin-bottom:-78px}
 
 /* ---------- Portada: la mesa servida ---------- */
-.mesa{position:relative;height:235vh;height:235svh;background:#24272b}
+.mesa{position:relative;height:290vh;height:290svh;background:#24272b}
 .mesa-fija{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;--szc:min(34vw,58vh)}
-.mesa-mundo{position:absolute;inset:-4%;background:#24272b url(assets/img/pizarra-mesa.webp) 0 0/768px;transform-origin:var(--ox,64%) var(--oy,55%);will-change:transform}
+.mesa-mundo{position:absolute;inset:-4%;background:#24272b url(assets/img/pizarra-mesa.webp) 0 0/768px;transform-origin:var(--ox,64%) var(--oy,55%)}
 .mesa-luz{position:absolute;inset:0;pointer-events:none;background:radial-gradient(min(52vw,760px) circle at var(--lx,60%) var(--ly,46%),rgba(255,206,150,.17),rgba(255,206,150,.05) 45%,transparent 70%)}
 .mesa-velo{position:absolute;inset:0;pointer-events:none;z-index:1;background:radial-gradient(ellipse 75% 70% at 52% 55%,transparent 45%,rgba(10,11,12,.62) 100%)}
 .plato-m{position:absolute;left:var(--cx);top:var(--cy);width:var(--sz);aspect-ratio:1;translate:-50% -50%;rotate:var(--r0,0deg);border-radius:50%;
@@ -1355,7 +1355,7 @@ button.pd-btn{cursor:pointer}
 }
 
 /* ---------- Viaje por el comedor ---------- */
-.viaje{position:relative;height:330vh;height:330svh;background:radial-gradient(ellipse 70% 60% at 50% 55%,#3b3029 0%,#231e1b 55%,#141312 100%)}
+.viaje{position:relative;height:540vh;height:540svh;background:radial-gradient(ellipse 70% 60% at 50% 55%,#3b3029 0%,#231e1b 55%,#141312 100%)}
 .viaje-fijo{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;perspective:1000px;perspective-origin:50% 46%}
 .viaje-mundo{position:absolute;inset:0;transform-style:preserve-3d}
 .vf{position:absolute;left:50%;top:50%;width:clamp(250px,30vw,460px);margin:0;transform-style:preserve-3d;will-change:transform,opacity;opacity:0}
@@ -2074,6 +2074,7 @@ button.pd-btn{cursor:pointer}
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
     secciones.forEach(function(s){ io.observe(s); });
+    if ($('#inicio')) io.observe($('#inicio'));   /* en la portada no se marca ningún enlace */
   }
 
   /* ---------- Menú móvil (popover) ---------- */

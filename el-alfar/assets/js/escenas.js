@@ -59,7 +59,8 @@
       escenas.push(function(){
         var r = mesa.getBoundingClientRect();
         document.body.classList.toggle('en-portada', r.bottom > vh * 1.02);
-        if (r.bottom < 0 || r.top > vh) return;
+        if ((r.bottom < 0 || r.top > vh) && mesa._fuera) return;
+        mesa._fuera = r.bottom < 0 || r.top > vh;
         var p = pMesa = progreso(mesa);
         var a = suave(p / .22);                         /* el texto se va */
         var z = curva((p - .1) / .74);                  /* la cámara entra en el plato */
@@ -67,7 +68,23 @@
         var s = Math.pow(S, z);
         var cx = o.mx + o.x, cy = o.my + o.y;
         var dx = (vw / 2 - cx) * suave(z * 1.25), dy = (vh / 2 - cy) * suave(z * 1.25);
-        mundo.style.transform = 'translate3d(' + dx.toFixed(1) + 'px,' + dy.toFixed(1) + 'px,0) rotate(' + (z * 14).toFixed(2) + 'deg) scale(' + s.toFixed(4) + ')';
+        /* En reposo (arriba del todo) la mesa queda sin transformación, y la capa de GPU solo existe mientras se mueve:
+           al pararse se suelta para que el navegador vuelva a pintarla nítida (evita el parpadeo de píxeles al volver al inicio) */
+        var t = z < .0005 ? 'none' : 'translate3d(' + dx.toFixed(1) + 'px,' + dy.toFixed(1) + 'px,0) rotate(' + (z * 14).toFixed(2) + 'deg) scale(' + s.toFixed(4) + ')';
+        if (mundo.style.transform !== t){
+          mundo.style.transform = t;
+          if (t !== 'none'){ mundo.style.willChange = 'transform'; clearTimeout(mundo._reposo); mundo._reposo = setTimeout(function(){ mundo.style.willChange = 'auto'; }, 180); }
+          else {
+            clearTimeout(mundo._reposo); mundo.style.willChange = 'auto';
+            /* Al llegar al reposo se fuerza un repintado completo de la mesa (lo mismo que hacía pasar el ratón por un plato) */
+            clearTimeout(mundo._repinta);
+            mundo._repinta = setTimeout(function(){
+              if (mundo.style.transform !== 'none') return;
+              mundo.style.opacity = '.999';
+              setTimeout(function(){ mundo.style.opacity = ''; }, 60);
+            }, 220);
+          }
+        }
         texto.style.opacity = (1 - a).toFixed(3);
         texto.style.translate = '0 ' + (-50 * a).toFixed(1) + 'px';
         texto.style.visibility = a > .99 ? 'hidden' : '';
@@ -77,6 +94,14 @@
         if (p > .02 && etq) etq.classList.remove('ver');
       });
     }
+    /* Volver al inicio desde el menú: salto directo arriba (recorrer el zoom entero hacia atrás a toda velocidad era lo que dejaba la portada con píxeles rotos) */
+    document.addEventListener('click', function(e){
+      var a = e.target.closest && e.target.closest('a[href="#inicio"]');
+      if (!a || a.target === '_blank' || e.metaKey || e.ctrlKey) return;
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      if (history.replaceState) history.replaceState(null, '', '#inicio');
+    });
     /* Luz cálida que sigue al ratón y nombre del plato al pasar por encima */
     if (raton && !reducido){
       var lx = 60, ly = 46, tlx = 60, tly = 46, girandoL = false;
