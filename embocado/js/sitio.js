@@ -489,6 +489,12 @@
     marcar();
   })();
 
+  /* ================= Fondo vivo (fondo-hojas-vivo, M82): el brillo solo respira con la portada en pantalla ================= */
+  $$('.fondo-vivo').forEach(function(f){
+    if (!conIO){ f.classList.add('en-pantalla'); return; }
+    new IntersectionObserver(function(es){ f.classList.toggle('en-pantalla', es[0].isIntersecting); }).observe(f);
+  });
+
   /* ================= Decoración con parallax (decoracion-parallax) ================= */
   if (!reducido){
     var capas = $$('[data-px],[data-py]'), pendP = null;
@@ -516,7 +522,9 @@
       f.addEventListener('pointermove', function(e){ if (e.pointerType !== 'mouse') return; var r = f.getBoundingClientRect();
         var x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
         f.style.translate = (x * 30).toFixed(1) + 'px ' + (y * 26).toFixed(1) + 'px';
-        img.style.translate = (x * -12).toFixed(1) + 'px ' + (y * -10).toFixed(1) + 'px'; img.style.scale = '1.04'; });
+        /* dentro de un marco de ventana la foto no se desplaza (dejaría un hueco junto al marco): solo crece un poco */
+        if (!img.closest('.foto-ventana')) img.style.translate = (x * -12).toFixed(1) + 'px ' + (y * -10).toFixed(1) + 'px';
+        img.style.scale = '1.04'; });
       f.addEventListener('pointerleave', function(){ f.style.translate = ''; img.style.translate = ''; img.style.scale = ''; });
     });
     var pendR = null;

@@ -194,25 +194,80 @@ html:has(#menu:popover-open){overflow:hidden}
 }
 /* ================= FIN luces-sobre-foto ================= */
 
+/* ================= COMPONENTE: fondo-hojas-vivo (M82) · copiado de la librería ================= */
+.fondo-vivo{ --fv-color:#E0B566; --fv-papel:.06; --fv-baldosa:320px; --fv-luz:#FFB65C; --fv-hojas:.08;
+  position:absolute; inset:0; z-index:0; overflow:hidden; pointer-events:none }
+.fv-papel{ position:absolute; inset:-80px 0; background:var(--fv-color); opacity:var(--fv-papel);
+  -webkit-mask:url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320"%3E%3Cg fill="none" stroke="%23000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"%3E%3Cg transform="translate(14 20) rotate(-24 50 56)"%3E%3Cpath d="M50 104C30 100 6 86 4 58C2 32 20 10 46 8L50 18 54 8C80 10 98 32 96 58C94 86 70 100 50 104Z"/%3E%3Cpath d="M50 18V100M8 40 30 47M5 62 28 62M13 83 33 76M92 40 70 47M95 62 72 62M87 83 67 76"/%3E%3C/g%3E%3Cg transform="translate(150 118) rotate(32)"%3E%3Cpath d="M4 66C40 40 80 18 136 8"/%3E%3Cpath d="M22 54 12 34M34 46 26 22M48 38 44 12M62 31 62 6M76 25 80 4M92 19 98 4M108 14 116 2M22 54 40 62M34 46 54 54M48 38 70 44M62 31 84 36M76 25 98 28M92 19 112 20M108 14 126 14"/%3E%3C/g%3E%3Cg transform="translate(214 4) rotate(30 50 56) scale(.68)"%3E%3Cpath d="M50 104C30 100 6 86 4 58C2 32 20 10 46 8L50 18 54 8C80 10 98 32 96 58C94 86 70 100 50 104Z"/%3E%3Cpath d="M50 18V100M8 40 30 47M5 62 28 62M13 83 33 76M92 40 70 47M95 62 72 62M87 83 67 76"/%3E%3C/g%3E%3Cg transform="translate(-30 228) rotate(-12)"%3E%3Cpath d="M4 66C40 40 80 18 136 8"/%3E%3Cpath d="M22 54 12 34M34 46 26 22M48 38 44 12M62 31 62 6M76 25 80 4M92 19 98 4M108 14 116 2M22 54 40 62M34 46 54 54M48 38 70 44M62 31 84 36M76 25 98 28M92 19 112 20M108 14 126 14"/%3E%3C/g%3E%3Cg transform="translate(196 206) rotate(-150 50 56) scale(.86)"%3E%3Cpath d="M50 104C30 100 6 86 4 58C2 32 20 10 46 8L50 18 54 8C80 10 98 32 96 58C94 86 70 100 50 104Z"/%3E%3Cpath d="M50 18V100M8 40 30 47M5 62 28 62M13 83 33 76M92 40 70 47M95 62 72 62M87 83 67 76"/%3E%3C/g%3E%3Cg transform="translate(290 228) rotate(-12)"%3E%3Cpath d="M4 66C40 40 80 18 136 8"/%3E%3Cpath d="M22 54 12 34M34 46 26 22M48 38 44 12M62 31 62 6M76 25 80 4M92 19 98 4M108 14 116 2M22 54 40 62M34 46 54 54M48 38 70 44M62 31 84 36M76 25 98 28M92 19 112 20M108 14 126 14"/%3E%3C/g%3E%3Cg transform="translate(-170 118) rotate(32)"%3E%3Cpath d="M4 66C40 40 80 18 136 8"/%3E%3Cpath d="M22 54 12 34M34 46 26 22M48 38 44 12M62 31 62 6M76 25 80 4M92 19 98 4M108 14 116 2M22 54 40 62M34 46 54 54M48 38 70 44M62 31 84 36M76 25 98 28M92 19 112 20M108 14 126 14"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E') 0 0 / var(--fv-baldosa) var(--fv-baldosa) repeat;
+          mask:url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320"%3E%3Cg fill="none" stroke="%23000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"%3E%3Cg transform="translate(14 20) rotate(-24 50 56)"%3E%3Cpath d="M50 104C30 100 6 86 4 58C2 32 20 10 46 8L50 18 54 8C80 10 98 32 96 58C94 86 70 100 50 104Z"/%3E%3Cpath d="M50 18V100M8 40 30 47M5 62 28 62M13 83 33 76M92 40 70 47M95 62 72 62M87 83 67 76"/%3E%3C/g%3E%3Cg transform="translate(150 118) rotate(32)"%3E%3Cpath d="M4 66C40 40 80 18 136 8"/%3E%3Cpath d="M22 54 12 34M34 46 26 22M48 38 44 12M62 31 62 6M76 25 80 4M92 19 98 4M108 14 116 2M22 54 40 62M34 46 54 54M48 38 70 44M62 31 84 36M76 25 98 28M92 19 112 20M108 14 126 14"/%3E%3C/g%3E%3Cg transform="translate(214 4) rotate(30 50 56) scale(.68)"%3E%3Cpath d="M50 104C30 100 6 86 4 58C2 32 20 10 46 8L50 18 54 8C80 10 98 32 96 58C94 86 70 100 50 104Z"/%3E%3Cpath d="M50 18V100M8 40 30 47M5 62 28 62M13 83 33 76M92 40 70 47M95 62 72 62M87 83 67 76"/%3E%3C/g%3E%3Cg transform="translate(-30 228) rotate(-12)"%3E%3Cpath d="M4 66C40 40 80 18 136 8"/%3E%3Cpath d="M22 54 12 34M34 46 26 22M48 38 44 12M62 31 62 6M76 25 80 4M92 19 98 4M108 14 116 2M22 54 40 62M34 46 54 54M48 38 70 44M62 31 84 36M76 25 98 28M92 19 112 20M108 14 126 14"/%3E%3C/g%3E%3Cg transform="translate(196 206) rotate(-150 50 56) scale(.86)"%3E%3Cpath d="M50 104C30 100 6 86 4 58C2 32 20 10 46 8L50 18 54 8C80 10 98 32 96 58C94 86 70 100 50 104Z"/%3E%3Cpath d="M50 18V100M8 40 30 47M5 62 28 62M13 83 33 76M92 40 70 47M95 62 72 62M87 83 67 76"/%3E%3C/g%3E%3Cg transform="translate(290 228) rotate(-12)"%3E%3Cpath d="M4 66C40 40 80 18 136 8"/%3E%3Cpath d="M22 54 12 34M34 46 26 22M48 38 44 12M62 31 62 6M76 25 80 4M92 19 98 4M108 14 116 2M22 54 40 62M34 46 54 54M48 38 70 44M62 31 84 36M76 25 98 28M92 19 112 20M108 14 126 14"/%3E%3C/g%3E%3Cg transform="translate(-170 118) rotate(32)"%3E%3Cpath d="M4 66C40 40 80 18 136 8"/%3E%3Cpath d="M22 54 12 34M34 46 26 22M48 38 44 12M62 31 62 6M76 25 80 4M92 19 98 4M108 14 116 2M22 54 40 62M34 46 54 54M48 38 70 44M62 31 84 36M76 25 98 28M92 19 112 20M108 14 126 14"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E') 0 0 / var(--fv-baldosa) var(--fv-baldosa) repeat }
+.fv-brillo{ position:absolute; left:var(--fv-x,70%); top:var(--fv-y,50%); width:var(--fv-ancho,60vw); height:var(--fv-alto,70vh); translate:-50% -50%;
+  background:radial-gradient(closest-side, color-mix(in srgb, var(--fv-luz) 30%, transparent), color-mix(in srgb, var(--fv-luz) 10%, transparent) 55%, transparent);
+  opacity:.75; animation:fv-respira 9s var(--ease-in-out) infinite alternate }
+@supports not (color: color-mix(in srgb, red, red)){
+  .fv-brillo{ background:radial-gradient(closest-side, rgba(255,182,92,.3), rgba(255,182,92,.1) 55%, transparent) }
+}
+@keyframes fv-respira{ from{opacity:.55} to{opacity:.9} }
+.fv-hoja{ position:absolute; height:auto; aspect-ratio:100/108; color:var(--fv-color); opacity:var(--fv-hojas); rotate:var(--r,0deg) }
+.fondo-vivo:not(.en-pantalla) .fv-brillo{ animation-play-state:paused }
+@media (prefers-reduced-motion:reduce){ .fv-brillo{ animation:none } }
+/* ================= FIN fondo-hojas-vivo ================= */
+
+/* ================= COMPONENTE: marco-ventana (M58) · copiado de la librería ================= */
+.foto-ventana{ --forma:50% 50% 14px 14px / 38% 38% 14px 14px; --marco-w:12px; --alfeizar:12px;
+  --marco:#4A3522; --marco-luz:#6B4E32; --marco-sombra:#2E2116; --junquillo:rgba(224,181,102,.55);
+  position:relative; display:block; border-radius:var(--forma); margin-bottom:calc(var(--marco-w) + var(--alfeizar) + 4px) }
+.foto-ventana > img{ display:block; width:100%; height:auto; border-radius:inherit }
+.foto-ventana::before{ content:""; position:absolute; inset:calc(var(--marco-w) * -1); z-index:1; pointer-events:none;
+  border:var(--marco-w) solid var(--marco); border-color:var(--marco-luz) var(--marco) var(--marco-sombra) var(--marco);
+  border-radius:var(--forma);
+  box-shadow:inset 0 0 0 2px var(--junquillo), inset 0 0 10px rgba(0,0,0,.45), 0 0 0 1px rgba(0,0,0,.4), 0 18px 34px -16px rgba(0,0,0,.65) }
+.foto-ventana::after{ content:""; position:absolute; z-index:1; pointer-events:none; height:var(--alfeizar);
+  left:calc(var(--marco-w) * -1.9); right:calc(var(--marco-w) * -1.9); bottom:calc((var(--marco-w) + var(--alfeizar) - 2px) * -1);
+  border-radius:3px; background:linear-gradient(var(--marco-luz), var(--marco) 45%, var(--marco-sombra));
+  box-shadow:0 1px 0 rgba(255,255,255,.06) inset, 0 12px 18px -8px rgba(0,0,0,.6) }
+.marco-zoom{ --marco-w:12px; --alfeizar:12px; --marco:#4A3522; --marco-luz:#6B4E32; --marco-sombra:#2E2116; --junquillo:rgba(224,181,102,.55);
+  position:absolute; z-index:2; pointer-events:none; display:none }
+.marco-zoom::before{ content:""; position:absolute; inset:calc(var(--marco-w) * -1);
+  border:var(--marco-w) solid var(--marco); border-color:var(--marco-luz) var(--marco) var(--marco-sombra) var(--marco);
+  border-radius:calc(var(--mz-rh) + var(--marco-w)) calc(var(--mz-rh) + var(--marco-w)) calc(var(--mz-rb) + var(--marco-w)) calc(var(--mz-rb) + var(--marco-w)) /
+    calc(var(--mz-rv) + var(--marco-w)) calc(var(--mz-rv) + var(--marco-w)) calc(var(--mz-rb) + var(--marco-w)) calc(var(--mz-rb) + var(--marco-w));
+  box-shadow:inset 0 0 0 2px var(--junquillo), inset 0 0 10px rgba(0,0,0,.45), 0 0 0 1px rgba(0,0,0,.4) }
+.marco-zoom::after{ content:""; position:absolute; height:var(--alfeizar); left:calc(var(--marco-w) * -1.9); right:calc(var(--marco-w) * -1.9);
+  bottom:calc((var(--marco-w) + var(--alfeizar) - 2px) * -1); border-radius:3px; background:linear-gradient(var(--marco-luz), var(--marco) 45%, var(--marco-sombra));
+  box-shadow:0 12px 18px -8px rgba(0,0,0,.6) }
+@keyframes marco-abre{ from{opacity:1; scale:1} to{opacity:0; scale:1.06} }
+/* ================= FIN marco-ventana ================= */
+
 /* ---------- Portada: la foto de los reservados se abre (M12) y se encienden las lámparas (M81) ---------- */
 .portada{position:relative; margin-top:calc(var(--cab) * -1); background:var(--noche)}
 .zoom-marca{position:absolute; left:0; top:120vh; width:1px; height:1px}
 .zoom-fijo{position:relative; min-height:100svh; overflow:hidden; display:flex; flex-direction:column; justify-content:center;
   padding:calc(var(--cab) + 40px) 0 72px}
-.portada-foto-in{position:absolute; inset:0}
+.portada-foto-in{position:absolute; inset:0; z-index:1}
+.portada .fondo-vivo{--fv-x:74%; --fv-y:48%; --fv-ancho:62vw; --fv-alto:86vh}
+/* El marco, exactamente sobre la tarjeta inicial (mismo inset y mismo arco que --clip-ini) */
+.portada .marco-zoom{top:13%; right:5%; bottom:11%; left:50%; --mz-rh:22.5vw; --mz-rv:36vh; --mz-rb:20px}
 .portada-foto{position:absolute; inset:0; margin:0; --clip-ini:inset(13% 5% 11% 50% round 22.5% 22.5% 20px 20px / 36% 36% 20px 20px)}
 .portada .luces{--fx:50%; --fy:35%}
-.portada-sombra{position:absolute; inset:0; pointer-events:none;
+.portada-sombra{position:absolute; inset:0; z-index:1; pointer-events:none;
   background:linear-gradient(90deg, rgba(15,31,25,.92) 0%, rgba(15,31,25,.78) 34%, rgba(15,31,25,0) 62%)}
 .portada-texto{position:relative; z-index:2; width:100%}
-.portada-texto > *{max-width:min(520px,38vw)}
-.portada-tit{font:300 clamp(2.2rem,1.4rem + 2.6vw,3.6rem)/1.14 var(--f); letter-spacing:-.01em}
+.portada-texto > *{max-width:min(560px,40vw)}
+/* Titular con jerarquía (revisión de Diego): una entrada fina, la frase clave grande y apretada, y el lugar como rótulo */
+.portada-tit{display:flex; flex-direction:column; align-items:flex-start; font-weight:300}
+.pt-1{font:300 clamp(1.5rem,1rem + 1.5vw,2.4rem)/1.14 var(--f); color:var(--suave); letter-spacing:-.005em}
+.pt-2{font:600 clamp(2.6rem,1.2rem + 3.6vw,4.9rem)/1.12 var(--f); letter-spacing:-.025em; margin-top:.04em}
+.pt-3{display:flex; align-items:center; gap:14px; margin-top:16px; font:500 .9375rem/1.3 var(--f); letter-spacing:.24em; text-transform:uppercase; color:var(--miel)}
+.pt-3::before{content:""; width:44px; height:2px; border-radius:1px; background:currentColor; flex:none}
 .portada-tit .ventana{display:inline-block; overflow:hidden; vertical-align:top; padding-bottom:.14em; margin-bottom:-.14em}
 .portada-tit .palabra{display:inline-block}
 .js .titular-palabras .palabra{translate:0 110%; transition:translate .4s var(--ease-out); transition-delay:calc(120ms + var(--i,0) * 35ms)}
 .js .titular-palabras.visto .palabra{translate:0 0}
-.tmp-portada{margin-top:22px; --tmp-d:500ms}
-.portada-acciones{display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; max-width:none}
+/* La frase de su carta como una nota a mano: en escritorio, en la misma altura que el rótulo y a su derecha; más estrecho, debajo */
+.tmp-portada{--tmp-d:500ms; margin:-6px 0 0; padding-left:220px; rotate:-4deg; transform-origin:0 50%}
+.tmp-portada .tmp-mano{font-size:clamp(1.9rem,1.2rem + 1.8vw,2.9rem)}
+.tmp-portada .tmp-pildora{font-size:clamp(1.25rem,.9rem + 1vw,1.75rem); margin-left:clamp(1.2rem,3vw,2.6rem)}
+.portada-acciones{display:flex; flex-wrap:wrap; gap:12px; margin-top:26px; max-width:min(560px,40vw)}
 .prueba{margin-top:18px; font-weight:500; color:var(--suave)}
 .prueba strong{color:var(--texto); font-weight:600}
 .estrella{display:inline-block; color:var(--miel)}
@@ -241,6 +296,7 @@ html:has(#menu:popover-open){overflow:hidden}
     .portada-foto{animation:zoom-abre linear both; animation-timeline:--zoom; animation-range:contain 0% contain 45%}
     .portada .luces-caja{animation:zoom-aleja linear both; animation-timeline:--zoom; animation-range:contain 0% contain 45%}
     .portada-sombra{opacity:0}
+    .portada .marco-zoom{display:block; animation:marco-abre linear both; animation-timeline:--zoom; animation-range:contain 0% contain 14%}
     .portada-texto,.viva-foto{animation:portada-sale linear both; animation-timeline:--zoom; animation-range:contain 5% contain 30%}
     .zoom-texto{display:block; position:absolute; left:0; right:0; bottom:9vh; z-index:3; text-align:center; padding:0 24px;
       animation:zoom-texto linear both; animation-timeline:--zoom; animation-range:contain 30% contain 55%}
@@ -254,6 +310,7 @@ html:has(#menu:popover-open){overflow:hidden}
       .portada .luces{animation:zoom-baja linear both; animation-timeline:--zoom; animation-range:contain 0% contain 32%}
       .portada-foto,.portada .luces-caja{animation-range:contain 0% contain 32%}
       .portada-texto{animation-range:contain 8% contain 28%}
+      .portada .marco-zoom{animation-range:contain 0% contain 9%}
     }
   }
 }
@@ -289,6 +346,12 @@ html:has(#menu:popover-open){overflow:hidden}
 .lf-cifra strong{font:600 clamp(30px,1.4rem + 1.6vw,44px)/1 var(--lf-f-titulo); color:var(--lf-cifra-color); font-variant-numeric:tabular-nums}
 .lf-cifra span{font-size:15px; line-height:1.3}
 .lf-foto-arriba .lf-foto{order:-1; margin:0 0 16px}
+/* Embocado: cada foto de "Un día" es una ventana con marco (marco-ventana) */
+.lf-foto.foto-ventana{--forma:var(--lf-forma); overflow:visible}
+.lf-foto.foto-ventana img{border-radius:inherit}
+.lf-foto.foto-ventana .lf-cifra{border-radius:0 0 14px 14px}
+.lf:not(.lf-fijada) .lf-foto.foto-ventana{margin:12px 12px 40px}
+.lf-fijada .lf-foto.foto-ventana{top:12px; bottom:30px}
 .lf-marca{position:absolute; left:0; width:1px; pointer-events:none;
   top:calc(var(--i) * var(--lf-tramo) + 50svh); height:var(--lf-tramo)}
 @media (hover:hover) and (pointer:fine){ .lf-item a:hover{color:var(--lf-texto)} }
@@ -374,8 +437,10 @@ html:has(#menu:popover-open){overflow:hidden}
 .seccion[hidden]{display:none}
 .sc-cab{display:grid; gap:24px}
 .sc-foto{margin:0}
-.sc-foto img{width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; border-radius:50% 50% 12px 12px / 30% 30% 12px 12px}
-.des-cab .sc-foto img{aspect-ratio:16/9; border-radius:12px}
+.sc-foto .foto-ventana{--forma:50% 50% 12px 12px / 30% 30% 12px 12px; margin:12px 12px 32px}
+.sc-foto img{width:100%; height:auto; aspect-ratio:4/3; object-fit:cover}
+.des-cab .sc-foto .foto-ventana{--forma:10px}
+.des-cab .sc-foto img{aspect-ratio:16/9}
 .sc-foto figcaption{margin-top:8px; color:var(--tinta-2); font-size:.875rem}
 .aviso-gluten{font-weight:600; color:var(--tinta); max-width:30ch}
 .nota-gluten{margin-top:18px; color:var(--tinta-2)}
@@ -452,7 +517,8 @@ html:has(#menu:popover-open){overflow:hidden}
 .ctrl-cuenta{color:var(--suave); font-size:.9375rem; font-variant-numeric:tabular-nums}
 .pista{color:var(--suave); font-size:.875rem; margin-top:12px; max-width:520px; text-align:center}
 .opinion-foto{margin:0}
-.opinion-foto img{width:100%; height:auto; aspect-ratio:1/1; object-fit:cover; border-radius:50% 50% 16px 16px / 36% 36% 16px 16px}
+.opinion-foto .foto-ventana{--forma:50% 50% 16px 16px / 36% 36% 16px 16px; margin:12px 12px 32px}
+.opinion-foto img{width:100%; height:auto; aspect-ratio:1/1; object-fit:cover}
 .opinion-foto figcaption{margin-top:10px; color:var(--suave); font-size:.875rem}
 .opiniones-pie{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:14px 28px; margin-top:52px; color:var(--suave); font-size:.9375rem}
 .opiniones-pie p{max-width:70ch}
@@ -491,7 +557,8 @@ html:has(#menu:popover-open){overflow:hidden}
 .datos-lista dd{margin:0; font-weight:500}
 .datos-botones{display:flex; flex-wrap:wrap; gap:10px; margin-top:auto}
 .fachada-foto{margin:0; transition:translate .35s var(--ease-out)}
-.fachada-foto img{width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; border-radius:50% 50% 16px 16px / 38% 38% 16px 16px; transition:scale .35s var(--ease-out), translate .35s var(--ease-out)}
+.fachada-foto .foto-ventana{--forma:50% 50% 16px 16px / 38% 38% 16px 16px; margin:12px 12px 32px}
+.fachada-foto img{width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; transition:scale .35s var(--ease-out), translate .35s var(--ease-out)}
 .js .fachada-foto img{clip-path:inset(100% 0 0 0)}
 .js .fachada-foto.visto img{clip-path:inset(0); transition:clip-path .45s var(--ease-out), scale .35s var(--ease-out), translate .35s var(--ease-out)}
 .fachada-foto figcaption{margin-top:10px; color:var(--suave); font-size:.9375rem}
@@ -580,6 +647,7 @@ html:has(#menu:popover-open){overflow:hidden}
 }
 
 /* ---------- Tablet y móvil ---------- */
+@media (max-width:1100px){ .tmp-portada{margin-top:6px; padding-left:clamp(70px,18vw,180px); rotate:-3deg} }
 @media (max-width:1100px){
   .ubicacion-rejilla{grid-template-columns:minmax(0,1fr) minmax(0,.8fr)}
   .mapa{grid-column:1 / -1}
@@ -592,6 +660,8 @@ html:has(#menu:popover-open){overflow:hidden}
   .portada-sombra{background:linear-gradient(to bottom, rgba(15,31,25,.9) 0%, rgba(15,31,25,.75) 55%, rgba(15,31,25,.35) 100%)}
   .portada-foto{--clip-ini:inset(calc(var(--txt, 52%) + 8px) 5% 4% 5% round 45% 45% 16px 16px / 25% 25% 16px 16px)}
   .portada .luces{--fx:28%}
+  .portada .fondo-vivo{--fv-x:50%; --fv-y:76%; --fv-ancho:120vw; --fv-alto:52vh}
+  .portada .marco-zoom{top:calc(var(--txt, 52%) + 8px); right:5%; bottom:4%; left:5%; --mz-rh:45vw; --mz-rv:25vh; --mz-rb:16px; --marco-w:10px; --alfeizar:10px}
   .viva-foto{display:none}
   .viva-linea{display:flex}
   .seccion{grid-template-columns:1fr; gap:26px}
@@ -607,10 +677,13 @@ html:has(#menu:popover-open){overflow:hidden}
   .barra{padding:0 16px; gap:10px}
   .marca{--lw:146px}
   .btn-cab{padding:11px 16px}
-  .portada-tit{font-size:clamp(1.85rem,7.6vw,2.4rem)}
-  .tmp-portada{margin-top:14px}
+  .pt-1{font-size:1.3rem}
+  .pt-2{font-size:clamp(1.9rem,8.8vw,2.6rem)}
+  .pt-3{margin-top:10px; font-size:.8125rem; letter-spacing:.2em; gap:10px}
+  .pt-3::before{width:28px}
+  .tmp-portada{margin-top:2px; padding-left:clamp(70px,24vw,120px); rotate:-3deg}
   .tmp-portada .tmp-mano{font-size:1.75rem}
-  .tmp-portada .tmp-pildora{font-size:1.35rem}
+  .tmp-portada .tmp-pildora{font-size:1.15rem; margin-left:1rem}
   .portada-acciones{margin-top:20px; gap:10px}
   .portada-acciones .btn{padding:13px 16px; font-size:.9375rem; gap:8px}
   .portada-acciones .btn .ico{width:18px; height:18px}

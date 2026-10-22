@@ -70,7 +70,7 @@
   <symbol id="espiral" viewBox="360 -142 310 330"><path fill="none" stroke="currentColor" stroke-width="12" d="M598 35 598 24 597 12 595 1 591 -10 586 -21 580 -31 573 -41 564 -50 555 -57 544 -64 533 -69 521 -73 508 -76 495 -77 482 -77 469 -75 456 -72 444 -67 432 -61 421 -53 410 -44 401 -34 393 -22 386 -10 381 3 377 17 374 31 374 46 375 60 377 75 382 89 388 103 396 116 405 128 416 139 428 149 441 157 455 164 470 170 485 173 501 175 518 175 534 173 550 169 565 164 580 156 594 147 607 136 619 123 629 110 638 95 645 79 650 62 653 45 654 27 653 9 650 -9 645 -26 638 -43 629 -59 618 -74 606 -87 591 -100 576 -110 559 -119 541 -126 523 -130 504 -133 484 -133 465 -131 445 -127 427 -121"/></symbol>
   <symbol id="espiral-mini" viewBox="430 -52 150 160"><path fill="none" stroke="currentColor" stroke-width="9" d="M550 35 550 28 549 21 547 14 544 7 540 1 535 -5 530 -10 524 -14 517 -17 509 -20 502 -21 494 -21 486 -20 478 -18 471 -15 463 -11 457 -6 451 0 447 7 443 15 440 23 438 32 438 40 439 49 441 58 444 66 448 74 454 81 461 87 468 93 476 97 485 100 494 102 504 103 513 102 523 100 532 97 541 92 549 87 556 80 562 72 567 63 571 53 573 43 574 33 574 22 572 12 568 2 563 -7 557 -16 550 -24 541 -31 532 -37 522 -41 511 -44 500 -45"/></symbol>
   <!-- Hojas a línea (monstera y palmera), dibujadas para esta web a partir de la idea de su carta -->
-  <symbol id="hoja-monstera" viewBox="0 0 100 104"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M50 96C21 92 5 68 8 44C11 20 31 6 50 9C69 6 89 20 92 44C95 68 79 92 50 96Z"/><path d="M50 103V14"/><path d="M50 30 30 20M50 44 14 40M50 60 15 64M50 76 26 86M50 30 70 20M50 44 86 40M50 60 85 64M50 76 74 86"/></g></symbol>
+  <symbol id="hoja-monstera" viewBox="0 0 100 108"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M50 104C30 100 6 86 4 58C2 32 20 10 46 8L50 18 54 8C80 10 98 32 96 58C94 86 70 100 50 104Z"/><path d="M50 18V100M8 40 30 47M5 62 28 62M13 83 33 76M92 40 70 47M95 62 72 62M87 83 67 76"/></g></symbol>
   <symbol id="hoja-palmera" viewBox="0 0 140 70"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 66C40 40 80 18 136 8"/><path d="M22 54 12 34M34 46 26 22M48 38 44 12M62 31 62 6M76 25 80 4M92 19 98 4M108 14 116 2M22 54 40 62M34 46 54 54M48 38 70 44M62 31 84 36M76 25 98 28M92 19 112 20M108 14 126 14"/></g></symbol>
   <symbol id="i-tel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
@@ -120,6 +120,13 @@
 <section class="portada" id="inicio" aria-labelledby="titulo-portada">
   <i class="zoom-marca" aria-hidden="true"></i>
   <div class="zoom-fijo">
+    <!-- Fondo vivo (fondo-hojas-vivo, M82): papel de hojas a línea, brillo de lámpara que respira detrás de la ventana y dos hojas con parallax -->
+    <div class="fondo-vivo" aria-hidden="true">
+      <span class="fv-papel" data-py="-50"></span>
+      <span class="fv-brillo"></span>
+      <svg class="fv-hoja" data-py="-170" style="left:-4%;top:58%;width:240px;--r:-22deg"><use href="#hoja-monstera"/></svg>
+      <svg class="fv-hoja" data-py="-90" style="left:34%;top:-7%;width:170px;--r:160deg"><use href="#hoja-monstera"/></svg>
+    </div>
     <div class="portada-foto-in">
       <figure class="portada-foto">
         <!-- Foto de un cliente en Google Maps (ene. 2024), recortada sin el luminoso de una marca de cerveza y con la tele apagada (03-assets/preparar-fotos.py). Solo para la demo. -->
@@ -139,6 +146,8 @@
           </div>
         </div>
       </figure>
+      <!-- Marco de la ventana (marco-ventana, M58): se abre y se desvanece cuando la foto empieza a crecer -->
+      <span class="marco-zoom" aria-hidden="true"></span>
       <!-- Tarjeta viva sobre la foto (escritorio); en móvil va en una línea bajo los botones -->
       <div class="viva viva-foto" data-viva role="status">
         <span class="luz-mini" data-estado="" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-lampara"/><circle class="bombilla" cx="12" cy="17.6" r="2.1"/></svg></span>
@@ -148,7 +157,7 @@
     <div class="portada-sombra" aria-hidden="true"></div>
 
     <div class="wrap portada-texto">
-      <h1 class="portada-tit titular-palabras" id="titulo-portada">Del primer café a la última copa, en Griñón.</h1>
+      <h1 class="portada-tit titular-palabras" id="titulo-portada"><span class="pt-1">Del primer café</span> <span class="pt-2">a la última copa,</span> <span class="pt-3">en Griñón.</span></h1>
       <p class="tmp tmp-portada" data-tmp><span class="tmp-mano">Compartir es</span> <span class="tmp-pildora">vivir</span></p>
       <div class="portada-acciones">
         <a class="btn btn-miel btn-grande" href="tel:+34911262731"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar para reservar</a>
@@ -189,7 +198,7 @@
           <p>Desayunos y brunch: tostas, tortitas, montados y cafés. Según la carta, de 9:00 a 12:00 y de 16:00 a 20:00.</p>
           <a href="#carta" data-ficha="desayunos">Ver los desayunos</a>
           <span class="lf-linea" aria-hidden="true"><i></i></span>
-          <figure class="lf-foto">
+          <figure class="lf-foto foto-ventana">
             <img src="img/dia-manana-480.webp" srcset="img/dia-manana-480.webp 480w, img/dia-manana-960.webp 960w" sizes="(min-width:768px) 46vw, 92vw" width="960" height="1043" loading="lazy" alt="Café con leche en un vaso de cristal sobre su plato, en una mesa de madera" style="--lf-foco:50% 40%">
             <p class="lf-cifra"><strong>8:00</strong> <span>abrimos de martes a viernes</span></p>
           </figure>
@@ -199,7 +208,7 @@
           <p>Menú del día. Cambia cada día: pregunta el de hoy por teléfono.</p>
           <a href="tel:+34911262731">Preguntar el menú de hoy</a>
           <span class="lf-linea" aria-hidden="true"><i></i></span>
-          <figure class="lf-foto">
+          <figure class="lf-foto foto-ventana">
             <img src="img/dia-mediodia-480.webp" srcset="img/dia-mediodia-480.webp 480w, img/dia-mediodia-960.webp 960w" sizes="(min-width:768px) 46vw, 92vw" width="960" height="981" loading="lazy" alt="Comedor con luz de día, ventanales en arco, mesas redondas de madera y sillas de terciopelo verde" style="--lf-foco:50% 50%">
           </figure>
         </li>
@@ -208,7 +217,7 @@
           <p>Tapas y raciones al centro de la mesa: croquetas de rabo de toro, zamburiñas, setas empanadas, berenjenas en tempura con miel. Y hamburguesas.</p>
           <a href="#carta" data-ficha="comidas">Ver la carta de comidas</a>
           <span class="lf-linea" aria-hidden="true"><i></i></span>
-          <figure class="lf-foto">
+          <figure class="lf-foto foto-ventana">
             <img src="img/dia-compartir-480.webp" srcset="img/dia-compartir-480.webp 480w, img/dia-compartir-960.webp 960w" sizes="(min-width:768px) 46vw, 92vw" width="960" height="829" loading="lazy" alt="Cesta de freidora con pollo rebozado, patatas chips y una tapa en una mesa de madera" style="--lf-foco:50% 45%">
           </figure>
         </li>
@@ -217,7 +226,7 @@
           <p>Cenas, copas y terraza bajo las lámparas de mimbre. Para cenar, mejor reservar.</p>
           <a href="tel:+34911262731">Llamar para reservar</a>
           <span class="lf-linea" aria-hidden="true"><i></i></span>
-          <figure class="lf-foto">
+          <figure class="lf-foto foto-ventana">
             <img src="img/dia-noche-480.webp" srcset="img/dia-noche-480.webp 480w, img/dia-noche-960.webp 960w" sizes="(min-width:768px) 46vw, 92vw" width="960" height="1335" loading="lazy" alt="Copa de vino tinto en primer plano y, detrás, el salón con un cuadro de una cacatúa entre hojas y lámparas de mimbre encendidas" style="--lf-foco:50% 40%">
             <p class="lf-cifra"><strong>2:00</strong> <span>cerramos viernes y sábado</span></p>
           </figure>
@@ -355,7 +364,7 @@
         <div class="seccion" role="tabpanel" id="p-compartir" aria-labelledby="s-compartir">
           <div class="sc-cab">
             <h3 class="tmp tmp-h3" data-tmp><span class="tmp-mano">Compartir es</span> <span class="tmp-pildora">vivir</span></h3>
-            <figure class="sc-foto"><img src="img/carta-compartir-480.webp" srcset="img/carta-compartir-480.webp 480w, img/carta-compartir-960.webp 960w" sizes="(min-width:900px) 340px, 92vw" width="960" height="1120" loading="lazy" alt="Croquetas redondas sobre patatas paja en una caja de madera"><figcaption>Foto de un cliente en Google Maps, agosto de 2025.</figcaption></figure>
+            <figure class="sc-foto"><span class="foto-ventana"><img src="img/carta-compartir-480.webp" srcset="img/carta-compartir-480.webp 480w, img/carta-compartir-960.webp 960w" sizes="(min-width:900px) 340px, 92vw" width="960" height="1120" loading="lazy" alt="Croquetas redondas sobre patatas paja en una caja de madera"></span><figcaption>Foto de un cliente en Google Maps, agosto de 2025.</figcaption></figure>
           </div>
           <ul class="platos platos-2">
             <li class="plato"><span class="nombre">Tagliatelle al tartufato</span><span class="puntos" aria-hidden="true"></span><span class="precio">15,90&nbsp;€</span><p class="desc">Con queso pecorino, lascas de trufa, tocino ibérico y toque de pimienta</p></li>
@@ -385,7 +394,7 @@
         <div class="seccion" role="tabpanel" id="p-burger" aria-labelledby="s-burger">
           <div class="sc-cab">
             <h3 class="tmp tmp-h3" data-tmp><span class="tmp-mano">Gourmet</span> <span class="tmp-pildora">burger</span></h3>
-            <figure class="sc-foto"><img src="img/carta-burger-480.webp" srcset="img/carta-burger-480.webp 480w, img/carta-burger-960.webp 960w" sizes="(min-width:900px) 340px, 92vw" width="960" height="778" loading="lazy" alt="Hamburguesa con huevo frito y patatas gajo sobre una pizarra"><figcaption>Foto de un cliente en Google Maps, diciembre de 2023.</figcaption></figure>
+            <figure class="sc-foto"><span class="foto-ventana"><img src="img/carta-burger-480.webp" srcset="img/carta-burger-480.webp 480w, img/carta-burger-960.webp 960w" sizes="(min-width:900px) 340px, 92vw" width="960" height="778" loading="lazy" alt="Hamburguesa con huevo frito y patatas gajo sobre una pizarra"></span><figcaption>Foto de un cliente en Google Maps, diciembre de 2023.</figcaption></figure>
           </div>
           <ul class="platos">
             <li class="plato"><span class="nombre">Hamburguesa de ternera gallega</span><span class="puntos" aria-hidden="true"></span><span class="precio">11,90&nbsp;€</span></li>
@@ -399,7 +408,7 @@
         <div class="seccion" role="tabpanel" id="p-verde" aria-labelledby="s-verde">
           <div class="sc-cab">
             <h3 class="tmp tmp-h3" data-tmp><span class="tmp-mano">Tu bocado más</span> <span class="tmp-pildora">verde</span></h3>
-            <figure class="sc-foto"><img src="img/carta-verde-480.webp" srcset="img/carta-verde-480.webp 480w, img/carta-verde-640.webp 640w" sizes="(min-width:900px) 340px, 92vw" width="640" height="589" loading="lazy" alt="Ensalada de hojas variadas con tomates cherry, lascas de queso y picatostes en un plato de cristal"><figcaption>Foto de un cliente en Google Maps, mayo de 2026.</figcaption></figure>
+            <figure class="sc-foto"><span class="foto-ventana"><img src="img/carta-verde-480.webp" srcset="img/carta-verde-480.webp 480w, img/carta-verde-640.webp 640w" sizes="(min-width:900px) 340px, 92vw" width="640" height="589" loading="lazy" alt="Ensalada de hojas variadas con tomates cherry, lascas de queso y picatostes en un plato de cristal"></span><figcaption>Foto de un cliente en Google Maps, mayo de 2026.</figcaption></figure>
           </div>
           <ul class="platos">
             <li class="plato"><span class="nombre">Ensalada César</span><span class="puntos" aria-hidden="true"></span><span class="precio">11,90&nbsp;€</span><p class="desc">Pechuga de pollo rebozada en tiras, mix de lechugas, tomatitos cherry, queso parmesano, salsa César y picatostes</p></li>
@@ -411,7 +420,7 @@
         <div class="seccion" role="tabpanel" id="p-carnivoros" aria-labelledby="s-carnivoros">
           <div class="sc-cab">
             <h3 class="tmp tmp-h3" data-tmp><span class="tmp-mano">Para los más</span> <span class="tmp-pildora">carnívoros</span></h3>
-            <figure class="sc-foto"><img src="img/carta-carnivoros-480.webp" srcset="img/carta-carnivoros-480.webp 480w, img/carta-carnivoros-960.webp 960w" sizes="(min-width:900px) 340px, 92vw" width="960" height="1053" loading="lazy" alt="Tiras de carne a la plancha con pimientos verdes y patatas gajo sobre una pizarra, vistas desde arriba"><figcaption>Foto de un cliente en Google Maps, agosto de 2025.</figcaption></figure>
+            <figure class="sc-foto"><span class="foto-ventana"><img src="img/carta-carnivoros-480.webp" srcset="img/carta-carnivoros-480.webp 480w, img/carta-carnivoros-960.webp 960w" sizes="(min-width:900px) 340px, 92vw" width="960" height="1053" loading="lazy" alt="Tiras de carne a la plancha con pimientos verdes y patatas gajo sobre una pizarra, vistas desde arriba"></span><figcaption>Foto de un cliente en Google Maps, agosto de 2025.</figcaption></figure>
           </div>
           <ul class="platos">
             <li class="plato"><span class="nombre">Lomo de ternera trinchado</span><span class="puntos" aria-hidden="true"></span><span class="precio">20,50&nbsp;€</span><p class="desc">De 400 gr. (aprox.) acompañado con patatas y pimientos de Padrón. Pídelo a tu gusto</p></li>
@@ -424,7 +433,7 @@
         <div class="seccion" role="tabpanel" id="p-fish" aria-labelledby="s-fish">
           <div class="sc-cab">
             <h3 class="tmp tmp-h3 tmp-solo" data-tmp><span class="tmp-pildora">fish</span></h3>
-            <figure class="sc-foto"><img src="img/carta-fish-480.webp" srcset="img/carta-fish-480.webp 480w, img/carta-fish-960.webp 960w" sizes="(min-width:900px) 340px, 92vw" width="960" height="930" loading="lazy" alt="Conchas gratinadas servidas sobre un plato de cristal"><figcaption>Foto de un cliente en Google Maps, agosto de 2025.</figcaption></figure>
+            <figure class="sc-foto"><span class="foto-ventana"><img src="img/carta-fish-480.webp" srcset="img/carta-fish-480.webp 480w, img/carta-fish-960.webp 960w" sizes="(min-width:900px) 340px, 92vw" width="960" height="930" loading="lazy" alt="Conchas gratinadas servidas sobre un plato de cristal"></span><figcaption>Foto de un cliente en Google Maps, agosto de 2025.</figcaption></figure>
           </div>
           <ul class="platos">
             <li class="plato"><span class="nombre">Tataki de atún</span><span class="puntos" aria-hidden="true"></span><span class="precio">15,90&nbsp;€</span><p class="desc">Sobre alga wakame, mahonesa japonesa y sésamo</p></li>
@@ -453,7 +462,7 @@
         <div class="seccion" role="tabpanel" id="p-dulce" aria-labelledby="s-dulce">
           <div class="sc-cab">
             <h3 class="tmp tmp-h3" data-tmp><span class="tmp-mano">A nadie le amarga</span> <span class="tmp-pildora">un dulce</span></h3>
-            <figure class="sc-foto"><img src="img/carta-dulce-480.webp" srcset="img/carta-dulce-480.webp 480w, img/carta-dulce-960.webp 960w" sizes="(min-width:900px) 340px, 92vw" width="960" height="1092" loading="lazy" alt="Postre de chocolate con helado, nata, nueces y sirope de chocolate, visto desde arriba"><figcaption>Foto de un cliente en Google Maps, noviembre de 2025.</figcaption></figure>
+            <figure class="sc-foto"><span class="foto-ventana"><img src="img/carta-dulce-480.webp" srcset="img/carta-dulce-480.webp 480w, img/carta-dulce-960.webp 960w" sizes="(min-width:900px) 340px, 92vw" width="960" height="1092" loading="lazy" alt="Postre de chocolate con helado, nata, nueces y sirope de chocolate, visto desde arriba"></span><figcaption>Foto de un cliente en Google Maps, noviembre de 2025.</figcaption></figure>
           </div>
           <ul class="platos">
             <li class="plato"><span class="nombre">Brownie</span><span class="puntos" aria-hidden="true"></span><span class="precio">7,90&nbsp;€</span><p class="desc">Con bola de helado de vainilla, nata, nueces y sirope de chocolate caliente</p></li>
@@ -510,7 +519,7 @@
       <p class="pista">Desliza la tarjeta a un lado para leer la siguiente.</p>
     </div>
     <figure class="opinion-foto">
-      <img src="img/opinion-alitas-480.webp" srcset="img/opinion-alitas-480.webp 480w, img/opinion-alitas-960.webp 960w" sizes="(min-width:900px) 420px, 92vw" width="960" height="941" loading="lazy" alt="Vista desde arriba de una cesta de pollo rebozado, un plato de patatas chips con una tapa y una copa de vino blanco">
+      <span class="foto-ventana"><img src="img/opinion-alitas-480.webp" srcset="img/opinion-alitas-480.webp 480w, img/opinion-alitas-960.webp 960w" sizes="(min-width:900px) 420px, 92vw" width="960" height="941" loading="lazy" alt="Vista desde arriba de una cesta de pollo rebozado, un plato de patatas chips con una tapa y una copa de vino blanco"></span>
       <figcaption>Foto de una clienta en Google Maps, septiembre de 2026.</figcaption>
     </figure>
   </div>
@@ -572,7 +581,7 @@
         </div>
       </div>
       <figure class="fachada-foto foto-iman">
-        <img src="img/fachada-480.webp" srcset="img/fachada-480.webp 480w, img/fachada-960.webp 960w" sizes="(max-width:760px) 86vw, 320px" width="960" height="1070" loading="lazy" alt="Ventanal en arco de la fachada de ladrillo, con el logo de Embocado en vinilo y una lámpara de mimbre detrás">
+        <span class="foto-ventana"><img src="img/fachada-480.webp" srcset="img/fachada-480.webp 480w, img/fachada-960.webp 960w" sizes="(max-width:760px) 86vw, 320px" width="960" height="1070" loading="lazy" alt="Ventanal en arco de la fachada de ladrillo, con el logo de Embocado en vinilo y una lámpara de mimbre detrás"></span>
         <figcaption>Busca los ventanales en arco y las lámparas de mimbre.</figcaption>
       </figure>
       <div class="mapa reveal" id="mapa">
