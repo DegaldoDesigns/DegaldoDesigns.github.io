@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Aviso legal · Restaurante Embocado</title>
+<meta name="description" content="Aviso legal de la web de Restaurante Embocado, bar restaurante en Griñón.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0F1F19">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Jost';font-display:swap;font-weight:300 600;src:url(fonts/jost-latin.woff2) format('woff2')}
+@font-face{font-family:'Kaushan Script';font-display:swap;font-weight:400;src:url(fonts/kaushan-script-latin.woff2) format('woff2')}
+:root{--noche:#0F1F19; --superficie:#16291F; --texto:#F7F3EA; --suave:#BFC7BC; --miel:#E0B566; --miel-claro:#EBC888; --verde:#3DAA35; --linea:rgba(247,243,234,.14); --ease-out:cubic-bezier(0.23,1,0.32,1)}
+*{box-sizing:border-box}
+body{margin:0; background:var(--noche); color:var(--texto); font:400 1.0625rem/1.7 'Jost',system-ui,sans-serif}
+.barra{display:flex; align-items:center; padding:16px 24px; border-bottom:1px solid var(--linea)}
+.barra a{font:300 1.6rem/1 'Jost',system-ui,sans-serif; letter-spacing:.06em; color:var(--texto); text-decoration:none}
+.barra a b{color:var(--verde); font-weight:300}
+.wrap{max-width:740px; margin:0 auto; padding:56px 24px 96px}
+h1{font:300 clamp(2.2rem,6vw,3.2rem)/1.14 'Jost',system-ui,sans-serif; margin:0 0 6px}
+.fecha{color:var(--suave); font-size:.9375rem; margin:0 0 36px}
+h2{font:400 1.75rem/1.2 'Kaushan Script',cursive; margin:36px 0 10px; color:var(--miel)}
+p,li{color:var(--suave)}
+strong{color:var(--texto)}
+a{color:var(--texto)}
+.volver{display:inline-flex; margin-top:40px; padding:14px 24px; border-radius:999px; background:var(--miel); color:var(--noche); font-weight:600; text-decoration:none; transition:background-color .16s var(--ease-out), transform .12s var(--ease-out)}
+.volver:active{transform:scale(.97)}
+:focus-visible{outline:3px solid var(--miel); outline-offset:3px}
+@media (hover:hover) and (pointer:fine){ .volver:hover{background:var(--miel-claro)} }
+@media (prefers-reduced-motion:reduce){ .volver{transition:none} }
+</style>
+</head>
+<body>
+<header class="barra"><a href="index.html">embo<b>c</b>ado</a></header>
+<main class="wrap">
+  <h1>Aviso legal</h1>
+  <p class="fecha">Última actualización: 22 de octubre de 2026</p>
+  <!-- CONFIRMAR CON EL CLIENTE: razón social, NIF y datos registrales (LSSI, art. 10). Plantilla orientativa: revisar con su gestoría antes de publicar. -->
+  <h2>1. Quién está detrás de esta web</h2>
+  <p>Restaurante Embocado, C. Juan Carlos I, 14, 28971 Griñón (Madrid). Teléfono: 911 26 27 31. Los datos fiscales (razón social y NIF) se añadirán al publicar la web.</p>
+  <h2>2. Precios y carta</h2>
+  <p>Los precios que aparecen son los de la carta de comidas de diciembre de 2025 y la de desayunos de abril de 2026, y pueden cambiar. Los precios y la disponibilidad que valen son los del local el día de tu visita. En terraza puede haber suplemento. Pregúntanos por los alérgenos antes de pedir.</p>
+  <h2>3. Fotos y textos</h2>
+  <p>Las fotos de esta versión de la web son provisionales: las publicaron clientes en Google Maps y se sustituirán por fotos propias antes de publicarla. Las opiniones son reseñas públicas de Google Maps, citadas con el nombre con que las firmó cada persona (abreviado).</p>
+  <h2>4. Enlaces a otras webs</h2>
+  <p>La web enlaza a Google Maps y Apple Maps. No somos responsables del contenido de esas webs.</p>
+  <a class="volver" href="index.html">Volver al inicio</a>
+</main>
+</body>
+</html>
