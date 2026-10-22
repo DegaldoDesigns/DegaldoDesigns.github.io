@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Majús Restaurante · Raciones, desayunos y menú en Parla</title>
+<meta name="description" content="Majús Restaurante en Parla (C. Alfonso X el Sabio, 38): desayunos, menú del día, raciones para compartir y carnes de Ávila. Reservas: 624 04 13 03.">
+<!-- DEMO: noindex hasta que el restaurante apruebe la web. Al publicar en su dominio, quitar noindex y cambiar la URL de canonical, og:url, og:image, JSON-LD, sitemap y robots (aquí y en todas las páginas). -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://degaldodesigns.es/majus/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Majús Restaurante">
+<meta property="og:title" content="Majús Restaurante · Para compartir, del desayuno a la cena">
+<meta property="og:description" content="Desayunos, menú del día, raciones para compartir y carnes de Ávila en la calle Alfonso X el Sabio, 38 (Parla). Reservas: 624 04 13 03.">
+<meta property="og:image" content="https://degaldodesigns.es/majus/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://degaldodesigns.es/majus/">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Majús Restaurante · Para compartir, del desayuno a la cena">
+<meta name="twitter:description" content="Desayunos, menú del día, raciones para compartir y carnes de Ávila en la calle Alfonso X el Sabio, 38 (Parla). Reservas: 624 04 13 03.">
+<meta name="twitter:image" content="https://degaldodesigns.es/majus/og-image.jpg">
+<meta name="theme-color" content="#181818">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/cinzel-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/great-vibes-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="img/portada-neon-1200.webp" imagesrcset="img/portada-neon-1200.webp 1200w, img/portada-neon-1920.webp 1920w" imagesizes="(max-width:600px) 125vw, 100vw">
+<link rel="stylesheet" href="css/estilos.css">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Restaurant",
+ "name": "Majús Restaurante",
+ "url": "https://degaldodesigns.es/majus/",
+ "image": "https://degaldodesigns.es/majus/og-image.jpg",
+ "description": "Restaurante en Parla con desayunos, menú del día, raciones para compartir, carnes de Ávila y postres caseros. Terraza.",
+ "telephone": "+34624041303",
+ "servesCuisine": ["Española", "Mediterránea", "Raciones para compartir"],
+ "priceRange": "10-20 €",
+ "acceptsReservations": "True",
+ "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "C. Alfonso X el Sabio, 38",
+  "postalCode": "28982",
+  "addressLocality": "Parla",
+  "addressRegion": "Madrid",
+  "addressCountry": "ES"
+ },
+ "openingHoursSpecification": [
+  {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Thursday", "Friday"], "opens": "08:00", "closes": "00:00"},
+  {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday", "Sunday"], "opens": "09:00", "closes": "00:00"}
+ ],
+ "sameAs": ["https://www.instagram.com/majusparlarestaurante/"]
+}
+</script>
+<!-- CONFIRMAR CON EL CLIENTE (resumen; cada uno va también junto a su texto y en ../ficha.md):
+     - Horario: el de Google Maps (miércoles cerrado), sin "confirmado por el propietario"; en ago. 2026 el local dijo que cerraba el martes. Cierre a las 00:00.
+     - Desayunos de 8:30 a 12:00 (carta de Instagram, 17-09-2026) y la línea repetida de su carta (2,40 / 2,70 €).
+     - Carta y precios: carta impresa fotografiada en oct. 2026 (TheFork tiene otros precios en carnes). Chipirones y tataky no salen en ella.
+     - Menú del día: 13,90 € con postre o café y bebida (fotos del propietario, sept. 2026); qué días se sirve.
+     - Reservas: los dos WhatsApp del flyer (624 041 303 y 613 494 346) y TheFork.
+     - Logo: redibujado en SVG a partir de su neón (propuesta). Pedir el original del rótulo.
+     - Magia de cerca: frecuencia ("algunos sábados", según una reseña).
+     - Perros, tronas, accesibilidad, aparcamiento: atributos de Google Maps.
+     - Fotos: de clientes en Google Maps y del Instagram del local, solo para la demo. -->
+</head>
+<body>
+<svg width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="nm-difuso" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+  <!-- Manos y nombre de su neón, REDIBUJADOS (propuesta; CONFIRMAR con los dueños y pedir el original): 03-assets/logo/manos-majus-trazo.svg.
+       Colores y grosor por variables (--m-a, --m-b, --m-u, --mw, --ve) para usar el mismo dibujo en el logo, el mini neón y las manos del final. -->
+  <symbol id="manos" viewBox="0 0 2044 513">
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path style="stroke:var(--m-a,#FFF6EE); stroke-width:var(--mw,16px); vector-effect:var(--ve,none)" d="M38.1 474.4C38.8 471 39 462.9 42.4 453.9C45.7 444.9 47.1 438.8 58.3 420.5C69.5 402.1 95.3 363.8 109.4 343.7C123.6 323.7 134.7 313.3 143 300.1C151.3 287 156.9 274.6 159.5 265C162 255.5 160.1 250.3 158.3 242.7C156.5 235.2 151.9 225.7 148.6 219.7C145.3 213.8 145.2 213.5 138.6 207C132 200.6 115.7 187.9 109 180.8C102.3 173.7 100.5 170.3 98.4 164.5C96.2 158.7 95 151.8 95.9 146.1C96.7 140.5 97.5 136.9 103.3 130.4C109.1 123.8 122.9 112.1 130.6 106.7C138.4 101.3 138.7 100.4 150 98C161.3 95.6 186.2 92.2 198.5 92.3C210.8 92.4 216.1 94.4 223.7 98.8C231.2 103.2 238.2 110.3 243.7 118.7C249.3 127.1 254.3 140 256.9 149.2C259.5 158.4 259.9 161.6 259.3 173.7C258.7 185.8 254.2 213.9 253.2 221.9M164.9 265.5C168.5 267 179.9 273.6 186.4 274.4C192.9 275.2 196.9 274 203.8 270.5C210.7 267 221.2 259.7 227.7 253.3C234.2 246.8 240.3 235.3 242.8 231.8M177.1 262.7C183.3 257.8 205 239.2 214.7 233.4C224.5 227.6 228.2 228.9 235.3 228C242.5 227 249.7 226.4 257.5 227.7C265.3 229 264 227.7 282.1 235.5C300.1 243.3 336.4 264.8 365.9 274.6C395.4 284.3 427.8 284.1 458.8 294.1C489.8 304.1 534.4 327.6 552.1 334.5C569.7 341.5 560.9 336.4 564.8 335.9C568.7 335.4 572.8 333.4 575.4 331.6C578 329.7 579.5 327.2 580.6 324.7C581.6 322.2 583.4 321.2 581.7 316.4C580 311.5 578.3 304.6 570.5 295.5C562.7 286.5 552.9 274.6 534.9 262.2C516.9 249.8 479.3 237.9 462.5 221C445.7 204.1 445.9 180 433.9 160.8C422 141.5 397.9 114.8 390.7 105.6M372.3 98.6C369.4 96.3 364 89 355 85C345.9 81 331.7 76.1 318.3 74.6C304.9 73.2 283.3 75.4 274.5 76.3C265.8 77.3 268 78.6 265.9 80.4C263.9 82.1 262.5 84.8 262.3 87C262.1 89.2 263.1 92.1 264.7 93.7C266.3 95.4 256.6 95.2 272.1 97.1C287.6 99 327.9 106.9 357.7 105.3C387.5 103.6 430.9 90.3 450.9 87.3C471 84.2 469.3 85.6 478 86.9C486.8 88.2 491.5 89.1 503.6 95.1C515.8 101.1 534.3 116.6 551.1 123C567.9 129.3 595.8 131.5 604.7 133.2M453.4 185.1C454.9 184.4 459.1 181.7 462.3 181.1C465.6 180.5 469.3 180.6 472.8 181.4C476.3 182.3 480.3 184 483.5 186.1C486.7 188.3 490.6 192.8 492 194.2M459.2 204C463.8 203.5 470.9 205.2 486.9 201.4C502.9 197.5 537.2 183.8 555.2 180.8C573.3 177.8 583.9 181.1 595.2 183.4C606.6 185.7 618.7 192.7 623.4 194.5M504.8 200.4C514.7 209.6 548.7 242.2 564.3 255.4C579.9 268.7 586.5 268 598.5 279.7C610.5 291.4 628 317.5 636.3 325.7C644.7 334 644.9 330.3 648.6 329.3C652.3 328.3 656.7 321.3 658.4 319.7M566.5 185.6C566.2 187.7 563.8 194.2 564.6 198.6C565.4 202.9 560.9 199.6 571.4 211.5C581.8 223.4 615.9 258.7 627.4 270C638.8 281.2 637.9 277.3 640 278.8M581.2 186.7C583 189.6 582.5 192.6 591.9 204.1C601.3 215.6 628.3 241.9 637.6 255.6C646.8 269.2 643.4 276 647.4 285.8C651.4 295.6 654.9 306 661.6 314.3C668.3 322.6 683.2 332 687.6 335.6M671.6 167.4C675.7 171 686.1 176.8 695.8 189C705.5 201.2 724.3 230.5 729.7 240.6C735 250.8 729.5 248 727.8 249.8C726.1 251.6 728 256 719.4 251.2C710.8 246.4 684.9 226.6 676.4 221.2C667.8 215.8 670.1 218.7 667.9 218.9C665.7 219.1 663.7 219.9 663.3 222.6C662.9 225.4 658.4 219.5 665.7 235.4C673.1 251.3 700.4 304.2 707.4 317.9"/>
+      <path style="stroke:var(--m-b,#FFF6EE); stroke-width:var(--mw,16px); vector-effect:var(--ve,none)" d="M2005.3 73.3C1999.2 75.3 1988.4 80.7 1968.5 85.3C1948.6 89.9 1902.7 96.7 1885.9 100.6C1869 104.5 1873.1 105.2 1867.1 108.5C1861.2 111.9 1867.2 102.8 1850.1 120.6C1833.1 138.4 1796.6 185.2 1764.7 215.1C1732.8 245.1 1677.5 284.2 1658.6 300.4C1639.7 316.6 1653.2 308 1651.4 312.4C1649.6 316.8 1647.9 316.3 1647.7 326.8C1647.5 337.4 1650.2 366.6 1650.1 375.9C1650 385.1 1648.5 380.9 1647 382.6C1645.4 384.3 1643.6 385.8 1640.8 386.1C1638.1 386.3 1633.5 386 1630.3 384.2C1627.1 382.4 1625.2 380.5 1621.5 375.3C1617.7 370.1 1611.1 360.4 1607.6 353.1C1604.2 345.7 1602 343.6 1600.7 331.3C1599.4 319 1598.7 292.7 1600.1 279.2C1601.5 265.7 1607.5 255 1609 250.1M1766.6 37.5C1768.2 39 1773.7 42.4 1776.3 46.7C1778.8 51 1781.9 53.3 1781.9 63.2C1782 73.1 1780.9 91.4 1776.6 106.1C1772.3 120.9 1765.9 135.4 1755.9 151.7C1745.9 167.9 1726.6 192.4 1716.6 203.9C1706.5 215.3 1702.7 215.7 1695.5 220.4C1688.3 225 1684.2 228.8 1673.2 231.8C1662.3 234.9 1640.2 236.5 1630.1 238.6C1620 240.7 1618.8 243.2 1612.7 244.4C1606.5 245.6 1599.2 244.5 1593.1 245.8C1586.9 247.1 1583.8 247.8 1575.7 252.1C1567.6 256.4 1553.4 264.1 1544.5 271.7C1535.6 279.3 1531.2 290.2 1522.5 297.4C1513.8 304.6 1499.5 311.4 1492.1 315.2C1484.8 318.9 1480.6 319.1 1478.3 319.9M1644.4 54.6C1642.8 55.9 1641.2 55.1 1634.9 62.4C1628.5 69.7 1618.6 88.7 1606.1 98.6C1593.6 108.5 1573.1 113.6 1559.7 121.7C1546.4 129.9 1531.5 143.1 1525.8 147.4M1618.1 249.3C1619.1 251 1623.1 255.9 1624 259.5C1625 263.1 1625.1 266.3 1623.8 271C1622.4 275.7 1619 283.1 1615.9 287.5C1612.9 291.9 1607.3 295.8 1605.5 297.5M1594.7 332.8C1593 335.8 1586.3 340.3 1584.5 351C1582.6 361.7 1584.4 386.4 1583.5 396.8C1582.6 407.3 1580.7 409.9 1578.9 413.7C1577.1 417.4 1575.1 418.3 1572.9 419.5C1570.8 420.6 1570.2 422.4 1566 420.5C1561.9 418.5 1551.1 410.1 1548.1 408M1483.6 251.4C1481.8 248.5 1477.1 237.6 1472.7 233.9C1468.4 230.2 1470.8 227.6 1457.6 229C1444.5 230.5 1414.5 236.4 1393.7 242.5C1372.8 248.7 1345.7 262.6 1332.7 266C1319.7 269.5 1319.2 264.4 1315.7 263.1C1312.2 261.8 1312.4 260.3 1311.6 258.3C1310.9 256.3 1310.5 253.7 1311.2 251.1C1311.9 248.6 1311.4 247.8 1315.9 243C1320.4 238.2 1330.8 227.5 1338.3 222.1C1345.8 216.7 1332.7 221.7 1361 210.4C1389.3 199.2 1481.2 164.3 1507.9 154.6C1534.6 145 1516.4 152.3 1521.2 152.7C1526 153.2 1531.9 154.5 1536.7 157.3C1541.6 160.1 1548.1 164.2 1550.3 169.5C1552.4 174.8 1551.3 183.5 1549.7 189C1548 194.4 1551.3 190.6 1540.6 202.2C1529.8 213.8 1495.7 246.6 1485.3 258.6C1475 270.6 1481 265.1 1478.4 274.2C1475.9 283.2 1471.5 306.4 1470.1 312.9M1534.6 291.3C1536.5 292.6 1543.5 295.3 1545.8 299C1548.2 302.8 1550.1 300.8 1548.8 313.6C1547.6 326.3 1539.4 354.9 1538.3 375.6C1537.1 396.2 1542.1 425.3 1541.9 437.3C1541.7 449.3 1539.6 445.2 1537.1 447.5C1534.7 449.8 1530.5 451.3 1527.2 451.2C1523.8 451 1520.2 449.4 1517 446.6C1513.8 443.7 1512.2 443.2 1508 433.9C1503.7 424.6 1496.7 408.2 1491.4 390.7C1486.1 373.3 1482.2 343.3 1476.1 329.1C1469.9 315 1457.5 312.3 1454.4 305.8C1451.3 299.3 1454.4 294.4 1457.3 290.1C1460.2 285.7 1469.2 281.4 1471.5 279.6M1533.7 368.3C1532.3 365.3 1526.9 361.2 1525.3 350.4C1523.7 339.6 1524.3 311.2 1524.2 303.3"/>
+      <path style="stroke:var(--m-u,#FF7A76); stroke-width:var(--mw,16px); vector-effect:var(--ve,none)" d="M706 342C699.3 330 679 293.7 666 270C653 246.3 636.8 220.8 628 200C619.2 179.2 613.8 157.7 613 145C612.2 132.3 618.3 127.5 623 124C627.7 120.5 633 119.3 641 124C649 128.7 660.2 141.5 671 152C681.8 162.5 695.7 175.7 706 187C716.3 198.3 727.2 210.8 733 220C738.8 229.2 740 229.5 741 242C742 254.5 739.5 273.7 739 295C738.5 316.3 737.3 350 738 370C738.7 390 740.5 407.5 743 415C745.5 422.5 749.7 420.8 753 415C756.3 409.2 756.7 404.2 763 380C769.3 355.8 781.3 308 791 270C800.7 232 814 171.7 821 152C828 132.3 829.7 144.8 833 152C836.3 159.2 838.7 172 841 195C843.3 218 844.5 272.5 847 290C849.5 307.5 852.8 300.8 856 300C859.2 299.2 860.2 300 866 285C871.8 270 883.2 236.3 891 210C898.8 183.7 908 142 913 127C918 112 919.3 117.8 921 120C922.7 122.2 922.8 123.3 923 140C923.2 156.7 922 190 922 220C922 250 922.2 290.8 923 320C923.8 349.2 924 379.2 927 395C930 410.8 934.5 412.2 941 415C947.5 417.8 958.2 416.5 966 412C973.8 407.5 981.2 396.2 988 388C994.8 379.8 1004.7 373.5 1007 363C1009.3 352.5 1004.7 335.8 1002 325C999.3 314.2 996.2 303 991 298C985.8 293 978 294.3 971 295C964 295.7 953.7 297.7 949 302C944.3 306.3 941.8 315 943 321C944.2 327 950.5 335.5 956 338C961.5 340.5 969.2 338 976 336C982.8 334 991.7 322 997 326C1002.3 330 1003.2 355.5 1008 360C1012.8 364.5 1020 356.7 1026 353C1032 349.3 1038.7 345.2 1044 338C1049.3 330.8 1054.7 321.3 1058 310C1061.3 298.7 1062.5 268.3 1064 270C1065.5 271.7 1065.8 301.7 1067 320C1068.2 338.3 1070.3 362.5 1071 380C1071.7 397.5 1072 411.7 1071 425C1070 438.3 1069.2 452.8 1065 460C1060.8 467.2 1051.7 470.2 1046 468C1040.3 465.8 1032.7 456.7 1031 447C1029.3 437.3 1031.8 420.2 1036 410C1040.2 399.8 1049.5 392.8 1056 386C1062.5 379.2 1069.2 379.2 1075 369C1080.8 358.8 1085.8 342.3 1091 325C1096.2 307.7 1102.3 267.8 1106 265C1109.7 262.2 1110 298.8 1113 308C1116 317.2 1120 318.7 1124 320C1128 321.3 1133.8 325.5 1137 316C1140.2 306.5 1141.2 265.7 1143 263C1144.8 260.3 1145 287.2 1148 300C1151 312.8 1156.3 332.5 1161 340C1165.7 347.5 1171.8 348 1176 345C1180.2 342 1183.7 332.5 1186 322C1188.3 311.5 1189.3 288.7 1190 282M1148 227C1151.7 222 1166.3 202 1170 197M1190 282C1193.8 277.7 1206.5 260.3 1213 256C1219.5 251.7 1226.3 250.3 1229 256C1231.7 261.7 1231.7 277.7 1229 290C1226.3 302.3 1216 317.5 1213 330C1210 342.5 1210 355.8 1211 365C1212 374.2 1215.3 382.5 1219 385C1222.7 387.5 1229.8 387.5 1233 380C1236.2 372.5 1235.5 356.7 1238 340C1240.5 323.3 1243.3 298.7 1248 280C1252.7 261.3 1256.3 238.8 1266 228C1275.7 217.2 1300.8 212.2 1306 215C1311.2 217.8 1297.3 235.8 1297 245C1296.7 254.2 1300 264.2 1304 270C1308 275.8 1312.2 272.2 1321 280C1329.8 287.8 1351 310.8 1357 317"/>
+    </g>
+  </symbol>
+  <!-- Logo circular redibujado (03-assets/logo/logo-majus-circular-linea.svg): doble anillo dorado + manos + nombre -->
+  <symbol id="logo-circ" viewBox="0 0 1600 1600">
+    <circle cx="800" cy="800" r="690" fill="none" stroke="#D9C38A" style="stroke-width:var(--aw,7px); vector-effect:var(--ve,none)"/>
+    <circle cx="800" cy="800" r="655" fill="none" stroke="#B5A27A" style="stroke-width:var(--aw2,5px); vector-effect:var(--ve,none)"/>
+    <use href="#manos" x="210" y="651.9" width="1180" height="296.2"/>
+  </symbol>
+  <symbol id="anillo" viewBox="0 0 100 100"><g fill="none" stroke="currentColor"><circle cx="50" cy="50" r="47" stroke-width="2"/><circle cx="50" cy="50" r="42.5" stroke-width="1.2"/></g></symbol>
+  <symbol id="corazon" viewBox="0 0 40 36"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" d="M20 33C9 25 3 19 3 11.5 3 6.5 7 3 11.5 3 15.2 3 18.2 5.2 20 8.6 21.8 5.2 24.8 3 28.5 3 33 3 37 6.5 37 11.5 37 19 31 25 20 33Z"/></symbol>
+  <symbol id="i-tel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3.5 20.5l1.3-4.2A8.6 8.6 0 1 1 8 19.4z"/><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M9 8.6c0 3.4 2.9 6.4 6.4 6.4l1.1-1.6-2-1-1 .9c-1-.5-1.9-1.4-2.4-2.4l.9-1-1-2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+  <symbol id="i-flecha" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-abajo" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <!-- Sello M16: círculo para el texto (r 64 en 160; circunferencia 402) -->
+  <path id="circ" d="M80,80 m-64,0 a64,64 0 1,1 128,0 a64,64 0 1,1 -128,0"/>
+</svg>
+
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<div class="centinela" aria-hidden="true"></div>
+<header class="cabecera" id="cabecera">
+  <div class="barra">
+    <nav class="nav nav-izq" aria-label="Principal">
+      <a class="enl" href="#favoritos">Favoritos</a>
+      <a class="enl" href="#carta">Carta</a>
+      <a class="enl" href="#opiniones">Opiniones</a>
+      <a class="enl" href="#magia">Magia</a>
+    </nav>
+    <a class="marca" href="#inicio" aria-label="Majús Restaurante, volver al inicio">
+      <svg class="logo-circ" aria-hidden="true"><use href="#logo-circ"/></svg>
+    </a>
+    <div class="barra-der">
+      <nav class="nav nav-der" aria-label="Más secciones">
+        <a class="enl" href="#horario">Horario</a>
+        <a class="enl" href="#ubicacion">Dónde estamos</a>
+        <a class="enl" href="#preguntas">Preguntas</a>
+      </nav>
+      <a class="btn btn-oro btn-cab" href="tel:+34624041303"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg><span>Llamar</span></a>
+      <button class="hamb" type="button" popovertarget="menu" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+<nav id="menu" popover aria-label="Menú principal">
+  <button class="cerrar" type="button" popovertarget="menu" popovertargetaction="hide" aria-label="Cerrar menú">×</button>
+  <ul>
+    <li style="--i:0"><a href="#favoritos">De lo que más se habla</a></li>
+    <li style="--i:1"><a href="#carta">La carta</a></li>
+    <li style="--i:2"><a href="#opiniones">Opiniones</a></li>
+    <li style="--i:3"><a href="#magia">Magia de cerca</a></li>
+    <li style="--i:4"><a href="#horario">Horario</a></li>
+    <li style="--i:5"><a href="#ubicacion">Dónde estamos</a></li>
+    <li style="--i:6"><a href="#preguntas">Preguntas</a></li>
+  </ul>
+  <p class="menu-pie"><a href="tel:+34624041303">Llamar al 624 04 13 03</a></p>
+</nav>
+
+<main id="contenido">
+
+<!-- ============ PORTADA · momento firma (guion 3): las dos manos se dibujan, "Majús" las une, se enciende el neón (M83)
+     y aparece la foto real de su pared con su neón (M81). Una vez por visita. ============ -->
+<section class="portada mov" id="inicio" aria-labelledby="titulo-portada">
+  <div class="portada-escena">
+    <!-- Antes de que llegue la foto: un brillo cálido que respira detrás del neón y el doble anillo de su logo, muy tenue -->
+    <div class="fondo-noche" aria-hidden="true"><span class="fn-brillo"></span><svg class="fn-anillo"><use href="#anillo"/></svg></div>
+    <!-- Foto del propietario en Google Maps (sept. 2026), recortada (0, 800, 3024, 3420) y con el jardín algo desenfocado para que pese menos (03-assets/preparar-fotos.py). Solo para la demo. -->
+    <div class="luces luces-cubre" data-encender="manual" style="--ar:1920/1663; --velo:#181818; --velo-ini:.62; --velo-fin:.4; --paso:0ms">
+      <div class="luces-caja">
+        <img src="img/portada-neon-1200.webp" srcset="img/portada-neon-1200.webp 1200w, img/portada-neon-1920.webp 1920w" sizes="(max-width:600px) 125vw, 100vw" width="1920" height="1663" fetchpriority="high" decoding="async" alt="Neón con dos manos que se tocan y el nombre Majús en rojo sobre una pared de jardín vertical, en el comedor">
+        <span class="luces-noche"></span>
+        <span class="luz" style="--x:31.2; --y:41; --w:23; --h:15.4; --i:0; --by:0; --halo:1.3; --color-luz:#FFE6D6; --fuerza:.55"></span>
+        <span class="luz" style="--x:51.1; --y:41.8; --w:24.7; --h:13.1; --i:1; --by:0; --halo:1.3; --color-luz:#FF5C57"></span>
+        <span class="luz" style="--x:73.3; --y:39.9; --w:23.1; --h:15.9; --i:2; --by:0; --halo:1.3; --color-luz:#FFE6D6; --fuerza:.55"></span>
+        <!-- M83 trazo-neon: el dibujo cae encima del neón de la foto (caja del neón en % de la foto) -->
+        <div class="tn" id="firma" data-trazo="carga" data-una-vez="sesion" data-contacto="732,242 1309,259" style="position:absolute; left:18.49%; top:30.53%; width:67.59%; height:19.58%; --tn-ar:2044/513; --tn-color-a:#FFF6EE; --tn-color-union:#FF7A76; --tn-nucleo:#FFD6D3; --tn-contacto:#FF7A76; --tn-grosor:16px">
+          <svg viewBox="0 0 2044 513" aria-hidden="true" focusable="false">
+            <path data-tn="a" d="M38.1 474.4C38.8 471 39 462.9 42.4 453.9C45.7 444.9 47.1 438.8 58.3 420.5C69.5 402.1 95.3 363.8 109.4 343.7C123.6 323.7 134.7 313.3 143 300.1C151.3 287 156.9 274.6 159.5 265C162 255.5 160.1 250.3 158.3 242.7C156.5 235.2 151.9 225.7 148.6 219.7C145.3 213.8 145.2 213.5 138.6 207C132 200.6 115.7 187.9 109 180.8C102.3 173.7 100.5 170.3 98.4 164.5C96.2 158.7 95 151.8 95.9 146.1C96.7 140.5 97.5 136.9 103.3 130.4C109.1 123.8 122.9 112.1 130.6 106.7C138.4 101.3 138.7 100.4 150 98C161.3 95.6 186.2 92.2 198.5 92.3C210.8 92.4 216.1 94.4 223.7 98.8C231.2 103.2 238.2 110.3 243.7 118.7C249.3 127.1 254.3 140 256.9 149.2C259.5 158.4 259.9 161.6 259.3 173.7C258.7 185.8 254.2 213.9 253.2 221.9M164.9 265.5C168.5 267 179.9 273.6 186.4 274.4C192.9 275.2 196.9 274 203.8 270.5C210.7 267 221.2 259.7 227.7 253.3C234.2 246.8 240.3 235.3 242.8 231.8M177.1 262.7C183.3 257.8 205 239.2 214.7 233.4C224.5 227.6 228.2 228.9 235.3 228C242.5 227 249.7 226.4 257.5 227.7C265.3 229 264 227.7 282.1 235.5C300.1 243.3 336.4 264.8 365.9 274.6C395.4 284.3 427.8 284.1 458.8 294.1C489.8 304.1 534.4 327.6 552.1 334.5C569.7 341.5 560.9 336.4 564.8 335.9C568.7 335.4 572.8 333.4 575.4 331.6C578 329.7 579.5 327.2 580.6 324.7C581.6 322.2 583.4 321.2 581.7 316.4C580 311.5 578.3 304.6 570.5 295.5C562.7 286.5 552.9 274.6 534.9 262.2C516.9 249.8 479.3 237.9 462.5 221C445.7 204.1 445.9 180 433.9 160.8C422 141.5 397.9 114.8 390.7 105.6M372.3 98.6C369.4 96.3 364 89 355 85C345.9 81 331.7 76.1 318.3 74.6C304.9 73.2 283.3 75.4 274.5 76.3C265.8 77.3 268 78.6 265.9 80.4C263.9 82.1 262.5 84.8 262.3 87C262.1 89.2 263.1 92.1 264.7 93.7C266.3 95.4 256.6 95.2 272.1 97.1C287.6 99 327.9 106.9 357.7 105.3C387.5 103.6 430.9 90.3 450.9 87.3C471 84.2 469.3 85.6 478 86.9C486.8 88.2 491.5 89.1 503.6 95.1C515.8 101.1 534.3 116.6 551.1 123C567.9 129.3 595.8 131.5 604.7 133.2M453.4 185.1C454.9 184.4 459.1 181.7 462.3 181.1C465.6 180.5 469.3 180.6 472.8 181.4C476.3 182.3 480.3 184 483.5 186.1C486.7 188.3 490.6 192.8 492 194.2M459.2 204C463.8 203.5 470.9 205.2 486.9 201.4C502.9 197.5 537.2 183.8 555.2 180.8C573.3 177.8 583.9 181.1 595.2 183.4C606.6 185.7 618.7 192.7 623.4 194.5M504.8 200.4C514.7 209.6 548.7 242.2 564.3 255.4C579.9 268.7 586.5 268 598.5 279.7C610.5 291.4 628 317.5 636.3 325.7C644.7 334 644.9 330.3 648.6 329.3C652.3 328.3 656.7 321.3 658.4 319.7M566.5 185.6C566.2 187.7 563.8 194.2 564.6 198.6C565.4 202.9 560.9 199.6 571.4 211.5C581.8 223.4 615.9 258.7 627.4 270C638.8 281.2 637.9 277.3 640 278.8M581.2 186.7C583 189.6 582.5 192.6 591.9 204.1C601.3 215.6 628.3 241.9 637.6 255.6C646.8 269.2 643.4 276 647.4 285.8C651.4 295.6 654.9 306 661.6 314.3C668.3 322.6 683.2 332 687.6 335.6M671.6 167.4C675.7 171 686.1 176.8 695.8 189C705.5 201.2 724.3 230.5 729.7 240.6C735 250.8 729.5 248 727.8 249.8C726.1 251.6 728 256 719.4 251.2C710.8 246.4 684.9 226.6 676.4 221.2C667.8 215.8 670.1 218.7 667.9 218.9C665.7 219.1 663.7 219.9 663.3 222.6C662.9 225.4 658.4 219.5 665.7 235.4C673.1 251.3 700.4 304.2 707.4 317.9"/>
+            <path data-tn="b" d="M2005.3 73.3C1999.2 75.3 1988.4 80.7 1968.5 85.3C1948.6 89.9 1902.7 96.7 1885.9 100.6C1869 104.5 1873.1 105.2 1867.1 108.5C1861.2 111.9 1867.2 102.8 1850.1 120.6C1833.1 138.4 1796.6 185.2 1764.7 215.1C1732.8 245.1 1677.5 284.2 1658.6 300.4C1639.7 316.6 1653.2 308 1651.4 312.4C1649.6 316.8 1647.9 316.3 1647.7 326.8C1647.5 337.4 1650.2 366.6 1650.1 375.9C1650 385.1 1648.5 380.9 1647 382.6C1645.4 384.3 1643.6 385.8 1640.8 386.1C1638.1 386.3 1633.5 386 1630.3 384.2C1627.1 382.4 1625.2 380.5 1621.5 375.3C1617.7 370.1 1611.1 360.4 1607.6 353.1C1604.2 345.7 1602 343.6 1600.7 331.3C1599.4 319 1598.7 292.7 1600.1 279.2C1601.5 265.7 1607.5 255 1609 250.1M1766.6 37.5C1768.2 39 1773.7 42.4 1776.3 46.7C1778.8 51 1781.9 53.3 1781.9 63.2C1782 73.1 1780.9 91.4 1776.6 106.1C1772.3 120.9 1765.9 135.4 1755.9 151.7C1745.9 167.9 1726.6 192.4 1716.6 203.9C1706.5 215.3 1702.7 215.7 1695.5 220.4C1688.3 225 1684.2 228.8 1673.2 231.8C1662.3 234.9 1640.2 236.5 1630.1 238.6C1620 240.7 1618.8 243.2 1612.7 244.4C1606.5 245.6 1599.2 244.5 1593.1 245.8C1586.9 247.1 1583.8 247.8 1575.7 252.1C1567.6 256.4 1553.4 264.1 1544.5 271.7C1535.6 279.3 1531.2 290.2 1522.5 297.4C1513.8 304.6 1499.5 311.4 1492.1 315.2C1484.8 318.9 1480.6 319.1 1478.3 319.9M1644.4 54.6C1642.8 55.9 1641.2 55.1 1634.9 62.4C1628.5 69.7 1618.6 88.7 1606.1 98.6C1593.6 108.5 1573.1 113.6 1559.7 121.7C1546.4 129.9 1531.5 143.1 1525.8 147.4M1618.1 249.3C1619.1 251 1623.1 255.9 1624 259.5C1625 263.1 1625.1 266.3 1623.8 271C1622.4 275.7 1619 283.1 1615.9 287.5C1612.9 291.9 1607.3 295.8 1605.5 297.5M1594.7 332.8C1593 335.8 1586.3 340.3 1584.5 351C1582.6 361.7 1584.4 386.4 1583.5 396.8C1582.6 407.3 1580.7 409.9 1578.9 413.7C1577.1 417.4 1575.1 418.3 1572.9 419.5C1570.8 420.6 1570.2 422.4 1566 420.5C1561.9 418.5 1551.1 410.1 1548.1 408M1483.6 251.4C1481.8 248.5 1477.1 237.6 1472.7 233.9C1468.4 230.2 1470.8 227.6 1457.6 229C1444.5 230.5 1414.5 236.4 1393.7 242.5C1372.8 248.7 1345.7 262.6 1332.7 266C1319.7 269.5 1319.2 264.4 1315.7 263.1C1312.2 261.8 1312.4 260.3 1311.6 258.3C1310.9 256.3 1310.5 253.7 1311.2 251.1C1311.9 248.6 1311.4 247.8 1315.9 243C1320.4 238.2 1330.8 227.5 1338.3 222.1C1345.8 216.7 1332.7 221.7 1361 210.4C1389.3 199.2 1481.2 164.3 1507.9 154.6C1534.6 145 1516.4 152.3 1521.2 152.7C1526 153.2 1531.9 154.5 1536.7 157.3C1541.6 160.1 1548.1 164.2 1550.3 169.5C1552.4 174.8 1551.3 183.5 1549.7 189C1548 194.4 1551.3 190.6 1540.6 202.2C1529.8 213.8 1495.7 246.6 1485.3 258.6C1475 270.6 1481 265.1 1478.4 274.2C1475.9 283.2 1471.5 306.4 1470.1 312.9M1534.6 291.3C1536.5 292.6 1543.5 295.3 1545.8 299C1548.2 302.8 1550.1 300.8 1548.8 313.6C1547.6 326.3 1539.4 354.9 1538.3 375.6C1537.1 396.2 1542.1 425.3 1541.9 437.3C1541.7 449.3 1539.6 445.2 1537.1 447.5C1534.7 449.8 1530.5 451.3 1527.2 451.2C1523.8 451 1520.2 449.4 1517 446.6C1513.8 443.7 1512.2 443.2 1508 433.9C1503.7 424.6 1496.7 408.2 1491.4 390.7C1486.1 373.3 1482.2 343.3 1476.1 329.1C1469.9 315 1457.5 312.3 1454.4 305.8C1451.3 299.3 1454.4 294.4 1457.3 290.1C1460.2 285.7 1469.2 281.4 1471.5 279.6M1533.7 368.3C1532.3 365.3 1526.9 361.2 1525.3 350.4C1523.7 339.6 1524.3 311.2 1524.2 303.3"/>
+            <path data-tn="union" d="M706 342C699.3 330 679 293.7 666 270C653 246.3 636.8 220.8 628 200C619.2 179.2 613.8 157.7 613 145C612.2 132.3 618.3 127.5 623 124C627.7 120.5 633 119.3 641 124C649 128.7 660.2 141.5 671 152C681.8 162.5 695.7 175.7 706 187C716.3 198.3 727.2 210.8 733 220C738.8 229.2 740 229.5 741 242C742 254.5 739.5 273.7 739 295C738.5 316.3 737.3 350 738 370C738.7 390 740.5 407.5 743 415C745.5 422.5 749.7 420.8 753 415C756.3 409.2 756.7 404.2 763 380C769.3 355.8 781.3 308 791 270C800.7 232 814 171.7 821 152C828 132.3 829.7 144.8 833 152C836.3 159.2 838.7 172 841 195C843.3 218 844.5 272.5 847 290C849.5 307.5 852.8 300.8 856 300C859.2 299.2 860.2 300 866 285C871.8 270 883.2 236.3 891 210C898.8 183.7 908 142 913 127C918 112 919.3 117.8 921 120C922.7 122.2 922.8 123.3 923 140C923.2 156.7 922 190 922 220C922 250 922.2 290.8 923 320C923.8 349.2 924 379.2 927 395C930 410.8 934.5 412.2 941 415C947.5 417.8 958.2 416.5 966 412C973.8 407.5 981.2 396.2 988 388C994.8 379.8 1004.7 373.5 1007 363C1009.3 352.5 1004.7 335.8 1002 325C999.3 314.2 996.2 303 991 298C985.8 293 978 294.3 971 295C964 295.7 953.7 297.7 949 302C944.3 306.3 941.8 315 943 321C944.2 327 950.5 335.5 956 338C961.5 340.5 969.2 338 976 336C982.8 334 991.7 322 997 326C1002.3 330 1003.2 355.5 1008 360C1012.8 364.5 1020 356.7 1026 353C1032 349.3 1038.7 345.2 1044 338C1049.3 330.8 1054.7 321.3 1058 310C1061.3 298.7 1062.5 268.3 1064 270C1065.5 271.7 1065.8 301.7 1067 320C1068.2 338.3 1070.3 362.5 1071 380C1071.7 397.5 1072 411.7 1071 425C1070 438.3 1069.2 452.8 1065 460C1060.8 467.2 1051.7 470.2 1046 468C1040.3 465.8 1032.7 456.7 1031 447C1029.3 437.3 1031.8 420.2 1036 410C1040.2 399.8 1049.5 392.8 1056 386C1062.5 379.2 1069.2 379.2 1075 369C1080.8 358.8 1085.8 342.3 1091 325C1096.2 307.7 1102.3 267.8 1106 265C1109.7 262.2 1110 298.8 1113 308C1116 317.2 1120 318.7 1124 320C1128 321.3 1133.8 325.5 1137 316C1140.2 306.5 1141.2 265.7 1143 263C1144.8 260.3 1145 287.2 1148 300C1151 312.8 1156.3 332.5 1161 340C1165.7 347.5 1171.8 348 1176 345C1180.2 342 1183.7 332.5 1186 322C1188.3 311.5 1189.3 288.7 1190 282M1148 227C1151.7 222 1166.3 202 1170 197M1190 282C1193.8 277.7 1206.5 260.3 1213 256C1219.5 251.7 1226.3 250.3 1229 256C1231.7 261.7 1231.7 277.7 1229 290C1226.3 302.3 1216 317.5 1213 330C1210 342.5 1210 355.8 1211 365C1212 374.2 1215.3 382.5 1219 385C1222.7 387.5 1229.8 387.5 1233 380C1236.2 372.5 1235.5 356.7 1238 340C1240.5 323.3 1243.3 298.7 1248 280C1252.7 261.3 1256.3 238.8 1266 228C1275.7 217.2 1300.8 212.2 1306 215C1311.2 217.8 1297.3 235.8 1297 245C1296.7 254.2 1300 264.2 1304 270C1308 275.8 1312.2 272.2 1321 280C1329.8 287.8 1351 310.8 1357 317"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="portada-sombra" aria-hidden="true"></div>
+  </div>
+
+  <div class="wrap portada-texto">
+    <p class="lema"><span class="titular-palabras">Donde se tocan dos manos nace el arte</span></p>
+    <h1 class="portada-tit" id="titulo-portada"><span class="pt-1 titular-palabras">Para compartir,</span> <span class="pt-2">del desayuno a la cena.</span></h1>
+    <p class="bajada">Raciones para compartir, carnes de Ávila, desayunos y menú del día en la calle Alfonso X el Sabio, 38. Parla.</p>
+    <div class="portada-acciones">
+      <a class="btn btn-oro btn-grande" href="tel:+34624041303"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar para reservar</a>
+      <a class="btn btn-linea iman" href="#carta">Ver la carta<svg class="ico" aria-hidden="true"><use href="#i-abajo"/></svg></a>
+    </div>
+    <p class="prueba"><span class="estrella" aria-hidden="true">★</span> <strong><span class="cuenta" data-fin="4.7" data-dec="1">4,7</span></strong> · <span class="cuenta" data-fin="503">503</span> reseñas en Google</p>
+    <!-- CONFIRMAR CON EL CLIENTE: el estado sale del horario de Google Maps (miércoles cerrado). -->
+    <div class="viva viva-linea" data-viva role="status">
+      <svg class="nm" viewBox="0 0 2044 513" aria-hidden="true" data-estado=""><use class="nm-apagado" href="#manos"/><g class="nm-luz"><use class="nm-halo" href="#manos" filter="url(#nm-difuso)"/><use class="nm-tubo" href="#manos"/></g></svg>
+      <span class="viva-texto"><b data-viva-titulo>Del desayuno a la cena</b> <span data-viva-detalle>Reservas: 624 04 13 03</span></span>
+    </div>
+  </div>
+
+  <!-- Tarjeta viva (escritorio): mini neón encendido o apagado + estado -->
+  <div class="viva viva-esquina" data-viva role="status">
+    <svg class="nm" viewBox="0 0 2044 513" aria-hidden="true" data-estado=""><use class="nm-apagado" href="#manos"/><g class="nm-luz"><use class="nm-halo" href="#manos" filter="url(#nm-difuso)"/><use class="nm-tubo" href="#manos"/></g></svg>
+    <span class="viva-texto"><b data-viva-titulo>Del desayuno a la cena</b><span data-viva-detalle>Reservas: 624 04 13 03</span></span>
+  </div>
+</section>
+
+<!-- ============ DE LO QUE MÁS SE HABLA (M32: foto que sigue al cursor; miniaturas en táctil) ============ -->
+<!-- Temas de reseñas de la ficha de Google Maps (22-10-2026) con su número. Fotos de clientes, descriptivas: no son "el plato de la carta". -->
+<section class="sec sec-noche favoritos" id="favoritos" aria-labelledby="t-favoritos">
+  <div class="deco" aria-hidden="true">
+    <div class="fondo-vivo fv-baldosa-propia fv-quieto" style="--fv-giro:-8deg; --fv-baldosa:300px; --fv-papel:.06; --fv-luz:#D9C38A; --fv-fuerza:14%; --fv-x:78%; --fv-y:30%"><span class="fv-papel"></span><span class="fv-brillo"></span></div>
+    <span class="palabra-fondo" data-px="-120" style="top:6%;left:-4%" data-t="503"></span>
+    <svg class="motivo" data-py="-180" style="right:6%;top:14%;width:110px"><use href="#anillo"/></svg>
+    <svg class="motivo motivo-cor" data-py="-300" style="left:9%;top:78%;width:34px"><use href="#corazon"/></svg>
+  </div>
+  <div class="wrap estrecho">
+    <h2 class="tf" id="t-favoritos"><span>De lo que más se habla</span></h2>
+    <p class="tf-mano">en 503 reseñas</p>
+    <p class="intro">Los temas que más se repiten en las reseñas de Google. <span class="solo-raton">Pasa por encima para ver fotos de clientes.</span></p>
+    <ul class="temas grupo" data-lista-foto>
+      <li class="tema" data-foto="img/tema-croquetas-480.webp" data-alt="Croquetas en una caja de madera con papel de periódico"><h3>Croquetas</h3><span class="puntos" aria-hidden="true"></span><span class="cifra"><b>32</b> reseñas</span></li>
+      <li class="tema" data-foto="img/tema-cenar-480.webp" data-alt="El comedor de noche, con lámparas de cuerda encendidas y el neón al fondo"><h3>Cenar</h3><span class="puntos" aria-hidden="true"></span><span class="cifra"><b>26</b> reseñas</span></li>
+      <li class="tema" data-foto="img/tema-tarta-480.webp" data-alt="Porción de tarta de queso tostada con mermelada en un plato de rayas"><h3>Tarta de queso</h3><span class="puntos" aria-hidden="true"></span><span class="cifra"><b>23</b> reseñas</span></li>
+      <li class="tema" data-foto="img/tema-torreznos-480.webp" data-alt="Torreznos con pimientos de Padrón sobre una tabla de madera"><h3>Torreznos</h3><span class="puntos" aria-hidden="true"></span><span class="cifra"><b>21</b> reseñas</span></li>
+      <li class="tema" data-foto="img/tema-menu-480.webp" data-alt="Pescado al horno con ensalada en una fuente blanca y azul"><h3>Menú del día</h3><span class="puntos" aria-hidden="true"></span><span class="cifra"><b>15</b> reseñas</span></li>
+      <li class="tema" data-foto="img/tema-huevos-480.webp" data-alt="Huevos con lonchas de jamón en un plato de mosaico"><h3>Huevos rotos</h3><span class="puntos" aria-hidden="true"></span><span class="cifra"><b>11</b> reseñas</span></li>
+      <li class="tema" data-foto="img/tema-tomates-480.webp" data-alt="Rodajas de tomate verde rebozado con queso rallado sobre una pizarra"><h3>Tomates verdes</h3><span class="puntos" aria-hidden="true"></span><span class="cifra"><b>9</b> reseñas</span></li>
+      <li class="tema"><h3>Chuletón</h3><span class="puntos" aria-hidden="true"></span><span class="cifra"><b>8</b> reseñas</span></li>
+    </ul>
+    <div class="favoritos-pie">
+      <p>Temas y número de reseñas que los nombran, según Google Maps, a 22 de octubre de 2026. Fotos de clientes publicadas en Google Maps.</p>
+      <a class="enlace" href="#carta">Ver la carta<svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LA CARTA (M22: la foto de una mesa se queda fija y la hoja negra de la carta sube por encima) ============ -->
+<section class="hs-foto" aria-label="Una mesa en Majús">
+  <div class="hs-fijo">
+    <picture><source media="(min-width:768px) and (max-aspect-ratio:1/1)" srcset="img/carta-mesa-v-800.webp 800w, img/carta-mesa-v-1400.webp 1400w" sizes="100vw" width="1400" height="1600"><img src="img/carta-mesa-960.webp" srcset="img/carta-mesa-960.webp 960w, img/carta-mesa-1600.webp 1600w, img/carta-mesa-2400.webp 2400w" sizes="100vw" width="2400" height="1629" loading="lazy" decoding="async" alt="Mesa con croquetas en una caja de madera, una ensalada y torreznos con pimientos sobre una tabla"></picture>
+    <div class="hs-texto">
+      <p class="hs-mano">Compartir es vivir</p>
+      <p class="hs-pie">Una mesa en Majús. Foto de un cliente en Google Maps, octubre de 2026.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Transcrita de 01-investigacion/carta.md: carta impresa fotografiada en oct. 2026 (22 platos), desayunos de Instagram (17-09-2026; 16 + 8 bebidas) y menú del día (sept. 2026). Sin chipirones ni tataky (no salen en la carta impresa). Sin alérgenos (no hay en ninguna carta).
+     CONFIRMAR CON EL CLIENTE: todos los precios (TheFork tiene los chuletones a 39/49 € y los dados a 18 €). -->
+<section class="hs-hoja sec-carta" id="carta" aria-labelledby="t-carta">
+  <div class="deco" aria-hidden="true">
+    <span class="palabra-fondo" data-px="140" style="top:2%;right:-4%" data-t="compartir"></span>
+    <svg class="motivo" data-py="-200" style="left:2%;top:40%;width:120px"><use href="#anillo"/></svg>
+    <svg class="motivo motivo-cor" data-py="-320" style="right:4%;top:72%;width:34px"><use href="#corazon"/></svg>
+  </div>
+  <div class="wrap">
+    <!-- carta-hoja con marco que se dibuja (marco-dibujado) + sello M16 en la esquina -->
+    <div class="carta-hoja md" data-marco>
+      <div class="sello" aria-hidden="true">
+        <svg class="anillo-txt" viewBox="0 0 160 160"><text><textPath href="#circ" textLength="402" lengthAdjust="spacing">Precios de la carta de octubre de 2026 · A confirmar · </textPath></text></svg>
+        <svg class="sello-cor"><use href="#corazon"/></svg>
+      </div>
+      <h2 class="tf" id="t-carta"><span>La cocina de Majús</span></h2>
+      <p class="tf-mano">para compartir</p>
+      <p class="sr">Precios de la carta impresa de octubre de 2026, pendientes de confirmar.</p>
+
+      <div class="pestanas-zona">
+        <div class="pestanas resalta" role="tablist" aria-label="Elige carta">
+          <span class="resalte" aria-hidden="true"></span>
+          <button class="r-item" type="button" role="tab" id="p-carta-tab" aria-controls="p-carta" aria-selected="true" tabindex="0">La carta</button>
+          <button class="r-item" type="button" role="tab" id="p-menu-tab" aria-controls="p-menu" aria-selected="false" tabindex="-1">Menú del día</button>
+          <button class="r-item" type="button" role="tab" id="p-desayunos-tab" aria-controls="p-desayunos" aria-selected="false" tabindex="-1">Desayunos</button>
+        </div>
+      </div>
+      <p class="pestana-nota" data-pestana-nota hidden>Te enseñamos la que se sirve ahora.</p>
+
+      <div class="paneles">
+        <!-- ====== La carta (impresa, oct. 2026) ====== -->
+        <div class="panel" role="tabpanel" id="p-carta" aria-labelledby="p-carta-tab" tabindex="0">
+          <div class="carta-cols">
+            <div class="carta-sec">
+              <h3 class="tf tf-h3"><span>Para empezar a compartir</span></h3>
+              <ul class="platos grupo">
+                <li class="plato"><span class="nombre">Ensaladilla rusa con mayonesa de siracha y langostinos panko</span><span class="puntos" aria-hidden="true"></span><span class="precio">8,50&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Burrata fresca con tartar de tomate rosa y pesto verde</span><span class="puntos" aria-hidden="true"></span><span class="precio">10,50&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Tomate rosa con ventresca y vinagreta de aceite de oliva y soja</span><span class="puntos" aria-hidden="true"></span><span class="precio">12,50&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Ensalada con pollo crujiente, parmesano y salsa César</span><span class="puntos" aria-hidden="true"></span><span class="precio">8,50&nbsp;€</span></li>
+              </ul>
+            </div>
+            <div class="carta-sec">
+              <h3 class="tf tf-h3"><span>Compartir es vivir</span></h3>
+              <ul class="platos grupo">
+                <li class="plato"><span class="nombre">Bravas Majús</span><span class="puntos" aria-hidden="true"></span><span class="precio">7,50&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Tus croquetas de jamón ibérico</span><span class="puntos" aria-hidden="true"></span><span class="precio">9,50&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Torreznos de Parla con cremoso de revolconas</span><span class="puntos" aria-hidden="true"></span><span class="precio">10,50&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Crujientes de pollo marinado Majús con sweet chilli sauce</span><span class="puntos" aria-hidden="true"></span><span class="precio">10,50&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Tomates verdes fritos con queso de cabra y mermelada de tomate</span><span class="puntos" aria-hidden="true"></span><span class="precio">12&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Huevos rotos con jamón ibérico tradicionales</span><span class="puntos" aria-hidden="true"></span><span class="precio">12,50&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Huevos rotos con atún y aguacate</span><span class="puntos" aria-hidden="true"></span><span class="precio">12,50&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Huevos rotos de patata y boniatos con parmesano y trufa</span><span class="puntos" aria-hidden="true"></span><span class="precio">12,50&nbsp;€</span></li>
+              </ul>
+            </div>
+            <div class="carta-sec">
+              <h3 class="tf tf-h3"><span>Ahora un momento para ti</span></h3>
+              <ul class="platos grupo">
+                <li class="plato"><span class="nombre">Smash burger de ternera abulense con queso cheddar y bacon ahumado</span><span class="puntos" aria-hidden="true"></span><span class="precio">12,50&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Entrecot de ternera avileña con pimientos de Padrón y chimichurri</span><span class="puntos" aria-hidden="true"></span><span class="precio">19,00&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Entrecot de vaca madurada con pimientos de Padrón y chimichurri</span><span class="puntos" aria-hidden="true"></span><span class="precio">24,00&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Chuletón de ternera para dos personas de Ávila, con patatas y pimientos de Padrón, ensalada</span><span class="puntos" aria-hidden="true"></span><span class="precio">45&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Chuletón de vaca madurada con patatas y pimientos de Padrón, ensalada</span><span class="puntos" aria-hidden="true"></span><span class="precio">55&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Dados de solomillo de ternera con setas y trufa</span><span class="puntos" aria-hidden="true"></span><span class="precio">21,00&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Pulpo a la sal ahumada y aceite de pimentón</span><span class="puntos" aria-hidden="true"></span><span class="precio">25,00&nbsp;€</span></li>
+              </ul>
+            </div>
+            <div class="carta-sec">
+              <h3 class="tf tf-h3"><span>Para terminar compartiendo</span></h3>
+              <ul class="platos grupo">
+                <li class="plato"><span class="nombre">Tarta de queso Majús</span><span class="puntos" aria-hidden="true"></span><span class="precio">4,90&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Brownie de chocolate y nueces con helado de vainilla</span><span class="puntos" aria-hidden="true"></span><span class="precio">4,90&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Tarta de zanahoria</span><span class="puntos" aria-hidden="true"></span><span class="precio">4,90&nbsp;€</span></li>
+              </ul>
+            </div>
+          </div>
+          <p class="panel-nota">Precios de la carta impresa de octubre de 2026.</p>
+        </div>
+
+        <!-- ====== Menú del día (fotos del propietario, sept. 2026) ======
+             CONFIRMAR CON EL CLIENTE: qué días se sirve (solo hay ejemplos de miércoles y viernes de 2025) y si sigue a 13,90 €. -->
+        <div class="panel" role="tabpanel" id="p-menu" aria-labelledby="p-menu-tab" tabindex="0" hidden>
+          <div class="menu-dia">
+            <h3 class="tf tf-h3"><span>Menú del día</span></h3>
+            <p class="menu-precio">13,90&nbsp;€</p>
+            <p class="menu-incluye">Primero, segundo, postre o café y bebida.</p>
+            <p class="menu-mano">cambia cada día</p>
+            <p class="menu-txt">Pregúntanos el de hoy: <a href="tel:+34624041303">624 04 13 03</a>. Algunos segundos llevan suplemento.</p>
+            <p class="panel-nota">Precio de los menús publicados por el restaurante en septiembre de 2026.</p>
+          </div>
+        </div>
+
+        <!-- ====== Desayunos (Instagram del local, 17-09-2026) ======
+             CONFIRMAR CON EL CLIENTE: horario (8:30 a 12:00); la primera línea sale dos veces en su carta (2,40 y 2,70 €): aquí va una vez, a 2,40 €;
+             la tostada con tomate, bacon y huevo frito se llama en su carta "la favorita de Javi" (no se pone un nombre de persona sin permiso). -->
+        <div class="panel" role="tabpanel" id="p-desayunos" aria-labelledby="p-desayunos-tab" tabindex="0" hidden>
+          <div class="des-cab">
+            <figure class="des-foto">
+              <span class="marco-foto"><img src="img/carta-desayuno-480.webp" srcset="img/carta-desayuno-480.webp 480w, img/carta-desayuno-960.webp 960w" sizes="(min-width:900px) 380px, 86vw" width="960" height="714" loading="lazy" decoding="async" alt="Tostadas de pan de pueblo con tomate, aguacate y jamón en un plato de loza con dibujos azules"></span>
+              <figcaption>Foto de un cliente en Google Maps, junio de 2026.</figcaption>
+            </figure>
+            <div>
+              <h3 class="tf tf-h3"><span>Desayunos</span></h3>
+              <p class="des-horas">De 8:30 a 12:00</p>
+              <p class="des-txt">Todos con café o té.</p>
+            </div>
+          </div>
+          <div class="carta-cols">
+            <div class="carta-sec">
+              <h4 class="des-tit">Café o té con…</h4>
+              <ul class="platos grupo">
+                <li class="plato"><span class="nombre">Tostada con tomate clásica o mantequilla y mermelada</span><span class="puntos" aria-hidden="true"></span><span class="precio">2,40&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Tostada con tomate y aguacate</span><span class="puntos" aria-hidden="true"></span><span class="precio">4,40&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Tostada ibérica con tomate y jamón de cebo</span><span class="puntos" aria-hidden="true"></span><span class="precio">4,40&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Tostada con tomate y atún</span><span class="puntos" aria-hidden="true"></span><span class="precio">4,40&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Tostada con tomate, jamón dulce y queso gratinado</span><span class="puntos" aria-hidden="true"></span><span class="precio">4,10&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Queso de crema y mermelada</span><span class="puntos" aria-hidden="true"></span><span class="precio">4,40&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Queso de crema y aguacate</span><span class="puntos" aria-hidden="true"></span><span class="precio">5,40&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Queso crema y salmón</span><span class="puntos" aria-hidden="true"></span><span class="precio">7,10&nbsp;€</span></li>
+              </ul>
+            </div>
+            <div class="carta-sec">
+              <h4 class="des-tit des-tit-vacio" aria-hidden="true">&nbsp;</h4>
+              <ul class="platos grupo">
+                <li class="plato"><span class="nombre">Tostada ibérica con aguacate</span><span class="puntos" aria-hidden="true"></span><span class="precio">5,40&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Salmón, aguacate y tomate</span><span class="puntos" aria-hidden="true"></span><span class="precio">7,20&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Tostada con tomate, bacon y huevo frito</span><span class="puntos" aria-hidden="true"></span><span class="precio">4,70&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Con tomate, bacon y huevo revuelto</span><span class="puntos" aria-hidden="true"></span><span class="precio">4,90&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Sándwich mixto</span><span class="puntos" aria-hidden="true"></span><span class="precio">4,10&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Sándwich vegetal</span><span class="puntos" aria-hidden="true"></span><span class="precio">4,90&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Pincho de tortilla al momento</span><span class="puntos" aria-hidden="true"></span><span class="precio">4,40&nbsp;€</span></li>
+                <li class="plato"><span class="nombre">Tortilla francesa</span><span class="puntos" aria-hidden="true"></span><span class="precio">4,40&nbsp;€</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="bebidas">
+            <h4 class="des-tit">Bebidas</h4>
+            <ul class="platos platos-bebidas grupo">
+              <li class="plato"><span class="nombre">Café</span><span class="puntos" aria-hidden="true"></span><span class="precio">1,70&nbsp;€</span></li>
+              <li class="plato"><span class="nombre">Té</span><span class="puntos" aria-hidden="true"></span><span class="precio">1,60&nbsp;€</span></li>
+              <li class="plato"><span class="nombre">Leche</span><span class="puntos" aria-hidden="true"></span><span class="precio">1,60&nbsp;€</span></li>
+              <li class="plato"><span class="nombre">Chocolate</span><span class="puntos" aria-hidden="true"></span><span class="precio">2,20&nbsp;€</span></li>
+              <li class="plato"><span class="nombre">Cola Cao</span><span class="puntos" aria-hidden="true"></span><span class="precio">1,70&nbsp;€</span></li>
+              <li class="plato"><span class="nombre">Bombón</span><span class="puntos" aria-hidden="true"></span><span class="precio">2,20&nbsp;€</span></li>
+              <li class="plato"><span class="nombre">Zumo natural</span><span class="puntos" aria-hidden="true"></span><span class="precio">3,00&nbsp;€</span></li>
+              <li class="plato"><span class="nombre">Zumo envasado</span><span class="puntos" aria-hidden="true"></span><span class="precio">2,50&nbsp;€</span></li>
+            </ul>
+          </div>
+          <p class="panel-nota">Precios de la carta de desayunos publicada por el restaurante en septiembre de 2026.</p>
+        </div>
+      </div>
+
+      <div class="carta-pie">
+        <p class="cor-filetes" aria-hidden="true"><svg><use href="#corazon"/></svg></p>
+        <p><strong>¿Alergias o intolerancias? Pregúntanos antes de pedir.</strong></p>
+        <p>Reservas: <a href="tel:+34624041303">624 04 13 03</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OPINIONES (M14: frase que se enciende + cinco reseñas reales de 5 estrellas) ============ -->
+<!-- Reseñas de Google Maps leídas el 2026-10-22, literales (fragmentos). Fechas aproximadas a partir de "hace X semanas". Sin nombres de camareros ni de quien las escribió (sin su permiso). -->
+<section class="sec sec-noche opiniones" id="opiniones" aria-labelledby="t-opiniones">
+  <div class="deco" aria-hidden="true">
+    <div class="fondo-vivo fv-baldosa-propia " style="--fv-giro:12deg; --fv-baldosa:360px; --fv-desfase:80px 140px; --fv-papel:.05; --fv-luz:#D9C38A; --fv-fuerza:15%; --fv-x:50%; --fv-y:22%; --fv-ancho:90vw; --fv-alto:60vh"><span class="fv-papel"></span><span class="fv-brillo"></span></div>
+    <span class="palabra-fondo" data-px="150" style="top:52%;right:-3%" data-t="Parla"></span>
+    <svg class="motivo motivo-cor" data-py="-260" style="left:6%;top:70%;width:34px"><use href="#corazon"/></svg>
+  </div>
+  <div class="lee">
+    <div class="lee-fijo wrap">
+      <h2 class="tf" id="t-opiniones"><span>Lo que dicen de Majús</span></h2>
+      <blockquote class="lee-cita">
+        <p class="lee-texto">«Será nuestro restaurante de referencia en <em>Parla</em>»</p>
+        <footer>Clienta en Google, octubre de 2026</footer>
+      </blockquote>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="nota-google"><span class="estrella" aria-hidden="true">★</span> 4,7 <span>· 503 reseñas en Google</span></p>
+    <div class="resenas grupo">
+      <figure class="resena reveal"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Ideal para comer, cenar unas raciones o desayunar… Hay A/A y también tiene terraza.»</p></blockquote><figcaption><b>Cliente en Google</b> · octubre de 2026</figcaption></figure>
+      <figure class="resena reveal"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Un sitio fantástico tanto para comer el menú del día entre semana como para cenar el fin de semana. Algunos sábados tienen magia, muy buen ambiente.»</p></blockquote><figcaption><b>Clienta en Google</b> · octubre de 2026</figcaption></figure>
+      <figure class="resena reveal"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Carne excepcional. Vaca madurada.»</p></blockquote><figcaption><b>Cliente en Google</b> · octubre de 2026</figcaption></figure>
+      <figure class="resena reveal"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Desayuno de 10.»</p></blockquote><figcaption><b>Clienta en Google</b> · septiembre de 2026</figcaption></figure>
+      <figure class="resena reveal"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Muy bonito el sitio, me encanta la columna que está decorada como un árbol!»</p></blockquote><figcaption><b>Clienta en Google</b> · septiembre de 2026</figcaption></figure>
+    </div>
+    <div class="opiniones-pie">
+      <p>Selección de reseñas de 5 estrellas de Google Maps, de septiembre y octubre de 2026 (fragmentos; fechas aproximadas, según lo que indica Google). Nota y número de reseñas a 22 de octubre de 2026.</p>
+      <a class="enlace" href="https://www.google.com/maps/search/?api=1&amp;query=Maj%C3%BAs%20Restaurante%2C%20C.%20Alfonso%20X%20el%20Sabio%2038%2C%20Parla" target="_blank" rel="noopener">Ver las 503 reseñas en Google<svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MAGIA DE CERCA ("magia" en neón coral, se enciende una vez) ============ -->
+<!-- CONFIRMAR CON EL CLIENTE: cada cuánto hay magia ("algunos sábados" lo dice una reseña; su flyer anunciaba un sábado de septiembre de 2026). Sin fechas ni nombre del mago. -->
+<section class="sec sec-noche magia" id="magia" aria-labelledby="t-magia">
+  <div class="deco" aria-hidden="true">
+    <div class="fondo-vivo fv-baldosa-propia " style="--fv-giro:-18deg; --fv-baldosa:260px; --fv-desfase:40px 20px; --fv-papel:.06; --fv-luz:#FF7A76; --fv-fuerza:16%; --fv-x:50%; --fv-y:50%; --fv-ancho:80vw; --fv-alto:70vh"><span class="fv-papel"></span><span class="fv-brillo"></span></div>
+    <span class="palabra-fondo" data-px="-140" style="bottom:4%;left:-3%" data-t="magia"></span>
+    <svg class="motivo" data-py="-220" style="right:8%;top:60%;width:96px"><use href="#anillo"/></svg>
+  </div>
+  <div class="wrap estrecho magia-in">
+    <h2 class="tf" id="t-magia"><span>Magia de cerca</span></h2>
+    <p class="magia-frase">Algunos sábados hay <span class="mg" data-mg data-t="magia">magia</span> de cerca.</p>
+    <p class="magia-txt">Pregúntanos cuándo es la próxima y reserva tu mesa.</p>
+    <!-- CONFIRMAR CON EL CLIENTE: WhatsApp de reservas 624 041 303 (flyer de Instagram, sept. 2026). -->
+    <a class="btn btn-linea iman" href="https://wa.me/34624041303?text=Hola%2C%20%C2%BFcu%C3%A1ndo%20es%20la%20pr%C3%B3xima%20noche%20de%20magia%3F" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Preguntar por WhatsApp</a>
+  </div>
+</section>
+
+<!-- ============ HORARIO (descanso) ============ -->
+<!-- CONFIRMAR CON EL CLIENTE: horario de Google Maps sin confirmar por el propietario; en ago. 2026 el local respondió que cerraba el martes. -->
+<section class="sec sec-noche horario" id="horario" aria-labelledby="t-horario" data-estado="">
+  <div class="deco" aria-hidden="true">
+    <div class="fondo-vivo fv-baldosa-propia fv-sin-brillo" style="--fv-giro:4deg; --fv-baldosa:420px; --fv-desfase:150px 0; --fv-papel:.05"><span class="fv-papel"></span><span class="fv-brillo"></span></div>
+    <span class="palabra-fondo" data-px="130" style="bottom:4%;right:-3%" data-t="abierto"></span>
+    <svg class="motivo motivo-cor" data-py="-280" style="right:8%;top:12%;width:34px"><use href="#corazon"/></svg>
+  </div>
+  <div class="wrap horario-rejilla">
+    <div class="horario-texto">
+      <h2 class="tf tf-izq" id="t-horario"><span>Horario</span></h2>
+      <p class="horario-grande">Del desayuno a la cena.</p>
+      <p class="horario-aviso">Horario publicado en Google; confírmalo por teléfono antes de venir.</p>
+      <p class="horario-estado" role="status"><svg class="nm" viewBox="0 0 2044 513" aria-hidden="true" data-estado=""><use class="nm-apagado" href="#manos"/><g class="nm-luz"><use class="nm-halo" href="#manos" filter="url(#nm-difuso)"/><use class="nm-tubo" href="#manos"/></g></svg><span data-horario-estado>Consulta el horario de abajo.</span></p>
+      <!-- CONFIRMAR CON EL CLIENTE: desayunos de 8:30 a 12:00 (carta de Instagram, 17-09-2026) y franjas de reserva (flyer de Instagram, sept. 2026). -->
+      <p class="horario-des">Desayunos de 8:30 a 12:00. Reservas para comer de 12:00 a 16:00 y para cenar de 20:00 a 00:00.</p>
+      <p class="horario-nota">Los festivos pueden cambiar: si dudas, llama al <a href="tel:+34624041303">624 04 13 03</a>.</p>
+    </div>
+    <ol class="dias" id="dias" aria-label="Horario de la semana">
+      <li class="dia" data-dia="1"><span class="dia-nombre">Lunes</span><span class="dia-horas">8:00 a 00:00</span></li>
+      <li class="dia" data-dia="2"><span class="dia-nombre">Martes</span><span class="dia-horas">8:00 a 00:00</span></li>
+      <li class="dia" data-dia="3"><span class="dia-nombre">Miércoles</span><span class="dia-horas">Cerrado</span></li>
+      <li class="dia" data-dia="4"><span class="dia-nombre">Jueves</span><span class="dia-horas">8:00 a 00:00</span></li>
+      <li class="dia" data-dia="5"><span class="dia-nombre">Viernes</span><span class="dia-horas">8:00 a 00:00</span></li>
+      <li class="dia" data-dia="6"><span class="dia-nombre">Sábado</span><span class="dia-horas">9:00 a 00:00</span></li>
+      <li class="dia" data-dia="0"><span class="dia-nombre">Domingo</span><span class="dia-horas">9:00 a 00:00</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ DÓNDE ESTAMOS (placa blanca, como el cartel de su fachada; el logo de línea se dibuja una vez: M83 .tn-dia) ============ -->
+<!-- CONFIRMAR CON EL CLIENTE: aparcamiento y accesibilidad salen de la ficha de Google Maps. -->
+<section class="sec sec-placa" id="ubicacion" aria-labelledby="t-ubicacion">
+  <div class="deco" aria-hidden="true">
+    <span class="palabra-fondo" data-px="-140" style="bottom:3%;left:-3%" data-t="Alfonso X"></span>
+  </div>
+  <div class="wrap">
+    <div class="placa-logo">
+      <div class="tn tn-dia" id="logo-dia" data-trazo="al-ver" style="--tn-ar:2044/513; --tn-tinta:#181818; --tn-color-union:#A5302F; --tn-trazo:9px">
+        <svg viewBox="0 0 2044 513" aria-hidden="true" focusable="false">
+          <path data-tn="a" d="M38.1 474.4C38.8 471 39 462.9 42.4 453.9C45.7 444.9 47.1 438.8 58.3 420.5C69.5 402.1 95.3 363.8 109.4 343.7C123.6 323.7 134.7 313.3 143 300.1C151.3 287 156.9 274.6 159.5 265C162 255.5 160.1 250.3 158.3 242.7C156.5 235.2 151.9 225.7 148.6 219.7C145.3 213.8 145.2 213.5 138.6 207C132 200.6 115.7 187.9 109 180.8C102.3 173.7 100.5 170.3 98.4 164.5C96.2 158.7 95 151.8 95.9 146.1C96.7 140.5 97.5 136.9 103.3 130.4C109.1 123.8 122.9 112.1 130.6 106.7C138.4 101.3 138.7 100.4 150 98C161.3 95.6 186.2 92.2 198.5 92.3C210.8 92.4 216.1 94.4 223.7 98.8C231.2 103.2 238.2 110.3 243.7 118.7C249.3 127.1 254.3 140 256.9 149.2C259.5 158.4 259.9 161.6 259.3 173.7C258.7 185.8 254.2 213.9 253.2 221.9M164.9 265.5C168.5 267 179.9 273.6 186.4 274.4C192.9 275.2 196.9 274 203.8 270.5C210.7 267 221.2 259.7 227.7 253.3C234.2 246.8 240.3 235.3 242.8 231.8M177.1 262.7C183.3 257.8 205 239.2 214.7 233.4C224.5 227.6 228.2 228.9 235.3 228C242.5 227 249.7 226.4 257.5 227.7C265.3 229 264 227.7 282.1 235.5C300.1 243.3 336.4 264.8 365.9 274.6C395.4 284.3 427.8 284.1 458.8 294.1C489.8 304.1 534.4 327.6 552.1 334.5C569.7 341.5 560.9 336.4 564.8 335.9C568.7 335.4 572.8 333.4 575.4 331.6C578 329.7 579.5 327.2 580.6 324.7C581.6 322.2 583.4 321.2 581.7 316.4C580 311.5 578.3 304.6 570.5 295.5C562.7 286.5 552.9 274.6 534.9 262.2C516.9 249.8 479.3 237.9 462.5 221C445.7 204.1 445.9 180 433.9 160.8C422 141.5 397.9 114.8 390.7 105.6M372.3 98.6C369.4 96.3 364 89 355 85C345.9 81 331.7 76.1 318.3 74.6C304.9 73.2 283.3 75.4 274.5 76.3C265.8 77.3 268 78.6 265.9 80.4C263.9 82.1 262.5 84.8 262.3 87C262.1 89.2 263.1 92.1 264.7 93.7C266.3 95.4 256.6 95.2 272.1 97.1C287.6 99 327.9 106.9 357.7 105.3C387.5 103.6 430.9 90.3 450.9 87.3C471 84.2 469.3 85.6 478 86.9C486.8 88.2 491.5 89.1 503.6 95.1C515.8 101.1 534.3 116.6 551.1 123C567.9 129.3 595.8 131.5 604.7 133.2M453.4 185.1C454.9 184.4 459.1 181.7 462.3 181.1C465.6 180.5 469.3 180.6 472.8 181.4C476.3 182.3 480.3 184 483.5 186.1C486.7 188.3 490.6 192.8 492 194.2M459.2 204C463.8 203.5 470.9 205.2 486.9 201.4C502.9 197.5 537.2 183.8 555.2 180.8C573.3 177.8 583.9 181.1 595.2 183.4C606.6 185.7 618.7 192.7 623.4 194.5M504.8 200.4C514.7 209.6 548.7 242.2 564.3 255.4C579.9 268.7 586.5 268 598.5 279.7C610.5 291.4 628 317.5 636.3 325.7C644.7 334 644.9 330.3 648.6 329.3C652.3 328.3 656.7 321.3 658.4 319.7M566.5 185.6C566.2 187.7 563.8 194.2 564.6 198.6C565.4 202.9 560.9 199.6 571.4 211.5C581.8 223.4 615.9 258.7 627.4 270C638.8 281.2 637.9 277.3 640 278.8M581.2 186.7C583 189.6 582.5 192.6 591.9 204.1C601.3 215.6 628.3 241.9 637.6 255.6C646.8 269.2 643.4 276 647.4 285.8C651.4 295.6 654.9 306 661.6 314.3C668.3 322.6 683.2 332 687.6 335.6M671.6 167.4C675.7 171 686.1 176.8 695.8 189C705.5 201.2 724.3 230.5 729.7 240.6C735 250.8 729.5 248 727.8 249.8C726.1 251.6 728 256 719.4 251.2C710.8 246.4 684.9 226.6 676.4 221.2C667.8 215.8 670.1 218.7 667.9 218.9C665.7 219.1 663.7 219.9 663.3 222.6C662.9 225.4 658.4 219.5 665.7 235.4C673.1 251.3 700.4 304.2 707.4 317.9"/>
+          <path data-tn="b" d="M2005.3 73.3C1999.2 75.3 1988.4 80.7 1968.5 85.3C1948.6 89.9 1902.7 96.7 1885.9 100.6C1869 104.5 1873.1 105.2 1867.1 108.5C1861.2 111.9 1867.2 102.8 1850.1 120.6C1833.1 138.4 1796.6 185.2 1764.7 215.1C1732.8 245.1 1677.5 284.2 1658.6 300.4C1639.7 316.6 1653.2 308 1651.4 312.4C1649.6 316.8 1647.9 316.3 1647.7 326.8C1647.5 337.4 1650.2 366.6 1650.1 375.9C1650 385.1 1648.5 380.9 1647 382.6C1645.4 384.3 1643.6 385.8 1640.8 386.1C1638.1 386.3 1633.5 386 1630.3 384.2C1627.1 382.4 1625.2 380.5 1621.5 375.3C1617.7 370.1 1611.1 360.4 1607.6 353.1C1604.2 345.7 1602 343.6 1600.7 331.3C1599.4 319 1598.7 292.7 1600.1 279.2C1601.5 265.7 1607.5 255 1609 250.1M1766.6 37.5C1768.2 39 1773.7 42.4 1776.3 46.7C1778.8 51 1781.9 53.3 1781.9 63.2C1782 73.1 1780.9 91.4 1776.6 106.1C1772.3 120.9 1765.9 135.4 1755.9 151.7C1745.9 167.9 1726.6 192.4 1716.6 203.9C1706.5 215.3 1702.7 215.7 1695.5 220.4C1688.3 225 1684.2 228.8 1673.2 231.8C1662.3 234.9 1640.2 236.5 1630.1 238.6C1620 240.7 1618.8 243.2 1612.7 244.4C1606.5 245.6 1599.2 244.5 1593.1 245.8C1586.9 247.1 1583.8 247.8 1575.7 252.1C1567.6 256.4 1553.4 264.1 1544.5 271.7C1535.6 279.3 1531.2 290.2 1522.5 297.4C1513.8 304.6 1499.5 311.4 1492.1 315.2C1484.8 318.9 1480.6 319.1 1478.3 319.9M1644.4 54.6C1642.8 55.9 1641.2 55.1 1634.9 62.4C1628.5 69.7 1618.6 88.7 1606.1 98.6C1593.6 108.5 1573.1 113.6 1559.7 121.7C1546.4 129.9 1531.5 143.1 1525.8 147.4M1618.1 249.3C1619.1 251 1623.1 255.9 1624 259.5C1625 263.1 1625.1 266.3 1623.8 271C1622.4 275.7 1619 283.1 1615.9 287.5C1612.9 291.9 1607.3 295.8 1605.5 297.5M1594.7 332.8C1593 335.8 1586.3 340.3 1584.5 351C1582.6 361.7 1584.4 386.4 1583.5 396.8C1582.6 407.3 1580.7 409.9 1578.9 413.7C1577.1 417.4 1575.1 418.3 1572.9 419.5C1570.8 420.6 1570.2 422.4 1566 420.5C1561.9 418.5 1551.1 410.1 1548.1 408M1483.6 251.4C1481.8 248.5 1477.1 237.6 1472.7 233.9C1468.4 230.2 1470.8 227.6 1457.6 229C1444.5 230.5 1414.5 236.4 1393.7 242.5C1372.8 248.7 1345.7 262.6 1332.7 266C1319.7 269.5 1319.2 264.4 1315.7 263.1C1312.2 261.8 1312.4 260.3 1311.6 258.3C1310.9 256.3 1310.5 253.7 1311.2 251.1C1311.9 248.6 1311.4 247.8 1315.9 243C1320.4 238.2 1330.8 227.5 1338.3 222.1C1345.8 216.7 1332.7 221.7 1361 210.4C1389.3 199.2 1481.2 164.3 1507.9 154.6C1534.6 145 1516.4 152.3 1521.2 152.7C1526 153.2 1531.9 154.5 1536.7 157.3C1541.6 160.1 1548.1 164.2 1550.3 169.5C1552.4 174.8 1551.3 183.5 1549.7 189C1548 194.4 1551.3 190.6 1540.6 202.2C1529.8 213.8 1495.7 246.6 1485.3 258.6C1475 270.6 1481 265.1 1478.4 274.2C1475.9 283.2 1471.5 306.4 1470.1 312.9M1534.6 291.3C1536.5 292.6 1543.5 295.3 1545.8 299C1548.2 302.8 1550.1 300.8 1548.8 313.6C1547.6 326.3 1539.4 354.9 1538.3 375.6C1537.1 396.2 1542.1 425.3 1541.9 437.3C1541.7 449.3 1539.6 445.2 1537.1 447.5C1534.7 449.8 1530.5 451.3 1527.2 451.2C1523.8 451 1520.2 449.4 1517 446.6C1513.8 443.7 1512.2 443.2 1508 433.9C1503.7 424.6 1496.7 408.2 1491.4 390.7C1486.1 373.3 1482.2 343.3 1476.1 329.1C1469.9 315 1457.5 312.3 1454.4 305.8C1451.3 299.3 1454.4 294.4 1457.3 290.1C1460.2 285.7 1469.2 281.4 1471.5 279.6M1533.7 368.3C1532.3 365.3 1526.9 361.2 1525.3 350.4C1523.7 339.6 1524.3 311.2 1524.2 303.3"/>
+          <path data-tn="union" d="M706 342C699.3 330 679 293.7 666 270C653 246.3 636.8 220.8 628 200C619.2 179.2 613.8 157.7 613 145C612.2 132.3 618.3 127.5 623 124C627.7 120.5 633 119.3 641 124C649 128.7 660.2 141.5 671 152C681.8 162.5 695.7 175.7 706 187C716.3 198.3 727.2 210.8 733 220C738.8 229.2 740 229.5 741 242C742 254.5 739.5 273.7 739 295C738.5 316.3 737.3 350 738 370C738.7 390 740.5 407.5 743 415C745.5 422.5 749.7 420.8 753 415C756.3 409.2 756.7 404.2 763 380C769.3 355.8 781.3 308 791 270C800.7 232 814 171.7 821 152C828 132.3 829.7 144.8 833 152C836.3 159.2 838.7 172 841 195C843.3 218 844.5 272.5 847 290C849.5 307.5 852.8 300.8 856 300C859.2 299.2 860.2 300 866 285C871.8 270 883.2 236.3 891 210C898.8 183.7 908 142 913 127C918 112 919.3 117.8 921 120C922.7 122.2 922.8 123.3 923 140C923.2 156.7 922 190 922 220C922 250 922.2 290.8 923 320C923.8 349.2 924 379.2 927 395C930 410.8 934.5 412.2 941 415C947.5 417.8 958.2 416.5 966 412C973.8 407.5 981.2 396.2 988 388C994.8 379.8 1004.7 373.5 1007 363C1009.3 352.5 1004.7 335.8 1002 325C999.3 314.2 996.2 303 991 298C985.8 293 978 294.3 971 295C964 295.7 953.7 297.7 949 302C944.3 306.3 941.8 315 943 321C944.2 327 950.5 335.5 956 338C961.5 340.5 969.2 338 976 336C982.8 334 991.7 322 997 326C1002.3 330 1003.2 355.5 1008 360C1012.8 364.5 1020 356.7 1026 353C1032 349.3 1038.7 345.2 1044 338C1049.3 330.8 1054.7 321.3 1058 310C1061.3 298.7 1062.5 268.3 1064 270C1065.5 271.7 1065.8 301.7 1067 320C1068.2 338.3 1070.3 362.5 1071 380C1071.7 397.5 1072 411.7 1071 425C1070 438.3 1069.2 452.8 1065 460C1060.8 467.2 1051.7 470.2 1046 468C1040.3 465.8 1032.7 456.7 1031 447C1029.3 437.3 1031.8 420.2 1036 410C1040.2 399.8 1049.5 392.8 1056 386C1062.5 379.2 1069.2 379.2 1075 369C1080.8 358.8 1085.8 342.3 1091 325C1096.2 307.7 1102.3 267.8 1106 265C1109.7 262.2 1110 298.8 1113 308C1116 317.2 1120 318.7 1124 320C1128 321.3 1133.8 325.5 1137 316C1140.2 306.5 1141.2 265.7 1143 263C1144.8 260.3 1145 287.2 1148 300C1151 312.8 1156.3 332.5 1161 340C1165.7 347.5 1171.8 348 1176 345C1180.2 342 1183.7 332.5 1186 322C1188.3 311.5 1189.3 288.7 1190 282M1148 227C1151.7 222 1166.3 202 1170 197M1190 282C1193.8 277.7 1206.5 260.3 1213 256C1219.5 251.7 1226.3 250.3 1229 256C1231.7 261.7 1231.7 277.7 1229 290C1226.3 302.3 1216 317.5 1213 330C1210 342.5 1210 355.8 1211 365C1212 374.2 1215.3 382.5 1219 385C1222.7 387.5 1229.8 387.5 1233 380C1236.2 372.5 1235.5 356.7 1238 340C1240.5 323.3 1243.3 298.7 1248 280C1252.7 261.3 1256.3 238.8 1266 228C1275.7 217.2 1300.8 212.2 1306 215C1311.2 217.8 1297.3 235.8 1297 245C1296.7 254.2 1300 264.2 1304 270C1308 275.8 1312.2 272.2 1321 280C1329.8 287.8 1351 310.8 1357 317"/>
+        </svg>
+      </div>
+    </div>
+    <h2 class="tf" id="t-ubicacion"><span>Dónde estamos</span></h2>
+    <p class="tf-mano tf-mano-rojo">te esperamos</p>
+    <div class="ubicacion-rejilla">
+      <div class="datos reveal">
+        <p class="direccion">C. Alfonso X el Sabio, 38<br>28982 Parla (Madrid)</p>
+        <dl class="datos-lista">
+          <div><dt>Terraza</dt><dd>Delante del local, en la esquina.</dd></div>
+          <div><dt>Aparcamiento</dt><dd>En la calle; según Google, gratuito, aunque a veces cuesta encontrar sitio.</dd></div>
+          <div><dt>Teléfono</dt><dd><a href="tel:+34624041303">624 04 13 03</a></dd></div>
+          <div><dt>WhatsApp</dt><dd><a href="https://wa.me/34624041303" target="_blank" rel="noopener">624 041 303</a> o <a href="https://wa.me/34613494346" target="_blank" rel="noopener">613 494 346</a></dd></div>
+          <div><dt>Acceso</dt><dd>Según Google, con acceso y mesas para silla de ruedas.</dd></div>
+        </dl>
+        <div class="datos-botones">
+          <a class="btn btn-tinta iman" href="https://www.google.com/maps/dir/?api=1&amp;destination=Maj%C3%BAs%20Restaurante%2C%20C.%20Alfonso%20X%20el%20Sabio%2038%2C%2028982%20Parla" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Cómo llegar con Google Maps</a>
+          <a class="btn btn-linea-tinta" href="https://maps.apple.com/?q=Maj%C3%BAs%20Restaurante&amp;address=C.%20Alfonso%20X%20el%20Sabio%2038%2C%2028982%20Parla" target="_blank" rel="noopener">Apple Maps</a>
+        </div>
+      </div>
+      <div class="ubicacion-der">
+        <figure class="fachada-foto">
+          <span class="marco-foto marco-claro"><img src="img/fachada-600.webp" srcset="img/fachada-600.webp 600w, img/fachada-870.webp 870w" sizes="(max-width:900px) 90vw, 560px" width="870" height="370" loading="lazy" decoding="async" alt="Cartel blanco de la fachada con las dos manos dibujadas a línea y el nombre Majús en rojo, bajo un techo de lamas y entre setos"></span>
+          <figcaption>Busca este cartel blanco sobre la terraza.</figcaption>
+        </figure>
+        <div class="mapa" id="mapa">
+          <div class="mapa-fachada" id="mapaFachada">
+            <span class="mapa-pin" aria-hidden="true"></span>
+            <p>El mapa es de Google Maps: solo se carga si lo pides, y entonces Google puede guardar sus propias cookies.</p>
+            <button class="btn btn-tinta" type="button" id="btnMapa">Ver el mapa aquí</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PREGUNTAS ============ -->
+<section class="sec sec-noche" id="preguntas" aria-labelledby="t-preguntas">
+  <div class="deco" aria-hidden="true">
+    <div class="fondo-vivo fv-baldosa-propia fv-sin-brillo" style="--fv-giro:-24deg; --fv-baldosa:340px; --fv-desfase:0 120px; --fv-papel:.05"><span class="fv-papel"></span><span class="fv-brillo"></span></div>
+    <span class="palabra-fondo" data-px="-140" style="top:4%;right:-5%" data-t="pregunta"></span>
+    <svg class="motivo" data-py="-200" style="left:3%;top:62%;width:100px"><use href="#anillo"/></svg>
+  </div>
+  <div class="wrap faq-rejilla">
+    <div>
+      <h2 class="tf tf-izq" id="t-preguntas"><span>Preguntas</span></h2>
+      <p class="faq-intro">¿No está aquí lo que buscas? Llama al <a href="tel:+34624041303">624 04 13 03</a>.</p>
+    </div>
+    <div class="faq">
+      <!-- CONFIRMAR CON EL CLIENTE: WhatsApp de reservas. -->
+      <details name="faq" class="reveal"><summary>¿Hay que reservar?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>Te lo recomendamos, sobre todo para comer y cenar. Llama al <a href="tel:+34624041303">624 04 13 03</a> o escríbenos por WhatsApp diciendo cuántos sois, el día y la hora.</p></div></details>
+      <details name="faq" class="reveal"><summary>¿Tenéis terraza?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>Sí, delante del local, en la esquina de la calle Alfonso X el Sabio. Si la quieres, dínoslo al reservar.</p></div></details>
+      <!-- CONFIRMAR CON EL CLIENTE: horario de desayunos. -->
+      <details name="faq" class="reveal"><summary>¿A qué hora son los desayunos?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>De 8:30 a 12:00. Según el horario publicado en Google, entre semana abrimos a las 8:00 y los sábados y domingos, a las 9:00.</p></div></details>
+      <!-- CONFIRMAR CON EL CLIENTE: días del menú del día. -->
+      <details name="faq" class="reveal"><summary>¿Hay menú del día?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>Sí: 13,90&nbsp;€, con primero, segundo, postre o café y bebida. Cambia cada día; pregúntanos el de hoy.</p></div></details>
+      <!-- CONFIRMAR CON EL CLIENTE: perros y tronas (atributos de Google Maps). -->
+      <details name="faq" class="reveal"><summary>¿Se puede ir con perro?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>Según Google, se admiten perros dentro y en la terraza. Pregúntanos al reservar y te lo confirmamos.</p></div></details>
+      <details name="faq" class="reveal"><summary>¿Y con niños?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>Según Google, hay tronas. Dínoslo al reservar y te preparamos la mesa.</p></div></details>
+      <details name="faq" class="reveal"><summary>¿Y si tengo alergias?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>Pregúntanos antes de pedir y te decimos qué lleva cada plato.</p></div></details>
+      <!-- CONFIRMAR CON EL CLIENTE: grupos y celebraciones. -->
+      <details name="faq" class="reveal"><summary>¿Podemos ir en grupo o celebrar algo?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>Sí. Llámanos con tiempo, dinos cuántos sois y lo preparamos: <a href="tel:+34624041303">624 04 13 03</a>.</p></div></details>
+      <!-- CONFIRMAR CON EL CLIENTE: si quieren seguir en TheFork. -->
+      <details name="faq" class="reveal"><summary>¿Estáis en TheFork?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>Sí, también puedes reservar en <a href="https://www.thefork.es/restaurante/majus-r869215" target="_blank" rel="noopener">TheFork</a>.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LLAMADA FINAL: "Tu mesa te espera", como su flyer. Las dos manos doradas se acercan al corazón. ============ -->
+<!-- CONFIRMAR CON EL CLIENTE: los dos WhatsApp de reservas (flyer de Instagram, sept. 2026) y TheFork. -->
+<section class="sec sec-noche final" id="reservar" aria-labelledby="t-final">
+  <div class="deco" aria-hidden="true">
+    <div class="fondo-vivo fv-baldosa-propia " style="--fv-giro:8deg; --fv-baldosa:300px; --fv-desfase:100px 60px; --fv-papel:.06; --fv-luz:#D9C38A; --fv-fuerza:16%; --fv-x:50%; --fv-y:30%; --fv-ancho:80vw; --fv-alto:60vh"><span class="fv-papel"></span><span class="fv-brillo"></span></div>
+    <span class="palabra-fondo" data-px="160" style="bottom:2%;left:50%;margin-left:-2.4em" data-t="Parla"></span>
+  </div>
+  <div class="wrap final-in">
+    <svg class="final-manos" viewBox="0 0 2044 513" aria-hidden="true" focusable="false">
+      <g class="fm-i"><path d="M38.1 474.4C38.8 471 39 462.9 42.4 453.9C45.7 444.9 47.1 438.8 58.3 420.5C69.5 402.1 95.3 363.8 109.4 343.7C123.6 323.7 134.7 313.3 143 300.1C151.3 287 156.9 274.6 159.5 265C162 255.5 160.1 250.3 158.3 242.7C156.5 235.2 151.9 225.7 148.6 219.7C145.3 213.8 145.2 213.5 138.6 207C132 200.6 115.7 187.9 109 180.8C102.3 173.7 100.5 170.3 98.4 164.5C96.2 158.7 95 151.8 95.9 146.1C96.7 140.5 97.5 136.9 103.3 130.4C109.1 123.8 122.9 112.1 130.6 106.7C138.4 101.3 138.7 100.4 150 98C161.3 95.6 186.2 92.2 198.5 92.3C210.8 92.4 216.1 94.4 223.7 98.8C231.2 103.2 238.2 110.3 243.7 118.7C249.3 127.1 254.3 140 256.9 149.2C259.5 158.4 259.9 161.6 259.3 173.7C258.7 185.8 254.2 213.9 253.2 221.9M164.9 265.5C168.5 267 179.9 273.6 186.4 274.4C192.9 275.2 196.9 274 203.8 270.5C210.7 267 221.2 259.7 227.7 253.3C234.2 246.8 240.3 235.3 242.8 231.8M177.1 262.7C183.3 257.8 205 239.2 214.7 233.4C224.5 227.6 228.2 228.9 235.3 228C242.5 227 249.7 226.4 257.5 227.7C265.3 229 264 227.7 282.1 235.5C300.1 243.3 336.4 264.8 365.9 274.6C395.4 284.3 427.8 284.1 458.8 294.1C489.8 304.1 534.4 327.6 552.1 334.5C569.7 341.5 560.9 336.4 564.8 335.9C568.7 335.4 572.8 333.4 575.4 331.6C578 329.7 579.5 327.2 580.6 324.7C581.6 322.2 583.4 321.2 581.7 316.4C580 311.5 578.3 304.6 570.5 295.5C562.7 286.5 552.9 274.6 534.9 262.2C516.9 249.8 479.3 237.9 462.5 221C445.7 204.1 445.9 180 433.9 160.8C422 141.5 397.9 114.8 390.7 105.6M372.3 98.6C369.4 96.3 364 89 355 85C345.9 81 331.7 76.1 318.3 74.6C304.9 73.2 283.3 75.4 274.5 76.3C265.8 77.3 268 78.6 265.9 80.4C263.9 82.1 262.5 84.8 262.3 87C262.1 89.2 263.1 92.1 264.7 93.7C266.3 95.4 256.6 95.2 272.1 97.1C287.6 99 327.9 106.9 357.7 105.3C387.5 103.6 430.9 90.3 450.9 87.3C471 84.2 469.3 85.6 478 86.9C486.8 88.2 491.5 89.1 503.6 95.1C515.8 101.1 534.3 116.6 551.1 123C567.9 129.3 595.8 131.5 604.7 133.2M453.4 185.1C454.9 184.4 459.1 181.7 462.3 181.1C465.6 180.5 469.3 180.6 472.8 181.4C476.3 182.3 480.3 184 483.5 186.1C486.7 188.3 490.6 192.8 492 194.2M459.2 204C463.8 203.5 470.9 205.2 486.9 201.4C502.9 197.5 537.2 183.8 555.2 180.8C573.3 177.8 583.9 181.1 595.2 183.4C606.6 185.7 618.7 192.7 623.4 194.5M504.8 200.4C514.7 209.6 548.7 242.2 564.3 255.4C579.9 268.7 586.5 268 598.5 279.7C610.5 291.4 628 317.5 636.3 325.7C644.7 334 644.9 330.3 648.6 329.3C652.3 328.3 656.7 321.3 658.4 319.7M566.5 185.6C566.2 187.7 563.8 194.2 564.6 198.6C565.4 202.9 560.9 199.6 571.4 211.5C581.8 223.4 615.9 258.7 627.4 270C638.8 281.2 637.9 277.3 640 278.8M581.2 186.7C583 189.6 582.5 192.6 591.9 204.1C601.3 215.6 628.3 241.9 637.6 255.6C646.8 269.2 643.4 276 647.4 285.8C651.4 295.6 654.9 306 661.6 314.3C668.3 322.6 683.2 332 687.6 335.6M671.6 167.4C675.7 171 686.1 176.8 695.8 189C705.5 201.2 724.3 230.5 729.7 240.6C735 250.8 729.5 248 727.8 249.8C726.1 251.6 728 256 719.4 251.2C710.8 246.4 684.9 226.6 676.4 221.2C667.8 215.8 670.1 218.7 667.9 218.9C665.7 219.1 663.7 219.9 663.3 222.6C662.9 225.4 658.4 219.5 665.7 235.4C673.1 251.3 700.4 304.2 707.4 317.9"/></g>
+      <g class="fm-d"><path d="M2005.3 73.3C1999.2 75.3 1988.4 80.7 1968.5 85.3C1948.6 89.9 1902.7 96.7 1885.9 100.6C1869 104.5 1873.1 105.2 1867.1 108.5C1861.2 111.9 1867.2 102.8 1850.1 120.6C1833.1 138.4 1796.6 185.2 1764.7 215.1C1732.8 245.1 1677.5 284.2 1658.6 300.4C1639.7 316.6 1653.2 308 1651.4 312.4C1649.6 316.8 1647.9 316.3 1647.7 326.8C1647.5 337.4 1650.2 366.6 1650.1 375.9C1650 385.1 1648.5 380.9 1647 382.6C1645.4 384.3 1643.6 385.8 1640.8 386.1C1638.1 386.3 1633.5 386 1630.3 384.2C1627.1 382.4 1625.2 380.5 1621.5 375.3C1617.7 370.1 1611.1 360.4 1607.6 353.1C1604.2 345.7 1602 343.6 1600.7 331.3C1599.4 319 1598.7 292.7 1600.1 279.2C1601.5 265.7 1607.5 255 1609 250.1M1766.6 37.5C1768.2 39 1773.7 42.4 1776.3 46.7C1778.8 51 1781.9 53.3 1781.9 63.2C1782 73.1 1780.9 91.4 1776.6 106.1C1772.3 120.9 1765.9 135.4 1755.9 151.7C1745.9 167.9 1726.6 192.4 1716.6 203.9C1706.5 215.3 1702.7 215.7 1695.5 220.4C1688.3 225 1684.2 228.8 1673.2 231.8C1662.3 234.9 1640.2 236.5 1630.1 238.6C1620 240.7 1618.8 243.2 1612.7 244.4C1606.5 245.6 1599.2 244.5 1593.1 245.8C1586.9 247.1 1583.8 247.8 1575.7 252.1C1567.6 256.4 1553.4 264.1 1544.5 271.7C1535.6 279.3 1531.2 290.2 1522.5 297.4C1513.8 304.6 1499.5 311.4 1492.1 315.2C1484.8 318.9 1480.6 319.1 1478.3 319.9M1644.4 54.6C1642.8 55.9 1641.2 55.1 1634.9 62.4C1628.5 69.7 1618.6 88.7 1606.1 98.6C1593.6 108.5 1573.1 113.6 1559.7 121.7C1546.4 129.9 1531.5 143.1 1525.8 147.4M1618.1 249.3C1619.1 251 1623.1 255.9 1624 259.5C1625 263.1 1625.1 266.3 1623.8 271C1622.4 275.7 1619 283.1 1615.9 287.5C1612.9 291.9 1607.3 295.8 1605.5 297.5M1594.7 332.8C1593 335.8 1586.3 340.3 1584.5 351C1582.6 361.7 1584.4 386.4 1583.5 396.8C1582.6 407.3 1580.7 409.9 1578.9 413.7C1577.1 417.4 1575.1 418.3 1572.9 419.5C1570.8 420.6 1570.2 422.4 1566 420.5C1561.9 418.5 1551.1 410.1 1548.1 408M1483.6 251.4C1481.8 248.5 1477.1 237.6 1472.7 233.9C1468.4 230.2 1470.8 227.6 1457.6 229C1444.5 230.5 1414.5 236.4 1393.7 242.5C1372.8 248.7 1345.7 262.6 1332.7 266C1319.7 269.5 1319.2 264.4 1315.7 263.1C1312.2 261.8 1312.4 260.3 1311.6 258.3C1310.9 256.3 1310.5 253.7 1311.2 251.1C1311.9 248.6 1311.4 247.8 1315.9 243C1320.4 238.2 1330.8 227.5 1338.3 222.1C1345.8 216.7 1332.7 221.7 1361 210.4C1389.3 199.2 1481.2 164.3 1507.9 154.6C1534.6 145 1516.4 152.3 1521.2 152.7C1526 153.2 1531.9 154.5 1536.7 157.3C1541.6 160.1 1548.1 164.2 1550.3 169.5C1552.4 174.8 1551.3 183.5 1549.7 189C1548 194.4 1551.3 190.6 1540.6 202.2C1529.8 213.8 1495.7 246.6 1485.3 258.6C1475 270.6 1481 265.1 1478.4 274.2C1475.9 283.2 1471.5 306.4 1470.1 312.9M1534.6 291.3C1536.5 292.6 1543.5 295.3 1545.8 299C1548.2 302.8 1550.1 300.8 1548.8 313.6C1547.6 326.3 1539.4 354.9 1538.3 375.6C1537.1 396.2 1542.1 425.3 1541.9 437.3C1541.7 449.3 1539.6 445.2 1537.1 447.5C1534.7 449.8 1530.5 451.3 1527.2 451.2C1523.8 451 1520.2 449.4 1517 446.6C1513.8 443.7 1512.2 443.2 1508 433.9C1503.7 424.6 1496.7 408.2 1491.4 390.7C1486.1 373.3 1482.2 343.3 1476.1 329.1C1469.9 315 1457.5 312.3 1454.4 305.8C1451.3 299.3 1454.4 294.4 1457.3 290.1C1460.2 285.7 1469.2 281.4 1471.5 279.6M1533.7 368.3C1532.3 365.3 1526.9 361.2 1525.3 350.4C1523.7 339.6 1524.3 311.2 1524.2 303.3"/></g>
+      <use class="fm-cor" href="#corazon" x="968" y="200" width="112" height="100"/>
+    </svg>
+    <h2 class="final-tit" id="t-final">Tu mesa te espera</h2>
+    <p class="final-mano">¡Nos encantará recibirte!</p>
+    <div class="final-acciones">
+      <a class="btn btn-oro btn-grande" href="tel:+34624041303"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar al 624 04 13 03</a>
+    </div>
+    <!-- Reserva por WhatsApp con el mensaje ya escrito (reserva-cita v2): el enlace funciona siempre; los desplegables solo rellenan el texto. -->
+    <div class="reserva-wa" data-reserva-wa role="group" aria-labelledby="rw-t">
+      <p class="rw-t" id="rw-t">O por WhatsApp, con el mensaje ya escrito:</p>
+      <div class="rw-campos">
+        <label>Personas<select data-rw="personas"><option value="">¿Cuántos?</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option value="más de 8">Más de 8</option></select></label>
+        <label>Día<select data-rw="dia"><option value="">¿Qué día?</option></select></label>
+        <label>Hora<select data-rw="hora"><option value="">¿A qué hora?</option><optgroup label="Comida"><option>13:00</option><option>13:30</option><option>14:00</option><option>14:30</option><option>15:00</option><option>15:30</option></optgroup><optgroup label="Cena"><option>20:00</option><option>20:30</option><option>21:00</option><option>21:30</option><option>22:00</option><option>22:30</option></optgroup></select></label>
+      </div>
+      <a class="btn btn-linea iman" data-rw-enlace href="https://wa.me/34624041303?text=Hola%2C%20quiero%20reservar%20mesa." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Escribir por WhatsApp</a>
+      <p class="rw-nota">Se abre WhatsApp con el mensaje; la mesa queda reservada cuando te contestemos. También al <a href="https://wa.me/34613494346" target="_blank" rel="noopener">613 494 346</a> o en <a href="https://www.thefork.es/restaurante/majus-r869215" target="_blank" rel="noopener">TheFork</a>.</p>
+    </div>
+    <p class="final-hoy" data-final-hoy>Reservas: 624 04 13 03</p>
+  </div>
+</section>
+</main>
+
+<footer class="pie">
+  <div class="wrap pie-rejilla">
+    <div>
+      <svg class="pie-logo" role="img" aria-label="Majús"><use href="#logo-circ"/></svg>
+      <p>C. Alfonso X el Sabio, 38 · 28982 Parla (Madrid)</p>
+      <p>Teléfono: <a href="tel:+34624041303">624 04 13 03</a></p>
+      <p>WhatsApp: <a href="https://wa.me/34624041303" target="_blank" rel="noopener">624 041 303</a> y <a href="https://wa.me/34613494346" target="_blank" rel="noopener">613 494 346</a></p>
+      <p><a href="https://www.instagram.com/majusparlarestaurante/" target="_blank" rel="noopener">@majusparlarestaurante</a></p>
+    </div>
+    <div>
+      <p class="pie-tit">Horario <span class="pie-fuente">(según Google)</span></p>
+      <p>Lunes, martes, jueves y viernes, de 8:00 a 00:00<br>Sábado y domingo, de 9:00 a 00:00<br>Miércoles, cerrado</p>
+    </div>
+    <nav aria-label="Secciones">
+      <p class="pie-tit">En esta web</p>
+      <ul class="pie-enlaces">
+        <li><a href="#favoritos">Favoritos</a></li><li><a href="#carta">Carta</a></li><li><a href="#opiniones">Opiniones</a></li><li><a href="#magia">Magia</a></li>
+        <li><a href="#horario">Horario</a></li><li><a href="#ubicacion">Dónde estamos</a></li><li><a href="#preguntas">Preguntas</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap pie-legal">
+    <p><a href="privacy.html">Privacidad</a> · <a href="terms.html">Aviso legal</a></p>
+    <p>Web de <a href="https://degaldodesigns.es" target="_blank" rel="noopener">Degaldo Designs</a></p>
+  </div>
+  <!-- Fotos de la demo: de la ficha pública de Google Maps (subidas por clientes y por el propietario) y del Instagram del local. Sustituirlas por fotos propias antes de publicar. -->
+</footer>
+
+<div class="barra-movil" id="barraMovil" role="region" aria-label="Llamar o escribir por WhatsApp">
+  <a class="btn btn-oro" href="tel:+34624041303"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar</a>
+  <a class="btn btn-linea" href="https://wa.me/34624041303?text=Hola%2C%20quiero%20reservar%20mesa." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+</div>
+
+<script src="js/sitio.js" defer></script>
+</body>
+</html>

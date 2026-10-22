@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Página no encontrada · Majús Restaurante</title>
+<meta name="description" content="Esta página no existe. Vuelve a la web de Majús Restaurante, en Parla.">
+<!-- Demo en degaldodesigns.es/majus/: rutas absolutas (/majus/...) para que fuentes, favicon y enlaces funcionen desde cualquier subruta. Al pasar a dominio propio, quitar el prefijo /majus. (GitHub Pages solo sirve el 404.html de la raíz del sitio: este se ve con enlace directo.) -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#181818">
+<link rel="icon" href="/majus/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/majus/fonts/cinzel-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/majus/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/majus/fonts/great-vibes-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Cinzel';font-display:swap;font-weight:400 600;src:url(/majus/fonts/cinzel-latin.woff2) format('woff2')}
+@font-face{font-family:'Great Vibes';font-display:swap;font-weight:400;src:url(/majus/fonts/great-vibes-latin.woff2) format('woff2')}
+@font-face{font-family:'Montserrat';font-display:swap;font-weight:400 600;src:url(/majus/fonts/montserrat-latin.woff2) format('woff2')}
+:root{--noche:#181818; --superficie:#232120; --texto:#F5F1EA; --suave:#BDB6AA; --oro:#D9C38A; --oro-claro:#E8D9A6; --coral:#FF7A76; --linea:rgba(245,241,234,.14); --ease-out:cubic-bezier(0.23,1,0.32,1)}
+*{box-sizing:border-box}
+body{margin:0; background:var(--noche); color:var(--texto); font:400 1.0625rem/1.7 'Montserrat',system-ui,sans-serif}
+.barra{display:flex; align-items:center; justify-content:center; padding:16px 24px; border-bottom:1px solid rgba(217,195,138,.3)}
+.barra a{font:600 1.1rem/1 'Cinzel',Georgia,serif; letter-spacing:.3em; color:var(--oro); text-decoration:none; padding-left:.3em}
+.wrap{max-width:740px; margin:0 auto; padding:56px 24px 96px}
+h1{font:400 clamp(2rem,6vw,3rem)/1.16 'Cinzel',Georgia,serif; letter-spacing:.04em; margin:0 0 6px}
+.fecha{color:var(--suave); font-size:.9375rem; margin:0 0 36px}
+h2{font:400 2rem/1.2 'Great Vibes',cursive; margin:36px 0 8px; color:var(--oro)}
+p,li{color:var(--suave)}
+strong{color:var(--texto)}
+a{color:var(--texto)}
+.volver{display:inline-flex; margin-top:40px; padding:14px 24px; border-radius:10px; background:var(--oro); color:var(--noche); font-weight:600; text-decoration:none; transition:background-color .16s var(--ease-out), transform .12s var(--ease-out)}
+.volver:active{transform:scale(.97)}
+:focus-visible{outline:3px solid var(--oro); outline-offset:3px}
+@media (hover:hover) and (pointer:fine){ .volver:hover{background:var(--oro-claro)} }
+@media (prefers-reduced-motion:reduce){ .volver{transition:none} }
+</style>
+<style>
+main{min-height:70vh; display:flex; flex-direction:column; justify-content:center}
+.volver{align-self:flex-start}
+.codigo{font:400 clamp(6rem,22vw,10rem)/1 'Great Vibes',cursive; color:var(--coral); margin:0; text-shadow:0 0 .2em rgba(255,92,87,.55)}
+</style>
+</head>
+<body>
+<header class="barra"><a href="/majus/">Majús</a></header>
+<main class="wrap">
+  <p class="codigo">404</p>
+  <h1>Este neón está apagado</h1>
+  <p>Esta página no existe: puede que el enlace esté mal o que se haya movido. Si quieres reservar, llama al <a href="tel:+34624041303">624 04 13 03</a>.</p>
+  <a class="volver" href="/majus/">Volver al inicio</a>
+</main>
+</body>
+</html>
