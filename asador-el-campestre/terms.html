@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Aviso legal · Asador El Campestre</title>
+<meta name="description" content="Aviso legal de la web de Asador El Campestre, asador de pollos en Illescas.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#FF7012">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/lilita-one-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Lilita One';font-display:swap;font-weight:400;src:url(fonts/lilita-one-latin.woff2) format('woff2')}
+@font-face{font-family:'Work Sans';font-display:swap;font-weight:400 700;src:url(fonts/work-sans-latin.woff2) format('woff2')}
+:root{--naranja:#FF7012; --naranja-claro:#ff8a3d; --negro:#141110; --texto:#F6F1EA; --muted:#B9AFA9; --linea:rgba(246,241,234,.14); --ease-out:cubic-bezier(0.23,1,0.32,1)}
+*{box-sizing:border-box}
+body{margin:0; background:var(--negro); color:var(--texto); font:400 1.0625rem/1.7 'Work Sans',system-ui,sans-serif}
+.barra{background:var(--naranja); padding:16px 24px}
+.barra a{font:400 1.6rem/1 'Lilita One','Arial Black',sans-serif; color:var(--negro); text-decoration:none}
+.wrap{max-width:740px; margin:0 auto; padding:56px 24px 96px}
+h1{font:400 clamp(2.2rem,6vw,3.2rem)/1.14 'Lilita One','Arial Black',sans-serif; margin:0 0 6px}
+.fecha{color:var(--muted); font-size:.9375rem; margin:0 0 36px}
+h2{font:400 1.5rem/1.2 'Lilita One','Arial Black',sans-serif; margin:36px 0 10px; color:var(--naranja)}
+p,li{color:var(--muted)}
+strong{color:var(--texto)}
+a{color:var(--texto)}
+.volver{display:inline-flex; margin-top:40px; padding:14px 22px; background:var(--naranja); color:var(--negro); font-weight:700; text-decoration:none; transition:background-color .16s var(--ease-out), transform .12s var(--ease-out)}
+.volver:active{transform:scale(.97)}
+:focus-visible{outline:3px solid #FFE45C; outline-offset:3px}
+@media (hover:hover) and (pointer:fine){ .volver:hover{background:var(--naranja-claro)} }
+@media (prefers-reduced-motion:reduce){ .volver{transition:none} }
+</style>
+</head>
+<body>
+<header class="barra"><a href="index.html">El Campestre</a></header>
+<main class="wrap">
+  <h1>Aviso legal</h1>
+  <p class="fecha">Última actualización: 22 de octubre de 2026</p>
+  <!-- CONFIRMAR CON EL CLIENTE: razón social, NIF y datos registrales (LSSI, art. 10). Plantilla orientativa: revisar con su gestoría antes de publicar. -->
+  <h2>1. Quién está detrás de esta web</h2>
+  <p>Asador El Campestre, C. Donantes de Sangre, 3, 45200 Illescas (Toledo). Teléfono: 925 91 82 39. Los datos fiscales (razón social y NIF) se añadirán al publicar la web.</p>
+  <h2>2. Precios y carta</h2>
+  <p>Los precios que aparecen son los de la carta de agosto de 2026 y pueden cambiar. Los precios y la disponibilidad que valen son los del local el día del encargo. Pregúntanos por los alérgenos al encargar.</p>
+  <h2>3. Fotos y textos</h2>
+  <p>Las fotos de esta versión de la web son provisionales: las publicaron clientes del asador en Google Maps y se sustituirán por fotos propias antes de publicarla. Las opiniones son reseñas públicas de Google Maps, citadas con el nombre con que las firmó cada persona.</p>
+  <h2>4. Enlaces a otras webs</h2>
+  <p>La web enlaza a Google Maps, Apple Maps y Facebook. No somos responsables del contenido de esas webs.</p>
+  <a class="volver" href="index.html">Volver al inicio</a>
+</main>
+</body>
+</html>
