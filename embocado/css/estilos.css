@@ -39,12 +39,19 @@ main{overflow-x:clip}
 
 /* ---------- Titular de sección: frase manuscrita + palabra en píldora (titular-manuscrita-pildora) ---------- */
 .tmp{display:flex; flex-direction:column; align-items:flex-start; gap:0; font-weight:400}
-.tmp-mano{font:400 clamp(1.75rem,1.2rem + 2.4vw,3.4rem)/1.2 var(--f-mano); padding:0 .12em .06em 0}
+.tmp-mano{font:400 var(--tm, clamp(1.75rem,1.2rem + 2.4vw,3.4rem))/1.2 var(--f-mano); padding:0 .12em .06em 0}
 .tmp-pildora{position:relative; overflow:hidden; display:inline-block; margin:-.08em 0 0 clamp(1.4rem,5vw,4.5rem); padding:.14em .62em .16em;
-  border-radius:999px; background:var(--miel); color:var(--noche); font:600 clamp(1.45rem,1rem + 2vw,2.7rem)/1.14 var(--f);
+  border-radius:999px; background:var(--miel); color:var(--noche); font:600 var(--tp, clamp(1.45rem,1rem + 2vw,2.7rem))/1.14 var(--f);
   text-transform:uppercase; letter-spacing:.08em}
 .tmp-pildora::after{content:""; position:absolute; inset:0; background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%); translate:-120% 0; pointer-events:none}
 .tmp-solo .tmp-pildora{margin-left:0}
+/* titular-manuscrita-pildora v2: .tmp-ajusta escala la frase y la píldora con el ancho del PROPIO titular (container queries),
+   para que una palabra larga ("CARNÍVOROS", "PREGUNTÁIS") nunca se salga de su columna. Solo en titulares con ancho
+   definido (bloque o elemento de rejilla), no en un elemento flex que se ajusta a su contenido. */
+.tmp-ajusta{container-type:inline-size; min-width:0}
+.tmp-ajusta .tmp-pildora{font-size:min(var(--tp, clamp(1.45rem,1rem + 2vw,2.7rem)), var(--tmp-cqi, 8.4cqi)); margin-left:min(clamp(1.4rem,5vw,4.5rem), 9cqi); max-width:100%}
+.tmp-ajusta.tmp-solo .tmp-pildora{margin-left:0}
+.tmp-ajusta .tmp-mano{font-size:max(1.75rem, min(var(--tm, clamp(1.75rem,1.2rem + 2.4vw,3.4rem)), 16cqi))}
 .js [data-tmp] .tmp-mano{clip-path:inset(-30% 100% -45% -10%)}
 .js [data-tmp] .tmp-pildora{opacity:0; scale:.96}
 .js [data-tmp].escrito .tmp-mano{clip-path:inset(-30% -10% -45% -10%); transition:clip-path .42s var(--ease-out) var(--tmp-d,0ms)}
@@ -118,6 +125,8 @@ html:has(#menu:popover-open){overflow:hidden}
 .sec > .wrap{position:relative; z-index:var(--z-contenido)}
 .deco{position:absolute; inset:0; z-index:var(--z-deco); overflow:hidden; pointer-events:none}
 .palabra-fondo{position:absolute; font:600 clamp(5.5rem,15vw,14rem)/.9 var(--f); white-space:nowrap; color:transparent; -webkit-text-stroke:2px rgba(224,181,102,.13); user-select:none; letter-spacing:-.01em}
+/* El texto va en data-t y se pinta como contenido generado: es decoración (aria-hidden) y así axe no lo mide */
+.palabra-fondo[data-t]::before,.pie-in[data-t]::before{content:attr(data-t)}
 .sec-papel .palabra-fondo{-webkit-text-stroke-color:rgba(138,100,32,.13)}
 .hoja{position:absolute; height:auto; aspect-ratio:1; color:var(--miel); opacity:.07; rotate:var(--r,0deg)}
 .hoja-p{aspect-ratio:2}
@@ -194,14 +203,14 @@ html:has(#menu:popover-open){overflow:hidden}
 }
 /* ================= FIN luces-sobre-foto ================= */
 
-/* ================= COMPONENTE: fondo-hojas-vivo (M82) · copiado de la librería ================= */
+/* ================= COMPONENTE: fondo-hojas-vivo (M82 v2) · copiado de la librería ================= */
 .fondo-vivo{ --fv-color:#E0B566; --fv-papel:.06; --fv-baldosa:320px; --fv-luz:#FFB65C; --fv-hojas:.08;
   position:absolute; inset:0; z-index:0; overflow:hidden; pointer-events:none }
-.fv-papel{ position:absolute; inset:-80px 0; background:var(--fv-color); opacity:var(--fv-papel);
-  -webkit-mask:url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320"%3E%3Cg fill="none" stroke="%23000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"%3E%3Cg transform="translate(14 20) rotate(-24 50 56)"%3E%3Cpath d="M50 104C30 100 6 86 4 58C2 32 20 10 46 8L50 18 54 8C80 10 98 32 96 58C94 86 70 100 50 104Z"/%3E%3Cpath d="M50 18V100M8 40 30 47M5 62 28 62M13 83 33 76M92 40 70 47M95 62 72 62M87 83 67 76"/%3E%3C/g%3E%3Cg transform="translate(150 118) rotate(32)"%3E%3Cpath d="M4 66C40 40 80 18 136 8"/%3E%3Cpath d="M22 54 12 34M34 46 26 22M48 38 44 12M62 31 62 6M76 25 80 4M92 19 98 4M108 14 116 2M22 54 40 62M34 46 54 54M48 38 70 44M62 31 84 36M76 25 98 28M92 19 112 20M108 14 126 14"/%3E%3C/g%3E%3Cg transform="translate(214 4) rotate(30 50 56) scale(.68)"%3E%3Cpath d="M50 104C30 100 6 86 4 58C2 32 20 10 46 8L50 18 54 8C80 10 98 32 96 58C94 86 70 100 50 104Z"/%3E%3Cpath d="M50 18V100M8 40 30 47M5 62 28 62M13 83 33 76M92 40 70 47M95 62 72 62M87 83 67 76"/%3E%3C/g%3E%3Cg transform="translate(-30 228) rotate(-12)"%3E%3Cpath d="M4 66C40 40 80 18 136 8"/%3E%3Cpath d="M22 54 12 34M34 46 26 22M48 38 44 12M62 31 62 6M76 25 80 4M92 19 98 4M108 14 116 2M22 54 40 62M34 46 54 54M48 38 70 44M62 31 84 36M76 25 98 28M92 19 112 20M108 14 126 14"/%3E%3C/g%3E%3Cg transform="translate(196 206) rotate(-150 50 56) scale(.86)"%3E%3Cpath d="M50 104C30 100 6 86 4 58C2 32 20 10 46 8L50 18 54 8C80 10 98 32 96 58C94 86 70 100 50 104Z"/%3E%3Cpath d="M50 18V100M8 40 30 47M5 62 28 62M13 83 33 76M92 40 70 47M95 62 72 62M87 83 67 76"/%3E%3C/g%3E%3Cg transform="translate(290 228) rotate(-12)"%3E%3Cpath d="M4 66C40 40 80 18 136 8"/%3E%3Cpath d="M22 54 12 34M34 46 26 22M48 38 44 12M62 31 62 6M76 25 80 4M92 19 98 4M108 14 116 2M22 54 40 62M34 46 54 54M48 38 70 44M62 31 84 36M76 25 98 28M92 19 112 20M108 14 126 14"/%3E%3C/g%3E%3Cg transform="translate(-170 118) rotate(32)"%3E%3Cpath d="M4 66C40 40 80 18 136 8"/%3E%3Cpath d="M22 54 12 34M34 46 26 22M48 38 44 12M62 31 62 6M76 25 80 4M92 19 98 4M108 14 116 2M22 54 40 62M34 46 54 54M48 38 70 44M62 31 84 36M76 25 98 28M92 19 112 20M108 14 126 14"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E') 0 0 / var(--fv-baldosa) var(--fv-baldosa) repeat;
-          mask:url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320"%3E%3Cg fill="none" stroke="%23000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"%3E%3Cg transform="translate(14 20) rotate(-24 50 56)"%3E%3Cpath d="M50 104C30 100 6 86 4 58C2 32 20 10 46 8L50 18 54 8C80 10 98 32 96 58C94 86 70 100 50 104Z"/%3E%3Cpath d="M50 18V100M8 40 30 47M5 62 28 62M13 83 33 76M92 40 70 47M95 62 72 62M87 83 67 76"/%3E%3C/g%3E%3Cg transform="translate(150 118) rotate(32)"%3E%3Cpath d="M4 66C40 40 80 18 136 8"/%3E%3Cpath d="M22 54 12 34M34 46 26 22M48 38 44 12M62 31 62 6M76 25 80 4M92 19 98 4M108 14 116 2M22 54 40 62M34 46 54 54M48 38 70 44M62 31 84 36M76 25 98 28M92 19 112 20M108 14 126 14"/%3E%3C/g%3E%3Cg transform="translate(214 4) rotate(30 50 56) scale(.68)"%3E%3Cpath d="M50 104C30 100 6 86 4 58C2 32 20 10 46 8L50 18 54 8C80 10 98 32 96 58C94 86 70 100 50 104Z"/%3E%3Cpath d="M50 18V100M8 40 30 47M5 62 28 62M13 83 33 76M92 40 70 47M95 62 72 62M87 83 67 76"/%3E%3C/g%3E%3Cg transform="translate(-30 228) rotate(-12)"%3E%3Cpath d="M4 66C40 40 80 18 136 8"/%3E%3Cpath d="M22 54 12 34M34 46 26 22M48 38 44 12M62 31 62 6M76 25 80 4M92 19 98 4M108 14 116 2M22 54 40 62M34 46 54 54M48 38 70 44M62 31 84 36M76 25 98 28M92 19 112 20M108 14 126 14"/%3E%3C/g%3E%3Cg transform="translate(196 206) rotate(-150 50 56) scale(.86)"%3E%3Cpath d="M50 104C30 100 6 86 4 58C2 32 20 10 46 8L50 18 54 8C80 10 98 32 96 58C94 86 70 100 50 104Z"/%3E%3Cpath d="M50 18V100M8 40 30 47M5 62 28 62M13 83 33 76M92 40 70 47M95 62 72 62M87 83 67 76"/%3E%3C/g%3E%3Cg transform="translate(290 228) rotate(-12)"%3E%3Cpath d="M4 66C40 40 80 18 136 8"/%3E%3Cpath d="M22 54 12 34M34 46 26 22M48 38 44 12M62 31 62 6M76 25 80 4M92 19 98 4M108 14 116 2M22 54 40 62M34 46 54 54M48 38 70 44M62 31 84 36M76 25 98 28M92 19 112 20M108 14 126 14"/%3E%3C/g%3E%3Cg transform="translate(-170 118) rotate(32)"%3E%3Cpath d="M4 66C40 40 80 18 136 8"/%3E%3Cpath d="M22 54 12 34M34 46 26 22M48 38 44 12M62 31 62 6M76 25 80 4M92 19 98 4M108 14 116 2M22 54 40 62M34 46 54 54M48 38 70 44M62 31 84 36M76 25 98 28M92 19 112 20M108 14 126 14"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E') 0 0 / var(--fv-baldosa) var(--fv-baldosa) repeat }
+.fv-papel{ position:absolute; inset:-80px 0; background:var(--fv-color); opacity:var(--fv-papel); rotate:var(--fv-giro, 0deg);
+  -webkit-mask:url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320"%3E%3Cg fill="none" stroke="%23000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"%3E%3Cg transform="translate(14 20) rotate(-24 50 56)"%3E%3Cpath d="M50 104C30 100 6 86 4 58C2 32 20 10 46 8L50 18 54 8C80 10 98 32 96 58C94 86 70 100 50 104Z"/%3E%3Cpath d="M50 18V100M8 40 30 47M5 62 28 62M13 83 33 76M92 40 70 47M95 62 72 62M87 83 67 76"/%3E%3C/g%3E%3Cg transform="translate(150 118) rotate(32)"%3E%3Cpath d="M4 66C40 40 80 18 136 8"/%3E%3Cpath d="M22 54 12 34M34 46 26 22M48 38 44 12M62 31 62 6M76 25 80 4M92 19 98 4M108 14 116 2M22 54 40 62M34 46 54 54M48 38 70 44M62 31 84 36M76 25 98 28M92 19 112 20M108 14 126 14"/%3E%3C/g%3E%3Cg transform="translate(214 4) rotate(30 50 56) scale(.68)"%3E%3Cpath d="M50 104C30 100 6 86 4 58C2 32 20 10 46 8L50 18 54 8C80 10 98 32 96 58C94 86 70 100 50 104Z"/%3E%3Cpath d="M50 18V100M8 40 30 47M5 62 28 62M13 83 33 76M92 40 70 47M95 62 72 62M87 83 67 76"/%3E%3C/g%3E%3Cg transform="translate(-30 228) rotate(-12)"%3E%3Cpath d="M4 66C40 40 80 18 136 8"/%3E%3Cpath d="M22 54 12 34M34 46 26 22M48 38 44 12M62 31 62 6M76 25 80 4M92 19 98 4M108 14 116 2M22 54 40 62M34 46 54 54M48 38 70 44M62 31 84 36M76 25 98 28M92 19 112 20M108 14 126 14"/%3E%3C/g%3E%3Cg transform="translate(196 206) rotate(-150 50 56) scale(.86)"%3E%3Cpath d="M50 104C30 100 6 86 4 58C2 32 20 10 46 8L50 18 54 8C80 10 98 32 96 58C94 86 70 100 50 104Z"/%3E%3Cpath d="M50 18V100M8 40 30 47M5 62 28 62M13 83 33 76M92 40 70 47M95 62 72 62M87 83 67 76"/%3E%3C/g%3E%3Cg transform="translate(290 228) rotate(-12)"%3E%3Cpath d="M4 66C40 40 80 18 136 8"/%3E%3Cpath d="M22 54 12 34M34 46 26 22M48 38 44 12M62 31 62 6M76 25 80 4M92 19 98 4M108 14 116 2M22 54 40 62M34 46 54 54M48 38 70 44M62 31 84 36M76 25 98 28M92 19 112 20M108 14 126 14"/%3E%3C/g%3E%3Cg transform="translate(-170 118) rotate(32)"%3E%3Cpath d="M4 66C40 40 80 18 136 8"/%3E%3Cpath d="M22 54 12 34M34 46 26 22M48 38 44 12M62 31 62 6M76 25 80 4M92 19 98 4M108 14 116 2M22 54 40 62M34 46 54 54M48 38 70 44M62 31 84 36M76 25 98 28M92 19 112 20M108 14 126 14"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E') var(--fv-desfase, 0 0) / var(--fv-baldosa) var(--fv-baldosa) repeat;
+          mask:url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320"%3E%3Cg fill="none" stroke="%23000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"%3E%3Cg transform="translate(14 20) rotate(-24 50 56)"%3E%3Cpath d="M50 104C30 100 6 86 4 58C2 32 20 10 46 8L50 18 54 8C80 10 98 32 96 58C94 86 70 100 50 104Z"/%3E%3Cpath d="M50 18V100M8 40 30 47M5 62 28 62M13 83 33 76M92 40 70 47M95 62 72 62M87 83 67 76"/%3E%3C/g%3E%3Cg transform="translate(150 118) rotate(32)"%3E%3Cpath d="M4 66C40 40 80 18 136 8"/%3E%3Cpath d="M22 54 12 34M34 46 26 22M48 38 44 12M62 31 62 6M76 25 80 4M92 19 98 4M108 14 116 2M22 54 40 62M34 46 54 54M48 38 70 44M62 31 84 36M76 25 98 28M92 19 112 20M108 14 126 14"/%3E%3C/g%3E%3Cg transform="translate(214 4) rotate(30 50 56) scale(.68)"%3E%3Cpath d="M50 104C30 100 6 86 4 58C2 32 20 10 46 8L50 18 54 8C80 10 98 32 96 58C94 86 70 100 50 104Z"/%3E%3Cpath d="M50 18V100M8 40 30 47M5 62 28 62M13 83 33 76M92 40 70 47M95 62 72 62M87 83 67 76"/%3E%3C/g%3E%3Cg transform="translate(-30 228) rotate(-12)"%3E%3Cpath d="M4 66C40 40 80 18 136 8"/%3E%3Cpath d="M22 54 12 34M34 46 26 22M48 38 44 12M62 31 62 6M76 25 80 4M92 19 98 4M108 14 116 2M22 54 40 62M34 46 54 54M48 38 70 44M62 31 84 36M76 25 98 28M92 19 112 20M108 14 126 14"/%3E%3C/g%3E%3Cg transform="translate(196 206) rotate(-150 50 56) scale(.86)"%3E%3Cpath d="M50 104C30 100 6 86 4 58C2 32 20 10 46 8L50 18 54 8C80 10 98 32 96 58C94 86 70 100 50 104Z"/%3E%3Cpath d="M50 18V100M8 40 30 47M5 62 28 62M13 83 33 76M92 40 70 47M95 62 72 62M87 83 67 76"/%3E%3C/g%3E%3Cg transform="translate(290 228) rotate(-12)"%3E%3Cpath d="M4 66C40 40 80 18 136 8"/%3E%3Cpath d="M22 54 12 34M34 46 26 22M48 38 44 12M62 31 62 6M76 25 80 4M92 19 98 4M108 14 116 2M22 54 40 62M34 46 54 54M48 38 70 44M62 31 84 36M76 25 98 28M92 19 112 20M108 14 126 14"/%3E%3C/g%3E%3Cg transform="translate(-170 118) rotate(32)"%3E%3Cpath d="M4 66C40 40 80 18 136 8"/%3E%3Cpath d="M22 54 12 34M34 46 26 22M48 38 44 12M62 31 62 6M76 25 80 4M92 19 98 4M108 14 116 2M22 54 40 62M34 46 54 54M48 38 70 44M62 31 84 36M76 25 98 28M92 19 112 20M108 14 126 14"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E') var(--fv-desfase, 0 0) / var(--fv-baldosa) var(--fv-baldosa) repeat }
 .fv-brillo{ position:absolute; left:var(--fv-x,70%); top:var(--fv-y,50%); width:var(--fv-ancho,60vw); height:var(--fv-alto,70vh); translate:-50% -50%;
-  background:radial-gradient(closest-side, color-mix(in srgb, var(--fv-luz) 30%, transparent), color-mix(in srgb, var(--fv-luz) 10%, transparent) 55%, transparent);
+  background:radial-gradient(closest-side, color-mix(in srgb, var(--fv-luz) var(--fv-fuerza, 30%), transparent), color-mix(in srgb, var(--fv-luz) calc(var(--fv-fuerza, 30%) / 3), transparent) 55%, transparent);
   opacity:.75; animation:fv-respira 9s var(--ease-in-out) infinite alternate }
 @supports not (color: color-mix(in srgb, red, red)){
   .fv-brillo{ background:radial-gradient(closest-side, rgba(255,182,92,.3), rgba(255,182,92,.1) 55%, transparent) }
@@ -209,13 +218,16 @@ html:has(#menu:popover-open){overflow:hidden}
 @keyframes fv-respira{ from{opacity:.55} to{opacity:.9} }
 .fv-hoja{ position:absolute; height:auto; aspect-ratio:100/108; color:var(--fv-color); opacity:var(--fv-hojas); rotate:var(--r,0deg) }
 .fondo-vivo:not(.en-pantalla) .fv-brillo{ animation-play-state:paused }
+.fondo-vivo[style*="--fv-giro"] .fv-papel{ inset:-35% }
+.fv-quieto .fv-brillo{ animation:none; opacity:.7 }
 @media (prefers-reduced-motion:reduce){ .fv-brillo{ animation:none } }
 /* ================= FIN fondo-hojas-vivo ================= */
 
-/* ================= COMPONENTE: marco-ventana (M58) · copiado de la librería ================= */
+/* ================= COMPONENTE: marco-ventana (M58 v1.1) · copiado de la librería ================= */
 .foto-ventana{ --forma:50% 50% 14px 14px / 38% 38% 14px 14px; --marco-w:12px; --alfeizar:12px;
   --marco:#4A3522; --marco-luz:#6B4E32; --marco-sombra:#2E2116; --junquillo:rgba(224,181,102,.55);
-  position:relative; display:block; border-radius:var(--forma); margin-bottom:calc(var(--marco-w) + var(--alfeizar) + 4px) }
+  position:relative; display:block; max-width:100%; border-radius:var(--forma);
+  margin:var(--marco-w) calc(var(--marco-w) * 1.9) calc(var(--marco-w) + var(--alfeizar) + 4px) }  /* v1.1 */
 .foto-ventana > img{ display:block; width:100%; height:auto; border-radius:inherit }
 .foto-ventana::before{ content:""; position:absolute; inset:calc(var(--marco-w) * -1); z-index:1; pointer-events:none;
   border:var(--marco-w) solid var(--marco); border-color:var(--marco-luz) var(--marco) var(--marco-sombra) var(--marco);
@@ -350,7 +362,7 @@ html:has(#menu:popover-open){overflow:hidden}
 .lf-foto.foto-ventana{--forma:var(--lf-forma); overflow:visible}
 .lf-foto.foto-ventana img{border-radius:inherit}
 .lf-foto.foto-ventana .lf-cifra{border-radius:0 0 14px 14px}
-.lf:not(.lf-fijada) .lf-foto.foto-ventana{margin:12px 12px 40px}
+.lf:not(.lf-fijada) .lf-foto.foto-ventana{margin:12px 23px 40px}
 .lf-fijada .lf-foto.foto-ventana{top:12px; bottom:30px}
 .lf-marca{position:absolute; left:0; width:1px; pointer-events:none;
   top:calc(var(--i) * var(--lf-tramo) + 50svh); height:var(--lf-tramo)}
@@ -385,8 +397,8 @@ html:has(#menu:popover-open){overflow:hidden}
 .lf-marco{position:relative; z-index:var(--z-contenido)}
 .lf-cab h2.tmp{font:inherit}
 .lf-cab p{font-size:1.0625rem}
-.lf .tmp-mano{font-size:clamp(1.75rem,1.1rem + 1.7vw,2.7rem)}
-.lf .tmp-pildora{font-size:clamp(1.35rem,.9rem + 1.4vw,2.1rem)}
+.lf .tmp-mano{--tm:clamp(1.75rem,1.1rem + 1.7vw,2.7rem)}
+.lf .tmp-pildora{--tp:clamp(1.35rem,.9rem + 1.4vw,2.1rem)}
 
 /* ---------- Secciones ---------- */
 .sec{padding:120px 0}
@@ -418,6 +430,7 @@ html:has(#menu:popover-open){overflow:hidden}
 .carta-panel:focus-visible{outline-offset:8px}
 /* Desayunos */
 .des-cab{display:grid; grid-template-columns:minmax(0,380px) minmax(0,1fr); gap:34px; align-items:center; margin-bottom:36px}
+.des-cab > *{min-width:0}
 .des-horas{margin-top:14px; font-weight:600; color:var(--tinta-2)}
 .des-rejilla{columns:2; column-gap:64px}
 .des-bloque{break-inside:avoid; margin-bottom:38px}
@@ -434,10 +447,12 @@ html:has(#menu:popover-open){overflow:hidden}
 .pastillas :focus-visible{outline-color:var(--miel); outline-offset:2px}
 .secciones{view-transition-name:carta-secciones}
 .seccion{display:grid; grid-template-columns:minmax(0,340px) minmax(0,1fr); gap:56px; align-items:start}
+.seccion > *{min-width:0}
+.sc-foto{min-width:0; max-width:100%}
 .seccion[hidden]{display:none}
-.sc-cab{display:grid; gap:24px}
+.sc-cab{display:grid; grid-template-columns:minmax(0,1fr); gap:24px; min-width:0}
 .sc-foto{margin:0}
-.sc-foto .foto-ventana{--forma:50% 50% 12px 12px / 30% 30% 12px 12px; margin:12px 12px 32px}
+.sc-foto .foto-ventana{--forma:50% 50% 12px 12px / 30% 30% 12px 12px; margin:12px 23px 32px}
 .sc-foto img{width:100%; height:auto; aspect-ratio:4/3; object-fit:cover}
 .des-cab .sc-foto .foto-ventana{--forma:10px}
 .des-cab .sc-foto img{aspect-ratio:16/9}
@@ -517,7 +532,7 @@ html:has(#menu:popover-open){overflow:hidden}
 .ctrl-cuenta{color:var(--suave); font-size:.9375rem; font-variant-numeric:tabular-nums}
 .pista{color:var(--suave); font-size:.875rem; margin-top:12px; max-width:520px; text-align:center}
 .opinion-foto{margin:0}
-.opinion-foto .foto-ventana{--forma:50% 50% 16px 16px / 36% 36% 16px 16px; margin:12px 12px 32px}
+.opinion-foto .foto-ventana{--forma:50% 50% 16px 16px / 36% 36% 16px 16px; margin:12px 23px 32px}
 .opinion-foto img{width:100%; height:auto; aspect-ratio:1/1; object-fit:cover}
 .opinion-foto figcaption{margin-top:10px; color:var(--suave); font-size:.875rem}
 .opiniones-pie{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:14px 28px; margin-top:52px; color:var(--suave); font-size:.9375rem}
@@ -557,7 +572,7 @@ html:has(#menu:popover-open){overflow:hidden}
 .datos-lista dd{margin:0; font-weight:500}
 .datos-botones{display:flex; flex-wrap:wrap; gap:10px; margin-top:auto}
 .fachada-foto{margin:0; transition:translate .35s var(--ease-out)}
-.fachada-foto .foto-ventana{--forma:50% 50% 16px 16px / 38% 38% 16px 16px; margin:12px 12px 32px}
+.fachada-foto .foto-ventana{--forma:50% 50% 16px 16px / 38% 38% 16px 16px; margin:12px 23px 32px}
 .fachada-foto img{width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; transition:scale .35s var(--ease-out), translate .35s var(--ease-out)}
 .js .fachada-foto img{clip-path:inset(100% 0 0 0)}
 .js .fachada-foto.visto img{clip-path:inset(0); transition:clip-path .45s var(--ease-out), scale .35s var(--ease-out), translate .35s var(--ease-out)}
@@ -597,8 +612,8 @@ html:has(#menu:popover-open){overflow:hidden}
 .final-rejilla{display:grid; grid-template-columns:minmax(0,380px) minmax(0,1fr); gap:64px; align-items:center}
 .final-lampara{width:min(380px,100%); -webkit-mask-image:radial-gradient(ellipse closest-side, #000 72%, transparent); mask-image:radial-gradient(ellipse closest-side, #000 72%, transparent)}
 .final-lampara .luces{--velo-ini:.62; --velo-fin:.12}
-.tmp-final .tmp-mano{font-size:clamp(2rem,1.3rem + 3vw,4.2rem)}
-.tmp-final .tmp-pildora{font-size:clamp(1.8rem,1.2rem + 2.6vw,3.6rem)}
+.tmp-final .tmp-mano{--tm:clamp(2rem,1.3rem + 3vw,4.2rem)}
+.tmp-final .tmp-pildora{--tp:clamp(1.8rem,1.2rem + 2.6vw,3.6rem)}
 .final-texto .btn{margin-top:34px}
 .final-hoy{margin-top:18px; font-weight:500; font-size:1.125rem; color:var(--suave)}
 .palabra-final{left:0; right:0; bottom:0; text-align:center; height:.62em; overflow:hidden; font-size:clamp(6rem,24vw,22rem); line-height:1}
@@ -606,6 +621,8 @@ html:has(#menu:popover-open){overflow:hidden}
 
 /* ---------- Pie ---------- */
 .pie{background:#0B1712; color:var(--suave); padding:72px 0 64px; border-top:1px solid var(--linea)}
+.pie{position:relative; isolation:isolate; overflow:hidden}
+.pie > .wrap{position:relative; z-index:1}
 .pie-rejilla{display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:40px}
 .pie p{margin-bottom:10px}
 .pie a{color:var(--texto); text-underline-offset:3px}

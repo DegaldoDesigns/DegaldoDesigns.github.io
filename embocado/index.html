@@ -181,15 +181,17 @@
 <!-- CONFIRMAR CON EL CLIENTE: horario de desayunos (el de la carta de abr. 2026), menú del día (días y precio) y horario de apertura. -->
 <section class="lf lf-foto-arriba sec-noche" id="dia" aria-labelledby="t-dia" data-lf-desde="1000" style="--lf-fondo:#0F1F19; --lf-texto:#F7F3EA; --lf-suave:#BFC7BC; --lf-acento:#E0B566; --lf-pista:rgba(247,243,234,.16); --lf-velo:#0F1F19; --lf-cifra-color:#E0B566; --lf-f-titulo:'Jost',system-ui,sans-serif; --lf-forma:50% 50% 14px 14px / 38% 38% 14px 14px; --lf-tramo:70svh; --lf-atenuado:.62">
   <div class="lf-panel">
-    <div class="deco" aria-hidden="true">
-      <span class="palabra-fondo" data-px="-120" style="bottom:4%;left:-3%">08:00</span>
+    <div class="deco fondo-vivo" aria-hidden="true" style="--fv-baldosa:280px; --fv-fuerza:15%; --fv-giro:12deg; --fv-desfase:40px 90px; --fv-papel:.05; --fv-x:76%; --fv-y:52%; --fv-ancho:52vw; --fv-alto:80vh">
+      <span class="fv-papel" data-py="-40"></span>
+      <span class="fv-brillo"></span>
+      <span class="palabra-fondo" data-px="-120" style="bottom:4%;left:-3%" data-t="08:00"></span>
       <svg class="hoja" data-py="-180" style="right:3%;top:8%;width:120px;--r:18deg"><use href="#hoja-monstera"/></svg>
       <svg class="hoja hoja-p" data-py="-120" style="left:38%;top:4%;width:150px;--r:-8deg"><use href="#hoja-palmera"/></svg>
       <svg class="motivo" data-py="-300" style="left:44%;top:84%;width:34px"><use href="#espiral-mini"/></svg>
     </div>
     <div class="lf-marco"><div class="lf-texto">
       <header class="lf-cab">
-        <h2 class="tmp" id="t-dia" data-tmp><span class="tmp-mano">Un día en</span> <span class="tmp-pildora">Embocado</span></h2>
+        <h2 class="tmp tmp-ajusta" id="t-dia" data-tmp><span class="tmp-mano">Un día en</span> <span class="tmp-pildora">Embocado</span></h2>
         <p>Desayunos, menú, raciones para compartir y cenas con terraza. Cuatro maneras de venir al mismo sitio.</p>
       </header>
       <ol class="lf-lista">
@@ -241,7 +243,7 @@
      CONFIRMAR CON EL CLIENTE: que mantienen la carta de dic. 2025 y la de desayunos de abr. 2026, y sus precios. -->
 <section class="sec sec-papel" id="carta" aria-labelledby="t-carta">
   <div class="deco" aria-hidden="true">
-    <span class="palabra-fondo" data-px="140" style="top:1%;right:-4%">compartir</span>
+    <span class="palabra-fondo" data-px="140" style="top:1%;right:-4%" data-t="compartir"></span>
     <svg class="hoja" data-py="-160" style="left:-2%;top:22%;width:130px;--r:-24deg"><use href="#hoja-monstera"/></svg>
     <svg class="hoja hoja-p" data-py="-220" style="right:-1%;top:58%;width:170px;--r:160deg"><use href="#hoja-palmera"/></svg>
     <svg class="motivo" data-py="-320" style="left:6%;top:76%;width:34px"><use href="#espiral-mini"/></svg>
@@ -272,7 +274,7 @@
           <figcaption>Foto publicada en Google Maps.</figcaption>
         </figure>
         <div>
-          <h3 class="tmp tmp-h3" data-tmp><span class="tmp-mano">Desayunos y</span> <span class="tmp-pildora">brunch</span></h3>
+          <h3 class="tmp tmp-ajusta tmp-h3" data-tmp><span class="tmp-mano">Desayunos y</span> <span class="tmp-pildora">brunch</span></h3>
           <!-- CONFIRMAR CON EL CLIENTE: horario de desayunos y brunch (impreso en la carta de abr. 2026). -->
           <p class="des-horas">De 9:00 a 12:00 y de 16:00 a 20:00</p>
         </div>
@@ -363,7 +365,7 @@
       <div class="secciones" id="secciones">
         <div class="seccion" role="tabpanel" id="p-compartir" aria-labelledby="s-compartir">
           <div class="sc-cab">
-            <h3 class="tmp tmp-h3" data-tmp><span class="tmp-mano">Compartir es</span> <span class="tmp-pildora">vivir</span></h3>
+            <h3 class="tmp tmp-ajusta tmp-h3" data-tmp><span class="tmp-mano">Compartir es</span> <span class="tmp-pildora">vivir</span></h3>
             <figure class="sc-foto"><span class="foto-ventana"><img src="img/carta-compartir-480.webp" srcset="img/carta-compartir-480.webp 480w, img/carta-compartir-960.webp 960w" sizes="(min-width:900px) 340px, 92vw" width="960" height="1120" loading="lazy" alt="Croquetas redondas sobre patatas paja en una caja de madera"></span><figcaption>Foto de un cliente en Google Maps, agosto de 2025.</figcaption></figure>
           </div>
           <ul class="platos platos-2">
@@ -393,7 +395,7 @@
 
         <div class="seccion" role="tabpanel" id="p-burger" aria-labelledby="s-burger">
           <div class="sc-cab">
-            <h3 class="tmp tmp-h3" data-tmp><span class="tmp-mano">Gourmet</span> <span class="tmp-pildora">burger</span></h3>
+            <h3 class="tmp tmp-ajusta tmp-h3" data-tmp><span class="tmp-mano">Gourmet</span> <span class="tmp-pildora">burger</span></h3>
             <figure class="sc-foto"><span class="foto-ventana"><img src="img/carta-burger-480.webp" srcset="img/carta-burger-480.webp 480w, img/carta-burger-960.webp 960w" sizes="(min-width:900px) 340px, 92vw" width="960" height="778" loading="lazy" alt="Hamburguesa con huevo frito y patatas gajo sobre una pizarra"></span><figcaption>Foto de un cliente en Google Maps, diciembre de 2023.</figcaption></figure>
           </div>
           <ul class="platos">
@@ -407,7 +409,7 @@
 
         <div class="seccion" role="tabpanel" id="p-verde" aria-labelledby="s-verde">
           <div class="sc-cab">
-            <h3 class="tmp tmp-h3" data-tmp><span class="tmp-mano">Tu bocado más</span> <span class="tmp-pildora">verde</span></h3>
+            <h3 class="tmp tmp-ajusta tmp-h3" data-tmp><span class="tmp-mano">Tu bocado más</span> <span class="tmp-pildora">verde</span></h3>
             <figure class="sc-foto"><span class="foto-ventana"><img src="img/carta-verde-480.webp" srcset="img/carta-verde-480.webp 480w, img/carta-verde-640.webp 640w" sizes="(min-width:900px) 340px, 92vw" width="640" height="589" loading="lazy" alt="Ensalada de hojas variadas con tomates cherry, lascas de queso y picatostes en un plato de cristal"></span><figcaption>Foto de un cliente en Google Maps, mayo de 2026.</figcaption></figure>
           </div>
           <ul class="platos">
@@ -419,7 +421,7 @@
 
         <div class="seccion" role="tabpanel" id="p-carnivoros" aria-labelledby="s-carnivoros">
           <div class="sc-cab">
-            <h3 class="tmp tmp-h3" data-tmp><span class="tmp-mano">Para los más</span> <span class="tmp-pildora">carnívoros</span></h3>
+            <h3 class="tmp tmp-ajusta tmp-h3" data-tmp><span class="tmp-mano">Para los más</span> <span class="tmp-pildora">carnívoros</span></h3>
             <figure class="sc-foto"><span class="foto-ventana"><img src="img/carta-carnivoros-480.webp" srcset="img/carta-carnivoros-480.webp 480w, img/carta-carnivoros-960.webp 960w" sizes="(min-width:900px) 340px, 92vw" width="960" height="1053" loading="lazy" alt="Tiras de carne a la plancha con pimientos verdes y patatas gajo sobre una pizarra, vistas desde arriba"></span><figcaption>Foto de un cliente en Google Maps, agosto de 2025.</figcaption></figure>
           </div>
           <ul class="platos">
@@ -432,7 +434,7 @@
 
         <div class="seccion" role="tabpanel" id="p-fish" aria-labelledby="s-fish">
           <div class="sc-cab">
-            <h3 class="tmp tmp-h3 tmp-solo" data-tmp><span class="tmp-pildora">fish</span></h3>
+            <h3 class="tmp tmp-ajusta tmp-h3 tmp-solo" data-tmp><span class="tmp-pildora">fish</span></h3>
             <figure class="sc-foto"><span class="foto-ventana"><img src="img/carta-fish-480.webp" srcset="img/carta-fish-480.webp 480w, img/carta-fish-960.webp 960w" sizes="(min-width:900px) 340px, 92vw" width="960" height="930" loading="lazy" alt="Conchas gratinadas servidas sobre un plato de cristal"></span><figcaption>Foto de un cliente en Google Maps, agosto de 2025.</figcaption></figure>
           </div>
           <ul class="platos">
@@ -448,7 +450,7 @@
 
         <div class="seccion" role="tabpanel" id="p-singluten" aria-labelledby="s-singluten">
           <div class="sc-cab">
-            <h3 class="tmp tmp-h3" data-tmp><span class="tmp-mano">Carta</span> <span class="tmp-pildora">sin gluten</span></h3>
+            <h3 class="tmp tmp-ajusta tmp-h3" data-tmp><span class="tmp-mano">Carta</span> <span class="tmp-pildora">sin gluten</span></h3>
             <!-- No se dice "apto para celíacos": hay reseñas que dicen que no garantizaban la contaminación cruzada. -->
             <p class="aviso-gluten">Si eres celíaco, pregúntanos antes por la contaminación cruzada.</p>
           </div>
@@ -461,7 +463,7 @@
 
         <div class="seccion" role="tabpanel" id="p-dulce" aria-labelledby="s-dulce">
           <div class="sc-cab">
-            <h3 class="tmp tmp-h3" data-tmp><span class="tmp-mano">A nadie le amarga</span> <span class="tmp-pildora">un dulce</span></h3>
+            <h3 class="tmp tmp-ajusta tmp-h3" data-tmp><span class="tmp-mano">A nadie le amarga</span> <span class="tmp-pildora">un dulce</span></h3>
             <figure class="sc-foto"><span class="foto-ventana"><img src="img/carta-dulce-480.webp" srcset="img/carta-dulce-480.webp 480w, img/carta-dulce-960.webp 960w" sizes="(min-width:900px) 340px, 92vw" width="960" height="1092" loading="lazy" alt="Postre de chocolate con helado, nata, nueces y sirope de chocolate, visto desde arriba"></span><figcaption>Foto de un cliente en Google Maps, noviembre de 2025.</figcaption></figure>
           </div>
           <ul class="platos">
@@ -494,14 +496,16 @@
 <!-- Reseñas reales de Google Maps leídas el 2026-10-22, copiadas tal cual (fragmentos). Fechas aproximadas a partir de "hace X meses".
      CONFIRMAR CON EL CLIENTE: la frase de "nueva etapa" (la dicen varias reseñas, no los dueños). -->
 <section class="sec sec-noche opiniones" id="opiniones" aria-labelledby="t-opiniones">
-  <div class="deco" aria-hidden="true">
-    <span class="palabra-fondo" data-px="150" style="top:46%;right:-3%">990</span>
+  <div class="deco fondo-vivo" aria-hidden="true" style="--fv-baldosa:380px; --fv-fuerza:15%; --fv-giro:-9deg; --fv-desfase:150px 20px; --fv-papel:.05; --fv-x:78%; --fv-y:72%; --fv-ancho:46vw; --fv-alto:60vh">
+      <span class="fv-papel" data-py="-40"></span>
+      <span class="fv-brillo"></span>
+    <span class="palabra-fondo" data-px="150" style="top:46%;right:-3%" data-t="990"></span>
     <svg class="hoja hoja-p" data-py="-200" style="left:2%;top:58%;width:160px;--r:24deg"><use href="#hoja-palmera"/></svg>
     <svg class="motivo" data-py="-260" style="right:12%;top:70%;width:34px"><use href="#espiral-mini"/></svg>
   </div>
   <div class="lee">
     <div class="lee-fijo wrap">
-      <h2 class="tmp" id="t-opiniones" data-tmp><span class="tmp-mano">Lo que dicen en</span> <span class="tmp-pildora">Google</span></h2>
+      <h2 class="tmp tmp-ajusta" id="t-opiniones" data-tmp><span class="tmp-mano">Lo que dicen en</span> <span class="tmp-pildora">Google</span></h2>
       <p class="lee-texto">El mismo local de la calle Juan Carlos I, las mismas <em>lámparas</em> y una <em>nueva etapa</em>.</p>
     </div>
   </div>
@@ -532,14 +536,15 @@
 <!-- ============ HORARIO (cruza la medianoche) ============ -->
 <!-- CONFIRMAR CON EL CLIENTE: horario de Google Maps sin "confirmado por la empresa" (sobre todo el domingo por la tarde) y si abren en festivos. -->
 <section class="sec sec-noche horario" id="horario" aria-labelledby="t-horario" data-estado="">
-  <div class="deco" aria-hidden="true">
-    <span class="palabra-fondo" data-px="-130" style="top:3%;left:-3%">abierto</span>
+  <div class="deco fondo-vivo" aria-hidden="true" style="--fv-baldosa:240px; --fv-desfase:80px 140px; --fv-papel:.04">
+      <span class="fv-papel" data-py="-40"></span>
+    <span class="palabra-fondo" data-px="-130" style="top:3%;left:-3%" data-t="abierto"></span>
     <svg class="hoja" data-py="-170" style="right:4%;top:56%;width:120px;--r:-30deg"><use href="#hoja-monstera"/></svg>
     <svg class="motivo" data-py="-280" style="left:8%;top:80%;width:34px"><use href="#espiral-mini"/></svg>
   </div>
   <div class="wrap horario-rejilla">
     <div class="horario-texto">
-      <h2 class="tmp" id="t-horario" data-tmp><span class="tmp-mano">Cuándo</span> <span class="tmp-pildora">abrimos</span></h2>
+      <h2 class="tmp tmp-ajusta" id="t-horario" data-tmp><span class="tmp-mano">Cuándo</span> <span class="tmp-pildora">abrimos</span></h2>
       <p class="horario-grande">De martes a domingo, del desayuno a la última copa.</p>
       <p class="horario-estado" role="status"><span class="luz-mini" data-estado="" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-lampara"/><circle class="bombilla" cx="12" cy="17.6" r="2.1"/></svg></span><span data-horario-estado>Lunes cerrado.</span></p>
       <p class="horario-des">Desayunos y brunch: de 9:00 a 12:00 y de 16:00 a 20:00.</p>
@@ -560,12 +565,14 @@
 <!-- ============ DÓNDE ESTAMOS (ubicacion-mapa v3) ============ -->
 <!-- CONFIRMAR CON EL CLIENTE: aparcamiento y formas de pago salen de la ficha de Google Maps. -->
 <section class="sec sec-noche" id="ubicacion" aria-labelledby="t-ubicacion">
-  <div class="deco" aria-hidden="true">
-    <span class="palabra-fondo" data-px="150" style="bottom:3%;right:-3%">Griñón</span>
+  <div class="deco fondo-vivo fv-quieto" aria-hidden="true" style="--fv-baldosa:340px; --fv-fuerza:15%; --fv-giro:-16deg; --fv-desfase:0 200px; --fv-papel:.045; --fv-x:52%; --fv-y:62%; --fv-ancho:40vw; --fv-alto:60vh">
+      <span class="fv-papel" data-py="-40"></span>
+      <span class="fv-brillo"></span>
+    <span class="palabra-fondo" data-px="150" style="bottom:3%;right:-3%" data-t="Griñón"></span>
     <svg class="hoja hoja-p" data-py="-190" style="left:3%;top:6%;width:150px;--r:-14deg"><use href="#hoja-palmera"/></svg>
   </div>
   <div class="wrap">
-    <h2 class="tmp" id="t-ubicacion" data-tmp><span class="tmp-mano">Dónde</span> <span class="tmp-pildora">estamos</span></h2>
+    <h2 class="tmp tmp-ajusta" id="t-ubicacion" data-tmp><span class="tmp-mano">Dónde</span> <span class="tmp-pildora">estamos</span></h2>
     <div class="ubicacion-rejilla">
       <div class="datos reveal">
         <p class="direccion">C. Juan Carlos I, 14<br>28971 Griñón (Madrid)</p>
@@ -598,12 +605,12 @@
 <!-- ============ PREGUNTAS ============ -->
 <section class="sec sec-papel" id="preguntas" aria-labelledby="t-preguntas">
   <div class="deco" aria-hidden="true">
-    <span class="palabra-fondo" data-px="-140" style="top:4%;right:-6%">pregunta</span>
+    <span class="palabra-fondo" data-px="-140" style="top:4%;right:-6%" data-t="pregunta"></span>
     <svg class="hoja" data-py="-180" style="left:2%;top:58%;width:120px;--r:-16deg"><use href="#hoja-monstera"/></svg>
   </div>
   <div class="wrap faq-rejilla">
     <div>
-      <h2 class="tmp" id="t-preguntas" data-tmp><span class="tmp-mano">Lo que nos</span> <span class="tmp-pildora">preguntáis</span></h2>
+      <h2 class="tmp tmp-ajusta" id="t-preguntas" data-tmp><span class="tmp-mano">Lo que nos</span> <span class="tmp-pildora">preguntáis</span></h2>
       <p class="faq-intro">¿No está aquí lo que buscas? Llama al <a href="tel:+34911262731">911 26 27 31</a>.</p>
     </div>
     <div class="faq">
@@ -634,8 +641,10 @@
 
 <!-- ============ LLAMADA FINAL (una lámpara que se enciende, M81 de una luz) ============ -->
 <section class="sec sec-noche final" id="reservar" aria-labelledby="t-final">
-  <div class="deco" aria-hidden="true">
-    <span class="palabra-fondo palabra-final" data-px="160"><span class="pie-in">embocado</span></span>
+  <div class="deco fondo-vivo" aria-hidden="true" style="--fv-baldosa:300px; --fv-giro:6deg; --fv-fuerza:15%; --fv-desfase:200px 100px; --fv-papel:.05; --fv-x:22%; --fv-y:46%; --fv-ancho:44vw; --fv-alto:70vh">
+      <span class="fv-papel" data-py="-40"></span>
+      <span class="fv-brillo"></span>
+    <span class="palabra-fondo palabra-final" data-px="160"><span class="pie-in" data-t="embocado"></span></span>
   </div>
   <div class="wrap final-rejilla">
     <div class="final-lampara" aria-hidden="true">
@@ -648,7 +657,7 @@
       </div>
     </div>
     <div class="final-texto">
-      <h2 class="tmp tmp-final" id="t-final" data-tmp><span class="tmp-mano">¿Te guardamos</span> <span class="tmp-pildora">mesa?</span></h2>
+      <h2 class="tmp tmp-ajusta tmp-final" id="t-final" data-tmp><span class="tmp-mano">¿Te guardamos</span> <span class="tmp-pildora">mesa?</span></h2>
       <a class="btn btn-miel btn-grande" href="tel:+34911262731"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar al 911 26 27 31</a>
       <p class="final-hoy" data-final-hoy>De martes a domingo · 911 26 27 31</p>
     </div>
@@ -657,6 +666,7 @@
 </main>
 
 <footer class="pie">
+  <div class="fondo-vivo" aria-hidden="true" style="--fv-baldosa:260px; --fv-giro:-6deg; --fv-papel:.035"><span class="fv-papel"></span></div>
   <div class="wrap pie-rejilla">
     <div>
       <p class="pie-logo" aria-label="Embocado restaurante 14" role="img">
