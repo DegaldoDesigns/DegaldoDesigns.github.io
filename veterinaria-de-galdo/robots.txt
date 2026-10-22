@@ -1,0 +1,8 @@
+# BORRADOR: mientras sea borrador las páginas llevan noindex. Al publicar, quitar el noindex y cambiar el dominio si no es este.
+User-agent: *
+Allow: /
+Disallow: /aviso-legal.html
+Disallow: /privacy.html
+Disallow: /cookies.html
+
+Sitemap: https://degaldodesigns.es/veterinaria-de-galdo/sitemap.xml

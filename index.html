@@ -668,7 +668,7 @@
         <div class="escenario" id="escenario" data-fase="intro">
           <div class="intro">
             <h2 id="expo-titulo">La exposición</h2>
-            <p>Siete negocios, siete webs. <span class="solo-red">Baja y se irán encendiendo una a una.</span><span class="solo-fijo">Entra en la sala que quieras para verla de cerca.</span></p>
+            <p>Nueve negocios, nueve webs. <span class="solo-red">Baja y se irán encendiendo una a una.</span><span class="solo-fijo">Entra en la sala que quieras para verla de cerca.</span></p>
             <img class="cerebro-fijo solo-fijo" src="img/cerebro.webp" width="1240" height="760" alt="" loading="lazy">
           </div>
           <div class="tipo-gigante" id="tipo-gigante" aria-hidden="true"></div>
@@ -950,7 +950,21 @@
        historia:'Vanessa cogió la cafetería en 2025 y le cambió el nombre. La web habla como ella: tostadas, bocadillos y café de los buenos, con su foto dentro.',
        segunda:'el juego de monta tu tostada',
        partes:[['Monta tu tostada','Eliges pan, base e ingredientes y la tostada se dibuja capa a capa.'],['La carta impresa','La carta de tostadas sale de una impresora de comandas, como en la barra.'],['Vanessa en la web','La dueña, con su foto y el nombre antiguo tachado: «Cambiamos el nombre, no la esencia».']],
-       detalles:[['Monta tu tostada','Eliges pan y ingredientes y ves el precio al momento.'],['La carta en un ticket','Sale de una impresora, como en la barra.'],['Vanessa en la web','Un apartado para la dueña, que es quien atiende.']]}
+       detalles:[['Monta tu tostada','Eliges pan y ingredientes y ves el precio al momento.'],['La carta en un ticket','Sale de una impresora, como en la barra.'],['Vanessa en la web','Un apartado para la dueña, que es quien atiende.']]},
+      {id:'vidrios-jucar',nombre:'Vidrios Jucar',tipo:'cristalerías',lugar:'Cristalería con fábrica propia en Heras (Cantabria)',pueblo:'Heras',estado:'Propuesta',vivo:false,url:'vidrios-jucar/',
+       bg:'#0d0f2e',ac:'#f7e409',tx:'#eef5fa',tx2:'rgba(238,245,250,.74)',
+       tecnica:'Una lámina de vidrio cruza la portada, una ventana que se desmonta y una página para profesionales',
+       historia:'Más de 40 años fabricando vidrio, y su web caída: el dominio ya no abre. La propuesta separa lo que busca un particular de lo que busca una constructora, con fotos de sus propias obras.',
+       segunda:'sus trabajos',
+       partes:[['Qué hay dentro de una ventana','Un doble acristalamiento se desmonta con el scroll: dos vidrios con una cámara entre ellos, cerrada por todo el borde.'],['Un paseo por las obras','Sus trabajos reales en una tira que avanza de lado al bajar; en el móvil, a dedo.'],['Para profesionales','Una página propia con la nave, la maquinaria y lo que fabrican para obra.']],
+       detalles:[['Particular o profesional','Dos caminos desde la portada, cada uno con su página.'],['La ventana por dentro','El doble acristalamiento, capa a capa.'],['Sus propias obras','Fotos de sus trabajos, con lo que se hizo en cada uno.']]},
+      {id:'veterinaria-de-galdo',nombre:'De Galdo',nombreLargo:'Clínica Veterinaria De Galdo',tipo:'veterinarias',lugar:'Clínica veterinaria en Pinto (Madrid)',pueblo:'Pinto',estado:'Proyecto propio',vivo:false,url:'veterinaria-de-galdo/',
+       bg:'#120c1a',ac:'#b99ad3',tx:'#f3eef8',tx2:'rgba(243,238,248,.74)',
+       tecnica:'Una radiografía bajo el ratón, una ficha con el nombre de tu animal y la cartilla de servicios con sellos',
+       historia:'La clínica de mi padre, Ángel, abierta en Pinto desde 1994 y sin web. Está hecha con los objetos de la consulta: los rayos X, la cartilla y la mesa de acero, con fotos reales de sus pacientes.',
+       segunda:'urgencias',
+       partes:[['Ponle nombre','Escribes cómo se llama tu perro o tu gato y la web le abre ficha y habla de él.'],['Pacientes de verdad','Polaroids de la consulta sobre la mesa de acero: se arrastran y se abren en grande.'],['La cartilla de servicios','Cada servicio es una casilla con su sello, como en la cartilla de vacunas.']],
+       detalles:[['Rayos X en la portada','Al pasar el ratón, la foto se ve como una radiografía.'],['Ponle nombre','La web habla de tu animal por su nombre.'],['Urgencias claras','Cuándo venir sin cita y el móvil de urgencias, con un electrocardiograma.']]}
     ];
     var N=OBRAS.length;
     var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1038,7 +1052,7 @@
     var ui=document.getElementById('expo-ui'), barra=document.getElementById('barra-progreso'), contador=document.getElementById('contador');
     var conector=document.querySelector('#conector path'), lienzoRed=document.getElementById('red');
     var tipoG=document.getElementById('tipo-gigante'), mapa=document.getElementById('mapa'), mapaSvg=document.getElementById('mapa-lineas');
-    var REGIONES=[0,1,2,3,4,5,6];
+    var REGIONES=[0,1,2,3,4,5,6,7,8];
     function may(t){return t.charAt(0).toUpperCase()+t.slice(1)}
     var cab=document.getElementById('cabecera'), barraMovil=document.getElementById('barra-movil');
     var movil=matchMedia('(max-width:999px)');
@@ -1322,7 +1336,7 @@
     nodosCont.addEventListener('click',function(e){var b=e.target.closest('[data-abrir]');if(b)abrirSala(+b.dataset.abrir)});
 
     /* ===== Sala en la red: el lóbulo se separa del cerebro y se recorre con el scroll ===== */
-    var LARGO={'xavi-pinchos':[8429,8429,8429],'loles-jimenez':[9152,9152],'capricho':[6198,6198],'morrina':[11769,11768],'lemko':[10437,10436],'della-grotta':[7328,7328],'cafeteria-by-vanessa':[10381,10381,10380]};
+    var LARGO={'xavi-pinchos':[8429,8429,8429],'loles-jimenez':[9152,9152],'capricho':[6198,6198],'morrina':[11769,11768],'lemko':[10437,10436],'della-grotta':[7328,7328],'cafeteria-by-vanessa':[10381,10381,10380],'vidrios-jucar':[6648,6647],'veterinaria-de-galdo':[7090,7089]};
     var sr=document.getElementById('sr'), srAlto=document.getElementById('sr-alto'), srEsc=document.getElementById('sr-escena'), srCont=document.getElementById('sr-contenido');
     var srCon=document.getElementById('sr-con'), srMapaL=document.getElementById('sr-mapa-lineas'), srPuntos=document.getElementById('sr-puntos'), srCnt=document.getElementById('sr-cont'), srDonde=document.getElementById('sr-donde');
     var SR_INTRO=.85, salaI=-1, salaPasos=[], salaK=0, salaPaso=-1, srBloques=[], srRamas=[], srLados=null, srAncla=null, yawPasos=[], vueltaFoco=null, salaProg=[];

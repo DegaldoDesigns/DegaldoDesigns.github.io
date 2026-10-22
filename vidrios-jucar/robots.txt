@@ -1,0 +1,8 @@
+# Demo: las páginas llevan noindex. Al publicar en el dominio del cliente, cambiar la URL del sitemap.
+User-agent: *
+Allow: /
+Disallow: /privacy.html
+Disallow: /aviso-legal.html
+Disallow: /cookies.html
+
+Sitemap: https://degaldodesigns.es/vidrios-jucar/sitemap.xml
