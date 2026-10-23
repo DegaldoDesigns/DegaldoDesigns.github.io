@@ -205,9 +205,12 @@
   if (portada){
     var luces = portada.querySelector('.luces'), marca = portada.querySelector('.zoom-marca');
     var texto = portada.querySelector('.portada-texto'), fijo = portada.querySelector('.zoom-fijo');
-    /* Móvil: la tarjeta de la foto empieza justo debajo del texto (lo mide aquí) */
-    var medir = function(){ var r = fijo.getBoundingClientRect(), t = texto.getBoundingClientRect(); portada.style.setProperty('--txt', Math.round(t.bottom - r.top) + 'px'); };
-    medir(); addEventListener('resize', medir);
+    /* Móvil: la tarjeta de la foto empieza justo debajo del texto (lo mide aquí). Con offsetTop, que no cuenta el
+       translate con el que el texto se va al bajar, y solo si cambia el ancho: en el móvil la barra del navegador
+       lanza resize al aparecer y esconderse, y medir a mitad de animación hacía saltar la tarjeta durante el scroll */
+    var medir = function(){ portada.style.setProperty('--txt', (texto.offsetTop + texto.offsetHeight) + 'px'); };
+    var anchoMedido = innerWidth;
+    medir(); addEventListener('resize', function(){ if (innerWidth !== anchoMedido){ anchoMedido = innerWidth; medir(); } });
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(medir);
     var h1 = portada.querySelector('.titular-palabras'), lema = portada.querySelector('[data-tmp]');
     requestAnimationFrame(function(){ requestAnimationFrame(function(){
