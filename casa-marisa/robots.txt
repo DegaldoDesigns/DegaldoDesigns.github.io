@@ -1,0 +1,6 @@
+# Demo: las páginas llevan noindex. No se bloquea nada aquí: un Disallow impediría que el buscador viera ese noindex.
+# Al publicar en el dominio del cliente: quitar el noindex de index.html y poner aquí la URL de su sitemap.
+User-agent: *
+Allow: /
+
+Sitemap: https://degaldodesigns.es/casa-marisa/sitemap.xml

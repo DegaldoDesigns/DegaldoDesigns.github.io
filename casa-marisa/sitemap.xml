@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Demo en degaldodesigns.es/casa-marisa/ (con noindex mientras sea demo). Al publicar en el dominio del cliente,
+     cambiar la <loc> por su dirección y actualizar <lastmod> (AAAA-MM-DD). -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://degaldodesigns.es/casa-marisa/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+</urlset>

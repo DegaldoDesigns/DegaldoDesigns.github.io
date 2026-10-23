@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casa Marisa · Comida casera asturiana en Carabanchel</title>
+<meta name="description" content="Casa Marisa, casa de comidas asturiana en la calle Alzina, 11 (Carabanchel, Madrid): cachopos, raciones, menú del día y fabada por encargo. Reservas: 917 64 73 66.">
+<!-- DEMO: noindex hasta que la casa apruebe la web. Al publicar en su dominio, quitar noindex y cambiar la URL de canonical, og:url, og:image, JSON-LD, sitemap y robots (aquí y en todas las páginas). -->
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://degaldodesigns.es/casa-marisa/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Casa Marisa">
+<meta property="og:title" content="Casa Marisa · Comida casera asturiana en Carabanchel">
+<meta property="og:description" content="Cachopos para compartir, raciones, menú del día y fabada por encargo, en la calle Alzina, 11. Reservas: 917 64 73 66.">
+<meta property="og:image" content="https://degaldodesigns.es/casa-marisa/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://degaldodesigns.es/casa-marisa/">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Casa Marisa · Comida casera asturiana en Carabanchel">
+<meta name="twitter:description" content="Cachopos para compartir, raciones, menú del día y fabada por encargo, en la calle Alzina, 11. Reservas: 917 64 73 66.">
+<meta name="twitter:image" content="https://degaldodesigns.es/casa-marisa/og-image.jpg">
+<meta name="theme-color" content="#1E4DA1">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/libre-caslon-condensed-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/public-sans-latin-recortada.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="img/firma-cachopo-entero-760.webp" imagesrcset="img/firma-cachopo-entero-760.webp 760w, img/firma-cachopo-entero-1500.webp 1500w" imagesizes="(min-width:1024px) 56vw, 92vw">
+<link rel="stylesheet" href="css/estilos.css">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Restaurant",
+ "name": "Casa Marisa",
+ "alternateName": "Restaurante Casa Marisa",
+ "url": "https://degaldodesigns.es/casa-marisa/",
+ "image": "https://degaldodesigns.es/casa-marisa/og-image.jpg",
+ "description": "Casa de comidas asturiana de barrio en Carabanchel: desayunos, menú del día, raciones, cachopos y especialidades por encargo.",
+ "servesCuisine": ["Asturiana", "Casera"],
+ "priceRange": "10-20 €",
+ "telephone": "+34917647366",
+ "acceptsReservations": "True",
+ "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "C. Alzina, 11",
+  "postalCode": "28044",
+  "addressLocality": "Madrid",
+  "addressRegion": "Madrid",
+  "addressCountry": "ES"
+ },
+ "openingHoursSpecification": [
+  {"@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "08:00", "closes": "18:00"},
+  {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"], "opens": "08:00", "closes": "21:30"},
+  {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "08:00", "closes": "23:59"},
+  {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "09:00", "closes": "18:00"}
+ ],
+ "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.5", "reviewCount": "820", "bestRating": "5"},
+ "sameAs": ["https://www.facebook.com/Barcasamarisa", "https://www.instagram.com/barcasamarisa/"]
+}
+</script>
+<!-- CONFIRMAR CON EL CLIENTE (resumen; cada uno va también junto a su texto y en ../ficha.md):
+     - Logotipo: REDIBUJADO en SVG del logo de la carta de diciembre de 2023 (img/logo*.svg, 03-assets/componer-logo.py). Que lo sigan usando y pedir el original.
+     - Horario: el de Google Maps (lunes 8:00-18:00; martes a jueves 8:00-21:30; viernes y sábado 8:00-24:00; domingo 9:00-18:00).
+       Si cambia: HORARIO en js/sitio.js, la lista de la sección Horario, el JSON-LD, el pie y la pregunta de los desayunos.
+     - Carta: la de diciembre de 2023 (foto de un cliente en Google Maps). Precios con data-fecha="2023" = de esa carta (salen con asterisco);
+       sin el atributo = del ticket de abril de 2026 (chorizo a la sidra, oreja, pincho de tortilla). Menú del día 14 € (ticket de 2026).
+     - Especialidades por encargo "el día antes" (Instagram de 2020). Menú infantil y acceso en silla de ruedas (atributos de Google Maps).
+     - Reseñas: fragmentos literales de reseñas de Google Maps, sin nombres (leídas el 23-10-2026). Nota 4,5 con 820 reseñas (misma fecha).
+     - Fotos: de clientes en Google Maps, solo para la demo. Sustituirlas por fotos propias antes de publicar.
+     - Facebook e Instagram del pie: casi parados; preguntar si los quieren en la web. -->
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <!-- Cruz de la Victoria del logo de su carta (REDIBUJADA, CONFIRMAR) -->
+  <symbol id="cruz" viewBox="0 0 100 150"><g fill="currentColor"><path d="M45 12h10v128H45z"/><path d="M12 57h76v10H12z"/><path d="M42 21 45 12h10l3 9zM42 131l3 9h10l3-9zM21 54l-9 3v10l9 3zM79 54l9 3v10l-9 3z"/><circle cx="50" cy="7" r="6"/><circle cx="42.5" cy="13" r="4.4"/><circle cx="57.5" cy="13" r="4.4"/><circle cx="50" cy="144" r="6"/><circle cx="42.5" cy="138" r="4.4"/><circle cx="57.5" cy="138" r="4.4"/><circle cx="6" cy="62" r="6"/><circle cx="12" cy="54.5" r="4.4"/><circle cx="12" cy="69.5" r="4.4"/><circle cx="94" cy="62" r="6"/><circle cx="88" cy="54.5" r="4.4"/><circle cx="88" cy="69.5" r="4.4"/><rect x="44" y="56" width="12" height="12" transform="rotate(45 50 62)"/></g><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M25 67v7M75 67v7M19 90l6-15 6 15M21.5 84h7M68 77c0 11 3.5 13 5.5 13s2-5 1.5-9c.5 4 0 9 2 9s5-2 5.5-13"/></g></symbol>
+  <symbol id="i-tel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+  <symbol id="i-flecha" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-abajo" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-estrella" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></symbol>
+</svg>
+
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<div class="centinela" aria-hidden="true"></div>
+<header class="cabecera" id="cabecera">
+  <div class="barra">
+    <a class="marca" href="#inicio"><img class="logo-claro" src="img/logo.svg" width="1012" height="408" alt="Casa Marisa, volver al inicio"><img class="logo-azul" src="img/logo-sobre-azul.svg" width="1012" height="408" alt="" aria-hidden="true"></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#carta">Carta</a>
+      <a href="#encargo">Por encargo</a>
+      <a href="#casa">La casa</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#horario">Horario</a>
+      <a href="#ubicacion">Dónde</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <div class="barra-der">
+      <a class="btn btn-azul btn-cab" href="tel:+34917647366"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar</a>
+      <button class="hamb" type="button" popovertarget="menu" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+<nav id="menu" popover aria-label="Menú principal">
+  <div class="fondo-vivo fv-baldosa-propia fv-b-cruces fv-quieto" aria-hidden="true" style="--fv-color:#FFC72C; --fv-papel:.06"><span class="fv-papel"></span></div>
+  <button class="cerrar" type="button" popovertarget="menu" popovertargetaction="hide" aria-label="Cerrar menú">×</button>
+  <ul>
+    <li style="--i:0"><a href="#carta">Nuestra carta</a></li>
+    <li style="--i:1"><a href="#encargo">Por encargo</a></li>
+    <li style="--i:2"><a href="#casa">La casa</a></li>
+    <li style="--i:3"><a href="#opiniones">Opiniones</a></li>
+    <li style="--i:4"><a href="#horario">Horario</a></li>
+    <li style="--i:5"><a href="#ubicacion">Dónde estamos</a></li>
+    <li style="--i:6"><a href="#preguntas">Preguntas</a></li>
+  </ul>
+  <p class="menu-pie"><a href="tel:+34917647366">Llamar al 917 64 73 66</a></p>
+</nav>
+
+<main id="contenido">
+
+<!-- ============ PORTADA · momento firma (M87): la mesa, con el cachopo entero que se corta y se abre al bajar ============ -->
+<section class="portada" id="inicio" aria-labelledby="portada-h1" data-pa-recorrido="80vh">
+  <div class="deco" aria-hidden="true">
+    <div class="fondo-vivo fv-baldosa-propia fv-b-vichy" style="--fv-color:#1E4DA1; --fv-papel:.28; --fv-luz:#FFC75A; --fv-fuerza:26%; --fv-x:70%; --fv-y:50%; --fv-ancho:56vw; --fv-alto:60vh"><span class="fv-papel" data-py="-30"></span><span class="fv-brillo"></span></div>
+  </div>
+  <div class="wrap portada-rejilla">
+    <div class="hoja">
+      <p class="hoja-kicker"><svg class="cruz-mini" aria-hidden="true"><use href="#cruz"/></svg>Casa Marisa · Carabanchel</p>
+      <h1 class="portada-h1" id="portada-h1"><span class="titular-palabras">Comida casera <span class="gotica">asturiana.</span></span> <span class="h1-apoyo">Y un cachopo que da para dos.</span></h1>
+      <!-- CONFIRMAR CON EL CLIENTE: desayunos desde las 8:00 (horario de Google Maps). -->
+      <p class="bajada">Casa de comidas de barrio en la calle Alzina, 11, en Carabanchel. Desayunos, menú del día, raciones y, por encargo, fabada, fabes con almejas y arroz con bogavante.</p>
+      <div class="portada-acciones" data-tapa-barra>
+        <a class="btn btn-azul" href="tel:+34917647366"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar para reservar</a>
+        <a class="btn btn-linea iman" href="#carta">Ver la carta<svg class="ico" aria-hidden="true"><use href="#i-abajo"/></svg></a>
+      </div>
+      <p class="prueba"><svg class="ico-estrella" aria-hidden="true"><use href="#i-estrella"/></svg><strong>4,5</strong> · 820 reseñas en Google</p>
+      <!-- CONFIRMAR CON EL CLIENTE: horario de Google Maps y menú del día de 14 € (ticket de abril de 2026). Sin JS: el teléfono. -->
+      <div class="viva">
+        <svg class="viva-cruz" aria-hidden="true"><use href="#cruz"/></svg>
+        <div>
+          <p class="estado" data-estado><span class="punto" aria-hidden="true"></span><span role="status"><b class="estado-palabra">Reservas</b> · <span class="estado-detalle">917 64 73 66</span></span></p>
+          <p class="viva-menu">Menú del día: <strong>14 €</strong></p>
+        </div>
+      </div>
+    </div>
+    <div class="portada-plato">
+      <figure class="pa" data-pa-fijar="1024" data-pa-textos='["Ver por dentro","Verlo entero"]'>
+        <div class="pa-escena foto-canto">
+          <div class="pa-dentro"><img src="img/firma-cachopo-dentro-1500.webp" srcset="img/firma-cachopo-dentro-760.webp 760w, img/firma-cachopo-dentro-1500.webp 1500w" sizes="(min-width:1024px) 56vw, 92vw" width="1500" height="1000" fetchpriority="low" decoding="async" alt="Un cachopo partido por la mitad: entre los dos filetes empanados, jamón y queso fundido"></div>
+          <div class="pa-mitad pa-izq"><span class="pa-sombra"><i></i></span><img src="img/firma-cachopo-entero-1500.webp" srcset="img/firma-cachopo-entero-760.webp 760w, img/firma-cachopo-entero-1500.webp 1500w" sizes="(min-width:1024px) 56vw, 92vw" width="1500" height="1000" fetchpriority="high" alt="Un cachopo entero con pimientos verdes fritos y patatas en una fuente ovalada de acero, sobre un mantel de cuadros azules y blancos"></div>
+          <div class="pa-mitad pa-der" aria-hidden="true"><span class="pa-sombra"><i></i></span><img loading="lazy" aria-hidden="true" src="img/firma-cachopo-entero-1500.webp" srcset="img/firma-cachopo-entero-760.webp 760w, img/firma-cachopo-entero-1500.webp 1500w" sizes="(min-width:1024px) 56vw, 92vw" width="1500" height="1000" alt=""></div>
+          <span class="pa-filo" aria-hidden="true"><i class="pa-filo-linea"></i><i class="pa-filo-carril"><i class="pa-chispa"></i></i></span>
+        </div>
+        <figcaption class="pa-pies"><p data-pa-paso="1">Un cachopo con pimientos y patatas, en su fuente, sobre el mantel de cuadros.</p><p data-pa-paso="2">Por dentro, jamón y queso. En la carta hay cinco rellenos: <a href="#carta-cachopos">ver los cachopos</a>.</p></figcaption>
+      </figure>
+      <p class="credito-fotos">Fotos de clientes en Google Maps (mayo y junio de 2026).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CINTA (M40): sus platos y su rótulo ============ -->
+<section class="cinta mov" aria-label="Lo que hay en Casa Marisa">
+  <ul class="sr"><li>Fabada</li><li>Cachopo</li><li>Arroz con bogavante</li><li>Patatas al cabrales</li><li>Sidra natural</li><li>Menú del día</li><li>Comida casera</li></ul>
+  <div class="marquee" aria-hidden="true"><div class="marquee-track">
+    <span>Fabada<svg><use href="#cruz"/></svg></span><span>Cachopo<svg><use href="#cruz"/></svg></span><span>Arroz con bogavante<svg><use href="#cruz"/></svg></span><span>Patatas al cabrales<svg><use href="#cruz"/></svg></span><span>Sidra natural<svg><use href="#cruz"/></svg></span><span>Menú del día<svg><use href="#cruz"/></svg></span><span>Comida casera<svg><use href="#cruz"/></svg></span>
+    <span>Fabada<svg><use href="#cruz"/></svg></span><span>Cachopo<svg><use href="#cruz"/></svg></span><span>Arroz con bogavante<svg><use href="#cruz"/></svg></span><span>Patatas al cabrales<svg><use href="#cruz"/></svg></span><span>Sidra natural<svg><use href="#cruz"/></svg></span><span>Menú del día<svg><use href="#cruz"/></svg></span><span>Comida casera<svg><use href="#cruz"/></svg></span>
+  </div></div>
+</section>
+
+<!-- ============ NUESTRA CARTA (mantel · vichy al 5 %): tríptico M88 con carta-lista-flexible v1.3 ============
+     La de diciembre de 2023, en su orden y con sus nombres. data-fecha="2023" = precio de esa carta (asterisco); sin él, del ticket de abril de 2026.
+     Cuando la casa dé los precios de ahora: cambiar el importe y quitar data-fecha plato a plato; si ya no queda ninguno, quitar la leyenda. -->
+<section class="sec mantel carta mov" id="carta" aria-labelledby="t-carta">
+  <div class="deco" aria-hidden="true">
+    <div class="fondo-vivo fv-baldosa-propia fv-b-vichy fv-quieto" style="--fv-color:#1E4DA1; --fv-papel:.10"><span class="fv-papel" data-py="-30"></span></div>
+    <span class="palabra-fondo" data-px="-50" style="top:10px;right:4%" data-t="Cachopo"></span>
+  </div>
+  <div class="wrap">
+    <div class="cab-sec">
+      <h2 class="tf tf-rizos tf-izq tf-delante tf-cruz" id="t-carta"><span>Nuestra carta</span></h2>
+      <p class="apoyo">Cachopos, raciones, bocadillos y lo que se prepara por encargo.</p>
+    </div>
+    <!-- CONFIRMAR CON EL CLIENTE: menú del día 14 € (ticket de abril de 2026); qué incluye y qué días, sin confirmar. -->
+    <div class="menu-dia ct-fuera">
+      <p class="menu-dia-tit">Menú del día</p>
+      <p class="menu-dia-precio">14 €</p>
+      <p class="menu-dia-txt">Pregunta los platos de hoy: <a href="tel:+34917647366">917 64 73 66</a></p>
+    </div>
+    <div class="clf ct" data-clf data-clf-sin-pestanas="(min-width: 1100px)" data-clf-etiqueta="Apartados de la carta">
+      <div class="clf-espera"><p>Pide la carta al reservar: 917 64 73 66.</p></div>
+      <div class="clf-viva">
+        <div class="clf-paneles">
+          <div class="ct-panel">
+            <!-- desde 1100 px el menú del día y la leyenda van dentro del tríptico (equilibran los paneles); por debajo, fuera (.ct-fuera) -->
+            <div class="menu-dia ct-dentro"><p class="menu-dia-tit">Menú del día</p><p class="menu-dia-precio">14 €</p><p class="menu-dia-txt">Pregunta los platos de hoy: <a href="tel:+34917647366">917 64 73 66</a></p></div>
+            <div class="clf-panel" id="carta-especialidades" data-clf-pestana="Especialidades">
+              <div class="clf-lista"><h3 class="clf-tit">Nuestras especialidades</h3>
+                <p class="clf-nota">Por encargo</p>
+                <ul class="clf-platos">
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Arroz con bogavante</span><span class="clf-precio" data-fecha="2023"><small>por persona</small>20,00 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Paella</span><span class="clf-precio" data-fecha="2023"><small>por persona</small>12,00 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Fabada asturiana</span><span class="clf-precio" data-fecha="2023"><small>por persona</small>13,00 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Fabes con almejas</span><span class="clf-precio" data-fecha="2023"><small>por persona</small>15,00 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Rabo de toro</span><span class="clf-precio" data-fecha="2023"><small>por persona</small>14,00 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Pollo asado con patatas</span><span class="clf-precio" data-fecha="2023">12,00 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Conejo al ajillo</span><span class="clf-precio" data-fecha="2023">14,00 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Cordero al ajillo (por cuartos)</span><span class="clf-precio">Consultar</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Chuletas de cordero</span><span class="clf-precio">Consultar</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Chuletón de Ávila</span><span class="clf-precio">Consultar</span></p></li>
+                </ul></div>
+            </div>
+            <div class="clf-panel" id="carta-cachopos" data-clf-pestana="Cachopos">
+              <div class="clf-lista"><h3 class="clf-tit">Nuestros cachopos</h3>
+                <p class="clf-comun"><span class="clf-precio" data-fecha="2023">23,00 €</span> cada uno</p>
+                <ul class="clf-platos">
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Cachopo Nº1</span></p><p class="clf-desc">Con cecina, jamón, queso, huevo duro, beicon</p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Cachopo Nº2</span></p><p class="clf-desc">Con jamón serrano y queso cabrales</p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Cachopo Nº3</span></p><p class="clf-desc">Con picadillo asturiano y queso cabrales</p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Cachopo Nº4</span></p><p class="clf-desc">Con queso de cabra y membrillo</p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Cachopo Nº5</span></p><p class="clf-desc">Con carne picada, pimientos y queso</p></li>
+                </ul></div>
+            </div>
+          </div>
+          <div class="ct-panel">
+            <div class="clf-panel" id="carta-raciones" data-clf-pestana="Raciones">
+              <div class="clf-lista"><h3 class="clf-tit">Nuestras raciones</h3>
+                <ul class="clf-platos">
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Alitas de pollo</span><span class="clf-precio" data-fecha="2023">9,00 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Calamares a la andaluza</span><span class="clf-precio" data-fecha="2023">10,50 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Callos caseros</span><span class="clf-precio" data-fecha="2023">9,50 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Chorizo a la sidra</span><span class="clf-precio">10,00 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Chorizo ibérico</span><span class="clf-precio" data-fecha="2023">11,50 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Croquetas caseras</span><span class="clf-precio" data-fecha="2023">10,50 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Fingers caseros</span><span class="clf-precio" data-fecha="2023">8,50 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Huevos rotos con jamón</span><span class="clf-precio" data-fecha="2023">10,50 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Huevos rotos con secreto y morcilla</span><span class="clf-precio" data-fecha="2023">14,50 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Jamón ibérico</span><span class="clf-precio" data-fecha="2023">14,00 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Lacón a la gallega</span><span class="clf-precio" data-fecha="2023">9,50 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Oreja a la plancha</span><span class="clf-precio">10,00 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Patatas al cabrales/<wbr>alioli/<wbr>bravas/<wbr>mixtas</span><span class="clf-precio" data-fecha="2023">9,00 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Pulpo a la gallega</span><span class="clf-precio" data-fecha="2023">18,50 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Queso cabrales/<wbr>curado de oveja</span><span class="clf-precio" data-fecha="2023">13,50 €</span></p></li>
+                </ul></div>
+            </div>
+            <div class="clf-panel" id="carta-sandwiches" data-clf-pestana="Sándwiches">
+              <div class="clf-lista"><h3 class="clf-tit">Nuestros sándwiches</h3>
+                <p class="clf-nota">Incluyen patatas fritas</p>
+                <ul class="clf-platos">
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Sándwich mixto</span><span class="clf-precio" data-fecha="2023">4,50 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Sándwich mixto con huevo</span><span class="clf-precio" data-fecha="2023">5,00 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Sándwich vegetal</span><span class="clf-precio" data-fecha="2023">6,00 €</span></p><p class="clf-desc">Lechuga, tomate, espárragos, atún, huevo duro y mahonesa</p></li>
+                </ul></div>
+            </div>
+            <div class="ct-dentro ct-pie"><p class="clf-leyenda">* Precios de la carta de diciembre de 2023, pendientes de confirmar. Los demás, de 2026. IVA incluido.</p><p>Si tienes alguna alergia o intolerancia, pregunta antes de pedir.</p></div>
+          </div>
+          <div class="ct-panel">
+            <div class="clf-panel" id="carta-bocadillos" data-clf-pestana="Bocadillos">
+              <div class="clf-lista"><h3 class="clf-tit">Nuestros bocadillos</h3>
+                <ul class="clf-platos">
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Beicon</span><span class="clf-precio" data-fecha="2023">4,50 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Calamares con alioli</span><span class="clf-precio" data-fecha="2023">4,50 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Cinta de lomo</span><span class="clf-precio" data-fecha="2023">4,50 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Chorizo ibérico</span><span class="clf-precio" data-fecha="2023">4,50 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Chorizo frito</span><span class="clf-precio" data-fecha="2023">4,50 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">De la casa</span><span class="clf-precio" data-fecha="2023">6,50 €</span></p><p class="clf-desc">Hamburguesa con beicon, queso y salsa brava</p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Jamón ibérico</span><span class="clf-precio" data-fecha="2023">6,50 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Panceta</span><span class="clf-precio" data-fecha="2023">4,50 €</span></p><p class="clf-desc">Sola, con queso o con pimientos</p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Pepito de ternera</span><span class="clf-precio" data-fecha="2023">5,00 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Pincho de tortilla</span><span class="clf-precio">3,60 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Queso de oveja</span><span class="clf-precio" data-fecha="2023">4,50 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Salchichón</span><span class="clf-precio" data-fecha="2023">4,50 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Tortilla española</span><span class="clf-precio" data-fecha="2023">4,50 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Tortilla francesa</span><span class="clf-precio" data-fecha="2023">4,00 €</span></p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Suplemento</span><span class="clf-precio" data-fecha="2023">0,60 €</span></p></li>
+                </ul></div>
+            </div>
+            <div class="clf-panel" id="carta-hamburguesas" data-clf-pestana="Hamburguesas">
+              <div class="clf-lista"><h3 class="clf-tit">Nuestras hamburguesas</h3>
+                <p class="clf-nota">Incluyen patatas fritas</p>
+                <ul class="clf-platos">
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Con queso</span><span class="clf-precio" data-fecha="2023">5,00 €</span></p><p class="clf-desc">Hamburguesa, tomate, lechuga, cebolla, queso</p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Completa</span><span class="clf-precio" data-fecha="2023">6,00 €</span></p><p class="clf-desc">Hamburguesa, tomate, lechuga, cebolla, queso, jamón, beicon</p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">De la casa</span><span class="clf-precio" data-fecha="2023">7,00 €</span></p><p class="clf-desc">Hamburguesa, tomate, lechuga, cebolla, queso, jamón, beicon, huevo</p></li>
+                  <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Infantil</span><span class="clf-precio" data-fecha="2023">4,00 €</span></p><p class="clf-desc">Hamburguesa, queso</p></li>
+                </ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="clf-pie ct-fuera">
+          <p class="clf-leyenda">* Precios de la carta de diciembre de 2023, pendientes de confirmar. Los demás, de 2026. IVA incluido.</p>
+          <p>Si tienes alguna alergia o intolerancia, pregunta antes de pedir.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ POR ENCARGO (cobalto · cruces) ============
+     CONFIRMAR CON EL CLIENTE: "llama el día antes" (Instagram de 2020: "Se puede llamar un día antes para reservar la fabada y el arroz con bogavante"). -->
+<section class="sec cobalto encargo mov" id="encargo" aria-labelledby="t-encargo">
+  <div class="deco" aria-hidden="true">
+    <div class="fondo-vivo fv-baldosa-propia fv-b-cruces fv-quieto" style="--fv-color:#FFC72C; --fv-papel:.06; --fv-desfase:20px 10px"><span class="fv-papel" data-py="-30"></span></div>
+    <span class="palabra-fondo" data-px="50" style="top:10px;left:4%" data-t="Fabada"></span>
+  </div>
+  <div class="wrap encargo-rejilla">
+    <div class="encargo-texto">
+      <h2 class="tf tf-rizos tf-izq tf-delante tf-cruz" id="t-encargo"><span>Por encargo</span></h2>
+      <p class="apoyo">La fabada, las fabes y el arroz, mejor avisando.</p>
+      <p>La fabada asturiana, las fabes con almejas, el arroz con bogavante, la paella, el rabo de toro o el chuletón de Ávila se preparan por encargo. Llama el día antes y te lo tenemos listo.</p>
+      <p class="encargo-nota">Precios en <a href="#carta-especialidades">nuestras especialidades</a>.</p>
+      <div class="encargo-acciones" data-tapa-barra>
+        <a class="btn btn-amarillo" href="tel:+34917647366"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar para encargar</a>
+      </div>
+    </div>
+    <div class="encargo-fotos grupo">
+      <figure class="ef-grande foto-iman item sd-foto"><span class="foto-canto"><img src="img/encargo-fabada-1200.webp" srcset="img/encargo-fabada-600.webp 600w, img/encargo-fabada-1200.webp 1200w" sizes="(min-width:1024px) 38vw, 92vw" width="1200" height="1000" loading="lazy" decoding="async" alt="Una cazuela de aluminio llena de fabes en su caldo rojo, con una cuchara"></span>
+        <figcaption>Una fabada en su cazuela. Foto de un cliente en Google Maps, marzo de 2023.</figcaption></figure>
+      <figure class="ef-peq item sd-foto"><span class="foto-canto"><img src="img/encargo-compango-1100.webp" srcset="img/encargo-compango-560.webp 560w, img/encargo-compango-1100.webp 1100w" sizes="(min-width:1024px) 19vw, 45vw" width="1100" height="759" loading="lazy" decoding="async" alt="Una fuente blanca con chorizos, morcillas y tocino, junto al borde de una cazuela"></span>
+        <figcaption>El compango, aparte. Foto de un cliente, abril de 2024.</figcaption></figure>
+      <figure class="ef-peq item sd-foto"><span class="foto-canto"><img src="img/encargo-arroz-1100.webp" srcset="img/encargo-arroz-560.webp 560w, img/encargo-arroz-1100.webp 1100w" sizes="(min-width:1024px) 19vw, 45vw" width="1100" height="617" loading="lazy" decoding="async" alt="Una paellera negra con arroz caldoso y trozos de bogavante"></span>
+        <figcaption>Un arroz con bogavante. Foto de un cliente, febrero de 2023.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LA CASA (mantel · vichy al 5 %, bento) ============ -->
+<section class="sec mantel casa mov" id="casa" aria-labelledby="t-casa">
+  <div class="deco" aria-hidden="true">
+    <div class="fondo-vivo fv-baldosa-propia fv-b-vichy fv-quieto" style="--fv-color:#1E4DA1; --fv-papel:.10; --fv-desfase:24px 0"><span class="fv-papel" data-py="-30"></span></div>
+    <span class="palabra-fondo" data-px="-50" style="top:10px;right:4%" data-t="Sidra"></span>
+  </div>
+  <div class="wrap">
+    <div class="cab-sec">
+      <h2 class="tf tf-rizos tf-izq tf-delante tf-cruz" id="t-casa"><span>La casa</span></h2>
+      <p class="apoyo">Comida casera y fotos de Asturias en las paredes.</p>
+    </div>
+    <div class="bento grupo">
+      <figure class="b-alta foto-iman item sd-foto"><span class="foto-canto"><img src="img/casa-torimbia-860.webp" srcset="img/casa-torimbia-520.webp 520w, img/casa-torimbia-860.webp 860w" sizes="(min-width:1024px) 30vw, 92vw" width="860" height="1146" loading="lazy" decoding="async" alt="Un gran cuadro de una playa asturiana con el rótulo Playa Torimbia (Asturias) y, delante, una botella verde de sidra natural en la mesa"></span>
+        <figcaption>El cuadro de la playa de Torimbia, en el comedor (octubre de 2025).</figcaption></figure>
+      <div class="b-texto">
+        <p>Casa de comidas de barrio en la esquina de Alzina con Alfredo Aleix. Desayunos por la mañana, menú a mediodía, raciones y cachopos para compartir. En el comedor, el cuadro de la playa de Torimbia.</p>
+        <p class="b-nota">Fotos de clientes en Google Maps.</p>
+      </div>
+      <figure class="b-media item sd-foto"><span class="foto-canto"><img src="img/casa-sidra-1000.webp" srcset="img/casa-sidra-520.webp 520w, img/casa-sidra-1000.webp 1000w" sizes="(min-width:1024px) 26vw, 92vw" width="1000" height="1072" loading="lazy" decoding="async" alt="Dos vasos de sidra y una botella verde en una mesa junto a la ventana, con visillo blanco y plantas"></span>
+        <figcaption>Sidra en una mesa junto a la ventana (diciembre de 2025).</figcaption></figure>
+      <figure class="b-ancha item sd-foto"><span class="foto-canto"><img src="img/casa-cachopo-1100.webp" srcset="img/casa-cachopo-600.webp 600w, img/casa-cachopo-1100.webp 1100w" sizes="(min-width:1024px) 52vw, 92vw" width="1100" height="660" loading="lazy" decoding="async" alt="Un cachopo grande y dorado con patatas fritas en una fuente ovalada de acero, sobre un mantel de papel"></span>
+        <figcaption>Un cachopo con patatas, en su fuente (enero de 2025).</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OPINIONES (cobalto · cruces): muro de reseñas (M46) ============
+     Fragmentos literales de reseñas de Google Maps (2025-2026), sin nombres, con el mes aproximado ("hace N meses" a 23-10-2026). -->
+<section class="sec cobalto opiniones mov" id="opiniones" aria-labelledby="t-opiniones">
+  <div class="deco" aria-hidden="true">
+    <div class="fondo-vivo fv-baldosa-propia fv-b-cruces fv-quieto" style="--fv-color:#FFC72C; --fv-papel:.06; --fv-desfase:70px 50px"><span class="fv-papel" data-py="-30"></span></div>
+    <span class="palabra-fondo" data-px="50" style="top:10px;left:4%" data-t="Carabanchel"></span>
+  </div>
+  <div class="wrap">
+    <div class="cab-sec">
+      <h2 class="tf tf-rizos tf-izq tf-delante tf-cruz" id="t-opiniones"><span>Lo que dicen en Google</span></h2>
+      <p class="nota-google"><svg class="ico-estrella" aria-hidden="true"><use href="#i-estrella"/></svg>4,5 <span>· 820 reseñas (consultado el 23-10-2026)</span></p>
+      <p class="temas">Lo que más sale: cachopo (120), fabada (39), arroz con bogavante (25), raciones (25), cabrales (17), sidra (11).</p>
+    </div>
+    <div class="opiniones-rejilla">
+      <div class="opiniones-lado">
+        <figure class="sd-foto"><span class="foto-canto"><img src="img/opiniones-cachopo-1200.webp" srcset="img/opiniones-cachopo-640.webp 640w, img/opiniones-cachopo-1200.webp 1200w" sizes="(min-width:1024px) 32vw, 92vw" width="1200" height="720" loading="lazy" decoding="async" alt="Un cachopo grande con cuatro pimientos verdes fritos encima y una montaña de patatas fritas, en una fuente de acero"></span>
+          <figcaption>Un cachopo con pimientos y patatas. Foto de un cliente, octubre de 2025.</figcaption></figure>
+        <a class="enlace" href="https://www.google.com/maps/search/?api=1&amp;query=Restaurante%20Casa%20Marisa%20Calle%20Alzina%2011%20Madrid" target="_blank" rel="noopener">Ver las 820 reseñas en Google<svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+      </div>
+      <div class="muro muro-lista-movil"><div class="plano">
+        <div class="col" style="--t:44s"><ul>
+          <li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«probamos el cachopo (cabrales y jamón) de 10!»</p></blockquote><figcaption>Cliente en Google · jun. 2026</figcaption></figure></li>
+          <li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Excelente asturiano. Ojo con uno de sus platos comen dos. Rica sidra natural»</p></blockquote><figcaption>Cliente en Google · abr. 2026</figcaption></figure></li>
+          <li><figure class="res"><p class="est" role="img" aria-label="4 de 5 estrellas">★★★★</p><blockquote><p>«Bar de barrio de toda la vida,especialidad en cachopos y arroz con bogavante.»</p></blockquote><figcaption>Cliente en Google · mar. 2026</figcaption></figure></li>
+          <li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«El cachopo es excelente y las patatas al cabrales son estupendas.»</p></blockquote><figcaption>Cliente en Google · dic. 2025</figcaption></figure></li>
+          <li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Las patatas cabrales increíbles»</p></blockquote><figcaption>Cliente en Google · ene. 2026</figcaption></figure></li>
+          <li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Vale la pena 100%»</p></blockquote><figcaption>Cliente en Google · jun. 2026</figcaption></figure></li>
+        </ul></div>
+        <div class="col" style="--t:56s"><ul>
+          <li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«pedimos un cachopo de jamón con cabrales para dos y tuvimos que pedir casi la mitad para llevar.»</p></blockquote><figcaption>Cliente en Google · abr. 2026</figcaption></figure></li>
+          <li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Servicio impecable, cocina espectacular y ambiente acogedor.»</p></blockquote><figcaption>Cliente en Google · abr. 2026</figcaption></figure></li>
+          <li><figure class="res"><p class="est" role="img" aria-label="4 de 5 estrellas">★★★★</p><blockquote><p>«muy bien ambientado con fotos de Asturias»</p></blockquote><figcaption>Cliente en Google · 2025</figcaption></figure></li>
+          <li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«dos cachopos simplemente espectacular de 10»</p></blockquote><figcaption>Cliente en Google · 2026</figcaption></figure></li>
+          <li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«La sidra fresquita, como debe de ser»</p></blockquote><figcaption>Cliente en Google · 2025</figcaption></figure></li>
+        </ul></div>
+        <div class="col" style="--t:50s"><ul>
+          <li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«A "Casa Marisa" se viene y se repite sin duda.»</p></blockquote><figcaption>Cliente en Google · abr. 2026</figcaption></figure></li>
+          <li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«El cachopo de la casa espectáculo»</p></blockquote><figcaption>Cliente en Google · ene. 2026</figcaption></figure></li>
+          <li><figure class="res"><p class="est" role="img" aria-label="4 de 5 estrellas">★★★★</p><blockquote><p>«Buenas atención, buenas tapas y buen precio.»</p></blockquote><figcaption>Cliente en Google · jun. 2026</figcaption></figure></li>
+          <li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«pedimos una sidra (muy buena) y un cachopo de jamón y cabrales ,que se notaba que era casero»</p></blockquote><figcaption>Cliente en Google · dic. 2025</figcaption></figure></li>
+          <li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Maravillosa la atención y la cocina.»</p></blockquote><figcaption>Cliente en Google · may. 2026</figcaption></figure></li>
+        </ul></div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HORARIO (marino · cruces) ============
+     CONFIRMAR CON EL CLIENTE: horario de Google Maps (23-10-2026), sin horario de cocina ni festivos. Si cambia: HORARIO en js/sitio.js, esta lista, el JSON-LD y el pie. -->
+<section class="sec marino horario mov" id="horario" aria-labelledby="t-horario">
+  <div class="deco" aria-hidden="true">
+    <div class="fondo-vivo fv-baldosa-propia fv-b-cruces fv-quieto" style="--fv-color:#FFC72C; --fv-papel:.05; --fv-desfase:40px 70px"><span class="fv-papel" data-py="-30"></span></div>
+    <span class="palabra-fondo" data-px="-50" style="top:10px;right:4%" data-t="8:00"></span>
+  </div>
+  <div class="wrap horario-rejilla">
+    <div>
+      <h2 class="tf tf-rizos tf-izq tf-delante tf-cruz" id="t-horario"><span>Horario</span></h2>
+      <p class="estado estado-grande" data-estado><span class="punto" aria-hidden="true"></span><span role="status"><b class="estado-palabra">Reservas</b> · <span class="estado-detalle">917 64 73 66</span></span></p>
+      <p class="horario-nota">Horario de Google Maps. Pregunta el de cocina al <a href="tel:+34917647366">917 64 73 66</a>, y si vienes un festivo, llama antes.</p>
+    </div>
+    <dl class="dias" id="dias">
+      <div data-dia="1"><dt>Lunes</dt><dd>8:00 a 18:00</dd></div>
+      <div data-dia="2"><dt>Martes</dt><dd>8:00 a 21:30</dd></div>
+      <div data-dia="3"><dt>Miércoles</dt><dd>8:00 a 21:30</dd></div>
+      <div data-dia="4"><dt>Jueves</dt><dd>8:00 a 21:30</dd></div>
+      <div data-dia="5"><dt>Viernes</dt><dd>8:00 a 24:00</dd></div>
+      <div data-dia="6"><dt>Sábado</dt><dd>8:00 a 24:00</dd></div>
+      <div data-dia="0"><dt>Domingo</dt><dd>9:00 a 18:00</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ DÓNDE ESTAMOS (mantel · vichy al 5 %) ============
+     CONFIRMAR CON EL CLIENTE: acceso en silla de ruedas (atributo de Google Maps). -->
+<section class="sec mantel donde mov" id="ubicacion" aria-labelledby="t-ubicacion">
+  <div class="deco" aria-hidden="true">
+    <div class="fondo-vivo fv-baldosa-propia fv-b-vichy fv-quieto" style="--fv-color:#1E4DA1; --fv-papel:.10; --fv-desfase:0 24px"><span class="fv-papel" data-py="-30"></span></div>
+    <span class="palabra-fondo" data-px="50" style="top:10px;left:4%" data-t="Alzina"></span>
+  </div>
+  <div class="wrap">
+    <div class="cab-sec">
+      <h2 class="tf tf-rizos tf-izq tf-delante tf-cruz" id="t-ubicacion"><span>Dónde estamos</span></h2>
+      <p class="apoyo">Busca el rótulo azul con las letras amarillas.</p>
+    </div>
+    <figure class="fachada sd-foto"><span class="foto-canto"><img src="img/donde-fachada-890.webp" width="890" height="440" loading="lazy" decoding="async" alt="El rótulo azul de la calle con Casa Marisa en letras góticas amarillas sobre el toldo verde y, debajo, el cartel Casera"></span>
+      <figcaption>El rótulo de la calle Alzina (foto de un cliente, abril de 2023).</figcaption></figure>
+    <div class="donde-rejilla">
+      <div class="datos">
+        <p class="direccion">C. Alzina, 11<br>Carabanchel, 28044 Madrid</p>
+        <p class="esquina">En la esquina con la calle Alfredo Aleix.</p>
+        <dl class="datos-lista">
+          <div><dt>Reservas</dt><dd>Por teléfono: <a href="tel:+34917647366">917 64 73 66</a></dd></div>
+          <div><dt>Para llevar</dt><dd>Sí. A domicilio, no.</dd></div>
+          <div><dt>Aparcamiento</dt><dd>En la calle. Según una reseña, cuesta encontrar sitio.</dd></div>
+          <div><dt>Accesibilidad</dt><dd>Acceso en silla de ruedas, según Google Maps.</dd></div>
+        </dl>
+        <div class="datos-botones">
+          <a class="btn btn-azul iman" href="https://www.google.com/maps/dir/?api=1&amp;destination=Restaurante%20Casa%20Marisa%2C%20Calle%20Alzina%2011%2C%2028044%20Madrid" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Cómo llegar con Google Maps</a>
+          <a class="btn btn-linea" href="https://maps.apple.com/?q=Casa%20Marisa&amp;address=Calle%20Alzina%2011%2C%2028044%20Madrid" target="_blank" rel="noopener">Apple Maps</a>
+        </div>
+      </div>
+      <div class="mapa" id="mapa">
+        <div class="mapa-fachada" id="mapaFachada">
+          <span class="mapa-pin" aria-hidden="true"><svg><use href="#cruz"/></svg></span>
+          <p>El mapa es de Google Maps: solo se carga si lo pides, y entonces Google puede guardar sus propias cookies.</p>
+          <button class="btn btn-linea iman" type="button" id="btnMapa">Ver el mapa aquí</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PREGUNTAS (papel · vichy al 4 %) ============ -->
+<section class="sec papel preguntas mov" id="preguntas" aria-labelledby="t-preguntas">
+  <div class="deco" aria-hidden="true">
+    <div class="fondo-vivo fv-baldosa-propia fv-b-vichy fv-quieto" style="--fv-color:#1E4DA1; --fv-papel:.08; --fv-desfase:12px 36px"><span class="fv-papel" data-py="-30"></span></div>
+    <span class="palabra-fondo" data-px="-50" style="top:10px;right:4%" data-t="Cabrales"></span>
+  </div>
+  <div class="wrap faq-rejilla">
+    <div>
+      <h2 class="tf tf-rizos tf-izq tf-delante tf-cruz" id="t-preguntas"><span>Preguntas</span></h2>
+      <p class="faq-intro">¿No está aquí lo que buscas? Llama al <a href="tel:+34917647366">917 64 73 66</a>.</p>
+    </div>
+    <div class="faq">
+      <details name="faq"><summary>¿Hay que reservar?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>Es mejor, sobre todo a mediodía y los fines de semana. Las reservas se hacen por teléfono, en el <a href="tel:+34917647366">917 64 73 66</a>.</p></div></details>
+      <!-- CONFIRMAR CON EL CLIENTE: "mejor el día antes" (Instagram de 2020). -->
+      <details name="faq"><summary>¿Se pueden encargar la fabada o el arroz?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>Sí: la fabada, las fabes con almejas, el arroz con bogavante y el resto de nuestras especialidades se preparan por encargo. Mejor llamar el día antes.</p></div></details>
+      <details name="faq"><summary>¿Hacéis comida para llevar?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>Sí, te lo preparamos para llevar. A domicilio no repartimos.</p></div></details>
+      <details name="faq"><summary>¿Tenéis menú del día?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>Sí, por 14 €. Los platos de cada día, por teléfono: <a href="tel:+34917647366">917 64 73 66</a>.</p></div></details>
+      <!-- CONFIRMAR CON EL CLIENTE: Google Maps dice que hay menú infantil; en la carta de 2023 está la hamburguesa infantil. -->
+      <details name="faq"><summary>¿Hay algo para niños?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>En la carta está la hamburguesa infantil, con patatas fritas. Si buscas otra cosa para los peques, pregunta al reservar.</p></div></details>
+      <details name="faq"><summary>¿Y si tengo alguna alergia?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>Pregunta en la casa antes de pedir y te decimos qué lleva cada plato.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LLAMADA FINAL (cobalto · cruces): "Os esperamos" (su Facebook) ============ -->
+<section class="sec cobalto final mov" id="reservar" aria-labelledby="t-final">
+  <div class="deco" aria-hidden="true">
+    <div class="fondo-vivo fv-baldosa-propia fv-b-cruces fv-quieto" style="--fv-color:#FFC72C; --fv-papel:.06; --fv-desfase:50px 30px"><span class="fv-papel" data-py="-30"></span></div>
+    <span class="palabra-fondo" data-px="50" style="top:10px;left:4%" data-t="Asturiana"></span>
+  </div>
+  <div class="wrap final-centro">
+    <img class="logo-final" src="img/logo-sobre-azul.svg" width="1012" height="408" loading="lazy" alt="Casa Marisa">
+    <h2 class="final-h2" id="t-final"><span class="titular-palabras">Os esperamos.</span></h2>
+    <p class="apoyo">Y si venís a por el cachopo, mejor reservar.</p>
+    <div class="final-acciones" data-tapa-barra>
+      <a class="btn btn-amarillo btn-grande" href="tel:+34917647366"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar al 917 64 73 66</a>
+    </div>
+    <p class="estado estado-final" data-estado><span class="punto" aria-hidden="true"></span><span role="status"><b class="estado-palabra">C. Alzina, 11</b> · <span class="estado-detalle">Carabanchel</span></span></p>
+  </div>
+</section>
+</main>
+
+<footer class="pie">
+  <div class="wrap pie-rejilla">
+    <div>
+      <img class="pie-logo" src="img/logo-sobre-azul.svg" width="1012" height="408" loading="lazy" alt="Casa Marisa">
+      <p>C. Alzina, 11 · Carabanchel, 28044 Madrid</p>
+      <p>Reservas: <a href="tel:+34917647366">917 64 73 66</a></p>
+      <!-- CONFIRMAR CON EL CLIENTE: Facebook (última publicación, julio de 2025) e Instagram (4 publicaciones). -->
+      <p><a href="https://www.facebook.com/Barcasamarisa" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/barcasamarisa/" target="_blank" rel="noopener">@barcasamarisa</a></p>
+    </div>
+    <div>
+      <p class="pie-tit">Horario <span class="pie-fuente">(según Google)</span></p>
+      <p>Lunes, de 8:00 a 18:00<br>Martes a jueves, de 8:00 a 21:30<br>Viernes y sábado, de 8:00 a 24:00<br>Domingo, de 9:00 a 18:00</p>
+    </div>
+    <nav aria-label="Secciones">
+      <p class="pie-tit">En esta web</p>
+      <ul class="pie-enlaces">
+        <li><a href="#carta">Nuestra carta</a></li><li><a href="#encargo">Por encargo</a></li><li><a href="#casa">La casa</a></li><li><a href="#opiniones">Opiniones</a></li>
+        <li><a href="#horario">Horario</a></li><li><a href="#ubicacion">Dónde estamos</a></li><li><a href="#preguntas">Preguntas</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap pie-legal">
+    <p><a href="privacy.html">Privacidad</a> · <a href="terms.html">Aviso legal</a></p>
+    <p>Fotos de clientes en Google Maps.</p>
+    <p>Web de <a href="https://degaldodesigns.es" target="_blank" rel="noopener">Degaldo Designs</a></p>
+  </div>
+</footer>
+
+<div class="barra-movil" id="barraMovil" role="region" aria-label="Llamar o ver la carta">
+  <a class="btn btn-azul" href="tel:+34917647366"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar</a>
+  <a class="btn btn-linea-blanca" href="#carta">Ver la carta</a>
+</div>
+
+<script src="js/carta.js" defer></script>
+<script src="js/sitio.js" defer></script>
+</body>
+</html>
