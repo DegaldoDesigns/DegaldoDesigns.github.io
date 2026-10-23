@@ -227,6 +227,8 @@
       encenderLuces(luces, esc ? [5, 4] : [0, 1]);
       setTimeout(function(){ encenderLuces(luces, esc ? [3] : [6]); }, reducido ? 0 : 1200);
       if (!conLinea || !conIO) Luces.vigilar(luces);
+      /* En móvil no hay zoom ligado al scroll (ver estilos.css): el resto de lámparas, solas al terminar la coreografía */
+      else if (!esc) setTimeout(function(){ encenderLuces(luces); }, reducido ? 0 : 2400);
       else {
         var ioM = new IntersectionObserver(function(es){ if (es[0].isIntersecting){ ioM.disconnect(); encenderLuces(luces); } }, {rootMargin:'0px 0px -50% 0px'});
         ioM.observe(marca);

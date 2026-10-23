@@ -302,7 +302,7 @@ html:has(#menu:popover-open){overflow:hidden}
 .portada-foto{clip-path:none}
 
 @supports (animation-timeline: view()){
-  @media (prefers-reduced-motion: no-preference){
+  @media (prefers-reduced-motion: no-preference) and (min-width:900px){
     /* M12 + M22: 360vh = 140vh de apertura y pausa con las luces + 120vh de foto quieta + 100vh en que sube la hoja ("Un día").
        Tramos en distancias fijas (vh), no en %: con la sección más alta los % se estirarían. */
     .portada{height:360vh; view-timeline-name:--zoom; view-timeline-inset:0}  /* sin inset 0, scroll-padding-top desplaza la línea de tiempo */
@@ -317,18 +317,18 @@ html:has(#menu:popover-open){overflow:hidden}
     .zoom-texto::before{content:""; position:absolute; inset:-80px 0 -9vh; z-index:-1; background:linear-gradient(to top, rgba(15,31,25,.88), rgba(15,31,25,0))}
     .zoom-texto .tmp{align-items:center}
     .zoom-texto .tmp-pildora{margin-left:0}
-    /* Móvil: la tarjeta está en la mitad de abajo; la foto baja al principio para que la lámpara grande caiga dentro
-       y sube a su sitio mientras se abre (la franja vacía de arriba queda siempre tapada por el recorte) */
-    @media (max-width:899px){
-      /* En móvil la foto se abre antes (0-32 %) y el texto se va mientras tanto (8-28 %): no queda tramo vacío */
-      .portada .luces{animation:zoom-baja linear both; animation-timeline:--zoom; animation-range:contain 0vh contain 45vh}
-      .portada-foto,.portada .luces-caja{animation-range:contain 0vh contain 45vh}
-      .portada-texto{animation-range:contain 11vh contain 39vh}
-      .portada .marco-zoom{animation-range:contain 0vh contain 13vh}
-    }
   }
 }
-@keyframes zoom-baja{ from{translate:0 46%} to{translate:0 0} }
+/* Móvil (2026-10-23): sin zoom ligado al scroll. En el iPhone el recorte animado de la foto con las capas de luz
+   iba a tirones y el recorrido de 360vh parecía atascado. La tarjeta con marco se queda quieta (el estado inicial
+   del zoom), las lámparas se encienden solas y al bajar la hoja de "Un día" sube por encima como siempre. */
+@media (max-width:899px) and (prefers-reduced-motion: no-preference){
+  .portada-foto{clip-path:var(--clip-ini)}
+  .portada .luces{translate:0 46%}
+  .portada .luces-caja{scale:1.12}
+  .portada-sombra{opacity:0}
+  .portada .marco-zoom{display:block}
+}
 /* ---------- M22 hoja sobre la foto: "Un día" sube por encima de la foto de la portada, que se queda fija ---------- */
 @media (prefers-reduced-motion: no-preference){
   /* Respaldo sin animation-timeline: la foto (entera) se queda fija y la hoja sube y la tapa, sin oscurecer */
@@ -337,13 +337,14 @@ html:has(#menu:popover-open){overflow:hidden}
   .portada + .lf > .lf-panel, .portada + .lf .deco{border-radius:inherit}
 }
 @supports (animation-timeline: view()){
-  @media (prefers-reduced-motion: no-preference){
+  @media (prefers-reduced-motion: no-preference) and (min-width:900px){
     .portada-foto-in{animation:hs-aleja linear both; animation-timeline:--zoom; animation-range:contain calc(100% - 100vh) contain 100%}
     .zoom-fijo::after{content:""; position:absolute; inset:0; z-index:5; background:#080F0C; opacity:0; pointer-events:none;
       animation:hs-oscurece linear both; animation-timeline:--zoom; animation-range:contain calc(100% - 100vh) contain 100%}
   }
 }
 @supports not (animation-timeline: view()){ @media (prefers-reduced-motion: no-preference){ .portada{height:200vh} } }
+@media (prefers-reduced-motion: no-preference) and (max-width:899px){ .portada{height:200vh} }
 @keyframes hs-aleja{ to{scale:.92} }
 @keyframes hs-oscurece{ to{opacity:.55} }
 @media (max-width:640px){ .portada + .lf{border-radius:22px 22px 0 0} }
