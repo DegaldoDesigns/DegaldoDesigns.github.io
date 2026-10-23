@@ -1,0 +1,5 @@
+# Demo: las páginas llevan noindex (también privacy y terms). No se bloquea nada aquí: un Disallow impediría que el buscador viera ese noindex.
+# El sitemap va vacío mientras sea demo. Al publicar en el dominio del cliente: quitar el noindex de index.html, rellenar sitemap.xml
+# y añadir aquí la línea "Sitemap: https://<dominio>/sitemap.xml".
+User-agent: *
+Allow: /
