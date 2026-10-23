@@ -387,6 +387,8 @@ html:has(#menu:popover-open){overflow:hidden}
 /* Carta con platos (la monta js/sitio.js desde js/carta.js): pestañas solo de los apartados con platos */
 .carta-viva[hidden], .carta-espera[hidden], .panel[hidden]{display:none}
 .pestanas-zona{position:relative; margin-top:clamp(30px,4vw,44px)}
+/* Con muchos apartados la tira no cabe ni en escritorio (8 en Aries): se desliza también ahí, con la pista */
+@media (min-width:861px){ .pestanas-zona{overflow-x:auto; overflow-y:hidden; overscroll-behavior-x:contain; scrollbar-width:none; padding-bottom:12px} .pestanas-zona::-webkit-scrollbar{display:none} }
 .pestanas{position:relative; display:flex; gap:clamp(4px,1vw,10px); padding-bottom:14px; border-bottom:1px solid var(--linea); width:max-content; min-width:100%}
 .pestana{position:relative; min-height:44px; padding:0 clamp(10px,1.4vw,18px); border:none; background:none; cursor:pointer; white-space:nowrap;
   font:600 .9375rem/1.2 var(--f-tit); letter-spacing:.1em; text-transform:uppercase; color:var(--tinta-suave); transition:color .2s var(--ease-out)}
@@ -406,7 +408,6 @@ html:has(#menu:popover-open){overflow:hidden}
 /* Pista de que la tira de pestañas se desliza (solo si no caben, lo decide el JS) */
 .carta-pista{margin:8px 0 0; font-size:.875rem; color:var(--tinta-suave)}
 .carta-pista[hidden]{display:none}
-@media (min-width:861px){ .carta-pista{display:none} }
 .panel{display:grid; grid-template-columns:minmax(0,1fr); gap:clamp(24px,4vw,56px); align-items:start; max-width:76rem}
 .panel.con-foto{grid-template-columns:minmax(0,1fr) minmax(0,20rem)}
 .panel > *{min-width:0}

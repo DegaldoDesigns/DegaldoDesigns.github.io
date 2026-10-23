@@ -57,8 +57,8 @@
      - Logotipo: REDIBUJADO en SVG a partir del rótulo de la fachada (img/logo-*.svg). Pedir el vectorial original.
      - Horario: todos los días de 8:30 a 24:00 (Google Maps y Mapas de Apple, 23-10-2026). Horario de cocina: desconocido.
        Si cambia: data-horario de los dos anillos (.ah), el JSON-LD, la frase de la sección Horario, la pregunta de los desayunos y el pie.
-     - La carta: no se ha podido descargar. Se rellena en js/carta.js (ver LEEME.md). Sin carta, la sección enseña el respaldo.
-     - Desayunos: tema de 5 reseñas de Google; no hay carta de desayunos.
+     - La carta: la impresa de junio de 2026 (foto de Google Maps), en js/carta.js; precios sin confirmar. Ver ../01-investigacion/carta.md.
+     - Desayunos: tema de 5 reseñas de Google; hay pizarra de desayunos (sept. 2026) en dos versiones con precios distintos: no va en la web.
      - Aparcamiento gratuito: lo dice una reseña de Google.
      - Mes de apertura: primavera de 2026 (primeras fotos del propietario, abril; Instagram, 06-05-2026).
      - Reseñas: fragmentos literales de reseñas de 5 estrellas de Google Maps, sin nombres (leídas el 23-10-2026).
@@ -157,23 +157,23 @@
   <div class="deco" aria-hidden="true">
     <div class="fondo-vivo fv-baldosa-propia fv-quieto" style="--fv-desfase:120px 40px; --fv-papel:.05"><span class="fv-papel"></span></div>
   </div>
-  <ul class="sr"><li>Desayunos</li><li>Tostas</li><li>Raciones</li><li>Brochetas</li><li>Ensaladas</li><li>Carnes</li><li>Copas</li><li>Terraza</li></ul>
+  <ul class="sr"><li>Desayunos</li><li>Tostas</li><li>Raciones</li><li>Croquetas</li><li>Ensaladas</li><li>A la brasa</li><li>Copas</li><li>Terraza</li></ul>
   <div class="cinta-banda" aria-hidden="true">
     <div class="marquee"><div class="marquee-track">
       <span>Desayunos<svg class="cinta-simbolo" viewBox="-2 -2 104 104"><use href="#simbolo"/></svg></span>
       <span>Tostas<svg class="cinta-simbolo" viewBox="-2 -2 104 104"><use href="#simbolo"/></svg></span>
       <span>Raciones<svg class="cinta-simbolo" viewBox="-2 -2 104 104"><use href="#simbolo"/></svg></span>
-      <span>Brochetas<svg class="cinta-simbolo" viewBox="-2 -2 104 104"><use href="#simbolo"/></svg></span>
+      <span>Croquetas<svg class="cinta-simbolo" viewBox="-2 -2 104 104"><use href="#simbolo"/></svg></span>
       <span>Ensaladas<svg class="cinta-simbolo" viewBox="-2 -2 104 104"><use href="#simbolo"/></svg></span>
-      <span>Carnes<svg class="cinta-simbolo" viewBox="-2 -2 104 104"><use href="#simbolo"/></svg></span>
+      <span>A la brasa<svg class="cinta-simbolo" viewBox="-2 -2 104 104"><use href="#simbolo"/></svg></span>
       <span>Copas<svg class="cinta-simbolo" viewBox="-2 -2 104 104"><use href="#simbolo"/></svg></span>
       <span>Terraza<svg class="cinta-simbolo" viewBox="-2 -2 104 104"><use href="#simbolo"/></svg></span>
       <span class="dup">Desayunos<svg class="cinta-simbolo" viewBox="-2 -2 104 104"><use href="#simbolo"/></svg></span>
       <span class="dup">Tostas<svg class="cinta-simbolo" viewBox="-2 -2 104 104"><use href="#simbolo"/></svg></span>
       <span class="dup">Raciones<svg class="cinta-simbolo" viewBox="-2 -2 104 104"><use href="#simbolo"/></svg></span>
-      <span class="dup">Brochetas<svg class="cinta-simbolo" viewBox="-2 -2 104 104"><use href="#simbolo"/></svg></span>
+      <span class="dup">Croquetas<svg class="cinta-simbolo" viewBox="-2 -2 104 104"><use href="#simbolo"/></svg></span>
       <span class="dup">Ensaladas<svg class="cinta-simbolo" viewBox="-2 -2 104 104"><use href="#simbolo"/></svg></span>
-      <span class="dup">Carnes<svg class="cinta-simbolo" viewBox="-2 -2 104 104"><use href="#simbolo"/></svg></span>
+      <span class="dup">A la brasa<svg class="cinta-simbolo" viewBox="-2 -2 104 104"><use href="#simbolo"/></svg></span>
       <span class="dup">Copas<svg class="cinta-simbolo" viewBox="-2 -2 104 104"><use href="#simbolo"/></svg></span>
       <span class="dup">Terraza<svg class="cinta-simbolo" viewBox="-2 -2 104 104"><use href="#simbolo"/></svg></span>
     </div></div>
@@ -181,8 +181,8 @@
 </section>
 
 <!-- ============ LA CARTA (mármol · azulejo) ============
-     CONFIRMAR: falta la carta. Se rellena SOLO en js/carta.js (ver LEEME.md). Mientras no tenga platos, se ve el respaldo de abajo
-     (los apartados que se saben, "La carta, en el local" con las reservas por teléfono y tres fotos de mesas de clientes, con pie descriptivo, sin nombre de plato). -->
+     La carta (junio de 2026, precios a CONFIRMAR) se rellena SOLO en js/carta.js (ver LEEME.md). Sin JS se ve el respaldo de abajo
+     (los apartados de la carta, "La carta, en el local" con las reservas por teléfono y tres fotos de mesas de clientes, con pie descriptivo, sin nombre de plato). -->
 <section class="sec marmol carta mov" id="carta" aria-labelledby="t-carta">
   <div class="deco" aria-hidden="true">
     <div class="fondo-vivo fv-baldosa-propia azulejo fv-quieto"><span class="fv-papel"></span></div>
@@ -191,13 +191,13 @@
   <div class="wrap">
     <div class="carta-cab">
       <h2 class="tf" id="t-carta">La carta</h2>
-      <p class="acento">Ensaladas, tostas, raciones, brochetas y carnes.</p>
+      <p class="acento">Ensaladas, tostas, entrantes, del mar, para compartir, hamburguesas, a la brasa y postres.</p>
     </div>
 
     <div class="carta-espera" id="cartaEspera">
       <div>
         <ul class="apartados" aria-label="Apartados de la carta">
-          <li>Ensaladas</li><li>Tostas</li><li>Raciones</li><li>Brochetas</li><li>Carnes</li>
+          <li>Ensaladas</li><li>Tostas</li><li>Entrantes</li><li>Del Mar</li><li>Para Compartir</li><li>Hamburguesas</li><li>A la brasa</li><li>Postres</li>
         </ul>
         <div class="pide">
           <p><strong>La carta, en el local.</strong> Reservas por teléfono: 919 52 20 46.</p>
