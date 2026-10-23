@@ -373,7 +373,7 @@ html:has(#menu:popover-open){overflow:hidden}
 .lf-item a{align-self:flex-start; margin-top:.4em; color:var(--lf-acento); font-weight:600; text-underline-offset:.22em}
 .lf-linea{display:none}
 .lf-foto{position:relative; margin:18px 0 0; aspect-ratio:var(--lf-proporcion); border-radius:var(--lf-forma); overflow:hidden; background:var(--lf-pista)}
-.lf-foto img{display:block; width:100%; height:100%; object-fit:cover; object-position:var(--lf-foco,50% 50%)}
+.lf-foto img{position:absolute; inset:0; display:block; width:100%; height:100%; object-fit:cover; object-position:var(--lf-foco,50% 50%)}  /* absoluta: con height:100% en una caja con aspect-ratio, Safari de iPhone a veces usa el height del HTML y la foto sale ampliada y se sale */
 .lf-foto .lf-cifra{position:absolute; left:0; right:0; bottom:0; margin:0; padding:48px 18px 16px; max-width:none;
   display:flex; align-items:baseline; gap:10px; color:var(--lf-texto);
   background:linear-gradient(to top, color-mix(in srgb, var(--lf-velo) 88%, transparent), transparent)}
