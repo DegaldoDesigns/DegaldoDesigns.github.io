@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Página no encontrada · Tapilla Sixtina</title>
+<meta name="description" content="Esta página no existe. Vuelve a la web de Tapilla Sixtina, bar de tapas y raciones en Valdemoro.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<!-- Demo en degaldodesigns.es/tapilla-sixtina/: rutas absolutas (/tapilla-sixtina/...) para que fuentes, favicon y enlaces funcionen desde cualquier subruta. Al pasar a dominio propio, quitar el prefijo /tapilla-sixtina. -->
+<meta name="theme-color" content="#112C1D">
+<link rel="icon" href="/tapilla-sixtina/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/tapilla-sixtina/fonts/gloock-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/tapilla-sixtina/fonts/alegreya-sans-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Gloock';font-display:swap;font-style:normal;font-weight:400;src:url(/tapilla-sixtina/fonts/gloock-latin.woff2) format('woff2')}
+@font-face{font-family:'Alegreya Sans';font-display:swap;font-style:normal;font-weight:400;src:url(/tapilla-sixtina/fonts/alegreya-sans-latin-400.woff2) format('woff2')}
+@font-face{font-family:'Alegreya Sans';font-display:swap;font-style:normal;font-weight:700;src:url(/tapilla-sixtina/fonts/alegreya-sans-latin-700.woff2) format('woff2')}
+:root{--mostaza:#ECA82D; --verde:#112C1D; --verde-hover:#1C3B1B; --tinta-suave:#2E3B22; --acento:#FDCB48; --secundario:#CFD8C9; --dorado:#C29625; --ease-out:cubic-bezier(.23,1,.32,1)}
+*{box-sizing:border-box}
+body{margin:0; background:var(--mostaza); color:var(--verde); font:400 1.0625rem/1.7 'Alegreya Sans',system-ui,sans-serif}
+.barra{display:flex; justify-content:center; padding:14px 24px; background:var(--verde); border-bottom:2px solid var(--dorado)}
+.barra a{display:block; width:200px}
+.barra img{display:block; width:100%; height:auto}
+.wrap{max-width:760px; margin:0 auto; padding:56px 24px 96px}
+.hoja{background:var(--verde); color:#fff; border-top:4px solid var(--dorado); border-bottom:4px solid var(--dorado); padding:clamp(24px,5vw,48px); box-shadow:0 22px 44px -30px rgba(17,44,29,.6)}
+h1{font:400 clamp(2rem,5vw,2.8rem)/1.16 'Gloock',Georgia,serif; letter-spacing:.03em; text-transform:uppercase; margin:0; color:var(--acento)}
+.fecha{color:var(--secundario); font-size:.9375rem; margin:10px 0 30px}
+h2{font:400 1.5rem/1.3 'Gloock',Georgia,serif; margin:32px 0 8px; color:var(--acento)}
+p{color:var(--secundario)}
+strong{color:#fff}
+a{color:#fff}
+.volver{display:inline-flex; margin-top:32px; padding:15px 24px; background:var(--acento); color:var(--verde); font-weight:700; text-decoration:none; border-radius:2px; transition:background-color .16s var(--ease-out), transform .12s var(--ease-out)}
+.volver:active{transform:scale(.97)}
+:focus-visible{outline:3px solid var(--acento); outline-offset:3px}
+@media (hover:hover) and (pointer:fine){ .volver:hover{background:#FFDA75} }
+@media (prefers-reduced-motion:reduce){ .volver{transition:none} }
+a[href^="tel:"]{white-space:nowrap}
+</style>
+</head>
+<body>
+<header class="barra"><a href="/tapilla-sixtina/"><img src="/tapilla-sixtina/img/logo-corto.svg" width="1373" height="284" alt="Tapilla Sixtina, volver al inicio"></a></header>
+<main class="wrap"><div class="hoja">
+  <h1>Esta tapa no está en la carta</h1>
+  <p class="fecha">La página que buscas no existe: puede que el enlace esté mal o que se haya movido.</p>
+  <p>Si quieres reservar mesa, llama al <a href="tel:+34647143861">647 14 38 61</a>.</p>
+  <a class="volver" href="/tapilla-sixtina/">Volver al inicio</a>
+</div></main>
+</body>
+</html>
