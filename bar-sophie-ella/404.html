@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Página no encontrada · Bar Sophie Ella</title>
+<meta name="description" content="Esta página no existe. Vuelve a la web de Bar Sophie Ella, bar y cafetería de comida casera en Parla.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<!-- Demo en degaldodesigns.es/bar-sophie-ella/: rutas absolutas (/bar-sophie-ella/...) para que fuentes, favicon y enlaces funcionen desde cualquier subruta. Al pasar a dominio propio, quitar el prefijo /bar-sophie-ella. -->
+<meta name="theme-color" content="#051D39">
+<link rel="icon" href="/bar-sophie-ella/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/bar-sophie-ella/fonts/rokkitt-latin-recortada.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/bar-sophie-ella/fonts/lato-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Rokkitt';font-display:swap;font-style:normal;font-weight:400 700;src:url(/bar-sophie-ella/fonts/rokkitt-latin-recortada.woff2) format('woff2')}
+@font-face{font-family:'Lato';font-display:swap;font-style:normal;font-weight:400;src:url(/bar-sophie-ella/fonts/lato-latin-400.woff2) format('woff2')}
+@font-face{font-family:'Lato';font-display:swap;font-style:normal;font-weight:700;src:url(/bar-sophie-ella/fonts/lato-latin-700.woff2) format('woff2')}
+:root{--marino:#051D39; --marino-2:#12304F; --crema:#FFFEF8; --carbon:#545454; --gris:#6E6E6E; --oro:#D0A24E; --oro-t:#8A6A2A; --ease-out:cubic-bezier(.23,1,.32,1)}
+*{box-sizing:border-box}
+body{margin:0; background:var(--marino); color:var(--carbon); font:400 1.0625rem/1.7 'Lato',system-ui,sans-serif}
+.barra{display:flex; justify-content:center; padding:16px 24px; border-bottom:1px solid rgba(208,162,78,.35)}
+.barra a{display:inline-flex; align-items:center; gap:12px; color:var(--crema); font:600 1.25rem/1.2 'Rokkitt',Georgia,serif; letter-spacing:.14em; text-transform:uppercase; text-decoration:none}
+.barra img{width:44px; height:44px; border-radius:50%}
+.wrap{max-width:800px; margin:0 auto; padding:48px 12px 96px}
+.hoja{background:var(--crema); border-radius:2px; padding:clamp(36px,7vw,64px); box-shadow:inset 0 0 0 10px var(--crema), inset 0 0 0 14px var(--carbon), inset 0 0 0 22px var(--crema), inset 0 0 0 23px var(--carbon)}
+h1{font:600 clamp(2rem,5vw,2.8rem)/1.16 'Rokkitt',Georgia,serif; margin:0; color:var(--marino)}
+.fecha{color:var(--gris); font-size:.9375rem; margin:10px 0 30px}
+h2{font:600 1.0625rem/1.4 'Rokkitt',Georgia,serif; letter-spacing:.14em; text-transform:uppercase; margin:32px 0 8px; color:var(--marino)}
+p{color:var(--carbon)}
+strong{color:var(--marino)}
+a{color:var(--marino); font-weight:700}
+.volver{display:inline-flex; margin-top:32px; padding:15px 24px; background:var(--marino); color:var(--crema); font-weight:700; text-decoration:none; border-radius:4px; transition:background-color .16s var(--ease-out), transform .12s var(--ease-out)}
+.volver:active{transform:scale(.97)}
+:focus-visible{outline:3px solid var(--oro); outline-offset:3px}
+@media (hover:hover) and (pointer:fine){ .volver:hover{background:var(--marino-2)} }
+@media (prefers-reduced-motion:reduce){ .volver{transition:none} }
+a[href^="tel:"]{white-space:nowrap}
+</style>
+</head>
+<body>
+<header class="barra"><a href="/bar-sophie-ella/"><img src="/bar-sophie-ella/img/logo-140.webp" width="140" height="140" alt="" aria-hidden="true">Sophie-Ella</a></header>
+<main class="wrap"><div class="hoja">
+  <h1>Esta porción no está en la barra</h1>
+  <p class="fecha">La página que buscas no existe: puede que el enlace esté mal o que se haya movido.</p>
+  <p>Si quieres encargar una tarta o un arroz, llama al <a href="tel:+34642921274">642 92 12 74</a>.</p>
+  <a class="volver" href="/bar-sophie-ella/">Volver al inicio</a>
+</div></main>
+</body>
+</html>

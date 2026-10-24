@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bar Sophie Ella · Bar, cafetería y comida casera en Parla</title>
+<meta name="description" content="Tarta de queso, tortilla, croquetas y arroces por encargo en la calle Río Guadiana de Parla. Desayunos, raciones y bocadillos. Llama al 642 92 12 74.">
+<!-- DEMO: noindex hasta que el bar apruebe la web. Al publicar en su dominio, quitar noindex y cambiar la URL de canonical, og:url, og:image, JSON-LD, sitemap y robots (aquí y en todas las páginas). -->
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://degaldodesigns.es/bar-sophie-ella/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bar Sophie Ella">
+<meta property="og:title" content="Bar Sophie Ella · Bar, cafetería y comida casera en Parla">
+<meta property="og:description" content="Nuestra famosa tarta de queso, tortilla, croquetas y arroces por encargo en la calle Río Guadiana, Parla. Llama al 642 92 12 74.">
+<meta property="og:image" content="https://degaldodesigns.es/bar-sophie-ella/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://degaldodesigns.es/bar-sophie-ella/">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bar Sophie Ella · Bar, cafetería y comida casera en Parla">
+<meta name="twitter:description" content="Nuestra famosa tarta de queso, tortilla, croquetas y arroces por encargo en la calle Río Guadiana, Parla. Llama al 642 92 12 74.">
+<meta name="twitter:image" content="https://degaldodesigns.es/bar-sophie-ella/og-image.jpg">
+<meta name="theme-color" content="#051D39">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/rokkitt-latin-recortada.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/lato-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="img/portada-barra-1200.webp" imagesrcset="img/portada-barra-720.webp 720w, img/portada-barra-1200.webp 1200w" imagesizes="(min-width:1024px) 52vw, 92vw">
+<link rel="stylesheet" href="css/estilos.css">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BarOrPub",
+ "name": "Bar Sophie Ella",
+ "alternateName": "Sophie-Ella · Bar · Cafetería · Comida casera",
+ "description": "Bar, cafetería y comida casera en Parla: desayunos, raciones, bocadillos, tarta de queso por porción o entera por encargo, y arroces por encargo.",
+ "url": "https://degaldodesigns.es/bar-sophie-ella/",
+ "image": "https://degaldodesigns.es/bar-sophie-ella/og-image.jpg",
+ "servesCuisine": "Comida casera",
+ "priceRange": "10-20 €",
+ "telephone": "+34642921274",
+ "acceptsReservations": "True",
+ "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "C. Río Guadiana, 15",
+  "postalCode": "28981",
+  "addressLocality": "Parla",
+  "addressRegion": "Madrid",
+  "addressCountry": "ES"
+ },
+ "geo": {"@type": "GeoCoordinates", "latitude": 40.2440377, "longitude": -3.771589},
+ "openingHoursSpecification": [
+  {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday"], "opens": "09:00", "closes": "22:00"},
+  {"@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "09:00", "closes": "23:00"},
+  {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "09:00", "closes": "23:30"},
+  {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "23:30"}
+ ],
+ "sameAs": ["https://www.instagram.com/bar.sophieella/", "https://www.tiktok.com/@bar_sophieella"]
+}
+</script>
+<!-- CONFIRMAR CON EL CLIENTE (resumen; cada punto va también junto a su texto y en ../ficha.md):
+     - Dirección: número 15 (su carta de enero de 2026); la bio de Instagram dice 26. Aquí y en el JSON-LD, Ubicación, privacidad, aviso legal y pie.
+     - Horario: el de Google Maps del 24-10-2026 (lunes a miércoles 9:00-22:00, jueves 9:00-23:00, viernes 9:00-23:30,
+       sábado 10:00-23:30, domingo cerrado). Cierre de agosto por vacaciones (respuesta de la dueña a una reseña): fechas exactas.
+       Si cambia: HORARIO en js/sitio.js, la lista de Horario, la pregunta de agosto, el JSON-LD y el pie.
+     - Carta y precios: los de su carta de enero de 2026 (fotos en Google Maps). Si la tortilla de 17,99 € es entera.
+       Sin alérgenos plato a plato (no están en su carta).
+     - Teléfono 642 92 12 74: solo llamadas (no publican mensajería). Menú del día: no se anuncia.
+     - Fotos: públicas de su Google Maps y su Instagram, solo para la demo. Logo: solo existe a 140 px (pedir el original).
+     - La dueña: sin nombre en la web. Reseñas: frases literales de Google con nombre de pila e inicial. -->
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <!-- la flor de sus salvamanteles (plantillas/flor-de-petalos.py N=8) -->
+  <symbol id="flor" viewBox="-100 -100 200 200"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"><path vector-effect="non-scaling-stroke" d="M0 -16.0C24.7 -46.4 17.3 -82.6 0 -96.0C-17.3 -82.6 -24.7 -46.4 0 -16.0ZM0 -30.4C13.8 -49.2 9.6 -68.8 0 -80.0C-9.6 -68.8 -13.8 -49.2 0 -30.4ZM0 -20.0V-69.1"/><path vector-effect="non-scaling-stroke" transform="rotate(45.00)" d="M0 -16.0C24.7 -46.4 17.3 -82.6 0 -96.0C-17.3 -82.6 -24.7 -46.4 0 -16.0ZM0 -30.4C13.8 -49.2 9.6 -68.8 0 -80.0C-9.6 -68.8 -13.8 -49.2 0 -30.4ZM0 -20.0V-69.1"/><path vector-effect="non-scaling-stroke" transform="rotate(90.00)" d="M0 -16.0C24.7 -46.4 17.3 -82.6 0 -96.0C-17.3 -82.6 -24.7 -46.4 0 -16.0ZM0 -30.4C13.8 -49.2 9.6 -68.8 0 -80.0C-9.6 -68.8 -13.8 -49.2 0 -30.4ZM0 -20.0V-69.1"/><path vector-effect="non-scaling-stroke" transform="rotate(135.00)" d="M0 -16.0C24.7 -46.4 17.3 -82.6 0 -96.0C-17.3 -82.6 -24.7 -46.4 0 -16.0ZM0 -30.4C13.8 -49.2 9.6 -68.8 0 -80.0C-9.6 -68.8 -13.8 -49.2 0 -30.4ZM0 -20.0V-69.1"/><path vector-effect="non-scaling-stroke" transform="rotate(180.00)" d="M0 -16.0C24.7 -46.4 17.3 -82.6 0 -96.0C-17.3 -82.6 -24.7 -46.4 0 -16.0ZM0 -30.4C13.8 -49.2 9.6 -68.8 0 -80.0C-9.6 -68.8 -13.8 -49.2 0 -30.4ZM0 -20.0V-69.1"/><path vector-effect="non-scaling-stroke" transform="rotate(225.00)" d="M0 -16.0C24.7 -46.4 17.3 -82.6 0 -96.0C-17.3 -82.6 -24.7 -46.4 0 -16.0ZM0 -30.4C13.8 -49.2 9.6 -68.8 0 -80.0C-9.6 -68.8 -13.8 -49.2 0 -30.4ZM0 -20.0V-69.1"/><path vector-effect="non-scaling-stroke" transform="rotate(270.00)" d="M0 -16.0C24.7 -46.4 17.3 -82.6 0 -96.0C-17.3 -82.6 -24.7 -46.4 0 -16.0ZM0 -30.4C13.8 -49.2 9.6 -68.8 0 -80.0C-9.6 -68.8 -13.8 -49.2 0 -30.4ZM0 -20.0V-69.1"/><path vector-effect="non-scaling-stroke" transform="rotate(315.00)" d="M0 -16.0C24.7 -46.4 17.3 -82.6 0 -96.0C-17.3 -82.6 -24.7 -46.4 0 -16.0ZM0 -30.4C13.8 -49.2 9.6 -68.8 0 -80.0C-9.6 -68.8 -13.8 -49.2 0 -30.4ZM0 -20.0V-69.1"/><circle r="10" vector-effect="non-scaling-stroke"/></g></symbol>
+  <symbol id="i-tel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+  <symbol id="i-flecha" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-abajo" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-estrella" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></symbol>
+  <symbol id="i-mas" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M12 6v12M6 12h12"/></symbol>
+</svg>
+
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<div class="centinela" aria-hidden="true"></div>
+<header class="cabecera" id="cabecera">
+  <div class="barra">
+    <a class="marca" href="#inicio" aria-label="Sophie-Ella, volver al inicio"><img src="img/logo-140.webp" width="140" height="140" alt="" aria-hidden="true"><span>Sophie-Ella</span></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#tarta">La tarta</a>
+      <a href="#lo-mas-nombrado">Lo más nombrado</a>
+      <a href="#carta">Carta</a>
+      <a href="#encargos">Encargos</a>
+      <a href="#horario">Horario</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <div class="barra-der">
+      <a class="btn btn-oro btn-cab" href="tel:+34642921274"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar</a>
+      <button class="hamb" type="button" popovertarget="menu" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+<nav id="menu" popover aria-label="Menú principal">
+  <button class="cerrar" type="button" popovertarget="menu" popovertargetaction="hide" aria-label="Cerrar menú">×</button>
+  <ul>
+    <li style="--i:0"><a href="#tarta">La tarta de queso</a></li>
+    <li style="--i:1"><a href="#lo-mas-nombrado">Lo más nombrado</a></li>
+    <li style="--i:2"><a href="#carta">La carta</a></li>
+    <li style="--i:3"><a href="#encargos">Encargos</a></li>
+    <li style="--i:4"><a href="#horario">Horario</a></li>
+    <li style="--i:5"><a href="#opiniones">Opiniones</a></li>
+    <li style="--i:6"><a href="#ubicacion">Ubicación</a></li>
+    <li style="--i:7"><a href="#preguntas">Preguntas</a></li>
+  </ul>
+  <p class="menu-pie"><a href="tel:+34642921274">Llamar al 642 92 12 74</a></p>
+</nav>
+
+<main id="contenido">
+
+<!-- ============ PORTADA (marino con granito): M09 solo en "como en casa"; la barra con la flor dorada detrás ============ -->
+<section class="portada mov" id="inicio" aria-labelledby="portada-h1">
+  <!-- Granito con dos tonos (sin la mota clara): axe suma las capas y, con tres, el oro de "como en casa" no le llegaba a 3:1 -->
+  <div class="fondo-vivo fv-baldosa-propia fv-b-granito fv-quieto" aria-hidden="true"><span class="fv-papel"></span><span class="fv-papel"></span></div>
+  <div class="wrap portada-rejilla">
+    <div class="portada-texto">
+      <!-- Su lema impreso en la carta: "Sabores que te hacen sentir como en casa" -->
+      <h1 class="portada-h1" id="portada-h1" data-tmp style="--tmp-d:200ms">Sabores que te hacen sentir <span class="tmp-mano">como en casa</span></h1>
+      <p class="portada-rotulo">Bar · Cafetería · Comida casera</p>
+      <p class="portada-apoyo">Tarta de queso, tortilla, croquetas y arroces por encargo, en la calle Río Guadiana de Parla.</p>
+      <div class="portada-acciones" data-tapa-barra>
+        <a class="btn btn-oro" href="tel:+34642921274"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar · 642 92 12 74</a>
+        <a class="btn btn-linea iman" href="#carta">Ver la carta<svg class="ico" aria-hidden="true"><use href="#i-abajo"/></svg></a>
+      </div>
+      <!-- Nota y número de reseñas de Google Maps, leídos el 24-10-2026. -->
+      <p class="prueba"><a href="https://www.google.com/maps/search/?api=1&amp;query=Bar%20Sophie%20Ella%20Parla" target="_blank" rel="noopener"><span class="estrellas" aria-hidden="true"><svg><use href="#i-estrella"/></svg><svg><use href="#i-estrella"/></svg><svg><use href="#i-estrella"/></svg><svg><use href="#i-estrella"/></svg><svg><use href="#i-estrella"/></svg></span><span><strong>4,9</strong> en Google · 138 reseñas</span></a></p>
+      <!-- CONFIRMAR CON EL CLIENTE: horario de Google Maps y cierre de agosto. Sin JS se lee el teléfono. -->
+      <div class="viva" data-estado-hoy>
+        <span class="punto" aria-hidden="true"></span>
+        <p class="estado"><span role="status"><b class="estado-palabra">Pedidos y reservas</b> · <span class="estado-detalle">642 92 12 74</span></span></p>
+      </div>
+      <p class="viva-nota">Horario según Google. En festivos, mejor llama antes.</p>
+    </div>
+    <figure class="portada-foto">
+      <span class="flor-grande" aria-hidden="true"><svg class="flor-svg"><use href="#flor"/></svg></span>
+      <span class="recorte"><img src="img/portada-barra-1200.webp" srcset="img/portada-barra-720.webp 720w, img/portada-barra-1200.webp 1200w" sizes="(min-width:1024px) 52vw, 92vw" width="1200" height="880" alt="La barra de granito azul con dos tartas enteras y bandejas de croquetas" fetchpriority="high"></span>
+      <figcaption>La barra de Sophie-Ella.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ CINTA (crema a sangre, como su toldo · M40) ============ -->
+<section class="cinta mov" aria-label="Lo que hay en la barra">
+  <ul class="sr"><li>Tarta de queso</li><li>Tortilla de patata</li><li>Croquetas de jamón serrano</li><li>Oreja a la plancha</li><li>Pisto con huevos</li><li>Arroces por encargo</li><li>Desayunos</li></ul>
+  <div class="marquee" aria-hidden="true"><div class="marquee-track">
+    <span>Tarta de queso<svg><use href="#flor"/></svg></span><span>Tortilla de patata<svg><use href="#flor"/></svg></span><span>Croquetas de jamón serrano<svg><use href="#flor"/></svg></span><span>Oreja a la plancha<svg><use href="#flor"/></svg></span><span>Pisto con huevos<svg><use href="#flor"/></svg></span><span>Arroces por encargo<svg><use href="#flor"/></svg></span><span>Desayunos<svg><use href="#flor"/></svg></span>
+    <span>Tarta de queso<svg><use href="#flor"/></svg></span><span>Tortilla de patata<svg><use href="#flor"/></svg></span><span>Croquetas de jamón serrano<svg><use href="#flor"/></svg></span><span>Oreja a la plancha<svg><use href="#flor"/></svg></span><span>Pisto con huevos<svg><use href="#flor"/></svg></span><span>Arroces por encargo<svg><use href="#flor"/></svg></span><span>Desayunos<svg><use href="#flor"/></svg></span>
+  </div></div>
+</section>
+
+<!-- ============ LA TARTA DE QUESO (hoja crema) · MOMENTO FIRMA M92 "Doce porciones" (porciones-marcadas) ============
+     CONFIRMAR CON EL CLIENTE: precios de su carta de enero de 2026 (porción 5,50 €; entera 44,99 € por encargo con antelación, aprox. 12 porciones). -->
+<section class="sec-hoja tarta mov" id="tarta" aria-labelledby="t-tarta">
+  <div class="hoja marco-carta">
+    <div class="deco" aria-hidden="true"><span class="palabra-fondo" data-px="70" style="bottom:22px;right:4%" data-t="tartas"></span></div>
+    <span class="flor-esquina" aria-hidden="true"><svg class="flor-svg"><use href="#flor"/></svg></span>
+    <div class="cab-sec">
+      <p class="rotulo">Postres · por porción y entera</p>
+      <h2 class="tit tf tf-rizos tf-izq tf-delante" id="t-tarta"><span>Nuestra famosa <span class="mano">tarta de queso</span></span></h2>
+      <p class="apoyo">La que más sale en nuestras reseñas de Google.</p>
+    </div>
+    <div class="tarta-rejilla" data-pm-bloque>
+      <div>
+        <figure class="tarta-escena">
+          <div class="pm" id="tarta-firma" data-pm-elipse="674,302,394,208,0" data-porciones="12" data-pm-inicio="90"
+               data-pm-modo="al-ver" data-pm-umbral=".5" data-pm-espera="150" data-una-vez="sesion" data-pm-hover>
+            <img src="img/tarta-queso-1290.webp" srcset="img/tarta-queso-800.webp 800w, img/tarta-queso-1290.webp 1290w" sizes="(min-width:1180px) 590px, (min-width:960px) 52vw, 88vw" width="1290" height="930" loading="lazy" decoding="async" alt="Tarta de queso entera con mermelada por encima, en un salvamanteles dorado sobre la barra de granito azul">
+            <svg class="pm-capa" viewBox="0 0 1290 930" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><path class="pm-cuna" d=""/><path class="pm-borde-relleno" d="M674.0 510.0A394 208 0 0 1 674.0 94.0A394 208 0 0 1 674.0 510.0Z"/><path class="pm-porcion-relleno" d="M674.0 302.0L871.0 482.1A394 208 0 0 1 674.0 510.0Z"/><g transform="translate(0 3.9)" stroke-width="7.1"><path class="pm-sombra" d="M674.0 506.5L674.0 97.5" pathLength="1"/><path class="pm-sombra" d="M479.6 479.7L868.4 124.3" pathLength="1"/><path class="pm-sombra" d="M336.2 405.0L1011.8 199.0" pathLength="1"/><path class="pm-sombra" d="M283.5 302.0L1064.5 302.0" pathLength="1"/><path class="pm-sombra" d="M336.2 199.0L1011.8 405.0" pathLength="1"/><path class="pm-sombra" d="M479.6 124.3L868.4 479.7" pathLength="1"/></g><g stroke-width="7.1"><path class="pm-corte" d="M674.0 506.5L674.0 97.5" pathLength="1"/><path class="pm-corte" d="M479.6 479.7L868.4 124.3" pathLength="1"/><path class="pm-corte" d="M336.2 405.0L1011.8 199.0" pathLength="1"/><path class="pm-corte" d="M283.5 302.0L1064.5 302.0" pathLength="1"/><path class="pm-corte" d="M336.2 199.0L1011.8 405.0" pathLength="1"/><path class="pm-corte" d="M479.6 124.3L868.4 479.7" pathLength="1"/></g><path class="pm-borde" d="M674.0 510.0A394 208 0 0 1 674.0 94.0A394 208 0 0 1 674.0 510.0Z" pathLength="1" stroke-width="7.1"/><path class="pm-porcion" d="M674.0 302.0L871.0 482.1A394 208 0 0 1 674.0 510.0Z" pathLength="1" stroke-width="7.1"/><circle class="pm-centro" cx="674" cy="302" r="5.8"/><path class="pm-flecha" d="M883.6 550.2Q837.2 447.6 740.9 416.0M756.4 432.6L740.9 416.0L763.2 411.9" pathLength="1" stroke-width="3.9"/></svg>
+            <span class="pm-etiqueta" aria-hidden="true" style="left: 65.15%; top: 60.06%;"><b data-pm-op="porcion">5,50 € la porción</b><b data-pm-op="entera">44,99 € entera</b></span>
+          </div>
+          <figcaption>«Nuestra famosa tarta de queso», en nuestro Instagram.</figcaption>
+        </figure>
+        <fieldset class="pm-selector" data-pm-selector hidden>
+          <legend>¿Cómo la quieres?</legend>
+          <label><input type="radio" name="tarta-op" value="porcion" checked data-pm-texto="La porción, en la barra."><span>Una porción · 5,50 €</span></label>
+          <label><input type="radio" name="tarta-op" value="entera" data-pm-texto="Por encargo con antelación. Unas 12 porciones."><span>La tarta entera · 44,99 €</span></label>
+        </fieldset>
+        <p class="pm-resultado" data-pm-resultado aria-live="polite" hidden></p>
+        <a class="btn btn-marino btn-encargar" data-pm-solo="entera" href="tel:+34642921274"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar para encargarla</a>
+      </div>
+      <div>
+        <p class="cifra"><span class="sr">Unas </span><span class="pm-contador" data-pm-contador aria-hidden="true">12</span><small>porciones</small></p>
+        <ul class="precios-tarta">
+          <li><span>Porción</span><b>5,50 €</b></li>
+          <li><span>Tarta entera <small>Por encargo con antelación, unas 12 porciones.</small></span><b>44,99 €</b></li>
+        </ul>
+        <blockquote class="cita"><p>«Todas las tartas de queso están increíblemente buenas (soy experta). […]»</p><footer>Lvf, en Google · mayo de 2026</footer></blockquote>
+        <div class="tarta-fotos">
+          <figure class="revela"><button class="foto-btn" type="button" data-galeria="tarta" data-grande="img/tarta-porcion-600.webp" data-pie="Una porción, recién servida" aria-label="Ampliar la foto: una porción, recién servida"><img src="img/tarta-porcion-480.webp" width="480" height="430" loading="lazy" decoding="async" alt="Una porción de tarta en un plato ovalado con cucharilla y cuchillo"><span class="mas" aria-hidden="true"><svg><use href="#i-mas"/></svg></span></button></figure>
+          <figure class="revela"><button class="foto-btn" type="button" data-galeria="tarta" data-grande="img/tarta-barra-900.webp" data-pie="Porciones listas en la barra" aria-label="Ampliar la foto: porciones listas en la barra"><img src="img/tarta-barra-480.webp" width="480" height="226" loading="lazy" decoding="async" alt="Una fila de porciones de tarta en sus platos sobre la barra"><span class="mas" aria-hidden="true"><svg><use href="#i-mas"/></svg></span></button></figure>
+        </div>
+        <div class="mas-tartas">
+          <h3>Más tartas de la casa</h3>
+          <ul class="precios-tarta">
+            <li><span>Tarta de manzana <small>Entera, 34,99 €.</small></span><b>3,99 €</b></li>
+            <li><span>Bizcocho de zanahoria <small>Entero, 29,99 €.</small></span><b>3,99 €</b></li>
+            <li><span>Lemon pay</span><b>4,50 €</b></li>
+            <li><span>Tarta de chocolate</span><b>5,50 €</b></li>
+            <li><span>Cookies <small>Chocolate blanco y chocolate con leche.</small></span><b>2,65 €</b></li>
+            <li><span>Tortitas <small>Con nata y sirope a elegir.</small></span><b>5,99 €</b></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="fuente-precios"><b>Precios de nuestra carta de enero de 2026.</b> Pueden haber cambiado: confírmalos al llamar.</p>
+  </div>
+</section>
+
+<!-- ============ LO MÁS NOMBRADO (marino; no hay datos de pedidos: son los platos que más salen en sus reseñas y etiquetas de Google): bento de tres; hermanas atenuadas (M30) ============
+     CONFIRMAR CON EL CLIENTE: precios de su carta de enero de 2026; si la tortilla de 17,99 € es la tortilla entera (no se escribe "entera"). -->
+<section class="sec pide mov" id="lo-mas-nombrado" aria-labelledby="t-pide">
+  <div class="deco" aria-hidden="true">
+    <span class="palabra-fondo" data-px="-80" style="top:18px;left:4%" data-t="casera"></span>
+    <span class="flor-fondo" data-py="-200" style="right:6%;top:30%"><svg class="flor-svg"><use href="#flor"/></svg></span>
+  </div>
+  <div class="wrap">
+    <div class="cab-sec">
+      <h2 class="tit tf tf-rizos tf-izq tf-delante" id="t-pide"><span>Lo que más se nombra</span></h2>
+      <p class="apoyo">Los platos que más salen en nuestras reseñas de Google.</p>
+    </div>
+    <div class="bento grupo">
+      <article class="plato item">
+        <figure class="revela"><span class="recorte"><img src="img/pide-tortilla-900.webp" srcset="img/pide-tortilla-480.webp 480w, img/pide-tortilla-900.webp 900w" sizes="(min-width:760px) 30vw, 116px" width="900" height="675" loading="lazy" decoding="async" alt="Tortilla de patata sobre una peana"></span></figure>
+        <div class="plato-txt">
+          <div class="linea-precio"><h3>Tortilla de patata</h3><span class="precio">17,99 €</span></div>
+          <p>Patatas de la huerta, huevos camperos y cebolla.</p>
+          <p class="extra">Pincho de tortilla, <b>3,60 €</b></p>
+        </div>
+      </article>
+      <article class="plato item">
+        <figure class="revela"><span class="recorte"><img src="img/pide-croquetas-900.webp" srcset="img/pide-croquetas-480.webp 480w, img/pide-croquetas-900.webp 900w" sizes="(min-width:760px) 30vw, 116px" width="900" height="675" loading="lazy" decoding="async" alt="Un plato de croquetas doradas"></span></figure>
+        <div class="plato-txt">
+          <div class="linea-precio"><h3>Croquetas de jamón serrano</h3><span class="precio">9,99 €</span></div>
+          <p>Seis unidades, hechas en casa.</p>
+        </div>
+      </article>
+      <article class="plato plato-marca item">
+        <div class="marca-bloque" aria-hidden="true"><svg class="flor"><use href="#flor"/></svg><span class="nombre-grande">Oreja</span></div>
+        <div class="plato-txt">
+          <div class="linea-precio"><h3>Oreja a la plancha</h3><span class="precio">10,55 €</span></div>
+          <p>Con la salsa estrella de la casa.</p>
+        </div>
+      </article>
+    </div>
+    <div class="citas-pide">
+      <blockquote class="cita"><p>«[…] La tarta de queso y la tortilla de patata sobresalientes.»</p><footer>David G., en Google · octubre de 2025</footer></blockquote>
+      <blockquote class="cita"><p>«[…] Las croquetas son espectaculares y caseras.»</p><footer>Enrique G., en Google · enero de 2026</footer></blockquote>
+    </div>
+    <p class="fuente-precios"><b>Precios de nuestra carta de enero de 2026.</b> Pueden haber cambiado: confírmalos al llamar.</p>
+  </div>
+</section>
+
+<!-- ============ LA CARTA (hoja crema): carta-lista-flexible v1.3.1 con la foto en su columna fija (con-foto) + M53 + M50 ============
+     CONFIRMAR CON EL CLIENTE: carta vigente y precios (su carta de enero de 2026, fotos en Google Maps). Sin alérgenos plato a plato.
+     Nombres y descripciones como en su carta (ortografía conservada: "Lemon pay"). Fotos: solo en filas con nombre en su fuente o
+     con pie descriptivo sin nombre de plato; ninguna tapa nombres ni precios (columna aparte). -->
+<section class="sec-hoja carta mov" id="carta" aria-labelledby="t-carta">
+  <div class="hoja marco-carta">
+    <div class="deco" aria-hidden="true"><span class="palabra-fondo" data-px="-70" style="top:20px;right:3%" data-t="carta"></span></div>
+    <span class="flor-esquina" aria-hidden="true"><svg class="flor-svg"><use href="#flor"/></svg></span>
+    <div class="cab-sec">
+      <p class="rotulo">Sophie-Ella · Bar · Cafetería · Comida casera</p>
+      <h2 class="tit tf tf-rizos tf-izq tf-delante" id="t-carta"><span>La carta</span></h2>
+      <p class="fuente-precios"><b>Precios de nuestra carta de enero de 2026.</b> Pueden haber cambiado: confírmalos al llamar.</p>
+    </div>
+    <div class="clf" data-clf data-clf-etiqueta="Apartados de la carta">
+      <div class="clf-espera"><p>Pide la carta al llamar: <a href="tel:+34642921274">642 92 12 74</a>.</p></div>
+      <div class="clf-viva">
+        <div class="clf-paneles">
+          <div class="clf-panel con-foto" id="carta-raciones" data-clf-pestana="Raciones">
+            <div class="clf-lista">
+              <h3 class="clf-tit" id="t-carta-raciones">Raciones</h3>
+              <ul class="clf-platos">
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Croquetas de jamón serrano (6 ud)</span><span class="clf-precio">9,99 €</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Huevos rotos</span><span class="clf-precio">13,99 €</span></p><p class="clf-desc">Jamón serrano, huevos, patatas fritas caseras.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Pollo a la plancha y patatas</span><span class="clf-precio">9,99 €</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Revuelto de la casa</span><span class="clf-precio">13,95 €</span></p><p class="clf-desc">Mix de setas, boletus, patatas, huevos y eneldo.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Revuelto de caviar de Burgos</span><span class="clf-precio">13,95 €</span></p><p class="clf-desc">Morcilla, patatas caseras, huevos y piñones.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Salchipapas</span><span class="clf-precio">7,50 €</span></p><p class="clf-desc">Patatas, salchichas, salsa de tomate y mayonesa.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Patatas bravas</span><span class="clf-precio">7,50 €</span></p><p class="clf-desc">Patatas caseras y salsa estrella de la casa.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Patatas 2 salsas</span><span class="clf-precio">7,50 €</span></p><p class="clf-desc">Patatas caseras, salsas: alioli y chimichurri.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Nuggets / lágrimas de pollo</span><span class="clf-precio">9,50 €</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Hamburguesas mini</span><span class="clf-precio">12,99 €</span></p><p class="clf-desc">Pan, carne, lechuga, chédar y salsas.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Mici de la casa</span><span class="clf-precio">10,55 €</span></p><p class="clf-desc">Mici, patatas fritas caseras y mostaza.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Pisto con huevos</span><span class="clf-precio">9,99 €</span></p><p class="clf-desc">Cebolla, tomate frito, pimiento, calabacín y huevos camperos.</p></li>
+                <!-- CONFIRMAR CON EL CLIENTE: si la tortilla de 17,99 € es la tortilla entera. -->
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Tortilla de patata</span><span class="clf-precio">17,99 €</span></p><p class="clf-desc">Patatas de la huerta, huevos camperos y cebolla.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Oreja a la plancha</span><span class="clf-precio">10,55 €</span></p><p class="clf-desc">Salsa estrella de la casa.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Boquerones fritos</span><span class="clf-precio">13,99 €</span></p></li>
+              </ul>
+            </div>
+            <div class="clf-foto">
+              <figure><div class="filete"><img src="img/carta-croquetas-640.webp" srcset="img/carta-croquetas-480.webp 480w, img/carta-croquetas-640.webp 640w" sizes="(min-width:861px) 20rem, 88vw" width="640" height="480" loading="lazy" decoding="async" alt="Croquetas con ensalada y patata paja en un plato blanco"></div><figcaption>Croquetas con ensalada y patata paja.</figcaption></figure>
+            </div>
+          </div>
+          <div class="clf-panel" id="carta-bocadillos" data-clf-pestana="Bocadillos">
+            <div class="clf-lista">
+              <h3 class="clf-tit" id="t-carta-bocadillos">Bocadillos</h3>
+              <p class="clf-nota">Todos los extras, +0,50 €.</p>
+              <ul class="clf-platos">
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Bocadillo Sophie-Ella</span><span class="clf-precio">8,99 €</span></p><p class="clf-desc">Secreto, lechuga, queso de cabra, cebolla caramelizada y salsa de la casa.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Bocadillo pollo</span><span class="clf-precio">7,99 €</span></p><p class="clf-desc">Pollo, lechuga, tomate y queso havarti.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Bocadillo lomo</span><span class="clf-precio">6,99 €</span></p><p class="clf-desc">Lomo y queso havarti.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Bocadillo tortilla</span><span class="clf-precio">6,99 €</span></p><p class="clf-desc">Tortilla de patata con huevos camperos.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Bocadillo bacon y queso</span><span class="clf-precio">6,99 €</span></p><p class="clf-desc">Bacon, queso havarti.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Bocadillo caviar de Burgos</span><span class="clf-precio">6,99 €</span></p><p class="clf-desc">Morcilla y huevo campero.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Bocadillo serranito</span><span class="clf-precio">7,50 €</span></p><p class="clf-desc">Jamón serrano, tortilla francesa, tomate y aceite de oliva.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Bocadillo panceta y pimientos</span><span class="clf-precio">7,50 €</span></p><p class="clf-desc">Panceta y pimientos de la huerta.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Bocadillo vegetal</span><span class="clf-precio">6,99 €</span></p><p class="clf-desc">Huevos camperos, atún, lechuga, cebolla y tomate.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Bocadillo vegetariano</span><span class="clf-precio">6,99 €</span></p><p class="clf-desc">Tortilla francesa con huevos camperos, tomate de la huerta, lechuga y aceite de oliva.</p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="clf-panel con-foto" id="carta-desayunos" data-clf-pestana="Desayunos">
+            <div class="clf-lista">
+              <h3 class="clf-tit" id="t-carta-desayunos">Desayunos y sándwiches</h3>
+              <ul class="clf-platos">
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Desayuno normal</span><span class="clf-precio">3,20 €</span></p><p class="clf-desc">Tostada con tomate o mantequilla y mermelada, con café, infusión o colacao.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Desayuno americano</span><span class="clf-precio">5,95 €</span></p><p class="clf-desc">Huevos con salchicha o bacon y pan, con café, infusión o colacao.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Desayuno especial</span><span class="clf-precio">5,95 €</span></p><p class="clf-desc">Tostada de aguacate, con café, infusión o colacao.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Desayuno serranito</span><span class="clf-precio">4,30 €</span></p><p class="clf-desc">Tostada con tomate y jamón, con café, infusión o colacao.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Desayuno de la casa</span><span class="clf-precio">4,50 €</span></p><p class="clf-desc">Revuelto de huevos y salchicha, con café, infusión o colacao.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Café, infusiones o colacao</span><span class="clf-precio">1,70 €</span></p><p class="clf-desc">Opción sin lactosa y bebida vegetal.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Sándwich mixto</span><span class="clf-precio">4,00 €</span></p><p class="clf-desc">Jamón york y queso (opción croissant).</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Sándwich vegetal</span><span class="clf-precio">4,50 €</span></p><p class="clf-desc">Atún, huevo, lechuga, tomate y cebolla.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Sándwich queso de cabra</span><span class="clf-precio">5,50 €</span></p><p class="clf-desc">Queso de cabra, cebolla caramelizada, rúcula, aceite de oliva.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Brunch energético</span><span class="clf-precio">8,50 €</span></p><p class="clf-desc">Pan tostado, aguacate, huevo, tomate de la huerta y mozzarella italiana, con café, infusión o colacao. Opción vegetariana.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Pincho de tortilla</span><span class="clf-precio">3,60 €</span></p><p class="clf-desc">Patata de la huerta, huevos camperos y cebolla. Opción vegetariana.</p></li>
+              </ul>
+            </div>
+            <div class="clf-foto">
+              <figure><div class="filete"><img src="img/carta-tostadas-640.webp" srcset="img/carta-tostadas-480.webp 480w, img/carta-tostadas-640.webp 640w" sizes="(min-width:861px) 20rem, 88vw" width="640" height="640" loading="lazy" decoding="async" alt="Una tostada con aguacate y semillas en una bandeja blanca"></div><figcaption>Una tostada con aguacate.</figcaption></figure>
+              <figure><div class="filete"><img src="img/carta-pincho-640.webp" srcset="img/carta-pincho-480.webp 480w, img/carta-pincho-640.webp 640w" sizes="(min-width:861px) 20rem, 88vw" width="640" height="480" loading="lazy" decoding="async" alt="Un pincho de tortilla de patata sobre pan, en un plato de cerámica"></div><figcaption>Pincho de tortilla.</figcaption></figure>
+            </div>
+          </div>
+          <div class="clf-panel con-foto" id="carta-postres" data-clf-pestana="Postres">
+            <div class="clf-lista">
+              <h3 class="clf-tit" id="t-carta-postres">Postres</h3>
+              <p class="clf-nota">Por porción.</p>
+              <ul class="clf-platos">
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Tarta de queso</span><span class="clf-precio">5,50 €</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Tarta de manzana</span><span class="clf-precio">3,99 €</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Bizcocho de zanahoria</span><span class="clf-precio">3,99 €</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Lemon pay</span><span class="clf-precio">4,50 €</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Tarta de chocolate</span><span class="clf-precio">5,50 €</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Cookies</span><span class="clf-precio">2,65 €</span></p><p class="clf-desc">Chocolate blanco y chocolate con leche.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Tortitas</span><span class="clf-precio">5,99 €</span></p><p class="clf-desc">Tortitas con nata y sirope a elegir.</p></li>
+              </ul>
+              <h3 class="clf-tit" style="margin-top:28px">Tartas completas</h3>
+              <p class="clf-nota">Por encargo con antelación (aprox. 12 porciones).</p>
+              <ul class="clf-platos">
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Tarta de queso</span><span class="clf-precio">44,99 €</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Tarta de manzana</span><span class="clf-precio">34,99 €</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Bizcocho de zanahoria</span><span class="clf-precio">29,99 €</span></p></li>
+              </ul>
+            </div>
+            <div class="clf-foto">
+              <figure><div class="filete"><img src="img/carta-manzana-640.webp" srcset="img/carta-manzana-480.webp 480w, img/carta-manzana-640.webp 640w" sizes="(min-width:861px) 20rem, 88vw" width="640" height="480" loading="lazy" decoding="async" alt="Tarta de manzana entera con fresas y azúcar glas por encima, sobre la barra"></div><figcaption>Tarta de manzana.</figcaption></figure>
+              <figure><div class="filete"><img src="img/carta-chocolate-640.webp" srcset="img/carta-chocolate-480.webp 480w, img/carta-chocolate-640.webp 640w" sizes="(min-width:861px) 20rem, 88vw" width="640" height="404" loading="lazy" decoding="async" alt="Una porción de tarta de chocolate con una fresa, junto a un café"></div><figcaption>Tarta de chocolate.</figcaption></figure>
+            </div>
+          </div>
+        </div>
+        <div class="al-encargo">
+          <p><strong>Por encargo</strong><br>Arroces (mínimo 2 personas y 48 horas de antelación), carnes y tartas enteras.</p>
+          <a class="btn btn-linea" href="#encargos">Ver los encargos<svg class="ico" aria-hidden="true"><use href="#i-abajo"/></svg></a>
+        </div>
+        <div class="clf-pie">
+          <p>Precios de nuestra carta de enero de 2026: confírmalos al llamar. IVA incluido.</p>
+          <p>Pregúntanos por los alérgenos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ENCARGOS (marino con granito): M10 en la foto, M60 en el botón, la regla de los arroces en una tira crema quieta ============
+     CONFIRMAR CON EL CLIENTE: precios de su carta de enero de 2026; carnes a precio de mercado ("PM" en su carta). -->
+<section class="sec encargos mov" id="encargos" aria-labelledby="t-encargos">
+  <div class="fondo-vivo fv-baldosa-propia fv-b-granito fv-quieto" aria-hidden="true"><span class="fv-papel"></span><span class="fv-papel"></span><span class="fv-papel"></span></div>
+  <div class="deco" aria-hidden="true">
+    <span class="palabra-fondo" data-px="80" style="top:18px;right:3%" data-t="encargos"></span>
+    <span class="flor-fondo" data-py="-160" style="left:4%;bottom:12%"><svg class="flor-svg"><use href="#flor"/></svg></span>
+  </div>
+  <div class="wrap">
+    <div class="cab-sec">
+      <h2 class="tit tf tf-rizos tf-izq tf-delante" id="t-encargos"><span>Por encargo</span></h2>
+      <p class="apoyo">Arroces, carnes y tartas enteras. Se encargan por teléfono.</p>
+    </div>
+    <div class="encargos-rejilla">
+      <figure class="encargo-foto revela"><span class="recorte"><img src="img/encargo-arroz-900.webp" srcset="img/encargo-arroz-560.webp 560w, img/encargo-arroz-900.webp 900w" sizes="(min-width:960px) 38vw, 92vw" width="900" height="784" loading="lazy" decoding="async" alt="Arroz caldoso con bogavante en una cazuela de barro"></span>
+        <figcaption>Arroz con bogavante.</figcaption></figure>
+      <div>
+        <div class="encargo-panel">
+          <h3>Arroces</h3>
+          <p>Precio por persona.</p>
+          <ul class="lista-encargo">
+            <li><span>Arroz con bogavante</span><b>24,00 €</b></li>
+            <li><span>Arroz negro</span><b>13,99 €</b></li>
+            <li><span>Arroz a banda</span><b>13,99 €</b></li>
+            <li><span>Paella mixta (pollo y marisco)</span><b>14,99 €</b></li>
+          </ul>
+          <div class="regla"><svg aria-hidden="true"><use href="#flor"/></svg><p>Mínimo 2 personas y 48 horas de antelación.</p></div>
+        </div>
+        <div class="encargo-panel">
+          <h3>Carnes</h3>
+          <ul class="lista-encargo">
+            <li><span>Entrecot con patatas</span><span class="pm-txt">Precio de mercado</span></li>
+            <li><span>Lomo alto con patatas</span><span class="pm-txt">Precio de mercado</span></li>
+            <li><span>Chuletón con pimientos del padrón y patatas</span><span class="pm-txt">Precio de mercado</span></li>
+          </ul>
+        </div>
+        <div class="encargo-panel">
+          <h3>Tartas enteras</h3>
+          <p>Con antelación, unas 12 porciones.</p>
+          <ul class="lista-encargo">
+            <li><span>Tarta de queso</span><b>44,99 €</b></li>
+            <li><span>Tarta de manzana</span><b>34,99 €</b></li>
+            <li><span>Bizcocho de zanahoria</span><b>29,99 €</b></li>
+          </ul>
+        </div>
+        <div class="encargo-accion" data-tapa-barra>
+          <a class="btn-hunde" href="tel:+34642921274"><span class="base" aria-hidden="true"></span><span class="cara"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar para encargar · 642 92 12 74</span></a>
+        </div>
+        <p class="para-llevar">También comida para llevar: pídela por teléfono.</p>
+      </div>
+    </div>
+    <p class="fuente-precios"><b>Precios de nuestra carta de enero de 2026.</b> Pueden haber cambiado: confírmalos al llamar.</p>
+  </div>
+</section>
+
+<!-- ============ COCINADO POR UNA SOLA PERSONA (hoja crema): M14 la frase de su carta se enciende al pasar ============
+     "Cocinado por una sola persona": bio de su TikTok, presentado como cita (una reseña habla de "los dueños": CONFIRMAR quién cocina). La frase grande es literal de su carta ("Cada plato se prepara al momento,
+     con dedicación y respeto por el producto"). Apertura: 24-06-2023 (su pizarra en Instagram). -->
+<section class="sec-hoja casa mov" id="casa" aria-labelledby="t-casa">
+  <div class="hoja marco-carta">
+    <div class="deco" aria-hidden="true"><span class="palabra-fondo" data-px="60" style="bottom:20px;left:3%" data-t="al momento"></span></div>
+    <div class="casa-rejilla">
+      <div>
+        <h2 class="tit tf tf-rizos tf-izq tf-delante" id="t-casa"><span>«Cocinado por <span class="mano">una sola persona</span>»</span></h2>
+        <p class="lee-cita">Así lo dice la bio de nuestro TikTok.</p>
+        <p class="lee-texto">«Cada plato se prepara <em>al momento</em>, con dedicación y respeto por el producto.»</p>
+        <p class="lee-cita">De nuestra carta.</p>
+        <p class="casa-txt">Las croquetas y las tartas se hacen en casa, con ingredientes frescos y locales.</p>
+        <p class="desde">Abierto desde junio de 2023</p>
+      </div>
+      <figure class="casa-foto revela"><span class="recorte"><img src="img/casa-croquetas-900.webp" srcset="img/casa-croquetas-480.webp 480w, img/casa-croquetas-900.webp 900w" sizes="(min-width:960px) 34vw, 88vw" width="900" height="936" loading="lazy" decoding="async" alt="Tres bandejas de croquetas empanadas, antes de freír"></span>
+        <figcaption>Croquetas hechas en casa, antes de freír.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HORARIO (hoja crema): lista con la fila de hoy + nota de papel de agosto (M63) ============
+     CONFIRMAR CON EL CLIENTE: horario de Google Maps (24-10-2026), fechas del cierre de agosto, festivos. Los festivos no se calculan:
+     nunca se dice "hoy no hay servicio". Si cambia: HORARIO en js/sitio.js, esta lista, la pregunta de agosto, el JSON-LD y el pie. -->
+<section class="sec-hoja horario mov" id="horario" aria-labelledby="t-horario">
+  <div class="hoja marco-carta">
+    <div class="deco" aria-hidden="true"><span class="palabra-fondo" data-px="-70" style="top:18px;right:4%" data-t="horario"></span></div>
+    <div class="cab-sec">
+      <h2 class="tit tf tf-rizos tf-izq tf-delante" id="t-horario"><span>Cuándo venir</span></h2>
+    </div>
+    <div class="horario-rejilla">
+      <div>
+        <dl class="dias" id="dias">
+          <div data-dia="1"><dt>Lunes</dt><dd>9:00 a 22:00</dd></div>
+          <div data-dia="2"><dt>Martes</dt><dd>9:00 a 22:00</dd></div>
+          <div data-dia="3"><dt>Miércoles</dt><dd>9:00 a 22:00</dd></div>
+          <div data-dia="4"><dt>Jueves</dt><dd>9:00 a 23:00</dd></div>
+          <div data-dia="5"><dt>Viernes</dt><dd>9:00 a 23:30</dd></div>
+          <div data-dia="6"><dt>Sábado</dt><dd>10:00 a 23:30</dd></div>
+          <div data-dia="0"><dt>Domingo</dt><dd>Cerrado</dd></div>
+        </dl>
+        <p class="estado estado-hoy-lista" data-estado-hoy><span role="status"><b class="estado-palabra">Pedidos y reservas</b> · <span class="estado-detalle">642 92 12 74</span></span></p>
+        <p class="horario-fuente">Horario según Google. En festivos, mejor llama antes de venir.</p>
+      </div>
+      <aside class="nota" aria-labelledby="t-agosto">
+        <h3 id="t-agosto">En agosto cerramos por vacaciones</h3>
+        <p>Las fechas exactas, llamando al <a href="tel:+34642921274">642 92 12 74</a>.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OPINIONES (marino con granito): pila de reseñas (M54 pila-deslizable v2). Sin JS, todas en lista ============
+     Frases literales de reseñas de 5 estrellas de Google Maps (leídas el 24-10-2026), con nombre de pila e inicial y el mes aproximado
+     (Google da "hace N meses" a 24-10-2026). Fuera las que nombran a la dueña. -->
+<section class="sec opiniones mov" id="opiniones" aria-labelledby="t-opiniones">
+  <div class="fondo-vivo fv-baldosa-propia fv-b-granito fv-quieto" aria-hidden="true"><span class="fv-papel"></span><span class="fv-papel"></span><span class="fv-papel"></span></div>
+  <div class="deco" aria-hidden="true">
+    <span class="palabra-fondo" data-px="-70" style="top:18px;left:4%" data-t="reseñas"></span>
+    <span class="flor-fondo" data-py="-240" style="right:8%;top:40%"><svg class="flor-svg"><use href="#flor"/></svg></span>
+  </div>
+  <div class="wrap">
+    <div class="opiniones-rejilla">
+    <div class="cab-sec opiniones-cab">
+      <h2 class="tit tf tf-rizos tf-izq tf-delante" id="t-opiniones"><span>Lo que dicen</span></h2>
+      <p class="nota-google">4,9 <span>en Google · 138 reseñas</span></p>
+      <div class="opiniones-pie">
+        <a class="btn btn-linea iman" href="https://www.google.com/maps/search/?api=1&amp;query=Bar%20Sophie%20Ella%20Parla" target="_blank" rel="noopener">Leer las reseñas en Google<svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+        <p>Frases de reseñas de 5 estrellas en Google Maps.</p>
+      </div>
+    </div>
+    <div class="pila-zona">
+      <div class="pila" id="pila" tabindex="0" role="region" aria-roledescription="carrusel" aria-label="Opiniones de clientes en Google. Usa las flechas para pasar.">
+        <figure class="res marco-carta"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Fuimos para probar su propuesta para la ruta de la tapa (La mejor de todas las que hemos probado) y ya nos quedamos a comer. ¡Todo riquísimo!»</p></blockquote><figcaption><b>Stef M.</b> · mayo de 2026</figcaption></figure>
+        <figure class="res marco-carta"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Un bar espectacular en Parla, pasamos una comida y nos quedamos por la tarde allí, y nos trataron genial, os recomiendo las croquetas, son caseras y están de locos...»</p></blockquote><figcaption><b>David P.</b> · marzo de 2026</figcaption></figure>
+        <figure class="res marco-carta"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Simplemente espectacular, hemos comido de lujo, la paella mixta buenísima, muy buen ambiente, se está muy muy a gusto.»</p></blockquote><figcaption><b>Manuel N.</b> · abril de 2026</figcaption></figure>
+        <figure class="res marco-carta"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Hoy por primera vez lo conocimos y menuda sorpresa. Solo pasé por la zona para tomar algo pero ahora que lo conozco y que conozco su carta volveré muchas veces.»</p></blockquote><figcaption><b>Ángel G.</b> · julio de 2026</figcaption></figure>
+        <figure class="res marco-carta"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Comida muy buena, hecha con mimo y muy bien servicio. La persona que lleva el negocio muy amable y pendiente de que todo estuviera bien»</p></blockquote><figcaption><b>Pedro C.</b> · julio de 2026</figcaption></figure>
+        <figure class="res marco-carta"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Fantástico, sitio super recomendable. La comida espectacular, y las tartas INCREÍBLES»</p></blockquote><figcaption><b>Sr. Benher</b> · mayo de 2026</figcaption></figure>
+        <figure class="res marco-carta"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Un lugar familiar y acogedor donde disfrutar con amigos y familia de comida casera de calidad […] Tienen la opción de encargar lo que quieras sin perder nada de calidad.»</p></blockquote><figcaption><b>Koraco T.</b> · julio de 2026</figcaption></figure>
+        <figure class="res marco-carta"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Hemos ido a desayunar. Todo muy bueno, un buen café y las tostadas […] sobre todo la facilidad para adaptar el desayuno a lo que realmente nos apetecía.»</p></blockquote><figcaption><b>Rubén R.</b> · octubre de 2025</figcaption></figure>
+        <figure class="res marco-carta"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Sitio acogedor y agradable para desayunar, comer o simplemente tomarte unas cañas. Comida casera al 100% y deliciosa, los dueños amables y cercanos.»</p></blockquote><figcaption><b>Diana R.</b> · octubre de 2025</figcaption></figure>
+        <figure class="res marco-carta"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Comida casera riquisima, un servicio cercano y amable, empezamos con las croquetas que estaban deliciosas y acabamos con la tarta de queso que recomiendo encarecidamente pedirla»</p></blockquote><figcaption><b>Guillermo J.</b> · febrero de 2026</figcaption></figure>
+      </div>
+      <div class="pila-ctrl"><button type="button" id="pilaAnt">← Anterior</button><span class="pila-cuenta" id="pilaCuenta" aria-live="polite"></span><button type="button" id="pilaSig">Siguiente →</button></div>
+      <p class="pila-pista">Desliza la reseña a un lado para ver la siguiente.</p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ UBICACIÓN (hoja crema): el toldo + ubicacion-mapa v3 ============
+     CONFIRMAR CON EL CLIENTE: número de la calle (15 en su carta de enero de 2026, 26 en la bio de Instagram); atributos de Google
+     (aparcamiento, silla de ruedas, perros en el exterior, para llevar sí; a domicilio no consta). Fachada: foto de febrero de 2024. -->
+<section class="sec-hoja ubicacion mov" id="ubicacion" aria-labelledby="t-ubicacion">
+  <div class="hoja marco-carta">
+    <div class="deco" aria-hidden="true"><span class="palabra-fondo" data-px="70" style="top:18px;right:4%" data-t="parla"></span></div>
+    <div class="cab-sec">
+      <h2 class="tit tf tf-rizos tf-izq tf-delante" id="t-ubicacion"><span>Dónde estamos</span></h2>
+    </div>
+    <figure class="fachada revela">
+      <span class="recorte"><img src="img/fachada-1600.webp" srcset="img/fachada-900.webp 900w, img/fachada-1600.webp 1600w" sizes="(min-width:1180px) 1060px, 88vw" width="1600" height="320" loading="lazy" decoding="async" alt="El rótulo Sophie-Ella Bar Restaurante y el toldo marrón con las palabras Bar, Restaurante y Comida para llevar"></span>
+      <figcaption>Busca este toldo en la calle Río Guadiana.</figcaption>
+    </figure>
+    <div class="donde-rejilla">
+      <div class="datos">
+        <!-- CONFIRMAR CON EL CLIENTE: número 15 (su carta); su Instagram dice 26. -->
+        <p class="direccion">C. Río Guadiana, 15<br>28981 Parla (Madrid)</p>
+        <dl class="datos-lista">
+          <div><dt>Teléfono</dt><dd>Pedidos y reservas: <a href="tel:+34642921274">642 92 12 74</a></dd></div>
+          <div><dt>Para llevar</dt><dd>Sí, pidiendo por teléfono (según Google). A domicilio: no consta.</dd></div>
+          <div><dt>Aparcamiento</dt><dd>Gratis en la calle, según Google.</dd></div>
+          <div><dt>Accesible</dt><dd>Entrada en silla de ruedas, según Google.</dd></div>
+          <div><dt>Perros</dt><dd>En el exterior, según Google.</dd></div>
+        </dl>
+        <div class="datos-botones">
+          <a class="btn btn-oro iman" href="https://www.google.com/maps/dir/?api=1&amp;destination=Bar%20Sophie%20Ella%2C%20Parla" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Cómo llegar</a>
+          <a class="btn btn-linea" href="https://maps.apple.com/?q=Bar%20Sophie%20Ella&amp;address=Calle%20R%C3%ADo%20Guadiana%2C%2028981%20Parla" target="_blank" rel="noopener">Apple Maps</a>
+        </div>
+      </div>
+      <div class="mapa" id="mapa">
+        <div class="mapa-fachada" id="mapaFachada">
+          <span class="mapa-pin" aria-hidden="true"><svg><use href="#i-pin"/></svg></span>
+          <p>El mapa es de Google Maps: solo se carga si lo pides, y entonces Google puede guardar sus propias cookies.</p>
+          <button class="btn btn-linea iman" type="button" id="btnMapa">Ver el mapa aquí</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PREGUNTAS (hoja crema): acordeon-nativo + FAQ interactiva de M30 ============ -->
+<section class="sec-hoja preguntas mov" id="preguntas" aria-labelledby="t-preguntas">
+  <div class="hoja marco-carta">
+    <div class="deco" aria-hidden="true"><span class="palabra-fondo" data-px="-60" style="bottom:20px;left:3%" data-t="preguntas"></span></div>
+    <div class="faq-rejilla">
+      <div>
+        <h2 class="tit tf tf-rizos tf-izq tf-delante" id="t-preguntas"><span>Preguntas</span></h2>
+        <p class="faq-intro">¿No está aquí lo que buscas? Llama al <a href="tel:+34642921274">642 92 12 74</a>.</p>
+      </div>
+      <div class="faq">
+        <details name="faq"><summary>¿Cómo encargo un arroz?<span class="signo" aria-hidden="true"></span></summary>
+          <div class="contenido"><p>Llamando al <a href="tel:+34642921274">642 92 12 74</a> con 48 horas de antelación. El mínimo son 2 personas y el precio es por persona.</p></div></details>
+        <details name="faq"><summary>¿Puedo encargar una tarta entera?<span class="signo" aria-hidden="true"></span></summary>
+          <div class="contenido"><p>Sí, con antelación. La de queso cuesta 44,99 € (unas 12 porciones); también hay de manzana (34,99 €) y bizcocho de zanahoria (29,99 €). Precios de nuestra carta de enero de 2026.</p></div></details>
+        <details name="faq"><summary>¿Abrís en agosto?<span class="signo" aria-hidden="true"></span></summary>
+          <div class="contenido"><p>En agosto cerramos por vacaciones. Las fechas exactas, llamando al <a href="tel:+34642921274">642 92 12 74</a>.</p></div></details>
+        <details name="faq"><summary>¿Se puede reservar mesa?<span class="signo" aria-hidden="true"></span></summary>
+          <div class="contenido"><p>Sí, por teléfono, en el <a href="tel:+34642921274">642 92 12 74</a>.</p></div></details>
+        <details name="faq"><summary>¿Hay opciones vegetarianas o sin lactosa?<span class="signo" aria-hidden="true"></span></summary>
+          <div class="contenido"><p>La carta marca opción vegetariana en el brunch energético y en el pincho de tortilla, y el café tiene opción sin lactosa y bebida vegetal. Para lo demás, pregúntanos.</p></div></details>
+        <details name="faq"><summary>¿Se puede pedir para llevar? ¿Y a domicilio?<span class="signo" aria-hidden="true"></span></summary>
+          <div class="contenido"><p>Para llevar, sí (según Google): pídelo por teléfono y pasa a recogerlo. De momento no consta reparto a domicilio.</p></div></details>
+        <details name="faq"><summary>¿Tenéis en cuenta las alergias?<span class="signo" aria-hidden="true"></span></summary>
+          <div class="contenido"><p>Pregúntanos por los alérgenos antes de pedir.</p></div></details>
+        <!-- CONFIRMAR CON EL CLIENTE: si hacen menú del día (Facebook e Instagram de 2023 lo mencionan, sin precio ni contenido actual). -->
+        <details name="faq"><summary>¿Hay menú del día?<span class="signo" aria-hidden="true"></span></summary>
+          <div class="contenido"><p>Pregúntalo al llamar al <a href="tel:+34642921274">642 92 12 74</a>.</p></div></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LLAMADA FINAL (marino con granito): M01 en el titular + M60 ============ -->
+<section class="sec final mov" aria-labelledby="t-final">
+  <div class="fondo-vivo fv-baldosa-propia fv-b-granito fv-quieto" aria-hidden="true"><span class="fv-papel"></span><span class="fv-papel"></span><span class="fv-papel"></span></div>
+  <div class="deco" aria-hidden="true">
+    <span class="final-flor"><svg class="flor-svg"><use href="#flor"/></svg></span>
+    <span class="palabra-fondo" data-px="-70" style="top:18px;left:4%" data-t="como en casa"></span>
+  </div>
+  <div class="wrap final-texto">
+    <h2 class="final-h2" id="t-final"><span class="titular-palabras">¿Te encargamos la <span class="mano">tuya</span>?</span></h2>
+    <p class="apoyo">Una tarta entera o un arroz para dos: llama con antelación. Y si solo vienes a por una porción, aquí estamos.</p>
+    <div class="final-acciones" data-tapa-barra>
+      <a class="btn-hunde" href="tel:+34642921274"><span class="base" aria-hidden="true"></span><span class="cara"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar al 642 92 12 74</span></a>
+    </div>
+    <p class="estado estado-final" data-estado-hoy><span role="status"><b class="estado-palabra">C. Río Guadiana</b> · <span class="estado-detalle">Parla</span></span></p>
+  </div>
+</section>
+</main>
+
+<footer class="pie">
+  <div class="wrap pie-rejilla">
+    <div>
+      <div class="pie-marca"><img src="img/logo-140.webp" width="140" height="140" loading="lazy" decoding="async" alt="Logo de Sophie-Ella: cubiertos cruzados, una copa y una taza sobre fondo azul marino"><p class="pie-nombre">Sophie-Ella</p></div>
+      <p>Bar · Cafetería · Comida casera, en Parla.</p>
+    </div>
+    <div>
+      <p class="pie-tit">Dónde</p>
+      <!-- CONFIRMAR CON EL CLIENTE: número 15 (su carta); su Instagram dice 26. -->
+      <p>C. Río Guadiana, 15<br>28981 Parla (Madrid)</p>
+      <p>Pedidos y reservas: <a href="tel:+34642921274">642 92 12 74</a></p>
+      <p><a href="https://www.instagram.com/bar.sophieella/" target="_blank" rel="noopener">@bar.sophieella</a> · <a href="https://www.tiktok.com/@bar_sophieella" target="_blank" rel="noopener">@bar_sophieella</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Bar%20Sophie%20Ella%20Parla" target="_blank" rel="noopener">Google Maps</a></p>
+    </div>
+    <div>
+      <p class="pie-tit">Horario <span class="pie-fuente">(según Google)</span></p>
+      <p>Lunes a miércoles, de 9:00 a 22:00<br>Jueves, de 9:00 a 23:00<br>Viernes, de 9:00 a 23:30<br>Sábado, de 10:00 a 23:30<br>Domingo, cerrado</p>
+      <p>En agosto cerramos por vacaciones.</p>
+    </div>
+    <nav aria-label="Secciones">
+      <p class="pie-tit">En esta web</p>
+      <ul class="pie-enlaces">
+        <li><a href="#tarta">La tarta de queso</a></li><li><a href="#lo-mas-nombrado">Lo más nombrado</a></li><li><a href="#carta">La carta</a></li><li><a href="#encargos">Encargos</a></li>
+        <li><a href="#horario">Horario</a></li><li><a href="#opiniones">Opiniones</a></li><li><a href="#ubicacion">Ubicación</a></li><li><a href="#preguntas">Preguntas</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap pie-legal">
+    <p><a href="privacy.html">Privacidad</a> · <a href="terms.html">Aviso legal</a></p>
+    <p>Fotos: Google Maps e Instagram de Sophie-Ella.</p>
+    <p>Web de <a href="https://degaldodesigns.es" target="_blank" rel="noopener">Degaldo Designs</a></p>
+  </div>
+</footer>
+
+<div class="barra-movil" id="barraMovil" role="region" aria-label="Llamar o ver la carta">
+  <a class="btn btn-oro" href="tel:+34642921274"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar</a>
+  <a class="btn btn-linea" href="#carta">Ver la carta</a>
+</div>
+
+<dialog class="visor" id="visor" aria-label="Foto ampliada">
+  <figure><img src="img/tarta-barra-900.webp" width="900" height="424" alt="Foto ampliada" loading="lazy" decoding="async"><figcaption></figcaption></figure>
+  <div class="visor-barra">
+    <button class="visor-btn" type="button" data-ir="-1" aria-label="Foto anterior">‹</button>
+    <button class="visor-btn" type="button" data-ir="1" aria-label="Foto siguiente">›</button>
+    <button class="visor-btn" type="button" data-cerrar aria-label="Cerrar">×</button>
+  </div>
+</dialog>
+
+<script src="js/carta.js" defer></script>
+<script src="js/porciones.js" defer></script>
+<script src="js/sitio.js" defer></script>
+</body>
+</html>
