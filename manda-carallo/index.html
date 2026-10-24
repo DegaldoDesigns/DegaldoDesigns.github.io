@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manda Carallo · Restaurante gallego en Getafe</title>
+<meta name="description" content="Cocina gallega en la calle Carabanchel, 12, Getafe: pulpo con cachelos, zamburiñas, lacón, zorza y filloas. Reservas por teléfono: 654 07 88 23.">
+<!-- DEMO: noindex hasta que el restaurante apruebe la web. Al publicar en su dominio, quitar noindex y cambiar la URL de canonical, og:url, og:image, JSON-LD, sitemap y robots (aquí y en todas las páginas). -->
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://degaldodesigns.es/manda-carallo/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Manda Carallo">
+<meta property="og:title" content="Manda Carallo · Restaurante gallego en Getafe">
+<meta property="og:description" content="Pulpo con cachelos, raciones y emociones en la calle Carabanchel, Getafe. Reservas: 654 07 88 23.">
+<meta property="og:image" content="https://degaldodesigns.es/manda-carallo/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://degaldodesigns.es/manda-carallo/">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Manda Carallo · Restaurante gallego en Getafe">
+<meta name="twitter:description" content="Pulpo con cachelos, raciones y emociones en la calle Carabanchel, Getafe. Reservas: 654 07 88 23.">
+<meta name="twitter:image" content="https://degaldodesigns.es/manda-carallo/og-image.jpg">
+<meta name="theme-color" content="#2A1215">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/uncial-antiqua-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/atkinson-hyperlegible-next-latin-recortada.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="img/portada-pulpo-1240.webp" imagesrcset="img/portada-pulpo-720.webp 720w, img/portada-pulpo-1240.webp 1240w" imagesizes="(min-width:1024px) 42vw, 92vw" media="(min-width: 641px)">
+<link rel="preload" as="image" href="img/portada-pulpo-cuadrada-720.webp" imagesrcset="img/portada-pulpo-cuadrada-480.webp 480w, img/portada-pulpo-cuadrada-720.webp 720w" imagesizes="92vw" media="(max-width: 640px)">
+<link rel="stylesheet" href="css/estilos.css">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Restaurant",
+ "name": "Restaurante Manda Carallo",
+ "description": "Restaurante de cocina gallega en Getafe: pulpo con cachelos, zamburiñas, lacón, zorza, filloas y arroz con bogavante por encargo.",
+ "url": "https://degaldodesigns.es/manda-carallo/",
+ "image": "https://degaldodesigns.es/manda-carallo/og-image.jpg",
+ "servesCuisine": ["Gallega", "Raciones"],
+ "priceRange": "20-30 €",
+ "telephone": "+34654078823",
+ "acceptsReservations": "True",
+ "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "C. Carabanchel, 12",
+  "postalCode": "28903",
+  "addressLocality": "Getafe",
+  "addressRegion": "Madrid",
+  "addressCountry": "ES"
+ },
+ "openingHoursSpecification": [
+  {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday", "Thursday", "Friday", "Saturday"], "opens": "13:00", "closes": "16:00"},
+  {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday", "Thursday", "Friday", "Saturday"], "opens": "20:00", "closes": "23:00"},
+  {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "13:30", "closes": "17:00"}
+ ],
+ "sameAs": ["https://www.instagram.com/mandacarallogetafe/"]
+}
+</script>
+<!-- CONFIRMAR CON EL CLIENTE (resumen; cada punto va también junto a su texto y en ../ficha.md):
+     - Horario: el de Google Maps (miércoles a sábado 13:00-16:00 y 20:00-23:00; domingo 13:30-17:00; lunes y martes cerrado).
+       Aperturas extra en puentes: las avisan en Instagram (11 y 12 de octubre de 2026). Si cambia: HORARIO en js/sitio.js,
+       la lista de Reservar, la pregunta "¿Qué días abrís?", el JSON-LD y el pie.
+     - Teléfono: solo el móvil 654 07 88 23 (Maps, Instagram y pizarra). El fijo 91 695 84 64 sale en su carta de papel de
+       febrero de 2026: que digan si sigue en uso. WhatsApp: no publicado, no se anuncia.
+     - Dirección: C. Carabanchel, 12 (Google Maps); otras fuentes dicen el 14.
+     - Carta y precios: los de su pizarra de mayo de 2026 (foto de un cliente en Maps). Arroz con bogavante por encargo, sin precio.
+       Sin alérgenos plato a plato.
+     - Fotos: de clientes en Google Maps, solo para la demo. Nombre de plato solo en el pulpo y las filloas.
+     - Nombres de los dueños: no se ponen (no confirmados). Nada de reparto a domicilio, terraza ni menú del día. -->
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-tel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+  <symbol id="i-flecha" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-abajo" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-estrella" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></symbol>
+  <symbol id="i-mas" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M12 6v12M6 12h12"/></symbol>
+</svg>
+
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<div class="centinela" aria-hidden="true"></div>
+<header class="cabecera" id="cabecera">
+  <div class="barra">
+    <a class="marca" href="#inicio" aria-label="Manda Carallo, volver al inicio">Manda Carallo</a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#lo-que-mas-se-pide">Lo que más se pide</a>
+      <a href="#carta">Carta</a>
+      <a href="#en-la-mesa">En la mesa</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#reservar">Reservar</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <div class="barra-der">
+      <a class="btn btn-pim btn-cab" href="tel:+34654078823"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar</a>
+      <button class="hamb" type="button" popovertarget="menu" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+<nav id="menu" popover aria-label="Menú principal">
+  <button class="cerrar" type="button" popovertarget="menu" popovertargetaction="hide" aria-label="Cerrar menú">×</button>
+  <ul>
+    <li style="--i:0"><a href="#lo-que-mas-se-pide">Lo que más se pide</a></li>
+    <li style="--i:1"><a href="#carta">La carta</a></li>
+    <li style="--i:2"><a href="#en-la-mesa">En la mesa</a></li>
+    <li style="--i:3"><a href="#opiniones">Opiniones</a></li>
+    <li style="--i:4"><a href="#reservar">Reservar y horario</a></li>
+    <li style="--i:5"><a href="#ubicacion">Ubicación</a></li>
+    <li style="--i:6"><a href="#preguntas">Preguntas</a></li>
+  </ul>
+  <p class="menu-pie"><a href="tel:+34654078823">Llamar al 654 07 88 23</a></p>
+</nav>
+
+<main id="contenido">
+
+<!-- ============ PORTADA (pizarra) · momento firma M91 "Espolvoreado": el pimentón cae sobre "Pulpo" y la tiñe ============ -->
+<section class="portada pizarra" id="inicio" aria-labelledby="portada-h1">
+  <div class="wrap portada-rejilla">
+    <div class="portada-texto">
+      <h1 class="portada-h1" id="portada-h1"><span class="esp" id="firma" data-espolvorear="carga" data-una-vez="sesion" data-esp-hover data-esp-n="60" data-esp-n-movil="44">Pulpo</span> con cachelos, <span class="h1-l2">raciones y emociones.</span></h1>
+      <p class="portada-apoyo">Cocina gallega en la calle Carabanchel, Getafe.</p>
+      <div class="portada-acciones" data-tapa-barra>
+        <!-- CONFIRMAR CON EL CLIENTE: reservas solo por teléfono, en el móvil de Maps, Instagram y la pizarra. -->
+        <a class="btn btn-pim" href="tel:+34654078823"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar para reservar</a>
+        <a class="btn btn-linea iman" href="#carta">Ver la carta<svg class="ico" aria-hidden="true"><use href="#i-abajo"/></svg></a>
+      </div>
+      <!-- Nota y número de reseñas de Google Maps, leídos el 24-10-2026. -->
+      <p class="prueba"><svg class="ico-estrella" aria-hidden="true"><use href="#i-estrella"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=Restaurante%20Manda%20Carallo%20Getafe" target="_blank" rel="noopener"><strong>4,7</strong> en Google · 1.399 reseñas</a></p>
+      <!-- CONFIRMAR CON EL CLIENTE: horario de Google Maps. Sin JS se lee el teléfono. -->
+      <div class="viva">
+        <div class="ah" data-tam="mini" aria-hidden="true">
+          <svg class="ah-anillo" viewBox="0 0 100 100"><circle class="ah-pista" cx="50" cy="50" r="46"/></svg>
+          <div class="ah-centro"><span class="ah-pizca"></span></div>
+        </div>
+        <p class="estado" data-estado-hoy><span role="status"><b class="estado-palabra">Reservas</b> · <span class="estado-detalle">654 07 88 23</span></span></p>
+      </div>
+      <p class="bajada">Zamburiñas, lacón, zorza, filloas y arroz con bogavante por encargo. Te atienden los dueños, en sala. Suele llenarse: mejor reservar.</p>
+    </div>
+    <figure class="portada-foto">
+      <span class="foto-cuerda"><picture>
+        <source media="(max-width: 640px)" srcset="img/portada-pulpo-cuadrada-480.webp 480w, img/portada-pulpo-cuadrada-720.webp 720w" sizes="92vw" width="720" height="720">
+        <img src="img/portada-pulpo-1240.webp" srcset="img/portada-pulpo-720.webp 720w, img/portada-pulpo-1240.webp 1240w" sizes="(min-width:1024px) 42vw, 92vw" width="1240" height="992" alt="Pulpo con cachelos en un plato de barro, visto desde arriba" fetchpriority="high">
+      </picture></span>
+      <figcaption>Foto de Guillermo Begué en Google Maps, abril de 2026.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ CINTA (madera con veta, cuerda arriba · M40): su carta en una línea ============ -->
+<section class="cinta madera cuerda-cenefa mov" aria-label="Lo que hay en la carta">
+  <ul class="sr"><li>Pulpo con cachelos</li><li>Zamburiñas</li><li>Lacón</li><li>Zorza</li><li>Tortilla de Betanzos</li><li>Filloas</li><li>Arroz con bogavante por encargo</li><li>Raciones y emociones</li></ul>
+  <div class="marquee" aria-hidden="true"><div class="marquee-track">
+    <span>Pulpo con cachelos</span><span>Zamburiñas</span><span>Lacón</span><span>Zorza</span><span>Tortilla de Betanzos</span><span>Filloas</span><span>Arroz con bogavante por encargo</span><span>Raciones y emociones</span>
+    <span>Pulpo con cachelos</span><span>Zamburiñas</span><span>Lacón</span><span>Zorza</span><span>Tortilla de Betanzos</span><span>Filloas</span><span>Arroz con bogavante por encargo</span><span>Raciones y emociones</span>
+  </div></div>
+</section>
+
+<!-- ============ LO QUE MÁS SE PIDE (crema): díptico desigual, pulpo grande y filloas ============
+     CONFIRMAR CON EL CLIENTE: precios de la pizarra de mayo de 2026. "177 reseñas" es el tema "pulpo" de las reseñas de Google Maps (24-10-2026). -->
+<section class="sec crema pide mov" id="lo-que-mas-se-pide" aria-labelledby="t-pide">
+  <div class="deco" aria-hidden="true"><span class="palabra-fondo" data-px="70" style="top:10px;right:2%" data-t="cachelos"></span></div>
+  <div class="wrap">
+    <div class="cab-sec">
+      <h2 class="tit cuerda-filete" id="t-pide">Lo que más se pide</h2>
+    </div>
+    <div class="diptico">
+      <article class="plato-pide plato-grande">
+        <figure class="revela"><span class="foto-iman"><span class="recorte"><img src="img/pide-pulpo-1200.webp" srcset="img/pide-pulpo-720.webp 720w, img/pide-pulpo-1200.webp 1200w" sizes="(min-width:1024px) 54vw, 92vw" width="1200" height="780" loading="lazy" decoding="async" alt="Ración de pulpo con cachelos en un plato de barro"></span></span>
+          <figcaption>Foto de Oscar Rodriguez en Google Maps, septiembre de 2025.</figcaption></figure>
+        <div class="plato-txt">
+          <h3>Pulpo con cachelos</h3>
+          <p class="plato-precio">Ración <b>19 €</b> · doble <b>30 €</b></p>
+          <p>177 reseñas hablan del pulpo, según los temas de las reseñas de Google Maps (octubre de 2026).</p>
+          <blockquote class="cita"><p>«[…] el pulpo, imprescindible […]»</p><footer>Cliente en Google, julio de 2026</footer></blockquote>
+        </div>
+      </article>
+      <article class="plato-pide plato-peque">
+        <figure class="revela"><span class="recorte"><img src="img/pide-filloas-900.webp" srcset="img/pide-filloas-560.webp 560w, img/pide-filloas-900.webp 900w" sizes="(min-width:1024px) 36vw, 92vw" width="900" height="828" loading="lazy" decoding="async" alt="Filloas dulces sobre tabla de madera: una con nata y chocolate y dos con caramelo y canela, con azúcar glas"></span>
+          <figcaption>Foto de Aunque Todo Arda en Google Maps, marzo de 2026.</figcaption></figure>
+        <div class="plato-txt">
+          <h3>Filloas</h3>
+          <p>Dulces, <b class="precio-txt">6 €</b> la unidad: chocolate y nata, crema pastelera con canela y caramelo, o dulce de manzana y caramelo.</p>
+          <p>Y saladas, de lacón o de salmón ahumado con queso, <b class="precio-txt">13 €</b>.</p>
+        </div>
+      </article>
+    </div>
+    <p class="fecha-precios">Precios de la pizarra de mayo de 2026. Pueden haber cambiado: confírmalos al reservar.</p>
+  </div>
+</section>
+
+<!-- ============ LA CARTA (pizarra): carta-lista-flexible v1.3.1 + M53 + M32 (solo pulpo y filloas dulces) + M50 ============
+     CONFIRMAR CON EL CLIENTE: todos los precios (pizarra de mayo de 2026, foto de un cliente en Maps; el papel de febrero de 2026
+     tiene 4 precios distintos). Sin alérgenos plato a plato. El fijo 91 695 84 64 del papel: CONFIRMAR si sigue en uso. -->
+<section class="sec pizarra carta mov" id="carta" aria-labelledby="t-carta">
+  <div class="deco" aria-hidden="true"><span class="palabra-fondo" data-px="-80" style="top:10px;left:5%" data-t="raciones"></span></div>
+  <div class="wrap">
+    <div class="cab-sec">
+      <h2 class="tit cuerda-filete" id="t-carta">La carta</h2>
+      <p class="caja-fecha">Precios de la pizarra de mayo de 2026. Pueden haber cambiado: confírmalos al reservar.</p>
+    </div>
+    <div class="clf" data-clf data-clf-etiqueta="Apartados de la carta">
+      <div class="clf-espera"><p>Pide la carta al reservar: <a href="tel:+34654078823">654 07 88 23</a>.</p></div>
+      <div class="clf-viva">
+        <div class="clf-paneles">
+          <div class="clf-panel con-foto" id="carta-raciones" data-clf-pestana="Raciones">
+            <div class="clf-lista">
+              <h3 class="clf-tit" id="t-carta-raciones">Raciones</h3>
+              <ul class="clf-platos">
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Pulpo con cachelos</span><span class="clf-precio"><small>Ración</small>19 €<span class="sep">·</span><small>Doble</small>30 €</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Gamba roja a la plancha</span><span class="clf-precio">20 €</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Calamar en sartén plancha</span><span class="clf-precio">14 €</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Croquetas de jamón o de chipirón</span><span class="clf-precio">1,90 €</span></p><p class="clf-desc">Precio por unidad.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Ensalada Manda Carallo</span><span class="clf-precio">13 €</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Pimientos de Padrón</span><span class="clf-precio">9 €</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Filloas saladas</span><span class="clf-precio">13 €</span></p><p class="clf-desc">De lacón o de salmón ahumado con queso.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Lacón</span><span class="clf-precio">14 €</span></p><p class="clf-desc">Desalado y cocido.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Oreja</span><span class="clf-precio"><small>Ración</small>14 €<span class="sep">·</span><small>Media</small>9 €</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Zorza</span><span class="clf-precio"><small>Ración</small>18 €<span class="sep">·</span><small>Media</small>14 €</span></p><p class="clf-desc">Solomillo de cerdo adobado con ajo, orégano, pimentón y aceite de oliva extra.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Chuletón con patatas fritas</span><span class="clf-precio">49 €/kg</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Queso gallego Arzúa</span><span class="clf-precio">9 €</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Pan (cesta)</span><span class="clf-precio">1 €</span></p><p class="clf-desc">Por comensal.</p></li>
+              </ul>
+              <p class="carta-fecha">Precios de la pizarra de mayo de 2026.</p>
+            </div>
+            <div class="clf-foto"><figure><img src="img/carta-pulpo-640.webp" width="640" height="510" loading="lazy" decoding="async" alt="Pulpo con cachelos y pimentón en un plato de barro"><figcaption>Pulpo con cachelos. Foto de Jose Cruz en Google Maps, diciembre de 2023.</figcaption></figure></div>
+          </div>
+          <div class="clf-panel" id="carta-sugerencias" data-clf-pestana="Sugerencias">
+            <div class="clf-lista">
+              <h3 class="clf-tit" id="t-carta-sugerencias">Sugerencias</h3>
+              <p class="clf-nota">Las sugerencias cambian: pregunta las de hoy.</p>
+              <ul class="clf-platos">
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Zamburiñas</span><span class="clf-precio">2,50 €</span></p><p class="clf-desc">Precio por unidad.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Tortilla de Betanzos</span><span class="clf-precio"><small>Grande</small>16 €<span class="sep">·</span><small>Pequeña</small>12 €</span></p></li>
+                <!-- CONFIRMAR CON EL CLIENTE: en la pizarra pone "12" con el euro poco claro. -->
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Bocarte</span><span class="clf-precio">12 €</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Chorizo gallego en sartén</span><span class="clf-precio"><small>Ración</small>14 €<span class="sep">·</span><small>Media</small>9 €</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Filloa de cecina de León</span><span class="clf-precio">13 €</span></p><p class="clf-desc">Con queso semicurado y queso gallego.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Tabla de cecina de León</span><span class="clf-precio">12 €</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Tabla de quesos</span><span class="clf-precio">12 €</span></p></li>
+                <!-- CONFIRMAR CON EL CLIENTE: en la pizarra pone "14" con el euro poco claro. -->
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Mejillón al vapor</span><span class="clf-precio">14 €</span></p></li>
+              </ul>
+              <p class="carta-fecha">Precios de la pizarra de mayo de 2026.</p>
+            </div>
+          </div>
+          <div class="clf-panel con-foto" id="carta-postres" data-clf-pestana="Postres">
+            <div class="clf-lista">
+              <h3 class="clf-tit" id="t-carta-postres">Postres</h3>
+              <ul class="clf-platos">
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Filloas dulces</span><span class="clf-precio">6 €</span></p><p class="clf-desc">Precio por unidad. De chocolate y nata, de crema pastelera con canela y caramelo, o de dulce de manzana y caramelo.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Tarta de Santiago o tarta de queso</span><span class="clf-precio">5 €</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Queso con membrillo</span><span class="clf-precio">9 €</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Helado</span><span class="clf-precio">3 €</span></p><p class="clf-desc">La bola.</p></li>
+              </ul>
+              <p class="carta-fecha">Precios de la pizarra de mayo de 2026.</p>
+            </div>
+            <div class="clf-foto"><figure><img src="img/carta-filloas-640.webp" width="640" height="542" loading="lazy" decoding="async" alt="Dos platos de filloas: una con nata y chocolate y otra con caramelo"><figcaption>Filloas dulces. Foto de Maria Angel Hijazo Loriente en Google Maps, septiembre de 2025.</figcaption></figure></div>
+          </div>
+        </div>
+        <!-- Arroz con bogavante: de encargo en el papel de febrero de 2026, SIN precio. No se pone precio, antelación ni mínimo de personas. -->
+        <div class="encargo">
+          <div>
+            <h3 class="encargo-tit">Arroz con bogavante, por encargo</h3>
+            <p>Llámanos con tiempo para encargarlo.</p>
+          </div>
+          <a class="btn btn-pim" href="tel:+34654078823"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar para encargarlo</a>
+        </div>
+        <div class="clf-pie">
+          <p>IVA incluido. Para llevar, también: pide por teléfono.</p>
+          <p>Pregúntanos por los alérgenos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EN LA MESA (crema): bento de fotos de clientes, ampliables (galeria-lightbox v3 + M51) ============
+     Pies descriptivos con lo que se ve, sin nombre de plato ni forma de cocinarlo (solo el pulpo y las filloas llevan nombre en esta web). -->
+<section class="sec crema mesa mov" id="en-la-mesa" aria-labelledby="t-mesa">
+  <div class="deco" aria-hidden="true"><span class="palabra-fondo" data-px="60" style="top:10px;right:2%" data-t="emociones"></span></div>
+  <div class="wrap">
+    <div class="cab-sec">
+      <h2 class="tit cuerda-filete" id="t-mesa">En la mesa</h2>
+      <p class="apoyo">Fotos de nuestros clientes en Google Maps.</p>
+    </div>
+    <div class="bento grupo">
+      <figure class="b-marisco item revela">
+        <button class="foto-btn" type="button" data-galeria="mesa" data-grande="img/mesa-marisco-1200.webp" data-pie="Marisco en su concha sobre una fuente oscura" aria-label="Ampliar la foto: marisco en su concha sobre una fuente oscura"><img src="img/mesa-marisco-1200.webp" srcset="img/mesa-marisco-720.webp 720w, img/mesa-marisco-1200.webp 1200w" sizes="(min-width:1024px) 60vw, 92vw" width="1200" height="672" loading="lazy" decoding="async" alt="Seis piezas de marisco en su concha sobre una fuente oscura"><span class="mas" aria-hidden="true"><svg><use href="#i-mas"/></svg></span></button>
+        <figcaption>Marisco en su concha sobre una fuente oscura. Foto de David Velasco Juárez, enero de 2026.</figcaption></figure>
+      <figure class="b-gambas item revela">
+        <button class="foto-btn" type="button" data-galeria="mesa" data-grande="img/mesa-gambas-900.webp" data-pie="Gambas sobre una tabla de madera y pizarra" aria-label="Ampliar la foto: gambas sobre una tabla de madera y pizarra"><img src="img/mesa-gambas-900.webp" srcset="img/mesa-gambas-480.webp 480w, img/mesa-gambas-900.webp 900w" sizes="(min-width:1024px) 30vw, 46vw" width="900" height="1062" loading="lazy" decoding="async" alt="Gambas sobre una tabla de madera con la mitad de pizarra"><span class="mas" aria-hidden="true"><svg><use href="#i-mas"/></svg></span></button>
+        <figcaption>Gambas sobre una tabla de madera y pizarra. Foto de Paula Rodríguez, mayo de 2026.</figcaption></figure>
+      <figure class="b-chipirones item revela">
+        <button class="foto-btn" type="button" data-galeria="mesa" data-grande="img/mesa-chipirones-900.webp" data-pie="Chipirones en una fuente blanca" aria-label="Ampliar la foto: chipirones en una fuente blanca"><img src="img/mesa-chipirones-900.webp" srcset="img/mesa-chipirones-480.webp 480w, img/mesa-chipirones-900.webp 900w" sizes="(min-width:1024px) 30vw, 46vw" width="900" height="675" loading="lazy" decoding="async" alt="Chipirones con aceite en una fuente blanca"><span class="mas" aria-hidden="true"><svg><use href="#i-mas"/></svg></span></button>
+        <figcaption>Chipirones en una fuente blanca. Foto de Guillermo Begué, abril de 2026.</figcaption></figure>
+      <figure class="b-carne item revela">
+        <button class="foto-btn" type="button" data-galeria="mesa" data-grande="img/mesa-carne-900.webp" data-pie="Trozos de carne con patatas fritas y pimientos en una tabla" aria-label="Ampliar la foto: trozos de carne con patatas fritas y pimientos en una tabla"><img src="img/mesa-carne-900.webp" srcset="img/mesa-carne-480.webp 480w, img/mesa-carne-900.webp 900w" sizes="(min-width:1024px) 30vw, 46vw" width="900" height="540" loading="lazy" decoding="async" alt="Trozos de carne sobre una tabla de madera con patatas fritas y pimientos verdes"><span class="mas" aria-hidden="true"><svg><use href="#i-mas"/></svg></span></button>
+        <figcaption>Trozos de carne con patatas fritas y pimientos en una tabla. Foto de Maria Angel Hijazo Loriente, septiembre de 2025.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OPINIONES (pizarra): muro de reseñas (M46 muro-resenas v4) ============
+     Frases literales de reseñas de 5 estrellas de Google Maps (leídas el 24-10-2026), sin nombres, con el mes aproximado
+     (Google da "hace N semanas/meses" a 24-10-2026). Los dueños, siempre "los dueños". -->
+<section class="sec pizarra opiniones mov" id="opiniones" aria-labelledby="t-opiniones">
+  <div class="deco" aria-hidden="true"><span class="palabra-fondo" data-px="-70" style="top:10px;left:5%" data-t="como en casa"></span></div>
+  <div class="wrap">
+    <div class="cab-sec opiniones-cab">
+      <div>
+        <h2 class="tit cuerda-filete" id="t-opiniones">Como en casa</h2>
+        <p class="apoyo">Te atienden los dueños, en sala.</p>
+      </div>
+      <p class="nota-google"><svg class="ico-estrella" aria-hidden="true"><use href="#i-estrella"/></svg>4,7 <span>en Google · 1.399 reseñas</span></p>
+    </div>
+  </div>
+  <div class="muro muro-dedo-movil mov"><div class="plano" role="region" aria-label="Opiniones de clientes en Google" tabindex="0">
+      <div class="col" style="--t:62s"><div class="tira"><ul><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Los dueños son fantásticos, muy amables y siempre sonrientes. Te hacen sentir como en casa y la comida es muy buena.»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Todo perfecto, comida riquísima, el trato excelente, repetiremos seguro»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«[…] al final de sorpresa le convidaron a un trozo de tarta»</p></blockquote><figcaption>Cliente en Google · septiembre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Muy buen restaurante, familiar que cuida mucho el producto local de su tierra»</p></blockquote><figcaption>Cliente en Google · junio de 2026</figcaption></figure></li></ul><ul aria-hidden="true"><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Los dueños son fantásticos, muy amables y siempre sonrientes. Te hacen sentir como en casa y la comida es muy buena.»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Todo perfecto, comida riquísima, el trato excelente, repetiremos seguro»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«[…] al final de sorpresa le convidaron a un trozo de tarta»</p></blockquote><figcaption>Cliente en Google · septiembre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Muy buen restaurante, familiar que cuida mucho el producto local de su tierra»</p></blockquote><figcaption>Cliente en Google · junio de 2026</figcaption></figure></li></ul></div><div class="tira" aria-hidden="true"><ul><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Los dueños son fantásticos, muy amables y siempre sonrientes. Te hacen sentir como en casa y la comida es muy buena.»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Todo perfecto, comida riquísima, el trato excelente, repetiremos seguro»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«[…] al final de sorpresa le convidaron a un trozo de tarta»</p></blockquote><figcaption>Cliente en Google · septiembre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Muy buen restaurante, familiar que cuida mucho el producto local de su tierra»</p></blockquote><figcaption>Cliente en Google · junio de 2026</figcaption></figure></li></ul><ul><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Los dueños son fantásticos, muy amables y siempre sonrientes. Te hacen sentir como en casa y la comida es muy buena.»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Todo perfecto, comida riquísima, el trato excelente, repetiremos seguro»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«[…] al final de sorpresa le convidaron a un trozo de tarta»</p></blockquote><figcaption>Cliente en Google · septiembre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Muy buen restaurante, familiar que cuida mucho el producto local de su tierra»</p></blockquote><figcaption>Cliente en Google · junio de 2026</figcaption></figure></li></ul></div></div>
+      <div class="col" style="--t:76s"><div class="tira"><ul><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Como estar en Galicia, pero aquí en Madrid. Muy recomendable.»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«De verdad que cuidan los detalles, se nota que les gusta su trabajo. Se ve el cariño en los platos.»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Grata sorpresa, tenía muchas ganas de visitarlo pero cuando yo podía no había mesa porque estaba lleno»</p></blockquote><figcaption>Cliente en Google · septiembre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Llevo más de 10 años yendo a este restaurante gallego […] la increíble amabilidad de sus dueños que te hacen sentir como en casa.»</p></blockquote><figcaption>Cliente en Google · mayo de 2026</figcaption></figure></li></ul><ul aria-hidden="true"><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Como estar en Galicia, pero aquí en Madrid. Muy recomendable.»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«De verdad que cuidan los detalles, se nota que les gusta su trabajo. Se ve el cariño en los platos.»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Grata sorpresa, tenía muchas ganas de visitarlo pero cuando yo podía no había mesa porque estaba lleno»</p></blockquote><figcaption>Cliente en Google · septiembre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Llevo más de 10 años yendo a este restaurante gallego […] la increíble amabilidad de sus dueños que te hacen sentir como en casa.»</p></blockquote><figcaption>Cliente en Google · mayo de 2026</figcaption></figure></li></ul></div><div class="tira" aria-hidden="true"><ul><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Como estar en Galicia, pero aquí en Madrid. Muy recomendable.»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«De verdad que cuidan los detalles, se nota que les gusta su trabajo. Se ve el cariño en los platos.»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Grata sorpresa, tenía muchas ganas de visitarlo pero cuando yo podía no había mesa porque estaba lleno»</p></blockquote><figcaption>Cliente en Google · septiembre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Llevo más de 10 años yendo a este restaurante gallego […] la increíble amabilidad de sus dueños que te hacen sentir como en casa.»</p></blockquote><figcaption>Cliente en Google · mayo de 2026</figcaption></figure></li></ul><ul><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Como estar en Galicia, pero aquí en Madrid. Muy recomendable.»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«De verdad que cuidan los detalles, se nota que les gusta su trabajo. Se ve el cariño en los platos.»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Grata sorpresa, tenía muchas ganas de visitarlo pero cuando yo podía no había mesa porque estaba lleno»</p></blockquote><figcaption>Cliente en Google · septiembre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Llevo más de 10 años yendo a este restaurante gallego […] la increíble amabilidad de sus dueños que te hacen sentir como en casa.»</p></blockquote><figcaption>Cliente en Google · mayo de 2026</figcaption></figure></li></ul></div></div>
+      <div class="col" style="--t:68s"><div class="tira"><ul><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Restaurante excepcional en todos los sentidos. Atención perfecta, comida muy rica y casera, bien de precio»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Hemos cenado muy bien y la atención ha sido muy agradable.»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Excelente comida (el pulpo, imprescindible), trato cercano y ambiente acogedor […]»</p></blockquote><figcaption>Cliente en Google · julio de 2026</figcaption></figure></li></ul><ul aria-hidden="true"><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Restaurante excepcional en todos los sentidos. Atención perfecta, comida muy rica y casera, bien de precio»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Hemos cenado muy bien y la atención ha sido muy agradable.»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Excelente comida (el pulpo, imprescindible), trato cercano y ambiente acogedor […]»</p></blockquote><figcaption>Cliente en Google · julio de 2026</figcaption></figure></li></ul></div><div class="tira" aria-hidden="true"><ul><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Restaurante excepcional en todos los sentidos. Atención perfecta, comida muy rica y casera, bien de precio»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Hemos cenado muy bien y la atención ha sido muy agradable.»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Excelente comida (el pulpo, imprescindible), trato cercano y ambiente acogedor […]»</p></blockquote><figcaption>Cliente en Google · julio de 2026</figcaption></figure></li></ul><ul><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Restaurante excepcional en todos los sentidos. Atención perfecta, comida muy rica y casera, bien de precio»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Hemos cenado muy bien y la atención ha sido muy agradable.»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Excelente comida (el pulpo, imprescindible), trato cercano y ambiente acogedor […]»</p></blockquote><figcaption>Cliente en Google · julio de 2026</figcaption></figure></li></ul></div></div>
+      <div class="col" style="--t:84s"><div class="tira"><ul><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Gallego recomendable en el sur, muy rico con ambiente familiar. Volveremos!»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Buen trato, ambiente familiar. Les recomiendo ir con reserva.»</p></blockquote><figcaption>Cliente en Google · septiembre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Comida y servicio espectacular, pedimos pulpo, calamar y chuleta, y la verdad que todo de 10»</p></blockquote><figcaption>Cliente en Google · junio de 2026</figcaption></figure></li></ul><ul aria-hidden="true"><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Gallego recomendable en el sur, muy rico con ambiente familiar. Volveremos!»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Buen trato, ambiente familiar. Les recomiendo ir con reserva.»</p></blockquote><figcaption>Cliente en Google · septiembre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Comida y servicio espectacular, pedimos pulpo, calamar y chuleta, y la verdad que todo de 10»</p></blockquote><figcaption>Cliente en Google · junio de 2026</figcaption></figure></li></ul></div><div class="tira" aria-hidden="true"><ul><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Gallego recomendable en el sur, muy rico con ambiente familiar. Volveremos!»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Buen trato, ambiente familiar. Les recomiendo ir con reserva.»</p></blockquote><figcaption>Cliente en Google · septiembre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Comida y servicio espectacular, pedimos pulpo, calamar y chuleta, y la verdad que todo de 10»</p></blockquote><figcaption>Cliente en Google · junio de 2026</figcaption></figure></li></ul><ul><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Gallego recomendable en el sur, muy rico con ambiente familiar. Volveremos!»</p></blockquote><figcaption>Cliente en Google · octubre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Buen trato, ambiente familiar. Les recomiendo ir con reserva.»</p></blockquote><figcaption>Cliente en Google · septiembre de 2026</figcaption></figure></li><li><figure class="res"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Comida y servicio espectacular, pedimos pulpo, calamar y chuleta, y la verdad que todo de 10»</p></blockquote><figcaption>Cliente en Google · junio de 2026</figcaption></figure></li></ul></div></div>
+  </div></div>
+  <div class="wrap opiniones-pie">
+    <p>Frases de reseñas de 5 estrellas en Google Maps, de mayo a octubre de 2026.</p>
+    <a class="btn btn-linea iman" href="https://www.google.com/maps/search/?api=1&amp;query=Restaurante%20Manda%20Carallo%20Getafe" target="_blank" rel="noopener">Leer las reseñas en Google<svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+  </div>
+</section>
+
+<!-- ============ RESERVAR Y HORARIO (crema): anillo del horario (M86) + lista + botón que se hunde (M60) ============
+     CONFIRMAR CON EL CLIENTE: horario de Google Maps ("confirmado por la empresa hace 12 semanas"). Los festivos y puentes no
+     se calculan: nunca se dice "hoy no hay servicio". Si cambia: HORARIO en js/sitio.js, esta lista, la pregunta, el JSON-LD y el pie. -->
+<section class="sec crema reservar mov" id="reservar" aria-labelledby="t-reservar">
+  <div class="deco" aria-hidden="true"><span class="palabra-fondo" data-px="80" style="top:10px;right:2%" data-t="comidas y cenas"></span></div>
+  <div class="wrap reservar-rejilla">
+    <div class="reservar-texto">
+      <h2 class="tit cuerda-filete" id="t-reservar">Suele llenarse: reserva</h2>
+      <p class="apoyo">Las reservas, por teléfono.</p>
+      <div class="reservar-accion" data-tapa-barra>
+        <a class="btn-hunde" href="tel:+34654078823"><span class="base" aria-hidden="true"></span><span class="cara"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar al 654 07 88 23</span></a>
+      </div>
+      <p class="para-llevar">Para llevar también: pide por teléfono.</p>
+      <p class="estado estado-grande" data-estado-hoy><span role="status"><b class="estado-palabra">Reservas</b> · <span class="estado-detalle">654 07 88 23</span></span></p>
+    </div>
+    <div class="horario">
+      <div class="ah" data-tam="grande" aria-hidden="true">
+        <svg class="ah-anillo" viewBox="0 0 100 100"><circle class="ah-pista" cx="50" cy="50" r="46"/></svg>
+        <div class="ah-centro"><span class="ah-nombre">Manda<br>Carallo</span></div>
+      </div>
+      <div class="horario-lista">
+        <dl class="dias" id="dias">
+          <div data-dia="1"><dt>Lunes</dt><dd>Cerrado</dd></div>
+          <div data-dia="2"><dt>Martes</dt><dd>Cerrado</dd></div>
+          <div data-dia="3"><dt>Miércoles</dt><dd><span>13:00 a 16:00</span> <span><span class="sr">y </span>20:00 a 23:00</span></dd></div>
+          <div data-dia="4"><dt>Jueves</dt><dd><span>13:00 a 16:00</span> <span><span class="sr">y </span>20:00 a 23:00</span></dd></div>
+          <div data-dia="5"><dt>Viernes</dt><dd><span>13:00 a 16:00</span> <span><span class="sr">y </span>20:00 a 23:00</span></dd></div>
+          <div data-dia="6"><dt>Sábado</dt><dd><span>13:00 a 16:00</span> <span><span class="sr">y </span>20:00 a 23:00</span></dd></div>
+          <div data-dia="0"><dt>Domingo</dt><dd>13:30 a 17:00</dd></div>
+        </dl>
+        <p class="horario-nota">En puentes y festivos a veces abrimos más: lo avisamos en Instagram, en <a href="https://www.instagram.com/mandacarallogetafe/" target="_blank" rel="noopener">@mandacarallogetafe</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ UBICACIÓN (pizarra): fachada a sangre + ubicacion-mapa v3 ============
+     CONFIRMAR CON EL CLIENTE: número de la calle (12 en Google Maps, 14 en otras fuentes); que la fachada siga igual (foto de julio de 2023);
+     aparcamiento y acceso en silla de ruedas (atributos de Google Maps). -->
+<section class="sec pizarra ubicacion mov" id="ubicacion" aria-labelledby="t-ubicacion">
+  <div class="deco" aria-hidden="true"><span class="palabra-fondo" data-px="-60" style="top:10px;left:5%" data-t="Getafe"></span></div>
+  <div class="wrap">
+    <div class="cab-sec">
+      <h2 class="tit cuerda-filete" id="t-ubicacion">Dónde estamos</h2>
+      <p class="apoyo">Busca el toldo crema y el letrero de madera con su cuerda.</p>
+    </div>
+  </div>
+  <figure class="fachada revela">
+    <span class="recorte"><img src="img/fachada-1300.webp" srcset="img/fachada-900.webp 900w, img/fachada-1300.webp 1300w" sizes="100vw" width="1300" height="460" loading="lazy" decoding="async" alt="La fachada del restaurante: toldo crema con el nombre Manda Carallo, letrero de madera con marco de cuerda y la parte alta del escaparate con guirnaldas de luces"></span>
+    <figcaption class="wrap">La fachada en julio de 2023 (foto de Julian H R en Google Maps).</figcaption>
+  </figure>
+  <div class="wrap donde-rejilla">
+    <div class="datos">
+      <p class="direccion">C. Carabanchel, 12<br>28903 Getafe (Madrid)</p>
+      <dl class="datos-lista">
+        <div><dt>Reservas</dt><dd>Por teléfono: <a href="tel:+34654078823">654 07 88 23</a></dd></div>
+        <div><dt>Para llevar</dt><dd>Sí, pidiendo por teléfono.</dd></div>
+        <div><dt>Aparcamiento</dt><dd>Gratis en la calle, según Google; a veces cuesta encontrar sitio.</dd></div>
+        <div><dt>Accesible</dt><dd>Entrada en silla de ruedas, según Google.</dd></div>
+      </dl>
+      <div class="datos-botones">
+        <a class="btn btn-pim iman" href="https://www.google.com/maps/dir/?api=1&amp;destination=Restaurante%20Manda%20Carallo%2C%20Calle%20Carabanchel%2012%2C%2028903%20Getafe" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Cómo llegar</a>
+        <a class="btn btn-linea" href="https://maps.apple.com/?q=Restaurante%20Manda%20Carallo&amp;address=Calle%20Carabanchel%2012%2C%2028903%20Getafe" target="_blank" rel="noopener">Apple Maps</a>
+      </div>
+    </div>
+    <div class="mapa" id="mapa">
+      <div class="mapa-fachada" id="mapaFachada">
+        <span class="mapa-pin" aria-hidden="true"><svg><use href="#i-pin"/></svg></span>
+        <p>El mapa es de Google Maps: solo se carga si lo pides, y entonces Google puede guardar sus propias cookies.</p>
+        <button class="btn btn-linea iman" type="button" id="btnMapa">Ver el mapa aquí</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PREGUNTAS (crema): acordeon-nativo + FAQ interactiva de M30 ============ -->
+<section class="sec crema preguntas mov" id="preguntas" aria-labelledby="t-preguntas">
+  <div class="deco" aria-hidden="true"><span class="palabra-fondo" data-px="60" style="top:10px;right:2%" data-t="carallo"></span></div>
+  <div class="wrap faq-rejilla">
+    <div>
+      <h2 class="tit cuerda-filete" id="t-preguntas">Preguntas</h2>
+      <p class="faq-intro">¿No está aquí lo que buscas? Llama al <a href="tel:+34654078823">654 07 88 23</a>.</p>
+    </div>
+    <div class="faq">
+      <details name="faq"><summary>¿Hace falta reservar?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>Suele llenarse, así que mejor sí. Las reservas son por teléfono, en el <a href="tel:+34654078823">654 07 88 23</a>.</p></div></details>
+      <!-- CONFIRMAR CON EL CLIENTE: con cuánta antelación y para cuántas personas se encarga el arroz, y su precio. -->
+      <details name="faq"><summary>¿Cómo se encarga el arroz con bogavante?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>Llamando con tiempo al <a href="tel:+34654078823">654 07 88 23</a>. El precio te lo decimos al encargarlo.</p></div></details>
+      <details name="faq"><summary>¿Qué días abrís?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>De miércoles a sábado, comidas de 13:00 a 16:00 y cenas de 20:00 a 23:00; los domingos, de 13:30 a 17:00. Lunes y martes, cerrado. En puentes y festivos a veces abrimos más: lo avisamos en <a href="https://www.instagram.com/mandacarallogetafe/" target="_blank" rel="noopener">@mandacarallogetafe</a>.</p></div></details>
+      <details name="faq"><summary>¿Se puede pedir para llevar?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>Sí: llama al <a href="tel:+34654078823">654 07 88 23</a> y pasa a recogerlo.</p></div></details>
+      <details name="faq"><summary>¿Hacéis reparto a domicilio?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>No hacemos reparto a domicilio. Puedes pedir para llevar por teléfono.</p></div></details>
+      <details name="faq"><summary>¿Tenéis en cuenta las alergias?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>Pregúntanos por los alérgenos al reservar o antes de pedir.</p></div></details>
+      <details name="faq"><summary>¿Hay aparcamiento?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>Según Google, se aparca gratis en la calle, aunque a veces cuesta encontrar sitio.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LLAMADA FINAL (madera con veta, cuerda arriba): M01 en el titular + M60 ============ -->
+<section class="sec madera final cuerda-cenefa mov" aria-labelledby="t-final">
+  <div class="deco" aria-hidden="true"><span class="palabra-fondo" data-px="-70" style="top:10px;left:5%" data-t="manda"></span></div>
+  <div class="wrap final-texto">
+    <h2 class="final-h2" id="t-final"><span class="titular-palabras">¿Reservamos tu mesa?</span></h2>
+    <p class="apoyo">Pulpo, raciones y emociones, en la calle Carabanchel.</p>
+    <div class="final-acciones" data-tapa-barra>
+      <a class="btn-hunde btn-hunde-crema" href="tel:+34654078823"><span class="base" aria-hidden="true"></span><span class="cara"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar al 654 07 88 23</span></a>
+    </div>
+    <p class="estado estado-final" data-estado-hoy><span role="status"><b class="estado-palabra">C. Carabanchel, 12</b> · <span class="estado-detalle">Getafe</span></span></p>
+  </div>
+</section>
+</main>
+
+<footer class="pie pizarra">
+  <div class="wrap pie-rejilla">
+    <div>
+      <p class="pie-nombre">Manda Carallo</p>
+      <p>Cocina gallega en Getafe.</p>
+    </div>
+    <div>
+      <p class="pie-tit">Dónde</p>
+      <p>C. Carabanchel, 12<br>28903 Getafe (Madrid)</p>
+      <p>Reservas: <a href="tel:+34654078823">654 07 88 23</a></p>
+      <p><a href="https://www.instagram.com/mandacarallogetafe/" target="_blank" rel="noopener">@mandacarallogetafe</a> · <a href="https://www.google.com/maps/search/?api=1&amp;query=Restaurante%20Manda%20Carallo%20Getafe" target="_blank" rel="noopener">Google Maps</a></p>
+    </div>
+    <div>
+      <p class="pie-tit">Horario <span class="pie-fuente">(según Google)</span></p>
+      <p>Miércoles a sábado, de 13:00 a 16:00 y de 20:00 a 23:00<br>Domingo, de 13:30 a 17:00<br>Lunes y martes, cerrado</p>
+    </div>
+    <nav aria-label="Secciones">
+      <p class="pie-tit">En esta web</p>
+      <ul class="pie-enlaces">
+        <li><a href="#lo-que-mas-se-pide">Lo que más se pide</a></li><li><a href="#carta">La carta</a></li><li><a href="#en-la-mesa">En la mesa</a></li><li><a href="#opiniones">Opiniones</a></li>
+        <li><a href="#reservar">Reservar y horario</a></li><li><a href="#ubicacion">Ubicación</a></li><li><a href="#preguntas">Preguntas</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap pie-legal">
+    <p><a href="privacy.html">Privacidad</a> · <a href="terms.html">Aviso legal</a></p>
+    <p>Fotos de clientes en Google Maps.</p>
+    <p>Web de <a href="https://degaldodesigns.es" target="_blank" rel="noopener">Degaldo Designs</a></p>
+  </div>
+</footer>
+
+<div class="barra-movil" id="barraMovil" role="region" aria-label="Llamar o ver la carta">
+  <a class="btn btn-pim" href="tel:+34654078823"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar para reservar</a>
+  <a class="btn btn-linea" href="#carta">Ver la carta</a>
+</div>
+
+<dialog class="visor" id="visor" aria-label="Foto ampliada">
+  <figure><img src="img/mesa-marisco-720.webp" width="720" height="403" alt="Foto ampliada" loading="lazy" decoding="async"><figcaption></figcaption></figure>
+  <div class="visor-barra">
+    <button class="visor-btn" type="button" data-ir="-1" aria-label="Foto anterior">‹</button>
+    <button class="visor-btn" type="button" data-ir="1" aria-label="Foto siguiente">›</button>
+    <button class="visor-btn" type="button" data-cerrar aria-label="Cerrar">×</button>
+  </div>
+</dialog>
+
+<script src="js/carta.js" defer></script>
+<script src="js/sitio.js" defer></script>
+</body>
+</html>
