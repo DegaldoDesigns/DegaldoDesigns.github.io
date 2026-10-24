@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mitto · Bar y buena comida en Parla: desayunos, comidas y tartas</title>
+<meta name="description" content="Bar y buena comida en la calle Río Guadiana, 9, Parla: desayunos, raciones, cocina casera, tartas por encargo y un patio interior. Tel. 600 89 87 51.">
+<!-- DEMO: noindex hasta que el bar apruebe la web. Al publicar en su dominio, quitar noindex y cambiar la URL de canonical, og:url, og:image, JSON-LD, sitemap y robots (aquí y en todas las páginas). -->
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://degaldodesigns.es/mitto/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mitto">
+<meta property="og:title" content="Mitto · Bar y buena comida en Parla">
+<meta property="og:description" content="Desayunos, comidas y tartas de la casa en la calle Río Guadiana, 9, Parla. Y dentro, un patio que no se ve desde la calle.">
+<meta property="og:image" content="https://degaldodesigns.es/mitto/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://degaldodesigns.es/mitto/">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mitto · Bar y buena comida en Parla">
+<meta name="twitter:description" content="Desayunos, comidas y tartas de la casa en la calle Río Guadiana, 9, Parla. Y dentro, un patio que no se ve desde la calle.">
+<meta name="twitter:image" content="https://degaldodesigns.es/mitto/og-image.jpg">
+<meta name="theme-color" content="#51533E">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preload" href="fonts/young-serif-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="img/puerta-mitto-720.webp" imagesrcset="img/puerta-mitto-720.webp 720w, img/puerta-mitto-1200.webp 1200w" imagesizes="(min-width:1024px) 40vw, 92vw">
+<link rel="stylesheet" href="css/estilos.css">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Restaurant",
+ "name": "Mitto",
+ "description": "Bar y buena comida en Parla: desayunos dulces y salados, raciones, cocina casera, repostería propia por encargo y patio interior.",
+ "url": "https://degaldodesigns.es/mitto/",
+ "image": "https://degaldodesigns.es/mitto/og-image.jpg",
+ "servesCuisine": ["Española", "Desayunos", "Repostería"],
+ "telephone": "+34600898751",
+ "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "C. Río Guadiana, 9",
+  "postalCode": "28981",
+  "addressLocality": "Parla",
+  "addressRegion": "Madrid",
+  "addressCountry": "ES"
+ },
+ "openingHoursSpecification": [
+  {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday"], "opens": "08:00", "closes": "22:00"},
+  {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday", "Thursday"], "opens": "08:00", "closes": "23:30"},
+  {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "08:00", "closes": "01:30"},
+  {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "01:30"},
+  {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "09:00", "closes": "22:00"}
+ ],
+ "sameAs": ["https://www.instagram.com/mitto_bar/", "https://www.instagram.com/mitto.bakery/"]
+}
+</script>
+<!-- CONFIRMAR CON EL CLIENTE (resumen; cada uno va también junto a su texto y en ../ficha.md):
+     - Horario: el de Google Maps del 24-10-2026 (lunes y martes 8:00-22:00; miércoles y jueves 8:00-23:30; viernes 8:00-1:30;
+       sábado 9:00-1:30; domingo 9:00-22:00). Si viernes y sábado de noche hay cocina o solo barra. Festivos. Si cambia: HORARIO en
+       js/sitio.js, la lista de la sección Horario, el JSON-LD y el pie.
+     - Carta actual con precios: la web va SIN NINGÚN PRECIO ("Precio: pregúntanos"). Platos sacados de sus publicaciones (ver
+       01-investigacion/carta.md). Alérgenos: nada publicado.
+     - Fotos: de su Instagram, solo para la demo. Los nombres de plato de las fotos salen del pie de cada publicación.
+     - Reservas por teléfono (lo decían sus posts de 2023-2024), acceso en silla de ruedas y "para llevar sí, a domicilio no" (Google).
+     - Logo: limpiado de su post 122; pedir el original vectorial.
+     - Nada de WhatsApp, menú de fin de semana, nombres de personas, perros ni tapa con la consumición (sin confirmar). -->
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-tel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+  <symbol id="i-flecha" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-abajo" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-estrella" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></g></symbol>
+  <!-- La flor de ocho pétalos de su azulejo (03-assets: post 124) -->
+  <symbol id="flor" viewBox="-50 -50 100 100"><g fill="currentColor"><ellipse cy="-27" rx="9.5" ry="19"/><ellipse cy="-27" rx="9.5" ry="19" transform="rotate(45)"/><ellipse cy="-27" rx="9.5" ry="19" transform="rotate(90)"/><ellipse cy="-27" rx="9.5" ry="19" transform="rotate(135)"/><ellipse cy="-27" rx="9.5" ry="19" transform="rotate(180)"/><ellipse cy="-27" rx="9.5" ry="19" transform="rotate(225)"/><ellipse cy="-27" rx="9.5" ry="19" transform="rotate(270)"/><ellipse cy="-27" rx="9.5" ry="19" transform="rotate(315)"/><circle r="10"/></g></symbol>
+</svg>
+
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<div class="centinela" aria-hidden="true"></div>
+<header class="cabecera" id="cabecera">
+  <div class="barra">
+    <a class="marca" href="#inicio"><img src="img/logo-oliva-marca-320.webp" width="320" height="221" alt="Mitto, bar y buena comida: volver al inicio"></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#desayunos">Desayunos</a>
+      <a href="#carta">Carta</a>
+      <a href="#reposteria">Repostería</a>
+      <a href="#patio">El patio</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#horario">Horario</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <div class="barra-der">
+      <a class="btn btn-principal btn-cab" href="tel:+34600898751"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar</a>
+      <button class="hamb" type="button" popovertarget="menu" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+<nav id="menu" popover aria-label="Menú principal">
+  <div class="fondo-vivo fv-baldosa-propia fv-b-azulejo-patio fv-quieto" aria-hidden="true" style="--fv-color:#FBFAF6; --fv-papel:.06"><span class="fv-papel"></span></div>
+  <button class="cerrar" type="button" popovertarget="menu" popovertargetaction="hide" aria-label="Cerrar menú">×</button>
+  <ul>
+    <li style="--i:0"><a href="#desayunos">Desayunos</a></li>
+    <li style="--i:1"><a href="#carta">La carta</a></li>
+    <li style="--i:2"><a href="#reposteria">Repostería</a></li>
+    <li style="--i:3"><a href="#patio">El patio</a></li>
+    <li style="--i:4"><a href="#opiniones">Opiniones</a></li>
+    <li style="--i:5"><a href="#horario">Horario</a></li>
+    <li style="--i:6"><a href="#ubicacion">Ubicación</a></li>
+    <li style="--i:7"><a href="#preguntas">Preguntas</a></li>
+  </ul>
+  <p class="menu-pie"><a href="tel:+34600898751">Llamar al 600 89 87 51</a></p>
+</nav>
+
+<main id="contenido">
+<!-- ============ PORTADA (cal) · momento firma: «La puerta del patio» (M87 v2 .pa-puerta, plato-que-se-abre.html v2) ============ -->
+<section class="portada" id="inicio" aria-labelledby="portada-h1">
+  <div class="wrap portada-rejilla">
+    <div class="portada-texto">
+      <h1 class="portada-h1" id="portada-h1">Desayunos, comidas y <span class="acento">tartas</span> de&nbsp;la&nbsp;casa. <span class="h1-apoyo">Y dentro, un patio que no se ve desde la calle.</span></h1>
+      <p class="bajada">Bar y buena comida en la calle Río Guadiana, 9, Parla. Desayunos dulces y salados, raciones, cocina casera y repostería propia por encargo.</p>
+      <div class="portada-acciones" data-tapa-barra>
+        <a class="btn btn-principal" href="tel:+34600898751"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar al 600 89 87 51</a>
+        <a class="btn btn-linea iman" href="#carta">Ver la carta<svg class="ico" aria-hidden="true"><use href="#i-abajo"/></svg></a>
+      </div>
+      <!-- Nota y número de reseñas de Google Maps (24-10-2026): todas son de este local (abrió el 4-03-2023). -->
+      <p class="prueba"><svg class="ico-estrella" aria-hidden="true"><use href="#i-estrella"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=Mitto%20Calle%20R%C3%ADo%20Guadiana%209%20Parla" target="_blank" rel="noopener"><strong>4,7</strong> en Google · 178 reseñas</a></p>
+      <!-- CONFIRMAR CON EL CLIENTE: horario de Google Maps. Sin JS se lee el teléfono. -->
+      <p class="estado viva" data-estado="abierto">
+        <span class="punto" aria-hidden="true"></span>
+        <span role="status"><b class="estado-palabra">Todos los días</b> · <span class="estado-detalle">600 89 87 51</span></span>
+      </p>
+    </div>
+    <figure class="pa pa-puerta" id="puerta" data-pa-modo="tiempo" data-pa-abrir="auto" data-pa-umbral=".5" data-pa-espera="150" data-una-vez="sesion" data-pa-textos='["Abrir la puerta","Cerrar la puerta"]'>
+      <div class="pa-escena foto-feston">
+        <div class="pa-dentro"><img src="img/patio-dentro-1200.webp" srcset="img/patio-dentro-720.webp 720w, img/patio-dentro-1200.webp 1200w" sizes="(min-width:1024px) 40vw, 92vw" width="1200" height="1374" loading="lazy" alt="El patio interior de Mitto: zócalo de azulejos azules y blancos, escalera encalada con macetas, cojines de flores y una tarta de chocolate con peras en la mesa"></div>
+        <div class="pa-mitad pa-izq"><span class="pa-sombra"><i></i></span><img src="img/puerta-mitto-1200.webp" srcset="img/puerta-mitto-720.webp 720w, img/puerta-mitto-1200.webp 1200w" sizes="(min-width:1024px) 40vw, 92vw" width="1200" height="1374" fetchpriority="high" alt="El logo de Mitto, bar y buena comida, en blanco sobre su verde oliva"></div>
+        <div class="pa-mitad pa-der" aria-hidden="true"><span class="pa-sombra"><i></i></span><img src="img/puerta-mitto-1200.webp" srcset="img/puerta-mitto-720.webp 720w, img/puerta-mitto-1200.webp 1200w" sizes="(min-width:1024px) 40vw, 92vw" width="1200" height="1374" loading="lazy" aria-hidden="true" alt=""></div>
+        <span class="feston-filete puerta-filete" aria-hidden="true"></span>
+      </div>
+      <figcaption class="pa-pies"><p data-pa-paso="1" class="pa-solo-lector">Cerrada: el logo de Mitto sobre su verde oliva.</p><p data-pa-paso="2">Tarta de chocolate con crema de chocolate blanco y peras en almíbar, en el patio (foto de nuestro Instagram, 2023).</p></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ CINTA (M40, oliva, festón arriba y abajo) ============ -->
+<section class="cinta borde-feston mov" data-feston-lado="ambos" aria-label="Algunos platos de Mitto">
+  <ul class="sr"><li>Tostada con aguacate</li><li>Desayuno americano</li><li>Costillas BBQ</li><li>Fingers de pollo</li><li>Tiramisú de pistacho</li><li>Tarta Napoleón</li><li>Papanași</li><li>Cozonac por encargo</li><li>Bar y buena comida</li></ul>
+  <div class="marquee" aria-hidden="true"><div class="marquee-track">
+    <span>Tostada con aguacate<svg><use href="#flor"/></svg></span><span>Desayuno americano<svg><use href="#flor"/></svg></span><span>Costillas BBQ<svg><use href="#flor"/></svg></span><span>Fingers de pollo<svg><use href="#flor"/></svg></span><span>Tiramisú de pistacho<svg><use href="#flor"/></svg></span><span>Tarta Napoleón<svg><use href="#flor"/></svg></span><span>Papanași<svg><use href="#flor"/></svg></span><span>Cozonac por encargo<svg><use href="#flor"/></svg></span><span>Bar y buena comida<svg><use href="#flor"/></svg></span>
+    <span>Tostada con aguacate<svg><use href="#flor"/></svg></span><span>Desayuno americano<svg><use href="#flor"/></svg></span><span>Costillas BBQ<svg><use href="#flor"/></svg></span><span>Fingers de pollo<svg><use href="#flor"/></svg></span><span>Tiramisú de pistacho<svg><use href="#flor"/></svg></span><span>Tarta Napoleón<svg><use href="#flor"/></svg></span><span>Papanași<svg><use href="#flor"/></svg></span><span>Cozonac por encargo<svg><use href="#flor"/></svg></span><span>Bar y buena comida<svg><use href="#flor"/></svg></span>
+  </div></div>
+</section>
+
+<!-- ============ DESAYUNOS (cal) ============ -->
+<section class="sec cal desayunos mov" id="desayunos" aria-labelledby="t-desayunos">
+  <div class="deco" aria-hidden="true">
+    <span class="palabra-fondo" data-px="70" style="top:12px;right:4%" data-t="café"></span>
+    <svg class="flor-fondo" data-py="-160" style="left:1.2%;top:58%"><use href="#flor"/></svg>
+  </div>
+  <div class="wrap desayunos-rejilla">
+    <div class="desayunos-texto">
+      <div class="cab-sec">
+        <h2 class="tit tf tf-rizos tf-izq tf-delante" id="t-desayunos"><span>Desayunos, dulces y salados</span></h2>
+        <p class="apoyo">Dulce, salado y opciones ligeras, preparados al momento.</p>
+      </div>
+      <ul class="lista-desayunos aparece">
+        <li><b>Tostada crujiente</b> con tomate, jamón serrano, atún, mermelada o mantequilla</li>
+        <li><b>Tostada con aguacate</b></li>
+        <li><b>Tostada completa</b> con queso, aguacate y jamón</li>
+        <li><b>Croissant caliente</b></li>
+        <li><b>Tortilla francesa</b> con bacon y queso</li>
+        <li><b>Sándwich</b></li>
+        <li><b>Desayuno americano</b>: huevos, bacon y pancakes</li>
+      </ul>
+      <p class="aparece"><a class="enlace" href="#carta">Ver la carta entera<svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a></p>
+    </div>
+    <div class="desayunos-fotos">
+      <figure class="d-grande revela"><span class="foto-iman"><span class="foto-feston"><img src="img/desayuno-aguacate-960.webp" srcset="img/desayuno-aguacate-600.webp 600w, img/desayuno-aguacate-960.webp 960w" sizes="(min-width:1024px) 32vw, 80vw" width="960" height="1093" loading="lazy" decoding="async" alt="Tostada con aguacate, queso y semillas en un plato rosa, con un café y la sala de Mitto al fondo"></span></span>
+        <figcaption>Tostada con aguacate y café (foto de nuestro Instagram, marzo de 2023).</figcaption></figure>
+      <figure class="d-peque revela"><span class="foto-feston"><img src="img/desayuno-completa-760.webp" srcset="img/desayuno-completa-480.webp 480w, img/desayuno-completa-760.webp 760w" sizes="(min-width:1024px) 20vw, 60vw" width="760" height="760" loading="lazy" decoding="async" alt="Tostada larga con queso, aguacate y lonchas de jamón en una bandeja"></span>
+        <figcaption>Tostada completa con queso, aguacate y jamón (foto de nuestro Instagram, 2023).</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LA CARTA (crema verdoso) · carta-lista-flexible v1.3.1 SIN PRECIOS + M53 + M50, con la foto fija del apartado (con-foto) ============
+     CONFIRMAR CON EL CLIENTE: carta actual con precios. Platos de sus publicaciones de Instagram (01-investigacion/carta.md);
+     ninguna cifra: ni los precios de su carta de 2023, ni los de encargos, ni los de una reseña. Fotos del apartado (columna fija .clf-foto),
+     solo en los platos cuyo nombre da el pie de su publicación. -->
+<section class="sec crema carta mov" id="carta" aria-labelledby="t-carta">
+  <div class="deco" aria-hidden="true">
+    <span class="palabra-fondo" data-px="-70" style="top:12px;left:3%" data-t="buena comida"></span>
+    <svg class="flor-fondo" data-py="-220" style="right:1.2%;top:40%"><use href="#flor"/></svg>
+  </div>
+  <div class="wrap">
+    <div class="cab-sec">
+      <h2 class="tit tf tf-rizos tf-izq tf-delante" id="t-carta"><span>La carta</span></h2>
+      <p class="apoyo">Cocina casera, raciones y ensaladas.</p>
+    </div>
+    <p class="aviso-carta"><strong>Todavía no tenemos la carta con precios en la web.</strong> Pregunta en la barra o llámanos al <a href="tel:+34600898751">600 89 87 51</a>.</p>
+    <div class="clf" data-clf data-clf-etiqueta="Apartados de la carta">
+      <div class="clf-espera"><p>Pregunta por la carta en la barra o llámanos al 600 89 87 51.</p></div>
+      <div class="clf-viva">
+        <div class="clf-paneles">
+          <div class="clf-panel" id="carta-desayunos" data-clf-pestana="Desayunos">
+            <div class="clf-lista"><h3 class="clf-tit">Desayunos</h3>
+              <ul class="clf-platos">
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Tostada crujiente</span></p><p class="clf-desc">A elegir: tomate, jamón serrano, atún, mermelada o mantequilla.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Tostada con aguacate</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Tostada completa</span></p><p class="clf-desc">Con queso, aguacate y jamón.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Croissant caliente</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Tortilla francesa</span></p><p class="clf-desc">Con bacon y queso.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Sándwich</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Desayuno americano</span></p><p class="clf-desc">Huevos, bacon y pancakes.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Café Oquendo</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Zumo natural</span></p></li>
+              </ul>
+              <p class="pregunta-precio">Precio: pregúntanos.</p></div>
+          </div>
+          <div class="clf-panel con-foto" id="carta-raciones" data-clf-pestana="Raciones y platos">
+            <div class="clf-lista"><h3 class="clf-tit">Raciones y platos</h3>
+              <ul class="clf-platos">
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Costillas BBQ</span></p><p class="clf-desc">Con patatas panaderas al horno.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Oreja con torreznos</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Fingers de pollo</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Gambas al ajillo</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Pulpo a la gallega</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Sepia a la plancha</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Boquerones</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Solomillo</span></p><p class="clf-desc">A la plancha o en salsa de champiñones.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Codillo con patatas</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Brochetas de carne con patata asada</span></p></li>
+                <!-- CONFIRMAR CON EL CLIENTE: "Mici" es el nombre que da el pie de su publicación 092 (la foto). Sus posts también
+                     citan "carnaciori con patatas": puede ser el mismo plato u otro; mientras tanto, uno solo. -->
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Mici</span></p></li>
+              </ul>
+              <p class="pregunta-precio">Precio: pregúntanos.</p></div>
+            <div class="clf-foto"><figure><img src="img/carta-costillas-480.webp" srcset="img/carta-costillas-160.webp 160w, img/carta-costillas-480.webp 480w" sizes="(min-width:861px) 20rem, 46vw" width="480" height="480" loading="lazy" decoding="async" alt="Costillas BBQ con patatas panaderas en una bandeja"><figcaption>Costillas BBQ con patatas panaderas (foto de nuestro Instagram).</figcaption></figure><figure><img src="img/carta-mici-480.webp" srcset="img/carta-mici-160.webp 160w, img/carta-mici-480.webp 480w" sizes="(min-width:861px) 20rem, 46vw" width="480" height="480" loading="lazy" decoding="async" alt="Plato de mici con patatas fritas, tomate y mostaza"><figcaption>Mici con patatas (foto de nuestro Instagram).</figcaption></figure></div>
+          </div>
+          <div class="clf-panel con-foto" id="carta-ensaladas" data-clf-pestana="Ensaladas">
+            <div class="clf-lista"><h3 class="clf-tit">Ensaladas</h3>
+              <ul class="clf-platos">
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Ensalada Mitto</span></p><p class="clf-desc">Rúcula, burrata, jamón, melocotón frito, frutos secos y vinagre balsámico.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Super Ensalada</span></p><p class="clf-desc">Hojas verdes, pollo, cebolla, maíz, aguacate, tomate, semillas, miel y mostaza.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Ensalada de pollo</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Caprese</span></p><p class="clf-desc">Tomate, mozzarella, aceite y vinagre balsámico.</p></li>
+              </ul>
+              <p class="pregunta-precio">Precio: pregúntanos.</p></div>
+            <div class="clf-foto"><figure><img src="img/carta-ensalada-480.webp" srcset="img/carta-ensalada-160.webp 160w, img/carta-ensalada-480.webp 480w" sizes="(min-width:861px) 20rem, 46vw" width="480" height="480" loading="lazy" decoding="async" alt="Ensalada Mitto con rúcula, burrata, jamón, melocotón y frutos secos"><figcaption>Ensalada Mitto (foto de nuestro Instagram).</figcaption></figure></div>
+          </div>
+          <div class="clf-panel" id="carta-hamburguesas" data-clf-pestana="Hamburguesas, pizzas y bocadillos">
+            <div class="clf-lista"><h3 class="clf-tit">Hamburguesas, pizzas y bocadillos</h3>
+              <ul class="clf-platos">
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Hamburguesa de pollo</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Hamburguesa de pulled pork</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Pizzas</span></p><p class="clf-desc">De atún, pepperoni o mortadela.</p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Sándwich con carne</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Bocadillo de carne</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Sándwiches</span></p><p class="clf-desc">Mixto, cubano o vegetal.</p></li>
+              </ul>
+              <p class="pregunta-precio">Precio: pregúntanos.</p></div>
+          </div>
+          <div class="clf-panel con-foto" id="carta-postres" data-clf-pestana="Postres">
+            <div class="clf-lista"><h3 class="clf-tit">Postres</h3>
+              <ul class="clf-platos">
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Tiramisú de pistacho</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Tarta de zanahoria</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Tarta de queso</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Papanași</span></p></li>
+                <li class="clf-plato"><p class="clf-linea"><span class="clf-nombre">Coulant de chocolate</span></p><p class="clf-desc">Con helado.</p></li>
+              </ul>
+              <p class="pregunta-precio">Precio: pregúntanos.</p></div>
+            <div class="clf-foto"><figure><img src="img/carta-papanasi-480.webp" srcset="img/carta-papanasi-160.webp 160w, img/carta-papanasi-480.webp 480w" sizes="(min-width:861px) 20rem, 46vw" width="480" height="480" loading="lazy" decoding="async" alt="Papanași con nata y salsa de arándanos"><figcaption>Papanași (foto de nuestro Instagram).</figcaption></figure><figure><img src="img/carta-coulant-480.webp" srcset="img/carta-coulant-160.webp 160w, img/carta-coulant-480.webp 480w" sizes="(min-width:861px) 20rem, 46vw" width="480" height="480" loading="lazy" decoding="async" alt="Coulant de chocolate con bolas de helado de chocolate"><figcaption>Coulant de chocolate con helado (foto de nuestro Instagram).</figcaption></figure></div>
+          </div>
+        </div>
+        <div class="clf-pie">
+          <p>Los platos cambian: lo que hay hoy, en la barra.</p>
+          <p>¿Alergias o intolerancias? Pregúntanos antes de pedir.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REPOSTERÍA Y ENCARGOS (rosa empolvado, festón arriba) ============
+     Nombres de cada tarta: el pie de su publicación. Encargos: sin precios, kilos ni fechas (las campañas ya pasaron). -->
+<section class="sec rosa reposteria borde-feston mov" id="reposteria" aria-labelledby="t-reposteria">
+  <div class="deco" aria-hidden="true">
+    <span class="palabra-fondo" data-px="60" style="top:12px;right:4%" data-t="tartas"></span>
+    <svg class="flor-fondo" data-py="-140" style="left:1.2%;top:70%"><use href="#flor"/></svg>
+  </div>
+  <div class="wrap">
+    <div class="cab-sec">
+      <h2 class="tit tf tf-rizos tf-izq tf-delante" id="t-reposteria"><span>Tartas de la casa</span></h2>
+      <p class="apoyo">Repostería propia, hecha en Mitto. Más tartas en <a href="https://www.instagram.com/mitto.bakery/" target="_blank" rel="noopener">@mitto.bakery</a>.</p>
+    </div>
+    <div class="bento grupo">
+      <figure class="b-napoleon item revela"><button class="foto-btn" type="button" data-galeria="reposteria" data-grande="img/tarta-napoleon-1200.webp" data-pie="Tarta Napoleón con crema de vainilla y caramelo" aria-label="Ampliar la foto: tarta Napoleón"><span class="foto-feston"><img src="img/tarta-napoleon-640.webp" srcset="img/tarta-napoleon-640.webp 640w, img/tarta-napoleon-1200.webp 1200w" sizes="(min-width:1024px) 46vw, 92vw" width="640" height="640" loading="lazy" decoding="async" alt="Tarta Napoleón entera, cubierta de migas de hojaldre y con una corona de frambuesas, sobre una blonda"></span></button>
+        <figcaption>Tarta Napoleón con crema de vainilla y caramelo.</figcaption></figure>
+      <figure class="b-queso item revela"><button class="foto-btn" type="button" data-galeria="reposteria" data-grande="img/tarta-queso-1200.webp" data-pie="Tarta de queso con mousse de frambuesa y capa crujiente de pistacho" aria-label="Ampliar la foto: tarta de queso con mousse de frambuesa"><span class="foto-feston"><img src="img/tarta-queso-560.webp" srcset="img/tarta-queso-560.webp 560w, img/tarta-queso-1200.webp 1200w" sizes="(min-width:1024px) 24vw, 46vw" width="560" height="560" loading="lazy" decoding="async" alt="Tarta de queso rosa vista desde arriba, cortada por la mitad, con frambuesas en el borde"></span></button>
+        <figcaption>Tarta de queso con mousse de frambuesa y pistacho.</figcaption></figure>
+      <figure class="b-chocolate item revela"><button class="foto-btn" type="button" data-galeria="reposteria" data-grande="img/tarta-chocolate-1200.webp" data-pie="Tarta de chocolate con bizcocho de cacao, café y ron" aria-label="Ampliar la foto: tarta de chocolate"><span class="foto-feston"><img src="img/tarta-chocolate-560.webp" srcset="img/tarta-chocolate-560.webp 560w, img/tarta-chocolate-1200.webp 1200w" sizes="(min-width:1024px) 24vw, 46vw" width="560" height="560" loading="lazy" decoding="async" alt="Corte de una tarta de chocolate de varias capas con crema y frambuesas arriba"></span></button>
+        <figcaption>Tarta de chocolate con bizcocho de cacao, café y ron.</figcaption></figure>
+      <figure class="b-pavlovas item revela"><button class="foto-btn" type="button" data-galeria="reposteria" data-grande="img/pavlovas-1200.webp" data-pie="Pavlovas con frutos rojos" aria-label="Ampliar la foto: pavlovas"><span class="foto-feston"><img src="img/pavlovas-560.webp" srcset="img/pavlovas-560.webp 560w, img/pavlovas-1200.webp 1200w" sizes="(min-width:1024px) 24vw, 46vw" width="560" height="560" loading="lazy" decoding="async" alt="Varias pavlovas de merengue con nata, higos y frutos rojos"></span></button>
+        <figcaption>Pavlovas con frutos rojos.</figcaption></figure>
+      <figure class="b-salam item revela"><button class="foto-btn" type="button" data-galeria="reposteria" data-grande="img/salam-biscuiti-1200.webp" data-pie="Salam de biscuiți, un dulce típico de Rumanía (foto de nuestro Instagram, 2023)" aria-label="Ampliar la foto: salam de biscuiți"><span class="foto-feston"><img src="img/salam-biscuiti-560.webp" srcset="img/salam-biscuiti-560.webp 560w, img/salam-biscuiti-1200.webp 1200w" sizes="(min-width:1024px) 24vw, 46vw" width="560" height="560" loading="lazy" decoding="async" alt="Rollitos de chocolate con frutos secos sobre una bandeja azul, con el azulejo del patio detrás"></span></button>
+        <figcaption>Salam de biscuiți, un dulce típico de Rumanía.</figcaption></figure>
+    </div>
+    <div class="encargo">
+      <figure class="encargo-foto revela"><span class="foto-feston"><img src="img/cozonac-1000.webp" srcset="img/cozonac-600.webp 600w, img/cozonac-1000.webp 1000w" sizes="(min-width:1024px) 40vw, 92vw" width="1000" height="722" loading="lazy" decoding="async" alt="Tres cozonac cortados sobre una tabla de madera: de chocolate, de coco y de pistacho"></span>
+        <figcaption>Cozonac de chocolate, coco y pistacho (foto de nuestro Instagram, Navidad de 2025).</figcaption></figure>
+      <div class="encargo-texto aparece">
+        <h3 class="encargo-tit">Por encargo</h3>
+        <p>Se encargan <strong>por teléfono, por Instagram o en el bar</strong>.</p>
+        <p>En Navidad y Semana Santa hacemos cozonac, pască, mucenici y cajas de pastelitos: pregúntanos qué hay.</p>
+        <div class="encargo-acciones">
+          <a class="btn-hunde" href="tel:+34600898751"><span class="base" aria-hidden="true"></span><span class="cara"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar para encargar</span></a>
+          <a class="btn btn-linea iman" href="https://ig.me/m/mitto_bar" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg>Escribir por Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EL PATIO (cal con la baldosa de su azulejo) ============ -->
+<section class="sec cal patio mov" id="patio" aria-labelledby="t-patio">
+  <div class="deco" aria-hidden="true">
+    <div class="fondo-vivo fv-baldosa-propia fv-b-azulejo-patio fv-quieto" style="--fv-color:#6C6E56; --fv-papel:.07"><span class="fv-papel" data-py="-30"></span></div>
+    <span class="palabra-fondo" data-px="-60" style="top:12px;left:3%" data-t="patio"></span>
+  </div>
+  <div class="wrap patio-rejilla">
+    <div class="patio-texto">
+      <div class="cab-sec">
+        <h2 class="tit tf tf-rizos tf-izq tf-delante" id="t-patio"><span>El patio</span></h2>
+        <p class="apoyo">Nuestra terraza está dentro.</p>
+      </div>
+      <!-- Frases literales de dos reseñas de 5 estrellas de Google Maps (leídas el 24-10-2026), sin nombres. -->
+      <figure class="cita aparece">
+        <blockquote><p>«nada de eso se intuye en la puerta»</p><p>«un patio que yo lo llamo "patio andaluz"»</p></blockquote>
+        <figcaption>Clientes en Google, 2025 y marzo de 2026</figcaption>
+      </figure>
+      <span class="feston-filete patio-filete" aria-hidden="true"></span>
+    </div>
+    <div class="mosaico grupo">
+      <figure class="m-limonadas item revela"><button class="foto-btn" type="button" data-galeria="patio" data-grande="img/patio-limonadas-1200.webp" data-pie="Limonadas en el patio (foto de nuestro Instagram, 2023)" aria-label="Ampliar la foto: limonadas en el patio"><span class="foto-feston"><img src="img/patio-limonadas-640.webp" srcset="img/patio-limonadas-640.webp 640w, img/patio-limonadas-1200.webp 1200w" sizes="(min-width:1024px) 34vw, 92vw" width="640" height="640" loading="lazy" decoding="async" alt="Tres limonadas con pajitas en una mesa del patio, con la escalera encalada de baranda azul y el zócalo de azulejo detrás"></span></button>
+        <figcaption>Limonadas en el patio.</figcaption></figure>
+      <figure class="m-celebracion item revela"><button class="foto-btn" type="button" data-galeria="patio" data-grande="img/patio-celebracion-1100.webp" data-pie="El patio preparado para una celebración (foto de nuestro Instagram, marzo de 2023)" aria-label="Ampliar la foto: el patio preparado para una celebración"><span class="foto-feston"><img src="img/patio-celebracion-560.webp" srcset="img/patio-celebracion-560.webp 560w, img/patio-celebracion-1100.webp 1100w" sizes="(min-width:1024px) 17vw, 46vw" width="560" height="560" loading="lazy" decoding="async" alt="El patio con plantas, cojines de flores y el zócalo de azulejo, con una tarta en la mesa"></span></button>
+        <figcaption>El patio, preparado para una celebración.</figcaption></figure>
+      <figure class="m-tapas item revela"><button class="foto-btn" type="button" data-galeria="patio" data-grande="img/patio-tapas-1200.webp" data-pie="Tapas y raciones en el patio (foto de nuestro Instagram, 2023)" aria-label="Ampliar la foto: tapas y raciones en el patio"><span class="foto-feston"><img src="img/patio-tapas-600.webp" srcset="img/patio-tapas-600.webp 600w, img/patio-tapas-1200.webp 1200w" sizes="(min-width:1024px) 17vw, 46vw" width="600" height="458" loading="lazy" decoding="async" alt="Una bandeja de montaditos de jamón en el patio, con los cojines de flores azules y el azulejo detrás"></span></button>
+        <figcaption>Tapas y raciones en el patio.</figcaption></figure>
+      <figure class="m-salon item revela"><button class="foto-btn" type="button" data-galeria="patio" data-grande="img/salon-1200.webp" data-pie="Y el salón, con las mesas puestas (foto de nuestro Instagram, mayo de 2025)" aria-label="Ampliar la foto: el salón con las mesas puestas"><span class="foto-feston"><img src="img/salon-600.webp" srcset="img/salon-600.webp 600w, img/salon-1200.webp 1200w" sizes="(min-width:1024px) 22vw, 60vw" width="600" height="400" loading="lazy" decoding="async" alt="El salón de Mitto con las mesas de madera puestas, sillas gris azulado y la pared verde salvia"></span></button>
+        <figcaption>Y el salón, con las mesas puestas.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OPINIONES (oliva oscuro con la baldosa; pila M54 pila-deslizable v2) ============
+     Frases literales de reseñas de 5 estrellas de Google Maps (01-investigacion/investigacion.md, leídas el 24-10-2026), sin nombres;
+     la fecha es la aproximada a partir del "hace N meses / años" de Google a 24-10-2026. -->
+<section class="sec oscuro opiniones mov" id="opiniones" aria-labelledby="t-opiniones">
+  <div class="deco" aria-hidden="true">
+    <div class="fondo-vivo fv-baldosa-propia fv-b-azulejo-patio fv-quieto" style="--fv-color:#FBFAF6; --fv-papel:.05; --fv-desfase:48px 24px"><span class="fv-papel" data-py="-30"></span></div>
+    <span class="palabra-fondo" data-px="70" style="top:12px;right:3%" data-t="casero"></span>
+  </div>
+  <div class="wrap opiniones-rejilla">
+    <div class="opiniones-lado aparece">
+      <h2 class="tit tf tf-rizos tf-izq tf-delante" id="t-opiniones"><span>Como en casa</span></h2>
+      <p class="nota-google"><svg class="ico-estrella" aria-hidden="true"><use href="#i-estrella"/></svg>4,7 <span>en Google · 178 reseñas</span></p>
+      <p class="temas">Lo que más sale en las reseñas: el patio, los desayunos, las raciones y los postres caseros.</p>
+      <a class="btn btn-linea-clara iman" href="https://www.google.com/maps/search/?api=1&amp;query=Mitto%20Calle%20R%C3%ADo%20Guadiana%209%20Parla" target="_blank" rel="noopener">Leer las reseñas en Google<svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+    </div>
+    <div class="opiniones-pila aparece">
+      <div class="pila" id="pila" tabindex="0" role="region" aria-roledescription="carrusel" aria-label="Opiniones de Google. Usa las flechas para pasar.">
+        <figure class="tar foto-feston"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Sin duda las mejores costillas de cerdo que he comido en Parla, los fingers de pollo están espectaculares!!!»</p></blockquote><figcaption>Cliente en Google · 2025</figcaption></figure>
+        <figure class="tar foto-feston"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«El tiramisú de pistacho me alucina.»</p></blockquote><figcaption>Cliente en Google · 2025</figcaption></figure>
+        <figure class="tar foto-feston"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«las patatas fritas no son congeladas, cosa que se agradece en un bar»</p></blockquote><figcaption>Cliente en Google · 2024</figcaption></figure>
+        <figure class="tar foto-feston"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«He pedido el bocadillo de carne y está espectacular, con un pan casero buenísimo. […]»</p></blockquote><figcaption>Cliente en Google · abril de 2026</figcaption></figure>
+        <figure class="tar foto-feston"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Desayunos buenísimos! tanto el dulce como el salado»</p></blockquote><figcaption>Cliente en Google · diciembre de 2025</figcaption></figure>
+        <figure class="tar foto-feston"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«todo es casero y la comida te la preparan al momento»</p></blockquote><figcaption>Cliente en Google · 2025</figcaption></figure>
+        <figure class="tar foto-feston"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«Las tartas las mejores»</p></blockquote><figcaption>Cliente en Google · 2024</figcaption></figure>
+        <figure class="tar foto-feston"><p class="est" role="img" aria-label="5 de 5 estrellas">★★★★★</p><blockquote><p>«El espacio es precioso, estuvimos en el patio interior que hay y se estaba super bien.»</p></blockquote><figcaption>Cliente en Google · 2025</figcaption></figure>
+      </div>
+      <div class="ctrl"><button type="button" id="ant"><span aria-hidden="true">←</span> Anterior</button><span class="cuenta" id="cuenta" aria-live="polite"></span><button type="button" id="sig">Siguiente <span aria-hidden="true">→</span></button></div>
+      <p class="pista">Desliza la tarjeta a un lado para ver la siguiente.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HORARIO (cal) ============
+     CONFIRMAR CON EL CLIENTE: horario de Google Maps (24-10-2026) y festivos. Si cambia: HORARIO en js/sitio.js, esta lista, el JSON-LD y el pie. -->
+<section class="sec cal horario mov" id="horario" aria-labelledby="t-horario">
+  <div class="deco" aria-hidden="true">
+    <span class="palabra-fondo" data-px="-60" style="top:12px;right:3%" data-t="hasta tarde"></span>
+    <svg class="flor-fondo" data-py="-200" style="left:1.2%;top:62%"><use href="#flor"/></svg>
+  </div>
+  <div class="wrap horario-rejilla">
+    <div class="aparece">
+      <h2 class="tit tf tf-rizos tf-izq tf-delante" id="t-horario"><span>Abrimos todos los días</span></h2>
+      <p class="estado estado-grande" data-estado="abierto"><span class="punto" aria-hidden="true"></span><span role="status"><b class="estado-palabra">Llámanos</b> · <span class="estado-detalle">600 89 87 51</span></span></p>
+      <p class="horario-nota">Viernes y sábado, hasta la 1:30 de la madrugada. En festivos, mejor llama al <a href="tel:+34600898751">600 89 87 51</a>.</p>
+    </div>
+    <div class="tarjeta-horario foto-feston aparece">
+      <dl class="dias" id="dias">
+        <div data-dia="1"><dt>Lunes</dt><dd>8:00 a 22:00</dd></div>
+        <div data-dia="2"><dt>Martes</dt><dd>8:00 a 22:00</dd></div>
+        <div data-dia="3"><dt>Miércoles</dt><dd>8:00 a 23:30</dd></div>
+        <div data-dia="4"><dt>Jueves</dt><dd>8:00 a 23:30</dd></div>
+        <div data-dia="5"><dt>Viernes</dt><dd>8:00 a 1:30</dd></div>
+        <div data-dia="6"><dt>Sábado</dt><dd>9:00 a 1:30</dd></div>
+        <div data-dia="0"><dt>Domingo</dt><dd>9:00 a 22:00</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ============ UBICACIÓN (crema verdoso; ubicacion-mapa v3) ============
+     CONFIRMAR CON EL CLIENTE: acceso en silla de ruedas y "para llevar sí, a domicilio no" (atributos de Google Maps). -->
+<section class="sec crema donde mov" id="ubicacion" aria-labelledby="t-ubicacion">
+  <div class="deco" aria-hidden="true">
+    <span class="palabra-fondo" data-px="60" style="top:12px;left:3%" data-t="Parla"></span>
+    <svg class="flor-fondo" data-py="-180" style="right:1.2%;top:72%"><use href="#flor"/></svg>
+  </div>
+  <div class="wrap">
+    <div class="cab-sec">
+      <h2 class="tit tf tf-rizos tf-izq tf-delante" id="t-ubicacion"><span>Dónde estamos</span></h2>
+      <p class="apoyo">Busca el logo del tenedor y la cuchara en la fachada.</p>
+    </div>
+    <div class="donde-rejilla">
+      <div class="datos aparece">
+        <p class="direccion">C. Río Guadiana, 9<br>28981 Parla (Madrid)</p>
+        <dl class="datos-lista">
+          <div><dt>Teléfono</dt><dd><a href="tel:+34600898751">600 89 87 51</a></dd></div>
+          <div><dt>Para llevar</dt><dd>Sí. A domicilio, no.</dd></div>
+          <div><dt>El patio</dt><dd>Es nuestra terraza, dentro del local.</dd></div>
+          <div><dt>Accesible</dt><dd>Entrada para silla de ruedas, según Google.</dd></div>
+        </dl>
+        <div class="datos-botones">
+          <a class="btn btn-principal iman" href="https://www.google.com/maps/dir/?api=1&amp;destination=Mitto%2C%20Calle%20R%C3%ADo%20Guadiana%209%2C%2028981%20Parla" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Cómo llegar con Google Maps</a>
+          <a class="btn btn-linea" href="https://maps.apple.com/?q=Mitto&amp;address=Calle%20R%C3%ADo%20Guadiana%209%2C%2028981%20Parla" target="_blank" rel="noopener">Apple Maps</a>
+        </div>
+      </div>
+      <div class="mapa" id="mapa">
+        <div class="mapa-fachada" id="mapaFachada">
+          <span class="mapa-pin" aria-hidden="true"><svg><use href="#i-pin"/></svg></span>
+          <p>El mapa es de Google Maps: solo se carga si lo pides, y entonces Google puede guardar sus propias cookies.</p>
+          <button class="btn btn-linea" type="button" id="btnMapa">Ver el mapa aquí</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PREGUNTAS (cal; acordeon-nativo + FAQ interactiva de M30) ============ -->
+<section class="sec cal preguntas mov" id="preguntas" aria-labelledby="t-preguntas">
+  <div class="deco" aria-hidden="true">
+    <span class="palabra-fondo" data-px="-60" style="top:12px;right:3%" data-t="Mitto"></span>
+    <svg class="flor-fondo" data-py="-150" style="left:1.2%;top:75%"><use href="#flor"/></svg>
+  </div>
+  <div class="wrap faq-rejilla">
+    <div class="aparece">
+      <h2 class="tit tf tf-rizos tf-izq tf-delante" id="t-preguntas"><span>Preguntas</span></h2>
+      <p class="faq-intro">¿No está aquí lo que buscas? Llámanos al <a href="tel:+34600898751">600 89 87 51</a>.</p>
+    </div>
+    <div class="faq aparece">
+      <details name="faq"><summary>¿Tenéis carta con precios?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>Todavía no en la web. Pregunta en la barra o llámanos al <a href="tel:+34600898751">600 89 87 51</a> y te decimos lo que hay hoy.</p></div></details>
+      <details name="faq"><summary>¿Cómo encargo una tarta?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>Por teléfono, en el <a href="tel:+34600898751">600 89 87 51</a>; por Instagram, en <a href="https://ig.me/m/mitto_bar" target="_blank" rel="noopener">@mitto_bar</a>; o en el bar.</p></div></details>
+      <details name="faq"><summary>¿Se puede comer en el patio?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>Sí: el patio interior es nuestra terraza.</p></div></details>
+      <!-- CONFIRMAR CON EL CLIENTE: atributos de Google Maps (para llevar sí, a domicilio no). -->
+      <details name="faq"><summary>¿Hacéis reparto a domicilio?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>No. Para llevar, sí.</p></div></details>
+      <!-- CONFIRMAR CON EL CLIENTE: reservas por teléfono (lo decían sus publicaciones de 2023 y 2024). -->
+      <details name="faq"><summary>¿Puedo reservar mesa?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>Llámanos al <a href="tel:+34600898751">600 89 87 51</a>.</p></div></details>
+      <details name="faq"><summary>¿Tenéis en cuenta las alergias?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>Pregúntanos antes de pedir y te decimos qué lleva cada plato.</p></div></details>
+      <details name="faq"><summary>¿Abrís en festivos?<span class="signo" aria-hidden="true"></span></summary>
+        <div class="contenido"><p>Llámanos para confirmarlo: <a href="tel:+34600898751">600 89 87 51</a>.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LLAMADA FINAL (oliva oscuro con la baldosa, festón arriba) ============ -->
+<section class="sec oscuro final borde-feston mov" id="contacto" aria-labelledby="t-final">
+  <div class="deco" aria-hidden="true">
+    <div class="fondo-vivo fv-baldosa-propia fv-b-azulejo-patio fv-quieto" style="--fv-color:#FBFAF6; --fv-papel:.05; --fv-desfase:24px 72px"><span class="fv-papel" data-py="-30"></span></div>
+    <span class="palabra-fondo" data-px="-60" style="top:12px;left:3%" data-t="bar"></span>
+  </div>
+  <div class="wrap final-rejilla">
+    <img class="final-logo" src="img/logo-blanco-640.webp" srcset="img/logo-blanco-360.webp 360w, img/logo-blanco-640.webp 640w" sizes="(min-width:900px) 320px, 220px" width="640" height="538" loading="lazy" alt="Mitto, bar y buena comida">
+    <div class="final-texto">
+      <h2 class="final-h2" id="t-final"><span class="titular-palabras">¿Nos vemos en el <span class="acento-claro">patio</span>?</span></h2>
+      <p class="final-apoyo">Desayunos, comidas y tartas en la calle Río Guadiana, 9.</p>
+      <div class="final-acciones" data-tapa-barra>
+        <a class="btn-hunde btn-hunde-cal" href="tel:+34600898751"><span class="base" aria-hidden="true"></span><span class="cara"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar al 600 89 87 51</span></a>
+        <a class="btn btn-linea-clara iman" href="https://ig.me/m/mitto_bar" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg>Escribir por Instagram</a>
+      </div>
+      <p class="estado estado-final" data-estado="abierto"><span class="punto" aria-hidden="true"></span><span role="status"><b class="estado-palabra">C. Río Guadiana, 9</b> · <span class="estado-detalle">Parla</span></span></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="pie">
+  <div class="wrap pie-rejilla">
+    <div>
+      <p class="pie-tit">Dónde</p>
+      <p>C. Río Guadiana, 9<br>28981 Parla (Madrid)</p>
+      <p>Teléfono: <a href="tel:+34600898751">600 89 87 51</a></p>
+      <p><a href="https://www.instagram.com/mitto_bar/" target="_blank" rel="noopener">@mitto_bar</a> · <a href="https://www.instagram.com/mitto.bakery/" target="_blank" rel="noopener">@mitto.bakery</a></p>
+      <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Mitto%20Calle%20R%C3%ADo%20Guadiana%209%20Parla" target="_blank" rel="noopener">Mitto en Google Maps</a></p>
+    </div>
+    <div>
+      <p class="pie-tit">Horario <span class="pie-fuente">(según Google)</span></p>
+      <p>Lunes y martes, de 8:00 a 22:00<br>Miércoles y jueves, de 8:00 a 23:30<br>Viernes, de 8:00 a 1:30<br>Sábado, de 9:00 a 1:30<br>Domingo, de 9:00 a 22:00</p>
+    </div>
+    <nav aria-label="Secciones">
+      <p class="pie-tit">En esta web</p>
+      <ul class="pie-enlaces">
+        <li><a href="#desayunos">Desayunos</a></li><li><a href="#carta">La carta</a></li><li><a href="#reposteria">Repostería</a></li><li><a href="#patio">El patio</a></li>
+        <li><a href="#opiniones">Opiniones</a></li><li><a href="#horario">Horario</a></li><li><a href="#ubicacion">Ubicación</a></li><li><a href="#preguntas">Preguntas</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap pie-legal">
+    <p><a href="privacy.html">Privacidad</a> · <a href="terms.html">Aviso legal</a></p>
+    <p>Fotos provisionales, de nuestro Instagram.</p>
+    <p>Web de <a href="https://degaldodesigns.es" target="_blank" rel="noopener">Degaldo Designs</a></p>
+  </div>
+</footer>
+
+<div class="barra-movil" id="barraMovil" role="region" aria-label="Llamar o ver la carta">
+  <a class="btn btn-principal" href="tel:+34600898751"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>Llamar</a>
+  <a class="btn btn-linea-clara" href="#carta">Ver la carta</a>
+</div>
+
+<dialog class="lightbox" id="lightbox" aria-label="Foto ampliada">
+  <div class="lb-inner">
+    <img class="lb-img" id="lbImg" src="img/tarta-napoleon-1200.webp" width="1200" height="1200" loading="lazy" alt="Foto ampliada">
+    <div class="lb-barra">
+      <p class="lb-pie" id="lbPie"></p>
+      <div class="lb-controles">
+        <button class="lb-btn" type="button" id="lbPrev" aria-label="Foto anterior">‹</button>
+        <button class="lb-btn" type="button" id="lbNext" aria-label="Foto siguiente">›</button>
+        <button class="lb-btn" type="button" id="lbClose" aria-label="Cerrar">×</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<script src="js/carta.js" defer></script>
+<script src="js/sitio.js" defer></script>
+</body>
+</html>

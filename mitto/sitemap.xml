@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Demo: todas las páginas llevan noindex, así que el sitemap va vacío (un sitemap con páginas noindex se contradice).
+     Al publicar en el dominio del bar: quitar el noindex y añadir aquí un <url> con su <loc> (la portada, con https)
+     y su <lastmod> (AAAA-MM-DD), como en plantillas/sitemap.xml de la librería. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+</urlset>
