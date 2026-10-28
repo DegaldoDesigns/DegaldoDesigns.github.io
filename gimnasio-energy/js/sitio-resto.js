@@ -36,6 +36,36 @@
     addEventListener('resize', parallax); parallax();
   }
 
+  /* ---- v2.1 focos-techo (M132): cada foco se enciende al verse su sección, una vez ---- */
+  var focos = [].slice.call(document.querySelectorAll('.foco-techo'));
+  if (!conIO) focos.forEach(function(f){ f.classList.add('ft-on'); });
+  else { var iof = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('ft-on'); iof.unobserve(e.target); } }); }, {threshold:.25});
+    focos.forEach(function(f){ iof.observe(f); }); }
+
+  /* ---- v2.1 titulares con recorte (M03): se observa el h2 (contenedor), no el span recortado ---- */
+  var tits = [].slice.call(document.querySelectorAll('.rev-cont'));
+  if (reducido || !conIO) tits.forEach(function(t){ t.classList.add('rev-on'); });
+  else { var iot = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('rev-on'); iot.unobserve(e.target); } }); }, {rootMargin:'0px 0px -14% 0px'});
+    tits.forEach(function(t){ iot.observe(t); }); }
+
+  /* ---- v2.1 fotos con profundidad: con el scroll la foto va más despacio (±22 px) y con el ratón se desplaza un poco al revés ---- */
+  var fotos = [].slice.call(document.querySelectorAll('.prof'));
+  if (fotos.length && !reducido){
+    var pf = null;
+    var mover = function(){ pf = null; var vh = innerHeight;
+      fotos.forEach(function(f){ var img = f.querySelector('img'), r = f.getBoundingClientRect(); if (!img || r.bottom < -100 || r.top > vh + 100) return;
+        var p = ((r.top + r.height / 2) - vh / 2) / (vh + r.height);
+        img.style.translate = (f._mx || 0).toFixed(1) + 'px ' + (p * -44 + (f._my || 0)).toFixed(1) + 'px'; });
+    };
+    addEventListener('scroll', function(){ if (!pf) pf = requestAnimationFrame(mover); }, {passive:true});
+    addEventListener('resize', mover); mover();
+    if (raton) fotos.forEach(function(f){
+      f.addEventListener('pointermove', function(e){ if (e.pointerType !== 'mouse') return; var r = f.getBoundingClientRect();
+        f._mx = ((e.clientX - r.left) / r.width - .5) * -16; f._my = ((e.clientY - r.top) / r.height - .5) * -12; if (!pf) pf = requestAnimationFrame(mover); });
+      f.addEventListener('pointerleave', function(){ f._mx = f._my = 0; if (!pf) pf = requestAnimationFrame(mover); });
+    });
+  }
+
   /* ---- movimiento-marca: cifra que cuenta (M05), solo el 4,9 ---- */
   document.querySelectorAll('.cuenta').forEach(function(c){
     if (reducido || !conIO) return;

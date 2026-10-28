@@ -77,6 +77,7 @@
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <symbol id="atomo" viewBox="0 0 100 100"><g fill="none" stroke="currentColor" stroke-width="3"><ellipse cx="50" cy="50" rx="46" ry="16"/><ellipse cx="50" cy="50" rx="46" ry="16" transform="rotate(60 50 50)"/><ellipse cx="50" cy="50" rx="46" ry="16" transform="rotate(120 50 50)"/></g><circle cx="50" cy="50" r="8" fill="currentColor"/></symbol>
+  <symbol id="atomo-linea" viewBox="0 0 100 100"><g fill="none" stroke="currentColor" stroke-width="1.4" vector-effect="non-scaling-stroke"><ellipse cx="50" cy="50" rx="46" ry="16" vector-effect="non-scaling-stroke"/><ellipse cx="50" cy="50" rx="46" ry="16" transform="rotate(60 50 50)" vector-effect="non-scaling-stroke"/><ellipse cx="50" cy="50" rx="46" ry="16" transform="rotate(120 50 50)" vector-effect="non-scaling-stroke"/></g><circle cx="50" cy="50" r="4.2" fill="none" stroke="currentColor" stroke-width="1.4" vector-effect="non-scaling-stroke"/><circle cx="96" cy="50" r="1.6" fill="currentColor"/><circle cx="27" cy="89.8" r="1.6" fill="currentColor"/><circle cx="27" cy="10.2" r="1.6" fill="currentColor"/></symbol>
   <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.3 21.7l5-1.3A9.7 9.7 0 1 0 12 2.2Zm0 17.7a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 19.9Zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.7 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.2-.2-.4-.3Z"/></symbol>
   <symbol id="i-tel" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.2 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.3 1Z"/></symbol>
   <symbol id="i-flecha" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" d="M12 4v15M5.5 12.5 12 19l6.5-6.5"/></symbol>
@@ -109,7 +110,7 @@
   <p class="menu-pie"><a href="https://wa.me/34649269889?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20gimnasio" target="_blank" rel="noopener">WhatsApp 649 26 98 89</a></p>
 </nav>
 
-<main id="contenido">
+<main id="contenido" data-hl data-hl-tramos=":scope > section" data-hl-desde=".portada-foto" data-hl-espera="luces:fin" data-hl-hecho="[data-luces=fin]" data-hl-lado="derecha" data-hl-movil="nada">
   <!-- ============ PORTADA: la bici IC6 en su podio, bajo un foco. Momento firma: se encienden las luces de la sala (M81 v3),
        una vez por visita; después, el volante de la bici gira con el scroll (M114) ============ -->
   <section class="portada" id="inicio" aria-labelledby="t-portada">
@@ -149,11 +150,15 @@
 
   <!-- ============ SALAS (M113, el átomo de las salas) ============ -->
   <section class="sec mov" id="salas" aria-labelledby="t-salas">
+    <div class="foco-techo" aria-hidden="true" style="--ft-x:74%; --ft-dl:0ms"><span class="ft-lampara"></span><span class="ft-halo"></span><span class="ft-cono"></span></div>
+    <div class="deco" aria-hidden="true">
+      <span class="palabra-fondo" data-palabra="Salas" data-px="120" style="bottom:3%; right:-3%"></span>
+    </div>
     <div class="wrap con-rotulo">
       <p class="rotulo" aria-hidden="true">Salas</p>
       <div>
         <div class="cab">
-          <h2 class="h2" id="t-salas">Tres salas alrededor del mismo núcleo</h2>
+          <h2 class="h2 rev-cont" id="t-salas" data-hl-parada><span class="hl-marca hl-colgada" aria-hidden="true"></span><span class="rev-t">Tres salas alrededor del mismo núcleo</span></h2>
           <p>Como el átomo de la pared: una recepción y tres salas con su nombre en la columna. Elige una en el átomo o en las pestañas.</p>
         </div>
         <div class="ao" data-ao data-ao-tiempos="11,14,17">
@@ -166,7 +171,7 @@
           <div class="ao-paneles">
             <div class="ao-panel" role="tabpanel" id="ao-p1" aria-labelledby="ao-t1" tabindex="0">
               <!-- Foto de la ficha de Google Maps, autor sin verificar: CONFIRMAR permiso o cambiar por una propia -->
-              <figure class="ao-foto"><button class="lb4-foto" type="button" data-galeria="fitness" data-grande="img/sala-fitness-1600.webp" data-pie="Sala fitness: bancos de musculación junto a la pared del átomo" aria-label="Ampliar la foto de la sala fitness"><img src="img/sala-fitness-720.webp" srcset="img/sala-fitness-720.webp 720w, img/sala-fitness-1200.webp 1200w" sizes="(min-width: 1100px) 600px, (min-width: 768px) 56vw, 100vw" width="1200" height="750" loading="lazy" alt="Pared roja con el átomo de Energy pintado y dos bancos de musculación rojos; al fondo, la sala de pesas con espejos"></button></figure>
+              <figure class="ao-foto prof"><button class="lb4-foto" type="button" data-galeria="fitness" data-grande="img/sala-fitness-1600.webp" data-pie="Sala fitness: bancos de musculación junto a la pared del átomo" aria-label="Ampliar la foto de la sala fitness"><img src="img/sala-fitness-720.webp" srcset="img/sala-fitness-720.webp 720w, img/sala-fitness-1200.webp 1200w" sizes="(min-width: 1100px) 600px, (min-width: 768px) 56vw, 100vw" width="1200" height="750" loading="lazy" alt="Pared roja con el átomo de Energy pintado y dos bancos de musculación rojos; al fondo, la sala de pesas con espejos"></button></figure>
               <div class="ao-cuerpo">
                 <h3>Sala Fitness</h3>
                 <p>Musculación y cardio: bancos, rack de sentadillas, barras y discos olímpicos, y sala de cardio.</p>
@@ -179,7 +184,7 @@
             </div>
             <div class="ao-panel" role="tabpanel" id="ao-p2" aria-labelledby="ao-t2" tabindex="0">
               <!-- Foto de su Instagram (publicación de 2018, IG 122): el tatami puede haber cambiado; CONFIRMAR con el cliente -->
-              <figure class="ao-foto"><button class="lb4-foto" type="button" data-galeria="tatami" data-grande="img/sala-tatami-1080.webp" data-pie="Sala tatami: sacos sobre el tatami verde" aria-label="Ampliar la foto de la sala tatami"><img src="img/sala-tatami-720.webp" srcset="img/sala-tatami-720.webp 720w, img/sala-tatami-1080.webp 1080w" sizes="(min-width: 1100px) 600px, (min-width: 768px) 56vw, 100vw" width="1080" height="675" loading="lazy" alt="Tatami verde con un saco de boxeo rojo colgado y otro saco de pie; al fondo, columnas rojas y un estante con mancuernas y material"></button></figure>
+              <figure class="ao-foto prof"><button class="lb4-foto" type="button" data-galeria="tatami" data-grande="img/sala-tatami-1080.webp" data-pie="Sala tatami: sacos sobre el tatami verde" aria-label="Ampliar la foto de la sala tatami"><img src="img/sala-tatami-720.webp" srcset="img/sala-tatami-720.webp 720w, img/sala-tatami-1080.webp 1080w" sizes="(min-width: 1100px) 600px, (min-width: 768px) 56vw, 100vw" width="1080" height="675" loading="lazy" alt="Tatami verde con un saco de boxeo rojo colgado y otro saco de pie; al fondo, columnas rojas y un estante con mancuernas y material"></button></figure>
               <div class="ao-cuerpo">
                 <h3>Sala Tatami</h3>
                 <p>Karate Shito Ryu para niños y adultos, y muay thai, sobre tatami y con sacos.</p>
@@ -192,7 +197,7 @@
               </div>
             </div>
             <div class="ao-panel" role="tabpanel" id="ao-p3" aria-labelledby="ao-t3" tabindex="0">
-              <figure class="ao-foto"><button class="lb4-foto" type="button" data-galeria="ciclo" data-grande="img/sala-ciclo-1080.webp" data-pie="Sala ciclo: bicis Life Fitness IC6 frente a la pared roja" aria-label="Ampliar la foto de la sala ciclo"><img src="img/sala-ciclo-720.webp" srcset="img/sala-ciclo-720.webp 720w, img/sala-ciclo-1080.webp 1080w" sizes="(min-width: 1100px) 600px, (min-width: 768px) 56vw, 100vw" width="1080" height="675" loading="lazy" alt="Sala de ciclo indoor con una fila de bicis Life Fitness IC6 negras y rojas frente a la pared roja con el átomo"></button></figure>
+              <figure class="ao-foto prof"><button class="lb4-foto" type="button" data-galeria="ciclo" data-grande="img/sala-ciclo-1080.webp" data-pie="Sala ciclo: bicis Life Fitness IC6 frente a la pared roja" aria-label="Ampliar la foto de la sala ciclo"><img src="img/sala-ciclo-720.webp" srcset="img/sala-ciclo-720.webp 720w, img/sala-ciclo-1080.webp 1080w" sizes="(min-width: 1100px) 600px, (min-width: 768px) 56vw, 100vw" width="1080" height="675" loading="lazy" alt="Sala de ciclo indoor con una fila de bicis Life Fitness IC6 negras y rojas frente a la pared roja con el átomo"></button></figure>
               <div class="ao-cuerpo">
                 <h3>Sala Ciclo</h3>
                 <p>Sala de ciclo indoor con bicis Life Fitness IC6. Las plazas de las clases se reservan por WhatsApp.</p>
@@ -212,9 +217,11 @@
 
   <!-- ============ ENCUENTRA TU SALA (M115): solo salas y clases que existen; las horas salen de contenido/tablon.json ============ -->
   <section class="sec sec-grafito mov" id="encuentra" aria-labelledby="t-encuentra">
+    <div class="fondo-vivo fv-baldosa-propia fv-b-granito fv-quieto fv-caucho" aria-hidden="true"><span class="fv-papel"></span><span class="fv-papel"></span><span class="fv-papel"></span></div>
+    <div class="foco-techo" aria-hidden="true" style="--ft-x:26%; --ft-dl:80ms"><span class="ft-lampara"></span><span class="ft-halo"></span><span class="ft-cono"></span></div>
     <div class="wrap">
       <div class="cab">
-        <h2 class="h2" id="t-encuentra">Encuentra tu sala</h2>
+        <h2 class="h2 rev-cont" id="t-encuentra" data-hl-parada><span class="hl-marca hl-colgada" aria-hidden="true"></span><span class="rev-t">Encuentra tu sala</span></h2>
         <p>Tres preguntas y te decimos qué sala y qué clase encajan contigo, con el WhatsApp ya escrito.</p>
       </div>
       <div class="rp rp-con-figura" data-rp aria-label="Encuentra tu sala" data-rp-fuente="según Google">
@@ -277,7 +284,7 @@
 
   <!-- ============ KARATE Y MUAY THAI PARA FAMILIAS (bloque rojo): circular con tics, cinturón blanco y foto en duotono.
        Datos de sus publicaciones (2019-2022). CONFIRMAR edad mínima, exámenes, escuela de verano y horario de muay thai. ============ -->
-  <section class="sec sec-rojo og-con-cinturon mov" id="karate" aria-labelledby="t-karate">
+  <section class="sec sec-rojo og-con-cinturon mov" id="karate" data-hl-tono="claro" aria-labelledby="t-karate">
     <div class="og-cinturon" aria-hidden="true"><span class="og-cinturon-banda"></span>
       <svg viewBox="0 0 120 136" width="120" height="136" focusable="false"><path class="c" d="M48 52 30 128l17 4 15-74z"/><path class="c" d="M70 52l27 70-16 7-23-71z"/><path class="p" d="M36 120 52 56M90 120 66 58"/><rect class="c" x="40" y="16" width="42" height="42" rx="7" transform="rotate(-8 61 37)"/><path class="s" d="M44 40c12 4 24 4 36-2v8c-12 6-24 6-36 2z" transform="rotate(-8 61 37)"/></svg></div>
     <div class="deco" aria-hidden="true">
@@ -285,11 +292,11 @@
     </div>
     <div class="wrap">
       <div class="cab">
-        <h2 class="h2" id="t-karate">Karate para tus hijos</h2>
+        <h2 class="h2 rev-cont" id="t-karate" data-hl-parada><span class="hl-marca hl-colgada" aria-hidden="true"></span><span class="rev-t">Karate para tus hijos</span></h2>
         <p>Karate Shito Ryu en la Sala Tatami, con grupos de niños y de adultos. Lo que preguntan los padres antes de apuntarlos, en una hoja.</p>
       </div>
       <div class="karate-rejilla">
-        <figure class="karate-foto">
+        <figure class="karate-foto prof">
           <button class="foto-duo" type="button" data-galeria="karate" data-grande="img/karate-tatami-864.webp" data-pie="La Sala Tatami: tatami verde y sacos (Instagram, 2018)" aria-label="Ampliar: la Sala Tatami con sus sacos (2018)"><img src="img/karate-tatami-600.webp" srcset="img/karate-tatami-600.webp 600w, img/karate-tatami-864.webp 864w" sizes="(min-width: 1200px) 460px, (min-width: 700px) 46vw, 90vw" width="600" height="750" loading="lazy" alt="Tatami verde de la Sala Tatami con un saco de boxeo rojo colgado y otro de pie; al fondo, columnas rojas y material"></button>
           <span class="og-cinta"><span>La Sala Tatami</span></span>
           <figcaption>Aquí se entrena el karate: tatami y sacos, en la Sala Tatami.</figcaption>
@@ -336,30 +343,44 @@
   <!-- ============ HORARIO Y CLASES: consola de la bici (M116) + tablón de recepción (tablon-recepcion v1.1, editable con Pages CMS:
        contenido/tablon.json). El HTML trae lo mismo que el JSON (respaldo sin JS y para Google). Si el JSON carga, manda él. ============ -->
   <section class="sec mov" id="horario" aria-labelledby="t-tablon">
+    <div class="foco-techo" aria-hidden="true" style="--ft-x:70%; --ft-dl:40ms"><span class="ft-lampara"></span><span class="ft-halo"></span><span class="ft-cono"></span></div>
+    <div class="deco" aria-hidden="true">
+      <span class="atomo-gigante" data-py="-90" style="left:-14%; top:30%"><svg viewBox="0 0 100 100" width="100" height="100"><use href="#atomo-linea"/></svg></span>
+    </div>
     <div class="wrap con-rotulo">
       <p class="rotulo" aria-hidden="true">Horario</p>
       <div class="tablon" data-tablon="contenido/tablon.json" data-tablon-wa="34649269889" data-tablon-wa-texto="Hola, ¿a qué hora es la clase de {actividad}?">
         <div class="cab cab-tablon">
-          <h2 class="h2" id="t-tablon">Horario y clases</h2>
+          <h2 class="h2 rev-cont" id="t-tablon" data-hl-parada><span class="hl-marca hl-colgada" aria-hidden="true"></span><span class="rev-t">Horario y clases</span></h2>
           <p class="sello-act"><span data-tablon-texto="texto_fecha">Revisado con Google Maps el</span> <time data-tablon-fecha datetime="2026-10-27">27-10-2026</time></p>
         </div>
         <div class="horario-rejilla">
           <div class="h-consola">
-            <div class="consola" data-consola="contenido/tablon.json" data-consola-filtro="Sala Ciclo" data-consola-fuente="Según Google" data-consola-zona="Europe/Madrid">
-              <div class="cs-pantalla">
-                <p class="cs-linea cs-reloj" aria-hidden="true"><span class="cs-dia">LUN</span><span class="cs-hora"><span class="cs-hh">00</span><span class="cs-dp">:</span><span class="cs-mm">00</span></span><span class="cs-falta"></span></p>
-                <p class="cs-linea cs-estado" role="status"><strong class="cs-palabra">Horario</strong> <span class="cs-detalle">de lunes a viernes, 10:00-13:00 y 16:00-21:30</span></p>
-                <p class="cs-linea cs-clase"><span class="cs-etq">Clases</span> <span class="cs-clase-txt">Ciclo indoor: 16:00 y 20:30 · agosto 2026</span></p>
-                <p class="cs-linea cs-pie">Según Google</p>
+            <div class="consola cs-lcd" data-consola="contenido/tablon.json" data-consola-filtro="Sala Ciclo" data-consola-fuente="Según Google" data-consola-zona="Europe/Madrid">
+              <div class="cs-carcasa">
+                <div class="cs-pantalla">
+                  <p class="cs-linea cs-reloj" aria-hidden="true"><span class="cs-dia">LUN</span><span class="cs-hora"><span class="cs-fantasma">88:88</span><span class="cs-hh">00</span><span class="cs-dp">:</span><span class="cs-mm">00</span></span></p>
+                  <p class="cs-linea cs-estado" role="status"><strong class="cs-palabra">Horario</strong> <span class="cs-detalle">de lunes a viernes, 10:00-13:00 y 16:00-21:30</span></p>
+                  <div class="cs-linea cs-barra" aria-hidden="true"><p class="cs-barra-cab"><span class="cs-barra-etq">Hasta el cierre</span><span class="cs-falta"></span></p><span class="cs-barra-pista"><span class="cs-barra-lleno"></span></span></div>
+                  <p class="cs-linea cs-clase"><span class="cs-etq">Clases</span> <span class="cs-clase-txt">Ciclo indoor: 16:00 y 20:30</span> <span class="cs-clase-nota">Horario de agosto 2026</span></p>
+                  <p class="cs-linea cs-pie"><span class="cs-pie-fuente">Según Google</span><span class="cs-pie-fecha"></span></p>
+                </div>
+                <p class="cs-marca" aria-hidden="true">Energy · Sala ciclo</p>
               </div>
-              <svg class="cs-aparato" viewBox="0 0 440 150" width="440" height="150" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M206 0 v34 h28 v-34" stroke-width="6"/>
-                <path d="M220 40 H118 C92 40 74 50 64 72 L46 116" stroke-width="12"/>
-                <path d="M220 40 H322 C348 40 366 50 376 72 L394 116" stroke-width="12"/>
-                <path d="M60 82 L42 124" stroke-width="20" opacity=".7"/>
-                <path d="M380 82 L398 124" stroke-width="20" opacity=".7"/>
-                <path d="M160 40 C160 76 182 96 206 96 H234 C258 96 280 76 280 40" stroke-width="9"/>
-                <path d="M126 35 H200 M240 35 H314" stroke="#fff" stroke-opacity=".18" stroke-width="2"/>
+              <svg class="cs-aparato" viewBox="0 0 440 110" width="440" height="110" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                <!-- soporte y abrazadera -->
+                <path d="M209 0 H231 V22 H209 Z" fill="currentColor" stroke="none"/>
+                <rect x="194" y="20" width="52" height="16" rx="5" fill="currentColor" stroke="none"/>
+                <!-- manillar: barra, curva hacia delante -->
+                <path d="M220 32 H128 C100 32 84 42 76 62 L66 88" stroke-width="12"/>
+                <path d="M220 32 H312 C340 32 356 42 364 62 L374 88" stroke-width="12"/>
+                <!-- puños con estriado -->
+                <path d="M73 68 L60 100 M367 68 L380 100" stroke-width="20"/>
+                <path d="M73 68 L60 100 M367 68 L380 100" stroke="#000" stroke-opacity=".35" stroke-width="20" stroke-dasharray="2 4" stroke-linecap="butt"/>
+                <!-- lazo central (posición aero) -->
+                <path d="M170 32 C170 62 188 76 208 76 H232 C252 76 270 62 270 32" stroke-width="8"/>
+                <!-- brillo del metal -->
+                <path d="M132 27 H192 M248 27 H308" stroke="#fff" stroke-opacity=".22" stroke-width="2"/>
               </svg>
             </div>
             <a class="btn-hunde iman" href="https://wa.me/34649269889?text=Hola%2C%20quiero%20reservar%20bici%20en%20la%20sala%20de%20ciclo%20indoor" target="_blank" rel="noopener"><span class="base" aria-hidden="true"></span><span class="cara"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Reservar bici por WhatsApp</span></a>
@@ -395,7 +416,7 @@
           <!-- QUITAR AL PUBLICAR: nota para enseñarle a Nono que el tablón lo cambia él desde el móvil (Pages CMS) -->
           <div class="h-anotado solo-demo">
             <div class="og-anotado">
-              <div class="og-anotado-nota"><p class="og-escrita">Esto lo cambias tú desde el móvil</p>
+              <div class="og-anotado-nota"><p class="og-escrita">José Antonio, esto lo cambias tú desde el móvil. Y si no, te lo cambio yo.</p>
                 <svg class="og-flecha" viewBox="0 0 120 70" width="120" height="70" aria-hidden="true" focusable="false"><path pathLength="1" d="M6 10C40 4 78 18 108 52M108 52l-14-3M108 52l-1-14"/></svg></div>
               <div class="og-movil-cms" role="img" aria-label="Móvil con el panel de edición del tablón abierto: campos Actualizado el, Lunes y Ciclo indoor, y botón Guardar">
                 <div class="og-pantalla">
@@ -422,7 +443,7 @@
     <div class="wrap" data-tablon="contenido/tablon.json">
       <div class="cab">
         <div>
-          <h2 class="h2" id="t-tarifas">Tarifas</h2>
+          <h2 class="h2 rev-cont" id="t-tarifas" data-hl-parada><span class="hl-marca hl-colgada" aria-hidden="true"></span><span class="rev-t">Tarifas</span></h2>
           <p>Dale la vuelta a cada carnet para ver qué incluye. Para apuntarte, escríbenos por WhatsApp.</p>
         </div>
         <p class="sello-tinta" data-tablon-texto="nota_tarifas">Tarifas de 2020 · se actualizan</p>
@@ -488,7 +509,7 @@
   <section class="sec mov" id="opiniones" aria-labelledby="t-opiniones">
     <div class="wrap">
       <div class="cab cab-opiniones">
-        <h2 class="h2" id="t-opiniones">Lo que dicen en Google</h2>
+        <h2 class="h2 rev-cont" id="t-opiniones" data-hl-parada><span class="hl-marca hl-colgada" aria-hidden="true"></span><span class="rev-t">Lo que dicen en Google</span></h2>
         <p class="nota-cifra"><span class="cuenta" data-fin="4.9" data-dec="1">4,9</span><span class="nota-de">sobre 5 · <a class="enl" href="https://www.google.com/maps/search/?api=1&amp;query=Gimnasio%20Energy%20C.%20Fuenclara%2033%20Villanueva%20del%20Arzobispo" target="_blank" rel="noopener">133 reseñas</a></span></p>
       </div>
       <div class="og-espejo"><div class="og-espejo-cristal">
@@ -508,13 +529,13 @@
   <!-- ============ PREGUNTAS (descanso; magnesio de fondo) ============ -->
   <section class="sec sec-grafito mov" id="preguntas" aria-labelledby="t-preguntas">
     <div class="fondo-vivo fv-b-magnesio" aria-hidden="true" style="--fv-desfase:140px 90px"><span class="fv-papel"></span></div>
+    <div class="foco-techo" aria-hidden="true" style="--ft-x:30%; --ft-dl:60ms"><span class="ft-lampara"></span><span class="ft-halo"></span><span class="ft-cono"></span></div>
     <div class="deco" aria-hidden="true">
-      <span class="atomo-fondo" data-py="-200" style="left:6%; top:76%; --w:34px; --t:50s"><svg viewBox="0 0 100 100" width="30" height="30"><use href="#atomo"/></svg></span>
-      <span class="atomo-fondo solo-ancho" data-py="-300" style="right:5%; top:20%; --w:24px; --t:58s"><svg viewBox="0 0 100 100" width="30" height="30"><use href="#atomo"/></svg></span>
+      <span class="atomo-gigante" data-py="-120" style="right:-16%; top:8%"><svg viewBox="0 0 100 100" width="100" height="100"><use href="#atomo-linea"/></svg></span>
     </div>
     <div class="wrap wrap-estrecho">
       <div class="cab">
-        <h2 class="h2" id="t-preguntas">Preguntas antes de venir</h2>
+        <h2 class="h2 rev-cont" id="t-preguntas" data-hl-parada><span class="hl-marca hl-colgada" aria-hidden="true"></span><span class="rev-t">Preguntas antes de venir</span></h2>
         <p>Lo que no esté aquí, por WhatsApp: contestamos nosotros.</p>
       </div>
       <div class="faq">
@@ -548,13 +569,14 @@
 
   <!-- ============ UBICACIÓN (mapa real solo al pulsar) ============ -->
   <section class="sec mov" id="ubicacion" aria-labelledby="t-ubicacion">
+    <div class="fondo-vivo fv-baldosa-propia fv-b-granito fv-quieto fv-caucho" aria-hidden="true"><span class="fv-papel"></span><span class="fv-papel"></span><span class="fv-papel"></span></div>
+    <div class="foco-techo" aria-hidden="true" style="--ft-x:72%; --ft-dl:0ms"><span class="ft-lampara"></span><span class="ft-halo"></span><span class="ft-cono"></span></div>
     <div class="deco" aria-hidden="true">
-      <span class="atomo-fondo solo-ancho" data-py="-240" style="right:4%; top:80%; --w:28px; --t:44s"><svg viewBox="0 0 100 100" width="30" height="30"><use href="#atomo"/></svg></span>
-      <span class="atomo-fondo" data-py="-160" style="left:3%; top:12%; --w:22px; --t:54s"><svg viewBox="0 0 100 100" width="30" height="30"><use href="#atomo"/></svg></span>
+      <span class="palabra-fondo" data-palabra="Fuenclara" data-px="-120" style="bottom:2%; left:-3%"></span>
     </div>
     <div class="wrap">
       <div class="cab">
-        <h2 class="h2" id="t-ubicacion">Dónde estamos</h2>
+        <h2 class="h2 rev-cont" id="t-ubicacion" data-hl-parada><span class="hl-marca hl-colgada" aria-hidden="true"></span><span class="rev-t">Dónde estamos</span></h2>
       </div>
       <div class="ubica">
         <div class="ubica-datos">
@@ -582,7 +604,7 @@
   </section>
 
   <!-- ============ CIERRE (bloque rojo): ¿Qué sala es la tuya? ============ -->
-  <section class="sec sec-rojo sec-cierre mov" id="apuntate" aria-labelledby="t-cierre" data-tapa-barra>
+  <section class="sec sec-rojo sec-cierre mov" id="apuntate" data-hl-tono="claro" aria-labelledby="t-cierre" data-tapa-barra>
     <div class="deco" aria-hidden="true">
       <span class="palabra-fondo pf-entera" data-palabra="Energy" data-px="140" style="bottom:3%; left:-4%"></span>
     </div>
@@ -590,7 +612,7 @@
       <p class="rotulo" aria-hidden="true">Apúntate</p>
       <div class="ao ao-mini cierre" data-ao data-ao-n="3">
         <div class="ao-atomo" aria-hidden="true"></div>
-        <h2 class="h2" id="t-cierre">¿Qué sala es la tuya?</h2>
+        <h2 class="h2 rev-cont" id="t-cierre" data-hl-parada><span class="hl-marca hl-colgada" aria-hidden="true"></span><span class="rev-t">¿Qué sala es la tuya?</span></h2>
         <p class="cierre-texto">Escríbenos por WhatsApp desde la sala que te interese y te contamos horarios y precios de ahora.</p>
         <div class="cierre-botones">
           <a class="btn-hunde" data-ao-orbita="0" href="https://wa.me/34649269889?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20la%20sala%20fitness" target="_blank" rel="noopener"><span class="base" aria-hidden="true"></span><span class="cara">Sala Fitness</span></a>

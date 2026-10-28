@@ -112,7 +112,7 @@
      así no le quita ancho de banda ni CPU a la foto de portada (LCP). async=false: se ejecutan en este orden (tablon.js el último,
      para que sitio-resto.js ya escuche tablon:listo). ---- */
   function cargarResto(){
-    ['js/atomo-orbitas.js', 'js/objetos-gimnasio.js', 'js/recomendador-preguntas.js', 'js/consola-estado.js', 'js/sitio-resto.js', 'js/tablon.js'].forEach(function(src){
+    ['js/atomo-orbitas.js', 'js/objetos-gimnasio.js', 'js/recomendador-preguntas.js', 'js/consola-estado.js', 'js/sitio-resto.js', 'js/tablon.js', 'js/hilo-luz.js'].forEach(function(src){
       var sc = document.createElement('script'); sc.src = src; sc.async = false; document.body.appendChild(sc);
     });
   }

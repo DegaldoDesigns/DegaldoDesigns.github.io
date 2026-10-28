@@ -1,4 +1,4 @@
-/* consola-estado (M116) v1, copia de la librería. */
+/* consola-estado (M116) v2, copia de la librería. */
 /* ==================== COMPONENTE: consola-estado (JS) ==================== */
 (function(){
   var DIAS = {domingo:0, lunes:1, martes:2, miercoles:3, jueves:4, viernes:5, sabado:6};
@@ -37,9 +37,9 @@
   /* Lógica de cartel-abierto-cerrado v3 (sin días "con cita") */
   function estado(H, t){
     var hoy = H[t.d] || [], i;
-    for (i = 0; i < hoy.length; i++) if (t.min >= hoy[i][0] && t.min < hoy[i][1]) return {abierto:true, cierra:hoy[i][1], falta:hoy[i][1] - t.min};
+    for (i = 0; i < hoy.length; i++) if (t.min >= hoy[i][0] && t.min < hoy[i][1]) return {abierto:true, cierra:hoy[i][1], falta:hoy[i][1] - t.min, dur:hoy[i][1] - hoy[i][0]};
     var tra = H[(t.d + 6) % 7] || [];
-    for (i = 0; i < tra.length; i++) if (tra[i][1] > 1440 && t.min < tra[i][1] - 1440) return {abierto:true, cierra:tra[i][1], falta:tra[i][1] - 1440 - t.min};
+    for (i = 0; i < tra.length; i++) if (tra[i][1] > 1440 && t.min < tra[i][1] - 1440) return {abierto:true, cierra:tra[i][1], falta:tra[i][1] - 1440 - t.min, dur:tra[i][1] - tra[i][0]};
     for (var k = 0; k < 8; k++){
       var dia = (t.d + k) % 7, tr = H[dia] || [];
       for (i = 0; i < tr.length; i++){ var f = k * 1440 + tr[i][0] - t.min; if (f > 0) return {abierto:false, k:k, dia:dia, abre:tr[i][0], falta:f}; }
@@ -92,6 +92,9 @@
       set(el, '.cs-palabra', e.abierto ? 'Abierto' : 'Cerrado');
       set(el, '.cs-detalle', e.abierto ? 'cierra a ' + alas(e.cierra) : e.k >= 0 ? 'abre ' + cuando(e.k, e.dia, t) + ' a ' + alas(e.abre) : 'consulta el horario');
       set(el, '.cs-falta', e.abierto ? 'quedan ' + duracion(e.falta) : e.k >= 0 ? 'faltan ' + duracion(e.falta) : '');
+      /* v2: barra de segmentos (lo que va de tramo) y su etiqueta */
+      el.style.setProperty('--cs-prog', e.abierto && e.dur ? (1 - e.falta / e.dur).toFixed(3) : '0');
+      set(el, '.cs-barra-etq', e.abierto ? 'Hasta el cierre' : 'Hasta abrir');
     }
     var linea = el.querySelector('.cs-clase');
     if (linea && Array.isArray(d.clases)){
@@ -99,20 +102,23 @@
       var cl = d.clases.filter(function(x){ return !f || norm(x.sala).indexOf(f) > -1 || norm(x.actividad).indexOf(f) > -1; });
       linea.hidden = !cl.length;
       if (cl.length){
-        var p = proximaClase(cl, t), etq = el.getAttribute('data-consola-etiqueta'), txt;
+        var p = proximaClase(cl, t), etq = el.getAttribute('data-consola-etiqueta'), txt, nota = el.querySelector('.cs-clase-nota'), fu = '';
         if (p){
           txt = p.c.actividad + ', ' + (p.curso ? 'ahora, hasta ' + alas(p.h.fin) : cuando(p.k, p.d, t) + ' a ' + alas(p.h.ini));
           etq = etq || 'Próxima clase';
         } else {
           var conHora = cl.filter(function(x){ return x.hora; })[0];
-          txt = conHora ? conHora.actividad + ': ' + conHora.hora + (conHora.fuente ? ' · ' + conHora.fuente : '') : cl[0].actividad + ': pregunta la hora';
+          fu = conHora && conHora.fuente || '';
+          txt = conHora ? conHora.actividad + ': ' + conHora.hora + (fu && !nota ? ' · ' + fu : '') : cl[0].actividad + ': pregunta la hora';
           etq = etq || 'Clases';
         }
         set(el, '.cs-etq', etq); set(el, '.cs-clase-txt', txt);
+        if (nota){ nota.hidden = !fu; if (fu) set(el, '.cs-clase-nota', 'Horario de ' + fu); }   /* v2: la fecha del dato en su línea */
       }
     }
     var fuente = el.getAttribute('data-consola-fuente') || '', fecha = fechaCorta(d.actualizado);
-    set(el, '.cs-pie', fuente + (fuente && fecha ? ' · ' : '') + (fecha ? 'Actualizado el ' + fecha : ''));
+    if (el.querySelector('.cs-pie-fecha')){ set(el, '.cs-pie-fuente', fuente); set(el, '.cs-pie-fecha', fecha ? 'Actualizado el ' + fecha : ''); }   /* v2: la fecha no se parte */
+    else set(el, '.cs-pie', fuente + (fuente && fecha ? ' · ' : '') + (fecha ? 'Actualizado el ' + fecha : ''));
   }
   function usar(el, datos){ el._cs.datos = datos; el._cs.H = leerHorario(datos.horario); pintar(el); }
 
