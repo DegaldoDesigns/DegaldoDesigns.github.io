@@ -884,3 +884,5 @@ a.tb-pregunta{color:var(--blanco); text-decoration:underline; text-decoration-co
 #salas[data-sala="0"] .sn:nth-child(1), #salas[data-sala="1"] .sn:nth-child(2), #salas[data-sala="2"] .sn:nth-child(3){
   color:rgba(225,20,27,.1); -webkit-text-stroke-color:rgba(255,59,63,.55)}
 @media (max-width:640px){ .salas-nombres{display:none} }
+/* El ▶ colgado se coloca donde empieza el texto: en un titular centrado cae en mitad de la línea. En el cierre, sin ▶ (el nodo del hilo sí se enciende) */
+.cierre .hl-marca{display:none !important}
