@@ -1,0 +1,116 @@
+# Pages CMS de Gimnasio Energy: el tablón de recepción (horario, clases y tarifas; las cuotas principales salen como carnets).
+# Plantilla: 01-Libreria-de-Codigo/plantillas/pages-cms-tablon.yml v1.1 (instrucciones en pages-cms-tablon.md).
+# Edita contenido/tablon.json, que leen js/tablon.js (tablón y carnets), js/consola-estado.js (consola de la bici) y Encuentra tu sala. Si el JSON se rompe, la web enseña lo del HTML.
+
+content:
+  - name: tablon
+    label: Tablón (horario, clases y tarifas)
+    description: Lo que antes colgabas en carteles. Cambia la fecha de "Actualizado" cada vez que toques algo. Sale en la web en 1 o 2 minutos.
+    type: file
+    path: contenido/tablon.json
+    format: json
+    fields:
+      - name: actualizado
+        label: Actualizado el
+        type: date
+        required: true
+        description: Ponla siempre al cambiar algo. La web dice "Actualizado el" con esta fecha.
+        options:
+          format: yyyy-MM-dd
+      - name: texto_fecha
+        label: Texto delante de la fecha
+        type: string
+        description: 'Lo que pone delante de la fecha. Mientras el horario sea el de Google: "Revisado con Google Maps el". Cuando lo cambies tú: "Actualizado el".'
+      - name: horario
+        label: Horario (un día por fila, de lunes a domingo)
+        type: object
+        list: true
+        fields:
+          - name: dia
+            label: Día
+            type: string
+            required: true
+            description: 'Escrito entero: Lunes, Martes, Miércoles... (la web lo usa para marcar el día de hoy)'
+          - name: tramos
+            label: Tramos (vacío = cerrado)
+            type: object
+            list: true
+            fields:
+              - name: desde
+                label: Abre
+                type: string
+                description: 'Así: 10:00'
+              - name: hasta
+                label: Cierra
+                type: string
+                description: 'Así: 13:00'
+          - name: texto
+            label: Texto si está cerrado (opcional)
+            type: string
+            description: 'Por defecto: Cerrado'
+      - name: nota_horario
+        label: Nota bajo el horario
+        type: text
+        description: 'Por ejemplo: En verano, por las tardes de 17:00 a 21:30.'
+      - name: clases
+        label: Clases
+        type: object
+        list: true
+        fields:
+          - name: actividad
+            label: Actividad
+            type: string
+            required: true
+          - name: sala
+            label: Sala o detalle
+            type: string
+            description: 'Por ejemplo: Sala Tatami'
+          - name: dias
+            label: Días
+            type: string
+            description: 'Por ejemplo: Lunes y miércoles'
+          - name: hora
+            label: Hora
+            type: string
+            description: 'Por ejemplo: 20:30 a 21:30, o 16:00 y 20:30 (dos clases). Vacía = la web pone "Pregunta la hora" (enlace a WhatsApp) o "Hora por confirmar".'
+          - name: fuente
+            label: De cuándo es la hora (opcional)
+            type: string
+            description: 'Si la hora es de otra temporada, dilo: agosto 2026. Sale en pequeño debajo. Vacío = la hora es la de ahora.'
+      - name: nota_clases
+        label: Nota bajo las clases
+        type: text
+      - name: tarifas
+        label: Tarifas
+        type: object
+        list: true
+        fields:
+          - name: nombre
+            label: Tarifa
+            type: string
+            required: true
+          - name: detalle
+            label: Detalle (opcional)
+            type: string
+            description: 'Por ejemplo: 2 días a la semana'
+          - name: periodo
+            label: Periodo (opcional)
+            type: string
+            description: 'Por ejemplo: al mes. Vacío = la web no dice cada cuánto se paga.'
+          - name: precio
+            label: Precio
+            type: string
+            required: true
+            description: 'Con el símbolo: 25 €'
+          - name: carnet
+            label: Sale como carnet
+            type: boolean
+            description: 'Las cuotas principales salen como carnet de socio; las demás, en la lista de debajo. Un carnet nuevo lo añade quien hizo la web.'
+          - name: incluye
+            label: Qué incluye (detrás del carnet)
+            type: text
+            description: 'Solo lo que incluye de verdad. Vacío = la web pone "Pregúntanos qué incluye".'
+      - name: nota_tarifas
+        label: Nota bajo las tarifas
+        type: text
+        description: Sale como sello junto a los carnets (ahora: Tarifas de 2020 · se actualizan). Si cambias los precios, cambia o vacía esta nota.

@@ -1,0 +1,283 @@
+/* Gimnasio Energy v2 · estilos CRÍTICOS: lo que hace falta para pintar la primera pantalla (fuentes, variables, base, botones,
+   cabecera y menú, portada, brillo del logo, chapa, anillo de la tarjeta viva, encendido M81 v3 y rueda M114). Bloquea el pintado
+   a propósito y pesa poco; el resto va en estilos.css, que se carga sin bloquear. */
+/* Gimnasio Energy (Villanueva del Arzobispo) · demo de Degaldo Designs, v2 (2026-10-27). «Tres salas alrededor de un mismo núcleo»
+   y un objeto del gimnasio por sección (cinta, circular y cinturón, consola, carnet, espejo).
+   Brutalismo industrial: negro, rojo de la pared del átomo, cromo, chapa estriada y magnesio. Dirección en ../direccion-visual.md (v2);
+   movimiento en ../guion-movimiento.md (v2). Fuentes alojadas (SIL OFL): Archivo (variable, ancho 62-125, peso 700-900), IBM Plex Sans
+   y Sedgwick Ave (rotulador, para notas). La v1 está en ../sitio-v1/. */
+@font-face{font-family:'Archivo'; font-display:swap; font-style:normal; font-weight:700 900; font-stretch:62% 125%; src:url(../fonts/archivo-latin-recortada.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Sans'; font-display:swap; font-style:normal; font-weight:400 600; src:url(../fonts/ibm-plex-sans-latin.woff2) format('woff2')}
+@font-face{font-family:'Sedgwick Ave'; font-display:swap; font-style:normal; font-weight:400; src:url(../fonts/sedgwick-ave-latin.woff2) format('woff2');
+  unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+
+:root{
+  --negro:#0D0D0E; --grafito:#1A1B1D; --grafito-2:#232427; --rojo:#E1141B; --rojo-hondo:#A50E13; --rojo-claro:#FF3B3F;
+  --cromo:#C8CCD0; --acero:#8A9097; --blanco:#F5F6F7; --verde:#36D06A; --linea:rgba(200,204,208,.16); --linea-2:rgba(200,204,208,.28);
+  --f-tit:'Archivo', 'Arial Black', 'Segoe UI', system-ui, sans-serif; --f-texto:'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif;
+  --f-mano:'Segoe Print', 'Bradley Hand', cursive;   /* Sedgwick Ave entra con html.mano (sitio.js, tras la carga): no compite con la portada */ --cinta:#EDEBE4; --espejo:#1D2125; --consola:#0B0C0D;
+  --ease-out:cubic-bezier(0.23,1,0.32,1); --ease-in-out:cubic-bezier(0.77,0,0.175,1); --ease-drawer:cubic-bezier(0.32,0.72,0,1); --ease-muelle:var(--ease-out);
+  --sangre:clamp(20px,4vw,48px); --alto-barra:68px;
+  --z-deco:0; --z-contenido:1; --z-saltar:100; --z-barra-movil:20; --z-cabecera:30;
+}
+@supports (transition-timing-function: linear(0, 1)){
+  :root{--ease-muelle:linear(0, .009, .035 2.1%, .141, .281 6.7%, .723 12.9%, .938 16.7%, 1.017, 1.077, 1.121, 1.149 24.3%, 1.159, 1.163, 1.161, 1.154 29.9%, 1.129 32.8%, 1.051 39.6%, 1.017 43.1%, .991, .977 51%, .974 53.8%, .975 57.1%, .997 69.8%, 1.003 76.9%, 1)}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:var(--alto-barra); -webkit-text-size-adjust:100%}
+html:has(#menu:popover-open){overflow:hidden}
+body{margin:0; background:var(--negro); color:var(--blanco); font:400 1.0625rem/1.65 var(--f-texto)}
+main{overflow-x:clip}
+/* Lo de debajo de la portada no entra en la maqueta hasta que llega estilos.css (sitio.js pone html.estilos al cargarlo, si falla
+   o a los 4 s): así no hay saltos de diseño mientras llega. Sin JS no aplica (no hay .js) y estilos.css va en <noscript>. */
+.js:not(.estilos) main > :not(.portada), .js:not(.estilos) .pie, .js:not(.estilos) .barra-fija{display:none}
+img{max-width:100%}
+main img{pointer-events:none}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--rojo-claro); outline-offset:3px}
+.saltar{position:absolute; left:12px; top:-80px; z-index:var(--z-saltar); padding:12px 18px; background:var(--blanco); color:var(--negro); font-weight:600; text-decoration:none}
+.saltar:focus{top:12px}
+.ico{width:20px; height:20px; flex:none; display:block}
+.wrap{max-width:1240px; margin:0 auto; padding:0 var(--sangre)}
+.wrap-estrecho{max-width:880px}
+.enl{color:var(--blanco); text-decoration:underline; text-decoration-color:var(--rojo-claro); text-decoration-thickness:2px; text-underline-offset:3px; transition:color .16s var(--ease-out)}
+.pend{display:inline-block; font-size:.86em; line-height:1.3; color:var(--cromo); border-bottom:1px dashed var(--acero)}
+
+/* ---------- Titulares ---------- */
+.h2{margin:0 0 .35em; font:900 clamp(1.9rem,1.05rem + 2.6vw,3.3rem)/1.14 var(--f-tit); font-stretch:112%; letter-spacing:-.01em; text-wrap:balance}
+.cab{max-width:760px; margin-bottom:clamp(28px,4vw,48px)}
+.cab > p:not(.sello-act){margin:0; color:var(--cromo); max-width:62ch; text-wrap:pretty}
+
+/* ---------- Botones (rectos, rojo sólido; secundario con borde real sin halo) ---------- */
+.btn{position:relative; overflow:hidden; display:inline-flex; align-items:center; gap:10px; min-height:48px; padding:14px 22px; border:none; border-radius:2px;
+  background:var(--rojo); color:#fff; font:600 1rem/20px var(--f-texto); text-decoration:none; cursor:pointer;
+  transition:background-color .16s var(--ease-out), transform .12s var(--ease-out), translate .3s var(--ease-out)}
+.btn:active{transform:scale(.97)}
+.btn::after{content:""; position:absolute; inset:0; background:linear-gradient(110deg, transparent 30%, rgba(255,255,255,.32) 50%, transparent 70%); translate:-120% 0; pointer-events:none}
+.btn-linea{background:transparent; color:var(--blanco); box-shadow:inset 0 0 0 1.5px rgba(245,246,247,.55)}
+.btn-linea::after{background:linear-gradient(110deg, transparent 30%, rgba(255,59,63,.22) 50%, transparent 70%)}
+/* botones-fisicos (M60): la placa que se hunde */
+.btn-hunde{position:relative; display:inline-block; padding:0 0 6px; text-decoration:none; color:#fff; font:800 1rem/20px var(--f-tit); font-stretch:100%; letter-spacing:.02em; text-transform:uppercase;
+  transition:translate .3s var(--ease-out)}
+.btn-hunde .base{position:absolute; left:0; right:0; bottom:0; top:6px; background:var(--rojo-hondo); border-radius:2px}
+.btn-hunde .cara{position:relative; display:flex; align-items:center; justify-content:center; gap:10px; min-height:52px; padding:16px 26px; background:var(--rojo); border-radius:2px;
+  transition:translate .5s var(--ease-muelle), background-color .15s var(--ease-out)}
+.btn-hunde:active .cara{translate:0 6px; transition:translate .08s var(--ease-out)}
+.btn-hunde:focus-visible{outline:2px solid var(--blanco); outline-offset:4px}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{background:#F0262D}
+  .btn-linea:hover{background:rgba(245,246,247,.08)}
+  .btn:hover::after{translate:120% 0; transition:translate .45s var(--ease-out)}
+  .btn-hunde:hover .cara{translate:0 -2px; background:#F0262D}
+  .btn-hunde:active .cara{translate:0 6px}
+  .enl:hover{color:var(--rojo-claro)}
+}
+
+/* ---------- Cabecera inteligente (M18) + electrón bajo la sección activa (M53 v3) ---------- */
+.centinela{height:1px; margin-bottom:-1px}
+.cabecera{position:sticky; top:0; z-index:var(--z-cabecera); container:cabecera / scroll-state}
+.barra{display:flex; align-items:center; gap:clamp(14px,2.4vw,32px); height:var(--alto-barra); padding:0 var(--sangre); background:rgba(13,13,14,.72);
+  -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px);
+  transition:background-color .25s var(--ease-out), box-shadow .25s var(--ease-out), translate .25s var(--ease-out)}
+@container cabecera scroll-state(stuck: top){ .barra{background:rgba(13,13,14,.95); box-shadow:0 1px 0 var(--linea), 0 10px 30px rgba(0,0,0,.4)} }
+.pegada .barra{background:rgba(13,13,14,.95); box-shadow:0 1px 0 var(--linea), 0 10px 30px rgba(0,0,0,.4)}
+.oculta .barra{translate:0 -100%}
+.cabecera:focus-within .barra{translate:0 0}
+.marca{display:block; flex:none; line-height:0}
+.marca img{height:30px; width:auto}
+.marca{transition:opacity .2s var(--ease-out), visibility 0s linear .2s}
+.logo-en-portada .marca{opacity:0; visibility:hidden}
+.cabecera:not(.logo-en-portada) .marca{transition:opacity .2s var(--ease-out), visibility 0s}
+.nav{position:relative; display:flex; gap:clamp(14px,1.8vw,28px); margin-left:auto; padding:6px 0 10px}
+.nav a{color:var(--cromo); text-decoration:none; font:700 .95rem/1.4 var(--f-tit); font-stretch:88%; letter-spacing:.06em; text-transform:uppercase; transition:color .16s var(--ease-out)}
+.nav a.activo{color:var(--blanco)}
+.nav-electron{position:absolute; left:0; bottom:0; width:8px; height:8px; border-radius:50%; pointer-events:none; opacity:0;
+  background:radial-gradient(circle at 34% 30%, rgba(255,255,255,.75), rgba(255,255,255,0) 45%), var(--rojo); box-shadow:0 0 10px rgba(225,20,27,.7);
+  transition:translate .28s var(--ease-out), opacity .2s var(--ease-out)}
+.nav-electron.listo{opacity:1}
+.btn-barra{min-height:44px; padding:10px 18px}
+.hamb{display:none; position:relative; width:48px; height:48px; border:none; border-radius:2px; cursor:pointer; background:var(--grafito-2); color:var(--blanco); box-shadow:inset 0 0 0 1px var(--linea-2);
+  transition:background-color .16s var(--ease-out), transform .12s var(--ease-out)}
+.hamb:active{transform:scale(.97)}
+.hamb i, .cerrar i{position:absolute; left:13px; right:13px; height:2px; background:currentColor; transition:translate .3s var(--ease-out), rotate .3s var(--ease-out)}
+.hamb i:nth-child(1){top:19px} .hamb i:nth-child(2){top:28px}
+.hamb[aria-expanded="true"] i:nth-child(1){translate:0 4.5px; rotate:45deg}
+.hamb[aria-expanded="true"] i:nth-child(2){translate:0 -4.5px; rotate:-45deg}
+@media (hover:hover) and (pointer:fine){ .nav a:hover{color:var(--blanco)} .hamb:hover{background:#2E3034} }
+@media (max-width:1099.98px){ .nav{display:none} .hamb{display:block} .btn-barra{margin-left:auto} }
+@media (max-width:899.98px){ .btn-barra{display:none} .hamb{margin-left:auto} :root{--alto-barra:60px} .marca img{height:26px} }
+
+/* Menú móvil (M52 menu-escalonado) */
+#menu{--cx:calc(100% - 44px); --cy:30px; position:fixed; inset:0; width:auto; height:auto; max-width:none; max-height:none; margin:0; border:none; padding:96px 28px 40px;
+  background:var(--rojo); color:#fff; overflow:auto; clip-path:circle(150% at var(--cx) var(--cy));
+  transition:clip-path .45s var(--ease-drawer), display .45s allow-discrete, overlay .45s allow-discrete}
+#menu:not(:popover-open){clip-path:circle(0 at var(--cx) var(--cy))}
+@starting-style{ #menu:popover-open{clip-path:circle(0 at var(--cx) var(--cy))} }
+#menu ul{list-style:none; margin:0; padding:0}
+#menu li{opacity:1; translate:0 0; transition:opacity .3s var(--ease-out), translate .3s var(--ease-out); transition-delay:calc(120ms + var(--i) * 60ms)}
+#menu:not(:popover-open) li{opacity:0; translate:0 30px; transition-delay:0s}
+@starting-style{ #menu:popover-open li{opacity:0; translate:0 30px} }
+#menu ul a{display:block; padding:4px 0; color:#fff; text-decoration:none; font:900 clamp(2.2rem,10vw,3.6rem)/1.14 var(--f-tit); font-stretch:100%; text-transform:uppercase}
+#menu a:focus-visible{outline:2px solid #fff; outline-offset:4px}
+.menu-pie{margin-top:28px}
+.menu-pie a{font:600 1.05rem/1.5 var(--f-texto); color:#fff; text-decoration:underline; text-underline-offset:4px}
+.cerrar{position:absolute; top:6px; right:var(--sangre); width:48px; height:48px; border:none; border-radius:2px; cursor:pointer; background:var(--negro); color:#fff}
+.cerrar i:nth-child(1){top:23px; rotate:45deg} .cerrar i:nth-child(2){top:23px; rotate:-45deg}
+.cerrar:focus-visible{outline:2px solid #fff; outline-offset:3px}
+@media (hover:hover) and (pointer:fine){ #menu ul a:hover{color:var(--negro)} .cerrar:hover{background:#000} }
+
+/* ---------- Portada: la bici bajo un foco ---------- */
+.portada{position:relative; display:grid; grid-template-columns:minmax(0,5fr) minmax(0,6fr); min-height:min(calc(100svh - var(--alto-barra)), 900px); isolation:isolate}
+.portada-foto{grid-column:2; grid-row:1; position:relative; overflow:hidden; background:var(--grafito)}
+.portada-foto img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:30% 60%}
+.portada-foto::after{content:""; position:absolute; inset:0; background:linear-gradient(90deg, var(--negro) 0%, rgba(13,13,14,0) 16%), linear-gradient(0deg, rgba(13,13,14,.55) 0%, rgba(13,13,14,0) 22%)}
+.portada-texto{grid-column:1; grid-row:1; display:flex; flex-direction:column; justify-content:center; align-items:flex-start; gap:18px; padding:clamp(32px,5vw,72px) clamp(24px,3.5vw,56px) clamp(32px,5vw,72px) max(var(--sangre), calc((100vw - 1240px) / 2 + var(--sangre)))}
+.logo-portada{width:min(360px, 100%)}
+.titular{margin:0; font:900 clamp(2rem,.9rem + 2.1vw,3.05rem)/1.12 var(--f-tit); font-stretch:115%; letter-spacing:-.015em; text-wrap:balance}
+.titular .t-rojo{color:var(--rojo-claro)}
+.portada-lead{margin:0; max-width:46ch; color:var(--cromo); text-wrap:pretty}
+.portada-botones{display:flex; flex-wrap:wrap; align-items:flex-start; gap:12px 14px}
+.nota-google{margin-top:-8px; color:var(--cromo); font-size:.95rem; text-decoration:none; border-bottom:1px solid var(--linea-2); transition:color .16s var(--ease-out), border-color .16s var(--ease-out)}
+.nota-google b{color:var(--blanco)}
+.nota-google b span{color:var(--rojo-claro)}
+@media (hover:hover) and (pointer:fine){ .nota-google:hover{color:var(--blanco); border-color:var(--rojo-claro)} }
+/* tarjeta viva con anillo-horario mini (M86) */
+.tarjeta-viva{display:inline-flex; align-items:center; gap:14px; padding:10px 18px 10px 10px; background:var(--grafito); box-shadow:inset 0 0 0 1px var(--linea); border-radius:2px}
+.tarjeta-viva .ah-estado{margin:0; font-size:.95rem; line-height:1.4}
+.tarjeta-viva .ah-palabra::after{content:" ·"; font-weight:400; color:var(--cromo)}
+.ah-fuente{display:block; font-size:.8rem; color:var(--acero)}
+.tarjeta-viva .ah-centro svg{width:100%; height:100%; color:var(--cromo)}
+
+/* borde-animado v2.2 (.brillo-rasante): luz rasante sobre el logo cromado */
+.brillo-rasante{--br-luz:rgba(255,255,255,.9); --br-angulo:20deg; --br-duracion:700ms; position:relative; display:inline-block; line-height:0; vertical-align:middle; isolation:isolate}
+.brillo-rasante > img{display:block; max-width:100%; height:auto}
+.br-luz{position:absolute; inset:0; overflow:hidden; pointer-events:none; mix-blend-mode:screen;
+  -webkit-mask:var(--br-mascara) center / 100% 100% no-repeat; mask:var(--br-mascara) center / 100% 100% no-repeat}
+.br-luz i{position:absolute; top:-60%; bottom:-60%; left:0; width:50%; rotate:var(--br-angulo); translate:var(--br-desde, -220%) 0; background:linear-gradient(90deg, transparent, var(--br-luz) 50%, transparent)}
+.br-pasa .br-luz i{translate:var(--br-hasta, 320%) 0; transition:translate var(--br-duracion) var(--ease-in-out)}
+.br-hecho .br-luz{display:none}
+
+@media (max-width:899.98px){
+  .portada{grid-template-columns:minmax(0,1fr); min-height:0}
+  .portada-foto{grid-column:1; grid-row:1; height:clamp(220px, 38svh, 420px)}
+  .portada-foto img{object-position:50% 28%}
+  @media (min-width:600px){ .portada-foto{height:min(56svh, 480px)} .portada-foto img{object-position:50% 20%} }
+  .portada-botones .btn-hunde .cara{padding:16px 18px}
+  .portada-foto::after{background:linear-gradient(0deg, var(--negro) 0%, rgba(13,13,14,0) 30%)}
+  .portada-texto{grid-row:2; padding:6px var(--sangre) 40px; gap:18px}
+  .logo-portada{display:none}
+  .titular{font-size:clamp(1.75rem, 1rem + 3.4vw, 2.6rem); font-stretch:100%}
+}
+
+/* ---------- Chapa estriada (fondo-hojas-vivo v10, .fv-b-chapa): la del podio y los zócalos ---------- */
+.fv-b-chapa{--fv-baldosa-img:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M2.6 7.4L7.4 2.6M12.6 2.6L17.4 7.4M2.6 12.6L7.4 17.4M12.6 17.4L17.4 12.6' stroke='%23000' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E"); --fv-baldosa:20px}
+.fv-banda.fv-b-chapa{position:relative; display:block; height:var(--fv-chapa-alto, 34px); pointer-events:none;
+  background:linear-gradient(180deg, #2A2C30, #1C1D20 55%, #141517); box-shadow:inset 0 1px 0 rgba(200,204,208,.28), inset 0 -1px 0 rgba(0,0,0,.6)}
+.fv-banda.fv-b-chapa::before{content:""; position:absolute; inset:5px 0; opacity:var(--fv-papel, .55);
+  background:linear-gradient(180deg, var(--cromo), var(--acero) 50%, #5D6268);
+  -webkit-mask:var(--fv-baldosa-img) 0 0 / var(--fv-baldosa) var(--fv-baldosa) repeat; mask:var(--fv-baldosa-img) 0 0 / var(--fv-baldosa) var(--fv-baldosa) repeat}
+
+
+/* ---------- anillo-horario v1 (M86), tamaño mini ---------- */
+.ah{--ah-acento:var(--rojo); --ah-pista:rgba(200,204,208,.18); --ah-apagado:#6B7178; --ah-tam:240px; --ah-grosor:2.4;
+  position:relative; flex:none; width:var(--ah-tam); max-width:100%; aspect-ratio:1; color:var(--ah-acento)}
+.ah[data-tam="mini"]{--ah-tam:48px; --ah-grosor:7}
+.ah-anillo{position:absolute; inset:0; width:100%; height:100%; overflow:visible}
+.ah-pista{fill:none; stroke:var(--ah-pista); stroke-width:var(--ah-grosor)}
+.ah-tramo{fill:none; stroke:var(--ah-acento); stroke-width:var(--ah-grosor); stroke-linecap:butt; stroke-dasharray:1 1; stroke-dashoffset:0}
+.ah-ahora{transform-box:view-box; transform-origin:50% 50%; opacity:0}
+.ah-punto{fill:var(--ah-acento); stroke:var(--grafito); stroke-width:1.2}
+.ah-halo{fill:var(--ah-acento); opacity:.3}
+.ah-listo .ah-ahora{opacity:1}
+.ah[data-estado="abierto"]{--ah-acento:var(--verde)}
+.ah[data-estado="cerrado"] .ah-tramo{opacity:.6}
+.ah[data-estado="cerrado"] .ah-punto{fill:var(--ah-apagado)}
+.ah[data-estado="cerrado"] .ah-halo{display:none}
+.ah-centro{position:absolute; inset:19%; display:grid; place-items:center}
+.ah[data-tam="mini"] .ah-centro{inset:24%}
+.ah-centro > *{max-width:100%; max-height:100%}
+.ah-estado .ah-palabra{color:var(--blanco)}
+.ah-estado .ah-detalle, .ah-estado .ah-hoy{color:var(--cromo)}
+.ah-hoy:empty{display:none}
+.ah-hoy{display:block; font-size:.9em}
+@media (prefers-reduced-motion: no-preference){
+  .ah-dibuja .ah-tramo{stroke-dashoffset:1}
+  .ah-dibuja.ah-visto .ah-tramo{stroke-dashoffset:0; transition:stroke-dashoffset .7s var(--ease-in-out) var(--ah-retraso, 0s)}
+  .ah-dibuja .ah-ahora{opacity:0}
+  .ah-dibuja.ah-visto.ah-listo .ah-ahora{opacity:1; transition:opacity .2s var(--ease-out) calc(var(--ah-retraso, 0s) + .7s)}
+  .ah[data-estado="abierto"] .ah-halo{animation:ah-respira 3s ease-in-out infinite alternate}
+  .ah-fuera .ah-halo{animation-play-state:paused}
+}
+@keyframes ah-respira{from{opacity:.14} to{opacity:.42}}
+
+
+
+/* ---------- Encendido de la portada (luces-sobre-foto v3, .luces-sala, M81) ---------- */
+/* ---- v3: .luces-sala, "se encienden las luces de la sala" (sobre una foto que ya existe; una vez por visita) ---- */
+  .luces-sala{ --ls-velo:#000; --ls-velo-ini:.9; --ls-velo-t:900ms; --ls-velo-dur:500ms; --ls-salto:150ms }
+  .ls-velo{ position:absolute; inset:0; background:var(--ls-velo); opacity:0; pointer-events:none }
+  .ls-luz{ position:absolute; left:0; top:0; width:0; height:0; opacity:0; pointer-events:none; overflow:hidden }
+  .ls-in{ position:absolute; inset:0; opacity:0 }
+  .ls-copia{ position:absolute; inset:0; display:block; width:100%; height:100%; max-width:none; filter:brightness(var(--l-brillo,1.08)) }
+  .ls-halo{ position:absolute; inset:0; mix-blend-mode:screen }
+  .ls-elipse .ls-copia{
+    -webkit-mask-image:radial-gradient(ellipse calc(var(--l-rx) * 100%) calc(var(--l-ry) * 100%) at calc(var(--l-cx) * 100%) calc(var(--l-cy) * 100%), #000 55%, transparent 100%);
+            mask-image:radial-gradient(ellipse calc(var(--l-rx) * 100%) calc(var(--l-ry) * 100%) at calc(var(--l-cx) * 100%) calc(var(--l-cy) * 100%), #000 55%, transparent 100%) }
+  .ls-elipse .ls-halo{ opacity:var(--l-halo,.6);
+    background:radial-gradient(ellipse calc(var(--l-rx) * 150%) calc(var(--l-ry) * 150%) at calc(var(--l-cx) * 100%) calc(var(--l-cy) * 100%), var(--l-color,#FFF1D6), transparent 72%) }
+  .ls-cono .ls-in{ -webkit-mask:var(--l-mascara, none) 0 0 / 100% 100% no-repeat; mask:var(--l-mascara, none) 0 0 / 100% 100% no-repeat }
+  .ls-cono .ls-halo{ opacity:var(--l-halo,.3);
+    background:linear-gradient(to bottom, var(--l-color,#FFF1D6) calc(var(--l-cy) * 100%), transparent calc(var(--l-by) * 100%)) }
+  .ls-hecho .ls-luz{ display:none }
+  .ls-salta .ls-velo, .ls-salta .ls-luz{ transition:opacity var(--ls-salto) var(--ease-out) }
+  @media (prefers-reduced-motion: no-preference){
+    /* Primer fotograma: la sala a oscuras. Seguro: si el JS no arranca, el velo se va solo a los 3 s. */
+    .js:not(.luces-vistas) .luces-sala:not(.ls-hecho) .ls-velo{ opacity:var(--ls-velo-ini); animation:ls-seguro .4s var(--ease-out) 3s both }
+    .js:not(.luces-vistas) .luces-sala.ls-on:not(.ls-hecho) .ls-velo{ animation:ls-velo var(--ls-velo-dur) var(--ease-out) var(--ls-velo-t) both }
+    .luces-sala.ls-on .ls-luz{ opacity:1;
+      animation:ls-funde calc(var(--ls-velo-dur) * .6) var(--ease-out) calc(var(--ls-velo-t) + var(--ls-velo-dur) * .4) both }
+    .luces-sala.ls-on .ls-in{ animation:ls-tiron var(--l-dur,380ms) steps(1,end) var(--l-t,0ms) both }
+    .luces-sala.ls-on .ls-cono:not([data-parpadeo="1"]) .ls-in,
+    .luces-sala.ls-on .ls-elipse[data-parpadeo="2"] .ls-in{ animation-name:ls-doble; animation-duration:var(--l-dur,320ms) }
+  }
+  @keyframes ls-seguro{ to{opacity:0} }
+  @keyframes ls-velo{ from{opacity:var(--ls-velo-ini)} to{opacity:0} }
+  @keyframes ls-funde{ from{opacity:1} to{opacity:0} }
+  @keyframes ls-tiron{ 0%{opacity:0} 20%{opacity:.6} 45%{opacity:.1} 70%,100%{opacity:1} }
+  @keyframes ls-doble{ 0%{opacity:0} 14%{opacity:.85} 28%{opacity:.05} 48%{opacity:.9} 60%{opacity:.2} 74%,100%{opacity:1} }
+  /* ?rejilla: luces quietas y encendidas, con su contorno */
+  .ls-rejilla .ls-velo{ opacity:.6 }
+  .ls-rejilla .ls-luz, .ls-rejilla .ls-in{ opacity:1 }
+  .ls-rejilla .ls-luz{ outline:1px dashed #0ff; outline-offset:-1px }
+  .ls-rejilla{ cursor:crosshair }
+
+/* Energy: posiciones medidas sobre portada-800/1280/1608 (escritorio y tablet) y portada-movil (< 600 px) */
+.portada-foto .ls-atomo{ --l-cx:.86; --l-cy:.12; --l-rx:.14; --l-ry:.15; --l-t:150ms; --l-color:#FF2A2A; --l-halo:.55 }
+.portada-foto .ls-foco{ --l-cx:.44; --l-cy:0; --l-bx:.33; --l-by:.80; --l-ab:.025; --l-bb:.31; --l-t:550ms }
+@media (max-width:599.98px){
+  .portada-foto .ls-atomo{ display:none }
+  .portada-foto .ls-foco{ --l-cx:.55; --l-cy:0; --l-bx:.50; --l-by:.80; --l-ab:.03; --l-bb:.46; --l-t:150ms }
+  .portada-foto{ --ls-velo-t:700ms }
+}
+
+/* ---------- Rueda de la bici que gira con el scroll (rueda-scroll v1, M114) ---------- */
+.rs{pointer-events:none}
+.rs-gira{position:absolute; inset:0; border-radius:50%}
+.rs-estela{opacity:0}
+.rs-foto{position:absolute; left:0; top:0; width:0; height:0; border-radius:50%; visibility:hidden}
+/* (Energy) la máscara se pide cuando la rueda ya está colocada (tras el encendido): no compite con la foto de portada */
+.rs-foto.rs-lista{visibility:visible; -webkit-mask:var(--rs-mascara, none) center / 100% 100% no-repeat; mask:var(--rs-mascara, none) center / 100% 100% no-repeat}
+.rs-foto .rs-gira{will-change:rotate}
+.rs-foto .rs-brillo,.rs-foto .rs-estela{position:absolute; inset:0; border-radius:50%}
+.rs-foto .rs-brillo{opacity:var(--rs-fuerza,.85);
+  background:
+    conic-gradient(from 10deg, transparent 0 6%, rgba(255,255,255,.26) 9.5%, transparent 13% 31%, rgba(0,0,0,.2) 36%, transparent 41% 58%,
+      rgba(255,255,255,.18) 62%, transparent 66% 80%, rgba(0,0,0,.14) 85%, transparent 90%),
+    repeating-conic-gradient(from 3deg, rgba(255,255,255,.07) 0 1.4deg, transparent 1.4deg 9deg)}
+.rs-foto .rs-estela{
+  background:conic-gradient(from 10deg, rgba(255,255,255,.04), rgba(255,255,255,.3) 12%, rgba(255,255,255,.04) 28%, rgba(0,0,0,.18) 40%,
+    rgba(255,255,255,.04) 52%, rgba(255,255,255,.24) 64%, rgba(255,255,255,.04) 78%, rgba(0,0,0,.14) 88%, rgba(255,255,255,.04))}
+/* Energy: el volante plateado de la IC6, medido en portada-1608 (centro 226, 747; radio 131 px) y pasado a cada recorte */
+.portada-foto .rs-foto{--rs-cx:.1405; --rs-cy:.4863; --rs-r:.0815; --rs-mascara:url("../img/volante-mascara.png")}
+@media (max-width:599.98px){ .portada-foto .rs-foto{--rs-cx:.2327; --rs-cy:.4863; --rs-r:.1066} }
+@media (prefers-reduced-motion:reduce){ .rs-foto{display:none} .rs-gira{will-change:auto} }

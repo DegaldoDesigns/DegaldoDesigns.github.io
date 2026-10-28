@@ -1,0 +1,33 @@
+{
+  "actualizado": "2026-10-27",
+  "texto_fecha": "Revisado con Google Maps el",
+  "horario": [
+    {"dia": "Lunes", "tramos": [{"desde": "10:00", "hasta": "13:00"}, {"desde": "16:00", "hasta": "21:30"}]},
+    {"dia": "Martes", "tramos": [{"desde": "10:00", "hasta": "13:00"}, {"desde": "16:00", "hasta": "21:30"}]},
+    {"dia": "Miércoles", "tramos": [{"desde": "10:00", "hasta": "13:00"}, {"desde": "16:00", "hasta": "21:30"}]},
+    {"dia": "Jueves", "tramos": [{"desde": "10:00", "hasta": "13:00"}, {"desde": "16:00", "hasta": "21:30"}]},
+    {"dia": "Viernes", "tramos": [{"desde": "10:00", "hasta": "13:00"}, {"desde": "16:00", "hasta": "21:30"}]},
+    {"dia": "Sábado", "tramos": []},
+    {"dia": "Domingo", "tramos": []}
+  ],
+  "nota_horario": "Horario según Google Maps (octubre de 2026). En festivos y en verano puede cambiar: pregúntanos por WhatsApp.",
+  "clases": [
+    {"actividad": "Ciclo indoor", "sala": "Sala Ciclo", "dias": "", "hora": "16:00 y 20:30", "fuente": "agosto 2026"},
+    {"actividad": "Karate Shito Ryu, niños", "sala": "Sala Tatami", "dias": "", "hora": ""},
+    {"actividad": "Karate Shito Ryu, adultos", "sala": "Sala Tatami", "dias": "", "hora": ""},
+    {"actividad": "Muay thai", "sala": "Sala Tatami", "dias": "Martes y jueves", "hora": "21:00 a 22:30", "fuente": "2021"},
+    {"actividad": "Actividades dirigidas", "sala": "Pregunta cuáles hay este curso", "dias": "", "hora": ""}
+  ],
+  "nota_clases": "Las plazas de ciclo se reservan por WhatsApp al 649 26 98 89.",
+  "tarifas": [
+    {"nombre": "Gym", "precio": "25 €", "carnet": true, "incluye": "Sala Fitness: musculación y cardio, en el horario del gimnasio."},
+    {"nombre": "Gym + actividad dirigida", "precio": "27 €", "carnet": true, "incluye": "Sala Fitness: musculación y cardio, y actividades dirigidas (pregunta cuáles hay este curso)."},
+    {"nombre": "Karate", "precio": "28 €", "carnet": true, "incluye": "Clases de karate Shito Ryu en la Sala Tatami, para niños y adultos."},
+    {"nombre": "Muay thai", "precio": "30 €", "carnet": true, "incluye": "Clases en la Sala Tatami, martes y jueves de 21:00 a 22:30 (2021)."},
+    {"nombre": "Medio mes", "precio": "20 €"},
+    {"nombre": "Semana", "precio": "12 €"},
+    {"nombre": "Entrada de un día", "precio": "3 €"},
+    {"nombre": "Entrenamiento personal", "precio": "50 €"}
+  ],
+  "nota_tarifas": "Tarifas de 2020 · se actualizan"
+}
