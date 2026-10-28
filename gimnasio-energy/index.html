@@ -110,10 +110,11 @@
   <p class="menu-pie"><a href="https://wa.me/34649269889?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20gimnasio" target="_blank" rel="noopener">WhatsApp 649 26 98 89</a></p>
 </nav>
 
-<main id="contenido" data-hl data-hl-tramos=":scope > section" data-hl-desde=".portada-foto" data-hl-espera="luces:fin" data-hl-hecho="[data-luces=fin]" data-hl-lado="derecha" data-hl-movil="nada">
+<main id="contenido" data-hl data-hl-tramos=":scope > section" data-hl-lado="derecha" data-hl-movil="nada">
   <!-- ============ PORTADA: la bici IC6 en su podio, bajo un foco. Momento firma: se encienden las luces de la sala (M81 v3),
        una vez por visita; después, el volante de la bici gira con el scroll (M114) ============ -->
   <section class="portada" id="inicio" aria-labelledby="t-portada">
+    <div class="portada-in">
     <div class="portada-foto luces-sala" data-ls-clave="energy-luces">
       <picture>
         <source media="(max-width: 599.98px)" srcset="img/portada-movil-480.webp 480w, img/portada-movil-820.webp 820w" sizes="100vw">
@@ -144,15 +145,17 @@
           <span class="ah-hoy">De 10:00 a 13:00 y de 16:00 a 21:30</span><span class="ah-fuente">Según Google</span></p>
       </div>
     </div>
+    </div>
   </section>
 
   <div class="fv-banda fv-b-chapa" aria-hidden="true"></div>
 
   <!-- ============ SALAS (M113, el átomo de las salas) ============ -->
-  <section class="sec mov" id="salas" aria-labelledby="t-salas">
+  <section class="sec mov hs-hoja" id="salas" data-sala="0" aria-labelledby="t-salas">
+    <div class="salas-fondo" aria-hidden="true"><span class="sf-capa" style="background-image:url(img/sala-fitness-720.webp)"></span><span class="sf-capa" style="background-image:url(img/sala-tatami-720.webp)"></span><span class="sf-capa" style="background-image:url(img/sala-ciclo-720.webp)"></span></div>
     <div class="foco-techo" aria-hidden="true" style="--ft-x:74%; --ft-dl:0ms"><span class="ft-lampara"></span><span class="ft-halo"></span><span class="ft-cono"></span></div>
     <div class="deco" aria-hidden="true">
-      <span class="palabra-fondo" data-palabra="Salas" data-px="120" style="bottom:3%; right:-3%"></span>
+      <span class="salas-nombres" data-px="120"><span class="sn">Fitness</span><span class="sn">Tatami</span><span class="sn">Ciclo</span></span>
     </div>
     <div class="wrap con-rotulo">
       <p class="rotulo" aria-hidden="true">Salas</p>
@@ -162,7 +165,7 @@
           <p>Como el átomo de la pared: una recepción y tres salas con su nombre en la columna. Elige una en el átomo o en las pestañas.</p>
         </div>
         <div class="ao" data-ao data-ao-tiempos="11,14,17">
-          <div class="ao-atomo" aria-hidden="true"></div>
+          <div class="ao-atomo" aria-hidden="true"><span class="ao-resplandor"></span></div>
           <div class="ao-pestanas" role="tablist" aria-label="Salas del gimnasio">
             <button class="ao-tab" role="tab" id="ao-t1" aria-controls="ao-p1" aria-selected="true">Fitness</button>
             <button class="ao-tab" role="tab" id="ao-t2" aria-controls="ao-p2" aria-selected="false">Tatami</button>
@@ -200,13 +203,13 @@
               <figure class="ao-foto prof"><button class="lb4-foto" type="button" data-galeria="ciclo" data-grande="img/sala-ciclo-1080.webp" data-pie="Sala ciclo: bicis Life Fitness IC6 frente a la pared roja" aria-label="Ampliar la foto de la sala ciclo"><img src="img/sala-ciclo-720.webp" srcset="img/sala-ciclo-720.webp 720w, img/sala-ciclo-1080.webp 1080w" sizes="(min-width: 1100px) 600px, (min-width: 768px) 56vw, 100vw" width="1080" height="675" loading="lazy" alt="Sala de ciclo indoor con una fila de bicis Life Fitness IC6 negras y rojas frente a la pared roja con el átomo"></button></figure>
               <div class="ao-cuerpo">
                 <h3>Sala Ciclo</h3>
-                <p>Sala de ciclo indoor con bicis Life Fitness IC6. Las plazas de las clases se reservan por WhatsApp.</p>
+                <p>Sala de ciclo indoor con bicis Life Fitness IC6. Pregúntanos por las clases por WhatsApp.</p>
                 <!-- CONFIRMAR CON EL CLIENTE: horario actual de las clases de ciclo (las de agosto de 2026 eran de 16 a 17 y de 20:30 a 21:30) y su precio -->
                 <dl class="ficha-sala">
                   <div><dt>Clases</dt><dd>16:00 y 20:30 <small class="dato-fecha">(agosto de 2026)</small></dd></div>
-                  <div><dt>Reserva</dt><dd>Tu bici, por WhatsApp al 649 26 98 89</dd></div>
+                  <div><dt>Dudas</dt><dd>Por WhatsApp al 649 26 98 89</dd></div>
                 </dl>
-                <a class="btn iman" href="https://wa.me/34649269889?text=Hola%2C%20quiero%20reservar%20bici%20en%20la%20sala%20de%20ciclo%20indoor" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Reservar bici de ciclo</a>
+                <a class="btn iman" href="https://wa.me/34649269889?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20las%20clases%20de%20ciclo%20indoor" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Preguntar por la sala de ciclo</a>
               </div>
             </div>
           </div>
@@ -255,7 +258,7 @@
           "resultados": {
             "fitness": {"titulo": "Sala Fitness", "texto": "Musculación y cardio: bancos, rack de sentadillas, barras y discos olímpicos, y sala de cardio.", "figura": 0,
               "datos": [{"et": "Cuándo", "val": "Por libre, en el horario del gimnasio"}, {"et": "Abierto", "clave": "franja", "val": ""}]},
-            "ciclo": {"titulo": "Sala Ciclo", "texto": "Sala de ciclo indoor con bicis Life Fitness IC6. Las plazas de las clases se reservan por WhatsApp.", "figura": 2,
+            "ciclo": {"titulo": "Sala Ciclo", "texto": "Sala de ciclo indoor con bicis Life Fitness IC6. Pregúntanos por las clases por WhatsApp.", "figura": 2,
               "datos": [{"et": "Clase", "val": "Ciclo indoor"}, {"et": "Hora", "clave": "hora", "actividad": "Ciclo indoor", "val": "16:00 y 20:30 (agosto 2026)", "vacio": "La hora te la decimos por WhatsApp", "porFranja": true, "vacioFranja": "Te la decimos por WhatsApp: el ciclo, de momento, es por la tarde"}, {"et": "Abierto", "clave": "franja", "val": ""}]},
             "karate": {"titulo": "Sala Tatami", "texto": "Karate Shito Ryu para niños y adultos, y muay thai, sobre tatami y con sacos.", "figura": 1,
               "datos": [{"et": "Clase", "val": "Karate Shito Ryu, grupo de adultos"}, {"et": "Hora", "clave": "hora", "actividad": "Karate Shito Ryu, adultos", "val": "", "vacio": "La hora te la decimos por WhatsApp"}]},
@@ -276,7 +279,7 @@
         <div class="rp-sinjs">
           <article class="rp-tarjeta"><h3>Sala Fitness</h3><p>Pesas, máquinas y cardio, por libre.</p><a class="btn" href="https://wa.me/34649269889?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20la%20sala%20fitness" target="_blank" rel="noopener">Preguntar por WhatsApp</a></article>
           <article class="rp-tarjeta"><h3>Sala Tatami</h3><p>Karate Shito Ryu para niños y adultos, y muay thai.</p><a class="btn" href="https://wa.me/34649269889?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20la%20sala%20tatami%20(karate%20y%20muay%20thai)" target="_blank" rel="noopener">Preguntar por WhatsApp</a></article>
-          <article class="rp-tarjeta"><h3>Sala Ciclo</h3><p>Clases de ciclo indoor con bicis Life Fitness IC6.</p><a class="btn" href="https://wa.me/34649269889?text=Hola%2C%20quiero%20reservar%20bici%20en%20la%20sala%20de%20ciclo%20indoor" target="_blank" rel="noopener">Preguntar por WhatsApp</a></article>
+          <article class="rp-tarjeta"><h3>Sala Ciclo</h3><p>Clases de ciclo indoor con bicis Life Fitness IC6.</p><a class="btn" href="https://wa.me/34649269889?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20las%20clases%20de%20ciclo%20indoor" target="_blank" rel="noopener">Preguntar por WhatsApp</a></article>
         </div>
       </div>
     </div>
@@ -383,7 +386,7 @@
                 <path d="M132 27 H192 M248 27 H308" stroke="#fff" stroke-opacity=".22" stroke-width="2"/>
               </svg>
             </div>
-            <a class="btn-hunde iman" href="https://wa.me/34649269889?text=Hola%2C%20quiero%20reservar%20bici%20en%20la%20sala%20de%20ciclo%20indoor" target="_blank" rel="noopener"><span class="base" aria-hidden="true"></span><span class="cara"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Reservar bici por WhatsApp</span></a>
+            <a class="btn-hunde iman" href="https://wa.me/34649269889?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20las%20clases%20de%20ciclo%20indoor" target="_blank" rel="noopener"><span class="base" aria-hidden="true"></span><span class="cara"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Preguntar por el ciclo</span></a>
           </div>
           <div class="h-tablon">
             <div class="tablon-rejilla">
@@ -409,7 +412,7 @@
                   <li class="tb-fila"><span class="tb-act">Muay thai<small>Sala Tatami</small></span><span class="tb-hora">21:00 a 22:30<small>Martes y jueves · 2021</small></span></li>
                   <li class="tb-fila"><span class="tb-act">Actividades dirigidas<small>Pregunta cuáles hay este curso</small></span><a class="tb-hora tb-pregunta" href="https://wa.me/34649269889?text=Hola%2C%20%C2%BFa%20qu%C3%A9%20hora%20es%20la%20clase%20de%20Actividades%20dirigidas%3F" target="_blank" rel="noopener">Pregunta la hora</a></li>
                 </ul>
-                <p class="tb-nota" data-tablon-texto="nota_clases">Las plazas de ciclo se reservan por WhatsApp al 649 26 98 89.</p>
+                <p class="tb-nota" data-tablon-texto="nota_clases">Para cualquier duda de las clases, escríbenos por WhatsApp al 649 26 98 89.</p>
               </div>
             </div>
           </div>
@@ -425,7 +428,7 @@
                     <div class="og-cms-campo"><b>Actualizado el</b><span>27-10-2026</span></div>
                     <div class="og-cms-campo"><b>Lunes</b><span>10:00-13:00</span></div>
                     <div class="og-cms-campo activo"><b>Ciclo indoor</b><span>20:30</span></div>
-                    <div class="og-cms-campo"><b>Nota</b><span>Reservas por WhatsApp</span></div>
+                    <div class="og-cms-campo"><b>Nota</b><span>Dudas por WhatsApp</span></div>
                   </div>
                 </div>
               </div>
@@ -540,8 +543,8 @@
       </div>
       <div class="faq">
         <details name="faq">
-          <summary>¿Cómo reservo una bici de ciclo?<span class="signo" aria-hidden="true"></span></summary>
-          <div class="resp"><p>Por WhatsApp al <a class="enl" href="https://wa.me/34649269889?text=Hola%2C%20quiero%20reservar%20bici%20en%20la%20sala%20de%20ciclo%20indoor" target="_blank" rel="noopener">649 26 98 89</a>. Dinos qué clase quieres y te guardamos la bici.</p></div>
+          <summary>¿Cómo pregunto por las clases de ciclo?<span class="signo" aria-hidden="true"></span></summary>
+          <div class="resp"><p>Por WhatsApp al <a class="enl" href="https://wa.me/34649269889?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20las%20clases%20de%20ciclo%20indoor" target="_blank" rel="noopener">649 26 98 89</a>. Dinos qué clase te interesa y te contamos el horario y el precio.</p></div>
         </details>
         <details name="faq">
           <summary>¿Puedo venir solo un día?<span class="signo" aria-hidden="true"></span></summary>
@@ -617,7 +620,7 @@
         <div class="cierre-botones">
           <a class="btn-hunde" data-ao-orbita="0" href="https://wa.me/34649269889?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20la%20sala%20fitness" target="_blank" rel="noopener"><span class="base" aria-hidden="true"></span><span class="cara">Sala Fitness</span></a>
           <a class="btn-hunde" data-ao-orbita="1" href="https://wa.me/34649269889?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20la%20sala%20tatami%20(karate%20y%20muay%20thai)" target="_blank" rel="noopener"><span class="base" aria-hidden="true"></span><span class="cara">Sala Tatami</span></a>
-          <a class="btn-hunde" data-ao-orbita="2" href="https://wa.me/34649269889?text=Hola%2C%20quiero%20reservar%20bici%20en%20la%20sala%20de%20ciclo%20indoor" target="_blank" rel="noopener"><span class="base" aria-hidden="true"></span><span class="cara">Sala Ciclo</span></a>
+          <a class="btn-hunde" data-ao-orbita="2" href="https://wa.me/34649269889?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20las%20clases%20de%20ciclo%20indoor" target="_blank" rel="noopener"><span class="base" aria-hidden="true"></span><span class="cara">Sala Ciclo</span></a>
         </div>
         <p class="cierre-llama">o llama al <a class="enl" href="tel:+34649269889">649 26 98 89</a></p>
       </div>

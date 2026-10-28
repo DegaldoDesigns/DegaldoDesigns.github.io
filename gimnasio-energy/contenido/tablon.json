@@ -18,7 +18,7 @@
     {"actividad": "Muay thai", "sala": "Sala Tatami", "dias": "Martes y jueves", "hora": "21:00 a 22:30", "fuente": "2021"},
     {"actividad": "Actividades dirigidas", "sala": "Pregunta cuáles hay este curso", "dias": "", "hora": ""}
   ],
-  "nota_clases": "Las plazas de ciclo se reservan por WhatsApp al 649 26 98 89.",
+  "nota_clases": "Para cualquier duda de las clases, escríbenos por WhatsApp al 649 26 98 89.",
   "tarifas": [
     {"nombre": "Gym", "precio": "25 €", "carnet": true, "incluye": "Sala Fitness: musculación y cardio, en el horario del gimnasio."},
     {"nombre": "Gym + actividad dirigida", "precio": "27 €", "carnet": true, "incluye": "Sala Fitness: musculación y cardio, y actividades dirigidas (pregunta cuáles hay este curso)."},

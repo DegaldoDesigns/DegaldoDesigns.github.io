@@ -127,7 +127,8 @@ a{color:inherit}
 @media (hover:hover) and (pointer:fine){ #menu ul a:hover{color:var(--negro)} .cerrar:hover{background:#000} }
 
 /* ---------- Portada: la bici bajo un foco ---------- */
-.portada{position:relative; display:grid; grid-template-columns:minmax(0,5fr) minmax(0,6fr); min-height:min(calc(100svh - var(--alto-barra)), 900px); isolation:isolate}
+.portada{position:relative; isolation:isolate}
+.portada-in{position:relative; display:grid; grid-template-columns:minmax(0,5fr) minmax(0,6fr); min-height:min(calc(100svh - var(--alto-barra)), 900px); isolation:isolate}
 .portada-foto{grid-column:2; grid-row:1; position:relative; overflow:hidden; background:var(--grafito)}
 .portada-foto img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:30% 60%}
 .portada-foto::after{content:""; position:absolute; inset:0; background:linear-gradient(90deg, var(--negro) 0%, rgba(13,13,14,0) 16%), linear-gradient(0deg, rgba(13,13,14,.55) 0%, rgba(13,13,14,0) 22%)}
@@ -158,7 +159,7 @@ a{color:inherit}
 .br-hecho .br-luz{display:none}
 
 @media (max-width:899.98px){
-  .portada{grid-template-columns:minmax(0,1fr); min-height:0}
+  .portada-in{grid-template-columns:minmax(0,1fr); min-height:0}
   .portada-foto{grid-column:1; grid-row:1; height:clamp(220px, 38svh, 420px)}
   .portada-foto img{object-position:50% 28%}
   @media (min-width:600px){ .portada-foto{height:min(56svh, 480px)} .portada-foto img{object-position:50% 20%} }

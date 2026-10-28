@@ -556,10 +556,7 @@ html.mano{--f-mano:'Sedgwick Ave', 'Caveat Brush', 'Segoe Print', 'Bradley Hand'
 @media (prefers-reduced-motion: no-preference){
   .cs-barra-lleno{ transition:scale .6s var(--ease-out, cubic-bezier(.23,1,.32,1)) .36s }
   .js .consola.cs-espera .cs-barra-lleno{ scale:0 1 }
-  .consola.cs-lcd[data-estado="abierto"] .cs-palabra::before{ animation:cs-led 2.4s linear infinite alternate }
-  .consola:not(.cs-en-pantalla) .cs-palabra::before{ animation-play-state:paused }
-}
-@keyframes cs-led{ from{ opacity:1 } to{ opacity:.45 } }
+    }
 /* (Energy) "Pregunta la hora": enlace a WhatsApp con el aspecto de una hora (tablon-recepcion v1.1) */
 a.tb-pregunta{color:var(--blanco); text-decoration:underline; text-decoration-color:var(--rojo-claro); text-decoration-thickness:2px; text-underline-offset:4px; transition:color .16s var(--ease-out)}
 @media (hover:hover) and (pointer:fine){ a.tb-pregunta:hover{color:var(--rojo-claro)} }
@@ -926,3 +923,39 @@ a.tb-pregunta{color:var(--blanco); text-decoration:underline; text-decoration-co
     transition:opacity .3s var(--ease-out) calc(var(--i,0) * 70ms), translate .5s var(--ease-out) calc(var(--i,0) * 70ms), rotate .5s var(--ease-out) calc(var(--i,0) * 70ms)}
 }
 .og-carnet-pieza:nth-child(2){--i:1} .og-carnet-pieza:nth-child(3){--i:2} .og-carnet-pieza:nth-child(4){--i:3}
+
+/* ================= v2.2 (2026-10-28): la portada se queda fija y Salas sube por encima como una hoja (hoja-sobre-foto, M22) ================= */
+/* Solo en escritorio con altura suficiente: en móvil la portada es más alta que la pantalla (la hoja taparía los botones) y los
+   efectos de scroll van a tirones en iPhone (Embocado). Con movimiento reducido o sin espacio: scroll normal. */
+@media (min-width:900px) and (min-height:620px) and (prefers-reduced-motion: no-preference){
+  .portada{--hs-h:min(calc(100svh - var(--alto-barra)), 900px); --hs-pausa:30vh; height:calc(var(--hs-h) * 2 + var(--hs-pausa));
+    view-timeline:--hs-por block; view-timeline-inset:0}
+  .portada-in{position:sticky; top:0; height:var(--hs-h); min-height:0; transform-origin:50% 40%}
+  .portada-in::after{content:""; position:absolute; inset:0; z-index:5; background:var(--negro); opacity:0; pointer-events:none}
+  .portada + .fv-banda{display:none}
+  .hs-hoja{margin-top:calc(min(calc(100svh - var(--alto-barra)), 900px) * -1); border-radius:28px 28px 0 0;
+    box-shadow:0 -26px 60px -10px rgba(0,0,0,.75), inset 0 1px 0 rgba(200,204,208,.18); background:var(--negro)}
+  .hs-hoja > .deco, .hs-hoja > .salas-fondo{border-radius:inherit}
+  @supports (animation-timeline: view()){
+    .portada-in{animation:hs-aleja linear both; animation-timeline:--hs-por; animation-range:contain calc(100% - 100vh) contain 100%}
+    .portada-in::after{animation:hs-oscurece linear both; animation-timeline:--hs-por; animation-range:contain calc(100% - 100vh) contain 100%}
+  }
+}
+@keyframes hs-aleja{from{scale:1} to{scale:.93}}
+@keyframes hs-oscurece{from{opacity:0} to{opacity:.55}}
+
+/* ---------- Salas más viva: la sala elegida tiñe el fondo, la pared roja brilla detrás del átomo y su nombre se enciende ---------- */
+.salas-fondo{position:absolute; inset:0; z-index:0; overflow:hidden; pointer-events:none}
+.sf-capa{position:absolute; inset:-80px; background:center / cover no-repeat; filter:blur(38px) saturate(1.15); opacity:0; transition:opacity .45s var(--ease-out)}
+#salas[data-sala="0"] .sf-capa:nth-child(1), #salas[data-sala="1"] .sf-capa:nth-child(2), #salas[data-sala="2"] .sf-capa:nth-child(3){opacity:.5}
+.salas-fondo::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(13,13,14,.84) 0%, rgba(13,13,14,.5) 45%, rgba(13,13,14,.86) 100%)}
+.ao-resplandor{position:absolute; inset:-38%; z-index:-1; border-radius:50%; pointer-events:none; opacity:.75;
+  background:radial-gradient(closest-side, rgba(225,20,27,.42), rgba(225,20,27,.14) 55%, rgba(225,20,27,0))}
+@media (prefers-reduced-motion: no-preference){ .ao-resplandor.pulso{animation:resplandor-pulso .5s var(--ease-out)} }
+@keyframes resplandor-pulso{0%{opacity:.75; scale:1} 35%{opacity:1; scale:1.12} 100%{opacity:.75; scale:1}}
+.salas-nombres{position:absolute; left:0; right:0; bottom:2%; display:flex; justify-content:center; gap:clamp(20px,2.4vw,44px); white-space:nowrap; user-select:none}
+.sn{font:900 clamp(48px,5.8vw,104px)/.9 var(--f-tit); font-stretch:125%; text-transform:uppercase; color:rgba(225,20,27,0);
+  -webkit-text-stroke:2px rgba(200,204,208,.1); transition:color .3s var(--ease-out), -webkit-text-stroke-color .3s var(--ease-out)}
+#salas[data-sala="0"] .sn:nth-child(1), #salas[data-sala="1"] .sn:nth-child(2), #salas[data-sala="2"] .sn:nth-child(3){
+  color:rgba(225,20,27,.1); -webkit-text-stroke-color:rgba(255,59,63,.55)}
+@media (max-width:640px){ .salas-nombres{display:none} }

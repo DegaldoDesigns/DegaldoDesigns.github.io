@@ -66,6 +66,20 @@
     });
   }
 
+  /* ---- v2.2 Salas: la sala elegida en el átomo tiñe el fondo (data-sala) y la pared roja da un golpe de luz ---- */
+  var salas = document.getElementById('salas');
+  if (salas){
+    var pans = [].slice.call(salas.querySelectorAll('.ao-panel')), halo = salas.querySelector('.ao-resplandor');
+    var marcar = function(){
+      var i = -1; pans.forEach(function(p, j){ if (p.classList.contains('ao-sel')) i = j; });
+      if (i < 0 || salas.getAttribute('data-sala') === String(i)) return;
+      salas.setAttribute('data-sala', i);
+      if (halo && !reducido){ halo.classList.remove('pulso'); void halo.offsetWidth; halo.classList.add('pulso'); }
+    };
+    if ('MutationObserver' in window){ var mo = new MutationObserver(marcar); pans.forEach(function(p){ mo.observe(p, {attributes:true, attributeFilter:['class']}); }); }
+    marcar();
+  }
+
   /* ---- movimiento-marca: cifra que cuenta (M05), solo el 4,9 ---- */
   document.querySelectorAll('.cuenta').forEach(function(c){
     if (reducido || !conIO) return;
