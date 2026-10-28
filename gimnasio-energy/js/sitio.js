@@ -1,7 +1,7 @@
 /* Gimnasio Energy · demo de Degaldo Designs, v2 (2026-10-27). Parte CRÍTICA (cabecera, menú, electrón de la barra, letra de rotulador,
    rueda tras el encendido, brillo del logo y la carga del resto). Lo demás, en sitio-resto.js. Piezas de la librería adaptadas (cada bloque dice de cuál).
    Aparte, copias de la librería: luces-sala.js (M81 v3), rueda-scroll.js (M114, se carga aquí tras el encendido), atomo-orbitas.js (M113),
-   anillo-horario.js (M86), tablon.js (tablon-recepcion v1.1), consola-estado.js (M116), recomendador-preguntas.js (M115), objetos-gimnasio.js (M117). */
+   anillo-horario.js (M86), tablon.js (tablon-recepcion v1.1), consola-estado.js (M116), objetos-gimnasio.js (M117). */
 (function(){
   var reducido = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var raton = matchMedia('(hover: hover) and (pointer: fine)').matches;
@@ -112,7 +112,7 @@
      así no le quita ancho de banda ni CPU a la foto de portada (LCP). async=false: se ejecutan en este orden (tablon.js el último,
      para que sitio-resto.js ya escuche tablon:listo). ---- */
   function cargarResto(){
-    ['js/atomo-orbitas.js', 'js/objetos-gimnasio.js', 'js/recomendador-preguntas.js', 'js/consola-estado.js', 'js/sitio-resto.js', 'js/tablon.js', 'js/hilo-luz.js'].forEach(function(src){
+    ['js/atomo-orbitas.js', 'js/objetos-gimnasio.js', 'js/consola-estado.js', 'js/sitio-resto.js', 'js/tablon.js', 'js/hilo-luz.js'].forEach(function(src){
       var sc = document.createElement('script'); sc.src = src; sc.async = false; document.body.appendChild(sc);
     });
   }

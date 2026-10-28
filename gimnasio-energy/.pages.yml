@@ -1,6 +1,6 @@
 # Pages CMS de Gimnasio Energy: el tablón de recepción (horario, clases y tarifas; las cuotas principales salen como carnets).
 # Plantilla: 01-Libreria-de-Codigo/plantillas/pages-cms-tablon.yml v1.1 (instrucciones en pages-cms-tablon.md).
-# Edita contenido/tablon.json, que leen js/tablon.js (tablón y carnets), js/consola-estado.js (consola de la bici) y Encuentra tu sala. Si el JSON se rompe, la web enseña lo del HTML.
+# Edita contenido/tablon.json, que leen js/tablon.js (tablón y carnets), y js/consola-estado.js (consola de la bici). Si el JSON se rompe, la web enseña lo del HTML.
 
 content:
   - name: tablon

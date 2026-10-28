@@ -1,5 +1,5 @@
 /* Gimnasio Energy v2 · resto de sitio.js, cargado tras el evento load (ver cargarResto en sitio.js): revelados, parallax y pausa
-   fuera de pantalla, cifra, resalte del horario, interacciones del cursor, Encuentra tu sala ↔ tablón, mapa, barra del móvil y visor. */
+   fuera de pantalla, cifra, resalte del horario, interacciones del cursor, mapa, barra del móvil y visor. */
 (function(){
   var reducido = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var raton = matchMedia('(hover: hover) and (pointer: fine)').matches;
@@ -133,49 +133,6 @@
         var r = el.getBoundingClientRect(); el.style.setProperty('--gx', (e.clientX - r.left) + 'px'); el.style.setProperty('--gy', (e.clientY - r.top) + 'px'); });
     });
   }
-
-  /* ---- Encuentra tu sala (M115): horas y franjas leídas de contenido/tablon.json; el átomo pequeño enciende la sala ---- */
-  (function(){
-    var rp = document.querySelector('#encuentra [data-rp]'); if (!rp) return;
-    var datos = null, NOMBRES = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'], ORDEN = [1,2,3,4,5,6,0];
-    var DIAS = {domingo:0, lunes:1, martes:2, miercoles:3, jueves:4, viernes:5, sabado:6};
-    function norm(x){ return String(x || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').trim(); }
-    function min(h){ var m = /(\d{1,2})[:.](\d{2})/.exec(h || ''); return m ? +m[1] * 60 + +m[2] : null; }
-    document.addEventListener('tablon:listo', function(e){ if (e.detail && e.detail.datos) datos = e.detail.datos; });
-    /* "De lunes a viernes, de 16:00 a 21:30": los días con el mismo tramo de mañana (antes de las 14:00) o de tarde, agrupados */
-    function franja(cual){
-      if (!datos || !Array.isArray(datos.horario)) return '';
-      var por = {};
-      datos.horario.forEach(function(x){ var d = DIAS[norm(x.dia)]; if (d == null) return;
-        (x.tramos || []).forEach(function(t){ var a = min(t.desde); if (a == null || !t.hasta) return; if ((a < 840) === (cual === 'manana')) por[d] = 'de ' + t.desde + ' a ' + t.hasta; }); });
-      var grupos = [];
-      ORDEN.forEach(function(d){ var g = grupos[grupos.length - 1];
-        if (!por[d]) return;
-        if (g && g.txt === por[d] && ORDEN.indexOf(g.fin) === ORDEN.indexOf(d) - 1) g.fin = d; else grupos.push({ini:d, fin:d, txt:por[d]}); });
-      if (!grupos.length) return 'Cerrado ' + (cual === 'manana' ? 'por las mañanas' : 'por las tardes');
-      var fuente = rp.getAttribute('data-rp-fuente');
-      var t = grupos.map(function(g){ var dias = g.ini === g.fin ? NOMBRES[g.ini] : (ORDEN.indexOf(g.fin) - ORDEN.indexOf(g.ini) === 1 ? NOMBRES[g.ini] + ' y ' + NOMBRES[g.fin] : 'de ' + NOMBRES[g.ini] + ' a ' + NOMBRES[g.fin]); return dias + ', ' + g.txt; }).join('; ');
-      return t.charAt(0).toUpperCase() + t.slice(1) + (fuente ? ', ' + fuente : '');
-    }
-    function hora(actividad){
-      if (!datos || !Array.isArray(datos.clases)) return null;                 // sin tablón: se queda el valor del JSON en línea
-      var c = datos.clases.filter(function(x){ return norm(x.actividad) === norm(actividad); })[0];
-      if (!c || !c.hora) return '';
-      return (c.dias ? c.dias + ', ' : '') + c.hora + (c.fuente ? ' (' + c.fuente + ')' : '');
-    }
-    var DEF = {manana:'De lunes a viernes, de 10:00 a 13:00, según Google', tarde:'De lunes a viernes, de 16:00 a 21:30, según Google'};
-    rp.addEventListener('rp:resultado', function(e){
-      var r = e.detail.resultado, resp = e.detail.respuestas;
-      (r.datos || []).forEach(function(d){
-        if (d.clave === 'franja') d.val = franja(resp.franja) || DEF[resp.franja] || '';
-        if (d.clave === 'hora'){ var h = hora(d.actividad); if (h !== null) d.val = h; }
-      });
-    });
-    var ao = rp.querySelector('.ao-mini');
-    rp.addEventListener('rp:cambio', function(e){ if (!ao) return; var i = e.detail.figura;
-      ao.querySelectorAll('.ao-orbita').forEach(function(o, j){ o.classList.toggle('ao-activa', j === i); });
-      ao.querySelectorAll('.ao-carril').forEach(function(c, j){ c.classList.toggle('ao-activa', j === i); }); });
-  })();
 
   /* ---- ubicacion-mapa v3: el mapa de Google solo se carga al pulsar ---- */
   var btnMapa = document.getElementById('btnMapa');

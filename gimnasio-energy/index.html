@@ -63,7 +63,7 @@
 <!-- CONFIRMAR CON EL CLIENTE (resumen; la lista completa está en ../ficha.md, sección CONFIRMAR). En la web no se grita: los datos
      antiguos dicen su año en pequeño y lo que no se sabe es "Pregunta la hora" / "pregúntanos".
      - Horario: el de Google Maps (L-V 10:00-13:00 y 16:00-21:30). Está en: JSON-LD, tarjeta viva (data-horario), contenido/tablon.json
-       + su copia en el HTML del tablón, la consola, Encuentra tu sala (respaldo en su JSON), panel de la Sala Fitness, ubicación y pie.
+       + su copia en el HTML del tablón, la consola, panel de la Sala Fitness, ubicación y pie.
      - Clases: ciclo 16:00 y 20:30 (historias de agosto de 2026); muay thai martes y jueves 21:00-22:30 (cartel de 2021); karate sin hora.
      - Karate: edad mínima (4 años en 2021, 5 en 2019), exámenes antes del verano (2019), escuela de verano (2019-2021).
      - Tarifas: las de febrero de 2020, con el sello "Tarifas de 2020 · se actualizan" (nota_tarifas). Qué incluye cada carnet: solo lo que
@@ -213,73 +213,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ ENCUENTRA TU SALA (M115): solo salas y clases que existen; las horas salen de contenido/tablon.json ============ -->
-  <section class="sec sec-grafito mov" id="encuentra" aria-labelledby="t-encuentra">
-    <div class="fondo-vivo fv-baldosa-propia fv-b-granito fv-quieto fv-caucho" aria-hidden="true"><span class="fv-papel"></span><span class="fv-papel"></span><span class="fv-papel"></span></div>
-    <div class="foco-techo" aria-hidden="true" style="--ft-x:26%; --ft-dl:80ms"><span class="ft-lampara"></span><span class="ft-halo"></span><span class="ft-cono"></span></div>
-    <div class="wrap">
-      <div class="cab">
-        <h2 class="h2 rev-cont" id="t-encuentra" data-hl-parada><span class="hl-marca hl-colgada" aria-hidden="true"></span><span class="rev-t">Encuentra tu sala</span></h2>
-        <p>Tres preguntas y te decimos qué sala y qué clase encajan contigo, con el WhatsApp ya escrito.</p>
-      </div>
-      <div class="rp rp-con-figura" data-rp aria-label="Encuentra tu sala" data-rp-fuente="según Google">
-        <script type="application/json" class="rp-datos">
-        {
-          "whatsapp": "34649269889",
-          "inicio": "quien",
-          "mensaje": "Hola, quiero información {clase} {para}, mejor {cuando}.",
-          "textos": {"sinDato": "Te lo decimos por WhatsApp"},
-          "preguntas": {
-            "quien": {"titulo": "¿Para quién es?", "opciones": [
-              {"texto": "Para mí", "guarda": {"para": "para mí"}, "sigue": "gusto"},
-              {"texto": "Para mi hijo o mi hija", "guarda": {"para": "para mi hijo/a"}, "sigue": "edad"}
-            ]},
-            "gusto": {"titulo": "¿Qué te apetece?", "opciones": [
-              {"texto": "Pesas y máquinas", "guarda": {"resultado": "fitness", "clase": "de la sala fitness", "figura": 0}, "sigue": "cuando"},
-              {"texto": "Pedalear en grupo", "guarda": {"resultado": "ciclo", "clase": "de las clases de ciclo indoor", "figura": 2}, "sigue": "cuando"},
-              {"texto": "Karate", "guarda": {"resultado": "karate", "clase": "del karate Shito Ryu", "figura": 1}, "sigue": "cuando"},
-              {"texto": "Muay thai", "guarda": {"resultado": "muaythai", "clase": "del muay thai", "figura": 1, "cuando": "por la tarde", "franja": "tarde"}},
-              {"texto": "Clases dirigidas", "guarda": {"resultado": "dirigidas", "clase": "de las actividades dirigidas"}, "sigue": "cuando"}
-            ]},
-            "edad": {"titulo": "¿Cuántos años tiene?", "opciones": [
-              {"texto": "Menos de 4", "guarda": {"resultado": "peques", "clase": "del karate", "figura": 1}, "sigue": "cuando"},
-              {"texto": "4 o más", "guarda": {"resultado": "ninos", "clase": "del karate", "figura": 1}, "sigue": "cuando"}
-            ]},
-            "cuando": {"titulo": "¿Cuándo te viene mejor?", "opciones": [
-              {"texto": "Por la mañana", "guarda": {"cuando": "por la mañana", "franja": "manana"}},
-              {"texto": "Por la tarde", "guarda": {"cuando": "por la tarde", "franja": "tarde"}}
-            ]}
-          },
-          "resultados": {
-            "fitness": {"titulo": "Sala Fitness", "texto": "Musculación y cardio: bancos, rack de sentadillas, barras y discos olímpicos, y sala de cardio.", "figura": 0,
-              "datos": [{"et": "Cuándo", "val": "Por libre, en el horario del gimnasio"}, {"et": "Abierto", "clave": "franja", "val": ""}]},
-            "ciclo": {"titulo": "Sala Ciclo", "texto": "Sala de ciclo indoor con bicis Life Fitness IC6. Pregúntanos por las clases por WhatsApp.", "figura": 2,
-              "datos": [{"et": "Clase", "val": "Ciclo indoor"}, {"et": "Hora", "clave": "hora", "actividad": "Ciclo indoor", "val": "16:00 y 20:30 (agosto 2026)", "vacio": "La hora te la decimos por WhatsApp", "porFranja": true, "vacioFranja": "Te la decimos por WhatsApp: el ciclo, de momento, es por la tarde"}, {"et": "Abierto", "clave": "franja", "val": ""}]},
-            "karate": {"titulo": "Sala Tatami", "texto": "Karate Shito Ryu para niños y adultos, y muay thai, sobre tatami y con sacos.", "figura": 1,
-              "datos": [{"et": "Clase", "val": "Karate Shito Ryu, grupo de adultos"}, {"et": "Hora", "clave": "hora", "actividad": "Karate Shito Ryu, adultos", "val": "", "vacio": "La hora te la decimos por WhatsApp"}]},
-            "muaythai": {"titulo": "Sala Tatami", "texto": "Karate Shito Ryu para niños y adultos, y muay thai, sobre tatami y con sacos.", "figura": 1,
-              "datos": [{"et": "Clase", "val": "Muay thai"}, {"et": "Hora", "clave": "hora", "actividad": "Muay thai", "val": "Martes y jueves, 21:00 a 22:30 (2021)", "vacio": "La hora te la decimos por WhatsApp"}]},
-            "dirigidas": {"titulo": "Actividades dirigidas", "texto": "Pregunta cuáles hay este curso: te decimos qué clases hay y a qué hora.",
-              "datos": [{"et": "Hora", "clave": "hora", "actividad": "Actividades dirigidas", "val": "", "vacio": "La hora te la decimos por WhatsApp"}, {"et": "Abierto", "clave": "franja", "val": ""}]},
-            "ninos": {"titulo": "Sala Tatami", "texto": "Karate Shito Ryu para niños, en grupos reducidos. La edad mínima y el horario de este curso te los decimos por WhatsApp.", "figura": 1,
-              "datos": [{"et": "Clase", "val": "Karate Shito Ryu, niños"}, {"et": "Hora", "clave": "hora", "actividad": "Karate Shito Ryu, niños", "val": "", "vacio": "La hora te la decimos por WhatsApp"}],
-              "enlace": {"texto": "Ver karate para familias", "href": "#karate"}},
-            "peques": {"titulo": "Escríbenos y te decimos la edad mínima", "texto": "Cuéntanos cuántos años tiene y te decimos desde qué edad puede empezar karate.", "figura": 1,
-              "mensaje": "Hola, quiero información del karate para mi hijo/a, que aún no tiene 4 años: ¿desde qué edad puede empezar? Mejor {cuando}.",
-              "enlace": {"texto": "Ver karate para familias", "href": "#karate"}}
-          }
-        }
-        </script>
-        <div class="rp-lado" aria-hidden="true"><div class="ao ao-mini" data-ao data-ao-n="3"><div class="ao-atomo"></div></div></div>
-        <div class="rp-sinjs">
-          <article class="rp-tarjeta"><h3>Sala Fitness</h3><p>Pesas, máquinas y cardio, por libre.</p><a class="btn" href="https://wa.me/34649269889?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20la%20sala%20fitness" target="_blank" rel="noopener">Preguntar por WhatsApp</a></article>
-          <article class="rp-tarjeta"><h3>Sala Tatami</h3><p>Karate Shito Ryu para niños y adultos, y muay thai.</p><a class="btn" href="https://wa.me/34649269889?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20la%20sala%20tatami%20(karate%20y%20muay%20thai)" target="_blank" rel="noopener">Preguntar por WhatsApp</a></article>
-          <article class="rp-tarjeta"><h3>Sala Ciclo</h3><p>Clases de ciclo indoor con bicis Life Fitness IC6.</p><a class="btn" href="https://wa.me/34649269889?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20las%20clases%20de%20ciclo%20indoor" target="_blank" rel="noopener">Preguntar por WhatsApp</a></article>
         </div>
       </div>
     </div>
