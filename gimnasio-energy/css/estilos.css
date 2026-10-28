@@ -651,7 +651,7 @@ a.tb-pregunta{color:var(--blanco); text-decoration:underline; text-decoration-co
 .og-num{font:600 5.8cqi/1.2 ui-monospace, 'Cascadia Mono', Consolas, monospace; letter-spacing:.08em; color:#4A4F55}
 .og-codigo{display:block; height:9cqi; margin-top:4cqi;
   background:repeating-linear-gradient(90deg, #141517 0 2px, transparent 2px 4px, #141517 4px 5px, transparent 5px 8px, #141517 8px 11px, transparent 11px 13px, #141517 13px 14px, transparent 14px 17px)}
-.og-incluye-pie{margin:5cqi 0 0; font-size:max(13px, 5cqi); line-height:1.4; color:#4A4F55}
+.og-incluye-pie{margin:5cqi 0 0; padding:0 7cqi; font-size:max(13px, 5cqi); line-height:1.4; color:#4A4F55}
 /* Espejo: la reseña más reciente arriba a lo ancho y las otras tres en fila (menos aire a la izquierda) */
 @media (min-width:1000px){
   .og-notas{grid-template-columns:repeat(3, minmax(0,1fr))}
@@ -835,7 +835,7 @@ a.tb-pregunta{color:var(--blanco); text-decoration:underline; text-decoration-co
 }
 
 /* ---------- Fotos con profundidad: la foto va más despacio que la página y sigue un poco al ratón ---------- */
-.prof img{scale:1.1}
+@media (hover:hover) and (pointer:fine){ .prof img{scale:1.1} }
 .prof .lb4-foto img, .prof .foto-duo img{transition:scale .35s var(--ease-out), translate .3s var(--ease-out)}
 @media (hover:hover) and (pointer:fine){ .prof .lb4-foto:hover img, .prof .foto-duo:hover img{scale:1.13} }
 .karate-foto.prof .foto-duo{overflow:hidden}
@@ -871,7 +871,7 @@ a.tb-pregunta{color:var(--blanco); text-decoration:underline; text-decoration-co
 
 /* ---------- Salas más viva: la sala elegida tiñe el fondo, la pared roja brilla detrás del átomo y su nombre se enciende ---------- */
 .salas-fondo{position:absolute; inset:0; z-index:0; overflow:hidden; pointer-events:none}
-.sf-capa{position:absolute; inset:-80px; background:center / cover no-repeat; filter:blur(38px) saturate(1.15); opacity:0; transition:opacity .45s var(--ease-out)}
+.sf-capa{position:absolute; inset:0; background:center / cover no-repeat; opacity:0; transition:opacity .45s var(--ease-out)}   /* imágenes de 96 px ya desenfocadas (img/sala-*-fondo.webp): nada de filter:blur, que en el móvil hacía lenta la sección */
 #salas[data-sala="0"] .sf-capa:nth-child(1), #salas[data-sala="1"] .sf-capa:nth-child(2), #salas[data-sala="2"] .sf-capa:nth-child(3){opacity:.5}
 .salas-fondo::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(13,13,14,.84) 0%, rgba(13,13,14,.5) 45%, rgba(13,13,14,.86) 100%)}
 .ao-resplandor{position:absolute; inset:-38%; z-index:-1; border-radius:50%; pointer-events:none; opacity:.75;
@@ -886,3 +886,16 @@ a.tb-pregunta{color:var(--blanco); text-decoration:underline; text-decoration-co
 @media (max-width:640px){ .salas-nombres{display:none} }
 /* El ▶ colgado se coloca donde empieza el texto: en un titular centrado cae en mitad de la línea. En el cierre, sin ▶ (el nodo del hilo sí se enciende) */
 .cierre .hl-marca{display:none !important}
+
+/* Táctil (iPhone, Android, tablets): carnets sin 3D. La perspectiva y el giro 3D dentro de una fila que se desliza
+   hacen que Safari de iPhone se enganche al deslizar; aquí se dan la vuelta con un fundido, como con movimiento reducido. */
+@media (hover:none), (pointer:coarse){
+  .og-carnet, .js .og-carnet-in{transform:none; transform-style:flat; transition:none}
+  .js .og-girado .og-carnet-in{transform:none}
+  .js .og-cara{backface-visibility:visible; -webkit-backface-visibility:visible; transition:opacity .2s var(--ease-out)}
+  .js .og-detras{transform:none; opacity:0}
+  .js .og-girado .og-delante{opacity:0} .js .og-girado .og-detras{opacity:1}
+}
+@media (max-width:639px){
+  .og-carnets-region{-webkit-overflow-scrolling:touch; overscroll-behavior-x:contain; touch-action:pan-x pan-y}
+}

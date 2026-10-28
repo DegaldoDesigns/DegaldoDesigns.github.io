@@ -50,7 +50,7 @@
 
   /* ---- v2.1 fotos con profundidad: con el scroll la foto va más despacio (±22 px) y con el ratón se desplaza un poco al revés ---- */
   var fotos = [].slice.call(document.querySelectorAll('.prof'));
-  if (fotos.length && !reducido){
+  if (fotos.length && !reducido && raton){          /* solo con ratón: en el móvil, mover fotos con el scroll da tirones */
     var pf = null;
     var mover = function(){ pf = null; var vh = innerHeight;
       fotos.forEach(function(f){ var img = f.querySelector('img'), r = f.getBoundingClientRect(); if (!img || r.bottom < -100 || r.top > vh + 100) return;
