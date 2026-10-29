@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Página no encontrada · Pub La Isla</title>
+<meta name="description" content="Esta página no existe. Vuelve a la web de Pub La Isla, en Cangas de Onís.">
+<!-- Demo bajo /pub-la-isla/: la base (solo cuando se sirve bajo esa ruta) hace que el 404 cargue fuentes e imágenes desde cualquier subruta. Quitarla al pasar a dominio propio. -->
+<script>if (location.pathname.indexOf('/pub-la-isla/') === 0){ var b = document.createElement('base'); b.href = '/pub-la-isla/'; document.head.appendChild(b); }</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0B1418">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/marcellus-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Marcellus';font-display:swap;font-weight:400;src:url(fonts/marcellus-latin.woff2) format('woff2')}
+@font-face{font-family:'Sofia Sans';font-display:swap;font-weight:400 700;src:url(fonts/sofia-sans-latin-recortada.woff2) format('woff2')}
+:root{--noche:#0B1418; --hondo:#13222A; --arena:#F3EBDD; --niebla:#A9B4B8; --oro:#C59A58; --oro-claro:#D8B57E; --ease-out:cubic-bezier(0.23,1,0.32,1)}
+*{box-sizing:border-box}
+body{margin:0; background:var(--noche); color:var(--arena); font:400 1.0625rem/1.7 'Sofia Sans',system-ui,sans-serif}
+.barra{background:var(--hondo); padding:14px 24px; border-bottom:1px solid rgba(197,154,88,.3)}
+.barra a{display:inline-flex; align-items:center; gap:12px; font:400 1.5rem/1.15 'Marcellus',Georgia,serif; color:var(--arena); text-decoration:none}
+.barra img{width:44px; height:44px}
+.wrap{max-width:740px; margin:0 auto; padding:56px 24px 96px}
+h1{font:400 clamp(2.2rem,6vw,3.2rem)/1.15 'Marcellus',Georgia,serif; color:var(--oro); margin:0 0 6px}
+.fecha{color:var(--niebla); font-size:.9375rem; margin:0 0 36px}
+h2{font:400 1.5rem/1.2 'Marcellus',Georgia,serif; color:var(--arena); margin:36px 0 10px}
+p,li{color:var(--niebla)}
+strong{color:var(--arena)}
+a{color:var(--arena)}
+.volver{display:inline-flex; align-items:center; min-height:48px; margin-top:40px; padding:12px 22px; background:var(--oro); color:var(--noche); font-weight:700; text-decoration:none; border-radius:4px; transition:background-color .16s var(--ease-out), transform .12s var(--ease-out)}
+.volver:active{transform:scale(.97)}
+:focus-visible{outline:2px solid var(--oro); outline-offset:3px}
+@media (hover:hover) and (pointer:fine){ .volver:hover{background:var(--oro-claro)} }
+@media (prefers-reduced-motion:reduce){ .volver{transition:none} }
+main{min-height:70vh; display:flex; flex-direction:column; justify-content:center}
+.volver{align-self:flex-start}
+.codigo{font:400 clamp(6rem,22vw,10rem)/1.12 'Marcellus',Georgia,serif; color:var(--oro); margin:0}
+</style>
+</head>
+<body>
+<header class="barra"><a href="index.html"><img src="img/logo-roundel-128.webp" width="128" height="128" alt="" aria-hidden="true">Pub La Isla</a></header>
+<main class="wrap">
+  <p class="codigo" aria-hidden="true">404</p>
+  <h1>Esta página no existe</h1>
+  <p>Puede que el enlace esté mal escrito o que la página ya no esté. Los cócteles, el horario y cómo llegar están en la portada.</p>
+  <a class="volver" href="index.html">Volver al inicio</a>
+</main>
+</body>
+</html>

@@ -1,0 +1,53 @@
+# Pages CMS de Pub La Isla: los planes (tardeos, torneos, fiestas) y el aviso de la tarjeta viva (vacaciones).
+# Adaptado de 01-Libreria-de-Codigo/plantillas/pages-cms-plato-del-mes.yml (pila-deslizable v3). Montaje: plantillas/pages-cms-menu-del-dia.md.
+# El HTML trae escrita la misma pila (respaldo sin JS y para Google): si se cambian mucho los planes, actualizar también index.html.
+media:
+  input: img/subidas
+  output: img/subidas
+
+content:
+  - name: planes
+    label: Planes y avisos
+    description: El primero de la lista es el más reciente. La web pone sola la etiqueta («Este mes» o «El último plan que hemos anunciado»).
+    type: file
+    path: contenido/planes.json
+    format: json
+    fields:
+      - name: actualizado
+        label: Actualizado el
+        type: date
+      - name: aviso
+        label: Aviso (opcional)
+        type: string
+        description: 'Por ejemplo: Cerrado por vacaciones hasta el 29 de octubre. Sale en lugar de «Abierto» en la portada, el horario y el final. Déjalo vacío cuando no haga falta.'
+      - name: aviso_hasta
+        label: El aviso vale hasta (opcional)
+        type: string
+        description: 'Fecha así: 2026-10-28 (incluida). Pasado ese día, el aviso desaparece solo.'
+      - name: lista
+        label: Planes (el más reciente, el primero)
+        type: object
+        list: true
+        fields:
+          - name: nombre
+            label: Nombre del plan
+            type: string
+            required: true
+          - name: texto
+            label: Cuándo y qué
+            type: text
+            description: 'Con su fecha: Domingo 31 de mayo, desde las 18:00. Música en vivo.'
+          - name: foto
+            label: Cartel o foto (opcional)
+            type: image
+            description: Sin caras de artistas ni de clientes si no han dado permiso. Sin foto, la tarjeta sale con el nombre en grande.
+          - name: alt
+            label: Qué se ve en la foto
+            type: string
+          - name: mes
+            label: Mes
+            type: string
+            description: 'Año y mes, así: 2026-11'
+          - name: fuente
+            label: Línea pequeña de abajo (opcional)
+            type: string

@@ -1,0 +1,6 @@
+# Demo: las páginas llevan noindex. No se bloquea nada aquí: un Disallow impediría que el buscador viera ese noindex.
+# Al publicar en el dominio del cliente, quitar el noindex de index.html y cambiar la URL del sitemap.
+User-agent: *
+Allow: /
+
+Sitemap: https://degaldodesigns.es/pub-la-isla/sitemap.xml

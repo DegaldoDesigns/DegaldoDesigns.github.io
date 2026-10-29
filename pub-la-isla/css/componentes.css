@@ -1,0 +1,252 @@
+/* Pub La Isla · CSS de la librería (01-Libreria-de-Codigo/componentes), copiado y adaptado a la marca con sus variables.
+   Lo propio de la web va en estilos.css. Piezas: vaso-capas (M127) v1, lista-fijada-foto (M27) v2.2, pila-deslizable (M54) v3,
+   decoracion-parallax (M15), fondo-hojas-vivo (M82) v3 con baldosa propia, brochazo-marca (M04, subrayado), objetos-cafeteria
+   (M105: escrito a tiza), interacciones-cursor (M30) v3, cabecera-inteligente (M18), resaltado-deslizante (M53) v3 .rd-punto,
+   menu-escalonado (M52), botones-fisicos (M60) .btn-avanza, scroll-nativo (M10) v2, ubicacion-mapa v3, barra-pegajosa-movil v2. */
+
+/* ================= vaso-capas (M127) v1 ================= */
+.vc{ --vc-linea:#EFE7D8; --vc-linea-suave:.5; --vc-hielo-color:rgba(255,255,255,.16); --vc-espuma:#FFFFFF; --vc-opacidad:.92;
+  --vc-retraso:150ms; --vc-hielo-paso:90ms; --vc-liquido-desde:300ms; --vc-liquido-dura:900ms; --vc-capa-paso:140ms;
+  --vc-pajita-desde:1050ms; --vc-hover-max:3deg;
+  position:relative; color:var(--vc-linea) }
+.vc svg{ display:block; width:100%; height:auto; aspect-ratio:3/5 }
+.vc-defs{ position:absolute; width:0; height:0; overflow:hidden }
+.vc-vaso{ transform-box:view-box; transform-origin:120px 360px }
+.vc-liquido{ opacity:var(--vc-opacidad); transform-box:view-box; transform-origin:120px 92px }
+.vc-rizo{ fill:none; stroke:var(--vc-espuma); stroke-width:2; stroke-linecap:round; opacity:.85 }
+.vc-cubo{ transform-box:fill-box; transform-origin:center; rotate:var(--r, 0deg) }
+.vc-cubo rect{ fill:var(--vc-hielo-color); stroke:currentColor; stroke-width:1.6 }
+.vc-cubo path{ fill:none; stroke:currentColor; stroke-width:1.4; stroke-linecap:round; opacity:.7 }
+.vc-forma{ fill:none; stroke:currentColor; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round }
+.vc-forma .vc-suave{ opacity:var(--vc-linea-suave); stroke-width:1.4 }
+.vc-vuelve .vc-vaso, .vc-vuelve .vc-liquido{ transition:rotate .3s var(--ease-out) }
+.js .vc:not(.vc-listo) .vc-capa, .js .vc:not(.vc-listo) .vc-rizo{ translate:0 330px }
+.js .vc:not(.vc-listo) .vc-cubo, .js .vc:not(.vc-listo) .vc-pajita, .js .vc:not(.vc-listo) .vc-adorno{ opacity:0 }
+@media (prefers-reduced-motion: reduce){
+  .js .vc:not(.vc-listo) .vc-capa, .js .vc:not(.vc-listo) .vc-rizo{ translate:none }
+  .js .vc:not(.vc-listo) .vc-cubo, .js .vc:not(.vc-listo) .vc-pajita, .js .vc:not(.vc-listo) .vc-adorno{ opacity:1 }
+  .vc-vuelve .vc-vaso, .vc-vuelve .vc-liquido{ transition:none }
+}
+
+/* ================= lista-fijada-foto (M27) v2.2 ================= */
+.lf{--lf-fondo:var(--noche); --lf-texto:var(--arena); --lf-suave:var(--niebla); --lf-acento:var(--oro); --lf-pista:rgba(243,235,221,.16);
+  --lf-velo:var(--noche); --lf-cifra-color:var(--oro); --lf-f-titulo:var(--f-tit); --lf-forma:4px;
+  --lf-proporcion:4/3; --lf-atenuado:.62; --lf-tramo:70svh; --lf-ancho:1200px; --lf-pad:24px;
+  --lf-curva:var(--ease-in-out); --lf-curva-sal:var(--ease-out);
+  position:relative; background:var(--lf-fondo); color:var(--lf-texto); padding:clamp(64px,9vw,112px) 0}
+.lf-marco{max-width:var(--lf-ancho); margin:0 auto; padding:0 var(--lf-pad); position:relative; z-index:1}
+.lf-cab{margin-bottom:clamp(28px,4vw,48px)}
+.lf-cab p{margin:.5em 0 0; color:var(--lf-suave); max-width:46ch; text-wrap:pretty}
+.lf-lista{list-style:none; margin:0; padding:0; display:grid; gap:clamp(40px,6vw,64px)}
+.lf-item{display:flex; flex-direction:column}
+.lf-item h3{font:400 clamp(22px,1.1rem + .6vw,27px)/1.18 var(--lf-f-titulo); margin:0}
+.lf-item p{margin:.35em 0 0; color:var(--lf-suave); max-width:48ch; text-wrap:pretty}
+.lf-linea{display:none}
+.lf-foto{position:relative; margin:18px 0 0; aspect-ratio:var(--lf-proporcion); border-radius:var(--lf-forma); overflow:hidden; background:var(--lf-pista)}
+.lf-foto img{position:absolute; inset:0; display:block; width:100%; height:100%; object-fit:cover; object-position:var(--lf-foco,50% 50%)}
+.lf-marca{position:absolute; left:0; width:1px; pointer-events:none; top:calc(var(--i) * var(--lf-tramo) + 50svh); height:var(--lf-tramo)}
+@media (min-width:768px){
+  .lf:not(.lf-fijada) .lf-lista{grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:clamp(28px,4vw,48px)}
+  .lf:not(.lf-fijada) .lf-linea{display:block; flex:none; height:18px}
+  .lf:not(.lf-fijada) .lf-foto{margin-top:auto}
+}
+.lf.lf-fijada{padding:0; height:calc(var(--lf-n) * var(--lf-tramo) + 100svh)}
+.lf-fijada .lf-panel{position:sticky; top:0; height:100svh; display:flex; align-items:center; overflow:hidden}
+.lf-fijada .lf-marco{position:relative; width:100%; height:calc(100svh - 2 * clamp(16px,5svh,64px))}
+.lf-fijada .lf-texto{width:calc(50% - clamp(28px,5vw,64px) / 2); height:100%; display:flex; flex-direction:column; justify-content:center}
+.lf-fijada .lf-cab{margin-bottom:clamp(18px,3.5svh,40px)}
+.lf-fijada .lf-lista{gap:0}
+.lf-fijada .lf-item{padding:clamp(10px,1.9svh,18px) 0 0}
+.lf-fijada .lf-item h3{opacity:var(--lf-atenuado); transition:opacity .3s var(--lf-curva)}
+.lf-fijada .lf-item.es-activo h3, .lf-fijada .lf-item:focus-within h3{opacity:1}
+.lf-fijada .lf-item p{font-size:15px; line-height:1.45}
+.lf-fijada .lf-linea{display:block; height:2px; margin-top:clamp(10px,1.9svh,18px); background:var(--lf-pista); overflow:hidden}
+.lf-fijada .lf-linea i{display:block; height:100%; background:var(--lf-acento); transform-origin:0 50%; scale:0 1}
+.lf-fijada .lf-foto{position:absolute; top:0; bottom:0; left:50%; right:var(--lf-pad); margin:0 0 0 calc(clamp(28px,5vw,64px) / 2);
+  aspect-ratio:auto; z-index:1; opacity:0; transition:opacity 0s linear .3s}
+.lf-fijada .es-activo .lf-foto{z-index:2; opacity:1; transition:opacity .3s var(--lf-curva)}
+.lf-fijada .lf-foto img{scale:1.04; transition:scale 0s linear .3s}
+.lf-fijada .es-activo .lf-foto img{scale:1; transition:scale .45s var(--lf-curva-sal)}
+@media (prefers-reduced-motion:reduce){ .lf-fijada .lf-item h3, .lf-fijada .lf-foto, .lf-fijada .lf-foto img{transition:none} }
+
+/* ================= pila-deslizable (M54) v3 ================= */
+.pila{display:grid; touch-action:pan-y}
+.pila:focus-visible{outline:2px solid var(--arena); outline-offset:8px}
+.tar{grid-area:1/1; margin:0; background:var(--hondo); box-shadow:0 14px 34px rgba(0,0,0,.45), inset 0 0 0 1px rgba(243,235,221,.14);
+  display:flex; flex-direction:column; cursor:grab; user-select:none; -webkit-user-select:none; border-radius:4px; overflow:hidden;
+  transition:translate .3s var(--ease-out), scale .3s var(--ease-out), opacity .3s var(--ease-out), rotate .3s var(--ease-out)}
+.tar:nth-child(1){z-index:3} .tar:nth-child(2){z-index:2; scale:.95; translate:0 12px} .tar:nth-child(3){z-index:1; scale:.9; translate:0 24px}
+.tar:nth-child(n+4){z-index:0; scale:.9; translate:0 24px; opacity:0}
+.tar.arrastrando{transition:none; cursor:grabbing}
+.tar.vuelve{transition:translate .45s var(--ease-muelle), rotate .45s var(--ease-muelle)}
+.tar-foto{margin:0; aspect-ratio:5/4; overflow:hidden}
+.tar-foto img{display:block; width:100%; height:100%; object-fit:cover; pointer-events:none}
+.tar-marca{position:relative; container-type:inline-size; aspect-ratio:5/4; overflow:hidden; display:flex; align-items:flex-end; padding:16px 18px; background:var(--noche)}
+.tar-marca-nombre{position:relative; font:400 clamp(30px,10cqi,48px)/1.15 var(--f-tit); color:var(--oro); overflow-wrap:anywhere}
+.tar-cuerpo{padding:16px 18px 18px}
+.tar-tag{margin:0; font:800 14px/1.3 var(--f-cartel); letter-spacing:.12em; text-transform:uppercase; color:var(--oro)}
+.tar h3{margin:6px 0 4px; font:400 24px/1.18 var(--f-tit); color:var(--arena)}
+.tar-texto{margin:0; color:var(--niebla); font-size:15px}
+.tar-fuente{margin:8px 0 0; color:var(--niebla); font-size:13px}
+@media (prefers-reduced-motion:reduce){ .tar,.tar.vuelve{transition:opacity .2s ease !important; rotate:none !important} }
+
+/* ================= decoracion-parallax (M15) ================= */
+.deco{position:absolute; inset:0; z-index:0; overflow:hidden; pointer-events:none}
+.palabra-fondo{position:absolute; left:0; font:400 clamp(90px,15vw,230px)/.9 var(--f-tit); white-space:nowrap; user-select:none}
+.palabra-fondo::before{content:attr(data-palabra); color:transparent; -webkit-text-stroke:1.5px rgba(197,154,88,.14)}
+.sol-p{position:absolute; display:block; width:var(--w,14px); aspect-ratio:1}          /* el punto del sol del roundel (sustituye al rayo) */
+.sol-p i{display:block; width:100%; height:100%; border-radius:50%; background:var(--oro); opacity:.4;
+  animation:chispa var(--t,6s) steps(1,end) infinite var(--dl,0s), flota-r calc(var(--t,6s) * .8) var(--ease-in-out) infinite alternate}
+@keyframes chispa{0%,80%{opacity:.4} 82%{opacity:.08} 84%{opacity:.5} 86%{opacity:.12} 88%,100%{opacity:.4}}
+@keyframes flota-r{from{translate:0 -6px} to{translate:0 8px}}
+.js .mov:not(.en-pantalla) *{animation-play-state:paused !important}
+@media (prefers-reduced-motion:reduce){ .sol-p i{animation:none} }
+
+/* ================= fondo-hojas-vivo (M82) v3 + baldosa propia «rayas del cielo» (v13, ver la librería) ================= */
+.fondo-vivo{ --fv-color:var(--oro); --fv-papel:.05; --fv-baldosa:160px; position:absolute; inset:0; z-index:0; overflow:hidden; pointer-events:none }
+.fv-papel{ position:absolute; inset:-80px 0; background:var(--fv-color); opacity:var(--fv-papel);
+  -webkit-mask:var(--fv-baldosa-img) var(--fv-desfase, 0 0) / var(--fv-baldosa) calc(var(--fv-baldosa) * .3) repeat;
+  mask:var(--fv-baldosa-img) var(--fv-desfase, 0 0) / var(--fv-baldosa) calc(var(--fv-baldosa) * .3) repeat }
+.fv-b-rayas{ --fv-baldosa-img:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='48' viewBox='0 0 160 48'%3E%3Cpath d='M0 3h112v3H0zM126 3h34v3h-34zM0 13h42v2H0zM54 13h106v2H54zM0 22h160v4H0zM0 33h88v2H0zM98 33h62v2H98zM0 41h24v5H0zM36 41h124v5H36z'/%3E%3C/svg%3E") }
+.fv-sol-rayas{ position:absolute; aspect-ratio:1; background:var(--fv-color, var(--oro)); opacity:var(--fv-sol, .5); pointer-events:none;
+  -webkit-mask:var(--fv-baldosa-img) 0 0 / 160px 48px repeat, radial-gradient(circle closest-side, #000 98%, transparent 100%);
+  -webkit-mask-composite:source-in;
+  mask:var(--fv-baldosa-img) 0 0 / 160px 48px repeat, radial-gradient(circle closest-side, #000 98%, transparent 100%);
+  mask-composite:intersect }
+.fv-banda.fv-b-olas{ display:block; height:var(--fv-olas-alto, 26px); background:var(--fv-color, var(--agua)); opacity:var(--fv-papel, .9); pointer-events:none;
+  --fv-olas-img:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='26' viewBox='0 0 96 26'%3E%3Cg fill='none' stroke='%23000' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='M-2 7C10 2 22 2 34 7S58 12 70 7S86 2 98 7'/%3E%3Cpath d='M-2 19C10 14 22 14 34 19S58 24 70 19S86 14 98 19' opacity='.6'/%3E%3C/g%3E%3C/svg%3E");
+  -webkit-mask:var(--fv-olas-img) 0 0 / 96px 26px repeat-x; mask:var(--fv-olas-img) 0 0 / 96px 26px repeat-x }
+
+/* ================= brochazo-marca (M04): subrayado «ola con rizo» (variante nueva, ver la librería) ================= */
+.subr{position:relative; display:inline-block; isolation:isolate; white-space:nowrap}
+.subr svg{position:absolute; left:-.04em; right:-.04em; bottom:-.2em; width:calc(100% + .08em); height:.32em; z-index:-1; overflow:visible; color:var(--agua)}
+.js .subr svg{clip-path:inset(0 100% 0 0)}
+.js .pintada .subr svg{clip-path:inset(0 -2% 0 0); transition:clip-path .45s var(--ease-out) .25s}
+@media (prefers-reduced-motion:reduce){ .js .subr svg{clip-path:none !important; transition:none !important} }
+
+/* ================= objetos-cafeteria (M105): escrito a tiza ================= */
+.tiza{color:var(--tiza-blanca); -webkit-mask:url(../img/tex-tiza.webp) 0 0/320px; mask:url(../img/tex-tiza.webp) 0 0/320px}
+html.sin-mascara .tiza{-webkit-mask:none; mask:none}
+
+/* ================= interacciones-cursor (M30) v3 ================= */
+.btn{position:relative; overflow:hidden}
+.btn::after{content:""; position:absolute; inset:0; background:linear-gradient(110deg, transparent 30%, rgba(255,255,255,.38) 50%, transparent 70%); translate:-120% 0; pointer-events:none}
+.grupo .item{transition:opacity .2s var(--ease-out)}
+details.faq{position:relative; isolation:isolate; border-bottom:1px solid rgba(243,235,221,.14)}
+details.faq::before{content:""; position:absolute; inset:0 -16px; z-index:-1; background:radial-gradient(380px circle at var(--gx,50%) var(--gy,50%), rgba(197,154,88,.1), transparent 65%); opacity:0; transition:opacity .2s var(--ease-out)}
+details.faq::after{content:""; position:absolute; left:-16px; top:18px; bottom:18px; width:3px; background:var(--oro); scale:1 0; transition:scale .25s var(--ease-out)}
+details.faq[open]::after{scale:1 1}
+.faq summary{list-style:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:20px; padding:22px 0; font-weight:700; font-size:19px; transition:translate .2s var(--ease-out), color .2s var(--ease-out)}
+.faq summary::-webkit-details-marker{display:none}
+.faq[open] summary{color:var(--oro)}
+.signo{flex-shrink:0; width:30px; height:30px; position:relative; background:var(--hondo-2); border-radius:50%; transition:background-color .2s var(--ease-out), rotate .25s var(--ease-out)}
+.signo::before,.signo::after{content:""; position:absolute; top:50%; left:50%; background:var(--oro); translate:-50% -50%; transition:rotate .2s var(--ease-out), opacity .2s var(--ease-out)}
+.signo::before{width:13px; height:2px} .signo::after{width:2px; height:13px}
+.faq[open] .signo{background:var(--oro)} .faq[open] .signo::before{background:var(--noche)} .faq[open] .signo::after{rotate:90deg; opacity:0}
+.faq .resp{padding:0 0 22px; color:var(--niebla)}
+.faq .resp p{margin:0; max-width:60ch}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover::after{translate:120% 0; transition:translate .45s var(--ease-out)}
+  .grupo:hover .item:not(:hover){opacity:.55}
+  details.faq:hover::before{opacity:1}
+  .faq summary:hover{translate:6px 0}
+  .faq summary:hover .signo{background:var(--oro)}
+  details.faq:not([open]) > summary:hover .signo{rotate:90deg}
+  .faq summary:hover .signo::before, .faq summary:hover .signo::after{background:var(--noche)}
+}
+@media (prefers-reduced-motion:reduce){ .btn::after{display:none} .faq summary{transition:none !important; translate:none !important} }
+
+/* ================= cabecera-inteligente (M18) ================= */
+.centinela{height:1px; margin-bottom:-1px}
+.cabecera{position:sticky; top:0; z-index:var(--z-cabecera); container:cabecera / scroll-state}
+.barra{display:flex; align-items:center; justify-content:space-between; gap:20px; padding:12px clamp(16px,3vw,32px); background:transparent;
+  transition:background-color .25s var(--ease-out), box-shadow .25s var(--ease-out), translate .25s var(--ease-out)}
+@container cabecera scroll-state(stuck: top){ .barra{background:rgba(11,20,24,.95); box-shadow:0 1px 0 rgba(197,154,88,.25), 0 10px 30px rgba(0,0,0,.35)} }
+.pegada .barra{background:rgba(11,20,24,.95); box-shadow:0 1px 0 rgba(197,154,88,.25), 0 10px 30px rgba(0,0,0,.35)}
+.oculta .barra{translate:0 -100%}
+.cabecera:focus-within .barra{translate:0 0}
+@media (prefers-reduced-motion:reduce){ .barra{transition:background-color .2s ease, box-shadow .2s ease} }
+
+/* ================= resaltado-deslizante (M53) v3: el punto del sol bajo el enlace activo ================= */
+.rd-punto{position:relative; display:flex; flex-wrap:wrap; gap:22px; padding:6px 0 12px}
+.rd-punto a{color:var(--niebla); font:700 15px/1.2 var(--f-texto); letter-spacing:.06em; text-decoration:none; transition:color .16s var(--ease-out)}
+.rd-punto a.activo{color:var(--arena)}
+.rd-punto a:focus-visible{outline:2px solid var(--arena); outline-offset:4px}
+.rd-pto{position:absolute; left:0; bottom:0; width:8px; height:8px; border-radius:50%; pointer-events:none; opacity:0; background:var(--oro);
+  transition:translate .28s var(--ease-out), opacity .2s var(--ease-out)}
+.rd-pto.listo{opacity:1}
+@media (hover:hover) and (pointer:fine){ .rd-punto a:hover{color:var(--arena)} }
+@media (prefers-reduced-motion:reduce){ .rd-pto{transition:opacity .2s ease} }
+
+/* ================= menu-escalonado (M52) ================= */
+html:has(#menu:popover-open){overflow:hidden}
+.hamb{position:relative; width:48px; height:48px; border:none; cursor:pointer; background:transparent; color:var(--arena); border-radius:50%; box-shadow:inset 0 0 0 1px rgba(243,235,221,.3); transition:background-color .16s var(--ease-out), transform .12s var(--ease-out)}
+.hamb:active{transform:scale(.97)}
+.hamb:focus-visible{outline:2px solid var(--arena); outline-offset:3px}
+.hamb i{position:absolute; left:14px; right:14px; height:2px; background:currentColor; transition:translate .3s var(--ease-out), rotate .3s var(--ease-out)}
+.hamb i:nth-child(1){top:19px} .hamb i:nth-child(2){top:27px}
+.hamb[aria-expanded="true"] i:nth-child(1){translate:0 4px; rotate:45deg}
+.hamb[aria-expanded="true"] i:nth-child(2){translate:0 -4px; rotate:-45deg}
+#menu{--cx:calc(100% - 44px); --cy:38px; position:fixed; inset:0; width:auto; height:auto; max-width:none; max-height:none; margin:0; border:none; padding:100px 28px 40px;
+  background:var(--noche); color:var(--arena); overflow:auto;
+  clip-path:circle(150% at var(--cx) var(--cy));
+  transition:clip-path .45s var(--ease-drawer), display .45s allow-discrete, overlay .45s allow-discrete}
+#menu:not(:popover-open){clip-path:circle(0 at var(--cx) var(--cy))}
+@starting-style{ #menu:popover-open{clip-path:circle(0 at var(--cx) var(--cy))} }
+#menu ul{list-style:none; margin:0; padding:0}
+#menu li{opacity:1; translate:0 0; transition:opacity .3s var(--ease-out), translate .3s var(--ease-out); transition-delay:calc(120ms + var(--i) * 60ms)}
+#menu:not(:popover-open) li{opacity:0; translate:0 30px; transition-delay:0s}
+@starting-style{ #menu:popover-open li{opacity:0; translate:0 30px} }
+#menu ul a{display:block; padding:6px 0; color:var(--arena); text-decoration:none; font:400 clamp(32px,9vw,52px)/1.18 var(--f-tit)}
+#menu a:focus-visible{outline:2px solid var(--arena); outline-offset:4px}
+.cerrar{position:absolute; top:14px; right:20px; width:48px; height:48px; border:none; cursor:pointer; background:var(--oro); color:var(--noche); border-radius:50%; font:700 26px/1 var(--f-texto)}
+.cerrar:focus-visible{outline:2px solid var(--arena); outline-offset:3px}
+@media (hover:hover) and (pointer:fine){ .hamb:hover{background:rgba(243,235,221,.08)} #menu ul a:hover{color:var(--oro)} }
+@media (prefers-reduced-motion:reduce){
+  #menu{clip-path:none !important; opacity:1; transition:opacity .2s ease, display .2s allow-discrete, overlay .2s allow-discrete}
+  #menu:not(:popover-open){opacity:0}
+  @starting-style{ #menu:popover-open{opacity:0} }
+  #menu li{transition:none; translate:none !important; opacity:1 !important}
+  .hamb i{transition:none}
+}
+
+/* ================= botones-fisicos (M60) v2: el ▶ que avanza ================= */
+.btn-avanza::before{content:""; order:2; flex:none; width:9px; height:11px; margin-left:2px; background:currentColor; clip-path:polygon(8% 0,100% 50%,8% 100%); transition:translate .18s var(--ease-out)}
+@media (hover:hover) and (pointer:fine){ .btn-avanza:hover::before{translate:4px 0} }
+.btn-avanza:focus-visible::before{translate:4px 0}
+@media (prefers-reduced-motion:reduce){ .btn-avanza::before{transition:none; translate:none !important} }
+
+/* ================= scroll-nativo (M10) v2 ================= */
+.sd-parallax{view-timeline:--sd-parallax}
+@supports (animation-timeline: view()){
+  @media (prefers-reduced-motion: no-preference){
+    .sd-aparece{animation:sd-aparece linear both; animation-timeline:view(); animation-range:entry 0% cover 30%}
+    .sd-parallax img{animation:sd-parallax linear both; animation-timeline:--sd-parallax; animation-range:cover 0% cover 100%}
+  }
+}
+@keyframes sd-aparece{ from{opacity:0; translate:0 40px} to{opacity:1; translate:0 0} }
+@keyframes sd-parallax{ from{transform:translateY(calc(var(--sd-px, 4%) * -1)) scale(var(--sd-escala, 1.1))} to{transform:translateY(var(--sd-px, 4%)) scale(var(--sd-escala, 1.1))} }
+
+/* ================= ubicacion-mapa v3 ================= */
+.mapa{position:relative; min-height:440px; border-radius:4px; overflow:hidden; background:var(--hondo)}
+.mapa iframe{position:absolute; inset:0; width:100%; height:100%; border:0; filter:invert(.92) hue-rotate(180deg) saturate(.85) brightness(.95) contrast(.92)}
+.fachada-mapa{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; text-align:center; padding:24px;
+  background-color:var(--hondo); background-image:linear-gradient(rgba(197,154,88,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(197,154,88,.08) 1px, transparent 1px); background-size:28px 28px; overflow:hidden}
+.fachada-mapa::before, .fachada-mapa::after{content:""; position:absolute; left:-20%; right:-20%; height:18px; background:rgba(255,255,255,.06); pointer-events:none}
+.fachada-mapa::before{top:38%; rotate:-14deg} .fachada-mapa::after{top:64%; rotate:9deg}
+.pin{position:relative; z-index:1; width:44px; height:44px; border-radius:50% 50% 50% 0; background:var(--oro); rotate:-45deg; box-shadow:0 0 0 8px rgba(197,154,88,.15)}
+.pin::after{content:""; position:absolute; width:16px; height:16px; background:var(--noche); border-radius:50%; top:50%; left:50%; translate:-50% -50%}
+@media (prefers-reduced-motion:no-preference){ .pin{animation:pin-flota 3.2s var(--ease-in-out) infinite alternate} }
+@keyframes pin-flota{ from{translate:0 -4px} to{translate:0 4px} }
+.fachada-mapa .btn{position:relative; z-index:1}
+.fachada-mapa p{position:relative; z-index:1; margin:0; max-width:26em; color:var(--niebla); font-size:14px; line-height:1.45}
+@media (max-width:700px){ .mapa{min-height:340px} }
+
+/* ================= barra-pegajosa-movil v2 ================= */
+.barra-movil{position:fixed; left:0; right:0; bottom:0; z-index:var(--z-barra); display:flex; gap:10px; padding:10px 12px max(10px, env(safe-area-inset-bottom));
+  background:rgba(11,20,24,.96); box-shadow:0 -1px 0 rgba(197,154,88,.25); translate:0 110%; transition:translate .3s var(--ease-out)}
+.barra-movil.visible{translate:0 0}
+.barra-movil.tapada{display:none}
+.barra-movil .btn{flex:1; justify-content:center}
+@media (min-width:860px){ .barra-movil{display:none} }
+@media (prefers-reduced-motion:reduce){ .barra-movil{transition:opacity .15s ease} }
