@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Página no encontrada | Degaldo Designs</title>
+<meta name="robots" content="noindex">
+<link rel="preload" href="/fonts/anybody.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" type="image/png" sizes="32x32" href="/img/marca/favicon-32.png">
+<style>
+  /* Misma marca que la portada (v5 «El carrete»): tinta, blanco frío y un solo azul */
+  @font-face{font-family:Anybody;src:url(/fonts/anybody.woff2) format('woff2');font-weight:100 900;font-stretch:50% 150%;font-display:swap}
+  @font-face{font-family:'JetBrains Mono';src:url(/fonts/jetbrains-mono.woff2) format('woff2');font-weight:400 800;font-display:swap}
+  :root{--tinta:#0b0d12;--blanco:#eef0f3;--gris:#9aa1b2;--azul:#3c4bff;--linea:rgba(238,240,243,.16);--ease-out:cubic-bezier(.23,1,.32,1)}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--tinta);color:var(--blanco);font:400 1.05rem/1.6 Anybody,'Arial Black',sans-serif;-webkit-font-smoothing:antialiased}
+  main{max-width:72ch;margin:0 auto;padding:clamp(40px,8vw,100px) clamp(16px,4vw,40px)}
+  h1{margin:0 0 10px;font:900 clamp(2.4rem,8vw,5.2rem)/.86 Anybody,sans-serif;font-stretch:135%;text-transform:uppercase;letter-spacing:-.02em;text-wrap:balance}
+  h2{margin:44px 0 8px;font:800 1.2rem/1.1 Anybody,sans-serif;font-stretch:118%;text-transform:uppercase}
+  p{margin:0 0 14px;color:#c9cdd6;text-wrap:pretty}
+  .mono{font:700 .78rem 'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.02em;color:var(--gris)}
+  a{color:var(--blanco);text-underline-offset:4px}
+  .bt{display:inline-flex;align-items:center;min-height:48px;margin-top:36px;padding:0 20px;background:var(--blanco);color:var(--tinta);border:2px solid var(--tinta);font:700 .82rem 'JetBrains Mono',monospace;text-transform:uppercase;text-decoration:none;box-shadow:5px 5px 0 var(--azul);transition:translate .14s var(--ease-out),box-shadow .14s var(--ease-out)}
+  .bt:active{translate:5px 5px;box-shadow:0 0 0 var(--azul)}
+  @media (hover:hover) and (pointer:fine){.bt:hover{translate:-2px -2px;box-shadow:7px 7px 0 var(--azul)}}
+  :focus-visible{outline:3px solid var(--azul);outline-offset:3px}
+</style>
+</head>
+<body>
+<main>
+  <p class="mono">Error 404</p>
+  <h1>Esta página no existe</h1>
+  <p>Puede que el enlace esté roto o que la página se haya movido. Las webs del portfolio están todas en la portada.</p>
+  <a class="bt" href="/">Volver al portfolio</a>
+</main>
+</body>
+</html>

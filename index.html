@@ -3,30 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Degaldo Designs | Webs para bares, cafeterías y restaurantes</title>
-  <meta name="description" content="Webs hechas a mano para bares, cafeterías, restaurantes y negocios locales. Te la enseño terminada antes de pagar. Desde 200 €.">
+  <title>Degaldo Designs | Portfolio de diseño web en Pinto (Madrid)</title>
+  <meta name="description" content="Portfolio de Degaldo Designs: webs a medida para bares, restaurantes, gimnasios y negocios de barrio, cada una con una idea sacada de su negocio.">
   <link rel="canonical" href="https://degaldodesigns.es/">
-  <meta name="theme-color" content="#090b13">
+  <meta name="theme-color" content="#0b0d12">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="Degaldo Designs">
-  <meta property="og:title" content="Degaldo Designs | Webs para bares, cafeterías y restaurantes">
-  <meta property="og:description" content="Una exposición de webs hechas a mano para negocios locales. Te enseño la tuya terminada antes de que pagues nada.">
+  <meta property="og:title" content="Degaldo Designs | Portfolio de diseño web">
+  <meta property="og:description" content="Once webs para negocios de barrio, en un carrete que se recorre con el scroll.">
   <meta property="og:url" content="https://degaldodesigns.es/">
   <meta property="og:image" content="https://degaldodesigns.es/img/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Logo de Degaldo Designs junto a tres webs hechas para bares y restaurantes, vistas en el móvil">
+  <meta property="og:image:alt" content="Portada del portfolio de Degaldo Designs: las palabras DEGALDO DESIGNS con un anillo de capturas de webs en medio">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Degaldo Designs | Webs para negocios locales">
-  <meta name="twitter:description" content="Te enseño tu web terminada antes de que pagues nada.">
+  <meta name="twitter:title" content="Degaldo Designs | Portfolio de diseño web">
+  <meta name="twitter:description" content="Once webs para negocios de barrio, en un carrete que se recorre con el scroll.">
   <meta name="twitter:image" content="https://degaldodesigns.es/img/og-image.jpg">
   <link rel="icon" type="image/png" sizes="32x32" href="img/marca/favicon-32.png">
   <link rel="apple-touch-icon" href="img/marca/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="img/sala/xavi-pinchos.webp">
+  <link rel="preload" href="fonts/anybody.woff2" as="font" type="font/woff2" crossorigin>
   <script>document.documentElement.classList.add('js')</script>
   <script type="application/ld+json">
   {
@@ -34,570 +31,295 @@
     "@type": "ProfessionalService",
     "name": "Degaldo Designs",
     "founder": {"@type": "Person", "name": "Diego De Galdo"},
-    "description": "Diseño web a medida para bares, cafeterías, restaurantes y negocios locales.",
+    "description": "Diseño y programación de webs a medida para bares, restaurantes, gimnasios, clínicas y negocios locales.",
     "url": "https://degaldodesigns.es/",
     "logo": "https://degaldodesigns.es/img/marca/icon-512.png",
     "image": "https://degaldodesigns.es/img/og-image.jpg",
     "email": "Diegospk291@gmail.com",
     "telephone": "+34722358950",
-    "priceRange": "Desde 200 €",
     "areaServed": "ES",
     "address": {"@type": "PostalAddress", "addressLocality": "Pinto", "addressRegion": "Madrid", "addressCountry": "ES"}
   }
   </script>
   <style>
-    /* Tres salas: una portada con el trabajo fundido de fondo, una exposición horizontal donde cada cliente tiñe la pared, y una taquilla con los precios impresos en entradas de papel. */
-    @property --ang{syntax:'<angle>';inherits:false;initial-value:0deg}
+    /* Portfolio v5 «El carrete»: brutalista y ruidoso. Tinta, blanco frío y un solo azul (el índigo de la DD).
+       Guion de movimiento: Proyecto Webs/03-Assets-Comunes/marca-diego/portfolio/guion-movimiento.md */
+    @font-face{font-family:Anybody;src:url(fonts/anybody.woff2) format('woff2');font-weight:100 900;font-stretch:50% 150%;font-display:swap}
+    @font-face{font-family:'JetBrains Mono';src:url(fonts/jetbrains-mono.woff2) format('woff2');font-weight:400 800;font-display:swap}
     :root{
-      --noche:#090b13;
-      --noche-2:#121626;
-      --borde:#252d45;
-      --texto:#edf0f7;
-      --texto-2:#a4adc4;
-      --indigo:#6e6bf6;
-      --cian:#45d2f2;
-      --vivo:#5fd38d;
-      --papel:#efe8da;
-      --tinta:#16141b;
-      --tinta-2:#5b5563;
-      --ease-out:cubic-bezier(.23,1,.32,1);
-      --ease-in-out:cubic-bezier(.77,0,.175,1);
-      --f-display:"Sora",system-ui,sans-serif;
-      --f-texto:"Figtree",system-ui,sans-serif;
-      --z-nav:20;
-      --z-ui:5;
-      color-scheme:dark;
+      --tinta:#0b0d12; --tinta-2:#141824; --blanco:#eef0f3; --gris:#9aa1b2; --gris-osc:#474d5c; --azul:#3c4bff;
+      --linea:rgba(238,240,243,.16); --linea-osc:rgba(11,13,18,.18);
+      --display:Anybody,'Arial Black',Impact,sans-serif; --mono:'JetBrains Mono',ui-monospace,Consolas,monospace;
+      --ease-out:cubic-bezier(.23,1,.32,1); --ease-in-out:cubic-bezier(.77,0,.175,1);
+      --gut:clamp(16px,3vw,40px);
+      --z-escena:2; --z-cab:20; --z-foto:25; --z-caso:30; --z-grano:40; --z-salto:50;
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{-webkit-text-size-adjust:100%;overflow-x:clip}
-    body{background:var(--noche);color:var(--texto);font-family:var(--f-texto);font-size:17px;line-height:1.6;overflow-x:clip}
+    *,*::before,*::after{box-sizing:border-box}
+    html{scrollbar-gutter:stable;-webkit-text-size-adjust:100%}
+    html.en-caso{overflow:hidden}
+    body{margin:0;background:var(--tinta);color:var(--blanco);font:400 1rem/1.55 var(--display);font-stretch:100%;-webkit-font-smoothing:antialiased}
     img{display:block;max-width:100%;height:auto}
     a{color:inherit}
-    button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
-    :focus-visible{outline:2px solid var(--cian);outline-offset:3px;border-radius:6px}
-    h1,h2,h3,h4{font-family:var(--f-display);text-wrap:balance}
-    p{text-wrap:pretty}
-    .wrap{max-width:1240px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
-    .salto{position:fixed;left:12px;top:12px;z-index:50;background:var(--texto);color:var(--noche);padding:10px 16px;border-radius:8px;font-weight:600;text-decoration:none;translate:0 -80px;transition:translate .16s var(--ease-out)}
-    .salto:focus{translate:0 0}
+    button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+    :focus-visible{outline:3px solid var(--azul);outline-offset:3px}
+    .lector{position:absolute!important;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+    .salto{position:fixed;left:12px;top:-60px;z-index:var(--z-salto);background:var(--blanco);color:var(--tinta);padding:10px 14px;font:700 .85rem var(--mono);transition:translate .2s var(--ease-out)}
+    .salto:focus{translate:0 72px}
+    .mono{font-family:var(--mono);font-size:.78rem;letter-spacing:.02em;text-transform:uppercase}
 
-    /* Botones: imán (translate) y brillo al pasar */
-    .btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;font-weight:600;font-size:16px;line-height:20px;text-decoration:none;transition:background-color .16s var(--ease-out),color .16s var(--ease-out),transform .12s var(--ease-out),box-shadow .2s var(--ease-out),translate .25s var(--ease-out)}
-    .btn::after{content:"";position:absolute;top:0;right:0;bottom:0;left:0;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.45) 50%,transparent 70%);translate:-120% 0;pointer-events:none}
-    .btn svg{width:20px;height:20px;flex:none}
-    .btn:active{transform:scale(.97)}
-    .btn-luz{background:var(--texto);color:var(--noche)}
-    .btn-cian{background:var(--cian);color:#061018}
-    .btn-linea{color:var(--texto);box-shadow:inset 0 0 0 1.5px rgba(237,240,247,.35)}
-    .btn-pq{min-height:42px;padding:0 18px;font-size:15px}
+    /* Grano de fotocopia encima de todo (bucle ambiental: se para con movimiento reducido) */
+    body::after{content:"";position:fixed;inset:-60px;z-index:var(--z-grano);pointer-events:none;opacity:.09;
+      background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 1.6 -.3'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23g)'/%3E%3C/svg%3E");
+      animation:grano .9s steps(5) infinite}
+    @keyframes grano{0%{translate:0 0}20%{translate:-30px 18px}40%{translate:22px -26px}60%{translate:-14px -36px}80%{translate:34px 10px}100%{translate:0 0}}
 
-    /* Cabecera */
-    .cab{position:fixed;top:0;left:0;right:0;z-index:var(--z-nav);padding-top:env(safe-area-inset-top,0px);transition:background-color .3s var(--ease-out),translate .35s var(--ease-out)}
-    .cab.solida{background:rgba(9,11,19,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
-    .cab.oculta{translate:0 -110%}
-    .cab .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:74px;max-width:none;padding-left:max(28px,env(safe-area-inset-left,0px));padding-right:max(28px,env(safe-area-inset-right,0px))}
-    .marca{display:flex;align-items:center;gap:12px;text-decoration:none}
-    .marca img{width:36px;height:auto}
-    .marca span{font-family:var(--f-display);font-weight:600;font-size:13px;letter-spacing:.26em;text-transform:uppercase;line-height:1.2}
-    .marca small{display:block;font-size:9.5px;letter-spacing:.5em;color:var(--texto-2);font-weight:400}
-    .nav{display:flex;align-items:center;gap:30px}
-    .nav a:not(.btn){position:relative;font-weight:500;font-size:15px;text-decoration:none;color:var(--texto-2);transition:color .16s var(--ease-out)}
-    .nav a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1.5px;background:currentColor;scale:0 1;transform-origin:right;transition:scale .3s var(--ease-out)}
-
-    /* ===== 1. Portada ===== */
-    .portada{position:relative;min-height:100vh;min-height:100svh;display:grid;place-items:center;overflow:hidden;text-align:center;padding:120px 24px 140px}
-    .fondo{position:absolute;top:-4%;right:-4%;bottom:-4%;left:-4%;inset:-4%;z-index:0;pointer-events:none}
-    .fondo-in{position:absolute;top:0;right:0;bottom:0;left:0;inset:0}
-    .fondo .capa{position:absolute;top:0;right:0;bottom:0;left:0;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;opacity:0;filter:blur(9px) saturate(1.1) brightness(.5);transition:opacity 1.6s var(--ease-in-out)}
-    .fondo .capa.activa{opacity:1}
-    .fondo .linterna{position:absolute;top:0;right:0;bottom:0;left:0;inset:0;opacity:0;transition:opacity .4s var(--ease-out);-webkit-mask:radial-gradient(circle 210px at var(--mx,50%) var(--my,50%),#000 30%,transparent 100%);mask:radial-gradient(circle 210px at var(--mx,50%) var(--my,50%),#000 30%,transparent 100%)}
-    .fondo .linterna img{filter:brightness(.8)}
-    .fondo .linterna img{position:absolute;top:0;right:0;bottom:0;left:0;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
-    .portada.con-raton .fondo .linterna{opacity:1}
-    .fondo .velo{position:absolute;top:0;right:0;bottom:0;left:0;inset:0;background:radial-gradient(ellipse 58% 52% at 50% 50%,rgba(9,11,19,.72) 0%,rgba(9,11,19,.4) 50%,transparent 78%),linear-gradient(to bottom,rgba(9,11,19,.85) 0%,transparent 22%,transparent 62%,var(--noche) 100%),radial-gradient(ellipse 110% 80% at 50% 50%,transparent 45%,var(--noche) 100%)}
-    .fondo .tinte{position:absolute;top:0;right:0;bottom:0;left:0;inset:0;background:radial-gradient(ellipse 45% 40% at 50% 55%,var(--tono,#6e6bf6),transparent 70%);opacity:.22;mix-blend-mode:screen}
-    .fondo .grano{position:absolute;top:0;right:0;bottom:0;left:0;inset:0;opacity:.08;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-    .portada-txt{position:relative;z-index:2;max-width:1100px;will-change:transform,opacity}
-    .firma{display:inline-flex;align-items:center;gap:10px;font-size:15px;color:var(--texto-2);font-weight:500}
-    .firma img{width:22px;height:auto}
-    .portada h1{font-weight:800;font-size:clamp(44px,8.2vw,128px);line-height:1.02;letter-spacing:-.045em;margin-top:22px}
-    .portada h1 .linea{display:block;overflow:hidden;padding:0 .06em .06em}
-    .portada h1 .pal{display:inline-block}
-    .rueda{position:relative;display:grid;justify-items:center;height:1.14em;overflow:hidden;padding-bottom:.06em}
-    .rueda span{grid-area:1/1;color:var(--tono,#45d2f2);white-space:nowrap;transition:translate .7s var(--ease-out),opacity .55s var(--ease-out),filter .55s var(--ease-out),color .8s var(--ease-out)}
-    .rueda span:not(.ahora){translate:0 70%;opacity:0;filter:blur(10px)}
-    .rueda span.sale{translate:0 -70%}
-    .portada .sub{margin:26px auto 0;max-width:44ch;font-size:clamp(17px,1.5vw,20px);color:#c9cfdf}
-    .portada .sub strong{color:var(--texto);font-weight:600}
-    .portada .acciones{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:38px}
-    .pie-portada{position:absolute;z-index:2;left:0;right:0;bottom:0;display:flex;align-items:flex-end;justify-content:space-between;gap:20px;padding:0 max(28px,env(safe-area-inset-right,0px)) 30px max(28px,env(safe-area-inset-left,0px));font-size:14px;color:var(--texto-2);pointer-events:none}
-    .de-fondo b{color:var(--texto);font-weight:600}
-    .bajar{position:absolute;z-index:2;left:50%;bottom:28px;translate:-50% 0;display:flex;flex-direction:column;align-items:center;gap:10px;font-size:13px;color:var(--texto-2);text-decoration:none}
-    .bajar i{position:relative;width:1px;height:46px;background:rgba(237,240,247,.18);overflow:hidden}
-    .bajar i::after{content:"";position:absolute;left:0;right:0;top:0;height:40%;background:var(--texto);animation:gota 2.2s var(--ease-in-out) infinite}
-    @keyframes gota{from{translate:0 -100%}to{translate:0 260%}}
-    .sello{width:104px;height:104px;position:relative}
-    .sello svg{width:100%;height:100%;animation:gira 26s linear infinite}
-    .sello text{font-family:var(--f-display);font-size:10.4px;font-weight:600;letter-spacing:.18em;fill:var(--texto-2);text-transform:uppercase}
-    .sello img{position:absolute;top:0;right:0;bottom:0;left:0;inset:0;margin:auto;width:34px;height:auto}
-    @keyframes gira{to{rotate:360deg}}
-    /* Entrada del titular por palabras */
-    .js .portada h1 .pal{translate:0 105%}
-    .js .portada .firma,.js .portada .sub,.js .portada .acciones,.js .rueda,.js .pie-portada,.js .bajar{opacity:0}
-    .js .portada.lista h1 .pal{translate:0 0;transition:translate .9s var(--ease-out) calc(var(--i)*70ms + 150ms)}
-    .js .portada.lista .firma{opacity:1;transition:opacity .8s var(--ease-out) .05s}
-    .js .portada.lista .rueda{opacity:1;transition:opacity .8s var(--ease-out) .6s}
-    .js .portada.lista .sub{opacity:1;transition:opacity .9s var(--ease-out) .8s}
-    .js .portada.lista .acciones{opacity:1;transition:opacity .9s var(--ease-out) .95s}
-    .js .portada.lista .pie-portada,.js .portada.lista .bajar{opacity:1;transition:opacity 1s var(--ease-out) 1.2s}
-    .js .fondo{scale:1.12;opacity:0;transition:scale 2.2s var(--ease-out),opacity 1.4s var(--ease-out)}
-    .js .portada.lista .fondo{scale:1;opacity:1}
-
-    /* ===== 2. Exposición: la red ===== */
-    .red{position:fixed;top:0;right:0;bottom:0;left:0;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;visibility:hidden}
-    .red.visible{visibility:visible}
-    .estela{position:absolute;top:0;right:0;bottom:0;left:0;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
-    .expo{position:relative;z-index:3}
-    .intro{text-align:center;padding:110px 24px 40px}
-    .intro h2{font-weight:800;font-size:clamp(40px,6vw,92px);letter-spacing:-.045em;line-height:1}
-    .intro p{margin:18px auto 0;color:var(--texto-2);max-width:46ch;font-size:18px}
-    .solo-red{display:none}
-    .cerebro-fijo{display:block;width:min(620px,92%);height:auto;margin:36px auto 0}
-    .obras{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:84px 56px;max-width:1240px;margin:0 auto;padding:48px max(24px,env(safe-area-inset-right,0px)) 40px max(24px,env(safe-area-inset-left,0px))}
-    .obra{--luz:var(--ac);position:relative;display:flex;flex-direction:column;gap:30px;min-width:0}
-    .lienzo{position:relative;min-width:0;margin-right:12%}
-    .marco{position:relative;border-radius:14px;overflow:hidden;background:#05070c;box-shadow:0 0 0 1px rgba(255,255,255,.09),0 50px 100px -40px rgba(0,0,0,.75)}
-    .marco .barra{display:flex;align-items:center;gap:6px;height:28px;padding:0 12px;background:rgba(255,255,255,.07)}
-    .marco .barra i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.2)}
-    .marco img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top}
-    .obra .marco{box-shadow:0 0 0 1px rgba(255,255,255,.1),0 40px 90px -40px rgba(0,0,0,.85)}@supports (color:color-mix(in srgb,red 50%,blue)){.obra .marco{box-shadow:0 0 0 1px rgba(255,255,255,.1),0 40px 90px -40px rgba(0,0,0,.85),0 0 90px -30px color-mix(in srgb,var(--luz) 55%,transparent)}}
-    .tel{position:absolute;right:-13%;bottom:-14%;width:26%;min-width:84px;aspect-ratio:540/1169;border-radius:22px;padding:5px;background:#05070c;box-shadow:0 0 0 1px rgba(255,255,255,.14),0 24px 60px -18px rgba(0,0,0,.8)}
-    .tel img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:17px}
-    .cartela{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
-    .sala-num{font-family:var(--f-display);font-weight:600;font-size:13.5px;letter-spacing:.04em;color:var(--texto-2);font-variant-numeric:tabular-nums}
-    .sala-num span{color:var(--luz)}
-    .obra h3{font-weight:800;font-size:clamp(42px,4.6vw,76px);line-height:.95;letter-spacing:-.05em;color:var(--luz);margin-top:10px}
-    .obra .lugar{margin-top:12px;font-size:17px}
-    .obra .tecnica{margin-top:4px;color:var(--texto-2);font-size:15.5px;max-width:46ch}
-    .estado{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14.5px;margin-top:14px;color:var(--texto-2)}
-    .punto{width:8px;height:8px;border-radius:50%;background:var(--vivo);box-shadow:0 0 0 3px rgba(95,211,141,.22);flex:none}
-    .obra .acc{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;margin-top:22px}
-    .btn-sala{background:var(--luz);color:#0a0c12}
-    .enlace{display:inline-flex;align-items:center;gap:6px;min-height:44px;font-weight:600;font-size:15px;text-decoration:none;color:var(--texto)}
-    .enlace svg{width:16px;height:16px;transition:translate .25s var(--ease-out)}
-    .conector,.nodos,.final,.expo-ui{display:none}
-
-    /* Con la red: escenario fijo, una web por pantalla de scroll */
-    .con-red .solo-red{display:inline}
-    .con-red .solo-fijo{display:none}
-    .con-red .expo-alto{height:calc(var(--u,10.6) * 100vh)}@supports (height:1svh){.con-red .expo-alto{height:calc(var(--u,10.6) * 100svh)}}
-    .con-red .escenario{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
-    .con-red .intro{position:absolute;left:0;right:0;bottom:0;padding:0 24px clamp(48px,9vh,100px);padding:0 24px clamp(48px,9svh,100px);transition:opacity .7s var(--ease-out),translate .7s var(--ease-out)}
-    .con-red .intro p{text-shadow:0 2px 18px rgba(9,11,19,.9)}
-    .con-red .escenario:not([data-fase="intro"]) .intro{opacity:0;translate:0 -24px;pointer-events:none}
-    .con-red .obras{position:absolute;top:0;right:0;bottom:0;left:0;inset:0;display:block;max-width:none;margin:0;padding:0;pointer-events:none}
-    .con-red .obra{position:absolute;left:max(40px,6vw);top:50%;translate:0 -46%;width:min(500px,36vw);opacity:0;visibility:hidden;filter:blur(10px);scale:.96;transition:opacity .7s var(--ease-out),filter .7s var(--ease-out),scale .8s var(--ease-out),visibility 0s linear .8s}
-    .con-red .obra.activa{opacity:1;visibility:visible;pointer-events:auto;filter:blur(0);scale:1;transition:opacity .5s var(--ease-out),filter .6s var(--ease-out),scale .9s var(--ease-out),visibility 0s}
-    .con-red .obra .marco{clip-path:inset(0 0 0 100% round 14px);transition:clip-path 0s .8s}
-    .con-red .obra.activa .marco{clip-path:inset(0 0 0 0 round 14px);transition:clip-path 1.1s var(--ease-in-out)}
-    .con-red .obra .marco img{scale:1.18;filter:blur(10px) brightness(1.7) saturate(.6);transition:scale 0s .8s,filter 0s .8s}
-    .con-red .obra.activa .marco img{scale:1;filter:none;transition:scale 1.6s var(--ease-out),filter 1.2s var(--ease-out) .15s}
-    .con-red .obra .tel{opacity:0;translate:24px 36px;transition:opacity 0s .8s,translate 0s .8s}
-    .con-red .obra.activa .tel{opacity:1;translate:0 0;transition:opacity .6s var(--ease-out) .55s,translate 1s var(--ease-out) .55s}
-    .con-red .obra .cartela>*{opacity:0;translate:0 14px;filter:blur(6px);transition:opacity 0s .8s,translate 0s .8s,filter 0s .8s}
-    .con-red .obra.activa .cartela>*{opacity:1;translate:0 0;filter:blur(0);transition:opacity .7s var(--ease-out),translate .8s var(--ease-out),filter .7s var(--ease-out);transition-delay:calc(.35s + var(--k,0) * 70ms)}
-    .cartela>:nth-child(2){--k:1}.cartela>:nth-child(3){--k:2}.cartela>:nth-child(4){--k:3}.cartela>:nth-child(5){--k:4}.cartela>:nth-child(6){--k:5}
-    .con-red .conector{display:block;position:absolute;top:0;right:0;bottom:0;left:0;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
-    .conector path{fill:none;stroke:var(--luz,#45d2f2);stroke-width:1.2;stroke-dasharray:1;stroke-dashoffset:1;opacity:.7}
-    .con-red .nodos{display:block;position:absolute;top:0;right:0;bottom:0;left:0;inset:0;pointer-events:none}
-    .nodo{--luz:#45d2f2;position:absolute;left:0;top:0;display:flex;align-items:center;gap:10px;min-height:44px;padding:8px;margin:-22px 0 0 -22px;font-family:var(--f-display);font-weight:600;font-size:14.5px;letter-spacing:-.01em;color:var(--texto);opacity:0;visibility:hidden;transition:opacity .4s var(--ease-out),visibility 0s linear .4s;will-change:transform}
-    .nodo i{position:relative;width:28px;height:28px;flex:none;border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--luz)}
-    .nodo i::after{content:"";position:absolute;top:0;right:0;bottom:0;left:0;inset:0;border-radius:50%;box-shadow:0 0 0 1.5px var(--luz);animation:onda 2.4s var(--ease-out) infinite}
-    @keyframes onda{from{scale:1;opacity:.9}to{scale:2.3;opacity:0}}
-    .nodo span{white-space:nowrap;padding:5px 11px;border-radius:999px;background:rgba(9,11,19,.6);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:none;opacity:0;translate:-6px 0;transition:opacity .4s var(--ease-out),translate .4s var(--ease-out),background-color .2s var(--ease-out)}@supports (color:color-mix(in srgb,red 50%,blue)){.nodo span{box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--luz) 40%,transparent)}}
-    .nodo.izq{flex-direction:row-reverse;translate:calc(44px - 100%) 0}
-    .nodo.izq span{translate:6px 0}
-    .escenario[data-fase="paso"] .nodo.activo{opacity:1;visibility:visible;pointer-events:auto;transition:opacity .6s var(--ease-out),visibility 0s}
-    .escenario[data-fase="paso"] .nodo.activo.llego span{opacity:1;translate:0 0;transition-delay:.1s}
-    .nodo span{color:var(--luz)}
-    /* Tipo de negocio en grande, rodando al cambiar de sala */
-    .tipo-gigante,.mapa,.mapa-lineas{display:none}
-    .con-red .tipo-gigante{display:grid;position:absolute;left:52%;right:0;bottom:clamp(64px,10vh,110px);bottom:clamp(64px,10svh,110px);justify-items:center;pointer-events:none}
-    .tipo-gigante span{grid-area:1/1;font-family:var(--f-display);font-weight:800;font-size:calc(clamp(56px,7.4vw,124px) * var(--f,1));letter-spacing:-.05em;line-height:1.05;white-space:nowrap;color:transparent;-webkit-text-stroke:1.3px var(--luz);opacity:0;translate:0 45%;filter:blur(12px);transition:opacity 1s var(--ease-out),translate 1.1s var(--ease-out),filter 1s var(--ease-out)}
-    .tipo-gigante span.ahora{opacity:.5;translate:0 0;filter:blur(0)}
-    .tipo-gigante span.sale{opacity:0;translate:0 -45%;filter:blur(12px)}
-    /* Mapa mental final */
-    .con-red .mapa-lineas{display:block;position:absolute;top:0;right:0;bottom:0;left:0;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
-    .mapa-lineas path{fill:none;stroke-width:1.3;stroke-dasharray:1;stroke-dashoffset:1;opacity:.7;transition:stroke-dashoffset .3s var(--ease-out)}
-    .escenario[data-fase="final"] .mapa-lineas path{stroke-dashoffset:0;transition:stroke-dashoffset 1.2s var(--ease-in-out) calc(.3s + var(--k,0) * 90ms)}
-    .con-red .mapa{display:block;position:absolute;top:0;right:0;bottom:0;left:0;inset:0;pointer-events:none}
-    .rama{--luz:#45d2f2;position:absolute;left:0;top:0;display:flex;flex-direction:column;align-items:flex-start;gap:3px;padding:10px 6px 10px 18px;translate:0 -50%;text-align:left;opacity:0;visibility:hidden;transition:opacity .35s var(--ease-out),visibility 0s linear .35s;will-change:transform}
-    .rama.izq{align-items:flex-end;text-align:right;translate:-100% -50%;padding:10px 18px 10px 6px}
-    .rama::before{content:"";position:absolute;top:50%;left:-4px;width:8px;height:8px;border-radius:50%;background:var(--luz);translate:0 -50%;box-shadow:0 0 14px var(--luz)}
-    .rama.izq::before{left:auto;right:-4px}
-    .rama b{font-family:var(--f-display);font-weight:800;font-size:clamp(22px,2.3vw,36px);letter-spacing:-.035em;line-height:1;color:var(--luz);text-shadow:none;transition:translate .3s var(--ease-out)}@supports (color:color-mix(in srgb,red 50%,blue)){.rama b{text-shadow:0 0 30px color-mix(in srgb,var(--luz) 40%,transparent)}}
-    .rama span{font-size:14.5px;font-weight:500;color:var(--texto-2);transition:color .2s var(--ease-out)}
-.rama.foco b{text-shadow:0 0 34px var(--luz),0 0 2px var(--luz)}
-    .rama.foco span{color:var(--texto)}
-    .rama.foco::before{scale:1.6}
-    .escenario.con-foco{cursor:pointer}
-    .mapa-lineas path{transition:stroke-dashoffset .3s var(--ease-out),opacity .3s var(--ease-out),stroke-width .3s var(--ease-out)}
-    html.en-sala{overflow:hidden}
-        .escenario[data-fase="final"] .rama{opacity:1;visibility:visible;pointer-events:auto;transition:opacity .8s var(--ease-out) calc(.8s + var(--k,0) * 90ms),visibility 0s}
-    .con-red .final{display:block;position:absolute;left:0;right:0;bottom:clamp(90px,13vh,130px);bottom:clamp(90px,13svh,130px);text-align:center;padding:0 24px;opacity:0;translate:0 18px;pointer-events:none;transition:opacity .6s var(--ease-out),translate .6s var(--ease-out)}
-    .escenario[data-fase="final"] .final{opacity:1;translate:0 0;transition-delay:.3s}
-    .final h3{font-weight:800;font-size:clamp(30px,3.6vw,52px);letter-spacing:-.04em;line-height:1.05}
-    .final p{color:var(--texto-2);margin-top:8px}
-    .con-red .expo-ui{display:flex;position:absolute;left:0;right:0;bottom:0;z-index:var(--z-ui);padding:0 max(40px,env(safe-area-inset-right,0px)) 26px max(40px,env(safe-area-inset-left,0px));align-items:center;gap:26px;pointer-events:none;opacity:0;transition:opacity .5s var(--ease-out)}
-    .escenario:not([data-fase="intro"]) .expo-ui{opacity:1}
-    .escenario:not([data-fase="intro"]) .expo-ui>*{pointer-events:auto}
-    .indice{display:flex;flex-wrap:wrap;gap:4px 20px;list-style:none}
-    .indice button{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:500;color:var(--texto-2);padding:4px 0;transition:color .3s var(--ease-out)}
-    .pt{width:7px;height:7px;border-radius:50%;background:var(--luz);opacity:.4;flex:none;transition:opacity .3s var(--ease-out),scale .3s var(--ease-out)}
-    .indice button[aria-current="true"] .pt{opacity:1;scale:1.3}
-    .indice button[aria-current="true"]{color:var(--ui-ac,var(--cian))}
-    .progreso{flex:1;height:2px;background:rgba(255,255,255,.16);border-radius:2px;overflow:hidden;min-width:60px}
-    .progreso i{display:block;height:100%;background:var(--ui-ac,var(--cian));transform-origin:left;scale:0 1}
-    .contador{font-family:var(--f-display);font-weight:600;font-size:14px;color:var(--texto-2);font-variant-numeric:tabular-nums;white-space:nowrap}
-    .flechas{display:none;gap:8px}
-    .flechas button{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:var(--ui-ac,var(--cian));box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.18)}
-    .flechas svg{width:20px;height:20px}
-    @media (max-width:999px){
-      .obras{grid-template-columns:1fr;gap:72px;max-width:560px}
-      .con-red .obra{left:max(20px,env(safe-area-inset-left,0px));right:max(20px,env(safe-area-inset-right,0px));top:auto;bottom:calc(78px + env(safe-area-inset-bottom,0px));width:auto;translate:none;gap:18px}
-      .con-red .lienzo{margin-right:18%}
-      .con-red .marco img{aspect-ratio:16/9}
-      .con-red .marco .barra{height:18px;padding:0 10px}
-      .con-red .marco .barra i{width:6px;height:6px}
-      .con-red .tel{width:24%;right:-15%;bottom:-10%;border-radius:14px;padding:3px}
-      .con-red .tel img{border-radius:11px}
-      .con-red .obra .tecnica,.con-red .obra .estado{display:none}
-      .con-red .obra h3{font-size:clamp(34px,10vw,54px);margin-top:4px}
-      .con-red .obra .lugar{font-size:15px;margin-top:6px}
-      .con-red .obra .acc{margin-top:14px;gap:6px 18px}
-      .con-red .obra .btn{min-height:46px}
-      .con-red .expo-ui{padding:0 max(16px,env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));gap:14px}
-      .con-red .final{bottom:calc(96px + env(safe-area-inset-bottom,0px))}
-      .nodo{font-size:13px}
-      .nodo span{padding:4px 9px}
-      .indice{gap:0;flex-wrap:nowrap}
-      .indice button{width:30px;height:44px;justify-content:center;padding:0}
-      .indice span{display:none}
-      .pt{width:9px;height:9px}
-      .progreso,.flechas{display:none}
-      .con-red .expo-ui{justify-content:space-between}
-      .con-red .tipo-gigante{left:0;top:76px;bottom:auto}
-      .tipo-gigante span{font-size:clamp(40px,12vw,64px)}
-      .rama{padding:8px 4px 8px 12px}
-      .rama.izq{padding:8px 12px 8px 4px}
-      .rama b{font-size:17px}
-      .rama::before{display:none}
-      .con-red .final{display:none}
-      .con-red .tipo-gigante{display:none}
-      .rama span{font-size:12px}
-    }
-    @media (max-width:999px) and (max-height:700px){ .con-red .lienzo{display:none} }
-
-    /* ===== Sala en la red: el lóbulo se separa y se recorre ===== */
-    .sr-velo{position:fixed;top:0;right:0;bottom:0;left:0;inset:0;z-index:40;background:var(--noche);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .9s var(--ease-in-out),visibility 0s linear .9s}@supports (color:color-mix(in srgb,red 50%,blue)){/* ===== Sala en la red: el lóbulo se separa y se recorre ===== */
-    .sr-velo{background:radial-gradient(ellipse 70% 60% at 62% 50%,color-mix(in srgb,var(--luz,#45d2f2) 9%,var(--noche)) 0%,var(--noche) 70%)}}
-    .en-sala .sr-velo{opacity:1;visibility:visible;transition:opacity 1s var(--ease-in-out),visibility 0s}
-    .en-sala .red{z-index:41;visibility:visible}
-    .en-sala body{overflow:hidden}
-    .sr{--luz:#45d2f2;position:fixed;top:0;right:0;bottom:0;left:0;inset:0;z-index:42;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:none;opacity:0;visibility:hidden;transition:opacity .45s var(--ease-out),visibility 0s linear .45s}
-    .sr::-webkit-scrollbar{display:none}
-    .sr.abierta{opacity:1;visibility:visible;transition:opacity .8s var(--ease-out) .7s,visibility 0s}
-    .sr-barra{position:sticky;top:0;z-index:4;display:flex;align-items:center;justify-content:space-between;gap:12px;height:72px;padding:env(safe-area-inset-top,0px) max(20px,env(safe-area-inset-right,0px)) 0 max(20px,env(safe-area-inset-left,0px))}
-    .sr-barra button{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:999px;font-weight:600;font-size:14.5px;background:rgba(9,11,19,.55);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:box-shadow .2s var(--ease-out)}
-    .sr-barra svg{width:18px;height:18px}
-    .sr-donde{font-family:var(--f-display);font-weight:600;font-size:14px;color:var(--texto-2);text-align:center}
-    .sr-donde b{color:var(--luz);font-weight:600}
-    .sr-nav{display:flex;gap:6px}
-    .sr-alto{position:relative;height:calc(var(--u,8) * 100vh);margin-top:-72px}@supports (height:1svh){.sr-alto{height:calc(var(--u,8) * 100svh)}}
-    .sr-escena{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
-    .sr-lineas{position:absolute;top:0;right:0;bottom:0;left:0;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
-    .sr-lineas path{fill:none;stroke:var(--luz);stroke-width:1.2;opacity:.7;stroke-dasharray:1;stroke-dashoffset:1}
-    .sr-bloque{position:absolute;opacity:0;visibility:hidden;filter:blur(10px);scale:.97;transition:opacity .6s var(--ease-out),filter .6s var(--ease-out),scale .7s var(--ease-out),visibility 0s linear .7s}
-    .sr-bloque.activo{opacity:1;visibility:visible;filter:blur(0);scale:1;transition:opacity .5s var(--ease-out) .15s,filter .6s var(--ease-out) .15s,scale .9s var(--ease-out) .1s,visibility 0s}
-    .sr-intro{left:max(40px,6vw);top:50%;translate:0 -50%;width:min(560px,40vw)}
-    .sr-intro .sr-num{font-family:var(--f-display);font-weight:600;font-size:14px;color:var(--texto-2)}
-    .sr-intro .sr-num b{color:var(--luz);font-weight:600}
-    .sr-intro h2{font-weight:800;font-size:clamp(52px,6.6vw,112px);line-height:.92;letter-spacing:-.055em;color:var(--luz);margin-top:12px}
-    .sr-intro .lugar{margin-top:16px;font-size:18px}
-    .sr-intro .historia{margin-top:14px;color:var(--texto-2);font-size:16.5px;max-width:46ch}
-    .sr-intro .estado{margin-top:16px}
-    .sr-baja{display:flex;align-items:center;gap:10px;margin-top:30px;font-size:14px;color:var(--texto-2)}
-    .sr-baja i{position:relative;width:1px;height:38px;background:rgba(237,240,247,.18);overflow:hidden}
-    .sr-baja i::after{content:"";position:absolute;left:0;right:0;top:0;height:40%;background:var(--luz);animation:gota 2.2s var(--ease-in-out) infinite}
-    .sr-paso{left:max(40px,6vw);top:50%;translate:0 -46%;width:min(560px,39vw)}
-    .sr-paso .sr-num{font-family:var(--f-display);font-weight:600;font-size:13.5px;letter-spacing:.04em;color:var(--luz);font-variant-numeric:tabular-nums}
-    .sr-paso h3{font-weight:800;font-size:clamp(32px,3.2vw,52px);letter-spacing:-.04em;line-height:1;margin-top:8px}
-    .sr-paso p.sr-txt{margin-top:10px;color:var(--texto-2);font-size:16px;max-width:46ch}
-    .sr-paso .marco{margin-top:24px;box-shadow:0 0 0 1px rgba(255,255,255,.1),0 40px 90px -40px rgba(0,0,0,.85);clip-path:inset(0 0 0 100% round 14px);transition:clip-path 0s .7s}@supports (color:color-mix(in srgb,red 50%,blue)){.sr-paso .marco{box-shadow:0 0 0 1px rgba(255,255,255,.1),0 40px 90px -40px rgba(0,0,0,.85),0 0 90px -30px color-mix(in srgb,var(--luz) 55%,transparent)}}
-    .sr-paso.activo .marco{clip-path:inset(0 0 0 0 round 14px);transition:clip-path 1.1s var(--ease-in-out) .2s}
-    .sr-paso .marco img{scale:1.15;filter:blur(8px) brightness(1.6);transition:scale 0s .7s,filter 0s .7s}
-    .sr-paso.activo .marco img{scale:1;filter:none;transition:scale 1.6s var(--ease-out) .2s,filter 1.1s var(--ease-out) .35s}
-    .sr-tel{margin-top:22px;width:min(250px,60%);aspect-ratio:9/19;border-radius:34px;padding:7px;background:#05070c;box-shadow:0 0 0 1px rgba(255,255,255,.14),0 40px 80px -30px rgba(0,0,0,.8)}@supports (color:color-mix(in srgb,red 50%,blue)){.sr-tel{box-shadow:0 0 0 1px rgba(255,255,255,.14),0 40px 80px -30px rgba(0,0,0,.8),0 0 80px -30px color-mix(in srgb,var(--luz) 55%,transparent)}}
-    .sr-tel .pantalla{height:100%;border-radius:27px;overflow-y:auto;overflow-x:hidden;scrollbar-width:none;overscroll-behavior:contain;background:#000}
-    .sr-tel .pantalla::-webkit-scrollbar{display:none}
-    .sr-tel .pantalla img{width:100%;height:auto;display:block}
-    .sr-paso .comparador{margin-top:24px}
-    .sr-fin{left:0;right:0;bottom:clamp(70px,10vh,110px);bottom:clamp(70px,10svh,110px);text-align:center;padding:0 24px}
-    .sr-fin h3{font-weight:800;font-size:clamp(28px,3vw,44px);letter-spacing:-.035em}
-    .sr-fin p{color:var(--texto-2);margin-top:6px}
-    .sr-fin .acc{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:22px}
-    .sr .btn-ac{background:var(--luz);color:#0a0c12}
-    .sr-rama{position:absolute;left:0;top:0;display:flex;flex-direction:column;gap:2px;padding:8px 6px 8px 16px;translate:0 -50%;text-align:left;opacity:0;visibility:hidden;transition:opacity .35s var(--ease-out),visibility 0s linear .35s;will-change:transform}
-    .sr-rama.izq{text-align:right;align-items:flex-end;translate:-100% -50%;padding:8px 16px 8px 6px}
-    .sr-rama b{font-family:var(--f-display);font-weight:700;font-size:clamp(17px,1.6vw,24px);letter-spacing:-.025em;color:var(--luz)}
-    .sr-rama span{font-size:13px;color:var(--texto-2)}
-    .sr-escena[data-paso="fin"] .sr-rama{opacity:1;visibility:visible;transition:opacity .7s var(--ease-out) calc(.5s + var(--k,0) * 90ms),visibility 0s}
-    .sr-escena[data-paso="fin"] .sr-mapa path{stroke-dashoffset:0;transition:stroke-dashoffset 1.1s var(--ease-in-out) calc(.2s + var(--k,0) * 90ms)}
-    .sr-prog{position:absolute;right:max(22px,env(safe-area-inset-right,0px));top:50%;translate:0 -50%;display:flex;flex-direction:column;align-items:center;gap:6px}
-    .sr-prog ol{list-style:none;display:flex;flex-direction:column;gap:2px}
-    .sr-prog button{width:30px;height:30px;display:grid;place-items:center}
-    .sr-prog button i{width:7px;height:7px;border-radius:50%;background:rgba(237,240,247,.3);transition:background-color .3s var(--ease-out),scale .3s var(--ease-out)}
-    .sr-prog button.visto i{background:var(--luz)}@supports (color:color-mix(in srgb,red 50%,blue)){.sr-prog button.visto i{background:color-mix(in srgb,var(--luz) 55%,transparent)}}
-    .sr-prog button[aria-current="true"] i{background:var(--luz);scale:1.5;box-shadow:0 0 12px var(--luz)}
-    .sr-cont{font-family:var(--f-display);font-weight:600;font-size:12.5px;color:var(--texto-2);font-variant-numeric:tabular-nums;margin-top:6px}
+    /* Botones: bloque duro con sombra sólida que se hunde */
+    .bt{display:inline-flex;align-items:center;gap:.6em;min-height:48px;padding:.8em 1.25em;background:var(--blanco);color:var(--tinta);border:2px solid var(--tinta);
+      font:700 .82rem/1 var(--mono);text-transform:uppercase;letter-spacing:.03em;text-decoration:none;box-shadow:5px 5px 0 var(--azul);
+      transition:translate .14s var(--ease-out),box-shadow .14s var(--ease-out),background-color .14s}
+    .bt:active{translate:5px 5px;box-shadow:0 0 0 var(--azul)}
+    .bt-azul{background:var(--azul);color:var(--blanco);border-color:var(--blanco);box-shadow:5px 5px 0 var(--blanco)}
+    .bt-azul:active{box-shadow:0 0 0 var(--blanco)}
+    .bt-tinta{background:var(--tinta);color:var(--blanco);border-color:var(--tinta);box-shadow:5px 5px 0 var(--blanco)}
+    .bt-tinta:active{box-shadow:0 0 0 var(--blanco)}
     @media (hover:hover) and (pointer:fine){
-      .sr-barra button:hover{box-shadow:inset 0 0 0 1.5px var(--texto)}
-      .sr-rama:hover b{text-decoration:underline;text-underline-offset:4px}
-      .sr-prog button:hover i{background:var(--texto)}
+      .bt:hover{translate:-2px -2px;box-shadow:7px 7px 0 var(--azul)}
+      .bt-azul:hover,.bt-tinta:hover{box-shadow:7px 7px 0 var(--blanco)}
+      .bt:active{translate:5px 5px;box-shadow:0 0 0 transparent}
     }
-    @media (max-width:999px){
-      .sr-barra{height:62px;gap:8px}
-      .sr-barra button{padding:0 12px;font-size:13.5px}
-      .sr-volver-txt,.sr-donde{display:none}
-      .sr-alto{margin-top:-62px}
-      .sr-intro,.sr-paso{left:max(20px,env(safe-area-inset-left,0px));right:max(20px,env(safe-area-inset-right,0px));top:auto;bottom:calc(64px + env(safe-area-inset-bottom,0px));width:auto;translate:none}
-      .sr-intro h2{font-size:clamp(40px,12vw,64px)}
-      .sr-intro .historia{font-size:15px}
-      .sr-paso h3{font-size:clamp(26px,7.5vw,36px)}
-      .sr-paso p.sr-txt{font-size:14.5px}
-      .sr-paso .marco{margin-top:14px}
-      .sr-paso .marco img{aspect-ratio:16/9}
-      .sr-paso .marco .barra{height:18px}
-      .sr-tel{width:min(170px,46%);margin-top:14px;border-radius:24px;padding:5px}
-      .sr-tel .pantalla{border-radius:19px}
-      .sr-prog{top:auto;bottom:calc(14px + env(safe-area-inset-bottom,0px));left:0;right:0;translate:none;flex-direction:row;justify-content:center}
-      .sr-prog ol{flex-direction:row}
-      .sr-cont{margin:0 0 0 8px}
-      .sr-fin{bottom:calc(64px + env(safe-area-inset-bottom,0px))}
-      .sr-rama b{font-size:15px}
-      .sr-rama span{font-size:11.5px}
+    .bt svg{width:1.1em;height:1.1em;flex:none}
+
+    /* ===== Cabecera fija (siempre visible, también dentro del carrete) ===== */
+    .cab{position:fixed;inset:0 0 auto;z-index:var(--z-cab);display:flex;align-items:center;gap:20px;padding:14px var(--gut);pointer-events:none}
+    .cab>*{pointer-events:auto}
+    .marca{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;background:var(--tinta);padding:6px 10px 6px 6px;border:1px solid var(--linea)}
+    .marca img{width:30px;height:30px}
+    .marca b{font:900 .95rem/1 var(--display);font-stretch:140%;letter-spacing:.02em}
+    .nav{display:flex;background:var(--tinta);border:1px solid var(--linea)}
+    .nav a{display:flex;align-items:center;min-height:44px;padding:0 14px;font:700 .74rem var(--mono);text-transform:uppercase;text-decoration:none;color:var(--gris);border-left:1px solid var(--linea);transition:color .15s,background-color .15s}
+    .nav a:first-child{border-left:0}
+    .nav a[aria-current="true"]{color:var(--tinta);background:var(--blanco)}
+    @media (hover:hover) and (pointer:fine){.nav a:hover{color:var(--blanco)} .nav a[aria-current="true"]:hover{color:var(--tinta)}}
+    .cab .bt{min-height:44px;padding:0 14px;box-shadow:4px 4px 0 var(--azul)}
+    @media (max-width:760px){
+      .nav a.solo-ancho{display:none}
+      .cab{gap:8px}
+      .marca b{display:none}
+      .cab .bt span{display:none}
+      .cab .bt{width:46px;justify-content:center;padding:0}
     }
-    .solo-movil{display:none}
-    @media (max-width:999px){ .solo-movil{display:inline} }
-    @media (max-width:999px) and (max-height:700px){ .sr-paso .marco,.sr-tel{display:none} }
 
-    /* Sala de cada cliente */
-    dialog.sala{--bg:#111;--ac:#fff;--tx:#fff;--tx2:rgba(255,255,255,.7);--linea:rgba(255,255,255,.14);position:fixed;top:0;right:0;bottom:0;left:0;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;border:0;padding:0;background:var(--bg);color:var(--tx);overflow-y:auto;overscroll-behavior:contain}
-    dialog.sala::backdrop{background:rgba(5,7,12,.8)}
-    .sala-barra{position:sticky;top:0;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:16px;height:70px;padding:env(safe-area-inset-top,0px) max(24px,env(safe-area-inset-right,0px)) 0 max(24px,env(safe-area-inset-left,0px));background:var(--bg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--linea)}@supports (color:color-mix(in srgb,red 50%,blue)){.sala-barra{background:color-mix(in srgb,var(--bg) 86%,transparent)}}
-    .sala-barra button{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;min-height:44px;padding:0 4px}
-    .sala-barra svg{width:18px;height:18px}
-    .nav-salas{display:flex;gap:6px}
-    .nav-salas button{padding:0 16px!important;border-radius:999px;box-shadow:inset 0 0 0 1px var(--linea)}
-    .sala-cuerpo{max-width:1360px;margin:0 auto;padding:60px max(24px,env(safe-area-inset-right,0px)) 110px max(24px,env(safe-area-inset-left,0px))}
-    .sala-cab{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:56px;align-items:end}
-    .sala-cab .sala-num{color:var(--tx2)}
-    .sala-cab h2{font-weight:800;font-size:clamp(50px,8vw,136px);line-height:.94;letter-spacing:-.055em;color:var(--ac);margin-top:12px}
-    .sala-cab h2 .linea{display:block;overflow:hidden;padding-bottom:.06em}
-    .sala-cab h2 .linea span{display:inline-block;animation:sube .9s var(--ease-out) both}
-    @keyframes sube{from{translate:0 105%}}
-    .sala-cab .lugar{margin-top:16px;color:var(--tx2);font-size:18px}
-    .sala-cab .historia{font-size:18px;max-width:44ch}
-    .sala-cab .acc{display:flex;flex-wrap:wrap;gap:12px 16px;align-items:center;margin-top:24px}
-    .sala .btn-ac{background:var(--ac);color:var(--bg)}
-    .sala .estado-txt{font-size:15px;color:var(--tx2)}
-    .vitrina{position:relative;display:grid;grid-template-columns:minmax(0,.42fr) minmax(0,1fr);gap:48px;align-items:start;margin-top:80px}
-    .movil-vivo{position:sticky;top:96px}
-    .tel-grande{position:relative;height:min(780px,calc(100vh - 150px));height:min(780px,calc(100svh - 150px));width:auto;max-width:100%;margin:0 auto;aspect-ratio:9/19;border-radius:40px;padding:9px;background:#05070c;box-shadow:0 0 0 1px var(--linea),0 50px 100px -40px rgba(0,0,0,.7)}
-    .tel-grande .pantalla{position:relative;height:100%;border-radius:32px;overflow-y:auto;overflow-x:hidden;scrollbar-width:none;overscroll-behavior:contain;background:#000}
-    .tel-grande .pantalla::-webkit-scrollbar{display:none}
-    .tel-grande .pantalla img{width:100%;height:auto}
-    .movil-vivo p{margin-top:14px;font-size:14px;color:var(--tx2);text-align:center}
-    .collage{display:grid;gap:40px}
-    .collage figure:nth-child(2){width:86%;margin-left:auto}
-    .collage figcaption{margin-top:12px;font-size:14px;color:var(--tx2)}
-    .detalles{margin-top:110px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
-    .detalles-cab{grid-column:1/-1}
-    .detalles-cab h3,.antes h3{font-weight:700;font-size:clamp(28px,3.4vw,44px);letter-spacing:-.025em;line-height:1.1}
-    .detalle{padding-top:18px;border-top:2px solid var(--ac)}
-    .detalle b{display:block;font-family:var(--f-display);font-weight:600;font-size:20px;line-height:1.3}
-    .detalle span{display:block;margin-top:6px;color:var(--tx2)}
-    .antes{margin-top:110px}
-    .comparador{position:relative;margin-top:24px;border-radius:14px;overflow:hidden;aspect-ratio:784/295;box-shadow:0 0 0 1px var(--linea);--pos:50%}
-    .comparador img{position:absolute;top:0;right:0;bottom:0;left:0;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
-    .comparador .despues{clip-path:inset(0 0 0 var(--pos))}
-    .comparador .linea-c{position:absolute;top:0;bottom:0;left:var(--pos);width:2px;background:var(--ac);translate:-1px 0;pointer-events:none}
-    .comparador .linea-c::after{content:"";position:absolute;top:50%;left:50%;width:44px;height:44px;border-radius:50%;translate:-50% -50%;background:var(--ac);box-shadow:0 6px 20px rgba(0,0,0,.4)}
-    .comparador input{position:absolute;top:0;right:0;bottom:0;left:0;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
-    .comparador input:focus-visible+.foco{outline:2px solid var(--cian);outline-offset:-4px}
-    .comparador .foco{position:absolute;top:0;right:0;bottom:0;left:0;inset:0;border-radius:14px;pointer-events:none}
-    .comparador .et{position:absolute;top:14px;font-size:13px;font-weight:600;padding:4px 10px;border-radius:999px;background:rgba(0,0,0,.65);color:#fff;pointer-events:none}
-    .comparador .et.a{left:14px}.comparador .et.b{right:14px}
-    .antes p.nota{margin-top:12px;font-size:15px;color:var(--tx2);max-width:70ch}
-    .siguiente{display:block;margin-top:120px;padding-top:30px;border-top:1px solid var(--linea);text-align:left;width:100%}
-    .siguiente span{display:block;color:var(--tx2);font-size:15px}
-    .siguiente b{display:block;font-family:var(--f-display);font-weight:800;font-size:clamp(44px,8vw,120px);line-height:1;letter-spacing:-.05em;margin-top:8px;color:var(--sig);transition:translate .35s var(--ease-out)}
+    /* ===== 1. El carrete (portada) ===== */
+    .cr{position:relative;height:calc(var(--alto-cr,750) * 1svh);background:var(--tinta)}
+    .cr-escena{position:sticky;top:0;height:100svh;overflow:hidden;--t:0}
+    .cr-rejilla{position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(var(--linea),var(--linea)) 0 50%/100% 1px no-repeat,
+        repeating-linear-gradient(90deg,var(--linea) 0 1px,transparent 1px calc(100% / 6));opacity:.55}
+    .cr-titulo{position:absolute;inset:0;margin:0;display:flex;flex-direction:column;justify-content:space-between;padding:84px var(--gut) clamp(70px,11svh,120px);pointer-events:none;
+      font:900 1em/.8 var(--display);font-stretch:150%;text-transform:uppercase;letter-spacing:-.02em}
+    .cr-titulo .l{display:block;white-space:nowrap;font-size:var(--fit,14vw);will-change:translate}
+    .cr-titulo .l1{translate:0 calc(var(--t) * -34svh);opacity:calc(1 - var(--t) * 1.5)}
+    .cr-titulo .l2{text-align:right;translate:0 calc(var(--t) * 30svh);opacity:calc(1 - var(--t) * 1.5);color:transparent;-webkit-text-stroke:2px var(--blanco)}
+    .cr-lienzo{position:absolute;inset:0;width:100%;height:100%;z-index:1;touch-action:pan-y;cursor:grab}
+    .cr-lienzo.sobre{cursor:pointer}
+    .cr-lema{position:absolute;z-index:2;left:var(--gut);bottom:calc(clamp(70px,11svh,120px) + var(--fit,14vw) * .9);max-width:30ch;margin:0;color:var(--gris);background:var(--tinta);border:1px solid var(--linea);padding:10px 12px;opacity:calc(1 - var(--t) * 3)}
+    .cr-lema b{color:var(--blanco);font-weight:700}
+    .cr-baja{position:absolute;z-index:2;right:var(--gut);top:calc(84px + var(--fit,14vw) * .86);margin:0;display:flex;align-items:center;gap:10px;opacity:calc(1 - var(--t) * 4)}
+    .cr-baja i{display:block;width:10px;height:10px;background:var(--azul);animation:late 1.4s var(--ease-in-out) infinite}
+    @keyframes late{50%{scale:.4;opacity:.4}}
 
-    /* ===== 3. Taquilla ===== */
-    .taquilla{position:relative;z-index:3;background:var(--noche);padding:150px 0 0;overflow:hidden}
-    .taquilla-cab{text-align:center;max-width:760px;margin:0 auto}
-    .taquilla-cab h2{font-weight:800;font-size:clamp(44px,7vw,108px);letter-spacing:-.05em;line-height:.98}
-    .taquilla-cab p{margin:20px auto 0;color:var(--texto-2);font-size:18px;max-width:46ch}
-    .entradas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:80px;perspective:1400px;align-items:stretch}
-    .entradas>*{display:flex}
-    .entrada{--rx:0deg;--ry:0deg;position:relative;flex:1;display:grid;grid-template-rows:auto 1fr auto;background:var(--papel);color:var(--tinta);border-radius:16px;transform:rotateX(var(--rx)) rotateY(var(--ry));transition:transform .5s var(--ease-out);
-      -webkit-mask:radial-gradient(circle 14px at 0 calc(100% - 92px),transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 14px at 100% calc(100% - 92px),transparent 98%,#000) right/51% 100% no-repeat;
-      mask:radial-gradient(circle 14px at 0 calc(100% - 92px),transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 14px at 100% calc(100% - 92px),transparent 98%,#000) right/51% 100% no-repeat}
-    .entrada-in{padding:30px 30px 24px}
-    .entrada .tipo{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:13.5px;font-weight:600;color:var(--tinta-2);min-height:26px}
-    .entrada .tipo img{width:26px;height:auto}
-    .entrada h3{font-weight:800;font-size:clamp(26px,2.4vw,32px);letter-spacing:-.03em;line-height:1.1;margin-top:20px}
-    .entrada .para{font-size:15px;color:var(--tinta-2);margin-top:4px}
-    .entrada .precio{margin-top:22px;font-family:var(--f-display);font-weight:800;font-size:clamp(46px,4.4vw,60px);line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
-    .entrada .precio small{display:block;font-size:15px;font-weight:600;letter-spacing:0;color:var(--tinta-2);margin-top:10px;line-height:1.35}
-    .entrada ul{list-style:none;padding:0 30px 26px;display:grid;gap:9px;align-content:start}
-    .entrada li{position:relative;padding-left:22px;font-size:15.5px;line-height:1.45}
-    .entrada li::before{content:"";position:absolute;left:2px;top:7px;width:10px;height:6px;border-left:2px solid var(--tinta);border-bottom:2px solid var(--tinta);rotate:-45deg}
-    .entrada li.base{color:var(--tinta-2)}
-    .talon{position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;height:92px;padding:0 30px;border-top:2px dashed #c5b9a2}
-    .talon a{font-weight:700;font-size:15.5px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;min-height:44px}
-    .talon a svg{width:18px;height:18px;transition:translate .25s var(--ease-out)}
-    .codigo{width:64px;height:34px;background:repeating-linear-gradient(90deg,var(--tinta) 0 2px,transparent 2px 4px,var(--tinta) 4px 5px,transparent 5px 8px,var(--tinta) 8px 11px,transparent 11px 13px);opacity:.75}
-    .envoltorio-dest{position:relative;flex:1;display:flex;border-radius:18px;padding:2.5px;background:conic-gradient(from var(--ang),var(--indigo),var(--cian),#b3f0ff,var(--indigo));animation:borde 6s linear infinite}
-    .envoltorio-dest .entrada{background:#f7f2e8;border-radius:15px}
-    @keyframes borde{to{--ang:360deg}}
-    .marca-dest{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--tinta);color:var(--papel)}
-    .pases{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:28px}
-    .pase{display:flex;align-items:center;gap:24px;justify-content:space-between;padding:26px 30px;border-radius:16px;border:1.5px dashed rgba(237,240,247,.25);transition:border-color .2s var(--ease-out)}
-    .pase h3{font-weight:700;font-size:22px;letter-spacing:-.02em}
-    .pase p{color:var(--texto-2);font-size:15.5px;margin-top:4px;max-width:40ch}
-    .pase .cifra{font-family:var(--f-display);font-weight:800;font-size:34px;letter-spacing:-.03em;white-space:nowrap;text-align:right;line-height:1;color:var(--texto);margin:0}
-    .pase .cifra small{display:block;font-family:var(--f-texto);font-size:13px;font-weight:500;color:var(--texto-2);letter-spacing:0;margin-top:6px}
-    .incluye{margin-top:120px;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:64px;align-items:start}
-    .incluye h3,.recorrido h3,.preguntas-wrap h3{font-weight:800;font-size:clamp(30px,3.6vw,48px);letter-spacing:-.035em;line-height:1.05}
-    .incluye .intro p,.preguntas-wrap .intro p{margin-top:16px;color:var(--texto-2);max-width:40ch}
-    .placas{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--borde)}
-    .placas li{padding:20px 0;border-bottom:1px solid var(--borde)}
-    .placas li:nth-child(odd){padding-right:24px}
-    .placas li:nth-child(even){padding-left:24px;border-left:1px solid var(--borde)}
-    .placas b{display:block;font-family:var(--f-display);font-weight:600;font-size:17px}
-    .placas span{display:block;color:var(--texto-2);font-size:15px;margin-top:2px}
-    .recorrido{margin-top:130px}
-    .pasos{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:40px;counter-reset:p}
-    .pasos li{counter-increment:p;position:relative;padding:58px 26px 0 0}
-    .pasos li::before{content:counter(p);position:absolute;top:0;left:0;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-family:var(--f-display);font-weight:700;font-size:16px;color:var(--noche);background:linear-gradient(120deg,var(--indigo),var(--cian))}
-    .pasos li::after{content:"";position:absolute;top:20px;left:52px;right:12px;height:1px;background:linear-gradient(90deg,var(--borde),transparent)}
-    .pasos li:last-child::after{display:none}
-    .pasos b{display:block;font-family:var(--f-display);font-weight:600;font-size:20px;line-height:1.25}
-    .pasos span{display:block;margin-top:8px;color:var(--texto-2);font-size:16px}
-    .preguntas-wrap{margin-top:130px;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:64px}
-    .preguntas details{border-top:1px solid var(--borde)}
-    .preguntas details:last-child{border-bottom:1px solid var(--borde)}
-    .preguntas summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 0;font-family:var(--f-display);font-weight:600;font-size:18px;line-height:1.35;transition:translate .25s var(--ease-out)}
-    .preguntas summary::-webkit-details-marker{display:none}
-    .preguntas summary i{flex:none;width:30px;height:30px;border-radius:50%;border:1px solid var(--borde);position:relative;transition:rotate .25s var(--ease-out),background-color .25s var(--ease-out)}
-    .preguntas summary i::before,.preguntas summary i::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:1.5px;background:var(--texto);translate:-50% -50%}
-    .preguntas summary i::after{rotate:90deg;transition:opacity .2s var(--ease-out)}
-    .preguntas details[open] summary i{rotate:180deg;background:var(--noche-2)}
-    .preguntas details[open] summary i::after{opacity:0}
-    .preguntas details p{padding:0 0 22px;color:var(--texto-2);max-width:62ch}
-    .salida{position:relative;margin-top:150px;padding:110px 0 120px;text-align:center;isolation:isolate;overflow:hidden;border-top:1px solid var(--borde)}
-    .salida::before{content:"";position:absolute;z-index:-1;left:50%;top:50%;width:min(900px,120vw);aspect-ratio:1;translate:-50% -50%;background:radial-gradient(closest-side,rgba(110,107,246,.2),transparent),radial-gradient(closest-side at 60% 60%,rgba(69,210,242,.1),transparent)}
-    .salida h2{font-weight:800;font-size:clamp(42px,6.6vw,104px);line-height:1.02;letter-spacing:-.05em;max-width:13ch;margin:0 auto}
-    .salida p{color:var(--texto-2);font-size:19px;max-width:44ch;margin:22px auto 0}
-    .salida .acciones{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:36px}
-    .datos{margin-top:26px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 28px;font-size:15px;color:var(--texto-2)}
-    .datos a{color:var(--texto);text-decoration:underline;text-underline-offset:4px}
-    footer{position:relative;z-index:3;background:var(--noche);border-top:1px solid var(--borde);padding:30px 0 44px;font-size:14px;color:var(--texto-2)}
-    footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-    footer nav{display:flex;flex-wrap:wrap;gap:8px 22px}
-    footer a{text-decoration:none}
-    .credito{display:block;font-size:12px;margin-top:4px;opacity:.75}
-    .credito a{text-decoration:underline;text-underline-offset:3px}
-    .barra-movil{display:none}
+    .cr-obra{position:absolute;z-index:3;left:0;right:0;bottom:0;padding:0 var(--gut) clamp(18px,3svh,30px);display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:8px 24px;
+      opacity:clamp(0,(var(--t) - .82) * 6,1);pointer-events:none}
+    .cr-escena.en-obras .cr-obra{pointer-events:auto}
+    .cr-escena.abriendo .cr-obra{opacity:0;transition:opacity .15s}
+    .cr-cont{grid-column:1/-1;display:flex;align-items:center;gap:14px;margin:0;color:var(--gris)}
+    .cr-cont b{color:var(--blanco);font-weight:800}
+    .cr-marcas{display:flex;gap:4px;margin:0;padding:0;list-style:none}
+    .cr-marcas i{display:block;width:clamp(10px,2.2vw,26px);height:6px;background:var(--linea);transition:background-color .2s}
+    .cr-marcas i.on{background:var(--azul)}
+    .cr-marcas i.visto{background:var(--gris-osc)}
+    .cr-nombre{position:relative;margin:0;font:900 var(--enc,7vw)/.86 var(--display);font-stretch:125%;text-transform:uppercase;letter-spacing:-.02em;overflow:hidden;padding-top:.06em}
+    .cr-nombre span{display:block;transition:clip-path .45s var(--ease-out),translate .45s var(--ease-out)}
+    .cr-nombre span.sale{position:absolute;left:0;bottom:0;clip-path:inset(0 0 100% 0);translate:0 -30%}
+    .cr-nombre span.entra{clip-path:inset(100% 0 0 0);translate:0 30%}
+    .cr-meta{grid-column:1;margin:0;color:var(--gris)}
+    .cr-meta b{color:var(--blanco);font-weight:700}
+    .cr-meta .estado{display:inline-block;margin-left:8px;padding:2px 7px;background:var(--blanco);color:var(--tinta);font-weight:800}
+    .cr-meta .estado.vivo{background:var(--azul);color:var(--blanco)}
+    .cr-acc{grid-column:2;grid-row:2/4;display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+    .cr-flechas{display:flex}
+    .cr-flechas button{width:48px;height:48px;display:grid;place-items:center;border:2px solid var(--blanco);background:var(--tinta);transition:background-color .15s,color .15s,scale .12s var(--ease-out)}
+    .cr-flechas button+button{border-left:0}
+    .cr-flechas button:active{scale:.94}
+    @media (hover:hover) and (pointer:fine){.cr-flechas button:hover{background:var(--blanco);color:var(--tinta)}}
+    .cr-flechas svg{width:20px;height:20px}
+    @media (max-width:760px){
+      .cr-obra{grid-template-columns:1fr}
+      .cr-acc{grid-column:1;grid-row:auto;justify-content:space-between}
+      .cr-acc .bt{flex:1;justify-content:center;padding:0 10px}
+      .cr-titulo .l2{-webkit-text-stroke-width:1.5px}
+    }
+    /* Sin WebGL2 o con movimiento reducido: una pantalla con la rejilla de obras en HTML */
+    .cr-plano{display:none}
+    .sin-3d .cr{height:auto}
+    .sin-3d .cr-escena{position:relative;height:auto;min-height:0;overflow:visible;--t:0}
+    .sin-3d .cr-titulo{position:relative;padding-bottom:24px;gap:24vw}
+    .sin-3d .cr-lienzo,.sin-3d .cr-obra,.sin-3d .cr-baja{display:none}
+    .sin-3d .cr-lema{position:relative;top:auto;left:auto;padding:0 var(--gut);margin-top:-22vw;margin-bottom:12vw}
+    .sin-3d .cr-plano{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:2px;padding:0 var(--gut) 80px;margin:0;list-style:none}
+    .cr-plano button{display:block;width:100%;text-align:left;background:var(--tinta-2);border:1px solid var(--linea)}
+    .cr-plano img{aspect-ratio:16/10;width:100%;object-fit:cover}
+    .cr-plano span{display:block;padding:12px 14px;font:900 1.3rem/1 var(--display);font-stretch:125%;text-transform:uppercase}
 
-    /* Aparición al entrar en pantalla */
-    .js .aparece{opacity:0;translate:0 28px;transition:opacity .8s var(--ease-out),translate .8s var(--ease-out);transition-delay:var(--retraso,0ms)}
-    .js .aparece.visto{opacity:1;translate:0 0}
+    /* ===== 2. Manifiesto (blanco) ===== */
+    .mani{background:var(--blanco);color:var(--tinta);padding:clamp(90px,14vw,190px) var(--gut) clamp(60px,9vw,130px);border-top:2px solid var(--blanco)}
+    .mani p{margin:0;max-width:24ch;font:900 clamp(2rem,6.2vw,6.4rem)/.98 var(--display);font-stretch:112%;letter-spacing:-.025em;text-wrap:balance}
+    .mani .p{opacity:.46;transition:opacity .22s linear} /* .46 y .7 dan 3:1 apagadas (texto grande): axe mide al cargar */
+    .mani .p.az:not(.on){opacity:.7}
+    .mani .p.on{opacity:1}
+    .mani .p.az{color:var(--azul)}
+    .mani .firma{display:flex;gap:16px;align-items:center;margin-top:clamp(40px,6vw,80px);color:var(--gris-osc)}
+    .mani .firma img{width:56px;height:56px}
 
+    /* ===== 3. Índice de obras (blanco, rejilla de tabla) ===== */
+    .indice{background:var(--blanco);color:var(--tinta);padding:clamp(24px,3vw,40px) var(--gut) clamp(90px,12vw,160px)}
+    .indice-cab{display:flex;justify-content:space-between;align-items:end;gap:20px;border-bottom:2px solid var(--tinta);padding-bottom:16px;flex-wrap:wrap}
+    .indice h2{margin:0;font:900 clamp(2.6rem,9vw,9.5rem)/.82 var(--display);font-stretch:150%;text-transform:uppercase;letter-spacing:-.02em}
+    .indice-cab p{margin:0;color:var(--gris-osc);max-width:34ch}
+    .lista{list-style:none;margin:0;padding:0}
+    .lista li{border-bottom:1px solid var(--linea-osc)}
+    .fila{width:100%;display:grid;grid-template-columns:minmax(0,1fr) 12rem 13rem 9rem;gap:16px;align-items:center;padding:clamp(14px,1.6vw,22px) 0;text-align:left;transition:color .18s}
+    .fila .n{font:900 clamp(1.5rem,3.4vw,4rem)/.95 var(--display);white-space:nowrap;font-stretch:125%;text-transform:uppercase;letter-spacing:-.015em;display:block;overflow:hidden;height:.95em;line-height:.95}
+    .fila .n i{display:block;font-style:normal;transition:translate .32s var(--ease-out)}
+    .fila .n i+i{color:var(--azul)}
+    .fila .mono{color:var(--gris-osc)}
+    .fila .est{justify-self:end;padding:3px 8px;border:1.5px solid var(--tinta);font-weight:800}
+    .fila .est.vivo{background:var(--azul);border-color:var(--azul);color:var(--blanco)}
+    .fila .mini{display:none}
     @media (hover:hover) and (pointer:fine){
-      .btn:hover::after{translate:120% 0;transition:translate .55s var(--ease-out)}
-      .btn-luz:hover{background:#fff}
-      .btn-cian:hover{background:#7fe0f6}
-      .btn-linea:hover{box-shadow:inset 0 0 0 1.5px var(--texto)}
-      .btn-sala:hover,.sala .btn-ac:hover{box-shadow:none}@supports (color:color-mix(in srgb,red 50%,blue)){.btn-sala:hover,.sala .btn-ac:hover{box-shadow:0 0 0 5px color-mix(in srgb,var(--ac) 28%,transparent)}}
-      .nav a:not(.btn):hover{color:var(--texto)}
-      .nav a:not(.btn):hover::after{scale:1 1;transform-origin:left}
-      .indice button:hover{color:var(--texto)}
-      .rama:hover span{color:var(--texto)}
-      .rama:hover b{translate:4px 0}
-      .rama.izq:hover b{translate:-4px 0}
-      .siguiente:hover b{translate:14px 0}
-      .nav-salas button:hover{box-shadow:inset 0 0 0 1.5px var(--tx)}
-      .talon a:hover svg{translate:4px 0}
-      .preguntas summary:hover{translate:6px 0}
-      .preguntas summary:hover i{background:var(--noche-2)}
-      .datos a:hover{color:var(--cian)}
-      footer a:hover{color:var(--texto)}
-      .pase:hover{border-color:rgba(237,240,247,.5)}
+      .lista:hover .fila{color:rgba(11,13,18,.35)}
+      .lista:hover .fila:hover{color:var(--tinta)}
+      .fila:hover .n i{translate:0 -100%}
     }
-    @media (max-width:1000px){
-      .entradas,.pases{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto}
-      .incluye,.preguntas-wrap{grid-template-columns:1fr;gap:32px}
-      .pasos{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:40px}
-      .pasos li:nth-child(2)::after{display:none}
-      .sala-cab{grid-template-columns:1fr;gap:28px}
-      .vitrina{grid-template-columns:1fr}
-      .movil-vivo{position:relative;top:0;width:min(100%,330px);margin:0 auto}
-      .tel-grande{height:auto;width:100%}
-      .detalles{grid-template-columns:1fr}
+    @media (max-width:900px){
+      .fila{grid-template-columns:76px minmax(0,1fr);grid-template-rows:auto auto;gap:4px 14px}
+      .fila .mini{display:block;grid-row:1/3;width:76px;aspect-ratio:16/10;object-fit:cover;border:1.5px solid var(--tinta)}
+      .fila .n{grid-column:2;white-space:normal;height:auto;font-size:clamp(1.25rem,6.4vw,2.6rem)}
+      .fila .n i+i{display:none}
+      .fila .sec{grid-column:2;font-size:.7rem}
+      .fila .lug,.fila .est{display:none}
     }
-    .nav a[aria-current="true"]:not(.btn){color:var(--texto)}
-    .nav .ir-mapa{display:inline-flex;align-items:center;gap:7px}
-    .nav .ir-mapa svg{width:17px;height:17px;flex:none;color:var(--cian);transition:rotate .5s var(--ease-out)}
-    .nav .ir-mapa[aria-current="true"] svg{filter:drop-shadow(0 0 6px var(--cian))}
-    @media (hover:hover) and (pointer:fine){ .nav .ir-mapa:hover svg{rotate:45deg} }
-    @media (max-width:520px){ .nav .ir-mapa svg{width:15px;height:15px} .nav .ir-mapa{gap:5px} }
-    .nav a[aria-current="true"]:not(.btn)::after{scale:1 1}
-    @media (max-width:860px){ .nav{gap:18px} .nav a:not(.btn){font-size:14px} }
-    @media (max-width:520px){ .cab .wrap{height:62px;gap:12px} .marca span{display:none} .marca img{width:32px} .nav{gap:15px} .nav a:not(.btn){font-size:13.5px} .wa{width:42px;padding:0} .wa span{display:none} }
-    @media (max-width:700px){
-      body{font-size:16.5px}
-      .wrap,.cab .wrap{padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
-      .portada{padding:110px 20px 150px}
-      .portada .acciones .btn{flex:1 1 100%}
-      .sello{display:none}
-      .pie-portada{justify-content:center;text-align:center;padding-bottom:96px}
-      .bajar{display:none}
-      .expo-cab{padding:84px 0 48px}
-      .taquilla{padding-top:110px}
-      .placas{grid-template-columns:1fr}
-      .placas li:nth-child(n){padding:18px 0;border-left:0}
+    .indice-foto{position:fixed;left:0;top:0;z-index:var(--z-foto);width:min(34vw,460px);pointer-events:none;opacity:0;scale:.9;
+      transition:opacity .2s var(--ease-out),scale .25s var(--ease-out);border:2px solid var(--tinta);box-shadow:8px 8px 0 var(--azul)}
+    .indice-foto.on{opacity:1;scale:1}
+    .indice-foto img{width:100%;aspect-ratio:16/10;object-fit:cover}
+
+    /* ===== 4. Cómo trabajo (tinta) ===== */
+    .proceso{padding:clamp(90px,12vw,170px) var(--gut);border-top:2px solid var(--tinta);background:var(--tinta)}
+    .proceso h2{margin:0 0 clamp(40px,6vw,90px);max-width:14ch;font:900 clamp(2.4rem,7vw,7.2rem)/.86 var(--display);font-stretch:135%;text-transform:uppercase;letter-spacing:-.02em;text-wrap:balance}
+    .proceso h2 em{font-style:normal;color:var(--azul)}
+    .pasos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-left:1px solid var(--linea)}
+    .pasos li{position:relative;padding:28px 22px 30px;border-right:1px solid var(--linea);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+    .pasos li::before{content:"";position:absolute;left:-1px;right:-1px;top:-2px;height:4px;background:var(--azul);scale:0 1;transform-origin:left;transition:scale .3s var(--ease-in-out) calc(var(--i) * 220ms)}
+    .pasos.visto li::before{scale:1 1}
+    .pasos .num{display:block;font:900 clamp(3rem,6vw,5.6rem)/.8 var(--display);font-stretch:150%;color:transparent;-webkit-text-stroke:1.5px var(--blanco);margin-bottom:26px;transition:color .16s calc(var(--i) * 220ms + 200ms)}
+    .pasos.visto .num{color:var(--blanco)}
+    .pasos h3{margin:0 0 10px;font:800 clamp(1.2rem,1.7vw,1.6rem)/1.05 var(--display);font-stretch:118%;text-transform:uppercase}
+    .pasos p{margin:0;color:var(--gris);max-width:34ch;text-wrap:pretty}
+    @media (max-width:900px){
+      .pasos{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:560px){
       .pasos{grid-template-columns:1fr}
-      .pasos li::after{display:none}
-      .pase{flex-direction:column;align-items:flex-start}
-      .pase .cifra{text-align:left}
-      .salida{padding:90px 0 120px;margin-top:110px}
-      footer{padding-bottom:110px}
-      .barra-movil{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:var(--z-nav);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));background:rgba(9,11,19,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--borde);transition:translate .3s var(--ease-out)}
-      .barra-movil.oculta{translate:0 110%}
-      .barra-movil .btn{flex:1;min-height:48px}
-      .volver-txt{display:none}
-      .sala-cuerpo{padding-top:36px}
-      .comparador{aspect-ratio:4/3}
+      .pasos li::before{left:-2px;right:auto;top:-1px;bottom:-1px;width:4px;height:auto;scale:1 0;transform-origin:top}
+      .pasos.visto li::before{scale:1 1}
     }
+
+    /* ===== 5. Contacto (azul) ===== */
+    .contacto{background:var(--azul);color:var(--blanco);padding:clamp(90px,12vw,170px) var(--gut) clamp(60px,8vw,110px);overflow:hidden}
+    .contacto h2{margin:0;font:900 var(--enc,12vw)/.8 var(--display);font-stretch:150%;text-transform:uppercase;letter-spacing:-.03em}
+    .contacto h2 .m{display:block;overflow:hidden;padding-bottom:.04em}
+    .contacto h2 .m span{display:block;translate:0 102%;transition:translate .45s var(--ease-out) calc(var(--i) * 80ms)}
+    .contacto.visto h2 .m span{translate:0 0}
+    .contacto h2 .m:nth-child(2){text-align:right}
+    .contacto-pie{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:30px;align-items:end;margin-top:clamp(40px,6vw,80px);padding-top:24px;border-top:2px solid var(--blanco)}
+    .contacto-pie p{margin:0;max-width:40ch;font-size:clamp(1.05rem,1.4vw,1.25rem)}
+    .contacto-pie .acc{display:flex;flex-wrap:wrap;gap:14px;justify-content:flex-end}
+    .contacto-datos{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:22px}
+    .contacto-datos a{text-decoration-thickness:1.5px;text-underline-offset:4px}
+    @media (max-width:760px){.contacto-pie{grid-template-columns:1fr}.contacto-pie .acc{justify-content:flex-start}}
+
+    .pie{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 30px;padding:26px var(--gut) 34px;color:var(--gris);border-top:1px solid var(--linea)}
+    .pie p{margin:0}
+
+    /* Aparecer al verse (M10) */
+    .js .ap{opacity:0;translate:0 28px;transition:opacity .45s var(--ease-out),translate .45s var(--ease-out)}
+    .js .ap.visto{opacity:1;translate:0 0}
+
+    /* ===== El caso (capa a pantalla completa) ===== */
+    .caso{position:fixed;inset:0;z-index:var(--z-caso);background:var(--tinta);overflow-y:auto;overscroll-behavior:contain;opacity:0;visibility:hidden;transition:opacity .2s var(--ease-out),visibility 0s .2s}
+    .caso.on{opacity:1;visibility:visible;transition:opacity .2s var(--ease-out),visibility 0s}
+    .caso.rapido{transition:none}
+    .caso-barra{position:sticky;top:0;z-index:2;display:flex;align-items:center;gap:10px;padding:14px var(--gut);pointer-events:none}
+    .caso-barra>*{pointer-events:auto}
+    .caso-barra .cont{margin-left:auto;background:var(--tinta);border:1px solid var(--linea);padding:12px 14px;color:var(--gris)}
+    .caso-barra .bt{min-height:44px;padding:0 14px;box-shadow:4px 4px 0 var(--azul)}
+    .caso-cuerpo{transition:opacity .18s var(--ease-out)}
+    .caso-cuerpo.cambia{opacity:0}
+    .caso-hero{position:relative;height:100svh;margin:-76px 0 0;overflow:hidden}
+    .caso-hero>img{width:100%;height:100%;object-fit:cover}
+    .caso-hero::after{content:"";position:absolute;inset:auto 0 0;height:55%;background:linear-gradient(transparent,rgba(11,13,18,.92));pointer-events:none}
+    .caso-hero-txt{position:absolute;z-index:1;left:var(--gut);right:var(--gut);bottom:clamp(20px,4svh,40px)}
+    .caso-hero h2{margin:0;font:900 var(--enc,8vw)/.82 var(--display);font-stretch:140%;text-transform:uppercase;letter-spacing:-.025em;text-wrap:balance;text-shadow:0 2px 30px rgba(0,0,0,.35)}
+    .caso-hero .mono{margin:14px 0 0;color:var(--blanco)}
+    .caso-ficha{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);border-top:2px solid var(--blanco);border-bottom:1px solid var(--linea)}
+    .caso-ficha dl{margin:0;border-right:1px solid var(--linea)}
+    .caso-ficha dl div{display:grid;grid-template-columns:7.5rem minmax(0,1fr);gap:10px;padding:14px var(--gut);border-bottom:1px solid var(--linea)}
+    .caso-ficha dt{color:var(--gris)}
+    .caso-ficha dd{margin:0;font-weight:600}
+    .caso-ficha .txt{padding:clamp(28px,4vw,56px) var(--gut)}
+    .caso-ficha .txt p{margin:0 0 28px;max-width:34ch;font:700 clamp(1.4rem,2.6vw,2.4rem)/1.12 var(--display);font-stretch:108%;letter-spacing:-.01em;text-wrap:pretty}
+    .caso-movil{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(30px,6vw,100px);align-items:center;padding:clamp(60px,9vw,130px) var(--gut);background:var(--blanco);color:var(--tinta)}
+    .tel{--alto:min(76svh,680px);width:calc(var(--alto) * .462);height:var(--alto);border:10px solid var(--tinta);border-radius:34px;overflow:hidden;background:var(--tinta);box-shadow:12px 12px 0 var(--azul)}
+    .tel img{width:100%;height:auto;animation:recorre 32s linear infinite alternate;animation-play-state:paused}
+    .tel.va img{animation-play-state:running}
+    @keyframes recorre{0%,6%{translate:0 0}94%,100%{translate:0 calc(-100% + var(--alto) - 20px)}}
+    .caso-movil h3{margin:0 0 24px;font:900 clamp(2rem,4.6vw,4.6rem)/.86 var(--display);font-stretch:135%;text-transform:uppercase;letter-spacing:-.02em}
+    .partes{list-style:none;margin:0;padding:0;border-top:2px solid var(--tinta)}
+    .partes li{display:grid;grid-template-columns:3.2rem minmax(0,1fr);gap:12px;padding:18px 0;border-bottom:1px solid var(--linea-osc)}
+    .partes b{display:block;font:800 clamp(1.1rem,1.6vw,1.45rem)/1.1 var(--display);font-stretch:115%;text-transform:uppercase;margin-bottom:4px}
+    .partes p{margin:0;color:var(--gris-osc);max-width:52ch}
+    .partes .mono{color:var(--azul);font-weight:800;padding-top:3px}
+    .caso-fotos{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(14px,2vw,28px);padding:clamp(60px,9vw,130px) var(--gut)}
+    .caso-fotos figure{margin:0}
+    .caso-fotos figure:nth-child(1){grid-column:1/9}
+    .caso-fotos figure:nth-child(2){grid-column:6/13}
+    .caso-fotos figure:nth-child(3){grid-column:2/10}
+    .caso-fotos img{width:100%;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--linea)}
+    .caso-fotos figcaption{display:flex;gap:14px;margin-top:10px;color:var(--gris)}
+    .caso-fotos figcaption b{color:var(--blanco)}
+    .caso-otra{display:block;width:100%;text-align:left;padding:clamp(40px,6vw,80px) var(--gut);background:var(--azul);border-top:2px solid var(--blanco)}
+    .caso-otra .mono{display:block;margin-bottom:12px}
+    .caso-otra b{display:flex;align-items:center;gap:.3em;font:900 clamp(2.4rem,9vw,9rem)/.84 var(--display);font-stretch:140%;text-transform:uppercase;letter-spacing:-.025em}
+    .caso-otra svg{width:.8em;height:.8em;flex:none;transition:translate .2s var(--ease-out)}
+    @media (hover:hover) and (pointer:fine){.caso-otra:hover svg{translate:.15em 0}}
+    @media (max-width:900px){
+      .caso-ficha{grid-template-columns:1fr}
+      .caso-ficha dl{border-right:0}
+      .caso-movil{grid-template-columns:1fr;justify-items:center}
+      .caso-movil>div{justify-self:stretch}
+      .caso-fotos figure:nth-child(n){grid-column:1/-1}
+    }
+
     @media (prefers-reduced-motion:reduce){
-      *,*::before,*::after{transition-duration:.01ms!important;animation:none!important}
-      .js .portada h1 .pal{translate:0 0}
-      .js .aparece{opacity:1;translate:0 0}
+      body::after,.cr-baja i,.tel img{animation:none}
+      .js .ap{translate:0 0;transition:opacity .3s}
+      .contacto h2 .m span{translate:0 0;transition:none}
+      .cr-nombre span,.fila .n i{transition:none}
+      .pasos li::before,.pasos .num{transition:none}
+      .tel{overflow-y:auto}
     }
   </style>
-  <style>dialog:not([open]){display:none}dialog.sala[open]{z-index:1000}</style>
   <script>/* Navegadores antiguos (macOS 10.15 o anterior): si no hay WebP, se usan las copias .jpg */
   (function(){var t=new Image();t.onload=t.onerror=function(){if(t.height>0)return;var d=document.documentElement;d.classList.add('sin-webp');
     var sw=function(v){return v&&v.indexOf('.webp')>-1?v.replace(/\.webp(?=[\s,]|$)/g,'.jpg'):v};
@@ -610,949 +332,420 @@
   <a class="salto" href="#principal">Saltar al contenido</a>
 
   <header class="cab" id="cabecera">
-    <div class="wrap">
-      <a class="marca" href="#inicio" aria-label="Degaldo Designs, inicio">
-        <img src="img/marca/dd-128.webp" width="128" height="119" alt="">
-        <span>Degaldo<small>Designs</small></span>
-      </a>
-      <nav class="nav" aria-label="Secciones">
-        <a href="#inicio" data-sec="inicio">Inicio</a>
-        <a href="#exposicion" data-sec="exposicion">Exposición</a>
-        <a href="#exposicion" class="ir-mapa" data-sec="mapa" id="ir-mapa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="2.4"/><circle cx="4.5" cy="6" r="1.8"/><circle cx="19.5" cy="6" r="1.8"/><circle cx="4.5" cy="18" r="1.8"/><circle cx="19.5" cy="18" r="1.8"/><path d="M10 10.8 6 7M14 10.8 18 7M10 13.2 6 17M14 13.2 18 17"/></svg>Mapa</a>
-        <a href="#taquilla" data-sec="taquilla">Taquilla</a>
-        <a class="btn btn-luz btn-pq iman wa" aria-label="WhatsApp" href="https://wa.me/34722358950?text=Hola%20Diego%2C%20quiero%20ver%20c%C3%B3mo%20quedar%C3%ADa%20la%20web%20de%20mi%20negocio." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/></svg><span>WhatsApp</span></a>
-      </nav>
-    </div>
+    <a class="marca" href="#obras" aria-label="Degaldo Designs, inicio">
+      <img src="img/marca/dd-128.webp" alt="" aria-hidden="true" width="30" height="30">
+      <b>DEGALDO DESIGNS</b>
+    </a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#obras" data-sec="obras">Obras</a>
+      <a href="#indice" data-sec="indice" class="solo-ancho">Índice</a>
+      <a href="#proceso" data-sec="proceso" class="solo-ancho">Cómo trabajo</a>
+      <a href="#contacto" data-sec="contacto">Contacto</a>
+    </nav>
+    <a class="bt" href="https://wa.me/34722358950?text=Hola%20Diego%2C%20he%20visto%20tu%20portfolio%20y%20quiero%20una%20web%20para%20mi%20negocio" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/></svg><span>WhatsApp</span>
+    </a>
   </header>
 
-  <canvas class="red" id="red" aria-hidden="true"></canvas>
-
   <main id="principal">
-
-    <!-- 1. PORTADA -->
-    <section class="portada" id="inicio" aria-labelledby="titulo">
-      <div class="fondo" id="fondo" aria-hidden="true"><div class="fondo-in" id="fondo-in">
-        <div id="capas"></div>
-        <div class="linterna"><img id="linterna-img" src="img/sala/xavi-pinchos.webp" alt=""></div>
-        <div class="tinte"></div>
-        <div class="velo"></div>
-        <div class="grano"></div>
-      </div></div>
-      <canvas class="estela" id="estela" aria-hidden="true"></canvas>
-      <div class="portada-txt" id="portada-txt">
-        <p class="firma"><img src="img/marca/dd-128.webp" width="128" height="119" alt="">Degaldo Designs, Pinto (Madrid)</p>
-        <h1 id="titulo">
-          <span class="linea"><span class="pal" style="--i:0">Webs</span> <span class="pal" style="--i:1">hechas</span> <span class="pal" style="--i:2">a</span> <span class="pal" style="--i:3">mano</span></span>
-          <span class="linea"><span class="pal" style="--i:4">para</span></span>
-          <span class="rueda" id="rueda"><span class="ahora">bares</span></span>
-        </h1>
-        <p class="sub">Cada negocio tiene su carta, sus fotos y su forma de hablar. Su web también. <strong>Te la enseño terminada antes de que pagues nada.</strong></p>
-        <div class="acciones">
-          <a class="btn btn-luz iman" href="#exposicion">Entrar en la exposición</a>
-          <a class="btn btn-linea iman" href="#taquilla">Ver precios</a>
-        </div>
-      </div>
-      <div class="pie-portada">
-        <p class="de-fondo" id="de-fondo">De fondo, <b>Xavi Pinchos</b>, Pinto</p>
-        <div class="sello" aria-hidden="true">
-          <svg viewBox="0 0 120 120"><defs><path id="circulo" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><text><textPath href="#circulo" textLength="285">webs hechas a mano · degaldo designs · </textPath></text></svg>
-          <img src="img/marca/dd-128.webp" width="128" height="119" alt="">
-        </div>
-      </div>
-      <a class="bajar" href="#exposicion" aria-label="Bajar a la exposición"><i aria-hidden="true"></i>Baja</a>
-    </section>
-
-    <!-- 2. EXPOSICIÓN -->
-    <section class="expo" id="exposicion" aria-labelledby="expo-titulo">
-      <div class="expo-alto" id="expo-alto">
-        <div class="escenario" id="escenario" data-fase="intro">
-          <div class="intro">
-            <h2 id="expo-titulo">La exposición</h2>
-            <p>Nueve negocios, nueve webs. <span class="solo-red">Baja y se irán encendiendo una a una.</span><span class="solo-fijo">Entra en la sala que quieras para verla de cerca.</span></p>
-            <img class="cerebro-fijo solo-fijo" src="img/cerebro.webp" width="1240" height="760" alt="" loading="lazy">
-          </div>
-          <div class="tipo-gigante" id="tipo-gigante" aria-hidden="true"></div>
-          <svg class="mapa-lineas" id="mapa-lineas" aria-hidden="true"></svg>
-          <div class="mapa" id="mapa"></div>
-          <svg class="conector" id="conector" aria-hidden="true"><path pathLength="1" d="M0 0"/></svg>
-          <div class="obras" id="obras"></div>
-          <div class="nodos" id="nodos"></div>
-          <div class="final" id="final"><h3>El mapa de la exposición</h3><p>Cada zona encendida es un negocio. Pulsa uno para entrar en su sala.</p></div>
-          <div class="expo-ui" id="expo-ui">
-            <ol class="indice" id="indice" aria-label="Salas"></ol>
-            <div class="progreso" aria-hidden="true"><i id="barra-progreso"></i></div>
-            <span class="contador" id="contador">01 / 07</span>
-            <div class="flechas"><button type="button" id="expo-ant" aria-label="Sala anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button><button type="button" id="expo-sig" aria-label="Sala siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. TAQUILLA -->
-    <section class="taquilla" id="taquilla" aria-labelledby="taquilla-titulo">
-      <div class="wrap">
-        <div class="taquilla-cab">
-          <h2 id="taquilla-titulo" class="aparece">Taquilla</h2>
-          <p class="aparece" style="--retraso:120ms">Primero ves tu web terminada y solo pagas si te gusta. Lo mensual es sin permanencia.</p>
-        </div>
-
-        <div class="entradas">
-          <div class="aparece">
-            <article class="entrada inclina" aria-labelledby="e1">
-              <div class="entrada-in">
-                <p class="tipo">Entrada general<img src="img/marca/dd-128.webp" width="128" height="119" alt=""></p>
-                <h3 id="e1">Tu web</h3>
-                <p class="para">Para empezar</p>
-                <p class="precio">200 €<small>Pago único, al publicarla</small></p>
-              </div>
-              <ul>
-                <li>Diseño a medida, con tu carta, tus fotos y tus colores</li>
-                <li>Horario que dice si estás abierto</li>
-                <li>Botones de llamar, WhatsApp o reservar</li>
-                <li>Panel para cambiar platos y precios</li>
-                <li>Tu dominio y Google Maps</li>
-              </ul>
-              <div class="talon">
-                <a href="https://wa.me/34722358950?text=Hola%20Diego%2C%20me%20interesa%20la%20entrada%20Tu%20web." target="_blank" rel="noopener">Quiero esta <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                <span class="codigo" aria-hidden="true"></span>
-              </div>
-            </article>
-          </div>
-
-          <div class="aparece" style="--retraso:90ms">
-            <div class="envoltorio-dest">
-              <article class="entrada inclina" aria-labelledby="e2">
-                <div class="entrada-in">
-                  <p class="tipo"><span class="marca-dest">Recomendada</span><img src="img/marca/dd-128.webp" width="128" height="119" alt=""></p>
-                  <h3 id="e2">Web y cambios</h3>
-                  <p class="para">Para crecer</p>
-                  <p class="precio">+ 50 €<small>al mes, además de los 200 € de la web</small></p>
-                </div>
-                <ul>
-                  <li class="base">Todo lo de Tu web</li>
-                  <li>Cambios de carta, precios, menú y fotos</li>
-                  <li>Ofertas y avisos cuando los necesites</li>
-                  <li>Horario al día, también en Google</li>
-                  <li>Me lo pides por WhatsApp y lo cambio</li>
-                </ul>
-                <div class="talon">
-                  <a href="https://wa.me/34722358950?text=Hola%20Diego%2C%20me%20interesa%20Web%20y%20cambios." target="_blank" rel="noopener">Quiero esta <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                  <span class="codigo" aria-hidden="true"></span>
-                </div>
-              </article>
+    <section class="cr" id="obras" aria-label="Obras: el carrete">
+      <div class="cr-escena" id="escena">
+        <div class="cr-rejilla" aria-hidden="true"></div>
+        <h1 class="cr-titulo"><span class="l l1" aria-hidden="true">Degaldo</span><span class="l l2" aria-hidden="true">Designs</span><span class="lector">Degaldo Designs, portfolio de diseño web</span></h1>
+        <p class="cr-lema">Diseño y programo <b>webs a medida para negocios de barrio</b>: bares, restaurantes, gimnasios y clínicas. Desde Pinto (Madrid).</p>
+        <p class="cr-baja mono" aria-hidden="true"><i></i>Baja y entra en el carrete</p>
+        <canvas class="cr-lienzo" id="lienzo" aria-hidden="true"></canvas>
+        <div class="cr-obra" id="cr-obra">
+          <p class="cr-cont mono"><span><b id="cr-n">01</b> / <span id="cr-total">11</span></span><span class="cr-marcas" id="cr-marcas" aria-hidden="true"></span></p>
+          <h2 class="cr-nombre" id="cr-nombre" aria-live="polite" data-encaja="7.4"><span>Xavi Pinchos</span></h2>
+          <p class="cr-meta mono" id="cr-meta"></p>
+          <div class="cr-acc">
+            <button class="bt" type="button" id="cr-abrir">Abrir el caso
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <div class="cr-flechas">
+              <button type="button" id="cr-ant" aria-label="Obra anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+              <button type="button" id="cr-sig" aria-label="Obra siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
             </div>
           </div>
-
-          <div class="aparece" style="--retraso:180ms">
-            <article class="entrada inclina" aria-labelledby="e3">
-              <div class="entrada-in">
-                <p class="tipo">Abono completo<img src="img/marca/dd-128.webp" width="128" height="119" alt=""></p>
-                <h3 id="e3">Web y redes</h3>
-                <p class="para">Para olvidarte</p>
-                <p class="precio">+ 150 €<small>al mes, además de la web. 180 € con anuncios</small></p>
-              </div>
-              <ul>
-                <li class="base">Todo lo de Web y cambios</li>
-                <li>Grabación mensual y publicaciones</li>
-                <li>Ficha de Google al día y respuesta a reseñas</li>
-                <li>40 € de anuncios en tu zona, en el de 180 €</li>
-                <li>Informe de resultados cada mes</li>
-              </ul>
-              <div class="talon">
-                <a href="https://wa.me/34722358950?text=Hola%20Diego%2C%20me%20interesa%20Web%20y%20redes." target="_blank" rel="noopener">Quiero esta <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                <span class="codigo" aria-hidden="true"></span>
-              </div>
-            </article>
-          </div>
         </div>
-
-        <div class="pases">
-          <div class="pase aparece">
-            <div><h3>Pack de lanzamiento</h3><p>Tu web publicada y el primer mes de redes. Te ahorras 50 €.</p></div>
-            <p class="cifra">300 €<small>una sola vez</small></p>
-          </div>
-          <div class="pase aparece" style="--retraso:90ms">
-            <div><h3>Sin pagar de golpe</h3><p>Tu web en 12 cuotas, sin entrada y con el dominio del primer año. Al terminar, es tuya.</p></div>
-            <p class="cifra">25 €<small>al mes, 12 meses</small></p>
-          </div>
-        </div>
-
-        <div class="incluye">
-          <div class="intro aparece">
-            <h3>Toda web incluye</h3>
-            <p>Lo mínimo que tiene que tener la web de un negocio de verdad, venga con el plan que venga.</p>
-            <p>Aparte: dominio, unos 12 € al año. QR para las mesas, 20 €.</p>
-          </div>
-          <ul class="placas aparece" style="--retraso:90ms">
-            <li><b>Carta con precios</b><span>Con fotos y fácil de leer en el móvil.</span></li>
-            <li><b>Horario en vivo</b><span>Dice si estás abierto y hasta qué hora.</span></li>
-            <li><b>Un toque para contactar</b><span>Llamar, WhatsApp o reservar.</span></li>
-            <li><b>Panel para editarla</b><span>Cambias platos y precios sin depender de nadie.</span></li>
-            <li><b>Tu dominio</b><span>Tunegocio.es, sin anuncios de nadie.</span></li>
-            <li><b>Google Maps</b><span>Conectada a tu ficha para que te encuentren.</span></li>
-            <li><b>Pensada para el móvil</b><span>Que es donde te van a buscar.</span></li>
-            <li><b>Revisión de tu web actual</b><span>Si ya tienes una, te digo gratis qué falla.</span></li>
-          </ul>
-        </div>
-
-        <div class="recorrido" id="como">
-          <h3 class="aparece">El recorrido</h3>
-          <ol class="pasos">
-            <li class="aparece"><b>Te la enseño hecha</b><span>Estudio tu negocio y preparo la web con tu carta y tus fotos.</span></li>
-            <li class="aparece" style="--retraso:80ms"><b>La ajustamos juntos</b><span>Confirmas precios y horario, y cambiamos lo que quieras.</span></li>
-            <li class="aparece" style="--retraso:160ms"><b>La publico</b><span>Con tu dominio, en Google Maps y con QR si lo quieres.</span></li>
-            <li class="aparece" style="--retraso:240ms"><b>La llevas tú</b><span>Cambias la carta desde el panel, o me lo pides a mí.</span></li>
-          </ol>
-        </div>
-
-        <div class="preguntas-wrap" id="preguntas">
-          <div class="intro aparece">
-            <h3>Preguntas</h3>
-            <p>Soy Diego De Galdo, de Pinto. Cada web la hago yo, a mano, y me escribes siempre a mí.</p>
-          </div>
-          <div class="preguntas aparece" style="--retraso:90ms">
-            <details name="faq">
-              <summary>¿Tengo que pagar algo antes de ver la web?<i aria-hidden="true"></i></summary>
-              <p>No. Preparo la web con lo que hay de tu negocio en Instagram y Google, te la enseño en el móvil y solo si te convence la publicamos.</p>
-            </details>
-            <details name="faq">
-              <summary>¿Puedo cambiar la carta yo mismo?<i aria-hidden="true"></i></summary>
-              <p>Sí. Te dejo un panel sencillo para cambiar platos, precios y fotos desde el móvil. Si prefieres no tocarlo, con Web y cambios me lo pides por WhatsApp.</p>
-            </details>
-            <details name="faq">
-              <summary>Ya tengo web, pero no me convence.<i aria-hidden="true"></i></summary>
-              <p>La reviso gratis y te digo qué falla: enlaces rotos, carta que no carga, datos mal puestos, lo que no sale en Google. Puedo arreglarla o hacerte una nueva.</p>
-            </details>
-            <details name="faq">
-              <summary>¿Hay permanencia en los planes mensuales?<i aria-hidden="true"></i></summary>
-              <p>No. Los puedes dejar cuando quieras, y la web sigue siendo tuya.</p>
-            </details>
-            <details name="faq">
-              <summary>Mi negocio no está en Pinto.<i aria-hidden="true"></i></summary>
-              <p>No hace falta. Trabajo a distancia por WhatsApp y llamada: hay webs mías en Jaén, Elche y Villaconejos.</p>
-            </details>
-          </div>
-        </div>
+        <ul class="cr-plano" id="cr-plano" aria-label="Obras"></ul>
       </div>
+    </section>
 
-      <div class="salida" id="contacto">
-        <div class="wrap">
-          <h2 class="aparece">¿Te enseño cómo quedaría la tuya?</h2>
-          <p class="aparece" style="--retraso:100ms">Dime el nombre de tu negocio y te preparo una propuesta sin compromiso.</p>
-          <div class="acciones aparece" style="--retraso:180ms">
-            <a class="btn btn-cian iman" href="https://wa.me/34722358950?text=Hola%20Diego%2C%20quiero%20ver%20c%C3%B3mo%20quedar%C3%ADa%20la%20web%20de%20mi%20negocio." target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.5-.4Z"/></svg>
-              Escribirme por WhatsApp
-            </a>
-            <a class="btn btn-linea iman" href="tel:+34722358950">Llamar</a>
+    <section class="mani" id="manifiesto" aria-label="Qué hago">
+      <p id="mani-txt">Cada negocio ya tiene su carta, su rótulo y su forma de hablar. Su web sale de ahí, no de una plantilla. Te la enseño terminada antes de que pagues nada.</p>
+      <div class="firma mono ap"><img src="img/marca/dd-128.webp" alt="" aria-hidden="true" width="56" height="56" loading="lazy"><span>Diego De Galdo<br>Degaldo Designs · Pinto (Madrid)</span></div>
+    </section>
+
+    <section class="indice" id="indice" aria-labelledby="indice-titulo">
+      <div class="indice-cab">
+        <h2 id="indice-titulo">Índice</h2>
+        <p class="mono">Once webs de 2026. «Publicada» es de un cliente y está en marcha; «Propuesta», hecha para enseñársela al negocio.</p>
+      </div>
+      <ul class="lista" id="lista"></ul>
+      <div class="indice-foto" id="indice-foto" aria-hidden="true"><img alt="" aria-hidden="true" width="900" height="563" loading="lazy"></div>
+    </section>
+
+    <section class="proceso" id="proceso" aria-labelledby="proceso-titulo">
+      <h2 id="proceso-titulo" class="ap">Así se hace <em>la tuya</em></h2>
+      <ol class="pasos" id="pasos">
+        <li style="--i:0"><span class="num" aria-hidden="true">1</span><h3>Miro tu negocio</h3><p>Tu ficha de Google, tu Instagram, tus reseñas y tu carta. Lo que ya tienes es el material.</p></li>
+        <li style="--i:1"><span class="num" aria-hidden="true">2</span><h3>Diseño tu web entera</h3><p>Con tus fotos, tus colores y tu forma de hablar, y una idea que solo encaja en tu negocio.</p></li>
+        <li style="--i:2"><span class="num" aria-hidden="true">3</span><h3>Te la enseño terminada</h3><p>Antes de que pagues nada: en persona, con el enlace en tu móvil o con un vídeo de cómo queda.</p></li>
+        <li style="--i:3"><span class="num" aria-hidden="true">4</span><h3>La publico y tú la cambias</h3><p>Con tu dominio. La carta, los precios y el menú del día los cambias tú desde el móvil.</p></li>
+      </ol>
+    </section>
+
+    <section class="contacto" id="contacto" aria-labelledby="contacto-titulo">
+      <h2 id="contacto-titulo" data-encaja="13"><span class="m"><span style="--i:0">¿Hacemos</span></span><span class="m"><span style="--i:1">la tuya?</span></span></h2>
+      <div class="contacto-pie">
+        <div>
+          <p>Dime cómo se llama tu negocio y te preparo una propuesta, sin compromiso.</p>
+          <div class="contacto-datos mono">
+            <a href="tel:+34722358950">722 358 950</a>
+            <a href="mailto:Diegospk291@gmail.com">Diegospk291@gmail.com</a>
           </div>
-          <p class="datos"><span>722 358 950</span><a href="mailto:Diegospk291@gmail.com?subject=Web%20para%20mi%20negocio">Diegospk291@gmail.com</a></p>
+        </div>
+        <div class="acc">
+          <a class="bt bt-tinta" href="https://wa.me/34722358950?text=Hola%20Diego%2C%20he%20visto%20tu%20portfolio%20y%20quiero%20una%20web%20para%20mi%20negocio" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/></svg>Escríbeme por WhatsApp</a>
+          <a class="bt" href="tel:+34722358950">Llamar</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="wrap">
-      <span>© 2026 Degaldo Designs, Diego De Galdo. Pinto (Madrid)<small class="credito">Cerebro 3D a partir de <a href="https://dbarchive.biosciencedbc.jp/en/bodyparts3d/" target="_blank" rel="noopener">BodyParts3D</a>, © DBCLS, <a href="https://creativecommons.org/licenses/by/4.0/deed.es" target="_blank" rel="noopener">CC BY 4.0</a></small></span>
-      <nav aria-label="Pie">
-        <a href="#inicio">Inicio</a>
-        <a href="#exposicion">Exposición</a>
-        <a href="#taquilla">Taquilla</a>
-      </nav>
-    </div>
+  <footer class="pie mono">
+    <p>© 2026 Degaldo Designs · Diego De Galdo · Pinto (Madrid)</p>
+    <p><a href="terms.html">Aviso legal</a> · <a href="privacy.html">Privacidad</a> · Letra: Anybody y JetBrains Mono (SIL OFL)</p>
   </footer>
 
-  <div class="barra-movil oculta" id="barra-movil">
-    <a class="btn btn-cian" href="https://wa.me/34722358950?text=Hola%20Diego%2C%20quiero%20ver%20c%C3%B3mo%20quedar%C3%ADa%20la%20web%20de%20mi%20negocio." target="_blank" rel="noopener">WhatsApp</a>
-    <a class="btn btn-linea" href="#taquilla">Precios</a>
+  <div class="caso" id="caso" role="dialog" aria-modal="true" aria-labelledby="caso-nombre">
+    <div class="caso-barra">
+      <button class="bt" type="button" id="caso-cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Volver</button>
+      <span class="cont mono" id="caso-cont"></span>
+    </div>
+    <div class="caso-cuerpo" id="caso-cuerpo"></div>
   </div>
 
-  <dialog class="sala" id="sala" aria-labelledby="sala-nombre">
-    <div class="sala-barra">
-      <button type="button" id="sala-cerrar" aria-label="Volver a la exposición">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
-        <span class="volver-txt">Volver a la exposición</span>
-      </button>
-      <div class="nav-salas">
-        <button type="button" id="sala-ant">Anterior</button>
-        <button type="button" id="sala-sig">Siguiente</button>
-      </div>
-    </div>
-    <div class="sala-cuerpo" id="sala-cuerpo"></div>
-  </dialog>
-  <div class="sr-velo" id="sr-velo" aria-hidden="true"></div>
-  <div class="sr" id="sr" role="dialog" aria-modal="true" aria-labelledby="sr-nombre" hidden>
-    <div class="sr-barra">
-      <button type="button" id="sr-volver"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg><span class="sr-volver-txt">Volver al mapa</span><span class="solo-movil">Mapa</span></button>
-      <p class="sr-donde" id="sr-donde"></p>
-      <div class="sr-nav"><button type="button" id="sr-ant">Anterior</button><button type="button" id="sr-sig">Siguiente</button></div>
-    </div>
-    <div class="sr-alto" id="sr-alto">
-      <div class="sr-escena" id="sr-escena" data-paso="0">
-        <svg class="sr-lineas" aria-hidden="true"><path id="sr-con" pathLength="1" d="M0 0"/><g class="sr-mapa" id="sr-mapa-lineas"></g></svg>
-        <div id="sr-contenido"></div>
-        <div class="sr-prog"><ol id="sr-puntos" aria-label="Partes de la web"></ol><span class="sr-cont" id="sr-cont"></span></div>
-      </div>
-    </div>
-  </div>
-
-
-  <script src="js/red.js"></script>
+  <script src="js/carrete.js"></script>
   <script>
   (function(){
+    'use strict';
+    /* Las obras. Textos contrastados con la ficha de cada cliente (Proyecto Webs/02-Proyectos-Clientes/<id>/ficha.md) y con el historial. */
     var OBRAS=[
-      {id:'xavi-pinchos',nombre:'Xavi Pinchos',tipo:'bares',lugar:'Bar y restaurante en Pinto (Madrid)',pueblo:'Pinto',estado:'Online',vivo:true,url:'https://xavipinchos.es/',dominio:'xavipinchos.es',
-       bg:'#120c0a',ac:'#ff6a1c',tx:'#f6efe8',tx2:'rgba(246,239,232,.72)',
+      {id:'xavi-pinchos',nombre:'Xavi Pinchos',sector:'Bar y restaurante',lugar:'Pinto (Madrid)',estado:'Publicada',url:'https://xavipinchos.es/',dominio:'xavipinchos.es',
        tecnica:'Dos cartas que cambian solas según la hora, menú del día y QR en las mesas',
-       historia:'Un bar de parrilla y fútbol sin web: en Google solo aparecía "Añadir sitio web". Ahora sus clientes ven la carta que toca a cada hora, y Xavi la cambia desde el móvil.',
-       segunda:'los menús y promos',
-       partes:[['Menús y promos','El menú de Navidad y las promos para compartir, arriba del todo. Xavi los cambia desde el móvil.'],['Dos cartas, según la hora','Desayunos y meriendas por la mañana; después, la carta completa. Cambia sola.'],['Abierto o cerrado, en vivo','El horario dice si el bar está abierto ahora y cuánto falta para abrir.']],
-       detalles:[['La carta que toca','Por la mañana, desayunos y raciones; después, la carta completa. Cambia sola.'],['Menú del día y QR','El menú del día arriba del todo y un QR en cada mesa con la carta.'],['Un panel para el dueño','Platos, precios y fotos se editan sin depender de nadie.']]},
-      {id:'loles-jimenez',nombre:'Loles Jiménez',nombreLargo:'Loles Jiménez GYM & PILATES',tipo:'gimnasios',lugar:'Gimnasio en Torreperogil (Jaén)',pueblo:'Torreperogil',estado:'Online',vivo:true,url:'https://gymypilateslolesjimenez.es/',dominio:'gymypilateslolesjimenez.es',
-       bg:'#0b0e09',ac:'#a8f02e',tx:'#eef3e6',tx2:'rgba(238,243,230,.72)',
-       tecnica:'Tarifas con el coste por día de entreno, horario en vivo y reserva por WhatsApp',
-       historia:'La hice a partir de su propio cartel, en negro y verde. La clienta mandó sus cambios por audio y la publicamos con su dominio en octubre.',
-       segunda:'las clases de pilates',
-       partes:[['Pilates con Loles','Sus 14 años de experiencia y las clases para niños, mayores, hombres, mujeres y embarazadas.'],['Paga por los días que entrenas','Cada cuota dice lo que cuesta cada día de entreno, y los bonos de temporada al lado.'],['También al aire libre','Las clases de step, tonificación y estiramientos en grupo, con sus propias fotos.']],
-       detalles:[['Tarifas que se entienden','Cada cuota dice lo que cuesta cada día de entreno.'],['Abierto ahora','El horario avisa de si el gimnasio está abierto y hasta qué hora.'],['Reserva en un toque','La plaza se reserva por WhatsApp con el mensaje ya escrito.']]},
-      {id:'capricho',nombre:'Capricho',tipo:'locales de copas',lugar:'Copas, cachimbas y billar en Pinto (Madrid)',pueblo:'Pinto',estado:'Cliente',vivo:false,url:'capricho/',
-       bg:'#14070f',ac:'#ff3fa5',tx:'#f8ecf3',tx2:'rgba(248,236,243,.72)',
-       tecnica:'Carta de copas y cachimbas con filtros, cartel de abierto ahora y llamada para reservar',
-       historia:'Tenía una web de Webnode abandonada, con los precios a "00.00 €" y el horario antiguo. La nueva recoge su neón rosa y responde a lo que más se pregunta: si está abierto y qué hay en la carta.',
-       segunda:'cumpleaños y eventos',antes:true,
-       partes:[['Cumpleaños y eventos','Su propio cartel de cumpleaños y lo que incluye, con presupuesto por Instagram o por teléfono.'],['La carta por pestañas','Copas, mojitos, chupitos, cachimbas y sin alcohol, con sus precios reales.'],['¿Está abierto?','Un cartel de neón dice si está abierto y hasta qué hora, con el mapa al lado.']],
-       detalles:[['Carta por pestañas','Copas, mojitos, chupitos, cachimbas y sin alcohol, con sus precios.'],['¿Está abierto?','Un cartel lo dice en cuanto entras, y cuándo abre si está cerrado.'],['Su identidad','El rótulo de neón y las flores del local, llevados a la web.']]},
-      {id:'morrina',nombre:'Morriña',tipo:'street food',lugar:'Bar y street food en Pinto (Madrid)',pueblo:'Pinto',estado:'Propuesta',vivo:false,url:'morrina/',
-       bg:'#032b24',ac:'#e3b341',tx:'#efe5d4',tx2:'rgba(239,229,212,.74)',
-       tecnica:'Carta por pestañas con foto de cada plato, burger del mes y reserva de mesa',
-       historia:'Antes era New Ponzano. Cambió de dueños y de nombre, pero en Google la web seguía llevando al Instagram antiguo y la carta era un PDF en Drive.',
-       segunda:'la carta',
-       partes:[['Para compartir, o no','La carta por pestañas con la foto de cada plato; los que no tienen foto llevan su vieira.'],['Antes New Ponzano, ahora Morriña','La historia del cambio de nombre, contada con la foto de Borja.'],['¿Abrimos hoy?','El horario en vivo, que sabe que el fin de semana cierra pasada la medianoche.']],
-       detalles:[['Pulpo, smash y cócteles','La carta por pestañas, con la foto de cada plato.'],['Reserva de mesa','Desde la portada y desde una barra fija en el móvil.'],['Horario en vivo','Sabe que el sábado cierra pasada la medianoche.']]},
-      {id:'lemko',nombre:'Lem-ko',tipo:'restaurantes',lugar:'Cocina ucraniana y mediterránea en Pinto (Madrid)',pueblo:'Pinto',estado:'Propuesta',vivo:false,url:'lemko/',
-       bg:'#2a1215',ac:'#d1ae68',tx:'#f4ecdd',tx2:'rgba(244,236,221,.74)',
-       tecnica:'Web en español y en ucraniano, menú del día y salones para celebraciones',
-       historia:'Un restaurante familiar sin web propia. La propuesta está en dos idiomas, con los platos ucranianos con su nombre original y el bordado de su logo como adorno.',
-       segunda:'el menú del día',
-       partes:[['Comer bien, cada día','El menú del día y los desayunos ucranianos, como fichas de papel sobre el mantel.'],['El plato de la casa','Las palushky con bryndza, con la frase del propio equipo, antes de la carta.'],['Tu fiesta, en buenas manos','Sus dos salones para cumpleaños, bautizos y comidas de empresa.']],
-       detalles:[['Dos idiomas','Español y ucraniano, con un botón para cambiar.'],['El plato de la casa','Las palushky del domingo, con la frase del propio equipo.'],['Celebraciones','Sus dos salones, para cumpleaños y comidas de grupo.']]},
-      {id:'della-grotta',nombre:'Della Grotta',tipo:'hamburgueserías',lugar:'Hamburguesas y pizzas en Villaconejos (Madrid)',pueblo:'Villaconejos',estado:'Propuesta',vivo:false,url:'della-grotta/',
-       bg:'#121111',ac:'#f0412a',tx:'#f4efe6',tx2:'rgba(244,239,230,.72)',
-       tecnica:'Carta con la foto de cada plato, la oferta de Instagram y un cartel con cuenta atrás',
-       historia:'Una hamburguesería de reparto que solo tenía Instagram. La web junta su carta, sus fotos y sus ofertas, y deja pedir con un toque.',
-       segunda:'la oferta destacada',
-       partes:[['La oferta del finde','El cartel de su Instagram con los precios en texto: 2 pizzas por 18 € y 2 menús burger por 22 €.'],['La carta','Hamburguesas, pizzas y para picar; los platos sin foto llevan una tarjeta de la marca.'],['Cuenta atrás para abrir','El cartel de la puerta dice cuánto falta para abrir, con el horario de la semana.']],
-       detalles:[['Todos los platos igual de importantes','Los que no tienen foto llevan una tarjeta de la marca, del mismo tamaño.'],['Cuenta atrás','Un cartel de puerta dice cuánto falta para abrir.'],['La oferta del finde','El cartel de su Instagram, con los precios en texto.']]},
-      {id:'cafeteria-by-vanessa',nombre:'by Vanessa',nombreLargo:'Cafetería by Vanessa',tipo:'cafeterías',lugar:'Cafetería de barrio en Carrús (Elche)',pueblo:'Elche',estado:'Propuesta',vivo:false,url:'cafeteria-by-vanessa/',clara:true,
-       bg:'#f3ebdf',ac:'#8b4f2a',tx:'#2e1d15',tx2:'rgba(46,29,21,.74)',
-       tecnica:'Desayunos desde las 6, una tostada que montas tú y la carta impresa como un ticket',
-       historia:'Vanessa cogió la cafetería en 2025 y le cambió el nombre. La web habla como ella: tostadas, bocadillos y café de los buenos, con su foto dentro.',
-       segunda:'el juego de monta tu tostada',
-       partes:[['Monta tu tostada','Eliges pan, base e ingredientes y la tostada se dibuja capa a capa.'],['La carta impresa','La carta de tostadas sale de una impresora de comandas, como en la barra.'],['Vanessa en la web','La dueña, con su foto y el nombre antiguo tachado: «Cambiamos el nombre, no la esencia».']],
-       detalles:[['Monta tu tostada','Eliges pan y ingredientes y ves el precio al momento.'],['La carta en un ticket','Sale de una impresora, como en la barra.'],['Vanessa en la web','Un apartado para la dueña, que es quien atiende.']]},
-      {id:'vidrios-jucar',nombre:'Vidrios Jucar',tipo:'cristalerías',lugar:'Cristalería con fábrica propia en Heras (Cantabria)',pueblo:'Heras',estado:'Propuesta',vivo:false,url:'vidrios-jucar/',
-       bg:'#0d0f2e',ac:'#f7e409',tx:'#eef5fa',tx2:'rgba(238,245,250,.74)',
-       tecnica:'Una lámina de vidrio cruza la portada, una ventana que se desmonta y una página para profesionales',
-       historia:'Más de 40 años fabricando vidrio, y su web caída: el dominio ya no abre. La propuesta separa lo que busca un particular de lo que busca una constructora, con fotos de sus propias obras.',
-       segunda:'sus trabajos',
-       partes:[['Qué hay dentro de una ventana','Un doble acristalamiento se desmonta con el scroll: dos vidrios con una cámara entre ellos, cerrada por todo el borde.'],['Un paseo por las obras','Sus trabajos reales en una tira que avanza de lado al bajar; en el móvil, a dedo.'],['Para profesionales','Una página propia con la nave, la maquinaria y lo que fabrican para obra.']],
-       detalles:[['Particular o profesional','Dos caminos desde la portada, cada uno con su página.'],['La ventana por dentro','El doble acristalamiento, capa a capa.'],['Sus propias obras','Fotos de sus trabajos, con lo que se hizo en cada uno.']]},
-      {id:'veterinaria-de-galdo',nombre:'De Galdo',nombreLargo:'Clínica Veterinaria De Galdo',tipo:'veterinarias',lugar:'Clínica veterinaria en Pinto (Madrid)',pueblo:'Pinto',estado:'Proyecto propio',vivo:false,url:'veterinaria-de-galdo/',
-       bg:'#120c1a',ac:'#b99ad3',tx:'#f3eef8',tx2:'rgba(243,238,248,.74)',
+       historia:'Un bar de parrilla y fútbol sin web: en Google solo salía «Añadir sitio web». Ahora sus clientes ven la carta que toca a cada hora, y Xavi la cambia desde el móvil.',
+       partes:[['Menús y promos','El menú de Navidad y las promos para compartir, arriba del todo. Xavi los cambia desde el móvil.'],['Dos cartas, según la hora','Desayunos y meriendas por la mañana; después, la carta completa. Cambia sola.'],['Abierto o cerrado, en vivo','El horario dice si el bar está abierto ahora y cuánto falta para abrir.']]},
+      {id:'veterinaria-de-galdo',nombre:'De Galdo',largo:'Clínica Veterinaria De Galdo',sector:'Clínica veterinaria',lugar:'Pinto (Madrid)',estado:'Proyecto propio',url:'veterinaria-de-galdo/',
        tecnica:'Una radiografía bajo el ratón, una ficha con el nombre de tu animal y la cartilla de servicios con sellos',
        historia:'La clínica de mi padre, Ángel, abierta en Pinto desde 1994 y sin web. Está hecha con los objetos de la consulta: los rayos X, la cartilla y la mesa de acero, con fotos reales de sus pacientes.',
-       segunda:'urgencias',
-       partes:[['Ponle nombre','Escribes cómo se llama tu perro o tu gato y la web le abre ficha y habla de él.'],['Pacientes de verdad','Polaroids de la consulta sobre la mesa de acero: se arrastran y se abren en grande.'],['La cartilla de servicios','Cada servicio es una casilla con su sello, como en la cartilla de vacunas.']],
-       detalles:[['Rayos X en la portada','Al pasar el ratón, la foto se ve como una radiografía.'],['Ponle nombre','La web habla de tu animal por su nombre.'],['Urgencias claras','Cuándo venir sin cita y el móvil de urgencias, con un electrocardiograma.']]}
+       partes:[['Ponle nombre','Escribes cómo se llama tu perro o tu gato y la web le abre ficha y habla de él.'],['Pacientes de verdad','Polaroids de la consulta sobre la mesa de acero: se arrastran y se abren en grande.'],['La cartilla de servicios','Cada servicio es una casilla con su sello, como en la cartilla de vacunas.']]},
+      {id:'vidrios-jucar',nombre:'Vidrios Jucar',sector:'Cristalería',lugar:'Heras (Cantabria)',estado:'Propuesta',url:'vidrios-jucar/',
+       tecnica:'Una lámina de vidrio cruza la portada, una ventana que se desmonta y una página para profesionales',
+       historia:'Más de 40 años fabricando vidrio, y su web caída: el dominio ya no abre. La propuesta separa lo que busca un particular de lo que busca una constructora, con fotos de sus propias obras.',
+       partes:[['Qué hay dentro de una ventana','Un doble acristalamiento se desmonta con el scroll: dos vidrios con una cámara entre ellos, cerrada por todo el borde.'],['Un paseo por las obras','Sus trabajos reales en una tira que avanza de lado al bajar; en el móvil, a dedo.'],['Para profesionales','Una página propia con la nave, la maquinaria y lo que fabrican para obra.']]},
+      {id:'cafeteria-by-vanessa',nombre:'by Vanessa',largo:'Cafetería by Vanessa',sector:'Cafetería',lugar:'Elche (Alicante)',estado:'Propuesta',url:'cafeteria-by-vanessa/',
+       tecnica:'La barra vista desde arriba, una tostada que montas tú y la carta impresa como un ticket',
+       historia:'Vanessa cogió la cafetería en 2025 y le cambió el nombre. La web habla como ella: tostadas, bocadillos y café, con su foto dentro y el nombre antiguo tachado.',
+       partes:[['Monta tu tostada','Eliges pan, base e ingredientes y la tostada se dibuja capa a capa.'],['La carta impresa','La carta de tostadas sale de una impresora de comandas, como en la barra.'],['Vanessa en la web','La dueña, con su foto y el nombre antiguo tachado: «Cambiamos el nombre, no la esencia».']]},
+      {id:'papaventos',nombre:'Papaventos',sector:'Restaurante de tapas',lugar:'Valdemoro (Madrid)',estado:'Propuesta',url:'papaventos/',
+       tecnica:'La cometa del logo cruza la portada, hace un rizo en el aire y se posa como la V del nombre',
+       historia:'Tapas, brasa y sugerencias nuevas cada semana, con más de mil reseñas en Google. La portada cuenta su nombre: una cometa que llega volando y aterriza en el logo.',
+       partes:[['Su frase, en grande','«Si un cliente vuelve, hiciste las cosas bien», la frase que ellos mismos escribieron a mano en Instagram.'],['El local','Listones de madera, faroles de mimbre y mesas de mármol, con las fotos del propio local.'],['Horario y dónde estamos','Dice si está abierto ahora y cuándo abre, con el horario de invierno que publicaron.']]},
+      {id:'gimnasio-energy',nombre:'Gimnasio Energy',sector:'Gimnasio',lugar:'Villanueva del Arzobispo (Jaén)',estado:'Propuesta',url:'gimnasio-energy/',
+       tecnica:'Un átomo con una órbita por sala: elegir una la enciende y enseña su panel',
+       historia:'Un gimnasio de pueblo con musculación, cardio, ciclo indoor, clases y artes marciales. Cada sala es una órbita del átomo y, al elegirla, enseña su panel con sus fotos.',
+       partes:[['Karate para tus hijos','La Sala Tatami con la circular para las familias: grupos por edad, exámenes y lo que hay que saber antes de apuntarse.'],['Tarifas como carnets','Cada cuota es un carnet de socio al que se le da la vuelta para ver qué incluye.'],['Lo que dicen en Google','Sus reseñas escritas a mano sobre la pizarra, con el 4,9 de 133 opiniones.']]},
+      {id:'casa-marisa',nombre:'Casa Marisa',sector:'Casa de comidas asturiana',lugar:'Carabanchel (Madrid)',estado:'Propuesta',url:'casa-marisa/',
+       tecnica:'Un cuchillo corta el cachopo de la portada y las dos mitades enseñan el relleno',
+       historia:'Desayunos, menú del día, raciones y cachopos en una esquina de Carabanchel. La portada hace lo que todo el mundo espera de un cachopo: abrirlo.',
+       partes:[['Por encargo','La fabada, las fabes con almejas o el arroz con bogavante, que se piden con antelación.'],['La casa','Comida casera y fotos de Asturias en las paredes, con el cuadro de la playa de Torimbia.'],['Lo que dicen en Google','Lo que más sale en sus 820 reseñas: el cachopo, la fabada y el arroz con bogavante.']]},
+      {id:'el-alfar',nombre:'El Alfar',sector:'Restaurante de autor',lugar:'Alcorcón (Madrid)',estado:'Propuesta',url:'el-alfar/',
+       tecnica:'Carta de autor que enseña el plato señalado, menú de la semana que cambia el dueño y reservas dentro de la web',
+       historia:'Cocina de autor con un 4,9 en Google y sin web: las reservas iban por CoverManager y la carta estaba en TheFork. La propuesta lo junta todo en papel, tinta y barro.',
+       partes:[['La carta de autor','Los platos en lista, con puntos guía hasta el precio; el plato señalado aparece en el arco de al lado.'],['Pasa, que te enseñamos la casa','El comedor con sus fotos reales, en una tira que se recorre de lado.'],['Un 4,9 en Google','Las reseñas de Google y TheFork, en un muro en 3D.']]},
+      {id:'tapilla-sixtina',nombre:'Tapilla Sixtina',sector:'Bar de tapas',lugar:'Valdemoro (Madrid)',estado:'Propuesta',url:'tapilla-sixtina/',
+       tecnica:'Las dos manos del logo se tocan y la foto de las croquetas pasa de fresco a color',
+       historia:'Su logo juega con la Capilla Sixtina. En la portada las dos manos se acercan, salta la chispa y la foto de sus croquetas caseras se colorea desde los dedos.',
+       partes:[['La casa','Barra, sala y terraza en la calle, con el rótulo de las dos manos.'],['Lo que dicen en Google','Sus reseñas una a una, con el 4,7 de Google.'],['Horario','La semana entera con el día de hoy marcado y si está abierto ahora.']]},
+      {id:'loles-jimenez',nombre:'Loles Jiménez',largo:'Loles Jiménez GYM & PILATES',sector:'Gimnasio y pilates',lugar:'Torreperogil (Jaén)',estado:'Publicada',url:'https://gymypilateslolesjimenez.es/',dominio:'gymypilateslolesjimenez.es',
+       tecnica:'Tarifas con el coste por día de entreno, horario en vivo y reserva por WhatsApp',
+       historia:'La hice a partir de su propio cartel, en negro y verde. La clienta mandó sus cambios por audio y la publicamos con su dominio en octubre.',
+       partes:[['Pilates con Loles','Sus 14 años de experiencia y las clases para niños, mayores, hombres, mujeres y embarazadas.'],['Paga por los días que entrenas','Cada cuota dice lo que cuesta cada día de entreno, y los bonos de temporada al lado.'],['También al aire libre','Las clases de step, tonificación y estiramientos en grupo, con sus propias fotos.']]},
+      {id:'manda-carallo',nombre:'Manda Carallo',sector:'Restaurante gallego',lugar:'Getafe (Madrid)',estado:'Propuesta',url:'manda-carallo/',
+       tecnica:'El pimentón cae sobre la palabra «Pulpo» del titular y la deja teñida',
+       historia:'Pulpo, zamburiñas, filloas y arroz con bogavante. El titular se aliña como el pulpo en la mesa: una pizca de pimentón cae de izquierda a derecha.',
+       partes:[['La carta','Raciones, sugerencias y postres por pestañas, con los precios de su pizarra y la foto del plato al lado.'],['En la mesa','Las fotos de sus clientes en Google Maps, a buen tamaño y con su autor.'],['Como en casa','Sus reseñas en un muro en 3D, con el 4,7 de casi 1.400 opiniones.']]}
     ];
-    var N=OBRAS.length;
+    var N=OBRAS.length, D=document, H=D.documentElement;
     var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
     var raton=matchMedia('(hover:hover) and (pointer:fine)').matches;
-    var escritorio=matchMedia('(min-width:1000px)');
-    function pad(n){return (n<10?'0':'')+n}
-    function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')}
-    function hex(h){h=h.replace('#','');return [parseInt(h.slice(0,2),16),parseInt(h.slice(2,4),16),parseInt(h.slice(4,6),16)]}
-    function mezcla(a,b,t){var x=hex(a),y=hex(b);return 'rgb('+x.map(function(v,k){return Math.round(v+(y[k]-v)*t)}).join(',')+')'}
-
-    /* ===== 1. Portada: fondo fundido, rueda de palabras y linterna ===== */
-    var portada=document.getElementById('inicio'), capas=document.getElementById('capas'), linternaImg=document.getElementById('linterna-img');
-    var rueda=document.getElementById('rueda'), deFondo=document.getElementById('de-fondo'), txt=document.getElementById('portada-txt'), fondo=document.getElementById('fondo'), fondoIn=document.getElementById('fondo-in'); var pie=document.querySelector('.pie-portada'), bajar=document.querySelector('.bajar');
-    OBRAS.forEach(function(o,i){
-      var im=document.createElement('img'); im.className='capa'+(i===0?' activa':''); im.alt='';
-      im.width=1800; im.height=1125; im.src='img/sala/'+o.id+'.webp';
-      capas.appendChild(im);
-    });
-    var fondoActual=0;
-    function ponerFondo(i){
-      var cs=capas.children; cs[fondoActual].classList.remove('activa'); cs[i].classList.add('activa'); fondoActual=i;
-      var o=OBRAS[i]; portada.style.setProperty('--tono',o.clara?'#d29a6a':o.ac);
-      linternaImg.src='img/sala/'+o.id+'.webp';
-      if(red){var im=capas.children[i];if(im.complete)red.foto(im);else im.addEventListener('load',function(){red&&red.foto(im)},{once:true})}
-      deFondo.innerHTML='De fondo, <b>'+esc(o.nombreLargo||o.nombre)+'</b>, '+esc(o.pueblo);
-      var vieja=rueda.querySelector('.ahora'), nueva=document.createElement('span');
-      nueva.textContent=o.tipo; rueda.appendChild(nueva);
-      requestAnimationFrame(function(){requestAnimationFrame(function(){
-        if(vieja){vieja.classList.remove('ahora');vieja.classList.add('sale');setTimeout(function(){vieja.remove()},800)}
-        nueva.classList.add('ahora');
-      })});
-    }
-    portada.style.setProperty('--tono',OBRAS[0].ac);
-    requestAnimationFrame(function(){requestAnimationFrame(function(){portada.classList.add('lista')})});
-    var ciclo=null, enPortada=true;
-    function arrancarCiclo(){ if(ciclo||reduce)return; ciclo=setInterval(function(){ if(!document.hidden)ponerFondo((fondoActual+1)%N) },3600); }
-    function pararCiclo(){ clearInterval(ciclo); ciclo=null; }
-    if('IntersectionObserver' in window)new IntersectionObserver(function(es){ enPortada=es[0].isIntersecting; (enPortada&&scrollY<=8)?arrancarCiclo():pararCiclo() },{threshold:.2}).observe(portada);
-    if(raton&&!reduce){
-      var lx=0,ly=0,lpend=false;
-      portada.addEventListener('pointermove',function(e){ if(e.pointerType!=='mouse')return; portada.classList.add('con-raton'); var r=fondo.getBoundingClientRect(); lx=e.clientX-r.left; ly=e.clientY-r.top;
-        if(!lpend){lpend=true;requestAnimationFrame(function(){fondo.style.setProperty('--mx',lx+'px');fondo.style.setProperty('--my',ly+'px');lpend=false})} });
-      portada.addEventListener('pointerleave',function(){portada.classList.remove('con-raton')});
-      document.querySelectorAll('.iman').forEach(function(b){
-        b.addEventListener('pointermove',function(e){var r=b.getBoundingClientRect();var x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;b.style.translate=(x*12).toFixed(1)+'px '+(y*8).toFixed(1)+'px'});
-        b.addEventListener('pointerleave',function(){b.style.translate=''});
-      });
-    }
-
-    /* Estela: el ratón deja puntos que se conectan entre sí, como la red que viene después */
-    if(raton&&!reduce){
-      var estela=document.getElementById('estela'), ctx=estela.getContext('2d'), motas=[], ult=null, cur=null, rafE=0, tE=0, dprE=Math.min(window.devicePixelRatio||1,2);
-      var medirE=function(){estela.width=Math.round(estela.clientWidth*dprE);estela.height=Math.round(estela.clientHeight*dprE)};
-      medirE(); addEventListener('resize',medirE);
-      portada.addEventListener('pointermove',function(e){
-        if(e.pointerType!=='mouse')return;
-        var r=estela.getBoundingClientRect(), x=e.clientX-r.left, y=e.clientY-r.top; cur={x:x,y:y};
-        if(!ult||Math.hypot(x-ult.x,y-ult.y)>18){
-          motas.push({x:x+(Math.random()-.5)*14,y:y+(Math.random()-.5)*14,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3-.06,v:1,r:.8+Math.random()*1.3});
-          ult={x:x,y:y}; if(motas.length>70)motas.shift();
-        }
-        if(!rafE)rafE=requestAnimationFrame(pintarE);
-      });
-      portada.addEventListener('pointerleave',function(){cur=null});
-      var pintarE=function(t){
-        var dt=Math.min(.05,tE?(t-tE)/1000:.016); tE=t; rafE=0;
-        var c=hex(luz(OBRAS[fondoActual])), D=130*dprE;
-        ctx.setTransform(1,0,0,1,0,0); ctx.clearRect(0,0,estela.width,estela.height); ctx.setTransform(dprE,0,0,dprE,0,0);
-        motas=motas.filter(function(m){m.v-=dt/1.7;m.x+=m.vx;m.y+=m.vy;return m.v>0});
-        ctx.lineWidth=.8;
-        for(var i=0;i<motas.length;i++){var a=motas[i];
-          for(var j=i+1;j<motas.length;j++){var b=motas[j],d=Math.hypot(a.x-b.x,a.y-b.y)*dprE;if(d<D){
-            ctx.strokeStyle='rgba('+c[0]+','+c[1]+','+c[2]+','+((1-d/D)*Math.min(a.v,b.v)*.55).toFixed(3)+')';ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()}}
-          if(cur){var dc=Math.hypot(a.x-cur.x,a.y-cur.y)*dprE;if(dc<D*1.2){ctx.strokeStyle='rgba(237,240,247,'+((1-dc/(D*1.2))*a.v*.35).toFixed(3)+')';ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(cur.x,cur.y);ctx.stroke()}}
-        }
-        motas.forEach(function(m){ctx.fillStyle='rgba(237,240,247,'+(m.v*.9).toFixed(3)+')';ctx.beginPath();ctx.arc(m.x,m.y,m.r*(.6+m.v*.6),0,6.2832);ctx.fill();
-          ctx.fillStyle='rgba('+c[0]+','+c[1]+','+c[2]+','+(m.v*.25).toFixed(3)+')';ctx.beginPath();ctx.arc(m.x,m.y,m.r*4*m.v,0,6.2832);ctx.fill()});
-        if(motas.length)rafE=requestAnimationFrame(pintarE); else tE=0;
+    var ext=function(){return H.classList.contains('sin-webp')?'.jpg':'.webp'};
+    var img=function(o,s){return 'img/sala/'+o.id+(s||'')+ext()};
+    var pad=function(n){return (n<10?'0':'')+n};
+    var esc=function(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')};
+    var vivo=function(o){return o.estado==='Publicada'};
+    // Titular gigante que nunca se sale: baja de tamaño hasta que su palabra más larga cabe (máximo, data-encaja en vw)
+    function encajar(el){
+      var t=parseFloat(el.dataset.encaja)*innerWidth/100, w=el.clientWidth, r=D.createRange();
+      var ancho=function(){ // la línea de texto más ancha (una palabra que no cabe se sale de la caja y se mide entera)
+        var m=0, tw=D.createTreeWalker(el,NodeFilter.SHOW_TEXT), n;
+        while((n=tw.nextNode())){r.selectNodeContents(n);var rs=r.getClientRects();for(var i=0;i<rs.length;i++)m=Math.max(m,rs[i].width)}
+        return m;
       };
+      el.style.setProperty('--enc',t+'px');
+      for(var k=0;k<16&&ancho()>w;k++){t*=.93;el.style.setProperty('--enc',t+'px')}
     }
+    function encajarTodo(){[].forEach.call(D.querySelectorAll('[data-encaja]'),encajar)}
+    var FLECHA='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+    var EXT='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>';
 
-    /* ===== 2. Exposición: la red ===== */
-    var expo=document.getElementById('exposicion'), alto=document.getElementById('expo-alto'), escena=document.getElementById('escenario');
-    var obrasCont=document.getElementById('obras'), nodosCont=document.getElementById('nodos'), indice=document.getElementById('indice');
-    var ui=document.getElementById('expo-ui'), barra=document.getElementById('barra-progreso'), contador=document.getElementById('contador');
-    var conector=document.querySelector('#conector path'), lienzoRed=document.getElementById('red');
-    var tipoG=document.getElementById('tipo-gigante'), mapa=document.getElementById('mapa'), mapaSvg=document.getElementById('mapa-lineas');
-    var REGIONES=[0,1,2,3,4,5,6,7,8];
-    function may(t){return t.charAt(0).toUpperCase()+t.slice(1)}
-    var cab=document.getElementById('cabecera'), barraMovil=document.getElementById('barra-movil');
-    var movil=matchMedia('(max-width:999px)');
-    var FLECHA='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>';
-    function luz(o){return o.clara?'#d29a6a':o.ac}
-    function webgl2(){try{return !!document.createElement('canvas').getContext('webgl2')}catch(e){return false}}
-    var conRed=!reduce&&!!window.fetch&&!!window.Red&&webgl2();
-    if(conRed)expo.classList.add('con-red');
+    /* ===== Índice y rejilla sin 3D ===== */
+    var lista=D.getElementById('lista'), plano=D.getElementById('cr-plano');
     OBRAS.forEach(function(o,i){
-      var el=document.createElement('article'), nom=esc(o.nombreLargo||o.nombre);
-      el.className='obra'+(conRed?'':' aparece'); el.id='obra-'+o.id;
-      el.setAttribute('aria-label','Sala '+(i+1)+' de '+N+': '+nom);
-      el.style.cssText='--ac:'+o.ac+';--luz:'+luz(o);
-      el.innerHTML='<figure class="lienzo"><div class="marco"><div class="barra" aria-hidden="true"><i></i><i></i><i></i></div>'+
-          '<img src="img/sala/'+o.id+'-900.webp" srcset="img/sala/'+o.id+'-900.webp 900w, img/sala/'+o.id+'.webp 1800w" sizes="(min-width:1000px) 36vw, 82vw" width="1800" height="1125" alt="Portada de la web de '+nom+' en ordenador" loading="lazy"></div>'+
-          '<div class="tel"><img src="img/sala/'+o.id+'-movil.webp" width="540" height="1169" alt="La misma web en el móvil" loading="lazy"></div></figure>'+
-        '<div class="cartela">'+
-          '<p class="sala-num">Sala '+pad(i+1)+' <span>· '+esc(o.tipo)+'</span></p>'+
-          '<h3>'+esc(o.nombre)+'</h3>'+
-          '<p class="lugar">'+esc(o.lugar)+'</p>'+
-          '<p class="tecnica">'+esc(o.tecnica)+'</p>'+
-          '<p class="estado">'+(o.vivo?'<span class="punto" aria-hidden="true"></span>':'')+esc(o.estado)+(o.vivo?', en '+esc(o.dominio):'')+'</p>'+
-          '<div class="acc"><button type="button" class="btn btn-sala" data-abrir="'+i+'">Entrar en la sala</button>'+
-          '<a class="enlace" href="'+o.url+'" target="_blank" rel="noopener">'+(o.vivo?'Visitar la web':'Ver la web')+FLECHA+'</a></div>'+
-        '</div>';
-      if(conRed)el.inert=true;
-      obrasCont.appendChild(el);
-      var nd=document.createElement('button'); nd.type='button'; nd.className='nodo'; nd.dataset.abrir=i; nd.tabIndex=-1;
-      nd.style.cssText='--luz:'+luz(o)+';--k:'+i;
-      nd.setAttribute('aria-label','Entrar en la sala de '+nom);
-      nd.innerHTML='<i aria-hidden="true"></i><span>'+esc(may(o.tipo))+'</span>';
-      nodosCont.appendChild(nd);
-      var li=document.createElement('li'); li.innerHTML='<button type="button" data-ir="'+i+'" style="--luz:'+luz(o)+'" aria-label="'+esc(o.nombre)+'"><i class="pt" aria-hidden="true"></i><span>'+esc(o.nombre)+'</span></button>'; indice.appendChild(li);
-      var rama=document.createElement('button'); rama.type='button'; rama.className='rama'; rama.dataset.abrir=i; rama.style.cssText='--luz:'+luz(o)+';--k:'+i; rama.tabIndex=-1;
-      rama.innerHTML='<b>'+esc(may(o.tipo))+'</b><span>'+esc(o.nombre)+'</span>'; mapa.appendChild(rama);
-      var ln=document.createElementNS('http://www.w3.org/2000/svg','path'); ln.setAttribute('pathLength','1'); ln.style.stroke=luz(o); ln.style.setProperty('--k',i); mapaSvg.appendChild(ln);
+      var li=D.createElement('li');
+      li.innerHTML='<button class="fila" type="button" data-obra="'+i+'"><img class="mini" src="'+img(o,'-900')+'" alt="" width="900" height="563" loading="lazy">'+
+        '<span class="n"><i>'+esc(o.nombre)+'</i><i aria-hidden="true">'+esc(o.nombre)+'</i></span><span class="mono sec">'+esc(o.sector)+'</span><span class="mono lug">'+esc(o.lugar)+'</span>'+
+        '<span class="mono est'+(vivo(o)?' vivo':'')+'">'+esc(o.estado)+'</span></button>';
+      lista.appendChild(li);
+      var p=D.createElement('li');
+      p.innerHTML='<button type="button" data-obra="'+i+'"><img src="'+img(o,'-900')+'" alt="" width="900" height="563" loading="lazy"><span>'+esc(o.nombre)+'</span></button>';
+      plano.appendChild(p);
     });
-    var obrasEl=[].slice.call(obrasCont.children), nodosEl=[].slice.call(nodosCont.children), ramasEl=[].slice.call(mapa.children), lineasEl=[].slice.call(mapaSvg.children);
-    var INTRO=1, PASO=1.15, FINAL=1.8;
-    alto.style.setProperty('--u',INTRO+N*PASO+FINAL+1);
-    var actual=-1;
-    function marcarActual(i){
-      if(i===actual)return; actual=i;
-      contador.textContent=pad(i+1)+' / '+pad(N);
-      indice.querySelectorAll('button').forEach(function(b,k){b.setAttribute('aria-current',k===i?'true':'false')});
-      ui.style.setProperty('--ui-ac',luz(OBRAS[i])); escena.style.setProperty('--luz',luz(OBRAS[i]));
-    }
-    /* Palabra gigante con el tipo de negocio, que rueda como la de la portada */
-    function ponerTipo(t,c){
-      var ultima=tipoG.lastElementChild; if(ultima&&!ultima.classList.contains('sale')&&ultima.textContent===t)return;
-      [].forEach.call(tipoG.children,function(v){ if(v.classList.contains('sale'))return; v.classList.remove('ahora');v.classList.add('sale');setTimeout(function(){v.remove()},1200) });
-      var nueva=document.createElement('span'); nueva.textContent=t; nueva.style.setProperty('--luz',c); nueva.style.setProperty('--f',Math.min(1,10/t.length).toFixed(3)); tipoG.appendChild(nueva);
-      requestAnimationFrame(function(){requestAnimationFrame(function(){ if(!nueva.classList.contains('sale'))nueva.classList.add('ahora') })});
-    }
-    marcarActual(0);
+    D.getElementById('cr-total').textContent=pad(N);
+    var marcas=D.getElementById('cr-marcas');
+    for(var k=0;k<N;k++)marcas.appendChild(D.createElement('i'));
 
-    /* Estado de la escena: lo que pide el scroll y lo que se ve (suavizado) */
-    var red=null, rafRed=0, ultimoT=0, fase='intro', activo=-1, mostrada=-1, directo=-1, giro=0, ancla=null;
-    var BASE=-Math.PI/2;
-    var est={morph:0,aparece:0,shift:0,yaw:BASE,pitch:.1,escala:1,offX:0,offY:.05,brillo:1,focoAmt:0,impulso:0,activo:-1,final:0,visto:[],luces:[],tiempo:0};
-    var vel={yaw:0,pitch:0,escala:0,offX:0,offY:0};
-    var vistoObj=[]; for(var v=0;v<N;v++){est.visto.push(0);est.luces.push(0);vistoObj.push(0)}
-    /* Muelle amortiguado: arranca y frena suave, sin tirones */
-    function muelle(clave,objetivo,dt,ang){
-      var d=ang?Math.atan2(Math.sin(objetivo-est[clave]),Math.cos(objetivo-est[clave])):objetivo-est[clave], K=reduce?400:7.5, C=2*Math.sqrt(K);
-      vel[clave]+=(d*K-vel[clave]*C)*dt; est[clave]+=vel[clave]*dt;
+    /* M32: la captura sigue al cursor por la lista (solo con ratón) */
+    var foto=D.getElementById('indice-foto'), fotoImg=foto.querySelector('img');
+    if(raton){
+      var fx=0,fy=0,tx=0,ty=0,fRaf=0;
+      var mover=function(){fx+=(tx-fx)*.18;fy+=(ty-fy)*.18;foto.style.translate=fx+'px '+fy+'px';fRaf=Math.abs(tx-fx)+Math.abs(ty-fy)>.5?requestAnimationFrame(mover):0};
+      lista.addEventListener('pointermove',function(e){
+        tx=e.clientX+28;ty=e.clientY-foto.offsetHeight/2;
+        if(tx+foto.offsetWidth>innerWidth-12)tx=e.clientX-foto.offsetWidth-28;
+        if(!foto.classList.contains('on')){fx=tx;fy=ty}
+        if(!fRaf)fRaf=requestAnimationFrame(mover);
+      });
+      lista.addEventListener('pointerover',function(e){var b=e.target.closest('.fila');if(!b)return;fotoImg.src=img(OBRAS[+b.dataset.obra],'-900');
+        if(!foto.classList.contains('on')){tx=fx=e.clientX+28;ty=fy=e.clientY-foto.offsetHeight/2;foto.style.translate=fx+'px '+fy+'px'}foto.classList.add('on')});
+      lista.addEventListener('pointerleave',function(){foto.classList.remove('on')});
     }
-    var lados=null;
-    function hacia(a,b,k){return a+(b-a)*k}
-    function angHacia(a,b,k){return a+Math.atan2(Math.sin(b-a),Math.cos(b-a))*k}
-    function ponerFase(f){ if(f===fase)return; fase=f; escena.dataset.fase=f; lados=null;
-      ramasEl.forEach(function(n){n.tabIndex=f==='final'?0:-1}); nodosEl.forEach(function(n){n.tabIndex=-1});
-      if(f==='paso'&&actual>=0)ponerTipo(OBRAS[actual].tipo,luz(OBRAS[actual]));
-      if(f!=='paso')[].forEach.call(tipoG.children,function(v){if(v.classList.contains('sale'))return;v.classList.remove('ahora');v.classList.add('sale');setTimeout(function(){v.remove()},1200)}); }
-    function mostrarTarjeta(i){
-      if(mostrada===i)return;
-      if(mostrada>=0){obrasEl[mostrada].classList.remove('activa');obrasEl[mostrada].inert=true}
-      mostrada=i; conector.style.transition='none'; conector.style.strokeDashoffset='1';
-      if(i<0)return;
-      obrasEl[i].inert=false; obrasEl[i].classList.add('activa');
-      var m=obrasEl[i].querySelector('.marco').getBoundingClientRect(), mv=movil.matches;
-      ancla=mv?{x:m.left+m.width*.5,y:m.top-10,mv:true}:{x:m.right+14,y:m.top+m.height*.42,mv:false};
-      conector.getBoundingClientRect();
-      conector.style.transition='stroke-dashoffset .8s cubic-bezier(.77,0,.175,1)'; conector.style.strokeDashoffset='0';
+
+    /* ===== El carrete ===== */
+    var cr=D.getElementById('obras'), escena=D.getElementById('escena'), lienzo=D.getElementById('lienzo');
+    var INTRO=1.25, PASO=.55, COLA=.5;
+    var tres=null;
+    if(!reduce&&window.Carrete){
+      try{tres=window.Carrete(lienzo,{imagenes:OBRAS.map(function(o){return img(o,'-900')}),tinta:'#0b0d12',linea:'#eef0f3'})}catch(e){tres=null}
     }
-    function cuadro(ahora){
-      rafRed=0;
-      var dt=Math.min(.05,Math.max(0,(ahora-(ultimoT||ahora))/1000)); ultimoT=ahora; est.tiempo+=dt;
-      var H=innerHeight, r=alto.getBoundingClientRect(), u=-r.top/H, mv=movil.matches, enSala=salaI>=0||est.sala>.002;
-      var mObj=enSala?1:Math.max(0,Math.min(1,scrollY/Math.max(1,portada.offsetHeight*.92)));
-      est.morph=hacia(est.morph,mObj,1-Math.exp(-dt*(reduce?60:4.5))); if(Math.abs(mObj-est.morph)<.0004)est.morph=mObj;
-      est.aparece=enSala?1:Math.max(0,Math.min(1,scrollY/(H*.08)));
-      est.shift=enSala?0:2*scrollY/H;
-      if(!enSala)fondoIn.style.opacity=String(1-est.aparece);
-      /* lóbulo que se suelta (sala) y foco al pasar por el mapa */
-      var S=0;
-      for(var q=0;q<N;q++){var tg=selObj[q],dq=tg-salaProg[q];salaProg[q]+=Math.sign(dq)*Math.min(Math.abs(dq),dt*(reduce?99:.75));var xq=salaProg[q];est.sel[q]=xq*xq*(3-2*xq);S=Math.max(S,est.sel[q]);
-        est.hover[q]=hacia(est.hover[q],enSala?0:hoverObj[q],1-Math.exp(-dt*7))}
-      est.sala=S;
+    function sin3d(){tres=null;H.classList.add('sin-3d')}
+    if(!tres)sin3d();
+    else cr.style.setProperty('--alto-cr',Math.round((INTRO+PASO*(N-1)+COLA+1)*100));
 
-      var f='intro', nuevo=-1;
-      if(u>=INTRO+N*PASO)f='final'; else if(u>=INTRO){f='paso';nuevo=Math.min(N-1,Math.floor((u-INTRO)/PASO))}
-      ponerFase(f);
-      if(nuevo!==activo){
-        activo=nuevo; est.activo=nuevo; est.focoAmt=0; mostrarTarjeta(-1);
-        est.impulso=(nuevo>=0&&nuevo===directo)?1:-.3; directo=-1;
-        nodosEl.forEach(function(n,k){n.classList.toggle('activo',k===nuevo);n.classList.remove('llego')});
-        if(nuevo>=0){marcarActual(nuevo);ponerTipo(OBRAS[nuevo].tipo,luz(OBRAS[nuevo]))}
-      }
-      if(activo>=0){
-        est.impulso+=dt/1.1;
-        if(est.impulso>=1){mostrarTarjeta(activo);vistoObj[activo]=1;nodosEl[activo].classList.add('llego');est.focoAmt=hacia(est.focoAmt,1,1-Math.exp(-dt*3))}
-      }
-      for(var k=0;k<N;k++){
-        est.visto[k]=hacia(est.visto[k],vistoObj[k],1-Math.exp(-dt*3));
-        var lz=f==='final'?.9:(k===activo&&est.impulso>=.9?1:(vistoObj[k]?.42:0));
-        est.luces[k]=hacia(est.luces[k],lz,1-Math.exp(-dt*(lz>est.luces[k]?2.6:1.6)));
-      }
-      barra.style.scale=Math.max(0,Math.min(1,(u-INTRO)/(N*PASO)))+' 1';
+    // El titular gigante ocupa todo el ancho útil
+    var titulo=D.querySelector('.cr-titulo');
+    function ajustar(){
+      var l1=titulo.querySelector('.l1'), w=titulo.clientWidth-2*parseFloat(getComputedStyle(titulo).paddingLeft);
+      escena.style.setProperty('--fit','100px'); var a=l1.scrollWidth;
+      escena.style.setProperty('--fit',Math.min(100*w/a,innerHeight*.3).toFixed(1)+'px');
+    }
+    var todo=function(){ajustar();encajarTodo()};
+    (D.fonts&&D.fonts.ready?D.fonts.ready:Promise.resolve()).then(todo); addEventListener('resize',todo); todo();
 
-      /* Cámara */
-      var T={yaw:BASE+Math.sin(est.tiempo*.22)*.4,pitch:.1,escala:mv?.78:1,offX:0,offY:mv?.14:.07,brillo:1,final:0};
-      if(f==='paso'){var o=red.orientar(activo,mv?.15:-.5);T.yaw=o.yaw+Math.sin(est.tiempo*.3)*.05;T.pitch=o.pitch;T.escala=mv?.72:1.05;T.offX=mv?0:.3;T.offY=mv?.29:0}
-      if(f==='final'){T.yaw=BASE+.55+Math.sin(est.tiempo*.18)*.12;T.pitch=.42;T.escala=mv?.46:.8;T.offY=mv?.36:.07;T.brillo=.85;T.final=1}
-      var SS=null; if(salaI>=0){SS=cuadroSala(dt,mv);T.yaw=SS.yaw;T.pitch=SS.pitch;T.escala=SS.escala;T.offX=SS.offX;T.offY=SS.offY;T.brillo=1}
-      est.explota=hacia(est.explota,(f==='final'&&salaI<0)?1:0,1-Math.exp(-dt*2.2));
-      est.densidad=1-.3*est.explota; est.redAlfa=1-.6*est.explota;
-      muelle('yaw',T.yaw,dt,true); muelle('pitch',T.pitch,dt); muelle('escala',T.escala,dt); muelle('offX',T.offX,dt); muelle('offY',T.offY,dt);
-      est.brillo=hacia(est.brillo,T.brillo,1-Math.exp(-dt*2));
-      est.final=hacia(est.final,T.final,1-Math.exp(-dt*2)); if(Math.abs(est.final-T.final)<.002)est.final=T.final;
-      est.foco=activo;
+    var actual=-1, nombreEl=D.getElementById('cr-nombre'), metaEl=D.getElementById('cr-meta'), numEl=D.getElementById('cr-n');
+    function ponerObra(i){
+      if(i===actual)return; var dir=i>actual?1:-1; actual=i; var o=OBRAS[i];
+      numEl.textContent=pad(i+1);
+      metaEl.innerHTML='<b>'+esc(o.sector)+'</b> · '+esc(o.lugar)+'<span class="estado'+(vivo(o)?' vivo':'')+'">'+esc(o.estado)+'</span>';
+      [].forEach.call(marcas.children,function(m,k){m.className=k===i?'on':(k<i?'visto':'')});
+      var vieja=nombreEl.querySelector('span:not(.sale)'), nueva=D.createElement('span'); nueva.textContent=o.nombre;
+      if(reduce||!vieja||!enObras){nombreEl.innerHTML='';nombreEl.appendChild(nueva);encajar(nombreEl);return}
+      nueva.className='entra'; nueva.style.translate='0 '+(30*dir)+'%'; nombreEl.appendChild(nueva);
+      vieja.classList.add('sale'); vieja.style.translate='0 '+(-30*dir)+'%'; encajar(nombreEl);
+      requestAnimationFrame(function(){requestAnimationFrame(function(){nueva.className='';nueva.style.translate=''})});
+      setTimeout(function(){vieja.remove()},480);
+    }
 
-      var visible=enSala||(est.aparece>0&&r.bottom>0);
-      lienzoRed.classList.toggle('visible',visible);
-      if(visible){
-        try{red.pintar(est)}catch(e){quitarRed();return}
-        if(salaI>=0)colocarSala(red.pantalla(),mv);
-        else if(f!=='intro'){
-          var pts=red.pantalla(); ultPts=pts;
-          nodosEl.forEach(function(n,k){var p=pts[k];n.style.transform='translate3d('+p.x.toFixed(1)+'px,'+p.y.toFixed(1)+'px,0)';n.classList.toggle('izq',p.x>innerWidth*(mv?.5:.62))});
-          if(f==='final')colocarMapa(pts,mv);
-          if(mostrada>=0&&f==='paso'&&ancla){var p0=pts[mostrada],a=ancla;
-            conector.setAttribute('d',a.mv?'M'+p0.x+' '+(p0.y+14)+'C'+p0.x+' '+(p0.y+90)+' '+a.x+' '+(a.y-90)+' '+a.x+' '+a.y:'M'+(p0.x-14)+' '+p0.y+'C'+(p0.x-140)+' '+p0.y+' '+(a.x+140)+' '+a.y+' '+a.x+' '+a.y)}
+    var u=0, T=0, F=0, enObras=false;
+    ponerObra(0);
+    function posicion(i){return cr.offsetTop+(INTRO+i*PASO)*innerHeight}
+    function leer(){
+      if(!tres)return;
+      u=-cr.getBoundingClientRect().top/innerHeight;
+      T=Math.min(1,Math.max(0,u/INTRO)); F=Math.min(N-1,Math.max(0,(u-INTRO)/PASO));
+      escena.style.setProperty('--t',T.toFixed(4));
+      tres.estado(T,F);
+      var dentro=T>.9; if(dentro!==enObras){enObras=dentro;escena.classList.toggle('en-obras',dentro)}
+      ponerObra(Math.round(F));
+    }
+    var lRaf=0; addEventListener('scroll',function(){if(!lRaf)lRaf=requestAnimationFrame(function(){lRaf=0;leer()})},{passive:true});
+    addEventListener('resize',leer);
+    if(tres){
+      new IntersectionObserver(function(es){tres.activo(es[0].isIntersecting)},{rootMargin:'50px'}).observe(cr);
+      leer();
+    }
+
+    function irA(i,suave){
+      i=Math.max(0,Math.min(N-1,i));
+      if(!tres){abrirCaso(i,'lista');return}
+      scrollTo({top:posicion(i),behavior:suave===false?'instant':'smooth'});
+    }
+    // Al soltar el scroll entre dos obras, el carrete se ajusta a la más cercana
+    var tSnap=0, arrastrando=false;
+    addEventListener('scroll',function(){
+      clearTimeout(tSnap); if(!tres||abiertoDesde)return;
+      tSnap=setTimeout(function(){
+        if(T<1||u>INTRO+PASO*(N-1)+.02||arrastrando)return; var i=Math.round(F);
+        if(Math.abs(F-i)>.01)irA(i);
+      },170);
+    },{passive:true});
+
+    D.getElementById('cr-ant').addEventListener('click',function(){irA(actual-1)});
+    D.getElementById('cr-sig').addEventListener('click',function(){irA(actual+1)});
+    D.getElementById('cr-abrir').addEventListener('click',function(){abrirCaso(actual,'carrete')});
+    addEventListener('keydown',function(e){
+      if(!enObras||abiertoDesde||!tres)return; if(cr.getBoundingClientRect().bottom<innerHeight*.5)return;
+      if(e.key==='ArrowRight'){e.preventDefault();irA(actual+1)}
+      else if(e.key==='ArrowLeft'){e.preventDefault();irA(actual-1)}
+    });
+
+    // Arrastre de lado (ratón o dedo) = scroll; un toque sin arrastre abre la lámina de delante o trae la de al lado
+    var x0=0, y0=0, s0=0, movido=false, idPtr=null;
+    if(tres){
+      lienzo.addEventListener('pointerdown',function(e){
+        if(e.button>0)return; idPtr=e.pointerId; x0=e.clientX; y0=e.clientY; s0=scrollY; movido=false; arrastrando=true;
+        if(e.pointerType==='mouse')lienzo.setPointerCapture(e.pointerId);
+      });
+      lienzo.addEventListener('pointermove',function(e){
+        var r=lienzo.getBoundingClientRect();
+        if(arrastrando&&e.pointerId===idPtr){
+          var dx=e.clientX-x0, dy=e.clientY-y0;
+          if(!movido&&Math.abs(dx)>6&&Math.abs(dx)>Math.abs(dy))movido=true;
+          if(movido&&enObras){var ancho=innerWidth*(innerWidth<innerHeight?.84:.5);scrollTo({top:s0-dx/ancho*PASO*innerHeight,behavior:'instant'})}
         }
-      }
-      var quieto=!enSala&&est.morph===mObj&&(mObj===0||r.bottom<=0);
-      if(!quieto&&!document.hidden)rafRed=requestAnimationFrame(cuadro); else ultimoT=0;
-    }
-    /* Sala: línea de la sub-zona activa a su captura y, al final, el mini mapa de la web */
-    function colocarSala(pts,mv){
-      var ps=pts.sub||[]; if(!ps.length)return;
-      if(salaPaso>=1&&salaPaso<=salaK&&srAncla){var p0=ps[salaPaso-1],a=srAncla;
-        srCon.setAttribute('d',a.mv?'M'+p0.x+' '+(p0.y+10)+'C'+p0.x+' '+(p0.y+80)+' '+a.x+' '+(a.y-80)+' '+a.x+' '+a.y:'M'+(p0.x-10)+' '+p0.y+'C'+(p0.x-130)+' '+p0.y+' '+(a.x+130)+' '+a.y+' '+a.x+' '+a.y)}
-      if(salaPaso<=salaK)return;
-      var c=pts.centro,W=innerWidth,H=innerHeight;
-      if(!srLados){var orden=ps.map(function(p,k){return k}).sort(function(a,b){return ps[a].x-ps[b].x}),porY=function(a,b){return ps[a].y-ps[b].y},m=Math.floor(ps.length/2);srLados={izq:orden.slice(0,m).sort(porY),der:orden.slice(m).sort(porY)}}
-      var R0=0;ps.forEach(function(p){R0=Math.max(R0,Math.abs(p.x-c.x))});
-      if(mv){
-        ['izq','der'].forEach(function(lado){srLados[lado].forEach(function(k,j){
-          var r=srRamas[k],p=ps[k],x=lado==='izq'?22:W-22,y=H*.44+j*Math.min(50,H*.06);
-          r.style.transform='translate3d('+x+'px,'+y.toFixed(1)+'px,0)';r.classList.toggle('izq',lado==='der');
-          var ex=lado==='izq'?x-8:x+8,pa=srMapaL.children[k];
-          if(pa)pa.setAttribute('d','M'+p.x.toFixed(1)+' '+p.y.toFixed(1)+'C'+ex.toFixed(1)+' '+p.y.toFixed(1)+' '+ex.toFixed(1)+' '+p.y.toFixed(1)+' '+ex.toFixed(1)+' '+(y-6).toFixed(1));
-        })});
-        return;
-      }
-      var am=0;srRamas.forEach(function(r){am=Math.max(am,r.offsetWidth)});
-      var gx=mv?{izq:16,der:W-16}:{izq:Math.max(am+70,c.x-R0-80),der:Math.min(W-am-70,c.x+R0+80)}, y0=c.y-H*(mv?.2:.24), y1=c.y+H*(mv?.12:.16);
-      ['izq','der'].forEach(function(lado){var l=srLados[lado];l.forEach(function(k,j){
-        var y=y0+(l.length>1?j/(l.length-1):.5)*(y1-y0),x=gx[lado],r=srRamas[k],p=ps[k];
-        r.style.transform='translate3d('+x.toFixed(1)+'px,'+y.toFixed(1)+'px,0)';r.classList.toggle('izq',mv?lado==='der':lado==='izq');
-        var ex=mv?(lado==='izq'?x-6:x+6):x,mx=(ex+p.x)/2,pa=srMapaL.children[k];
-        if(pa)pa.setAttribute('d','M'+p.x.toFixed(1)+' '+p.y.toFixed(1)+'C'+mx.toFixed(1)+' '+p.y.toFixed(1)+' '+mx.toFixed(1)+' '+y.toFixed(1)+' '+ex.toFixed(1)+' '+y.toFixed(1));
-      })});
-    }
-    /* Mapa: al pasar por un lóbulo o por su rama, ese lóbulo se separa un poco más y brilla (sin apagar los demás) */
-    var ultPts=null, hoverIdx=-1;
-    function ponerHover(k){ if(k===hoverIdx)return; hoverIdx=k; for(var j=0;j<N;j++)hoverObj[j]=j===k?1:0;
-      ramasEl.forEach(function(r,j){r.classList.toggle('foco',j===k)}); escena.classList.toggle('con-foco',k>=0); despertar() }
-    escena.addEventListener('pointermove',function(e){
-      if(fase!=='final'||salaI>=0||!ultPts)return;
-      var rm=e.target.closest('.rama'); if(rm){ponerHover(+rm.dataset.abrir);return}
-      var best=-1,bd=Math.min(innerWidth,innerHeight)*.16;
-      ultPts.forEach(function(p,k){var d=Math.hypot(p.c.x-e.clientX,p.c.y-e.clientY);if(d<bd){bd=d;best=k}});
-      ponerHover(best);
-    });
-    escena.addEventListener('pointerleave',function(){ponerHover(-1)});
-    escena.addEventListener('click',function(e){ if(fase==='final'&&salaI<0&&hoverIdx>=0&&!e.target.closest('button,a'))abrirSala(hoverIdx) });
-    ramasEl.forEach(function(r){r.addEventListener('focus',function(){ponerHover(+r.dataset.abrir)});r.addEventListener('blur',function(){ponerHover(-1)})});
-
-    /* Mapa mental: cada lóbulo encendido saca una rama con su tipo de negocio */
-    function colocarMapa(pts,mv){
-      var c=pts.centro, W=innerWidth, H=innerHeight;
-      if(!lados){
-        var orden=pts.map(function(p,k){return k}).sort(function(a,b){return pts[a].x-pts[b].x});
-        var porY=function(a,b){return pts[a].y-pts[b].y};
-        lados={izq:orden.slice(0,Math.floor(N/2)).sort(porY),der:orden.slice(Math.floor(N/2)).sort(porY)};
-      }
-      if(mv){
-        /* En móvil: cerebro arriba y las ramas en dos columnas debajo */
-        ['izq','der'].forEach(function(lado){
-          lados[lado].forEach(function(k,j){
-            var r=ramasEl[k], p=pts[k], x=lado==='izq'?20:W-20, y=H*.6+j*Math.min(58,H*.07);
-            r.style.transform='translate3d('+x+'px,'+y.toFixed(1)+'px,0)'; r.classList.toggle('izq',lado==='der');
-            var ex=lado==='izq'?x-9:x+9, ey=y-8;
-            lineasEl[k].setAttribute('d','M'+p.x.toFixed(1)+' '+p.y.toFixed(1)+'C'+ex.toFixed(1)+' '+p.y.toFixed(1)+' '+ex.toFixed(1)+' '+p.y.toFixed(1)+' '+ex.toFixed(1)+' '+ey.toFixed(1));
-          });
-        });
-        return;
-      }
-      var R0=0;pts.forEach(function(p){R0=Math.max(R0,Math.abs(p.x-c.x))});
-      var anchoMax=0;ramasEl.forEach(function(r){anchoMax=Math.max(anchoMax,r.offsetWidth)});
-      var colX=mv?{izq:12,der:W-12}:{izq:Math.max(anchoMax+24,c.x-R0-70),der:Math.min(W-anchoMax-24,c.x+R0+70)};
-      var y0=c.y-H*(mv?.25:.3), y1=c.y+H*(mv?.22:.24);
-      ['izq','der'].forEach(function(lado){
-        var lista=lados[lado];
-        lista.forEach(function(k,j){
-          var y=y0+(lista.length>1?j/(lista.length-1):.5)*(y1-y0), x=colX[lado], r=ramasEl[k], p=pts[k];
-          r.style.transform='translate3d('+x.toFixed(1)+'px,'+y.toFixed(1)+'px,0)';
-          r.classList.toggle('izq',mv?lado==='der':lado==='izq');
-          var ex=mv?(lado==='izq'?x+r.offsetWidth+4:x-r.offsetWidth-4):x, mx=(ex+p.x)/2;
-          lineasEl[k].setAttribute('d','M'+p.x.toFixed(1)+' '+p.y.toFixed(1)+'C'+mx.toFixed(1)+' '+p.y.toFixed(1)+' '+mx.toFixed(1)+' '+y.toFixed(1)+' '+ex.toFixed(1)+' '+y.toFixed(1));
-        });
-      });
-    }
-    function despertar(){ if(red&&!rafRed)rafRed=requestAnimationFrame(cuadro) }
-    function quitarRed(){ conRed=false; red=null; expo.classList.remove('con-red'); lienzoRed.classList.remove('visible'); fondoIn.style.opacity='';
-      obrasEl.forEach(function(e){e.inert=false;e.classList.remove('activa');e.classList.add('aparece','visto')}); }
-    if(conRed){
-      fetch('data/cerebro.bin').then(function(r){if(!r.ok)throw 0;return r.arrayBuffer()}).then(function(buf){
-        red=Red.crear(lienzoRed,buf,{regiones:REGIONES,n:movil.matches?11000:24000,nodos:1500,dprMax:movil.matches?1.6:2,tam:movil.matches?7.5:9,colores:OBRAS.map(luz)});
-        if(!red)throw 0;
-        lienzoRed.addEventListener('webglcontextlost',function(){quitarRed()});
-        var im=capas.children[fondoActual]; if(im.complete)red.foto(im); else im.addEventListener('load',function(){red&&red.foto(im)},{once:true});
-        despertar();
-        var mh=location.hash.match(/^#sala-([a-z0-9-]+)$/); if(mh){var kh=OBRAS.findIndex(function(o){return o.id===mh[1]});if(kh>=0)abrirRed(kh)}
-      }).catch(function(){quitarRed()});
-    }
-
-    var seccion='';
-    function alScroll(){
-      var r=alto.getBoundingClientRect(), fijo=r.top<=1&&r.bottom>=innerHeight-1;
-      cab.classList.toggle('solida',scrollY>innerHeight*.7);
-      var tq=document.getElementById('taquilla').getBoundingClientRect().top, sec=tq<innerHeight*.5?'taquilla':(r.top<innerHeight*.5?'exposicion':'inicio');
-      if(sec==='exposicion'&&(conRed?-r.top/innerHeight>=INTRO+N*PASO-.2:false))sec='mapa';
-      if(sec!==seccion){seccion=sec;document.querySelectorAll('.nav [data-sec]').forEach(function(a){a.setAttribute('aria-current',a.dataset.sec===sec?'true':'false')})}
-      salidaPortada();
-      if(scrollY>8)pararCiclo(); else if(enPortada)arrancarCiclo();
-      if(movil.matches)barraMovil.classList.toggle('oculta',scrollY<innerHeight*.6||(conRed&&r.top<innerHeight*.5&&r.bottom>innerHeight*.5));
-      else barraMovil.classList.add('oculta');
-      despertar();
-    }
-    function salidaPortada(){
-      if(reduce)return;
-      var p=Math.min(1,Math.max(0,scrollY/(innerHeight*.9)));
-      txt.style.transform='translate3d(0,'+(-p*90)+'px,0) scale('+(1-p*.06)+')';
-      txt.style.opacity=String(Math.max(0,1-p*1.15));
-      if(p>0||pie.style.opacity){pie.style.transition=bajar.style.transition='opacity .15s linear';pie.style.opacity=bajar.style.opacity=String(Math.max(0,1-p*2.5))}
-    }
-    addEventListener('scroll',alScroll,{passive:true});
-    addEventListener('resize',function(){ if(red){red.medir();if(mostrada>=0){var m=mostrada;mostrada=-1;mostrarTarjeta(m)}} alScroll(); });
-    document.addEventListener('visibilitychange',despertar);
-    function irA(i,ya){
-      if(conRed){
-        var destino=alto.getBoundingClientRect().top+scrollY+(INTRO+(i+.3)*PASO)*innerHeight;
-        if(ya)directo=i;
-        scrollTo({top:destino,behavior:(reduce||ya)?'auto':'smooth'});
-      } else obrasEl[i].scrollIntoView({behavior:(reduce||ya)?'auto':'smooth',block:'center'});
-    }
-    /* Botón "Mapa" de la cabecera: lleva directo al mapa final de la exposición (y cierra la sala si está abierta) */
-    function irMapa(){
-      if(salaI>=0)cerrarRed();
-      if(conRed){var destino=alto.getBoundingClientRect().top+scrollY+(INTRO+N*PASO+.45)*innerHeight;scrollTo({top:destino,behavior:reduce?'auto':'smooth'})}
-      else obrasCont.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});
-    }
-    document.getElementById('ir-mapa').addEventListener('click',function(e){e.preventDefault();irMapa()});
-    indice.addEventListener('click',function(e){var b=e.target.closest('[data-ir]');if(b)irA(+b.dataset.ir)});
-    document.getElementById('expo-ant').addEventListener('click',function(){irA(Math.max(0,(activo<0?0:activo)-1))});
-    document.getElementById('expo-sig').addEventListener('click',function(){irA(activo<0?0:Math.min(N-1,activo+1))});
-    mapa.addEventListener('click',function(e){var b=e.target.closest('[data-abrir]');if(b)abrirSala(+b.dataset.abrir)});
-    nodosCont.addEventListener('click',function(e){var b=e.target.closest('[data-abrir]');if(b)abrirSala(+b.dataset.abrir)});
-
-    /* ===== Sala en la red: el lóbulo se separa del cerebro y se recorre con el scroll ===== */
-    var LARGO={'xavi-pinchos':[8429,8429,8429],'loles-jimenez':[9152,9152],'capricho':[6198,6198],'morrina':[11769,11768],'lemko':[10437,10436],'della-grotta':[7328,7328],'cafeteria-by-vanessa':[10381,10381,10380],'vidrios-jucar':[6648,6647],'veterinaria-de-galdo':[7090,7089]};
-    var sr=document.getElementById('sr'), srAlto=document.getElementById('sr-alto'), srEsc=document.getElementById('sr-escena'), srCont=document.getElementById('sr-contenido');
-    var srCon=document.getElementById('sr-con'), srMapaL=document.getElementById('sr-mapa-lineas'), srPuntos=document.getElementById('sr-puntos'), srCnt=document.getElementById('sr-cont'), srDonde=document.getElementById('sr-donde');
-    var SR_INTRO=.85, salaI=-1, salaPasos=[], salaK=0, salaPaso=-1, srBloques=[], srRamas=[], srLados=null, srAncla=null, yawPasos=[], vueltaFoco=null, salaProg=[];
-    est.sel=[];est.sub=[0,0,0,0,0,0,0,0];est.sala=0;est.salaIdx=-1;est.hover=[];est.explota=0;
-    var selObj=[],hoverObj=[]; for(v=0;v<N;v++){est.sel.push(0);selObj.push(0);salaProg.push(0);est.hover.push(0);hoverObj.push(0)}
-    function largoHTML(o){return (LARGO[o.id]||[8000]).map(function(h,k){return '<img src="img/sala/'+o.id+(k?'-largo-'+(k+1):'-largo')+'.webp" width="480" height="'+h+'" alt=""'+(k?' loading="lazy"':'')+'>'}).join('')}
-    function pasosDe(o){
-      var p=[{t:'La portada',d:o.tecnica,tipo:'marco',img:o.id+'.webp',alt:'Portada de la web de '+(o.nombreLargo||o.nombre)},
-             {t:'En el móvil',d:'La web entera, de arriba abajo. Se mueve sola; desliza para recorrerla tú.',tipo:'movil'}];
-      o.partes.forEach(function(x,k){p.push({t:x[0],d:x[1],tipo:'marco',img:o.id+'-p'+(k+1)+'.webp',alt:x[0]+', en la web de '+(o.nombreLargo||o.nombre)})});
-      if(o.antes)p.push({t:'Antes y ahora',d:'Su web anterior en Webnode tenía los precios a 00.00 € y el horario antiguo. Arrastra para comparar con la carta nueva.',tipo:'antes'});
-      return p;
-    }
-    function htmlSalaRed(i){
-      var o=OBRAS[i], nom=esc(o.nombreLargo||o.nombre), sig=OBRAS[(i+1)%N];
-      var h='<div class="sr-bloque sr-intro" data-k="0"><p class="sr-num">Sala '+pad(i+1)+' <b>· '+esc(o.tipo)+'</b></p><h2 id="sr-nombre">'+nom+'</h2><p class="lugar">'+esc(o.lugar)+'</p><p class="historia">'+esc(o.historia)+'</p>'+
-        '<p class="estado">'+(o.vivo?'<span class="punto" aria-hidden="true"></span>':'')+esc(o.estado)+(o.vivo?', en '+esc(o.dominio):'')+'</p><p class="sr-baja"><i aria-hidden="true"></i>Baja para recorrerla</p></div>';
-      salaPasos.forEach(function(p,k){
-        h+='<article class="sr-bloque sr-paso" data-k="'+(k+1)+'" aria-label="'+esc(p.t)+'"><p class="sr-num">'+pad(k+1)+' / '+pad(salaPasos.length)+'</p><h3>'+esc(p.t)+'</h3><p class="sr-txt">'+esc(p.d)+'</p>';
-        if(p.tipo==='marco')h+='<div class="marco"><div class="barra" aria-hidden="true"><i></i><i></i><i></i></div><img src="img/sala/'+p.img+'" width="1440" height="900" alt="'+esc(p.alt)+'" loading="lazy"></div>';
-        if(p.tipo==='movil')h+='<div class="sr-tel"><div class="pantalla" tabindex="0" role="img" aria-label="La web de '+nom+' entera, vista en el móvil">'+largoHTML(o)+'</div></div>';
-        if(p.tipo==='antes')h+='<div class="comparador" id="sr-comparador"><img src="img/sala/capricho-antes.webp" width="784" height="295" alt="La web anterior de Capricho en Webnode, con todos los precios a 00.00 euros"><img class="despues" src="img/sala/capricho-p2.webp" width="1440" height="900" alt="La carta nueva de Capricho con copas y precios reales"><span class="linea-c" aria-hidden="true"></span><span class="et a" aria-hidden="true">Antes</span><span class="et b" aria-hidden="true">Ahora</span><input type="range" min="0" max="100" value="50" aria-label="Comparar la web anterior con la nueva"><span class="foco" aria-hidden="true"></span></div>';
-        h+='</article>';
-      });
-      h+='<div class="sr-bloque sr-fin" data-k="fin"><h3>El mapa de '+esc(o.nombre)+'</h3><p>Cada zona encendida es una parte de su web.</p><div class="acc">'+
-        '<a class="btn btn-ac" href="'+o.url+'" target="_blank" rel="noopener">'+(o.vivo?'Visitar '+esc(o.dominio):'Ver la web')+'</a>'+
-        '<button type="button" class="btn btn-linea" data-sr-sig>Siguiente sala: '+esc(sig.nombre)+'</button>'+
-        '<button type="button" class="btn btn-linea" data-sr-volver>Volver al mapa</button></div></div>';
-      salaPasos.forEach(function(p,k){h+='<button type="button" class="sr-rama" data-sr-ir="'+(k+1)+'" style="--k:'+k+'" tabindex="-1"><b>'+esc(p.t)+'</b><span>'+pad(k+1)+'</span></button>'});
-      return h;
-    }
-    function pintarSalaRed(i){
-      var o=OBRAS[i]; salaI=i; salaPasos=pasosDe(o); salaK=salaPasos.length; salaPaso=-1; srLados=null; srAncla=null;
-      sr.style.setProperty('--luz',luz(o)); document.getElementById('sr-velo').style.setProperty('--luz',luz(o));
-      srDonde.innerHTML='Sala '+pad(i+1)+' de '+pad(N)+' <b>· '+esc(o.nombre)+'</b>';
-      srCont.innerHTML=htmlSalaRed(i);
-      srBloques=[].slice.call(srCont.querySelectorAll('.sr-bloque')); srRamas=[].slice.call(srCont.querySelectorAll('.sr-rama'));
-      srMapaL.innerHTML=salaPasos.map(function(p,k){return '<path pathLength="1" style="--k:'+k+'" d="M0 0"/>'}).join('');
-      srPuntos.innerHTML=['Inicio'].concat(salaPasos.map(function(p){return p.t}),['Mapa']).map(function(t,k){return '<li><button type="button" data-sr-ir="'+k+'" aria-label="'+esc(t)+'"><i></i></button></li>'}).join('');
-      srAlto.style.setProperty('--u',(SR_INTRO+salaK+1.3+1).toFixed(2));
-      sr.scrollTop=0;
-      var c=document.getElementById('sr-comparador'); if(c){var rg=c.querySelector('input');rg.addEventListener('input',function(){c.style.setProperty('--pos',rg.value+'%')})}
-      red.prepararSala(i,salaK);
-      /* giro: cada sub-zona queda de frente en su paso; entre medias el lóbulo gira con el scroll */
-      var ang=red.salaAngulos(), desvio=movil.matches?.1:-.55; yawPasos=ang.map(function(a){return desvio-a});
-      for(var k=1;k<yawPasos.length;k++){while(yawPasos[k]>yawPasos[k-1]-.35)yawPasos[k]-=Math.PI*2;while(yawPasos[k]<yawPasos[k-1]-Math.PI*1.6)yawPasos[k]+=Math.PI*2}
-      for(k=0;k<8;k++)est.sub[k]=0;
-      try{history.replaceState(null,'','#sala-'+o.id)}catch(e){}
-    }
-    function abrirRed(i,desdeFoco){
-      vueltaFoco=desdeFoco||document.activeElement;
-      if(salaI<0){document.documentElement.classList.add('en-sala');document.querySelector('main').inert=true;sr.hidden=false;requestAnimationFrame(function(){sr.classList.add('abierta')})}
-      for(var k=0;k<N;k++)selObj[k]=k===i?1:0;
-      pintarSalaRed(i); est.salaIdx=i; despertar();
-      setTimeout(function(){document.getElementById('sr-volver').focus({preventScroll:true})},60);
-    }
-    function cerrarRed(){
-      if(salaI<0)return; var v=salaI; salaI=-1;
-      for(var k=0;k<N;k++)selObj[k]=0;
-      sr.classList.remove('abierta'); document.documentElement.classList.remove('en-sala'); document.querySelector('main').inert=false;
-      setTimeout(function(){if(salaI<0){sr.hidden=true;srCont.innerHTML=''}},700);
-      try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}
-      if(vueltaFoco&&vueltaFoco.focus)vueltaFoco.focus({preventScroll:true});
-      despertar();
-    }
-    function cambiarRed(i){ for(var k=0;k<N;k++)selObj[k]=k===i?1:0; pintarSalaRed(i); est.salaIdx=i; despertar() }
-    document.getElementById('sr-volver').addEventListener('click',cerrarRed);
-    document.getElementById('sr-ant').addEventListener('click',function(){cambiarRed((salaI-1+N)%N)});
-    document.getElementById('sr-sig').addEventListener('click',function(){cambiarRed((salaI+1)%N)});
-    sr.addEventListener('click',function(e){
-      if(e.target.closest('[data-sr-volver]'))return cerrarRed();
-      if(e.target.closest('[data-sr-sig]'))return cambiarRed((salaI+1)%N);
-      var b=e.target.closest('[data-sr-ir]'); if(b){var k=+b.dataset.srIr,u=k===0?0:(k>salaK?SR_INTRO+salaK+.4:SR_INTRO+k-.6);sr.scrollTo({top:u*innerHeight,behavior:reduce?'auto':'smooth'})}
-    });
-    sr.addEventListener('scroll',despertar,{passive:true});
-    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&salaI>=0){e.preventDefault();cerrarRed()}});
-    function moverMovilEn(p){
-      if(!p||reduce||p.dataset.mov)return; p.dataset.mov=1;
-      var parado=false, ultimo=0, espera=1200;
-      ['wheel','pointerdown','touchstart','keydown'].forEach(function(ev){p.addEventListener(ev,function(){parado=true},{passive:true,once:true})});
-      function paso(t){ if(parado||!p.isConnected)return; if(!ultimo)ultimo=t; var dt=Math.min(64,t-ultimo); ultimo=t;
-        if(espera>0)espera-=dt; else { p.scrollTop+=dt*.08; if(p.scrollTop+p.clientHeight>=p.scrollHeight-1){p.scrollTop=0;espera=1600} }
-        requestAnimationFrame(paso) }
-      requestAnimationFrame(paso);
-    }
-    /* Estado de la sala en cada cuadro: paso activo, sub-zonas encendidas y giro ligado al scroll */
-    function cuadroSala(dt,mv){
-      var H=innerHeight, u=sr.scrollTop/H, paso=u<SR_INTRO?0:Math.min(salaK+1,Math.floor(u-SR_INTRO)+1);
-      if(paso!==salaPaso){
-        salaPaso=paso; srAncla=null;
-        srEsc.dataset.paso=paso>salaK?'fin':String(paso);
-        srBloques.forEach(function(b){var k=b.dataset.k,on=(k==='fin'&&paso>salaK)||(+k===paso&&k!=='fin');b.classList.toggle('activo',on);b.inert=!on});
-        srRamas.forEach(function(r){r.tabIndex=paso>salaK?0:-1});
-        srPuntos.querySelectorAll('button').forEach(function(b,k){b.setAttribute('aria-current',k===paso?'true':'false');b.classList.toggle('visto',k<paso)});
-        srCnt.textContent=paso===0?'':(paso>salaK?'Mapa':pad(paso)+' / '+pad(salaK));
-        srCon.style.transition='none';srCon.style.strokeDashoffset='1';
-        if(paso>=1&&paso<=salaK){
-          var b=srBloques[paso],m=b.querySelector('.marco,.sr-tel,.comparador');
-          if(salaPasos[paso-1].tipo==='movil')moverMovilEn(b.querySelector('.pantalla'));
-          setTimeout(function(){ if(salaPaso!==paso||!m)return; var r=m.getBoundingClientRect();
-            srAncla=mv?{x:r.left+r.width*.5,y:r.top-10,mv:true}:{x:r.right+14,y:r.top+r.height*.42,mv:false};
-            srCon.getBoundingClientRect();srCon.style.transition='stroke-dashoffset .9s cubic-bezier(.77,0,.175,1)';srCon.style.strokeDashoffset='0'},650);
+        if(e.pointerType==='mouse'&&!arrastrando&&enObras){
+          var i=tres.pick(e.clientX-r.left,e.clientY-r.top); tres.raton(e.clientX-r.left,e.clientY-r.top,i===actual?i:-1);
+          lienzo.classList.toggle('sobre',i>=0);
         }
-      }
-      for(var k=0;k<8;k++){
-        var obj=k>=salaK?0:(paso>salaK?.85:(k===paso-1?1:(k<paso-1?.45:(paso===0?.12:.08))));
-        est.sub[k]=hacia(est.sub[k],obj,1-Math.exp(-dt*(obj>est.sub[k]?3:1.8)));
-      }
-      /* giro: interpolado entre los ángulos de cada paso según el scroll */
-      var yp=yawPasos, y;
-      if(!yp.length)y=BASE; else{
-        var pos=u-SR_INTRO+.5;
-        if(pos<=0)y=yp[0]+(-pos)*.9; else if(pos>=salaK-1)y=yp[salaK-1]-(pos-(salaK-1))*.9-est.tiempo*0; else{var a=Math.floor(pos),f=pos-a;f=f*f*(3-2*f);y=yp[a]+(yp[a+1]-yp[a])*f}
-      }
-      var fin=paso>salaK;
-      return {yaw:y,pitch:.16+Math.sin(u*.9)*.06,escala:fin?(mv?.5:.78):(mv?.62:1),offX:fin||mv?0:.27,offY:fin?(mv?.5:.14):(mv?.34:.02),u:u,paso:paso};
-    }
-
-    /* Sala de cada cliente */
-    var dlg=document.getElementById('sala'), cuerpo=document.getElementById('sala-cuerpo'), abierta=-1, autoMovil=null;
-    if(typeof dlg.showModal!=='function'){ /* Safari < 15.4 no tiene <dialog> */
-      dlg.open=false;
-      dlg.showModal=function(){dlg.open=true;dlg.setAttribute('open','')};
-      dlg.close=function(){if(!dlg.open)return;dlg.open=false;dlg.removeAttribute('open');var ev;try{ev=new Event('close')}catch(e){ev=document.createEvent('Event');ev.initEvent('close',false,false)}dlg.dispatchEvent(ev)};
-      document.addEventListener('keydown',function(e){if(dlg.open&&(e.key==='Escape'||e.key==='Esc'))dlg.close()});
-    }
-    function htmlSala(i){
-      var o=OBRAS[i], sig=OBRAS[(i+1)%N], nom=esc(o.nombreLargo||o.nombre);
-      var pal=nom.split(' '), mitad=Math.ceil(pal.length/2);
-      var titulo=pal.length>2?'<span class="linea"><span>'+pal.slice(0,mitad).join(' ')+'</span></span><span class="linea"><span style="animation-delay:.08s">'+pal.slice(mitad).join(' ')+'</span></span>':'<span class="linea"><span>'+nom+'</span></span>';
-      var h='<header class="sala-cab"><div><p class="sala-num">Sala '+pad(i+1)+' de '+pad(N)+'</p><h2 id="sala-nombre">'+titulo+'</h2><p class="lugar">'+esc(o.lugar)+'</p></div>'+
-        '<div><p class="historia">'+esc(o.historia)+'</p><div class="acc"><a class="btn btn-ac" href="'+o.url+'" target="_blank" rel="noopener">'+(o.vivo?'Visitar '+esc(o.dominio):'Ver la web')+'</a><span class="estado-txt">'+(o.vivo?'Publicada':o.estado==='Cliente'?'Se publica pronto':'Propuesta para el negocio')+'</span></div></div></header>'+
-        '<section class="vitrina" aria-label="La web en el móvil y en el ordenador">'+
-          '<div class="movil-vivo"><div class="tel-grande"><div class="pantalla" id="pantalla-movil" tabindex="0" role="img" aria-label="La web de '+nom+' entera, vista en el móvil">'+largoHTML(o)+'</div></div><p>Se mueve sola. Desliza para recorrerla tú.</p></div>'+
-          '<div class="collage">'+
-            '<figure><div class="marco" id="marco-sala"><div class="barra" aria-hidden="true"><i></i><i></i><i></i></div><img src="img/sala/'+o.id+'.webp" width="1800" height="1125" alt="Portada de la web de '+nom+' en ordenador"></div><figcaption>La portada, en el ordenador.</figcaption></figure>'+
-            '<figure><div class="marco"><div class="barra" aria-hidden="true"><i></i><i></i><i></i></div><img src="img/sala/'+o.id+'-detalle.webp" width="1440" height="900" alt="Otra sección de la web de '+nom+'" loading="lazy"></div><figcaption>Más abajo, '+o.segunda+'.</figcaption></figure>'+
-          '</div></section>'+
-        '<section class="detalles"><div class="detalles-cab"><h3>Hecha para este negocio</h3></div>'+o.detalles.map(function(d){return '<div class="detalle"><b>'+esc(d[0])+'</b><span>'+esc(d[1])+'</span></div>'}).join('')+'</section>';
-      if(o.antes){
-        h+='<section class="antes"><h3>Antes y ahora</h3><div class="comparador" id="comparador">'+
-          '<img src="img/sala/capricho-antes.webp" width="784" height="295" alt="La web anterior de Capricho en Webnode, con todos los precios a 00.00 euros">'+
-          '<img class="despues" src="img/sala/capricho-p2.webp" width="1440" height="900" alt="La carta nueva de Capricho con copas y precios reales">'+
-          '<span class="linea-c" aria-hidden="true"></span><span class="et a" aria-hidden="true">Antes</span><span class="et b" aria-hidden="true">Ahora</span>'+
-          '<input type="range" min="0" max="100" value="50" aria-label="Comparar la web anterior con la nueva"><span class="foco" aria-hidden="true"></span></div>'+
-          '<p class="nota">A la izquierda, su web en Webnode: precios a 00.00 €, nombre y horario antiguos, y el aviso de Webnode encima. A la derecha, la carta nueva con sus precios reales. Arrastra para comparar.</p></section>';
-      }
-      h+='<button type="button" class="siguiente" data-sig="'+((i+1)%N)+'" style="--sig:'+sig.ac+'"><span>Siguiente sala</span><b>'+esc(sig.nombreLargo||sig.nombre)+'</b></button>';
-      return h;
-    }
-    function moverMovil(){
-      var p=document.getElementById('pantalla-movil'); if(!p||reduce)return;
-      if(autoMovil)cancelAnimationFrame(autoMovil);
-      var parado=false, ultimo=0, espera=1400;
-      ['wheel','pointerdown','touchstart','keydown'].forEach(function(ev){p.addEventListener(ev,function(){parado=true},{passive:true,once:true})});
-      function paso(t){
-        if(parado||!p.isConnected)return;
-        if(!ultimo)ultimo=t; var dt=Math.min(64,t-ultimo); ultimo=t;
-        if(espera>0)espera-=dt; else { p.scrollTop+=dt*.07; if(p.scrollTop+p.clientHeight>=p.scrollHeight-1){p.scrollTop=0;espera=1800} }
-        autoMovil=requestAnimationFrame(paso);
-      }
-      autoMovil=requestAnimationFrame(paso);
-    }
-    function pintarSala(i){
-      abierta=i; var o=OBRAS[i];
-      dlg.style.cssText='--bg:'+o.bg+';--ac:'+o.ac+';--tx:'+o.tx+';--tx2:'+o.tx2+';--linea:'+(o.clara?'rgba(46,29,21,.16)':'rgba(255,255,255,.14)');
-      cuerpo.innerHTML=htmlSala(i); dlg.scrollTop=0;
-      try{history.replaceState(null,'','#sala-'+o.id)}catch(e){}
-      var c=document.getElementById('comparador');
-      if(c){var r=c.querySelector('input');r.addEventListener('input',function(){c.style.setProperty('--pos',r.value+'%')})}
-      moverMovil();
-    }
-    function abrirSala(i){
-      if(conRed&&red){abrirRed(i);return}
-      var hecho=function(){ if(!dlg.open)dlg.showModal(); pintarSala(i); document.documentElement.style.overflow='hidden'; };
-      var marco=document.querySelector('#obra-'+OBRAS[i].id+' .marco');
-      if(conRed&&mostrada!==i)marco=null;
-      if(!reduce&&typeof document.startViewTransition==='function'&&marco){
-        marco.style.viewTransitionName='obra';
-        var t=document.startViewTransition(function(){marco.style.viewTransitionName='';hecho();var m=document.getElementById('marco-sala');if(m)m.style.viewTransitionName='obra'});
-        t.finished.then(function(){var m=document.getElementById('marco-sala');if(m)m.style.viewTransitionName=''},function(){});
-      } else hecho();
-    }
-    dlg.addEventListener('close',function(){
-      document.documentElement.style.overflow=''; if(autoMovil)cancelAnimationFrame(autoMovil); cuerpo.innerHTML='';
-      try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}
-      var v=abierta; abierta=-1;
-      if(v>=0){irA(v,true);setTimeout(function(){var b=document.querySelector('#obra-'+OBRAS[v].id+' [data-abrir]');if(b)b.focus({preventScroll:true})},180)}
-    });
-    document.getElementById('sala-cerrar').addEventListener('click',function(){dlg.close()});
-    document.getElementById('sala-ant').addEventListener('click',function(){pintarSala((abierta-1+N)%N)});
-    document.getElementById('sala-sig').addEventListener('click',function(){pintarSala((abierta+1)%N)});
-    cuerpo.addEventListener('click',function(e){var s=e.target.closest('[data-sig]');if(s)pintarSala(+s.dataset.sig)});
-    obrasCont.addEventListener('click',function(e){var b=e.target.closest('[data-abrir]');if(b)abrirSala(+b.dataset.abrir)});
-    document.addEventListener('keydown',function(e){
-      if(!conRed||dlg.open||salaI>=0)return;
-      var r=alto.getBoundingClientRect(); if(!(r.top<=1&&r.bottom>=innerHeight-1))return;
-      if(e.key==='ArrowRight'&&activo<N-1){e.preventDefault();irA(activo+1)}
-      if(e.key==='ArrowLeft'&&activo>0){e.preventDefault();irA(activo-1)}
-    });
-
-    /* ===== 3. Taquilla: entradas que se inclinan ===== */
-    if(raton&&!reduce){
-      document.querySelectorAll('.inclina').forEach(function(t){
-        t.addEventListener('pointermove',function(e){var r=t.getBoundingClientRect();var x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;t.style.setProperty('--ry',(x*10).toFixed(2)+'deg');t.style.setProperty('--rx',(-y*8).toFixed(2)+'deg')});
-        t.addEventListener('pointerleave',function(){t.style.setProperty('--ry','0deg');t.style.setProperty('--rx','0deg')});
       });
+      var soltar=function(e){
+        if(!arrastrando||e.pointerId!==idPtr)return; arrastrando=false;
+        if(!movido&&e.type==='pointerup'&&enObras&&Math.abs(scrollY-s0)<4){
+          var r=lienzo.getBoundingClientRect(), i=tres.pick(e.clientX-r.left,e.clientY-r.top);
+          if(i===actual)abrirCaso(i,'carrete'); else if(i>=0)irA(i);
+        } else if(movido){var j=Math.round(F);if(Math.abs(F-j)>.01)irA(j)}
+      };
+      lienzo.addEventListener('pointerup',soltar); lienzo.addEventListener('pointercancel',soltar);
+      lienzo.addEventListener('pointerleave',function(){tres.raton(0,0,-1);lienzo.classList.remove('sobre')});
     }
-    if('IntersectionObserver' in window){
-      var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visto');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
-      document.querySelectorAll('.aparece').forEach(function(el){io.observe(el)});
-    } else document.querySelectorAll('.aparece').forEach(function(el){el.classList.add('visto')});
+    D.addEventListener('click',function(e){var b=e.target.closest('[data-obra]');if(b)abrirCaso(+b.dataset.obra,'lista',b)});
 
-    alScroll();
-    var m=location.hash.match(/^#sala-([a-z0-9-]+)$/);
-    if(m&&!conRed){var k=OBRAS.findIndex(function(o){return o.id===m[1]});if(k>=0){var r0=reduce;reduce=true;abrirSala(k);reduce=r0}}
+    /* ===== El caso ===== */
+    var caso=D.getElementById('caso'), cuerpo=D.getElementById('caso-cuerpo'), contCaso=D.getElementById('caso-cont'), cerrarBt=D.getElementById('caso-cerrar');
+    var main=D.getElementById('principal'), cab=D.getElementById('cabecera'), pie=D.querySelector('.pie');
+    var abiertoDesde=null, casoI=-1, volverA=null, telObs=null;
+    function pintarCaso(i){
+      var o=OBRAS[i], sig=OBRAS[(i+1)%N], ver=o.dominio?'Ver '+o.dominio:'Ver la propuesta', partes=o.partes;
+      cuerpo.innerHTML=
+        '<figure class="caso-hero"><img src="'+img(o)+'" alt="Portada de la web de '+esc(o.largo||o.nombre)+'" width="1800" height="1125"><figcaption class="caso-hero-txt">'+
+          '<h2 id="caso-nombre" data-encaja="10">'+esc(o.largo||o.nombre)+'</h2><p class="mono">'+esc(o.sector)+' · '+esc(o.lugar)+' · 2026</p></figcaption></figure>'+
+        '<div class="caso-ficha"><dl class="mono">'+
+          '<div><dt>Sector</dt><dd>'+esc(o.sector)+'</dd></div><div><dt>Dónde</dt><dd>'+esc(o.lugar)+'</dd></div>'+
+          '<div><dt>Año</dt><dd>2026</dd></div><div><dt>Estado</dt><dd>'+esc(o.estado)+'</dd></div>'+
+          '<div><dt>La idea</dt><dd>'+esc(o.tecnica)+'</dd></div></dl>'+
+          '<div class="txt"><p>'+esc(o.historia)+'</p><a class="bt bt-azul" href="'+esc(o.url)+'" target="_blank" rel="noopener">'+esc(ver)+EXT+'</a></div></div>'+
+        '<div class="caso-movil"><div class="tel" id="tel"><img src="'+img(o,'-largo')+'" alt="La web de '+esc(o.nombre)+' entera en el móvil" width="480" loading="lazy"></div>'+
+          '<div><h3>En el móvil</h3><ul class="partes">'+partes.map(function(p,k){return '<li><span class="mono">'+pad(k+1)+'</span><div><b>'+esc(p[0])+'</b><p>'+esc(p[1])+'</p></div></li>'}).join('')+'</ul></div></div>'+
+        '<div class="caso-fotos">'+[1,2,3].map(function(k){var p=partes[k-1]||['',''];return '<figure><img src="'+img(o,'-p'+k)+'" alt="'+esc(p[0]?p[0]+', en la web de '+o.nombre:'Sección de la web de '+o.nombre)+'" width="1440" height="900" loading="lazy">'+
+          (p[0]?'<figcaption class="mono"><b>'+esc(p[0])+'</b></figcaption>':'')+'</figure>'}).join('')+'</div>'+
+        '<button class="caso-otra" type="button" id="caso-otra"><span class="mono">Siguiente obra</span><b>'+esc(sig.nombre)+FLECHA+'</b></button>';
+      contCaso.textContent=pad(i+1)+' / '+pad(N);
+      D.getElementById('caso-otra').addEventListener('click',function(){cambiarCaso((casoI+1)%N)});
+      var tel=D.getElementById('tel');
+      if(telObs)telObs.disconnect();
+      telObs=new IntersectionObserver(function(es){tel.classList.toggle('va',es[0].isIntersecting)},{root:caso});
+      telObs.observe(tel);
+      encajar(D.getElementById('caso-nombre'));
+    }
+    function mostrar(){
+      caso.classList.add('on'); H.classList.add('en-caso'); main.inert=true; cab.inert=true; pie.inert=true;
+      cerrarBt.focus({preventScroll:true});
+    }
+    function abrirCaso(i,desde,origen,sinHistoria){
+      if(abiertoDesde)return;
+      casoI=i; volverA=origen||D.activeElement; pintarCaso(i); caso.scrollTop=0;
+      abiertoDesde=(desde==='carrete'&&tres&&enObras&&i===actual)?'carrete':'lista';
+      if(!sinHistoria)history.pushState({obra:i},'','#obra-'+OBRAS[i].id);
+      if(abiertoDesde==='carrete'){
+        var hero=cuerpo.querySelector('.caso-hero img'); if(hero.decode)hero.decode().catch(function(){});
+        escena.classList.add('abriendo'); caso.classList.add('rapido'); tres.abrir(i,function(){mostrar();requestAnimationFrame(function(){caso.classList.remove('rapido')})});
+      } else mostrar();
+    }
+    function cambiarCaso(i){
+      cuerpo.classList.add('cambia');
+      setTimeout(function(){casoI=i;pintarCaso(i);caso.scrollTop=0;history.replaceState({obra:i},'','#obra-'+OBRAS[i].id);cuerpo.classList.remove('cambia');cerrarBt.focus({preventScroll:true})},reduce?0:180);
+    }
+    function cerrarCaso(desdeHistoria){
+      if(!abiertoDesde)return;
+      var era=abiertoDesde; abiertoDesde=null;
+      main.inert=false; cab.inert=false; pie.inert=false;
+      if(!desdeHistoria)history.replaceState(null,'',location.pathname+location.search);
+      H.classList.remove('en-caso');
+      if(era==='carrete'&&casoI!==actual){ // se cambió de obra dentro del caso: el carrete vuelve a esa
+        scrollTo({top:posicion(casoI),behavior:'instant'}); leer(); tres.saltarA(casoI); tres.cambiar(casoI);
+      }
+      if(era==='carrete'&&caso.scrollTop<innerHeight*.5){
+        caso.classList.add('rapido'); caso.classList.remove('on');
+        requestAnimationFrame(function(){caso.classList.remove('rapido')}); tres.cerrar(function(){escena.classList.remove('abriendo')});
+      } else { caso.classList.remove('on'); if(era==='carrete')tres.cerrar(function(){escena.classList.remove('abriendo')}); }
+      var v=era==='carrete'?D.getElementById('cr-abrir'):volverA; if(v&&v.focus)v.focus({preventScroll:true});
+    }
+    cerrarBt.addEventListener('click',function(){if(history.state&&history.state.obra!=null)history.back();else cerrarCaso()});
+    addEventListener('popstate',function(){if(abiertoDesde)cerrarCaso(true)});
+    caso.addEventListener('keydown',function(e){
+      if(e.key==='Escape'){e.preventDefault();cerrarBt.click()}
+      if(e.key==='Tab'){ // el foco no sale de la capa
+        var f=caso.querySelectorAll('a[href],button'); if(!f.length)return; var a=f[0], z=f[f.length-1];
+        if(e.shiftKey&&D.activeElement===a){e.preventDefault();z.focus()} else if(!e.shiftKey&&D.activeElement===z){e.preventDefault();a.focus()}
+      }
+    });
+    // Enlace directo a un caso: #obra-<id>
+    var m=location.hash.match(/^#obra-(.+)$/);
+    if(m){var j=OBRAS.findIndex(function(o){return o.id===m[1]});if(j>=0){history.replaceState({obra:j},'',location.hash);abrirCaso(j,'lista',null,true)}}
+
+    /* ===== Manifiesto (M14): se enciende palabra a palabra con el scroll ===== */
+    var mani=D.getElementById('mani-txt');
+    if(!reduce){
+      var AZ={plantilla:1,nada:1};
+      mani.innerHTML=mani.textContent.split(' ').map(function(w){return '<span class="p'+(AZ[w.replace(/[,.]$/,'')]?' az':'')+'">'+w+'</span>'}).join(' ');
+      var ps=mani.querySelectorAll('.p');
+      var pintarMani=function(){
+        var r=mani.getBoundingClientRect(), p=(innerHeight*.85-r.top)/(r.height+innerHeight*.35);
+        var n=Math.round(Math.min(1,Math.max(0,p))*ps.length);
+        for(var k=0;k<ps.length;k++)ps[k].classList.toggle('on',k<n);
+      };
+      var mRaf=0; addEventListener('scroll',function(){if(!mRaf)mRaf=requestAnimationFrame(function(){mRaf=0;pintarMani()})},{passive:true}); pintarMani();
+    }
+
+    /* ===== Apariciones, proceso y contacto ===== */
+    var vistos=D.querySelectorAll('.ap,#pasos,#contacto');
+    if('IntersectionObserver' in window&&!reduce){
+      var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visto');io.unobserve(e.target)}})},{threshold:.3});
+      vistos.forEach(function(v){io.observe(v)});
+    } else vistos.forEach(function(v){v.classList.add('visto')});
+
+    /* Sección activa en la cabecera */
+    var navs=D.querySelectorAll('.nav a');
+    var secs=['obras','indice','proceso','contacto'].map(function(id){return D.getElementById(id)});
+    function marcar(){
+      var y=innerHeight*.4, act='obras';
+      secs.forEach(function(s){if(s.getBoundingClientRect().top<y)act=s.id});
+      navs.forEach(function(a){if(a.dataset.sec===act)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')});
+    }
+    var nRaf=0; addEventListener('scroll',function(){if(!nRaf)nRaf=requestAnimationFrame(function(){nRaf=0;marcar()})},{passive:true}); marcar();
   })();
   </script>
 </body>
