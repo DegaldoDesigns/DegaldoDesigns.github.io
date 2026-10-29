@@ -1,0 +1,10 @@
+{
+  "lista": [
+    {"nombre": "La Brava", "texto": "Carne de angus madurada, tomate asado, bacon y nuestra salsa brava de la casa.", "fuente": "Publicada en nuestro Instagram"},
+    {"nombre": "La Matriarca", "texto": "Carrillada al PX, queso de cabra y doble cheddar.", "fuente": "Publicada en nuestro Instagram"},
+    {"nombre": "La Marquesa", "texto": "Smash de ternera, cheddar, carbonara y crujiente de queso.", "fuente": "Publicada en nuestro Instagram"},
+    {"nombre": "K-chopo", "texto": "Cachopo de rabo de toro, canónigos, cebolla encurtida y salsa de Pedro Ximénez.", "foto": "img/pila-kchopo-480.webp", "alt": "Hamburguesa K-chopo con cachopo, canónigos y cebolla encurtida sobre papel de periódico", "fuente": "Publicada en nuestro Instagram"},
+    {"nombre": "RainbowAngus", "texto": "180 g de carne de angus, cebolla caramelizada, queso de cabra y mermelada.", "foto": "img/pila-rainbowangus-480.webp", "alt": "Pan rosa de la RainbowAngus sobre papel de periódico, con el sello de La Esquina en la pared", "fuente": "Publicada en nuestro Instagram"},
+    {"nombre": "La Dorada", "texto": "Sweet bacon, salsa BBQ, cebolla caramelizada, queso de cabra y carne de vaca Texas.", "foto": "img/pila-dorada-450.webp", "alt": "Hamburguesa La Dorada con bacon y queso de cabra, con patatas fritas al lado", "fuente": "Publicada en nuestro Instagram"}
+  ]
+}
