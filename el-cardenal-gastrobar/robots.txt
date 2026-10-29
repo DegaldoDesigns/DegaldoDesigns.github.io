@@ -1,0 +1,5 @@
+# Demo de El Cardenal Gastrobar (plantilla de la librería). Al pasar a su dominio, cambiar la URL del sitemap.
+User-agent: *
+Allow: /
+
+Sitemap: https://degaldodesigns.es/el-cardenal-gastrobar/sitemap.xml

@@ -1,0 +1,52 @@
+# Pages CMS de la Clínica César Navarro / UNO movimiento: los grupos y clases (pilates, funcional) (tablon-recepcion v1.2).
+# Copiada de 01-Libreria-de-Codigo/plantillas/pages-cms-tablon.yml, con solo lo que usa esta web (fecha, grupos y su nota):
+# el horario de la clínica va en js/sitio.js y en el roll-up; aquí no hay precios. Instrucciones en plantillas/pages-cms-tablon.md.
+
+content:
+  - name: tablon
+    label: Grupos y clases
+    description: Los grupos que salen en la web. Cambia la fecha de "Actualizado" cada vez que toques algo. Sale en la web en 1 o 2 minutos.
+    type: file
+    path: contenido/tablon.json
+    format: json
+    fields:
+      - name: actualizado
+        label: Actualizado el
+        type: date
+        required: true
+        description: Ponla siempre al cambiar algo. La web dice "Actualizado el" con esta fecha.
+        options:
+          format: yyyy-MM-dd
+      - name: texto_fecha
+        label: Texto delante de la fecha
+        type: string
+        description: 'Mientras los grupos sean los del Instagram: "Revisado con su Instagram el". Cuando los pongas tú: "Actualizado el".'
+      - name: clases
+        label: Grupos
+        type: object
+        list: true
+        fields:
+          - name: actividad
+            label: Grupo
+            type: string
+            required: true
+            description: 'Por ejemplo: Pilates'
+          - name: sala
+            label: Sala o detalle
+            type: string
+            description: 'Por ejemplo: Sala de pilates, con fisioterapeuta'
+          - name: dias
+            label: Días
+            type: string
+            description: 'Por ejemplo: Lunes y miércoles'
+          - name: hora
+            label: Hora
+            type: string
+            description: 'Por ejemplo: 19:00 a 20:00. Vacía = la web pone "Pregunta la hora" (enlace para llamar).'
+          - name: fuente
+            label: De cuándo es la hora (opcional)
+            type: string
+            description: 'Si la hora es de otra temporada, dilo: septiembre 2026. Sale en pequeño debajo. Vacío = la hora es la de ahora.'
+      - name: nota_clases
+        label: Nota bajo los grupos
+        type: text

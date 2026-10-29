@@ -1,0 +1,236 @@
+/* Clínica César Navarro / UNO movimiento (Baeza) · demo de Degaldo Designs (2026-10-27). Estilos CRÍTICOS: lo que pinta la primera
+   pantalla (fuentes, variables, base, botones, cabecera y menú, portada con el marco de recepción M118 y la tarjeta viva). El resto va
+   en estilos.css, que pide js/carga.js cuando la portada ya está pintada (plantilla carga-tras-portada).
+   «Pasa, que te atendemos»: la clínica por dentro con su señalética, cosida por el ▶ del logo. Dirección en ../direccion-visual.md;
+   movimiento en ../guion-movimiento.md. Fuentes alojadas (SIL OFL): Urbanist (titulares y rótulos), Commissioner (texto) y Shadows
+   Into Light Two (notas a mano; entra con html.mano, tras pintar la portada). */
+@font-face{font-family:'Urbanist'; font-display:swap; font-style:normal; font-weight:500 700; src:url(../fonts/urbanist-latin-recortada.woff2) format('woff2');
+  unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Commissioner'; font-display:swap; font-style:normal; font-weight:400 600; src:url(../fonts/commissioner-latin-recortada.woff2) format('woff2');
+  unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Shadows Into Light Two'; font-display:swap; font-style:normal; font-weight:400; src:url(../fonts/shadows-into-light-two-latin.woff2) format('woff2');
+  unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+
+:root{
+  --negro:#0B0D0E; --marco:#16191A; --grafito:#1B1F21; --acento:#44C8BE; --acento-hover:#62D5CC; --acento-texto:#0E7068;
+  --plata:#A7A9AB; --blanco:#F4F6F6; --tinta:#14181A; --gris-texto:#5E6366; --vidrio:#E6ECEC;
+  --lima:#C8F03C; --morado:#5A3FB0; --petroleo:#1F4B57; --madera:#6B4A33; --madera-2:#53392A; --lila:#8F88E6;
+  --linea:rgba(244,246,246,.14); --linea-2:rgba(244,246,246,.26); --linea-clara:rgba(20,24,26,.14);
+  --f-tit:'Urbanist', 'Segoe UI', system-ui, sans-serif; --f-texto:'Commissioner', 'Segoe UI', system-ui, sans-serif;
+  --f-mano:'Segoe Print', 'Bradley Hand', cursive;   /* Shadows Into Light Two entra con html.mano (js/carga.js, tras pintar la portada) */
+  --ease-out:cubic-bezier(0.23,1,0.32,1); --ease-in-out:cubic-bezier(0.77,0,0.175,1); --ease-drawer:cubic-bezier(0.32,0.72,0,1); --ease-muelle:var(--ease-out);
+  --sangre:clamp(20px,4vw,48px); --alto-barra:72px;
+  --z-deco:0; --z-contenido:1; --z-barra-movil:20; --z-cabecera:30; --z-saltar:100;
+}
+.mano{--f-mano:'Shadows Into Light Two', 'Segoe Print', 'Bradley Hand', cursive}
+@supports (transition-timing-function: linear(0, 1)){
+  :root{--ease-muelle:linear(0, .009, .035 2.1%, .141, .281 6.7%, .723 12.9%, .938 16.7%, 1.017, 1.077, 1.121, 1.149 24.3%, 1.159, 1.163, 1.161, 1.154 29.9%, 1.129 32.8%, 1.051 39.6%, 1.017 43.1%, .991, .977 51%, .974 53.8%, .975 57.1%, .997 69.8%, 1.003 76.9%, 1)}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:var(--alto-barra); -webkit-text-size-adjust:100%}
+html:has(#menu:popover-open){overflow:hidden}
+body{margin:0; background:var(--negro); color:var(--blanco); font:400 1.0625rem/1.65 var(--f-texto)}
+main{overflow-x:clip}
+/* Lo de debajo de la portada no entra en la maqueta hasta que llega estilos.css (js/carga.js pone html.estilos al cargarla, si falla o a
+   los 4 s): sin saltos mientras llega. Sin JS no aplica (no hay .js) y estilos.css va en <noscript>. */
+.js:not(.estilos) main > :not(.portada), .js:not(.estilos) .pie, .js:not(.estilos) .barra-fija{display:none}
+img{max-width:100%}
+main img{pointer-events:none}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--acento); outline-offset:3px}
+.saltar{position:absolute; left:12px; top:-80px; z-index:var(--z-saltar); padding:12px 18px; background:var(--blanco); color:var(--negro); font-weight:600; text-decoration:none}
+.saltar:focus{top:12px}
+.ico{width:20px; height:20px; flex:none; display:block}
+.wrap{max-width:1240px; margin:0 auto; padding:0 var(--sangre)}
+.oculto{position:absolute; width:1px; height:1px; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap}
+
+/* ---------- Botones (esquinas suaves como el marco de su recepción; imán y brillo en los importantes, M30) ---------- */
+.btn{position:relative; overflow:hidden; display:inline-flex; align-items:center; gap:10px; min-height:48px; padding:14px 22px; border:none; border-radius:10px;
+  background:var(--acento); color:var(--negro); font:600 1rem/20px var(--f-texto); text-decoration:none; cursor:pointer; text-align:left;
+  transition:background-color .16s var(--ease-out), transform .12s var(--ease-out), translate .3s var(--ease-out)}
+.btn:active{transform:scale(.97)}
+.btn::after{content:""; position:absolute; inset:0; background:linear-gradient(110deg, transparent 30%, rgba(255,255,255,.4) 50%, transparent 70%); translate:-120% 0; pointer-events:none}
+.btn-linea{background:transparent; color:var(--blanco); box-shadow:inset 0 0 0 1.5px rgba(244,246,246,.5)}
+.btn-linea::after{background:linear-gradient(110deg, transparent 30%, rgba(68,200,190,.25) 50%, transparent 70%)}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{background:var(--acento-hover)}
+  .btn-linea:hover{background:rgba(244,246,246,.08)}
+  .btn:hover::after{translate:120% 0; transition:translate .45s var(--ease-out)}
+}
+/* El ▶ del logo que avanza (botones-fisicos v2, .btn-avanza): al final del botón, da un paso al pasar el ratón o con el foco.
+   Solo con ratón y desde 600 px: en táctil no hay gesto que contar y los 23 px extra partían «Llamar para preguntar por un grupo» a 375 */
+@media (hover:hover) and (pointer:fine) and (min-width:600px){
+  .btn-avanza::before{content:""; order:2; flex:none; width:9px; height:11px; margin-left:2px; background:currentColor; clip-path:polygon(8% 0,100% 50%,8% 100%); transition:translate .18s var(--ease-out)}
+  .btn-avanza:hover::before, .btn-avanza:focus-visible::before{translate:4px 0}
+}
+@media (prefers-reduced-motion:reduce){ .btn-avanza::before{transition:none; translate:none !important} }
+
+/* ---------- Cabecera inteligente (M18) + el ▶ bajo la sección activa (resaltado-deslizante v3.1 .rd-play) ---------- */
+.centinela{height:1px; margin-bottom:-1px}
+.cabecera{position:sticky; top:0; z-index:var(--z-cabecera); container:cabecera / scroll-state}
+.barra{display:flex; align-items:center; gap:clamp(14px,2.2vw,28px); height:var(--alto-barra); padding:0 var(--sangre); background:rgba(11,13,14,.74);
+  -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px);
+  transition:background-color .25s var(--ease-out), box-shadow .25s var(--ease-out), translate .25s var(--ease-out)}
+@container cabecera scroll-state(stuck: top){ .barra{background:rgba(11,13,14,.96); box-shadow:0 1px 0 var(--linea), 0 10px 30px rgba(0,0,0,.4)} }
+.pegada .barra{background:rgba(11,13,14,.96); box-shadow:0 1px 0 var(--linea), 0 10px 30px rgba(0,0,0,.4)}
+.oculta .barra{translate:0 -100%}
+.cabecera:focus-within .barra{translate:0 0}
+.marca{display:flex; align-items:center; gap:12px; flex:none; min-height:44px; text-decoration:none; color:var(--blanco)}
+.marca img{display:block; width:42px; height:42px; border-radius:7px; box-shadow:0 0 0 1px var(--linea)}
+.marca-nombre{display:flex; flex-direction:column; font:700 1rem/1.15 var(--f-tit); letter-spacing:.01em}
+.marca-nombre small{font:600 .78rem/1.3 var(--f-tit); letter-spacing:.14em; text-transform:uppercase; color:var(--plata)}
+.nav{position:relative; display:flex; gap:clamp(16px,1.7vw,26px); margin-left:auto; padding:6px 0 12px}
+.nav a{color:var(--plata); text-decoration:none; font:600 .98rem/1.4 var(--f-tit); letter-spacing:.01em; transition:color .16s var(--ease-out)}
+.nav a.activo{color:var(--blanco)}
+.btn-barra{min-height:44px; padding:10px 18px}
+.hamb{display:none; position:relative; width:48px; height:48px; border:none; border-radius:10px; cursor:pointer; background:var(--grafito); color:var(--blanco); box-shadow:inset 0 0 0 1px var(--linea-2);
+  transition:background-color .16s var(--ease-out), transform .12s var(--ease-out)}
+.hamb:active{transform:scale(.97)}
+.hamb i, .cerrar i{position:absolute; left:13px; right:13px; height:2px; background:currentColor; transition:translate .3s var(--ease-out), rotate .3s var(--ease-out)}
+.hamb i:nth-child(1){top:19px} .hamb i:nth-child(2){top:28px}
+.hamb[aria-expanded="true"] i:nth-child(1){translate:0 4.5px; rotate:45deg}
+.hamb[aria-expanded="true"] i:nth-child(2){translate:0 -4.5px; rotate:-45deg}
+@media (hover:hover) and (pointer:fine){ .nav a:hover{color:var(--blanco)} .hamb:hover{background:#262B2E} }
+@media (max-width:1179.98px){ .nav{display:none} .hamb{display:block} .btn-barra{margin-left:auto} }
+@media (max-width:899.98px){ .btn-barra{display:none} .hamb{margin-left:auto} :root{--alto-barra:64px} .marca img{width:38px; height:38px} }
+@media (max-width:359.98px){ .marca-nombre small{display:none} }
+
+/* Menú móvil (M52 menu-escalonado): se abre en círculo desde el botón, en el verde azulado del ▶ */
+#menu{--cx:calc(100% - 44px); --cy:32px; position:fixed; inset:0; width:auto; height:auto; max-width:none; max-height:none; margin:0; border:none; padding:92px 28px 40px;
+  background:var(--acento); color:var(--tinta); overflow:auto; clip-path:circle(150% at var(--cx) var(--cy));
+  transition:clip-path .45s var(--ease-drawer), display .45s allow-discrete, overlay .45s allow-discrete}
+#menu:not(:popover-open){clip-path:circle(0 at var(--cx) var(--cy))}
+@starting-style{ #menu:popover-open{clip-path:circle(0 at var(--cx) var(--cy))} }
+#menu ul{list-style:none; margin:0; padding:0}
+#menu li{opacity:1; translate:0 0; transition:opacity .3s var(--ease-out), translate .3s var(--ease-out); transition-delay:calc(120ms + var(--i) * 50ms)}
+#menu:not(:popover-open) li{opacity:0; translate:0 30px; transition-delay:0s}
+@starting-style{ #menu:popover-open li{opacity:0; translate:0 30px} }
+#menu ul a{display:block; padding:3px 0; color:var(--tinta); text-decoration:none; font:700 clamp(1.9rem,8.4vw,3rem)/1.14 var(--f-tit); letter-spacing:-.01em}
+#menu a:focus-visible{outline:2px solid var(--tinta); outline-offset:4px}
+.menu-pie{margin-top:26px}
+.menu-pie a{font:600 1.05rem/1.5 var(--f-texto); color:var(--tinta); text-decoration:underline; text-underline-offset:4px}
+.cerrar{position:absolute; top:8px; right:var(--sangre); width:48px; height:48px; border:none; border-radius:10px; cursor:pointer; background:var(--tinta); color:#fff}
+.cerrar i:nth-child(1){top:23px; rotate:45deg} .cerrar i:nth-child(2){top:23px; rotate:-45deg}
+.cerrar:focus-visible{outline:2px solid var(--tinta); outline-offset:3px}
+@media (hover:hover) and (pointer:fine){ #menu ul a:hover{text-decoration:underline; text-decoration-thickness:3px; text-underline-offset:6px} .cerrar:hover{background:#000} }
+
+/* ---------- resaltado-deslizante v3.1 (.rd-punto .rd-play): la marca y su forma, de la librería; el color de los enlaces, en .nav ---------- */
+.rd-pto{position:absolute; left:0; bottom:0; width:var(--rd-tam, 8px); height:var(--rd-alto, var(--rd-tam, 8px)); border-radius:var(--rd-radio, 50%); clip-path:var(--rd-forma, none); pointer-events:none; opacity:0;
+  background:radial-gradient(circle at 34% 30%, rgba(255,255,255,.75), rgba(255,255,255,0) 45%), var(--acento); box-shadow:0 0 10px color-mix(in srgb, var(--acento) 70%, transparent);
+  transition:translate .28s var(--ease-out), opacity .2s var(--ease-out)}
+.rd-pto.listo{opacity:1}
+.rd-play{--rd-forma:polygon(8% 0, 100% 50%, 8% 100%); --rd-radio:0; --rd-tam:10px; --rd-alto:11px}   /* v3.1 */
+@media (prefers-reduced-motion:reduce){ .rd-pto{transition:opacity .2s ease} }
+
+/* ================= COMPONENTE: marco-recepcion ================= */
+.mr{--mr-borde:14px; --mr-radio:30px; --mr-color:#16191A; --mr-luz:#F2B84B; --mr-carril:.5; --mr-ar:4/5; --mr-viajero:12px;
+  --mr-resplandor:.55; --mr-adh:72px; --mr-adh-x:calc(var(--mr-adh) * -.32); --mr-adh-y:16%;
+  --mr-play-t:120ms; --mr-play-dur:180ms; --mr-viaje-t:300ms; --mr-viaje-dur:900ms; --mr-funde:120ms; --mr-luz-t:1300ms; --mr-luz-dur:300ms; --mr-salto:150ms;
+  --mr-curva:cubic-bezier(0.77,0,0.175,1); --mr-muelle:cubic-bezier(0.23,1,0.32,1);
+  position:relative; isolation:isolate; padding:var(--mr-borde); background:var(--mr-color); border-radius:var(--mr-radio)}
+@supports (transition-timing-function: linear(0, 1)){
+  .mr{--mr-muelle:linear(0, .009, .035 2.1%, .141, .281 6.7%, .723 12.9%, .938 16.7%, 1.017, 1.077, 1.121, 1.149 24.3%, 1.159, 1.163, 1.161, 1.154 29.9%, 1.129 32.8%, 1.051 39.6%, 1.017 43.1%, .991, .977 51%, .974 53.8%, .975 57.1%, .997 69.8%, 1.003 76.9%, 1)}
+}
+@media (max-width:767.98px){ .mr{--mr-viaje-t:250ms; --mr-viaje-dur:650ms; --mr-luz-t:950ms; --mr-luz-dur:200ms} }
+.mr-foto{display:block; width:100%; height:auto; aspect-ratio:var(--mr-ar); object-fit:cover;
+  border-radius:max(4px, calc(var(--mr-radio) - var(--mr-borde)))}
+/* La línea final (modo marco): un ::after centrado en el carril, con su halo fijo */
+.mr::after{content:""; position:absolute; z-index:1; pointer-events:none;
+  inset:calc(var(--mr-borde) * var(--mr-carril) - 1px); border:2px solid var(--mr-luz);
+  border-radius:max(2px, calc(var(--mr-radio) - var(--mr-borde) * var(--mr-carril) + 1px));
+  box-shadow:0 0 8px 1px color-mix(in srgb, var(--mr-luz) 45%, transparent), inset 0 0 8px 1px color-mix(in srgb, var(--mr-luz) 30%, transparent)}
+@supports not (color: color-mix(in srgb, red, red)){ .mr::after{box-shadow:none} }
+.mr-adhesivo{position:absolute; z-index:4; left:var(--mr-adh-x); top:var(--mr-adh-y); width:var(--mr-adh); aspect-ratio:1;
+  display:grid; place-items:center; pointer-events:none}
+.mr-adhesivo > img{display:block; width:100%; height:100%; object-fit:contain}
+.mr-icono{display:block; width:42%; height:auto; fill:var(--mr-luz); color:var(--mr-luz)}   /* su proporción la da su viewBox */
+.mr-adhesivo > img + .mr-icono{position:absolute}                     /* encima del ▶ del logo: colócalo con left/top/width */
+.mr-resplandor{position:absolute; z-index:-1; left:8%; right:8%; top:100%; height:clamp(36px, 12%, 110px); pointer-events:none;
+  background:radial-gradient(ellipse 50% 70% at 50% 0, color-mix(in srgb, var(--mr-luz) 60%, transparent), transparent 100%);
+  opacity:var(--mr-resplandor)}
+@supports not (color: color-mix(in srgb, red, red)){ .mr-resplandor{background:radial-gradient(ellipse 50% 70% at 50% 0, var(--mr-luz), transparent); opacity:calc(var(--mr-resplandor) * .6)} }
+/* Modo camino: sin marco; la línea final es el SVG del autor, recortado como la foto */
+.mr-libre{--mr-borde:0px; --mr-radio:0px; background:none}
+.mr-libre::after{display:none}
+.mr-libre .mr-foto{border-radius:inherit}
+.mr-camino{position:absolute; z-index:1; inset:0; width:100%; height:100%; overflow:visible; pointer-events:none}
+.mr-camino > *{fill:none; stroke:var(--mr-luz); stroke-width:2; vector-effect:non-scaling-stroke; stroke-linejoin:round;
+  filter:drop-shadow(0 0 4px var(--mr-luz))}
+/* Piezas de la pasada (las crea el JS y las quita al terminar) */
+.mr-luz{position:absolute; z-index:2; left:0; top:0; overflow:visible; pointer-events:none}
+.mr-luz path{fill:none; stroke:var(--mr-luz); stroke-dasharray:1 2; stroke-dashoffset:1; stroke-linejoin:round}
+.mr-luz .mr-h1{stroke-width:10px; opacity:.12}
+.mr-luz .mr-h2{stroke-width:5px; opacity:.26}
+.mr-luz .mr-nucleo{stroke-width:2px}
+.mr-viajero{position:absolute; z-index:3; left:0; top:0; width:var(--mr-viajero); height:var(--mr-viajero); pointer-events:none;
+  offset-anchor:50% 50%; offset-rotate:auto; opacity:0; color:var(--mr-luz)}
+.mr-viajero > *{display:block; width:100%; height:100%; fill:currentColor}
+.mr-viajero::before{content:""; position:absolute; inset:-60%; z-index:-1; border-radius:50%;
+  background:radial-gradient(closest-side, color-mix(in srgb, var(--mr-luz) 45%, transparent), transparent)}
+/* Antes de la pasada (solo con JS y sin movimiento reducido): línea y resplandor apagados. Seguro: se encienden a los 3 s
+   si el JS no llega a arrancar (.mr-vigila o .mr-on lo quitan) */
+@media (prefers-reduced-motion: no-preference){
+  .js:not(.marco-visto) .mr:not(.mr-hecho)::after,
+  .js:not(.marco-visto) .mr:not(.mr-hecho) .mr-camino,
+  .js:not(.marco-visto) .mr:not(.mr-hecho) .mr-resplandor{opacity:0; animation:mr-seguro .3s var(--ease-out,ease-out) 3s both}
+  .js:not(.marco-visto) .mr.mr-vigila:not(.mr-hecho)::after,
+  .js:not(.marco-visto) .mr.mr-vigila:not(.mr-hecho) .mr-camino,
+  .js:not(.marco-visto) .mr.mr-vigila:not(.mr-hecho) .mr-resplandor{animation:none}
+  .mr.mr-salta::after, .mr.mr-salta .mr-camino, .mr.mr-salta .mr-resplandor{transition:opacity var(--mr-salto) cubic-bezier(0.23,1,0.32,1)}
+}
+@keyframes mr-seguro{ from{opacity:0} to{opacity:1} }
+/* ?rejilla */
+.mr-rejilla{cursor:crosshair}
+.mr-rejilla .mr-camino > *{stroke:#0ff; filter:none}
+.mr-rejilla-dato{position:absolute; z-index:9; padding:2px 6px; font:12px/1.4 ui-monospace,monospace; background:#000; color:#0ff; pointer-events:none; white-space:nowrap}
+/* ================= FIN DEL COMPONENTE marco-recepcion ================= */
+
+/* ---------- Portada: «cita en la portada» + el marco de recepción (M118) con la foto 016 ---------- */
+.portada{position:relative; isolation:isolate; padding:clamp(28px,4.5vw,64px) 0 clamp(80px,8vw,120px); background:var(--negro)}
+.portada-rejilla{display:grid; grid-template-columns:minmax(0,6fr) minmax(0,6fr); gap:clamp(36px,5vw,80px); align-items:center}
+.portada-texto{display:flex; flex-direction:column; align-items:flex-start; gap:20px}
+.antetitulo{margin:0; font:600 1rem/1.4 var(--f-tit); letter-spacing:.02em; color:var(--plata)}
+.titular{margin:0; font:700 clamp(2.6rem,1.3rem + 4.1vw,5rem)/1.12 var(--f-tit); letter-spacing:-.025em; text-wrap:balance}
+.portada-lead{margin:0; max-width:44ch; font-size:1.125rem; color:var(--plata); text-wrap:pretty}
+.portada-botones{display:flex; flex-wrap:wrap; gap:12px 14px}
+.portada-pie{display:flex; flex-wrap:wrap; align-items:center; gap:14px 22px; margin-top:4px}
+.nota-google{display:inline-flex; align-items:center; min-height:44px; color:var(--plata); font-size:.95rem; text-decoration:none; border-bottom:1px solid var(--linea-2); transition:color .16s var(--ease-out), border-color .16s var(--ease-out)}
+.nota-google b{color:var(--blanco)}
+.nota-google b span{color:var(--acento)}
+@media (hover:hover) and (pointer:fine){ .nota-google:hover{color:var(--blanco); border-color:var(--acento)} }
+/* Tarjeta viva: el estado de ahora (lógica de cartel-abierto-cerrado v6); ▶ verde azulado con halo que respira si está abierto */
+.tarjeta-viva{display:inline-flex; align-items:center; gap:12px; margin:0; padding:9px 16px 9px 14px; border-radius:10px; background:var(--marco); box-shadow:inset 0 0 0 1px var(--linea); font-size:.95rem; line-height:1.35}
+.tv-luz{position:relative; flex:none; width:11px; height:11px}
+.tv-luz::before, .tv-luz::after{content:""; position:absolute; inset:1px; border-radius:50%; background:var(--plata)}
+.tv-luz::after{opacity:0; scale:1.9; background:var(--acento)}
+.tarjeta-viva[data-estado="abierto"] .tv-luz::before{background:var(--acento)}
+.tv-palabra{font-weight:600; color:var(--blanco)}
+.tv-det{color:var(--plata)}
+.tv-sep{color:var(--plata)}
+@media (prefers-reduced-motion:no-preference){
+  .tarjeta-viva[data-estado="abierto"] .tv-luz::after{animation:tv-respira 3s var(--ease-in-out) infinite alternate}
+  .portada:not(.en-pantalla) .tv-luz::after{animation-play-state:paused}
+}
+@keyframes tv-respira{ from{opacity:0} to{opacity:.35} }
+
+/* El marco de la portada (variables medidas en la integración de M118, ver ../ficha.md) */
+.portada .mr{--mr-luz:#44C8BE; --mr-color:#16191A; --mr-borde:14px; --mr-radio:34px; --mr-ar:4/5; --mr-adh:92px; --mr-adh-x:-30px; --mr-adh-y:9%;
+  width:100%; max-width:520px; justify-self:end}
+.mr-adhesivo > img{border-radius:8px; box-shadow:0 0 0 1px rgba(244,246,246,.12), 0 10px 22px rgba(0,0,0,.55)}
+.mr-adhesivo .mr-icono{left:41.5%; top:29.1%; width:15.4%}   /* el ▶ del logo 091 (triángulo x 448-614, y 314-644 de 1080) */
+/* (Clínica) La foto va en una ventana con overflow:hidden para que, con ratón, se mueva un poco por dentro del marco quieto (M30) */
+.mr-ventana{display:block; overflow:hidden; border-radius:max(4px, calc(var(--mr-radio) - var(--mr-borde)))}
+.mr-ventana .mr-foto{scale:1; transition:translate .5s var(--ease-out), scale .5s var(--ease-out); filter:saturate(.92)}
+.mr-cerca .mr-ventana .mr-foto{scale:1.05}
+@media (max-width:767.98px){
+  .portada-rejilla{grid-template-columns:minmax(0,1fr); gap:44px}
+  .portada .mr{--mr-borde:10px; --mr-radio:24px; --mr-adh:68px; --mr-adh-x:-12px; max-width:none; justify-self:stretch; margin-left:12px; width:calc(100% - 12px)}
+  .portada{padding-bottom:48px}
+  .titular{font-size:clamp(2.4rem, 1.2rem + 6vw, 3.2rem)}
+  .portada-lead{font-size:1.0625rem}
+}
+@media (min-width:768px) and (max-width:1023.98px){
+  .portada-rejilla{grid-template-columns:minmax(0,5fr) minmax(0,7fr); gap:40px}
+  .portada .mr{--mr-borde:12px}
+}
+@media (prefers-reduced-motion:reduce){ .mr-ventana .mr-foto{transition:none} .mr-cerca .mr-ventana .mr-foto{scale:1} }
