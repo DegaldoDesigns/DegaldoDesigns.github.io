@@ -494,3 +494,96 @@ html:has(#menu:popover-open){overflow:hidden}
 @media (min-width:861px){ .barra-movil{display:none} }
 @media (max-width:860px){ .pie{padding-bottom:calc(96px + env(safe-area-inset-bottom))} }
 @media (prefers-reduced-motion:reduce){ .barra-movil{transition:none} .btn::after{display:none} .btn{transition:background-color .16s ease, color .16s ease} }
+
+/* ---------- Pedido para recoger por WhatsApp (pedido-whatsapp v1) ----------
+   Botón "Añadir" en cada plato, burbuja "Tu pedido" y dos <dialog>: opciones del plato y el pedido. Movimiento solo de respuesta:
+   la hoja sube desde abajo (móvil) o aparece en su sitio (escritorio), la burbuja entra al primer plato y late al añadir otro. */
+.pd[hidden], .pd-intro[hidden], .pd [hidden]{display:none}
+.pd-intro{margin:14px 0 0; max-width:56ch; text-wrap:pretty}
+.clf-plato .clf-linea:has(.pd-add){grid-template-columns:minmax(0,1fr) auto auto; align-items:center}
+.pd-add{position:relative; display:inline-grid; place-items:center; min-height:40px; padding:0 14px; border:none; border-radius:2px; cursor:pointer;
+  background:transparent; color:var(--tinta); box-shadow:inset 0 0 0 2px var(--tinta); font:800 .875rem/1 var(--f-texto); letter-spacing:.04em; text-transform:uppercase;
+  transition:background-color .16s var(--ease-out), color .16s var(--ease-out), transform .12s var(--ease-out)}
+.pd-add > span{grid-area:1/1; transition:opacity .16s var(--ease-out), translate .2s var(--ease-out)}
+.pd-add-t::before{content:"+ "}
+.pd-add-ok{opacity:0; translate:0 6px}
+.pd-add.ok{background:var(--tinta); color:var(--kraft)}
+.pd-add.ok .pd-add-t{opacity:0; translate:0 -6px}
+.pd-add.ok .pd-add-ok{opacity:1; translate:0 0}
+.pd-add:active{transform:scale(.97)}
+@media (hover:hover) and (pointer:fine){ .pd-add:hover{background:var(--rosa)} .pd-add.ok:hover{background:var(--tinta)} }
+.pd-aviso{position:absolute; width:1px; height:1px; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap}
+
+.pd-flota{position:fixed; right:max(16px, env(safe-area-inset-right)); bottom:calc(24px + env(safe-area-inset-bottom)); z-index:var(--z-flota);
+  display:inline-flex; align-items:center; gap:10px; min-height:56px; padding:0 10px 0 18px; border:none; border-radius:2px; cursor:pointer;
+  background:var(--rosa); color:var(--tinta); box-shadow:inset 0 0 0 2px var(--tinta), 0 10px 24px rgba(22,21,20,.28); font:800 1.0625rem/1 var(--f-texto);
+  translate:0 calc(100% + 40px); visibility:hidden;
+  transition:translate .3s var(--ease-out), visibility 0s .3s, transform .12s var(--ease-out)}
+.pd-flota.visible{translate:0 0; visibility:visible; transition:translate .3s var(--ease-out), visibility 0s, transform .12s var(--ease-out)}
+.pd-flota .ico{width:20px; height:20px}
+.pd-flota-n{display:grid; place-items:center; min-width:34px; height:34px; padding:0 8px; border-radius:2px; background:var(--tinta); color:var(--kraft); font-variant-numeric:tabular-nums}
+.pd-flota:active{transform:scale(.97)}
+@media (max-width:860px){ .pd-flota{bottom:calc(80px + env(safe-area-inset-bottom))} }
+
+.pd-hoja{width:min(520px, calc(100vw - 32px)); max-height:min(86dvh, 760px); padding:0; border:none; border-radius:2px; background:var(--kraft); color:var(--tinta);
+  box-shadow:inset 0 0 0 2px var(--tinta), 0 24px 60px rgba(22,21,20,.4); overflow:auto; overscroll-behavior:contain;
+  opacity:0; translate:0 16px; transition:opacity .2s var(--ease-out), translate .26s var(--ease-drawer), overlay .26s allow-discrete, display .26s allow-discrete}
+.pd-hoja[open]{opacity:1; translate:0 0}
+@starting-style{ .pd-hoja[open]{opacity:0; translate:0 16px} }
+.pd-hoja::backdrop{background:rgba(22,21,20,0); transition:background-color .2s var(--ease-out), overlay .26s allow-discrete, display .26s allow-discrete}
+.pd-hoja[open]::backdrop{background:rgba(22,21,20,.55)}
+@starting-style{ .pd-hoja[open]::backdrop{background:rgba(22,21,20,0)} }
+@media (max-width:640px){
+  .pd-hoja{width:100%; max-width:none; margin:auto 0 0; max-height:88dvh; translate:0 100%; box-shadow:0 -2px 0 var(--tinta), 0 -16px 40px rgba(22,21,20,.3)}
+  @starting-style{ .pd-hoja[open]{opacity:1; translate:0 100%} }
+}
+html:has(.pd-hoja[open]){overflow:hidden}
+.pd-cab{position:sticky; top:0; z-index:1; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:18px 20px 14px; background:var(--kraft); border-bottom:1px solid rgba(22,21,20,.22)}
+.pd-cab h2{margin:0; font:800 1.25rem/1.25 var(--f-texto); text-transform:uppercase; letter-spacing:.06em; text-wrap:balance}
+.pd-cerrar{flex:none; width:44px; height:44px; border:none; border-radius:2px; background:transparent; color:var(--tinta); font:400 1.75rem/1 var(--f-texto); cursor:pointer;
+  transition:background-color .16s var(--ease-out), transform .12s var(--ease-out)}
+.pd-cerrar:active{transform:scale(.97)}
+@media (hover:hover) and (pointer:fine){ .pd-cerrar:hover{background:rgba(22,21,20,.08)} }
+.pd-cuerpo{padding:16px 20px calc(22px + env(safe-area-inset-bottom))}
+.pd-campo{margin:0 0 18px; padding:0; border:none; min-width:0}
+.pd-campo legend, .pd-etq{display:block; margin:0 0 8px; padding:0; font-weight:800; font-size:.9375rem}
+.pd-etq span{font-weight:400; color:var(--tinta-suave)}
+.pd-chips{display:flex; flex-wrap:wrap; gap:8px}
+.pd-chip{position:relative; cursor:pointer}
+.pd-chip input{position:absolute; opacity:0; width:1px; height:1px}
+.pd-chip span{display:inline-flex; align-items:center; min-height:40px; padding:0 14px; border-radius:2px; box-shadow:inset 0 0 0 2px var(--tinta); font-weight:700; font-size:.9375rem;
+  transition:background-color .16s var(--ease-out), color .16s var(--ease-out)}
+.pd-chip input:checked + span{background:var(--tinta); color:var(--kraft)}
+.pd-chip input:focus-visible + span{outline:3px solid var(--rosa-tinta); outline-offset:3px}
+@media (hover:hover) and (pointer:fine){ .pd-chip:hover input:not(:checked) + span{background:rgba(22,21,20,.08)} }
+.pd-input{display:block; width:100%; margin:0 0 16px; min-height:48px; padding:10px 12px; border:none; border-radius:2px; background:#F4EDDF; color:var(--tinta);
+  box-shadow:inset 0 0 0 2px var(--tinta); font:400 1rem/1.4 var(--f-texto)}
+textarea.pd-input{resize:vertical; min-height:72px}
+.pd-input:focus-visible{outline:3px solid var(--rosa-tinta); outline-offset:2px}
+.pd-input[aria-invalid="true"]{box-shadow:inset 0 0 0 3px var(--rosa-tinta)}
+.pd-op-pie{display:flex; align-items:center; gap:14px; margin-top:6px}
+.pd-op-pie .btn{flex:1 1 auto}
+.pd-cant{display:inline-flex; align-items:center; gap:4px; flex:none}
+.pd-cant button{width:40px; height:40px; border:none; border-radius:2px; background:transparent; color:var(--tinta); box-shadow:inset 0 0 0 2px var(--tinta); font:800 1.25rem/1 var(--f-texto); cursor:pointer;
+  transition:background-color .16s var(--ease-out), transform .12s var(--ease-out)}
+.pd-cant button:active{transform:scale(.94)}
+@media (hover:hover) and (pointer:fine){ .pd-cant button:hover{background:var(--rosa)} }
+.pd-cant-n{min-width:30px; text-align:center; font-weight:800; font-variant-numeric:tabular-nums}
+.pd-vacio{margin:4px 0 8px; color:var(--tinta-suave)}
+.pd-lista{list-style:none; margin:0 0 18px; padding:0}
+.pd-linea{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:12px; align-items:center; padding:12px 0; border-bottom:1px solid rgba(22,21,20,.22)}
+.pd-linea-txt > p{margin:0}
+.pd-linea-nombre{font-weight:800; overflow-wrap:anywhere}
+.pd-linea-cambios, .pd-letra{font-size:.875rem; color:var(--tinta-suave)}
+.pd-linea-precio{font-weight:700; font-variant-numeric:tabular-nums}
+.pd-total{margin:0 0 16px; font-weight:700}
+.pd-error{margin:-6px 0 14px; font-weight:700; color:var(--rosa-tinta)}
+.pd-enviar{width:100%}
+.pd-letra{margin:10px 0 0; text-align:center}
+.pd-pausa{padding:14px 16px; background:var(--tinta); color:var(--hormigon); border-radius:2px}
+.pd-pausa a{color:var(--rosa)}
+@media (prefers-reduced-motion:reduce){
+  .pd-flota, .pd-flota.visible{transition:visibility 0s} .pd-add > span{transition:opacity .16s ease; translate:none}
+  .pd-hoja, .pd-hoja[open]{translate:none; transition:opacity .2s ease, overlay .2s allow-discrete, display .2s allow-discrete}
+  @starting-style{ .pd-hoja[open]{translate:none} }
+}
