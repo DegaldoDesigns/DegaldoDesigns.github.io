@@ -658,71 +658,16 @@ html:has(#menu:popover-open){overflow:hidden}
 .oscura h1,.oscura h2,.oscura h3{color:var(--texto-osc)}
 .oscura .antetitulo{color:var(--acento-osc)}
 .oscura .entradilla,.oscura p{color:var(--texto-osc-2)}
-.oscura .dato,.fx-portada .dato{background:rgba(243,238,248,.08); box-shadow:inset 0 0 0 1px rgba(243,238,248,.16); color:var(--texto-osc)}
-.fx-portada .dato .estrella{color:var(--acento-osc)}
-.oscura .pildora .punto,.fx-portada .pildora .punto{background:#FF8A80}
-.oscura .pildora[data-estado="abierto"] .punto,.fx-portada .pildora[data-estado="abierto"] .punto{background:#4ADE80}
-.oscura .pildora[data-estado="cita"] .punto,.fx-portada .pildora[data-estado="cita"] .punto{background:var(--acento-osc)}
+.oscura .dato,.portada .dato{background:rgba(243,238,248,.08); box-shadow:inset 0 0 0 1px rgba(243,238,248,.16); color:var(--texto-osc)}
+.portada .dato .estrella{color:var(--acento-osc)}
+.oscura .pildora .punto,.portada .pildora .punto{background:#FF8A80}
+.oscura .pildora[data-estado="abierto"] .punto,.portada .pildora[data-estado="abierto"] .punto{background:#4ADE80}
+.oscura .pildora[data-estado="cita"] .punto,.portada .pildora[data-estado="cita"] .punto{background:var(--acento-osc)}
 .btn-oscuro{background:rgba(243,238,248,.1); color:var(--texto-osc)}
 .btn-oscuro::after{background:linear-gradient(110deg, transparent 30%, rgba(255,255,255,.14) 50%, transparent 70%)}
-.oscura :focus-visible,.fx-portada :focus-visible,.esc :focus-visible{outline-color:var(--luz)}
+.oscura :focus-visible,.portada :focus-visible,.esc :focus-visible{outline-color:var(--luz)}
 
-/* ===== PORTADA v3 · FLUIDO DE RAYOS X (M39, componentes/fluido-rayos-x.html v1.1; js/fluido-rayos-x.js) =====
-   Escritorio: la caja de la foto (.fx-medio) empieza detrás del texto (--fx-medio-izq) y llega al borde derecho; el velo
-   la funde con el fondo oscuro bajo el texto. Así las dos caras (x 29-75 % de la foto) quedan siempre a la derecha del titular.
-   Hasta 860 px: la foto arriba a --fx-alto-movil con su propio encuadre y el texto debajo, sobre oscuro. */
-.fx-portada{--fx-halo:#9FD3FF; --fx-foco:50% 50%; --fx-alto-movil:62svh;
-  --fx-medio-izq:calc(max(24px, (100vw - 1180px) / 2 + 24px) + min(300px, 22vw));
-  position:relative; isolation:isolate; overflow:hidden; background:var(--oscuro); color:var(--texto-osc);
-  min-height:calc(100svh - 76px); display:grid; align-items:center; touch-action:pan-y pinch-zoom}
-.fx-medio{position:absolute; z-index:0; top:0; right:0; bottom:0; left:var(--fx-medio-izq)}
-.fx-medio>img,.fx-lienzo{position:absolute; inset:0; width:100%; height:100%; display:block; object-fit:cover; object-position:var(--fx-foco);
-  -webkit-user-drag:none; user-select:none; pointer-events:none}
-.fx-foto{z-index:0}
-.fx-lienzo{z-index:1; opacity:0; transition:opacity .3s var(--ease-out)}
-.fx-portada.fx-gl .fx-lienzo{opacity:1}
-.fx-rx{z-index:2; opacity:0; transition:opacity .5s var(--ease-out)}
-.fx-portada.fx-entera .fx-rx{opacity:1}
-.fx-velo{position:absolute; inset:0; z-index:3; pointer-events:none;
-  background:linear-gradient(90deg, var(--oscuro) 0, rgba(18,12,26,.82) 9%, rgba(18,12,26,.35) 22%, rgba(18,12,26,0) 36%),
-    linear-gradient(0deg, rgba(18,12,26,.45) 0, rgba(18,12,26,0) 22%)}
-.fx-franjas{position:absolute; z-index:1; left:-6%; bottom:-14px; width:min(380px,30vw); color:var(--acento-osc); opacity:.08; pointer-events:none}
-.fx-franjas svg{display:block; width:100%; height:auto}
-.fx-contenido{position:relative; z-index:4; width:100%; max-width:1180px; margin:0 auto; padding:clamp(40px,8vh,96px) 24px clamp(48px,8vh,96px); pointer-events:none}
-.fx-contenido>*{pointer-events:auto}
-.fx-texto{max-width:min(540px, 44vw)}
-.fx-antetitulo{margin:0 0 14px; font-weight:700; font-size:1rem; color:var(--acento-osc)}
-.fx-portada h1{color:var(--texto-osc); margin:0 0 .35em; font-size:clamp(2.6rem, 1.3rem + 3.4vw, 4.6rem)}
-.fx-portada .subr svg{color:var(--acento-osc)}
-.fx-entradilla{margin:0 0 28px; max-width:44ch; color:var(--texto-osc-2); font-size:clamp(1.15rem, 1.05rem + .4vw, 1.35rem)}
-.fx-portada .datos{margin-top:24px}
-.fx-control{display:flex; flex-wrap:wrap; align-items:center; gap:10px 16px; margin-top:26px; max-width:min(540px, 44vw)}
-.fx-alternar{display:none; align-items:center; gap:8px; padding:11px 16px; border-radius:var(--radio-btn); cursor:pointer;
-  border:1px solid rgba(243,238,248,.4); background:rgba(18,12,26,.55); color:var(--texto-osc); font:700 1rem/20px var(--f-cuerpo);
-  transition:background-color .16s var(--ease-out), transform .12s var(--ease-out)}
-.js .fx-alternar{display:inline-flex}
-.fx-alternar svg{width:18px; height:18px; flex:none}
-.fx-alternar:active{transform:scale(.97)}
-.fx-ayuda{display:none; margin:0; font:600 1.4rem/1.1 var(--f-mano); color:var(--luz)}
-.fx-portada.fx-gl .fx-ayuda{display:block}
-.fx-ayuda-raton{display:none}
-@media (hover:hover) and (pointer:fine){ .fx-ayuda-raton{display:inline} .fx-ayuda-dedo{display:none} }
-@media (max-width:980px){ .fx-portada{min-height:calc(100svh - 68px)} }
-@media (max-width:860px){
-  .fx-portada{--fx-foco:56% 50%; display:block; min-height:0}
-  .fx-medio{position:relative; left:auto; height:var(--fx-alto-movil); min-height:280px}
-  .fx-velo{background:linear-gradient(0deg, var(--oscuro) 0, rgba(18,12,26,.7) 9%, rgba(18,12,26,0) 26%)}
-  .fx-contenido{position:static; padding:20px 20px 48px}
-  .fx-texto{position:relative; z-index:4; max-width:640px}
-  .fx-control{position:absolute; z-index:5; left:16px; right:16px; top:calc(max(var(--fx-alto-movil), 280px) - 58px); margin:0; max-width:none; justify-content:space-between}
-  .fx-alternar{padding:9px 14px; font-size:.95rem; white-space:nowrap; flex:none}
-  .fx-control{flex-wrap:nowrap; gap:10px}
-  .fx-ayuda{font-size:1.3rem; min-width:0; text-align:right; text-shadow:0 1px 8px rgba(18,12,26,.9)}
-  .fx-portada h1{font-size:clamp(2.3rem, 1.4rem + 4.4vw, 3.4rem)}
-  .fx-franjas{display:none}
-}
-@media (min-width:600px) and (max-width:860px){ .fx-portada{--fx-alto-movil:min(62svh, 560px)} }
-@media (prefers-reduced-motion:reduce){ .fx-lienzo,.fx-rx{transition:opacity .2s ease} }
+/* (La portada v3 con el fluido de rayos X se quitó en la v4: está en sitio-v3/ y en componentes/fluido-rayos-x.html.) */
 
 /* ===== ESCÁNER AL BAJAR (M21, componentes/escaner-scroll.html; solo CSS, sin JS). Cierra la portada. ===== */
 .esc{--esc-oscuro:var(--oscuro); --esc-texto:var(--texto-osc); --esc-muted:var(--texto-osc-2); --esc-acento:var(--acento);
@@ -1070,7 +1015,6 @@ html:has(#menu:popover-open){overflow:hidden}
   .cab-oscura .nav a:hover{color:#fff}
   .cab-oscura .hamb:hover{background:rgba(243,238,248,.18)}
   .btn-oscuro:hover{background:rgba(243,238,248,.18)}
-  .fx-alternar:hover{background:rgba(243,238,248,.2)}
   .pn-opcion:hover input:not(:checked) + span{border-color:var(--acento)}
   .pn-borrar:hover{color:var(--texto)}
   .polaroid:hover .pol-in{translate:0 -4px}
@@ -1084,6 +1028,123 @@ html:has(#menu:popover-open){overflow:hidden}
 
 /* ===== MOVIMIENTO REDUCIDO v2 ===== */
 @media (prefers-reduced-motion:reduce){
-  .pol-in,.lupa,.gal-foto img,.gal-foto,.fx-alternar,.visor-cerrar,.pn-opcion span{transition:opacity .2s ease, background-color .2s ease, color .2s ease !important; translate:none !important; scale:none !important}
+  .pol-in,.lupa,.gal-foto img,.gal-foto,.visor-cerrar,.pn-opcion span{transition:opacity .2s ease, background-color .2s ease, color .2s ease !important; translate:none !important; scale:none !important}
   .visor[open]{animation:none}
+}
+
+/* =====================================================================================================
+   v4 (2026-10-29) · más limpia y con Ángel delante: portada con su retrato recortado, "¿Acaba de llegar a casa?",
+   la historia como historial y las reseñas como notas clavadas en la pared lila de la consulta. Se quitaron las
+   decoraciones de fondo repetidas (franjas, ficha, cartilla y sello fantasma) salvo en la llamada final.
+   ===================================================================================================== */
+
+/* ===== PORTADA v4 · ÁNGEL RECORTADO (js/portada.js) ===== */
+.portada{--por-figura-x:max(16px, calc((100vw - 1180px) / 2 + 8px));
+  position:relative; isolation:isolate; overflow:hidden; background:var(--oscuro); color:var(--texto-osc);
+  min-height:calc(100svh - 76px); display:flex; align-items:flex-end}
+.por-luz{position:absolute; inset:0; z-index:-1; pointer-events:none;
+  background:radial-gradient(52% 70% at 74% 52%, rgba(112,52,164,.62), rgba(90,42,130,.22) 55%, transparent 78%),
+    radial-gradient(30% 34% at 74% 30%, rgba(207,232,255,.10), transparent 70%)}
+.por-nombre{position:absolute; z-index:0; top:clamp(12px, 4vh, 48px); right:max(8px, calc((100vw - 1180px) / 2)); margin:0; pointer-events:none;
+  font-family:var(--f-tit); font-stretch:75%; font-weight:800; font-size:clamp(6rem, 19.5vw, 19rem); line-height:.86; letter-spacing:-.02em; white-space:nowrap;
+  color:rgba(201,179,221,.2)}
+.por-capa{display:block; transition:translate .5s var(--ease-out)}
+.por-figura{position:absolute; z-index:1; right:var(--por-figura-x); bottom:-9%; height:min(100%, 900px); margin:0}
+.por-figura .por-capa{height:100%}
+.por-figura img{display:block; height:100%; width:auto; max-width:none;
+  -webkit-mask-image:linear-gradient(to top, transparent 4%, #000 26%); mask-image:linear-gradient(to top, transparent 4%, #000 26%);
+  filter:drop-shadow(0 30px 60px rgba(0,0,0,.35)); user-select:none; -webkit-user-drag:none}
+.por-nota{position:absolute; z-index:2; right:calc(100% - 70px); top:22%; display:flex; flex-direction:column; align-items:flex-end; gap:2px; margin:0;
+  font:600 1.5rem/1.1 var(--f-mano); color:var(--acento-osc); white-space:nowrap; rotate:-4deg}
+.por-nota svg{order:2; width:58px; height:42px; margin-right:-8px}
+.por-contenido{position:relative; z-index:2; width:100%; padding-top:clamp(180px, 30vh, 320px); padding-bottom:clamp(44px, 8vh, 88px)}
+.por-contenido > *{max-width:min(520px, 40vw)}
+.por-antetitulo{margin:0 0 14px; font-weight:700; font-size:1rem; color:var(--acento-osc)}
+.portada h1{color:var(--texto-osc); margin:0 0 .35em; font-size:clamp(2.6rem, 1.3rem + 3.4vw, 4.6rem)}
+.portada .subr svg{color:var(--acento-osc)}
+.por-entradilla{margin:0 0 28px; color:var(--texto-osc-2); font-size:clamp(1.15rem, 1.05rem + .4vw, 1.35rem)}
+.portada .datos{margin-top:24px}
+@media (max-width:980px){ .portada{min-height:calc(100svh - 68px)} }
+@media (max-width:860px){
+  .portada{display:block; min-height:0}
+  .por-luz{background:radial-gradient(70% 46% at 50% 26%, rgba(112,52,164,.6), rgba(90,42,130,.2) 60%, transparent 80%)}
+  .por-nombre{left:0; right:0; top:14px; text-align:center; font-size:26vw}
+  .por-figura{position:relative; right:auto; height:auto; width:min(68vw, 420px); margin:15vw auto 0}
+  .por-figura .por-capa{height:auto}
+  .por-figura img{width:100%; height:auto}
+  .por-nota{right:auto; left:calc(100% - 28px); top:40%; align-items:flex-start; font-size:1.25rem; rotate:4deg}
+  .por-nota svg{transform:scaleX(-1); margin:0 0 0 -8px; width:46px; height:34px}
+  .por-contenido{margin-top:-9vw; padding:0 20px 48px}
+  .por-contenido > *{max-width:640px}
+  .portada h1{font-size:clamp(2.3rem, 1.4rem + 4.4vw, 3.4rem)}
+}
+@media (max-width:560px){ .por-nota{display:none} }
+/* Entrada única: la luz se enciende, el nombre sube y Ángel aparece delante; el texto, escalonado */
+@media (prefers-reduced-motion:no-preference){
+  .js .por-luz{animation:por-luz .9s var(--ease-out) both}
+  .js .por-nombre{animation:por-sube .7s var(--ease-out) .1s both}
+  .js .por-figura{animation:por-figura .6s var(--ease-out) .3s both}
+  .js .por-nota{animation:por-aparece .4s var(--ease-out) 1.1s both}
+  .js .por-contenido > *{animation:por-aparece .5s var(--ease-out) both; animation-delay:calc(.45s + var(--i, 0) * 60ms)}
+  .js .por-contenido > :nth-child(2){--i:1} .js .por-contenido > :nth-child(3){--i:2} .js .por-contenido > :nth-child(4){--i:3} .js .por-contenido > :nth-child(5){--i:4}
+}
+@keyframes por-luz{from{opacity:0}}
+@keyframes por-sube{from{opacity:0; translate:0 10%}}
+@keyframes por-figura{from{opacity:0; translate:0 28px; scale:.98}}
+@keyframes por-aparece{from{opacity:0; translate:0 14px}}
+
+/* ===== ¿ACABA DE LLEGAR A CASA? (hoja de primera visita) ===== */
+.nuevo{background:var(--superficie)}
+.nuevo-grid{display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:clamp(36px, 6vw, 88px); align-items:center}
+.nuevo-foto{margin:0; padding:12px 12px 0; background:#fffdf8; border-radius:4px; rotate:-2deg; max-width:460px; justify-self:center;
+  box-shadow:0 2px 0 #e7e1d6, 0 34px 50px -30px rgba(28,22,34,.55)}
+.nuevo-foto img{display:block; width:100%; height:auto; aspect-ratio:1; object-fit:cover; border-radius:2px}
+.nuevo-foto figcaption{padding:8px 4px 14px; font:600 1.5rem/1.1 var(--f-mano); color:var(--tinta-mano); text-align:center}
+.nuevo-texto h2{margin:0 0 .3em}
+.nuevo-sub{color:var(--texto-2); max-width:52ch}
+.hoja{list-style:none; margin:26px 0 30px; padding:10px 26px; background:var(--blanco); border-radius:var(--radio); box-shadow:inset 0 0 0 1px var(--linea), 0 24px 40px -32px rgba(28,22,34,.4)}
+.hoja li{display:grid; grid-template-columns:30px minmax(0,1fr); gap:16px; align-items:start; padding:16px 0; border-bottom:1px solid var(--linea)}
+.hoja li:last-child{border-bottom:0}
+.hoja b{color:var(--texto)}
+.hoja li > span:last-child{color:var(--texto-2); font-size:1.05rem; line-height:1.55}
+.casilla{position:relative; width:26px; height:26px; margin-top:2px; border-radius:6px; box-shadow:inset 0 0 0 2px var(--acento)}
+.casilla::after{content:""; position:absolute; left:8px; top:3px; width:8px; height:14px; border:solid var(--acento); border-width:0 3px 3px 0; rotate:42deg}
+@supports (animation-timeline: view()){
+  @media (prefers-reduced-motion:no-preference){
+    .casilla::after{animation:casilla linear both; animation-timeline:view(); animation-range:entry 100% cover 45%}
+  }
+}
+@keyframes casilla{from{opacity:0; scale:.5}}
+.nuevo-fuente{margin:18px 0 0; font-size:.95rem; color:var(--texto-2); max-width:60ch}
+@media (max-width:860px){ .nuevo-grid{grid-template-columns:1fr} .nuevo-foto{max-width:380px} .hoja{padding:6px 18px} }
+
+/* ===== 32 AÑOS EN PINTO (historial dentro de "Quién te atiende") ===== */
+.angel .nombre span{font-family:var(--f-cuerpo); font-stretch:normal; font-weight:700; font-size:1rem; color:var(--texto-2)}
+.historial{list-style:none; margin:14px 0 0; padding:0; display:grid}
+.historial li{display:grid; grid-template-columns:7.2rem minmax(0,1fr); gap:4px 18px; align-items:baseline; padding:10px 0; border-bottom:1px dashed var(--linea-2)}
+.historial li:last-child{border-bottom:0}
+.h-fecha{font:600 1.85rem/1.1 var(--f-mano); color:var(--acento)}
+.h-txt{color:var(--texto-2)}
+.h-hoy .h-txt b{color:var(--texto)}
+@media (max-width:640px){ .historial li{grid-template-columns:1fr; gap:0} }
+
+/* ===== RESEÑAS v4: notas clavadas en la pared lila de la consulta (chincheta morada) ===== */
+.resena{background-image:none; border-radius:4px; box-shadow:0 2px 0 rgba(28,22,34,.06), 0 22px 34px -26px rgba(28,22,34,.45);
+  rotate:var(--giro, 0deg); transition:opacity .2s var(--ease-out), box-shadow .2s var(--ease-out), rotate .3s var(--ease-out), translate .3s var(--ease-out)}
+.resena::before{content:""; position:absolute; top:-9px; left:50%; width:18px; height:18px; margin-left:-9px; border-radius:50%;
+  background:radial-gradient(circle at 35% 30%, #c9a6e6 0 18%, var(--acento) 45%, var(--acento-hondo) 100%); box-shadow:0 3px 4px rgba(28,22,34,.35)}
+.resenas li:nth-child(1) .resena{--giro:-1.2deg}
+.resenas li:nth-child(2) .resena{--giro:.9deg}
+.resenas li:nth-child(3) .resena{--giro:-.6deg}
+.resenas li:nth-child(4) .resena{--giro:1.1deg}
+.resenas li:nth-child(5) .resena{--giro:-.9deg}
+.resenas li:nth-child(6) .resena{--giro:.7deg}
+.resena figcaption{font:600 1.45rem/1.1 var(--f-mano); color:var(--tinta-mano)}
+.resena .fecha{display:block; font-family:var(--f-cuerpo); font-size:.9rem; font-weight:700; color:var(--texto-2); margin-top:2px}
+@media (hover:hover) and (pointer:fine){
+  .resena:hover{rotate:0deg; translate:0 -4px}
+}
+@media (prefers-reduced-motion:reduce){
+  .resena{transition:opacity .2s ease, box-shadow .2s ease !important}
+  @media (hover:hover) and (pointer:fine){ .resena:hover{translate:none} }
 }
